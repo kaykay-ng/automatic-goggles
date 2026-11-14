@@ -17,3 +17,5 @@ material/
 # large angle-B working files (rebuilt by notebooks/b_pool_and_embed.py)
 data/processed/b_pool.csv.gz
 data/processed/b_speech_vectors.npy
+# NDC project raw data: re-fetched from the Climate Watch API (see ndc/PLAN.md)
+ndc/data/raw/
