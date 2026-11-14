@@ -51,6 +51,13 @@ cats = list(CATS)
 use = {"AT": "AT_1", "CZ": "CZ_2", "DK": "DK_1", "FI": "FI_1", "FR": "FR_1", "GB": "GB_1", "HU": "HU_1", "IS": "IS_1", "LV": "LV_1", "NL": "NL_1",
        "NO": "NO_1", "PT": "PT_1", "RS": "RS_1", "SE": "SE_1", "SI": "SI_1", "TR": "TR_1", "UA": "UA_2", "BA": "BA_1"}
 LP = pd.read_csv(PROC / "lts_profiles.csv").set_index("name")
+SUFFIX = ""
+if "--with-translated" in sys.argv:            # ES_1 (Spanish) and BE_1 (French) replaced by their OPUS-MT English translations
+    SUFFIX = "_with_translated"
+    for nm in ("ES_1", "BE_1"):
+        t = (PROC / "lts_text_translated" / f"{nm}.txt").read_text(); n_w = len(t.split())
+        for k, rx in CX.items(): LP.loc[nm, k] = 1e4 * len(rx.findall(t)) / n_w
+    use.update({"ES": "ES_1", "BE": "BE_1"})
 rows = []
 for cc, nm in use.items():
     if cc not in P.index: continue
@@ -60,7 +67,7 @@ for cc, nm in use.items():
                      **{f"par_goal_{k}": (g.iloc[i] / g.sum() if g.sum() > 0 else np.nan) for i, k in enumerate(cats)},
                      **{f"par_all_{k}": a.iloc[i] / a.sum() for i, k in enumerate(cats)}))
 D = pd.DataFrame(rows).set_index("cc")
-D.to_csv(PROC / "lts_vs_parliament_profiles.csv")
+D.to_csv(PROC / f"lts_vs_parliament_profiles{SUFFIX}.csv")
 G = D[D.n_goal >= 30]
 pd.set_option("display.width", 220)
 print(f"\ncountries: {len(D)} with LTS profile; {len(G)} with >=30 strict goal speeches: {list(G.index)}; excluded for <30: {list(D.index[D.n_goal < 30])}")
@@ -107,5 +114,5 @@ axs[0].set_xticks(x); axs[0].set_xticklabels(cats, rotation=35); axs[0].set_ylab
 own = np.array([stats.spearmanr(G.loc[c, [f"lts_{k}" for k in cats]], G.loc[c, [f"par_goal_{k}" for k in cats]])[0] for c in G.index])
 o = np.argsort(own); axs[1].barh(G.index[o], own[o], color="#66a182"); axs[1].axvline(0, color="k", lw=0.6)
 axs[1].set_title("per country: rank correlation of the 9-theme profiles (strategy vs parliament)"); axs[1].set_xlabel("Spearman rho")
-fig.tight_layout(); fig.savefig(Path("ndc/figures") / "lts_vs_parliament.png", dpi=130)
-print("\nsaved ndc/figures/lts_vs_parliament.png")
+fig.tight_layout(); fig.savefig(Path("ndc/figures") / f"lts_vs_parliament{SUFFIX}.png", dpi=130)
+print(f"\nsaved ndc/figures/lts_vs_parliament{SUFFIX}.png")

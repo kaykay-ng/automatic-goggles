@@ -226,3 +226,12 @@ Confirmed: ES_1 is Spanish (es stop-words 0.39, en 0.001) and BE_1 French (fr 0.
  the SAME model family ParlaMint used for the parliament speeches, so both sides carry comparable translation noise. Needs `sentencepiece` (small) in .venv-nlp. ~81k words (ES 24k, BE 57k) -> a few thousand sentences, minutes on the Mac GPU.
 Method: rejoin PDF line breaks into sentences, translate sentence by sentence, save to ndc/data/processed/lts_text_translated/, re-run the same 9-theme profile, read ~6 translated passages per document, and report results WITH and WITHOUT ES/BE as a sensitivity check (n goes 16 -> 18 in the goal-window view).
 Caveat: machine translation can blur theme words (e.g. 'renovacion' -> 'renovation' is fine, 'eolica' -> 'wind' is fine, but idioms and headings can be garbled).
+
+## TRANSLATED ES/BE INCLUDED (14 Nov; ndc/notebooks/lts_translate.py, lts_vs_parliament.py --with-translated; data/processed/lts_text_translated/, lts_vs_parliament_profiles_with_translated.csv, ndc/figures/lts_vs_parliament_with_translated.png)
+Models downloaded: Helsinki-NLP/opus-mt-es-en (312 MB) and opus-mt-fr-en (301 MB), plus sentencepiece and sacremoses. ES_1: 790 sentences -> 21,689 English words; BE_1: 1,826 sentences -> 48,390 words (headings under 25 characters dropped); ~3 min each on the Mac GPU.
+Quality check: 6 random pairs per document read: fluent, theme words preserved (forest sinks, decarbonisation, renewables, electrification, CCS, heat/buildings); 0 sentences still look untranslated; one minor error (a date order: 'generate 2040 2 million jobs').
+RESULTS with ES and BE (n=18 goal-window view, n=20 all-speeches view) vs WITHOUT (n=16 / 18): STABLE.
+ P-A goal windows: median rho +0.26 (p=.007) [was +0.26, p=.012]; per theme: land_forest +.64, transport +.48, industry +.38, removals +.33, energy +.26, buildings +.25, instruments +.18, waste +.05, agriculture 0.00.
+ P-B goal windows: own +0.51 vs others +0.34, own better in 16/18, p=.008 [was +0.51 vs +0.33, 15/16, p=.014]; ES own rho +0.57, BE +0.33.
+ All climate speeches: P-A median +0.44 (p=.0002) [was +0.40]; P-B own +0.50 vs +0.37, 17/20, p=.004; ES +0.40, BE +0.43.
+ P-C gaps almost unchanged: removals +2.23, land_forest +2.02, waste +1.21, buildings +0.98, agriculture +0.85, industry +0.54, instruments -0.32, transport -0.35, energy -0.73.

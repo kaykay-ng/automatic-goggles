@@ -1,0 +1,790 @@
+The Strategy contained in this document has been developed in accordance with the guidelines of Regulation (EU) 2018/1999 of the European Parliament and of the Council of 11 December 2018 on the governance of the Energy Union and Climate Action, which sets out the need for the development of long-term strategies by Member States, with a view to at least 30 years.
+The European Union, as such, will present its own long-term strategy for 2020 to the United Nations on the basis of national proposals.
+Madrid, November 2020 NIPO:
+665-20-015-X This document is part of a series of 4 documents that reflect the Strategic Energy and Climate Framework: an opportunity for the modernization of the Spanish economy and job creation.
+Vice-Presidency Fourth of the Government of Spain Ministry for the Ecological Transition and the Demographic Challenge Author:
+MITECO Editing Review:
+IDAE Design and Layout:
+BABYDOG art and communication, S.L.
+Izertis Cover Image:
+Parque Nacional de la Caldera de Taburiente / OAPN - Javier Martínez STRATEGIA A LONG-TERM FOR A MODERN, COMPETITIVE AND CLIMATELY NEUTRA SPANISH ECONOMY IN 2050.
+EXECUTIVE SUMMARY CLIMATE NEUTRALITY IN 2050 1.1 INTEGRATED NATIONAL ENERGY AND CLIMATE PLAN (PNIEC) 1.2 GOVERNANCE SYSTEM 2
+THE OPPORTUNITIES OF CLIMATE NEUTRALITY 3
+MITIGATION 3.1 ENERGY EFFICIENCY 3.1.1 ENERGY CONSUMPTION 3.1.2 ENERGY DEPENDENCE FOR EXTERNAL 3.2 RENEWABLE ENERGIES
+NATURAL CARBON SUBMISSIONS 5.
+ADAPTATION TO CLIMATE CHANGE - 6.
+SECTORAL DECARBONIZATION 6.1 RENEWABLE ELECTRIC SECTOR 6.2 SUSTAINABLE MOBILITY AND TRANSPORT 6.3 SUSTAINABLE BUILDING 6.4 SUSTAINABLE AND COMPETITIVE INDUSTRY 6.5 AGROPECUARY, WASTE AND FLUORATED GAS 6.5.1 AGROPECUARY 6.5.2 WASTES AND RESIDUAL WATER 6.5.3 FLUORATED GAS • 7.
+TRANSVERSAL FACTORS IN CLIMATE NEUTRALITY 7.1 THE ROLE OF CITIZENSHIP 7.1.1 STATUS OF CITIZENSHIP IN CENTRE 7.1.2 NEW VALUES AND COMPORTING STANDARDS 7.2 TRANSITION JUST AND ACCOMPANYING TO COLLECTIVES AND VULNERABLE SECTORS 7.3 DEMOGRAPHICAL CHALLENGES 7.4 GENDER IEQUALITY 7.5 EDUCATION, VOCATIONAL TRAINING AND CONTINUED LEARNING 7.6 RESEARCH, INNOVATION AND DEVELOPMENT 7.7 DIGITALIZATION, STORAGE, DEMANDING AND NEW FORMS OF OPERATION OF THE ELECTRIC NETWORK 7.8 IMPLEMENTATION OF THE FINANCING SECTOR 7
+AUTONOMOUS EMPLOYMENT AND SOCIAL ECONOMY CONTENTS CONTENTS 10 12 3 13 19 21 21 23 24 26 28 33 36 38 40 43 44 45 46 47 49 50 51 54 57 58 63 64 67 68 3 EXECUTIVE SUMMARY CLIMATE NEUTRALITY IN 2050 1 4 EXECUTIVE SUMMARY CLIMATE NEUTRALITY IN 2050 The European Union (EU, hereinafter referred to as "EU") aims to be climate neutral for 2050.
+In other words, the EU has set itself the objective of having an economy with zero net greenhouse gas emissions.
+This goal is at the heart of the European Green Agreement and is in line with the EU's commitment to increase global climate action in line with the commitments of the Paris Agreement.
+The Paris Agreement, adopted in 2015 by the parties to the United Nations Framework Convention on Climate Change and ratified by Spain in 2017, establishes, in its Article 2, as a limit of global warming: “to keep the global average temperature rise below 2°C compared to pre-industrial levels, and to continue efforts to limit that temperature increase to 1.5°C with respect to pre-industrial levels”.
+In turn, Article 4 demands that: “All parties should strive to formulate and communicate long-term strategies for low-greenhouse gas development, bearing in mind Article 2 and taking into account their common but differentiated responsibilities and respective capabilities, in the light of different national circumstances”.
+In order to implement these and other commitments within the Union, the European Commission proposed at the end of 2016 the package of measures called “Clean Energy for All Europeans”.
+This package includes Regulation 2018/1999 on the governance of the Energy Union and Climate Action, which sets out the need for the development of long-term strategies by Member States, with a perspective of at least 30 years.
+The EU, as such, will present its own long-term strategy to the United Nations, based on national proposals.
+This is an action in line with the latest available scientific knowledge: the Intergovernmental Panel on Climate Change (IPCC) published its special report on the impact of global warming of 1.5 °C above pre-industrial levels in October 2018.
+The authors concluded that, if international climate action was not intensified, the rise of the global average temperature could reach 2 °C shortly after 2060 and continue to increase thereafter.
+That the EU, in line with scientific evidence, boost climate neutrality in 2050 implies a commitment to lead climate action globally.
+Spain is aligned with this European commitment, as formally agreed in the conclusions of the European Council of 12 December 2019, endorsing the objective of making the EU climate neutral by 2050.
+A commitment that has also been demonstrated at the national level, with the Declaration of Climate and Environmental Emergency agreed by the Council of Ministers on 21 January 2020, a resolution that responds to the widespread consensus of the scientific community, calling for urgent action to safeguard the environment, health and security of citizens.
+Our country is in an area of special vulnerability to the impacts of climate change.
+Increased temperatures, changes in rainfall or droughts can have serious effects on sectors such as agriculture, livestock, forestry or tourism, as well as negative impacts on the health of the population, mainly on the population at risk of exclusion.
+Spain is in an area of special vulnerability to the impacts of climate change.
+Combating it is a matter of responsibility with the present and the future.
+5 EXECUTIVE SUMMARY CLIMATE NEUTRALITY IN 2050 EXECUTIVE SUMMARY CLIMATE NEUTRALITY IN 2050 Combating climate change from Spain is therefore a matter of responsibility with the present and with the future of the country.
+It is also an obligation in line with the commitments it has undertaken as an EU Member State and part of the Paris Agreement.
+And it is the only and best way to attend to the call to climate action of Science and the whole of citizenship.
+In line with this, Spain has to implement policies aimed at achieving carbon neutrality by 2050.
+The development of strategies provides the basis for the country to take advantage of the multitude of opportunities that will emerge on this path to climate neutrality.
+Likewise, the availability of a less fossil-fuel-dependent energy system will reduce the country's exposure to variations in international fuel markets, thereby increasing its resilience to international changes and its competitiveness in the global context.
+Therefore, the objective of this Long-term Strategy (hereinafter ELP or Strategy) is to articulate a coherent and integrated response to the climate crisis, which takes advantage of the opportunities for the modernization and competitiveness of our economy and is socially fair and inclusive.
+It is a road map to move towards climate neutrality by 20501, with intermediate milestones in 2030 and 2040.
+Due to its time frame, it should be noted that the mission of the ELP is not to know how specific technological changes will occur in different sectors of the economy.
+The aim is to present a coherent proposal on this transformation using the scientific and technical knowledge currently available.
+In the coming decades, not only technological innovations will take place, but also transformations in economic systems or forms of social organization, which are difficult to anticipate with certainty.
+However, the threats and risks of climate change are well known, as are many ways of preventing them.
+In this way, the Strategy provides medium- and long-term signals to investors, economic, social and environmental actors, and to Spanish society as a whole, for the period 2021-2050.
+In this sense, it has a threefold objective:
+1 Climate neutrality in 2050 is a scenario in which greenhouse gas emissions are fully absorbed by carbon sinks, providing zero net greenhouse gas emissions in 2050.
+In the case of this document, emissions will be reduced by 90% compared to the year 1990 and the remaining 10% will be absorbed by sinks. First, comply with the Paris Agreement commitments. Second, anticipate and plan the transition to a climate neutral economy, taking into account challenges and social, business and political debate about its implications and needs.
+This transformation has to be addressed in a comprehensive manner, as it affects many cross-cutting elements of the economy and society. Third, it offers a clear objective in the long term, which will help anticipate the necessary lines of action and therefore maximize and exploit the opportunities arising from the energy transition by reducing risks.
+6 This strategy is built on the basis of technological neutrality.
+In principle, different technologies must have the same opportunities to develop in order to offer the best cost-efficient solutions for the de-carbonisation of each sector of the economy, however, the set of positive and negative externalities that accompany each technology and its respective degree of maturity must be taken into account.
+Knowing the different challenges to achieving climate neutrality allows us to anticipate the needs for investment in research, development and innovation that must be put in place in order for technologies to be ready in the coming years.
+It is also possible to design strategies to achieve leadership positions in the development of these innovations, which constitute an important opportunity for generating employment and business lines, thus advancing in the strengthening of the R & D & I system and the competitiveness of the Spanish economy.
+All this, in a context of greater and better protection of biodiversity, greater resilience in adaptation to climate change, more efficient use of resources and the design of more habitable cities with better air quality.
+Ministry for the Ecological Transition and the Demographic Challenge, 2020 FIGURA 1.1 Main magnitudes of the Strategy EXECUTIVE EXECUTIVE NEUTRALITY CLIMATE IN 2050 The final energy consumption of economic growth is decoupled.
+The renewable energy package on final energy will be 97%.
+The electricity sector will be 100% renewable.
+The supply guarantee has been studied together with REE.
+The electrification of the economy will exceed 50%.
+Around 250 GW of renewable power will be installed for this purpose.
+Development of renewable hydrogen and renewable fuels External energy dependence will fall to 13%.
+Great business, social and industrial opportunity for the Spanish economy Thanks to work on mitigation and the contribution of carbon sinks, climate neutrality will be achieved with a 90 per cent reduction in emissions compared to 1990.
+Adaptation to climate change is key, there are important synergies between mitigation and adaptation.
+7 Energy transition will remain the key vector of decarbonisation.
+Many European countries and the rest of the world are progressing towards the same goal.
+Fossil energies now account for 82% of the world's energy mix.
+However, the response to the climate crisis requires moving towards carbon-neutral systems.
+This transformation will bring a remarkable boost to technological and industrial development.
+In addition to this will be the revolution in the beginning of zero emissions mobility, as well as the new technological developments, management and business model derived from distributed power generation and renewable self-consumption.
+In addition to technological change, there will also be a need for behavioural change by businesses and citizens.
+Spain has the potential to become one of the European countries that drives that change.
+The National Integrated Energy and Climate Plan (PNIEC) 2021-2030, presented before the ELP, develops many of the vectors needed to lay the foundation for this leadership.
+Our country has one of the largest renewable resource potentials in the EU: a geography of 50 million hectares with large territories, Mediterranean and Atlantic winds, high level of sunshine, extensive forests and remarkable hydraulic resources, which are complemented by an important business, technological, innovation and knowledge fabric.
+It also has some of the companies that have led the international deployment of renewable energies that has taken place over the last two decades, pioneering institutions in the field of energy and important centres of research, technological development and knowledge.
+On the other hand, throughout the decarbonization process, and to leave no one behind, the just transition occupies a central space.
+The important transformation that climate neutrality implies will only be feasible if it is done with equity and social justice, in equality between women and men, with special attention to those who are most vulnerable and to the eradication of energy poverty.
+Therefore, together with the PNIEC, the Strategic Framework Energy Climate presented in Spain incorporated the Just Transition Strategy and the National Strategy against Energy Poverty.
+These documents lay the foundation for moving towards climate neutrality that meets social justice objectives, thus anticipating part of the objectives of the European Long-term Strategy.
+On these elements, designed in a coherent manner to meet environmental and social objectives, the present PLA is based.
+EXECUTIVE SUMMARY CLIMATE NEUTRALITY IN 2050 EXECUTIVE SUMMARY CLIMATE NEUTRALITY IN 2050 The important transformation that climate neutrality implies will only be feasible if it is done with equity and social justice, in equality between women and men, with special attention to those who are most vulnerable and to the eradication of energy poverty.
+8 Adaptation to climate change is also high on the agenda .
+IPCC reports point to southern Europe and the Mediterranean basin as the areas most exposed to the impacts of the climate crisis, making this an essential issue for Spain.
+It is a complementary response to mitigation efforts, with equal relevance: without adequate mitigation action, adaptive capacities will be irremediably overwhelmed.
+On the contrary, without adequate adaptation, mitigation action will not be able to meet the objectives.
+Among other issues, adaptation contributes to the continued long-term functionality of ecosystems, thereby ensuring their role as carbon warehouses and/or sinks.
+Soil conservation or fire prevention are also other key areas in this area.
+The health crisis caused by COVID-19 has highlighted the need to accelerate the ecological transition as a key element in the reconstruction phase.
+Thus, the framework for drawing up the Recovery, Transformation and Resilience Plans has been developed, with a significant volume of public and private investment in the coming years.
+This necessary investment drive to relaunch the Spanish economy and accelerate the transformation of the productive model towards sustainable and inclusive growth will be financed from the funds of the Plan Next Generation EU, the European Recovery Fund.
+In conclusion, this ELP sets out the path to achieving climate neutrality in Spain in line with the work being carried out across the EU, in line with the European Green Pact, the conclusions of the December 2019 European Council, and the proposal launched in March 2020 for the European Climate Law.
+The Union, and Spain with it, is preparing to make the transition to a zero net economy and society a reality by 2050.
+EXECUTIVE SUMMARY CLIMATE NEUTRALITY IN 2050 9 Source:
+Ministry for Ecological Transition and Demographic Challenge, 2020 FIGURA 1.2 Long-term Decarbonization Strategy* CLIMATE NEUTRALITY EXECUTIVE SUMMARY IN 2050 RENOVABLE DIGITAL HYDROGEN TRANSFORMATION 10 The Integrated National Energy and Climate Plan 2021-2030 (PNIEC) presents a road map for the next decade, designed in line with emissions neutrality in 2050 and from an efficient cost point of view.
+This PEF is based on the fulfilment of the objectives, policies and measures included in the updated draft plan and, in fact, uses the same model of energy foresight for the realization of the PNIEC and the ELP (TIMES-Sinergia).
+In addition, both documents are based on the same criteria of technological neutrality.
+The PNIEC, together with the Draft Law on Climate Change and Energy Transition, the Just Transition Strategy, the National Energy Poverty Strategy and the ELP, lay the foundations for the modernization of the Spanish economy, the creation of jobs associated with the ecological transition, Spain's leadership position in clean energy and technologies, rural development, improvement of human health and the environment and social justice, from a gender perspective and the equality approach.
+The measures provided for in the NIPEC allow one in three tonnes of CO2 equivalent to be withdrawn between the current time and 2030.
+Based on these measures, various initiatives have been or are in the process of being developed to implement them: Royal Decree-Law 23/2020 of 23 June, approving measures in the field of energy and in other areas for economic reactivation.
+This provision introduces into the normative framework the figures of energy storage, aggregators or renewable energy communities, among other issues, such as the reduction of administrative procedures or the deployment of a rapid recharge infrastructure for the electric vehicle.
+Self-consumption strategy.
+Roadmap for the development of the Sea Wind and Energies in Spain.
+1.1 INTEGRATED NATIONAL ENERGY AND CLIMATE PLAN (PNIEC) The PNIEC, together with the Draft Law on Climate Change and Energy Transition, the Just Transition Strategy, the National Strategy against Energy Poverty, the NAPACC and the ELP, lay the foundations for the modernization of the Spanish economy, job creation, Spain's leadership in clean energy and technology, the development of the rural environment, and the improvement of people's health.
+EXECUTIVE SUMMARY CLIMATE NEUTRALITY IN 2050 11 In relation to the objectives set in the EU, the PNIEC specifies for Spain, - 23% reduction of greenhouse gas (GHG) emissions compared to 1990. - 42% of renewable energy on total final energy consumption. - 39.5% improvement of energy efficiency. - 74% of renewable energy in electricity generation.
+Other notable results included in the NIPEC are:
+Primary energy intensity is reduced by 3.5% per year until 2030.
+External energy dependence improves 12 percentage points, from 73% in 2017 to 61% in 2030.
+The import of fossil fuels decreases significantly, which means savings in the trade balance of €67,000 million in the period 2021-2030.
+The PNIEC plans to add another 59 GW of renewable power and 6 GW of storage with a balanced presence of different renewable technologies.
+The presence of additional backup generation power will not be required.
+The total planned investments amount to €241,000.
+Eighty per cent of investments would be made by the private sector and 20 per cent by the public sector.
+GDP will increase by around 1.8% in 2030, compared to a scenario where the NIP was not implemented.
+Employment shows a net increase of 1.7% over the period 2021-2030.
+The R & D dimension and the national industrial fabric also benefit from the opportunities provided by the implementation of the NIPEC.
+Special attention is paid to the phenomenon of energy poverty, addressing it from an integral perspective and with a long-term vision.
+The effect of the NIPEC measures is progressive in fiscal terms, i.e. it is more favourable to lower-income households and especially vulnerable groups.
+Co-benefits for health have been estimated at a reduction in premature mortality from air pollution of approximately 27 per cent.
+The main environmental impact of the policies and measures included in the NIPEC to achieve the above results is the reduction of greenhouse gases.
+However, there are a number of other environmental impacts on factors such as land use, aquatic systems, natural heritage and biodiversity, which may not be positive if appropriate preventive, remedial and compensatory environmental measures are not taken.
+Therefore, all NIPEC actions will be subject to the environmental objectives and measures resulting from its Environmental Assessment Statement, and will be aligned with European policies in this area, such as the EU Biodiversity Strategy 2030 or the EU Farm Strategy to the Bureau.
+The evaluation of the Spanish NIPEC carried out by the European Commission in October 2020 points out that the objectives set out in the Plan are ambitious, that the recommendations set out by the Commission for the draft have been largely addressed, and, in a number of respects, is an example of good practice.
+EXECUTIVE SUMMARY CLIMATE NEUTRALITY IN 2050 EXECUTIVE SUMMARY CLIMATE NEUTRALITY IN 2050 12 1.2 GOVERNANCE SYSTEM The Climate Change and Energy Transition Bill is the institutional framework that responds to the need to build a country that successfully combines current opportunities, which allow us to anticipate new demands and generate new competitive industries and value chains, and future opportunities for young people, based on a clear goal that is to reach climate neutrality by 2050.
+This project institutionalizes the elaboration of the Long-term Strategy, the NIPEC and the NAPCC, and establishes the necessary coherence among all tools, as there is no other way to ensure, in a reliable, inclusive, transparent and predictable manner, the achievement of the 2030 and long-term goals and targets.
+This means that the ELP must project a path consistent with the decarbonisation objectives of the economy by 2050, and with the actions planned for 2030, which will require the mobilization of different administrations and private actors.
+An integrated governance system for the NIP and the ELP will be implemented based on indicators and aligned with the monitoring reports to be developed under the Governance Regulation of the NIP 2021-20302.
+The objective is to monitor the goals set out in both documents.
+In this way, it will be possible to identify difficulties and challenges, as well as react in advance and flexibility.
+The aim of this transparency exercise is also to encourage the involvement and support of citizens.
+The crucial element for success will be the social, political and business support that transformation generates, as it is a structural change in the medium and long term that will cover many political and economic cycles.
+Within the framework of this governance system, coordination, collaboration and involvement of the autonomous communities, as well as local authorities, will be essential to achieve the objectives.
+A large part of the powers required to carry it out belong to these entities.
+As envisaged in the Governance Regulation, the Long-term Strategy is a flexible instrument to guide economic and energy transformation towards climate neutrality in the mid-century.
+The specific route for each decade will be defined in detail through the NIPs, which will be developed every ten years and updated every five years.
+In the same vein, the Strategy will be updated every five years with the latest information available, so that the specific trajectories of sectors and technologies will vary.
+Through the ELP and the PNIEC, the average (2030) and the long term (2050) are integrated, providing credibility, climate commitment and industrial opportunities, as part of a single strategic vision for Spain.
+The crucial element for success will be the social, political and business support that transformation generates, as it is a structural change in the medium and long term that will cover many political and economic cycles.
+2 Regulation (EU) 2018/1999 of the European Parliament and of the Council of 11 December 2018 on the governance of the Energy Union and on the Climate Action Executive Summary CLIMATE NEUTRALITY IN 2050 13 EXECUTIVE SUMMARY CLIMATE NEUTRALITY IN 2050 THE OPPORTUNITIES OF CLIMATE NEUTRALITY 2 14 Climate neutrality presents an opportunity for modernisation, innovation and improvement of the competitiveness of the entire Spanish economy that this Strategy demonstrates and aims to help optimize.
+First, over the three decades, 2021-2050, the ELP will drive significant primary energy savings and a substantial improvement in energy efficiency.
+In particular, primary energy consumption is estimated to be reduced by around 50% from 2020 to 2050 (Annex E).
+This is possible thanks to the progressive decoupling of economic growth and energy consumption, i.e. as a result of a marked improvement in the energy efficiency of the economy.
+Thus, 60% less energy per unit of GDP would be needed than at present.
+Complying with climate neutrality requires that renewable energies make a significant contribution to end-use energy, through the combination of renewable technologies for direct use, renewable fuels3 and electrification of different energy uses, bearing in mind that electricity will be fully renewable.
+OPPORTUNITIES OF CLIMATE NEUTRALITY Source:
+Ministry for the Ecological Transition and the Demographic Challenge, 2020 FIGURA 2.1 Opportunities for climate neutrality by the application of ELP 3 This category includes biofuels, both liquids and gaseouss and hydrogen and other synthetic fuels, “Power to X”, where X also contains renewable carbon.
+R+D+i Employment Economic prosperity Biodiversity Chain industrial value Resilience climate change Living cities Efficient use of resources Citizen participation Energy self-sufficiency Quality air Rural development Territorial cohesion 15 OPPORTUNITIES OF CLIMATE NEUTRALITY To do this, electrification of final energy uses doubles in the period 2020-2050.
+It will increase to 52% in 2050, starting from 26% in 2020.
+The rest of the renewable contribution in 2050 would consist of renewable fuels and end-use renewables.
+This transformation involves not only a 100% renewable electricity sector, but a national energy system that is practically 100% renewable in the final use of energy.
+A more decentralized, multi-directional and complex model is also envisaged, where self-consumption, citizen participation and distributed energy resources, such as storage, distributed generation or demand management, will be key factors.
+Similarly, the digitisation of networks, as well as new operating schemes, will play a key role in this new model.
+Furthermore, considering the evolution of costs that renewable technologies are likely to present, energy costs in Spain would tend to fall in the long term, thus representing an additional source of productivity improvement for the national economy.
+The energy model will evolve into a model with greater security.
+The system will be based on renewable energies, thereby reducing its dependence on fossil fuels from outside, increasing diversification of energy sources and decentralization of generation, thereby improving the degree of self-sufficiency through renewables.
+According to the path envisaged in this strategy, 74% of the energy consumed in 2018 is imported, 61% in 2030, 39% in 2040 and 13% in 2050.
+The decarbonization of the economy and society over that 30-year period will make Spain a country that is largely capable of self-sufficiency in its energy needs by the middle of the century.
+The current energy dependence on Spain's external environment corresponds to a high consumption of fossil energy, which is imported almost entirely.
+Their reduction will be made possible mainly by the replacement of these fuels with indigenous renewable energy and additional energy efficiency measures.
+Secondly, climate neutrality provides an opportunity to improve the entire value chain of the industry, as well as to generate business niches.
+Technological development will be strengthened through the investment of resources in the search for new solutions for decarbonisation, thereby improving the research and innovation structure while increasing the competitiveness of the economy as a whole.
+In this sense, the deployment of renewable energies will allow the national industrial sector to strengthen its current position of leadership in these technologies, opening up new development paths in the fields of storage, renewable hydrogen, renewable fuels or power to x, or digital transformation, among other industrial developments necessary to ensure a 100% renewable electrical system.
+Industrial developments that are also necessary to move towards intelligent, connected and emissions-free mobility, including goods, maritime or air transport.
+And, in the same way, they are key in the construction sector, aimed at designing buildings with almost zero consumption.
+Climate neutrality is an opportunity to improve the entire industry value chain and generate new business niches.
+Technological development will be strengthened through the investment of resources in the search for new solutions for decarbonisation, thereby improving the research and innovation structure, as well as increasing the competitiveness of the economy.
+16 OPPORTUNITIES OF CLIMATE NEUTRALITY The transformation of the industrial sector will take a holistic approach, taking into account the synergies resulting from the coupling of sectors, as well as the creation of structures that promote innovation in all sectors necessary to advance this strategy and transfer to the market all the advances that take place in universities and technological centers, both to improve existing technologies, and to make new technologies emerge.
+On the other hand, forest management represents a new niche for business development due to its synergy between the use of biomass resources in the energy system, together with its contribution to reducing the risk of forest fires.
+In addition, by keeping the forested masses in good condition, this fundamental element is preserved in the fight against climate impacts, especially in the case of forests, one of the main sinks that contribute to climate neutrality.
+This also improves the conservation of natural spaces and wild species, helping to stop the current loss of biodiversity on a global and also national scale.
+This combination of efforts, both in mitigation and adaptation to achieve climate neutrality, also represents a new area of opportunity for rural Spain, and can become a useful tool to advance social cohesion and territorial rebalancing in our country.
+The deployment of renewables, associated industrial developments and, in parallel, actions such as the restoration of ecosystems (dehesas, wetlands, etc.) or forest management become areas of employment generation and thus tools to combat depopulation.
+In particular, investing in adaptation measures will not only contribute to improving the resilience of our territory to the physical impacts of climate change, but also to the severe economic losses associated with climate change.
+The total investments accumulated in the period 2031-2050 are estimated to reach €50 billion.
+Of these, 300 billion euros are considered to be associated with the implementation of this Strategy.
+Another important area will be energy rehabilitation, combining opportunities for decarbonisation, job generation throughout the territory and reduction of energy costs for families, which could be used for other uses.
+Renewable self-consumption, district heating, more efficient appliances, intelligent building management systems, as well as improved insulation materials, will have to contribute to circular economy solutions.
+In short, certain transformations will be necessary in certain sectors to meet climate neutrality, thus generating numerous opportunities throughout the value chain.
+To this end, the appropriate framework and measures must be established in advance.
+Thirdly, the ELP carries out an analysis of the expected economic impact on employment and health will be positive. (For further details on these aspects, see ANNEX D.
+ANALYSIS OF ECONOMIC IMPACT, EMPLOYMENT AND HEALTH).
+17 OPPORTUNITIES OF CLIMATE NEUTRALITY OPPORTUNITIES The accumulated savings in fossil fuel imports between 2021 and 2050 will reach 344 billion euros4.
+These savings will free up funds currently spent on importing these raw materials, which can be used both in indigenous resources and in the industrial development mentioned above.
+Achieving climate neutrality will mobilise additional investments in all sectors.
+The total investments accumulated in the period 2031-2050 are estimated to reach €50 billion.
+Of these, 300,000 are considered to be associated with the implementation of this Strategy.
+Annual additional investments are around 1% of GDP, in line with the figures presented by the European Long-term Strategy 2050.
+As a result of this increase in investment and the significant change in energy mix, the estimated increase in Gross Domestic Product (GDP) in 2050 compared to a scenario without the implementation of the Strategy stands at 1%.
+Ministry for the Ecological Transition and the Demographic Challenge, 2020 FIGURA 2.2 Impacts of the implementation of the ELP 4 The European Commission estimates that savings in the import of fossil fuels between 2030 and 2050 for the European Union as a whole will be between two and three trillion euros.
+Therefore, considering the economic and demographic weight of Spain within the European Union, the ELP estimate is aligned with the results expected by the European Commission.
+Energy dependence will fall to 13%.
+18 OPPORTUNITIES OF CLIMATE NEUTRALITY The package of measures that are integrated into the Strategy implies an increase in employment in 2050 of 1.6 per cent over a scenario that does not have its implementation.
+All this is in a context favourable to the development of more sustainable and habitable cities, with a significant improvement in air quality; to the conservation and enhancement of biodiversity; and to territorial cohesion, especially in rural areas.
+In the public health chapter, measures are associated with air pollution with a potential 64 per cent decrease in the number of premature deaths in 2050 compared to 2010, resulting from lower pollutant emissions and consequent benefits to people.
+Specifically, in the public health chapter, the measures of the Strategy are associated with air pollution with a potential 64 per cent decrease in the number of premature deaths in 2050 compared to 2010.
+This is the result of lower pollutant emissions and consequent benefits for people.
+In this context, urban areas will be the main beneficiaries of this increase in air quality, increasingly moving towards more habitable places.
+19 OPPORTUNITIES OF CLIMATE NEUTRALITY MITIGATION 3 20 MITIGATION The ELP proposes a path of reduction of greenhouse gas emissions in 2050 of 90% compared to 1990.
+It goes from 334 million tonnes of CO2 equivalent in 2018 to a maximum of 29 MtCO2eq in 2050.
+It is also expected that the absorptive capacity of natural sinks at that date will be 37 MtCO2eq, thus achieving climate neutrality.
+In order to carry out this decarbonization, all sectors of the economy must be transformed in depth.
+With the final objective and approximate rates of progress in each of the three decades being clear, sectoral efforts will be made according to the degree of maturity achieved by the different technological solutions, as well as the degree of implementation of behavioural changes.
+In the forward-looking exercise carried out in this strategy (see Annex E for more information).
+PROPOSED SCENE FOR CLIMATE NEUTRALITY) two scenarios have been proposed between 2031 and 2050: a scenario in which no additional measures are proposed to those already contemplated by the PNIEC (Tendential Scenario) and the Climate Neutrality Scenario (also called the ELP Scenario), which verify the reduction of GHG emissions by 90% in 2050 compared to 1990.
+The modeling of the energy system has been carried out using the TMES-Sinergia model, the same one that has been used for the PNIEC, but with a time horizon established in 2050 instead of 2030.
+This tool has generated projections of GHG emissions, energy efficiency, renewable energies and external energy dependence by 2050.
+In this analysis, the level of detail available for the NIP exercise (horizon 2030) is much higher than that available for the exercise of the Strategy (horizon 2050).
+This is mainly due to the fact that uncertainty increases as the time horizon studied is further away.
+Ministry for the Ecological Transition and the Demographic Challenge, 2020 FIGURA 3.1 Scenarios analyzed in the PNIEC and in the ELP 21 MITIGATION As can be seen from the figure above, the mitigation expected over the three decades between 2021 and 2050 is intensified, which represents a decreasing path in terms of greenhouse gas emissions.
+The implementation of energy efficiency measures, following the principle of “first energy efficiency” established by the EU, contributes to climate neutrality.
+Reducing energy consumption reduces the need for resources and, consequently, associated greenhouse gas emissions.
+Primary energy consumption is significantly reduced over the period 2021-2050.
+This is due both to the deployment of renewable energies and energy efficiency policies, as well as to the momentum of the circular economy and changing habits.
+It can also be observed that the consumption of non-renewable fuels decreases particularly significantly.
+Ministry for Ecological Transition and Demographic Challenge, 2020 FIGURA 3.2 Expected evolution of GHG emissions by sector from 1990 to 2050 in the Climate Neutrality Scenario 3.1 ENERGY EFFICIENCY 3.1.1 Energy consumption *OTHER: other sectors, fugitives, use of products and fluorinated.
+Ministry for Ecological Transition and Demographic Challenge, 2020 Source:
+Ministry for the Ecological Transition and the Demographic Challenge, 2020 FIGURA 3.3 Primary energy consumption in the ELP Scenario (including non-energy uses) FIGURA 3.4 Final energy consumption in the ELP Scenario (including non-energy uses) With regard to final energy consumption, the evolution in the Neutrality Scenario shows that the final consumption of non-renewable fuels decreases significantly, being replaced by end-use electric and renewable energy.
+The impact of energy efficiency policies, the momentum of the circular economy and behavioural changes can also be seen.
+140,000 120,000 100,000 80,000 60,000 40,000 0 Ktoe Nuclear Energy Renewable Energy 2015 2020 2025 2030 2035 2040 2045 2050 Non-renewable 100,000 90,000 80,000 70,000 60,000 50,000 40,000 30,000 20,000 0 Electricity Non-energy Renewable Energy 2015 2020 2025 2030 2035 2040 2045 2050 Non-renewable 23 MITIGATION Source:
+Ministry for the Ecological Transition and the Demographic Challenge, 2020 FIGURA 3.5 Estimated evolution of energy dependence In terms of energy dependence from abroad, measured as a proportion of energy resources imports over the total primary energy consumed, the reduction is very substantial over the three decades.
+As a result of the decline in imports of fossil fuels (coal, oil and gas) between 2021 and 2050, largely replaced by renewable (autochthonous) energies, energy dependence from abroad is expected to rise from 74% in 2018 to around 13% in 2050.
+As mentioned above, this percentage of dependence that remains in 2050 is due to the more complicated decarbonizing sectors, which will continue to require oil and gas.
+This improvement in indigenous energy supply is not only positive from a security and resilience point of view in the face of unfavourable international circumstances.
+It is also very positive in relation to the trade balance (approximately €344 billion in savings between 2021 and 2050).
+Failure to implement the measures necessary to achieve climate neutrality (Tendential Scenario) would place energy dependence at 52 per cent by 2050.
+In terms of final energy, efficiency improvement is remarkable.
+The transport sector is the main contributor to the reduction of the energy intensity of the system .
+The residential and service sectors also play an important role.
+3.1.2 External energy dependency 80% 70% 60% 50% 40% 30% 20% 10% 0% Climate Neutrality Scenario Trendial ELP 2015 2020 2025 2030 2035 2040 2045 2050 24 MITIGATION Within the EU, the contribution of renewable energy to final energy consumption is one of the objectives measuring progress in the energy transition.
+To measure this contribution, the methodology is set out in the Directive on the promotion of the use of energy from renewable sources, 2018/2001 as last version5.
+Figure 3.6 shows the evolution of this percentage in accordance with the provisions of that Directive.
+As you can see, the share of renewable technologies in final energy consumption increases to almost 100% by the middle of the century.
+This increase is necessary to achieve climate neutrality, as sectoral decarbonization options require a reduction of almost all fossil fuel consumption, which will be replaced by energy efficiency and renewable sources.
+3.2 RENEWABLE ENERGIES 5 Directive (EU) 2018/2001 of the European Parliament and of the Council of 11 December 2018 on the promotion of the use of energy from renewable sources.
+6 In the figure, to measure this contribution, the methodology set out in the Directive on the promotion of the use of energy from renewable sources, 2018/2001, is used.
+Ministry for the Ecological Transition and the Demographic Challenge, 2020 FIGURA 3.6 Percentage of renewable energy compared to final energy consumption6 100% 90% 80% 70% 60% 40% 40% 30% 20% 10% 0% Renewable 2015 2020 2025 2030 2035 2040 2045 2050 Non-renewable 25 MITIGATION In the transport and mobility sector, a strong contribution from the renewable fraction is seen, reaching 79% in the final energy use in 2050.
+The non-renewable contribution at that date is for aviation, which continues to use in part conventional kerosene.
+Similarly, a residual portion of maritime transport and heavy goods transport by road would continue to use fossil fuels on that date.
+With regard to the generation of electricity, according to the modeling carried out, from 2040 renewable penetration is close to 100%, reaching that figure by 2050.
+The evolution of the percentage of renewable energies in the cold and heat sectors is experiencing a sharp increase in the Climate Neutrality Scenario, reaching 97% in 2050.
+This is mainly due to the contribution of heat pumps, especially in the residential and service sectors, but also in industry (for low temperature heat applications), as well as the contribution of biomass, renewable hydrogen and solar energy.
+The main environmental effect of the large introduction of renewables is the reduction of greenhouse gases.
+However, there are a number of other environmental impacts on factors such as land use, aquatic systems, natural heritage and biodiversity, which may not be positive if appropriate preventive, remedial and compensatory environmental measures are not taken.
+All renewables implementation actions will therefore be subject to environmental objectives and measures aligned with European policies in this area, such as the EU Biodiversity Strategy 2030.
+Particular attention will be paid to the cumulative effects of renewable facilities in the rural environment, promoting specific environmental criteria, avoiding the affectation of fragile environmental values or values of interest to environmental conservation, promoting sustainable and fair rural development, and avoiding conditions to protected natural areas and forest, silvopastoral, agricultural and livestock environments that may pose a particular risk to the maintenance of natural heritage, biodiversity and traditional economic activity linked to the territory.
+Ministry for Ecological Transition and Demographic Challenge, 2020 FIGURE 3.7 Renewable energies in 2050 RENEWABLE ENERGIES FINAL CONSUMPTION 97% T R A N S P OR R T E 7 9 % ELECTRIC SECTOR 100% C A L OR R Y F R I O 9 7 % 26 NATURAL CARBON SUMIDERS 4 27 NATURAL CARBON SUMIDERS Climate neutrality requires natural sinks to be able to absorb at least an amount equivalent to the greenhouse gas emissions remaining in 2050 (for more information see ANNEX A.
+Since the Strategy ' s objective is to mitigate 90 per cent of total gross emissions compared to 1990, natural sinks will have to absorb at least that remaining 10 per cent.
+The main lines of work identified for the development and strengthening of sinks are as follows:
+Ministry for the Ecological Transition and the Demographic Challenge, 2020 FIGURA 4.1 Opportunities for improvement of carbon sinks • Creation of wooded forested areas.
+They are the main carbon sinks and help increase biodiversity.
+They can have a very positive impact on employment.
+The sustainable management of national forests will provide for greater growth of these ecosystems in the future, as well as a reduced risk of forest fires.
+This will entail the recovery of these types of ecosystems that were damaged or completely lost. • Promoting agroforestry systems and dehesa regeneration through densification and regeneration of the tree stratum to ensure their sustainability.
+This promotes effective mechanisms for adaptation to climate change.A set of measures aimed at improving organic carbon in agricultural and forest soils, increasing carbon capture while generating more resilient systems and other co-benefits in the areas of food security, biodiversity and water cycle regulation, among others.
+Increase of the Organic Carbon of Grounds for the Development of Agricultural Systems and the Regeneration of Wastes Restoration of Humans Creation of Robbed-Strengthed Superfices Fostering Sustainable Forest Management Reforestation of 0.6 Mha over the entire period 2020-2050 Additional 3 Mha in 2050 Carbon Subsidies and Benefits to Society Reduction of Fire Risk and Forest Products Improvement of organic carbon content of agricultural and forestry soils with environmentally friendly practices Densification and regeneration of the arb strato
+Effective mechanisms for adaptation to climate change Restoration of 50,000 ha Recovery of affected or missing ecosystems 1.
+Financial instruments to balance the rent of land owners.
+Promotion of research, development and innovation activities aimed at improving ecosystem knowledge and the functioning of CO2 warehouses.
+Transmission of knowledge, application of best practices by land owners and promotion of associationism.
+Changing behaviour between consumers and the supply chain and promoting the use of forest products.
+28 ADAPTATION TO CLIMATE CHANGE 5 29 ADAPTATION TO CLIMATE CHANGE Spain is already experiencing significant impacts arising from climate change, which will become worse as the climate crisis continues to progress.
+To consider the changes that have already occurred and anticipate those projected by science is therefore a necessity.
+In this regard, incorporating adaptation to climate change into this strategy is essential.
+For further details on this component, please refer to ANNEX B.
+ADAPTATION TO CLIMATE CHANGE.
+Adaptation and mitigation are complementary responses to climate change: without adequate mitigation action, adaptive capacities will be irremediably overwhelmed.
+And, on the other hand, an adaptation that is not low in carbon would be meaningless, since it feeds change whose effects are to be avoided.
+It should also be noted that, despite the mitigation efforts envisaged in this strategy, the climate crisis will continue to progress due to the effect of the greenhouse gases already emitted.
+This makes adaptation policies more important.
+There is a higher concentration of risks associated with climate change in the Mediterranean arc than in the rest of Europe (Figure 5.1).
+Some of the major economic sectors of the country (tourism, agriculture, livestock, fishing) are particularly vulnerable.
+It is therefore necessary that adaptation policies in Spain continue to be strengthened and made more cross-cutting.
+European Environment Agency7 FIGURA 5.1 Potential impact of climate change in Europe 7 https://www.eea.europa.eu/data-and-maps/figures/potential-aggregate-impact-adaptive-capacity 30 ADAPTATION TO CLIMATE CHANGE Neither in Spain are impacts distributed uniformly in geography or society and, consequently, can open or widen territorial and social gaps.
+Adaptation should therefore also aim at preventing an increase in inequalities and moving forward on the path to sustainability, in line with the commitment to a Just Transition.
+In addition to the information contained in Figure 5.2, Figure 5.3 contains more details on the different measures that are proposed for some of the sectors analyzed in relation to adaptation to climate change.
+FIGURE 5.2 Sectoral lines of work for adaptation to climate change Source:
+Ministry for the Ecological Transition and the Demographic Challenge, 2020 Water and water resources Natural heritage, biodiversity and protected areas Forestry, desertification, hunting and continental fisheries Climate and climate Climate and climate Coasts and marine environment Mobility and transport Financial system and insurance activities Adaptation measures generate resilience and protection against the effects of climate change Agriculture, livestock, fisheries, aquaculture and food Education and society Research and innovation Disaster risk reduction City, urban planning and building Heritage c
+Ministry for the Ecological Transition and the Demographic Challenge, 2020 ADAPTATION TO CLIMATE CHANGE Natural heritage and biodiversity Water and water resources Soils and desertification • Strengthening conservation.
+Well-preserved and biodiverse ecosystems have greater resilience to climate change.
+• Promotion of ecological connectivity.
+It includes the identification and conservation of ecological corridors.
+• Integration of adaptation in the planning and management of protected areas.
+• Drought management.
+Mechanisms that promote flexibility in supply and demand.
+• Flood management in the light of new climate patterns.
+• Protection of water quality in the face of new pressures arising from the tendency to lower flow rates and higher temperatures.
+• Promotion of efficient water use geared towards net resource savings.
+• The provision of new resources from desalination with renewable sources and reuse to reduce the gap between consolidated demands and available resources.
+• Review of concessions to bring them into line with available resources.
+• Development of the National Action Programme to Combat Desertification (NAPD).
+• Creation of wooded forest areas, promotion of forest management and agroforestry systems.
+Agriculture, livestock, fishing and food City, urban planning and construction Marine environment Mobility and transport Energy system • Identification of vulnerable areas and sectors and assessment of needs and opportunities in response to climate trends.
+• Support for agricultural research and experimental production for crop selection, variety development and better-adapted management models.
+• Capacity-building for adaptation through advice on farm management.
+• Promotion of the Mediterranean diet and consumption of local products.
+• Implementation of food chains adapted to projected changes, which sustainably use natural resources and provide quality of life for those who find their links.
+• Incorporation of specific adaptive criteria for each location.
+• Inclusion of a hydrological-forestal perspective in the development of land planning.
+• Promotion of forests as a tool for local climate regulation.
+• Consideration of climate change scenarios for reforestation planning.
+• Development of adaptation policies to be incorporated into local management.
+• Consideration of climate change in urban planning.
+• Building a local governance system (climate change and adaptation plans).
+• Monitoring the impacts of climate change on the marine environment.
+• The incorporation of adaptation to the management of Marine Protected Areas.
+• Sustainable management of fishing activities.
+• Prevention of pollution.
+• Protection of marine biodiversity.
+• Development of new tools for risk analysis on the coast.
+• Strengthening early warning systems and establishing evacuation protocols.
+• Integration of coastal risks into spatial planning and urban planning plans.
+• Conservation of beaches, dune systems, wetlands and marshes.
+• Design of the new infrastructure taking into account the climatic conditions that exist throughout its useful life.
+• Integration of climate change risks into infrastructure management and maintenance.
+• Projecting the impact of climate change on renewable energy production potentials and integrating results into energy planning.
+• Identification of vulnerable infrastructures and encouragement to specific adaptation programmes.
+• Development of specific risk assessment tools.
+• Development of adaptation standards for new infrastructure • Analysis of changes in electricity demand associated with climate change and integration of results into energy planning and energy poverty reduction.
+Forest planning and management Coastal areas.
+32 ADAPTATION TO CLIMATE CHANGE In addition to sector-specific work lines, cross-cutting tools will need to be implemented in order to adopt comprehensive adaptation systems.
+This will require systematic observation systems and regionalized climate scenarios, as well as a knowledge management platform on adaptation.
+In addition, the 7 cross-cutting lines of the NAPCC 2021-2030 should be implemented:
+(1) Territorial vulnerability (2) Social vulnerability (3) Cross-border effects (4) Integration of the gender approach (5) Prevention of maladaptation and elimination of perverse incentives (6) Costs and benefits of adaptation and inaction (7) Action orientation All sectoral policies should be tailored to the new challenges arising from the climate crisis.
+They should also be coordinated to provide integrated responses to challenges such as water use and management, adverse environmental events, land degradation and desertification, impacts on ecosystems or coastal infrastructure, as well as protection of people's health.
+Given the breadth and depth of the problem, adaptation can only be effectively addressed if it becomes a socially shared challenge.
+In this sense, this Strategy raises the need to assume adaptation to climate change as a State policy, because of its profound implications for the economy and the natural capital of the country and with it, the basic conditions for ensuring the health and well-being of the people of this and successive generations.
+33 SECTORAL DISCARBONIZATION 6 34 SECTORAL DISCARBONIZATION The change to be experienced over the next three decades will be the aggregate result of the respective sectoral transitions.
+Within the context of the Long-Term Decarbonization Strategy and the National Integrated Energy and Climate Plan, coordinated actions aimed at achieving climate neutrality in the different economic sectors by 2050 are framed.
+In particular, the Hydrogen Roadmap sets decarbonisation targets for those sectors whose, such as the industrial sector, mobility or decarbonisation of the electricity and energy storage sectors.
+Along the same lines, the Biogas Roadmap will seek to boost the use of this renewable gas to contribute to decarbonization.
+In addition, the Energy Storage Strategy analyses in a comprehensive manner the storage needs for the transition of the energy system, taking into account a cross-sectoral perspective.
+In this line, this section is deepening in each of these sectors.
+For the definition of the Strategy, the following economic sectors have been analysed in depth: electricity generation, transport, industry, building, agriculture, waste and fluorinated gases.
+In particular, the modeling of the energy system with the TIME-Sinergia system has generated projections by 2050 of GHG emissions, energy efficiency, renewable energies and external energy dependence compatible with the objectives set and that allow to estimate the order of magnitude of the necessary transformations.
+Each section sets out the main magnitudes and tools that will be important in the evolution of this sector towards climate neutrality.
+The rapid reduction of emissions and penetration of renewables in the electricity sector makes electrification one of the main vectors for the decarbonization of the system as a whole, representing a very important investment opportunity.
+This sector is expected to be the first to drastically reduce its GHG emissions.
+The following figure shows the evolution of the electricity sector, as well as the main technological advances and tools that will allow the emission reduction necessary to meet the commitments.
+6.1 RENEWABLE ELECTRIC SECTOR 35 SECTORAL DISCHARBONIZATION The technological development of electric renewables has allowed them to be, in many cases, the most competitive alternative to generate electricity, allowing a reduction in electricity costs for consumers.
+As a result, the PNIEC 2021-2030 plans to achieve a very significant reduction in emissions in the electricity sector and to reach 74% of renewable electricity production by 2030.
+To move towards climate neutrality in this sector from 2030 onwards, and reach a 100% renewable energy level by 2050, placing citizens at the centre of the electricity sector, the most important lines of work that will play a role are:
+FIGURE 6.1 Electrical sector Source:
+Ministry for the Ecological Transition and the Demographic Challenge, 2020 The design and operation of transport and distribution networks will have to face challenges such as a more distributed generation with higher intermittent levels than the current ones, as well as the transformation of the traditional model of unidirectional energy flows from the centers of generation to a model of multidirectional flows.
+These include: daily, weekly and seasonal storage, demand management, and smart networks that, through digitization, improve monitoring, control and automation systems.
+These technologies will play a key role in decarbonizing the electricity system, and particularly in island territories and isolated regions.
+Heating and transport electrification 36 SECTORAL DISCHARBONIZATION Transport and mobility transformation is a challenge, as its implications affect a large part of the population and businesses.
+On the other hand, the responsibility and participation of local authorities will be crucial, as their decisions will depend to a large extent on mobility patterns in rural and urban environments in the coming years.
+This sector also presents technological challenges, as both heavy road freight transport, aviation and maritime transport are relevant sub-sectors in which non-emitting technological alternatives have not now matured commercially.
+The following figure shows the evolution of this sector, as well as the main technological advances and tools, which will allow the reduction of emissions necessary to meet the commitments.
+6.2 SUSTAINABLE MOBILITY AND FUTURE TRANSPORT 6.2 Sustainable mobility and transport Source:
+Ministry for Ecological Transition and Demographic Challenge, 2020 8 Percentage calculated according to the methodology established in Directive (EU) 2018/2001 on Renewable Energy.
+Rapid decarbonisation of the electricity sector helps to make greater electrification of other energy demands (such as mobility, heat and cold uses or industrial uses) a key tool for achieving climate neutrality.
+To the extent that they can be managed, these demands are in turn an opportunity for the coupling of sectors and, therefore, a better operation of a renewable electrical system.
+Finally, it should be noted that, in order to analyse the security of electricity supply, different analyses have been carried out by the Spanish Electricity Network, which make it possible to ensure that the proposed system, even without substantial increases in electrical interconnections with third countries, is able to supply electricity reliably and safely.
+The demand management, seasonal storage and daily requirements have been identified for this purpose.
+For further details on the electricity sector, please refer to Annex C, section C.1.
+37 SECTORAL DISCARBONIZATION In 2030, as a result of measures envisaged in the NIPEC such as the change in mobility models and the increase in electrification, it is expected to reach a share of 28% of renewable energy in transport-mobility8 as well as a reduction in emissions of more than 30% in the same decade.
+To move towards climate neutrality in this sector from 2030 onwards, and reach a GHG emissions level of only 2 MtCO2 by 2050, the lines of work that will play a most important role are:
+In the detailed study of the transformation of the sector (see Annex C, paragraph C.2.
+Sustainable mobility and transport) requires a separate analysis of the different modes (road, rail, air and sea), as they are very different from each other.
+The introduction of new technologies will be the most cost-efficient solution that meets the technical and service requirements in each of these modes. • Energy efficiency measures and changes in mobility models and needs.
+The modal shift of the most polluting and energy-consuming individual means of transport towards collectives, other more respectful individuals, such as bicycles or electric vehicles, and mobility on foot will continue to be encouraged. • The electrification will continue to be a key technology in the road sector for light vehicles. • Renewable fuels will be especially important for heavy goods transport by road, aviation and navigation. • Renewable gases and the coupling of sectors can provide important sales.
+In 2030, as a result of measures envisaged in the NIPEC, such as the change in mobility models, the increase in electrification and renewable fuels, it is expected to reach a share of 28% of renewable energy in transport-mobility, as well as a reduction in emissions of more than 30% in the same decade.
+38 The building sector comprises residential, commercial and institutional subsectors (see Annex C, section C.3 for details).
+Following the “first, energy efficiency” principle, the European Commission proposes energy efficiency in building as the first of the blocks of measures to be undertaken.
+In line with this principle and in line with the proposals of the Long-term Strategy for Energy Rehabilitation in the Building Sector in Spain, the updating of which, pursuant to Article 2a of Directive 2010/31/EU, was presented in June 2020, a logical order for actions in decarbonisation of the sector is as follows:
+(1) demand reduction through energy efficiency actions;
+2) use of highly efficient systems; and 3) providing final energy through renewable energy, mainly produced in situ.
+And along with them, it should be noted that one of the main tools to act in decarbonizing this sector is electrification.
+The following figure shows the evolution of this sector, as well as the main technological advances and tools that will allow the reduction of emissions necessary to meet the commitments.
+By 2050, it is estimated that 80% of the park will consist of buildings that have already been built, so it is necessary to prioritize actions over the existing building.
+On the other hand, new plant buildings will be of almost zero energy consumption in accordance with the regulations governing the building sector in Spain, as set out in Directive (EU) 2018/844 of the European Parliament and of the Council of 30 May 2018 amending Directive 2010/31/EU on the energy efficiency of buildings and Directive 2012/27/EU on energy efficiency, and detailed in ERESEE 2020 (https://ec.europa.eu/energy/sites/ener/files/documents/ es_ltrs_2020.pdf ).
+The use of alternative materials and sustainable materials should also be encouraged in comparison with other materials.
+6.3 SUSTAINABLE BUILDING 6.3 Sustainable building Source:
+Ministry for the Ecological Transition and the Demographic Challenge, 2020 SECTORAL DISCOVERING 39 FIGURA 6.4 Technologies available for decarbonization in building Source:
+Ministry for the Ecological Transition and the Demographic Challenge, 2020 In order to promote the energy improvement actions of the buildings already built, it is not enough to have an adequate regulatory framework, also specific measures are necessary to boost.
+These measures should include appropriate incentives, accompanying actors and mobilizing investments.
+Given the long service life of buildings and the relatively low renovation rate compared to other sectors, policies, investments and measures that are undertaken in the coming years need to be aligned so that they can be done in a manner compatible with a decarbonisation scenario by 2050.
+As indicated at the beginning of this section, together with actions in energy efficiency and renewable energies, the electrification of demand is the main decarbonisation vector in this sector.
+As can be seen from the figure above, by 2050 81 per cent of residential sector demands and 91 per cent in the services sector will be electrified.
+The main levers are heat and cold applications (hot water and air conditioning), which currently have a higher proportion of fossil fuels.
+The energy consumption associated with these devices will be covered by a combination of electrification, demand reduction and thermal renewables.
+In order to move towards climate neutrality in the building sector from 2030 onwards, and to reach zero GHG emissions by 2050, the following figure reflects the main technologies that are emerging.
+The main changes will take place in the role that consumers will play in the sector through demand management and reduction.
+SECTORAL DISCARBONIZATION Note:
+Thermal renewables and electrification technologies can be applied individually or collectively, such as in centralized air conditioning networks or collective self-consumption clusters.
+40 Industry is a sector that poses at the same time certain complexities, but also opportunities when it comes to decarbonizing by 2050.
+The combination of the most advanced technologies, new energy vectors, as well as energy efficiency, will be necessary to undertake this transformation by making the most of the opportunities.
+This is also understood by the European Commission, which, in its communication “A new industry model for Europe” of 10 March 20209 wants to show its support for industry in its progress towards climate neutrality.
+The European Green Pact sets out the objective of creating new markets for climate neutral and circular products, such as steel, cement and basic chemicals.
+Moving forward in the decarbonisation of industry is essential for a sustainable industry that maintains and expands industrial employment in Spain.
+The PNIEC estimates that the manufacturing industry is the second most growing in the 2020-2030s in terms of gross value added, benefiting from emission reduction measures.
+The objective of this strategy for the industrial sector is to continue this path of growth of the activity of this sector in the period 2030-2050.
+But it will be essential, in order to achieve this objective, to ensure the competitiveness of Spanish industry at a global level.
+This will require, on the one hand, building their innovative capacity and creating domestic markets for the new technologies needed for decarbonization and, on the other hand, extending the signals and impulses to decarbonization to all countries, through the various instruments available.
+The following figure contains the main opportunities in this sector.
+As indicated in the figure above, certain aspects have been identified that will represent an important opportunity for the industrial sector: - In any case and in a context where the rest of the EU, the international community and different industrial sectors at global level are already defining climate neutrality scenarios.
+It is essential to start developing the lines of research, innovation and competitiveness so that the national industrial sector can meet the new demands under the best conditions, as well as maintain or increase its competitiveness.
+6.4 SUSTAINABLE AND COMPETITIVE INDUSTRY 9 https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52020DC0102&from=EN FIGURA 6.5 Industrial opportunities associated with decarbonization Source:
+Ministry for the Ecological Transition and the Demographic Challenge, 2020 SECTORAL DESCARBONIZATION I+i+c Renewable energies Forest management Circular economy RehabilitationStorage 41 10 https://eur-lex.europa.eu/resource.html?uri=cellar:9903b325-6388-11ea-b735-01aa75ed71a1.0018.02.DOC_1&format=PDF
+The gradual introduction of renewable energies and the consolidation of the industrial sector will help economic growth and employment generation. • Renewable fuels will be particularly important for heavy goods transport by road, aviation and navigation. • On the other hand, it will be necessary to develop decarbonised energy vectors, such as renewable hydrogen, in order to meet the thermal needs of the industry.
+In this respect, competitive renewable energy is a key element.
+However, there will also be opportunities to use biomass as a renewable energy, thereby making use of synergies arising from the management of forest spaces. • Energy storage is one of the great opportunities, but at the same time one of the industrial sectors in which greater efforts will have to be made to achieve a dual objective: to achieve a technologically viable solution, but also to develop the national industrial and business fabric capable of implementing and exploiting this solution on a large scale.
+In the case of renewable hydrogen, Spain has great potential to be one of the great leaders of deployment.
+These efforts are reflected in the Energy Storage Strategy. Related to the previous one, the evolution towards an electric and autonomous transport model can be an important opportunity for a sector as relevant to the Spanish economy as that of vehicle manufacturing.
+The Spanish Strategy of Circular Economy proposes a series of measures so that the industry can take advantage of these opportunities - The last of the great opportunities is related to the renovation industry of the building.
+As indicated in the analysis of the building sector (paragraph 6.3), the energy rehabilitation of the existing housing stock is one of the main legs on which the road to climate neutrality of that sector rests.
+It will be important to channel this need, and to take advantage of the industrial opportunity it entails.
+To this end, ERESEE 2020 has been published:
+2020 update of the Long-term Strategy for Energy Rehabilitation in the Building Sector in Spain.
+This is in line with the publication in October 2020 of the European Commission strategy “A Wave for Europe” (A Renewal Wave for Europe) which aims to improve the energy efficiency of buildings.
+The Commission aims at at at least doubling the rate of renewal over the next decade by ensuring greater energy efficiency.
+It is essential to start developing the lines of research, innovation and competitiveness, so that the national industrial sector can meet the new demands under the best conditions, as well as maintain or increase its competitiveness.
+SECTORAL DISCHARBONIZATION 42 SECTORAL DISCARBONIZATION The following figure shows the main magnitudes of the sector (GEG emissions), as well as the lines of action that are intended to be promoted over the 2050 horizon.
+Emissions from this sector are reduced by about 14% in the decade of implementation of the NIPEC 2021-2030.
+The main actions are on the side of energy efficiency, as well as the use of renewable energies.
+In the following decades, emissions continue to decline to 7 MtCO2 in 2050, which represent about 25 per cent of the total at that date.
+In this regard, the main lines of action to be undertaken in the industrial sector, from a technological point of view, are reflected in the figure and are as follows:
+The use of alternative raw materials and the promotion of the circular economy can help greatly reduce emissions and optimize the functioning of this sector.
+I there is also a need for critical raw material supplies that improves Europe's independence and avoids unsustainable sources of supply for environmental or social reasons.
+The change from current processes to others that employ decarbonized technologies.
+In some sectors it is necessary to develop technological solutions that are not currently available on a commercial scale and that will have to be developed and implemented.
+The evolution of electrical heat generation systems will increase the presence of electricity in process equipment requiring low temperatures (e.g. heat pumps).
+With regard to medium- and high-temperature processes, there is an important potential for other renewable energy sources to contribute more significantly to the decarbonisation of the industrial sector.
+Renewable hydrogen can be one of the main energy vectors with application for these processes. • Emissions will exist in the final processes that will be difficult to eliminate, so carbon capture, storage and use could also play a role in this sector.
+FIGURA 6.6 Sustainable and competitive industry Source:
+Ministry for the Ecological Transition and the Demographic Challenge, 2020 43 SECTORAL DISCARBONIZATION It is important to point out that all the above lines of action must be accompanied by a strategy of research, development and innovation that helps the Spanish industry to position itself competitively in this aspect at a global level, not limited to using technologies developed in other regions.
+The multi-annual reference framework since 2021 is reflected in the Spanish Science, Technology and Innovation Strategy 2021-2027.
+Finally, there is a need to develop an industrial strategy that will help guide long-term decarbonization and take advantage of all associated opportunities, from a gender perspective, by improving competitiveness and innovation, stability of energy and CO2 prices, encouraging pilot projects, and sustainable public procurement, among other things.
+FIGURE 6.7 Agricultural, waste and fluorinated gases Source:
+Ministry for the Ecological Transition and the Demographic Challenge, 2020.Renewable and very high efficiency cogeneration. Energy efficiency measures are the most effective both from an economic point of view and from an emission reduction point of view.
+They will be accompanied by the necessary policies as a follow-up to what was proposed in the NIPEC.
+However, the savings achieved through this route have technical limitations once a certain level of savings has been achieved, and the development of the other lines is essential.
+Diffuse sector emissions in 2050 account for two thirds of total emissions from the Spanish economy in 2050.
+Within diffuse emissions, non-energy emissions have very special characteristics that make mitigation difficult.
+This is because actions in these sectors either have an impact only on the long term, either require a profound transformation of technologies, or at present there is no known technology or procedures that are able to significantly reduce their emissions in a shorter period of time.
+For further details on these sectors, please refer to Annex C, paragraph C.5.
+Diffuse Non-Energy Sectors.
+The following figure summarizes the three parts of this sector: agricultural, waste and fluorinated gases.
+6.5 AGROPECUARY, WASTES AND FLUORATED GAS 44 SECTORAL DISCHARBONIZATION The profiled path for the primary sector achieves a significant reduction in non-energy emissions of greenhouse gases, specifically 53% compared to the 1990 reference year.
+However, according to the modelling carried out, more than half of the emissions remaining in 2050 will come from the primary sector due to the special characteristics that make mitigation difficult.
+This result is in line with those obtained by the European Commission.
+The main lines of work that are considered in the horizon 2050 to achieve the reduction of emissions from the agricultural sector are: • Production of biogas. • Crop management and soil conservation. • Digitization and smart technologies for irrigation and fertilization. • Improvement in livestock feeding. • Use of nitrogen-coated fertilizers and with nitrification inhibitors.
+6.5.1 Agriculture Finally, it is important to note that this sector, in addition to being an emitter of greenhouse gases (GHG), exercises as a natural sink through the ability of soil and woody crops to fix carbon, and therefore, together with the forest sector, will play a key role in achieving a neutral economy in emissions.
+In this regard, as discussed in the carbon sinks section, practices will be promoted to promote carbon fixation in wood crops and soil.
+The profiled trajectory for the primary sector achieves a significant reduction in non-energy emissions of greenhouse gases, namely 53 per cent compared to the 1990 reference year.
+45 SECTORAL DISCARBONIZATION The implementation of the measures set out above would reduce emissions in this sector by 81% by 2050 compared to 2015.
+The actions resulting from the implementation of the circular economy would lead to an increase in recycling and secondary raw materials that would result in a reduction in emissions.
+6.5.2 Waste and waste water In the area of waste and waste water, the implementation of measures arising from the circular economy and recycling, the reduction of nitrogen loading in discharges into channels or the end of waste incineration will reduce emissions by 81%.
+The implementation of technologies that are already mature or are already in advanced phase will be enhanced, such as composting, anaerobic digestion and biogas uptake (with or without upgrading) and changes in the behaviour of the population will be promoted to promote the greater and better separation of waste to increase their recycling.
+It will also promote digitization, changes in population behaviour (recycling and separation of waste) and digitization.
+In addition, the following measures are additional to the already mature technologies: • Circular economy:
+Changing the current linear model is a challenge that has already been addressed by the EU.
+The implementation of the actions will lead to an increase in recycling and availability of secondary raw materials, but changes are also required in the design of the products and their repair capacity, in their modes of use, etc., which would be applicable in all sectors.Reducing the landfilling of the organic fraction and managing existing landfills with advanced techniques.Reducing the nitrogen load discharged to the channels from the Waste Water Depuration Stations (EDAR).
+It is estimated that N2O emissions by 2050 will be halved as a result of the implementation of this measure.
+This will be the result of the implementation of the future European and national water quality legislation that could require stricter landfill limits in the future.
+46 SECTORAL DISCARBONIZATION The emissions of fluorinated greenhouse gases (HFCs, PFCs, SF6, NF3) are caused by leakage of equipment and applications that use them, mainly in the refrigeration and air conditioning sector.
+The implementation of measures both at European level (Regulation (EU) No 517/2014 of the European Parliament and of the Council of 16 April 2014 on fluorinated greenhouse gases and Directive 2006/40/EC of the European Parliament and of the Council of 17 May 2006 on emissions from air conditioning systems in motor vehicles) and at national level has made Spain a global benchmark in the mitigation of emissions of these gases.
+In the ac tuality, there are native alter technologies of low or zero atomic heating potential to fluorine gases in most applications based on the use of so-called natural refrigerants (CO2, Hydrocarbons or NH3), either in low-heating fluorinated gases such as Hydrofluorolefins (HFOs).
+However, international safety standards impose certain restrictions that constitute a barrier to the use of certain alternative refrigerants to the detriment of fluorinated gases.
+It is expected that, as time progresses, safety conditions will be established that are appropriate to the risk involved and the use of these alternative gases will be allowed.
+The introduction of new technologies will facilitate the development of the use of very low-heating potential gases.
+In addition, research will continue in the future in the remaining sectors where alternatives are not yet available (insulated electrical equipment, medical aerosols, etc.) After implementing all the measures identified in this Strategy, it is estimated that the fluorinated gas sector will have reduced its GHG emissions by 94 per cent by 2050 compared to current levels.
+6.5.3 Fluorinated gases 47 TRANSVERSAL FACTORS IN CLIMATE NEUTRALITY 7 48 TRANSVERSAL FACTORS IN CLIMATE NEUTRALITY The process of change that aims to promote this strategy to achieve climate neutrality by the middle of the century, will modernize the economy and improve its competitiveness, generating quality employment and positively impacting the quality of life of people.
+In this change, there are a number of cross-cutting factors, which are those aspects or areas that affect the whole economy and society.
+FIGURE 7.1 Cross-cutting factors Source:
+Ministry for the Ecological Transition and the Demographic Challenge, 2020 Entrepreneurship: employment and social economy 49 TRANSVERSAL FACTORS IN CLIMATE NEUTRALITY The energy transition to a model based on renewable energies makes it possible to place citizens at the center of the energy system, offering them new opportunities.
+Those who in the conventional model had a role exclusively of consumption, will be able to become proactive agents, attracting new sources of investment and improving the level of competition.
+In this regard, at the end of 2016 the European Commission in the framework of the “Winter Package” proposed to place citizens at the centre of the energy transition.
+In particular, the Renewable Energy Directive requires Member States to guarantee consumers the right to produce, consume, store and sell their own renewable energy.
+It also calls for an assessment of both the barriers and the development potential of renewable energy communities.
+In this line, at the national level, the PNIEC 2021-2030 lays the foundation for promoting the participation of citizens in the energy sector in a broader way than by relegated exclusively to a role of consumption.
+Among other actions, it is proposed to promote the participation of citizens on an equal basis from a gender perspective, in renewable energy projects, the development of local energy communities, as well as individual and shared energy consumption.
+Citizens must be aware of the potential for improvement at their disposal in terms of demand reduction, energy efficiency, and the use of renewable energy sources.
+This will require their empowerment with information on the improvements achieved.
+The transformation of the energy system and the economy into a climate neutral country in 2050 implies a change for which it is essential to have the involvement of society in a stable manner.
+The aim is to mobilize existing social resources so that the transition will optimize talent for innovation and solutions and find the support necessary to overcome the difficulties that will arise along the way, as well as to motivate the important changes in behaviour that are needed and to involve society as a whole in the opportunities it entails.
+7.1.1 Placing citizens in the centre 7.1 THE ROLE OF CITIZENSHIP The energy transition towards a model based on renewable energies allows citizens to be placed at the centre of the energy system, recognizing their right to produce, consume, store and sell their own energy.
+The declaration of climate emergency puts people at the centre by helping to ensure decent conditions for the future of the younger ones, ensuring intergenerational justice and greater equity and reducing inequality.
+A growing number of people are beginning to change behaviours and consumption habits, motivated by a growing awareness of the effects of these actions on climate change.
+Among other changes affecting mobility, such as increased pedestrian movements, bicycles, skates, teleworking, shared vehicles and public transport in the urban environment.
+In addition, the vehicle model in ownership is being transformed into a mobility service model.
+Feeding habits are also undergoing changes and are likely to deepen in the future.
+In this regard, public policies can extend and strengthen low-carbon lifestyles through various lines of action, including:
+Promote research and social innovation on low-carbon and resilient lifestyles in the face of climate change.
+To report on the carbon footprint throughout the life cycle of products and services through commercial catalogues and labels.
+The social acceptance of projects and infrastructures necessary for decarbonisation must be strengthened.
+Promotion of sustainable, proximity and ecological lifestyles and consumption patterns aligned with heritage and biodiversity conservation, providing the necessary information on the consequences and footprint of habits and opportunities that offer more sustainable lifestyles.
+7.1.2 New values and behaviour habits TRANSVERSAL FACTORS IN CLIMATE NEUTRALITY Public policies should extend and reinforce low-carbon lifestyles, informing citizens about the footprint of their behaviors and identifying opportunities for resilient new habits in the face of climate change.
+51 According to data from the European Commission, there are currently four million jobs in the European green economy, an estimated figure that will grow significantly in the coming decades.
+For example, the International Labour Organisation (World Employment and Social Outlook, 2018) foresees that the energy transition will generate 2040 2 million jobs in the EU.
+In fact, the Union has been driving forward the green transition of the economy not only because of climate aspects, but also because of its potential to create more and better jobs.
+Two major European policy packages, the Clean Energy Package for all Europeans and the Circular Economy Package, were also proposed from the commitment to economic growth and jobs for the EU.
+The European Green Pact is now the road map to provide the EU with a sustainable economy that aims to respond to climate and environmental challenges, achieving a just and inclusive transition for all people.
+The green and sustainable economy has a two-pronged dimension, which combines the conditions of being sustainable towards the territory and which must allow for a horizon of stability and rights for working people who join the new jobs generated by the ecological transition, with special attention to those affected by the change of energy model in their home territories.
+Considering the development of these policies, a significant part of the employment that will exist in the EU in the period 2030- 2050 will be the result of the ecological transformation and decarbonisation policies promoted in previous decades.
+In the case of Spain, the NIPEC and the Just Transition Strategy (presented in the Strategic Framework for Climate Energy) are, in the same way, a proposal to make the green economy an engine that contributes to the improvement of the competitiveness of the national economy and to the generation of quality employment.
+As explained above, this Strategy once again demonstrates the opportunities to deepen decarbonization policies in order to obtain benefits in terms of employment.
+Employment is estimated to increase by 1.6 per cent in 2050 for the Climate Neutrality Scenario.
+7.2 JUST TRANSITION AND ACCOMPANYING TO COLLECTIVES AND VULNERABLE FACTORS IN CLIMATE NEUTRALITY A significant part of the employment that will exist in the EU in the period 2030 – 2050 will be the result of ecological transformation and decarbonisation policies promoted in previous decades.
+Spain's proposal is to make the green economy the engine of improving competitiveness and quality employment.
+It should be stressed that the results of the use of the PLA will depend on the interaction of many factors beyond its scope.
+Processes such as digitisation, automation, organizational changes in the world of work, the evolution of globalization could have a significant influence on the labour market over the next 30 years.
+In any case, the impacts of moving towards climate neutrality on employment will be positive, with equal factors.
+The ELP is a valuable tool for preserving and promoting new productive activities, and for deepening a working environment in which the safety of working people and their health is also protected, in its dual aspect, not only as part of its own economic sector but also as part of a citizenry conscious of having a positive impact on the preservation of the environment, and hence on collective health itself.
+However, although the results will be mostly positive, as in any process of change, the effects on different groups are uneven.
+The transition will generate numerous opportunities and benefits, but in some cases this adaptation can also cause negative impacts.
+52 TRANSVERSAL FACTORS IN CLIMATE NEUTRALITY Just as sectors and sub-sectors presenting greater opportunities in this progressive decarbonisation will be modified with the development and maturity of some technologies (storage, renewable hydrogen, advanced improvements in energy efficiency of products and processes, implementation of an advanced model of circular economy11), new challenges will also be encountered for employment or social or territorial cohesion to be mitigated.
+Renewable gases (biogas, biomethane and renewable hydrogen) play an important role in the just transition and accompanying vulnerable groups and sectors, which contribute significantly to job creation and promote economic development throughout the territory.
+A fair transition in employment involves ensuring adequate solutions for those affected by job losses and a sustainable transition plan for the territories and persons concerned to improve current employment conditions and modernize economic activity.
+The Just Transition Strategy itself establishes the need to develop such strategies every 5 years, with the aim of optimizing the social and labour gains of decarbonization and anticipating and mitigating its possible negative impacts.
+With regard to social cohesion, the transition to carbon neutrality can help to rebalance existing social inequalities if appropriate measures are taken.
+This requires, on the one hand, taking advantage of the direct favourable impacts (employment and economy), but also indirect impacts in the form of improving the health of the most habitable people and cities.
+It will also be necessary to align energy transition policies with other policies of social progress and reduction of inequality.
+These strategies will identify groups, territories and vulnerable sectors to develop fair transition agreements that guarantee accompaniment so that no one is left behind.
+They should also bring the opportunities of decarbonization closer to the places and collectives where the challenges occur.
+This will be done through the implementation of industrial or fiscal policies, active employment and vocational training policies or measures to protect vulnerable populations and consumers, and through participatory processes that take into account the contributions of local actors.
+All this, developed always from the distributive impact analysis of the measures to be applied.
+Successive Just Transition Strategies will also gradually explore and address sectors most vulnerable to climate change, such as agriculture, livestock, fisheries or tourism, by strengthening adaptation policies from the perspective of fair transition.
+In addition, the development of employment and support for women and young people in rural and urban areas, particularly in the green and circular economy, and the promotion of territorial projects for rebalancing and equity, as well as active employment policies, will be promoted.
+Investments directed preferentially towards the territories concerned by the changes in the production model resulting from the ecological transition.
+The opportunities of decarbonization should be brought closer to the places and collectives where the challenges occur.
+This, through industrial or fiscal policies, active employment and vocational training policies or measures to protect vulnerable populations and consumers.
+11 According to studies carried out by the European Commission, recirculation of materials, advanced improvements in energy efficiency of products and processes, as well as the implementation of an advanced circular economy model could reduce industrial emissions by up to 60% by 2050 (for the reference year 1990).
+The circular economy complements the energy transition, favouring new markets, new business models, new employment opportunities and new technologies in industry.
+To realize this potential, regulatory and political changes, specific R & I & C programmes and new investments are necessary to enable transformation.
+Reaching high levels of reduction, reuse and recycling will be especially important in certain materials.
+53 TRANSVERSAL FACTORS IN CLIMATE NEUTRALITY Addressing the demographic challenge is one of the priorities to be faced and requires a cross-cutting approach.
+The National Strategy against the Demographic Challenge12 is the tool that articulates this multidisciplinary and global action to, among other issues, ensure full connectivity, ensure the provision of services and provide a favourable framework for the generation of future opportunities in the territory, especially for younger generations.
+The challenges posed by the necessary decarbonization of the country are intimately linked to the demographic challenge.
+The response to the climate emergency requires a territorial approach not only because the territory is an essential part of the solution, but also because the opportunities associated with the ecological transition can and must be optimized to target the least populated areas of the country.
+For its part, the deployment and industrial and knowledge development associated with the development of renewable energies, electricity networks, renewable hydrogen and storage technologies in the territory must be articulated as a tool for rural development.
+In fact, the Organisation for Economic Cooperation and Development (OECD) and the European Court of Auditors agree on the synergies that exist in both processes.
+In particular, the OECD insists that a condition for success is that renewable energy developments are integrated into the territory and are part of a sustainable development policy in the regions.
+This connects renewable deployment with other elements of the regional and local economy, such as rural tourism, industry, forest management or innovation structures.
+Finally, an important line of work will be to encourage the participation of people in rural environments in the development of renewable facilities.
+Beyond national action, work needs to be done within the Community framework in order to establish a corresponding link and interface with population, adaptation and renewable technology promotion policies, as well as just transition policies within the EU.
+In turn, in order to achieve the interconnection between the demographic challenge and decarbonization, it is necessary to start from the recognition of the multidimensionality of the demographic phenomenon.
+Its first pillar is depopulation.
+Between 2001 and 2018 more than 63% of Spanish municipalities lost population.
+The phenomenon is more pressing in the last decade, rising to 76.6%.
+A loss of population that leads to the loss of added value.
+Thus, it is essential to value the rural population as custodian of much of the country's natural resources, a key role in guaranteeing and consolidating the carbon pools in the territory, and in addressing the threats of global warming such as droughts, forest fires and desertification.
+In particular, in order to prevent dramatic fires, those activities that prevent them and are also essential to society must be recovered.
+Secondly, ageing.
+The increase in life expectancy represents a success of the social model of our country, but at the same time represents a challenge to its management.
+The rate of aging in Spain is 120%, which means that for every person under 16 years of age there are 1.2 people over 64.
+In this way, the vocation of justice and inclusiveness sought by this Long-Term Strategy is not to leave behind groups that might otherwise be exposed to greater vulnerability, not only because of their age, but also because of climate change.
+Finally, the third dimension refers to the floating population.
+In many areas there is a real difficulty in managing seasonal overpopulation, as a result of factors such as tourism or agricultural activity.
+These are sectors that are particularly vulnerable to climate change, with the subsequent impact on host populations and the sustainability of their resources.
+Consequently, any action focused on these populations should not obviate this third dimension, with a view to providing management improvement tools.
+In this regard, the Decarbonization Strategy should take into account the multidimensional phenomenon of the demographic challenge in order to take the necessary measures to ensure inclusive and climate neutral economic development, adapted to the needs of the territory and the population inhabiting it.
+7.3 DEMOGRAPHIC CHALLENGE 12 In preparation at the time of the adoption of this Long-term Strategy.
+54 TRANSVERSAL FACTORS IN CLIMATE NEUTRALITY The UN's Sustainable Development Goals (SDGs) specifically integrate the gender dimension into SDG 5 (gender equality) and, across the board, SDG 7 (clean and affordable energy) and other SDGs.
+Eurostat's report (2020) on the progress of SDGs in the European Union13 over the past five years shows that the least progress has been made by SDG 5 (which even recedes) and those which are most environmentally relevant, especially SDG 13 (Climate Action), but also, among others, SDG 7.
+Given that gender equality and the empowerment of women and girls are a goal in and of themselves (SDG 5) and a means to achieve the other SDGs, it is essential in the framework of this PLA to promote mutual momentum between SDGs 5 and 7, as well as between SDG 5 and the other decarbonization-related SDGs.
+With regard to these objectives and the cross-cutting position of gender equality in the energy transition, attention should be paid first, to promoting the full, equal and meaningful participation of women as agents of change at all levels in the energy sector, and second, to the relationship between gender and energy consumption, to analyse and take into account the different needs, interests, behaviours, knowledge, opportunities and resources of women and men from different sociodemographic groups in access to energy, to
+Women's participation in the energy sector is lower than participation in the global labour market and presence in other economic sectors.
+According to IRENA's report on gender perspectives in the renewable sector in 2019, women occupy 32% of the world's renewable jobs.
+Figures that are still lower in sectors such as oil and gas (28% women).
+The results of the survey carried out by AMENER14 at the Spanish level show that in 2018 women accounted for 28.5% of the workforce of companies in the energy sector, with the biggest gaps in the workforce and in the top management, taking into account that in the other categories analyzed gender balance is also not achieved.
+Therefore, some of the issues that need to be addressed in order to enhance the positive gender impact in the transition to a low-carbon economy are related to achieving balanced representation between women and men and their full, equal and meaningful participation at all levels, both in government bodies and in staff.
+One of the drawbacks to monitoring this aspect is the lack of systematic periodic data disaggregated by sex and gender-specific indicators.
+In order to effectively implement the gender perspective, it is necessary first of all to have an X-ray of the situation and evolution of women and men in the sectors concerned, with the data necessary for the analysis of vertical and horizontal gender segregation in each sector, as well as the factors related to the gaps identified.
+For their part, industry and civil society can play an important role in promoting the creation of sectoral women's associations and networks, and in enhancing existing ones, such as, among others, the Spanish Association of Energy Women (AEMENER15 , mentioned above), the Federation of Rural Women's Associations (FADEMUR16) or the Association of Women Researchers and Technologists (AMIT17), or their connection with other international ones.18
+Various studies also show that diversity in organisations strengthens innovation (including environmental initiatives and eco-innovations)19 and is positive for business (McKinsey&Company, 201520 and EY 201521).
+7.4 GENDER EQUALITY 13 Eurostat (2020).
+Sustainable development in the European Union — Monitoring report on progress towards the SDGs in an EU context. https://ec.europa.eu/eurostat/en/web/products-statistical-books/-/KS-02-20-202 14 http://aemener.es/pdf/AEMENER%20Report%20Observatory%202018.pdf 15 http://www.aemener.es/ 16 http://fademur.es/fademur/ 17 https://amit-es.org/ 18 See for example those mentioned in IUCN (2018).
+Advocating for women in the energy sector. https://genderandenvironment.org/series-of-documents-thematics-agent-energy-advocating-for-women-in-the-sector-energy/ 55 TRANSVERSAL FACTORS IN CLIMATE NEUTRALITY According to the IRENA report on a gender perspective in the renewable sector of 2019, women occupy 32% of the jobs in renewables in the world.
+Figures that are still lower in sectors such as oil and gas (28% women).
+At the same time, the Public Administrations should involve representatives of different groups of women, gender equality bodies and research staff expert in feminist and gender studies to participate in the process of drafting, implementing and updating policies, plans, strategies and measures for energy transition and decarbonization.
+In areas such as energy poverty, gender gaps in employment, income, etc. interact with other sociodemographic factors, including age and type of household, but further analysis of other intersections is needed 22.
+According to the National Strategy against Energy Poverty, between 3.5 and 8.1 million people, depending on the indicator used, are in a situation of energy poverty in Spain, representing up to 17 per cent of households.
+In addition, energy poverty has a special impact on women, the groups most affected being women over 65 years of age and single-parent families, of which 80 per cent are headed by women (single-parent households).
+Ensuring access to the clean energy necessary for the care of all people in the home is a priority.
+With regard to the relationship between gender and energy consumption, it is necessary to analyse the different patterns of consumption disaggregated by sex, from a gender intersectional perspective, in order to be able to implement measures in favour of decarbonization that take into account the different patterns identified.
+At EU level, both the Beijng+25 report of the European Institute for Gender Equality (EIGE), and the latest Eurobarometer data on climate change23 show some examples that are generally consistent with the persistence of unequal roles between women and men, especially in the home and care sectors, and with other gender inequalities such as income levels, among others.
+It will therefore be essential that innovations developed to promote sustainable patterns of production, consumption demand and mobility integrate the concern to facilitate care and the reconciliation of personal, family and work life as the central axis of the economy and society, which must be addressed from the social co-responsibility within and outside the home.
+On the other hand, in the specific case of rural areas, women are decisive for their territorial and social vertebration, and by far they are the main vector for innovation and rural entrepreneurship.
+However, in rural areas, situations of inequality between women and men are still maintained to a greater degree than in urban areas.
+With regard to the other SDGs related to decarbonization, the actions carried out under this PLA should take into account and be aligned with the international agreements signed by Spain for action on gender equality24.
+Similarly, at the national level, actions under framework 19 See for example the review of the EFFORTI project on the impacts of gender equality on research and innovation:
+A Conceptual Evaluation Framework for Promoting Gender Equality in Research and Innovation Toolbox I - A synthesis report, with a summary of the benefits in The Manifold Benefits of Gender Equality and (Responsible) Research & Innovation 20 https://www.mckinsey.com/~/media/mckinsey/business%20functions/organization/our%20insights/why%20diversity%20matters/diversity%20matters.ashx 21 https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/workforce/EY-women-in-industry.pdf 22 EIGE(2020).
+Beijing +25: the fifth review of the implementation of the Beijing Platform for Action in the EU Member States. https://eige.europa.eu/sites/ default/files/documents/20190417_mh0119036enn_pdf.pdf 23 European Commission (2019).
+Special Eurobarometer 490:
+April 2019. https://ec.europa.eu/climate/sites/climate/files/support/docs/report_2019_en.pdf.
+The database is available at https://data.europa.eu/euodp/en/data/dataset/S2212_91_3_490_ENG 24 In particular, in all matters relating to the environment in the Beijing Platform for Action, and in particular in gender equality plans to combat climate change and desertification, as well as for biodiversity.
+56 TRANSVERSAL FACTORS IN CLIMATE NEUTRALITY It is necessary to take advantage of the opportunity of the ecological transition to increase the training and employability of the various social groups, for their full participation in the new design of the energy system and in the reduction of emissions. of this strategy they will have to align with the cross-cutting aspects of gender in the Just Transition Strategy and in the NAPCC 2021-2030, as well as with the next Strategic Plan for Equal Opportunities (PEIO) 2020-2022 and successive.
+Therefore, some of the lines of action that should be considered to implement a gender perspective towards a climate neutral economy are:
+The gender mainstreaming dimension in policy formulation and evaluation, programme design and implementation of projects in the various sectoral areas involved in decarbonization.
+□ to develop and improve curricula at different levels of education, together with the promotion of other training, dissemination, mentoring, etc. aimed at attracting the interest of girls and women in developing studies and professions in areas related to climate neutrality, as well as strengthening their entrepreneurial and leadership skills.
+At the traction and retention of talent with a gender intersectional perspective in the sectors involved, through gender equality policies for professional development and participation in collegiate and managerial bodies.
+Integrating the gender dimension in the analysis of different patterns of consumption and mobility in order to adapt public policies and make them more effective and efficient, enhancing synergies that accelerate both positive impacts towards decarbonization and gender equality.
+In short, attention should be paid to strengthening the role of women as agents of change on an equal footing by including students, professionals, decision makers, consumers, entrepreneurs, etc., taking into account their differences in needs, interests, behaviours, knowledge, opportunities and resources in the different sectoral areas involved, as well as the different dimensions of diversity in an intersectional manner, so that there is no discrimination on the basis of gender, sex, sexual orientation, sexual or gender identity, racial or ethnic origin
+This implies taking advantage of the opportunity of the ecological transition to increase the training and employability of the various social groups for their full participation in the new design of the energy system, in the reduction of emissions and in the protection, conservation and restoration of carbon sinks, putting the care of people's lives and well-being at the centre of priorities, leaving no one behind.
+57 TRANSVERSAL FACTORS IN CLIMATE NEUTRALITY The transition to climate neutrality requires a profound change in the culture of energy use in Spain, with implications for access to information, social awareness, basic education and technical and vocational training.
+Spain will only be among the leading European countries in the global energy transition if it has qualified human capital for the task.
+The study “Educational and training skills in the renewable energy sector”25, published in October 2018, has analysed the global supply of training in the renewable energy sector.
+It considers that the lack of qualified professionals could be a barrier to progress in the development of renewable technologies in Spain.
+To avoid this, it proposes that the training offer be adapted to fill these gaps and that it be flexible in order to adapt to the pace at which the renewable sectors develop.
+In addition, the European Commission's Communication "A New Industry Model for Europe"26 devotes particular attention to the training part.
+In this regard, it is stated that “a competitive industry depends on the recruitment of skilled labour and the ability to retain it.
+Making lifelong learning a reality for all will be even more important: in the next five years alone, 120 million Europeans will have to improve their skills or be professionally recycled.” Identifying professional profiles that are required in the face of greater specialization and development of their own activity is a shared challenge between organisations and public administrations.
+Facilitating measures will therefore continue to be taken in support of entrepreneurship, as well as specific training and training.
+The integration of climate neutrality and sustainable development issues into formal education at all levels is a complex task that requires sustained long-term action.
+In the short term, it is necessary to implement quality standards in training in close cooperation with industry.
+In addition, training facilities and educational materials need to be adapted and improved by incorporating online training and digitalisation.
+On the other hand, the construction sector will require a large number of professionals who are properly trained to meet the objectives of energy rehabilitation of the built buildings, as well as the standards of construction of the new buildings.
+Work is currently continuing to identify these professional qualifications in order to provide the necessary labour force for the energy transition.
+In particular, in the field of vocational training there is a need for vocational training in the field of vocational training, in particular in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of vocational training, in the field of training, in the field of training,
+In addition, new investments will be undertaken with a view to the acquisition of new skills for productive transformation and training in a strategic sector such as energy.
+In this sense, the call for state-wide subsidies aimed at the professional retraining of employed workers for the acquisition and improvement of professional skills related to the productivity and competitiveness requirements of enterprises, the need to adapt to the necessary changes in the production system and the possibilities for professional promotion and personal development of workers, will be planned in order to contribute to the relaunching and improvement of the competitiveness of industry and the development of the professional career.
+The commitment to digital skills contributes by its very nature to the ecological transition, facilitating the implementation of procedures, procedures and actions without the need for mobility, avoiding the expense of papers and consumables, as well as optimizing energy efficiency.
+7.5 EDUCATION, VOCATIONAL TRAINING AND CONTINUED LEARNING 25 https://www.sciencedirect.com/science/article/abs/pii/S0038092X18307266 26 https://eur-lex.europa.eu/legal-content/ES/TXT/HTML/?uri=CELEX:52020DC0102&from=EN#footnote9 58 TRANSVERSAL FACTORS IN CLIMATE NEUTRALITY The success of the energy transition depends on successfully deploying a portfolio of technological alternatives in each sector, as indicated by the European Commission.
+An innovation ecosystem needs to be created to take the risks necessary to develop the most appropriate alternatives, and to effectively transfer knowledge to companies for deployment on the required scale.
+The Spanish Science, Technology and Innovation Strategy 2021-2027 (EECTI 2021-2027) is the basic instrument for consolidating and strengthening the Science, Technology and Innovation System and is specifically designed to facilitate the articulation of our R & D & I policy with European Union policies.
+The objectives of ECTI take into account the contribution of R & D & I to the achievement of the Sustainable Development Goals (SDGs) of the UN 2030 Agenda and the Paris Agreement.
+However, it is not enough to identify priority lines and articulate them around strategic missions.
+It is essential to move the innovation ecosystem, both at European and Spanish level, towards one more adapted to the uncertainties that presents an energy and ecological transition of the magnitude that is proposed, and also more oriented towards intelligent risk management.
+First, there is a need to further deepen climate research, both in the impact and effectiveness of climate change mitigation policies, and in the impact that climate change may have on the territory, as well as the most effective adaptation policies that will need to be implemented.
+Also, the green transition will require the evolution of renewable generation systems, but it will also need other technologies, in particular those that facilitate energy efficiency, energy storage, renewable hydrogen, new forms of mobility and those needed for decarbonization of the energy-intensive industry.
+At the same time, and in parallel, there are the broad-spectrum technologies: the Internet of Things, biotechnology, nanotechnology, artificial intelligence, blockchain, robotics and information and communication technologies.
+Some of the areas identified as priority areas are discussed in greater detail below:
+Climate science In this regard, further research will be needed on the effects and policies needed to comply with the Paris Agreement.
+The development of integrated predictive systems on atmospheric weather and climate will also be required in subsequent stages.
+It will be important to increase knowledge about the impacts of climate changes on the territory, the avifauna, the vegetation and even the population.
+The study of the variation in the rainfall regime, as well as the prediction of extreme weather events, will also be of great value in order to undertake the necessary adaptation actions and thus reduce the potential negative impacts.
+In the specific area of climate in cities, research will be enhanced towards achieving climate-neutral, sustainable cities and ecosystems, drivers of the circular economy and in which people occupy a central space.
+7.6 RESEARCH, INNOVATION AND DEVELOPMENT We need to create an innovation ecosystem that allows us to take the risks necessary to develop the most appropriate alternatives, and effectively transfer knowledge to companies for deployment on the required scale.
+59 TRANSVERSAL FACTORS IN CLIMATE NEUTRALITY Energy efficiency According to multiple estimates, half of the global greenhouse gas emission reduction will be achieved through efficiency and energy savings applied to both productive processes and household consumption and mobility.
+This increased efficiency can come from both technological advances and behavioural changes.
+The challenge of climate neutrality will also require important social innovations that accompany and enable the necessary technological transformation.
+To this end, support will be given to projects in the field of social sciences that contribute to the development, implementation and design of initiatives that allow citizens to contribute and benefit from the transition to a carbon neutral economy.
+Information, dissemination, awareness-raising and awareness-raising activities aimed at acquiring habits and attitudes consistent with responsible consumption, efficiency, sustainability, co-responsibility and cooperation among the population will also be promoted.
+Urban transformation through the social economy will also be supported.
+100% renewable electricity system The transition to a more decentralized power generation system based on unmanageable renewable technologies, such as solar photovoltaics and wind, must be accompanied by the development of a more flexible model.
+Research and innovation should pay particular attention to system management, which will require renewable manageable technologies, storage systems, smart grids, as well as demand management mechanisms.
+The ultimate goal is to achieve a 100% renewable system by 2050.
+Hydrogen and Power to X It can provide industry-friendly alternatives and heavy transport in which electrification and battery use appear to be difficult to deliver good performance at reasonable cost.
+These energy vectors are also relevant in order to cope with daily, weekly or seasonal storage.
+In relation to hydrogen, the development of the electrolysis process from renewable energy sources is necessary, especially by taking advantage of those times when there is an excess generation, more specifically when that excess generation forces some of the energy generated to be lost (known as “dumps”).
+Research and innovation along the hydrogen generation, storage and use chain are therefore essential.
+In particular, clean hydrogen is a novel technology and requires greater coordination across the value chain.
+In this regard, the European Commission has launched several initiatives, announcing the launch of the new European Alliance for Clean Hydrogen , which will bring investors together with governmental, institutional and industrial partners.
+In support of this Alliance, the European Commission has presented the European Union Hydrogen Strategy defining hydrogen targets over the next three decades.
+For its part, the Government approved on 6 October 2020 the Hydrogen Road Map: a commitment to Renewable Hydrogen, in line with the European strategy.
+In addition, there is a specific line identified as a value chain on hydrogen systems within the IPCEIs (Important Projects of Common European Interest) calls.
+The development of other renewable fuels, which can be produced from biochemical processes or from synthesis using renewable hydrogen or other renewable gases, is also important.
+60 TRANSVERSAL FACTORS IN CLIMATE NEUTRALITY Circular economy In the “Spanish Strategy for Circular Economy, Spain Circular 2030”, it is included in the decalogue of orientations e s t e r a t e c a s , q u e e ve r t e b r a n l a t a t a t a t a t a t e s s p e s p e s p e s a s q u e e t e t a r a n l i f e n t e p l a n t e a n , l a l a l e a l a l a l i n n t i a t i a t e Innovation”.
+Among the general principles of the Circular Economy Strategy, it highlights the “Decarbonization of the economy”, which is closely interrelated with this Long-term Strategy.
+As noted above, industry can significantly reduce the use of raw materials, materials and energy if a circular economy policy is effectively implemented.
+Special attention should be paid to achieving high levels of recycling of those materials used in decarbonization technologies (such as cobalt and rare earths), but also of more common materials in manufacturing and construction in Spain.
+Sustainable industry In the industrial sector, short-term research lines are related to energy efficiency.
+Another area of research is the possible alternatives to the industrial manufacturing processes present today, such as renewable hydrogen, which will replace grey hydrogen.
+The decarbonised production of certain materials will be essential, especially in processes where medium and high temperature heat is required.
+Carbon capture, storage and use will also play an important role in decarbonizing sectors for which the modification of the production process is not feasible.
+A final line of research may be the use of new materials with lower climate impacts than those used today.
+This aspect, together with the circular economy, can greatly help decarbonize this sector.
+Sustainable mobility The importance of fuel change in the transport sector is high.
+Therefore, the success of emission reductions in this sector depends on the correct implementation of policies aimed at boosting the electric vehicle along with other alternative fuels that provide zero-emission mobility.
+In the case of the electric vehicle, there are currently a multitude of commercial vehicles moving with electricity.
+But its use in the displacement of a larger mass still requires new technologies that depend on research.
+On the other hand, heavier road transport, as well as navigation, aviation and rail transport, present the greatest challenges in order to evolve into a little or no polluting situation.
+It is in these sectors that research and innovation should be focused.
+Research initiatives aimed at a new use of mobility, associated with the implementation of new business models, or behavioural changes, are also relevant.
+Innovation in the agricultural sector Research and innovation in bioeconomy, agriculture and forests is also called to play a relevant role.
+In particular, those production models that can minimize methane emissions and those that contribute to fixing a greater amount of carbon in the soil, increasing negative emissions.
+Research will also be relevant in bio-waste management, vaccine cattle raising, fertilizer production or burning of agricultural waste.
+These different lines of research and development connect with soil uses.
+Therefore, it is appropriate to maintain an overview of the territory and ecosystems in order to avoid solutions that improve a 61 TRANSVERSAL FACTORS IN CLIMATE NEUTRALITY Digital transformation is, together with the energy transition, one of the main challenges that we face as a society.
+In addition, there are many synergies between the two dynamics of change: the development and implementation of digital technology is affecting the economy as a whole and, in particular, the energy sector, affecting and transforming the definition of the current market model.
+In addition, this digital transformation will enable the development of a data management industry that is key to energy security.
+Demand management, network management and new operating schemes, as well as storage and self-consumption, will define significant changes in the electricity sector over the long term.
+In particular, to encourage a more active role for consumers, figures such as independent aggregates can guide citizens in managing demand, self-consumption and improving energy efficiency.
+With regard to storage, the following figure suggests where different solutions could be located: integrated into networks, generation plants, enterprises, SMEs, local energy communities and households.
+7.7 DIGITALIZATION, STORAGE, DEMAND MANAGEMENT AND NEW FORMS OF OPERATION OF FIGURE ELECTRIC NETWORKS 7.2 Storage, networks and homes Source:
+Ministry for the Ecological Transition and the Demographic Challenge, 2020 P2X aspect at the expense of worsening the situation in another.
+Comprehensive land management must ensure the preservation of essential ecosystem services, among which carbon capture from the atmosphere is one of the most important.
+62 TRANSVERSAL FACTORS IN CLIMATE NEUTRALITY With regard to digitisation, the following changes should be noted, which will be experienced on the demand side:
+The marketing that, through Big Data, artificial intelligence and algorithm development will transform homes into smart centers, allowing the consumer to make decisions about their consumption almost instantly.
+Transport and mobility through the use of the autonomous vehicle and the electric vehicle will entail significant efficiency improvements with relevant implications for power generation.
+The industrial sector will be able to achieve significant savings through thorough monitoring, greater security and better control of its production processes.
+The building will be able to achieve an optimization of the energy consumption by using the information in real time.
+On the side of the offer, the growing share of the generation of unmanageable renewable origin poses new challenges to the management of production and its integration into the system.
+In addition to this, there is an increasingly decentralized generation, storage availability, as well as smarter demand, which requires a more sophisticated model with new tools that increase system flexibility.
+In short, it is a question of placing citizens at the centre through digitization.
+The use of new technologies will facilitate more autonomy in the way people use and manage energy.
+Finally, the International Energy Agency has put forward a number of proposals for regulatory and policy bodies to promote efficient progress towards digitisation.
+Among its recommendations are: • To establish a regulatory framework that guarantees technologically neutral platforms for digital energy, allowing competition among agents, and the development of new business models. • To ensure access to information for both the private and public sectors, as well as for consumers, guaranteeing the privacy of their data. • To promote the development of joint projects between companies and the regulator focused on the development of smart networks, demand response and identification of new models
+Digital transformation is, together with the energy transition, one of the main challenges we face as a society.
+The introduction of digital technology is affecting the economy as a whole and, in particular, the energy sector, affecting and transforming the definition of the current market model.
+63 TRANSVERSAL FACTORS IN CLIMATE NEUTRALITY The European Investment Bank will no longer finance fossil fuel projects from 2021 onwards.
+In addition, it plans to invest a billion euros in climate action and sustainability initiatives in total between 2021 and 2030.
+The Paris Agreement recognizes the importance of the financial system in channelling resources to transform the economy into a model of climate neutrality.
+Since its entry into force, awareness of the challenges and opportunities associated with climate change has grown in importance on the agendas of international financial organizations.
+In order to achieve climate change objectives, the role of the financial sector is fundamental, with its involvement being a very powerful tool to promote decarbonization of the economy and contribute to the transformation of the economy, thus reducing the financial risk associated with climate change and aligning with the 1.5 °C target.
+Thus, the financial sector will evolve from “financing the green” to decarbonizing its portfolio.
+7.8 IMPLICATION OF THE FINANCIAL SECTOR At European level, InvestEU and the European Green Pact Investment Plan will help unlock private investment where necessary.
+The European Investment Bank and national development banks and institutions will also have an important role to play.
+The security offered by the Climate Law will also be important at European level.
+In this regard, the European Investment Bank will no longer finance fossil fuel projects from 2021 onwards.
+In addition, it plans to invest a billion euros in climate action and sustainability initiatives in total between 2021 and 2030.
+All these actions, announced by the institution at the end of 2019, align it with the objectives of the Paris Agreement.
+For their part, undertakings, entities and companies which, in accordance with Article 2 of Regulation (EU) 2019/2088 of the European Parliament of 27 November 2019 on disclosure of information on sustainability in the financial services sector, are party to the financial markets or financial adviser, shall include in the pre-contractual information of financial products promoting environmental characteristics or aiming at sustainable investments.
+Another important milestone in this regard has been the adoption, in December 2019, of Regulation (EU) 2020/852 of the European Parliament and of the Council of 18 June 2020 on the establishment of a framework to facilitate sustainable investment (Taxonomy Regulation), which establishes a framework to incentivise sustainable finance to achieve six EU environmental objectives:
+1) mitigation of climate change, 2) adaptation to climate change, 3) sustainable use and protection of water and marine resources, 4) transition to a circular economy, 5) pollution prevention and control, 6) protection and recovery of biodiversity and ecosystems.
+As a common European response, the launch of an ambitious Recovery and Resilience Fund, in line with what is needed in the process of rebuilding the post-COVID economies in the world, from 2021 onwards, the Next Generation EU Recovery Fund will enable Spain to mobilise an unprecedented volume of investment, encouraging structural transformations and reforms aimed at accelerating the transition to a climate neutral economy and society.
+Taxonomy and its principles have also been included as a framework for defining the activities that will be financed by European funds as part of the economic recovery package and as criteria for defining the European green bond standard, the aim of which is to ensure that the volume of securities traded on these markets reaches a critical mass and that they can be catalogued in a consistent manner.
+64 TRANSVERSAL FACTORS IN CLIMATE NEUTRALITY During the United Nations New York Summit in September 2015, leaders unanimously adopted a new strategy for sustainable development, the so-called 2030 Agenda.
+This Agenda includes a set of goals to be achieved by 2030 in favour of people, the planet and prosperity, urging national states to urgently integrate sustainable development into their development plans.
+In Figure 7.3 you can see the synergies between the PLA and the SDGs.
+The length of the bar indicates the degree of connection between the ELP and the SDGs: the longer the length, the greater the ratio.
+The color intensity indicates whether the synergies are very high (the darkest), high (the average intensity) or medium (the lighter color).
+7.9 ELP AND SUSTAINABLE DEVELOPMENT OBJECTIVES 7.3 ELP and Sustainable Development Goals Source:
+Ministry for the Ecological Transition and the Demographic Challenge, 2020 65 TRANSVERSAL FACTORS IN CLIMATE NEUTRALITY Compliance by the signatories of the Paris Agreement will in turn facilitate compliance with “ODS 13.
+Climate Action” and that of other SDGs, as limiting temperature increases within the limits set implies an urgent reduction of emissions, which will contribute to progress towards other goals such as improving people’s health, creating decent jobs, responsible production and consumption, or preserving the environment and biodiversity.
+The relationship of this strategy with the SDGs included in the above figure is set out below: - SDGs 1.
+The protection of the most vulnerable are factors that directly affect the Long-term Decarbonization Strategy, especially in relation to people living in energy poverty, who cannot meet their basic energy supply needs, as a result of an insufficient level of income and which can be exacerbated by the availability of energy-efficient housing. - SDG 3.
+The implementation of this Strategy has important co-benefits partners for people's health.
+The decarbonization of the economy will result in a significant reduction in the emission of air pollutants that currently cause damage to human health.
+In addition, changes in lifestyles towards more sustainable lifestyles will also contribute to improving people's well-being and health.
+Gender equality and empowerment of women and girls.
+This strategy integrates gender mainstreaming in various areas, which contribute to progress towards the full and effective participation of women and their access to equal leadership positions at all levels and in all sectors related to decarbonization (whether as students, professionals, decision makers, consumers, etc.).
+It also recognizes the importance and centrality of the care of all people from the social co-responsibility, both to guarantee access to energy in the approach to energy poverty, and to promote the development of innovations that facilitate more sustainable and efficient production, consumption, demand and mobility patterns, since the incorporation of care and the reconciliation of personal, family and work life as the central axis of the economy and society.
+Affordable and clean energy.
+The progressive substitution of fossil fuels by renewable technologies reduces polluting emissions as well as the costs associated with imported fossil fuels.
+In addition, further introduction of renewables into the energy system, along with other actions in this Strategy such as those associated with promoting energy savings and efficiency, will contribute to facilitating access to reliable and modern affordable energy services.
+In addition, this strategy will take into account the eradication of energy poverty, as a continuation of the NIPEC and ENPE.
+Decent work and economic growth.
+The objectives of the ELP imply a positive macroeconomic impact, in terms of job creation and low-carbon economic growth, including an improvement in income redistribution that contributes to equity.
+The public investment mobilized will also promote development-oriented policies that support productive activities, decent job creation, entrepreneurship, creativity and innovation, and promote the formalization and growth of micro, small and medium-sized enterprises.
+Thus, achieving full and productive employment and decent work for all women and men, including young people and persons with disabilities, as well as equal pay for work of equal value.
+Industry, Innovation and Infrastructure.
+Implementing the ELP is an opportunity for modernization and improvement in the industrial value chain.
+Helping promote inclusive and sustainable industrialization and increasing the contribution of industry to employment and gross domestic product.
+In addition, the 2050 Strategy will have a positive impact on innovation.
+66 TRANSVERSAL FACTORS IN CLIMATE NEUTRALITY
+Reduce inequality in and between countries.
+The implementation of the strategies contained in this document directs society towards an environment with fewer inequalities.
+Combating energy poverty, energy efficiency and renewable energies reduce energy needs and make it more affordable and resilient to climate change.
+And, on the other hand, the implementation of the PLA reduces the risk of extreme events caused by climate change through mitigation and adaptation policies, which tend to affect the most disadvantaged classes more.
+Sustainable Cities and Communities.
+Cities, despite accounting for only 3% of the planet's surface area, consume about 70% of the world's primary energy demand and, in Europe, they account for around 70% of citizens.
+The ELP involves transforming cities and communities into safer, more efficient and more sustainable spaces.
+Urban environments will be transformed to adapt to climate change, due to increased planned use of public transport, distributed energy generation, or the push for adaptation measures.
+The fulfilment of this objective is intrinsic to the development of this strategy and to the implementation of the Paris Agreement.
+In particular, forests, as carbon sinks, will be a key element in ensuring the objectives set.
+The Strategy highlights the need to promote carbon sequestration through natural sinks, which will contribute to strengthening the lives of terrestrial ecosystems by improving climate change adaptation capacity.
+In addition, it has multiple synergies with the recovery and restoration of ecosystems and, therefore, their biodiversity.
+In short, decarbonization of the economy implies a transformation of all sectors of society, but also requires a change in the role of citizenship.
+This transformation involves opportunities to achieve SDGs, that is, to achieve a sustainable lifestyle model that not only limits temperature increases and other effects of climate change, but also reduces social inequalities and improves people's quality of life.
+To limit temperature increases within established limits means to reduce emissions as a matter of urgency, which will contribute to progress towards other goals such as improving people's health, creating decent jobs, producing and responsible consumption or preserving the environment and biodiversity.
+67 According to the process of change that aims to promote this strategy to achieve climate neutrality in the middle of the century and that, as it indicates, will modernize the economy and improve its competitiveness, generating quality employment and positively impacting on the quality of life of people, it is necessary to highlight the role that entrepreneurship has to achieve this.
+The Spanish business fabric is characterized by the predominance of micro-enterprises that make up more than 90% of private sector companies, led mostly by autonomous and autonomous companies.
+In addition, a significant share of the employment that will exist in the EU in the period 2030 – 2050 will be the result of the ecological transformation and decarbonisation policies promoted in previous decades.
+Therefore, the challenges already faced in the Spanish labour market are compounded by new challenges that require the post-COVID-19 changes in the processes of globalization and digitization, and the use of new effective productivity-enhancing formulas that increase the quality of employment of self-employed people, and that allow them to adapt their activity to the present moment in a sustainable way.
+One such formula is the use of the green and sustainable economy.
+In this sense, the Ministry of Labour and Social Economy will for the first time promote, in a coordinated and joint way, the strategies of the social economy, the autonomous work and the social responsibility of enterprises, which will be a space for dialogue and collaboration between administrations, and which will also channel the economic demands of the three groups, focusing on issues such as digitization or training.
+Specifically, the National Self-Employment Strategy for the period 2021-2027 (ENDITA), currently under development, is focused on the implementation of the Sustainable Development Goals (SDGs) and on the development of the “Plan of Action for the implementation of the 2030 Agenda, towards a Spanish Sustainable Development Strategy” of the Government of Spain.
+Its objectives include generating quality entrepreneurial work, responding to the needs of the self-employed and consolidating activity, through a global set of measures, based on the life cycle of the working person, and taking into account aspects such as digitalization, overcoming territoriality, gender equality, sustainable, social and inclusive entrepreneurship, among others.
+Regarding the strategic axes that will shape this initiative and that affect this new formula of green economy we highlight directly, the EJE- Digitization of the collective on its own account and of its activity and the EJE- Sustainable Entrepreneurship.
+And indirectly, the social and inclusive Entrepreneurship EES;
+Overcoming territoriality; specialized training; and gender equality in self-employment.
+Therefore, and in line with the objectives of this Strategy, entrepreneurship and its scope in the Spanish productive fabric becomes a key element in providing a coherent and integrated response to the climate crisis, taking advantage of the opportunities for the modernization and competitiveness of our economy and that is socially fair and inclusive.
+AUTONOMOUS EMPLOYMENT AND SOCIAL ECONOMY 68 FIGURES CONTENTS 69 Figure 1.1.
+Key magnitudes of the Strategy Figure 1.2.
+The Long-Term Decarbonization Strategy Figure 2.1.
+Opportunities for climate neutrality through the implementation of the ELP Figure 2.2.
+Impacts of the application of the ELP Figure 3.1.
+Scenarios analyzed in the NIPEC and the Long-Term Strategy Figure 3.2.
+Expected evolution of GHG emissions by sector from 1990 to 2050 in the Climate Neutrality Scenario Figure 3.3.
+Primary energy consumption in the ELP Scenario (including non-energy uses) Figure 3.4.
+Final energy consumption in the ELP Scenario (excluding non-energy uses) Figure 3.5.
+Estimated evolution of energy dependence Figure 3.6.
+Percentage of renewable energy compared to final energy consumption Figure 3.7.
+Renewable energies Figure 4.1.
+Opportunities for enhancement of carbon sinks Figure 5.1.
+Potential impact of climate change on Europe Figure 5.2.
+Sectoral lines of work for adaptation to climate change Figure 5.3.
+Detail of the measures included in the various sectoral lines of work for adaptation to climate change Figure 6.1.
+Electrical sector Figure 6.2.
+Sustainable mobility and transport Figure 6.3.
+Sustainable building Figure 6.4.
+Technologies available for decarbonization in building Figure 6.5.
+Industrial opportunities associated with decarbonization Figure 6.6.
+Sustainable and competitive industry Figure 6.7.
+Agriculture, waste and fluorinated gases Figure 7.1.
+Cross-cutting factors Figure 7.2.
+Storage, networks and households Figure 7.3. The ELP and the Sustainable Development Goals
