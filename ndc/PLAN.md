@@ -185,3 +185,8 @@ Means named near goals (share of goal speeches): energy 23%, industry 6%, transp
 Reading ~10+8 samples: GOAL+MEANS mostly genuine (ES building renovation for 2050; EE electrification and electric cars; FR hydrogen aircraft; IS carbon price and carbon removal; RS building energy efficiency; CZ biomethane); a few doubtful (LV 2020).
  GOAL-only samples are genuine goal-talk but include means outside my lists (DK green fuels/Power-to-X; IT fossil fuels) => the means share is an UNDERCOUNT; also much goal-talk concerns the EU, other countries (TR on China), a court ruling (IT), or a city (LV Riga), not the nation's own LTS.
  => the lists measure 'a specific means is mentioned near a long-term goal', NOT 'the nation's LTS pathway is discussed'. That needs (a) the full LTS documents (UNFCCC portal PDFs, not fetched) and (b) separating national from EU/other-country talk.
+
+## LTS full documents: FETCH BLOCKED (14 Nov)
+23 LTS PDFs for the 20 parliament countries are linked from Climate Watch (unfccc.int/sites/default/files/resource/...). All requests return HTTP 200 with a 212-byte Incapsula (Imperva) JavaScript challenge page instead of the PDF -> the portal blocks scripted clients.
+Bypassing bot detection is not appropriate, so no PDFs were fetched; the empty files I created were deleted. Hand-download list with target file names: ndc/lts_download_list.md (user downloads in a normal browser into ndc/data/raw/lts_pdfs/ as CC_n.pdf).
+Fallback if not downloaded: only the Climate Watch LTS summaries (~800-1,900 chars/country) + structured flags are available, which cannot support a pathway-level comparison.
