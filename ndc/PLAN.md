@@ -287,3 +287,17 @@ H13 PARLIAMENT CLIMATE ATTENTION vs EMISSIONS (ParlaMint, ~26 parliaments, 2015-
  PRIMARY: Spearman(attention 2015-19, emission trend 2015-19), partial on log GDPpc, ONE-SIDED negative (more attention, faster decline). n is small (~26): low power, report effect size.
  SECONDARY (two-sided): change in attention (mean 2020-22 minus mean 2015-17) vs trend 2017-2022.
  Expected confound: rich northern parliaments both talk more and cut more; the GDP control and EU membership (descriptive split) address this only partly.
+
+## ROUND 4 RESULTS (14 Nov night; ndc/notebooks/ndc_round4.py, parliament_attention.py; data/processed/round4_*.csv, parliament_attention_vs_trend.csv, parliament_climate_attention_by_year.csv)
+H8b firm list v2: STILL SUPPORTED, slightly weaker. Partial rho -0.16 (one-sided p=.034) for 2015-19; -0.17 (p=.027) for 2015-23. 39 of 135 countries have 0 firm-v2 matches.
+ Hand-check of 10 firm-v2 matches: ~6/10 genuine (unconditional, 'committed to reducing', Canada's economy-wide target); 'economy-wide' is the weak term (also describes economic impacts or emission totals), 'binding' can refer to the global agreement.
+ v1 -> v2 changes nothing qualitatively; the claim still rests mostly on the hedged list (10/10).
+H12 within income x region strata (19 strata): Spearman(firmness v2, trend residual) -0.17 vs null mean -0.06, one-sided p=.064: NOT significant at .05.
+ Reading: part of the H8 association is between-stratum (who is in which income/region group); within peers the sign holds but the evidence is weak.
+H11 DID PLEDGES FIRM UP: SUPPORTED, MODEST. 95 countries (36 shared fields): median firmness first -0.61 -> revised -0.41 -> third -0.32; firmer in 53/95 (6 unchanged); paired Wilcoxon one-sided p=.019.
+ Persistence first vs third low (Spearman +0.23): a country's hedging in 2015 says little about its hedging in 2025. Tercile changes not reported as a finding (regression to the mean).
+ EXPLORATORY: change in firmness vs 2015-23 emission trend: Spearman +0.03 (n=79): firming up is not linked to emission outcomes.
+H13 PARLIAMENT ATTENTION vs EMISSIONS: NOT SUPPORTED. 26 parliaments. Climate attention (share of speeches with a climate word) 2015-19 ranges from 0.6% (BIH) to 11% (NOR).
+ Raw Spearman with 2015-19 trend -0.29, but attention tracks income (+0.73) and after log GDPpc the partial is -0.06 (p=.40). Secondary: change in attention vs 2017-22 trend partial -0.14 (two-sided p=.50).
+ Descriptive: attention more than doubled (median 2.2% of speeches in 2015-17 -> 5.2% in 2020-22), rising in 24/26 parliaments.
+ Reading: richer parliaments talk more about climate and richer countries cut more; talk adds nothing beyond wealth. Low power (n=26).
