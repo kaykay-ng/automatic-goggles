@@ -190,3 +190,15 @@ Reading ~10+8 samples: GOAL+MEANS mostly genuine (ES building renovation for 205
 23 LTS PDFs for the 20 parliament countries are linked from Climate Watch (unfccc.int/sites/default/files/resource/...). All requests return HTTP 200 with a 212-byte Incapsula (Imperva) JavaScript challenge page instead of the PDF -> the portal blocks scripted clients.
 Bypassing bot detection is not appropriate, so no PDFs were fetched; the empty files I created were deleted. Hand-download list with target file names: ndc/lts_download_list.md (user downloads in a normal browser into ndc/data/raw/lts_pdfs/ as CC_n.pdf).
 Fallback if not downloaded: only the Climate Watch LTS summaries (~800-1,900 chars/country) + structured flags are available, which cannot support a pathway-level comparison.
+
+## LTS vs PARLIAMENT, PATHWAY COMPARISON: plan fixed BEFORE the PDFs arrive (14 Nov; user will download the 23 PDFs by hand into ndc/data/raw/lts_pdfs/ as listed in ndc/lts_download_list.md)
+Step 1 (ndc/notebooks/lts_extract.py, ready, self-tested on a local PDF): extract text, language flag (BE is French), pages, characters per page (flags scanned PDFs), and a profile of 9 shared categories per document:
+ energy, transport, buildings, industry, agriculture, land_forest, waste, instruments, removals (mentions per 10,000 words; lists in the script). Where a country has 2 documents use the one submitted closest to, and before, the end of 2022 (CZ_2, GB_1, UA_2; the others have one).
+Step 2 (to write once PDFs are in; SAME category lists): parliament profile = for each country, the share of means-mentions per category inside +-300 characters of strict long-term-goal statements (strict goal list in lts_parliament_means.py), and as a second view the same per 10,000 words over ALL climate speeches.
+Step 3 PRE-DECLARED tests (n up to 20 countries; exploratory unless marked):
+ P-A (primary): across countries, for each category, Spearman between its share in the LTS profile and its share in the parliament profile; summarise by the median rho over the 9 categories (positive = parliaments talk about the sectors their strategies stress).
+   Null: permute country labels of the parliament profiles (5,000x) and take the median rho each time.
+ P-B: within-country alignment: Spearman between the 9-category LTS vector and the parliament vector for each country; report the median over countries against the permuted-partner null (parliament vector from another country).
+ P-C: sector 'gap': categories heavily emphasised in the LTS but rare in parliament (and the reverse) -> list for the paper (descriptive).
+ Hand-check: read ~20 goal-window excerpts for 3 countries to check precision of the shared lists (agriculture/land lists are broad here: 'forest', 'farm' etc. match more than the narrow lists used for the earlier 34% figure).
+Limits: n<=20; PDFs differ in kind (a short LTS, a 300-page strategy, a climate programme such as DK's); parliament talk covers EU/other countries too; machine-translated English on the parliament side vs original English documents; documents are policy texts, parliament is debate.
