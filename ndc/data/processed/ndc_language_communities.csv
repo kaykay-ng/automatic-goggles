@@ -1,0 +1,155 @@
+iso,language_community,region,income,emission_cluster
+AFG,1,"Middle East, North Africa, Afghanistan & Pakistan",Low income,4
+AGO,3,Sub-Saharan Africa ,Lower middle income,2
+ALB,2,Europe & Central Asia,Upper middle income,4
+AND,2,Europe & Central Asia,High income,4
+ARE,6,"Middle East, North Africa, Afghanistan & Pakistan",High income,2
+ARG,5,Latin America & Caribbean ,Upper middle income,4
+ARM,2,Europe & Central Asia,Upper middle income,2
+ATG,4,Latin America & Caribbean ,High income,5
+AUS,2,East Asia & Pacific,High income,2
+AZE,1,Europe & Central Asia,Upper middle income,2
+BDI,3,Sub-Saharan Africa ,Low income,1
+BEN,0,Sub-Saharan Africa ,Lower middle income,3
+BFA,0,Sub-Saharan Africa ,Low income,1
+BGD,1,South Asia,Lower middle income,4
+BHR,6,"Middle East, North Africa, Afghanistan & Pakistan",High income,4
+BHS,4,Latin America & Caribbean ,High income,2
+BIH,2,Europe & Central Asia,Upper middle income,2
+BLR,2,Europe & Central Asia,Upper middle income,2
+BLZ,4,Latin America & Caribbean ,Upper middle income,3
+BOL,5,Latin America & Caribbean ,Lower middle income,3
+BRA,2,Latin America & Caribbean ,Upper middle income,4
+BRB,4,Latin America & Caribbean ,High income,4
+BRN,1,East Asia & Pacific,High income,2
+BTN,1,South Asia,Lower middle income,4
+BWA,3,Sub-Saharan Africa ,Upper middle income,2
+CAF,3,Sub-Saharan Africa ,Low income,1
+CAN,4,North America,High income,2
+CHE,2,Europe & Central Asia,High income,2
+CHL,5,Latin America & Caribbean ,High income,2
+CHN,1,East Asia & Pacific,Upper middle income,2
+CIV,0,Sub-Saharan Africa ,Lower middle income,4
+CMR,0,Sub-Saharan Africa ,Lower middle income,3
+COD,0,Sub-Saharan Africa ,Low income,4
+COG,0,Sub-Saharan Africa ,Lower middle income,3
+COL,5,Latin America & Caribbean ,Upper middle income,4
+COM,0,Sub-Saharan Africa ,Lower middle income,2
+CPV,0,Sub-Saharan Africa ,Upper middle income,2
+CRI,5,Latin America & Caribbean ,High income,4
+DJI,0,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,4
+DMA,4,Latin America & Caribbean ,Upper middle income,4
+DOM,5,Latin America & Caribbean ,Upper middle income,2
+DZA,0,"Middle East, North Africa, Afghanistan & Pakistan",Upper middle income,2
+ECU,5,Latin America & Caribbean ,Upper middle income,2
+EGY,3,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,4
+ETH,3,Sub-Saharan Africa ,Low income,1
+EUU,2,Europe & Central Asia,High income,2
+FJI,4,East Asia & Pacific,Upper middle income,2
+FSM,2,East Asia & Pacific,Upper middle income,2
+GAB,0,Sub-Saharan Africa ,Upper middle income,2
+GEO,3,Europe & Central Asia,Upper middle income,4
+GHA,0,Sub-Saharan Africa ,Lower middle income,4
+GIN,0,Sub-Saharan Africa ,Lower middle income,1
+GMB,0,Sub-Saharan Africa ,Low income,4
+GNB,0,Sub-Saharan Africa ,Low income,1
+GNQ,0,Sub-Saharan Africa ,Upper middle income,2
+GRD,4,Latin America & Caribbean ,Upper middle income,2
+GTM,5,Latin America & Caribbean ,Upper middle income,2
+GUY,1,Latin America & Caribbean ,High income,3
+HND,5,Latin America & Caribbean ,Lower middle income,2
+HTI,5,Latin America & Caribbean ,Lower middle income,4
+IDN,1,East Asia & Pacific,Upper middle income,3
+IND,1,South Asia,Lower middle income,2
+IRQ,6,"Middle East, North Africa, Afghanistan & Pakistan",Upper middle income,2
+ISL,2,Europe & Central Asia,High income,2
+ISR,6,"Middle East, North Africa, Afghanistan & Pakistan",High income,4
+JAM,4,Latin America & Caribbean ,Upper middle income,2
+JOR,6,"Middle East, North Africa, Afghanistan & Pakistan",Upper middle income,4
+JPN,2,East Asia & Pacific,High income,2
+KAZ,2,Europe & Central Asia,Upper middle income,2
+KEN,3,Sub-Saharan Africa ,Lower middle income,1
+KGZ,1,Europe & Central Asia,Lower middle income,2
+KHM,1,East Asia & Pacific,Lower middle income,1
+KIR,4,East Asia & Pacific,Lower middle income,2
+KNA,4,Latin America & Caribbean ,High income,2
+KOR,2,East Asia & Pacific,High income,2
+KWT,6,"Middle East, North Africa, Afghanistan & Pakistan",High income,2
+LAO,1,East Asia & Pacific,Lower middle income,3
+LBN,6,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,4
+LBR,3,Sub-Saharan Africa ,Low income,3
+LCA,4,Latin America & Caribbean ,Upper middle income,2
+LKA,1,South Asia,Upper middle income,4
+LSO,3,Sub-Saharan Africa ,Lower middle income,2
+MAR,0,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,4
+MDA,0,Europe & Central Asia,Upper middle income,4
+MDG,3,Sub-Saharan Africa ,Low income,1
+MDV,4,South Asia,Upper middle income,2
+MEX,5,Latin America & Caribbean ,Upper middle income,2
+MKD,2,Europe & Central Asia,Upper middle income,4
+MLI,0,Sub-Saharan Africa ,Low income,1
+MMR,1,East Asia & Pacific,Lower middle income,1
+MNE,2,Europe & Central Asia,Upper middle income,2
+MNG,1,East Asia & Pacific,Upper middle income,1
+MOZ,3,Sub-Saharan Africa ,Low income,4
+MRT,0,Sub-Saharan Africa ,Lower middle income,1
+MUS,4,Sub-Saharan Africa ,Upper middle income,4
+MWI,3,Sub-Saharan Africa ,Low income,1
+MYS,1,East Asia & Pacific,Upper middle income,2
+NAM,3,Sub-Saharan Africa ,Lower middle income,1
+NER,0,Sub-Saharan Africa ,Low income,1
+NGA,3,Sub-Saharan Africa ,Lower middle income,2
+NIC,5,Latin America & Caribbean ,Lower middle income,1
+NOR,2,Europe & Central Asia,High income,2
+NPL,1,South Asia,Lower middle income,1
+NRU,4,East Asia & Pacific,High income,2
+NZL,2,East Asia & Pacific,High income,1
+OMN,6,"Middle East, North Africa, Afghanistan & Pakistan",High income,2
+PAK,1,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,4
+PAN,5,Latin America & Caribbean ,High income,4
+PER,5,Latin America & Caribbean ,Upper middle income,3
+PHL,1,East Asia & Pacific,Upper middle income,2
+PLW,2,East Asia & Pacific,High income,2
+PNG,1,East Asia & Pacific,Lower middle income,3
+PRY,5,Latin America & Caribbean ,Upper middle income,1
+QAT,6,"Middle East, North Africa, Afghanistan & Pakistan",High income,2
+RUS,2,Europe & Central Asia,High income,2
+RWA,3,Sub-Saharan Africa ,Low income,1
+SAU,6,"Middle East, North Africa, Afghanistan & Pakistan",High income,2
+SDN,3,Sub-Saharan Africa ,Low income,1
+SEN,0,Sub-Saharan Africa ,Lower middle income,4
+SGP,1,East Asia & Pacific,High income,2
+SLB,4,East Asia & Pacific,Lower middle income,3
+SLE,0,Sub-Saharan Africa ,Low income,4
+SLV,5,Latin America & Caribbean ,Upper middle income,4
+SOM,3,Sub-Saharan Africa ,Low income,1
+SRB,2,Europe & Central Asia,Upper middle income,4
+STP,0,Sub-Saharan Africa ,Lower middle income,3
+SUR,5,Latin America & Caribbean ,Upper middle income,3
+SWZ,3,Sub-Saharan Africa ,Lower middle income,4
+SYC,4,Sub-Saharan Africa ,High income,4
+SYR,6,"Middle East, North Africa, Afghanistan & Pakistan",Low income,4
+TCD,0,Sub-Saharan Africa ,Low income,1
+TGO,0,Sub-Saharan Africa ,Lower middle income,4
+THA,1,East Asia & Pacific,Upper middle income,2
+TJK,1,Europe & Central Asia,Lower middle income,1
+TKM,1,Europe & Central Asia,Upper middle income,2
+TLS,4,East Asia & Pacific,Lower middle income,2
+TON,4,East Asia & Pacific,Upper middle income,4
+TTO,4,Latin America & Caribbean ,High income,2
+TUN,0,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,4
+TUR,2,Europe & Central Asia,Upper middle income,2
+TUV,2,East Asia & Pacific,Upper middle income,1
+TZA,3,Sub-Saharan Africa ,Lower middle income,1
+UGA,3,Sub-Saharan Africa ,Low income,1
+UKR,2,Europe & Central Asia,Upper middle income,2
+URY,5,Latin America & Caribbean ,High income,1
+USA,2,North America,High income,2
+UZB,1,Europe & Central Asia,Lower middle income,2
+VCT,4,Latin America & Caribbean ,Upper middle income,2
+VNM,1,East Asia & Pacific,Upper middle income,2
+VUT,4,East Asia & Pacific,Lower middle income,1
+WSM,4,East Asia & Pacific,Upper middle income,1
+ZAF,3,Sub-Saharan Africa ,Upper middle income,2
+ZMB,3,Sub-Saharan Africa ,Lower middle income,1
+ZWE,3,Sub-Saharan Africa ,Lower middle income,3

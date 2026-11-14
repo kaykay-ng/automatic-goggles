@@ -58,3 +58,27 @@ H3  say vs do (partial rho controlling log words + log GDPpc; one-sided; Holm ov
     waste +0.12 (.130), land_forest +0.14 (.130). Only industry passes Holm. => NDC sector emphasis follows actual emissions only weakly.
 READING: NDC language similarity is organised by REGION, DISTANCE and INCOME GAP; emission structure adds a tiny amount; happiness adds nothing beyond income. Attenuation caveat: split-half
  reliability of the language measure is only .66, so true effects of emission similarity may be somewhat larger; with 11.8k dyads even tiny effects reach p<.001, so report effect sizes.
+
+## LANGUAGE NETWORK + EDGE-LAYER COMPARISON (14 Nov; set before running; exploratory except the first claim)
+Network: nodes = the 154 countries of ndc_tests.py (EU collapsed). Language edges: each country linked to its k=5 most similar countries (centred cosine of first_ndc vectors), union of directions,
+weights = similarity. Communities: Louvain (networkx, weight=similarity, seed 42, resolution 1).
+PRIMARY structural claim (pre-declared): language communities agree with World Bank REGION more than chance (ARI, 5,000 label permutations). Also report agreement with income group and with
+ emission-profile clusters (Ward on the standardised 2015 profile, k by silhouette 3-6).
+Significance of community structure: observed Louvain modularity vs 200 degree-preserving rewired graphs (double-edge swaps, unweighted).
+Stability: k in {3,5,8,10,15}; 20 Louvain seeds; other NDC rounds (revised_first_ndc, third_ndc) on common countries.
+ALTERNATING THE EDGES (comparative): same nodes, k=5 nearest-neighbour graphs built from (i) language, (ii) emission-profile similarity, (iii) income similarity (|log GDPpc gap|),
+ (iv) geography (capital distance). Compare their Louvain partitions (ARI matrix) and their edge overlap (Jaccard of edge sets). Happiness layer on the 111 nodes with WHR data as a side comparison.
+Figures: ndc/figures/language_network.png (coloured by language community and by region).
+
+## RESULTS: language network, communities, edge layers (14 Nov; ndc/notebooks/ndc_network.py; ndc/figures/language_network.png; data/processed/ndc_language_communities.csv)
+Language kNN network (k=5, first_ndc): 154 nodes, 518 edges, mean degree 6.7, 1 component. Louvain: 7 communities (sizes 27, 26, 25, 24, 23, 18, 11), weighted Q=0.635.
+ Null: unweighted Q 0.600 vs 0.351+-0.009 in 200 degree-preserving rewired graphs (p=.005, the floor with 200 draws).
+Communities (by membership): West/Central Africa (BEN BFA CIV CMR COD COG ...), South/East Asia (AFG BGD BTN CHN IDN IND KHM LAO LKA ...), Europe/OECD-like (EUU AUS JPN KOR CHE ISL USA ...), East/Southern Africa
+ (AGO BDI BWA ETH KEN ...), small islands (ATG BHS BLZ BRB DMA FJI GRD JAM KIR MDV MUS ... plus CAN), Latin America (ARG BOL CHL ... 18/18 LAC), Gulf/Middle East (ARE BHR IRQ ISR JOR KWT ... 11/11 MENA).
+PRIMARY (pre-declared): communities vs World Bank region ARI=+0.398, p=.0002 (region partition alone reaches Q=.541 on the language network vs Louvain's .635); vs income group ARI=+0.098; vs emission clusters (Ward k=5) ARI=+0.040.
+Stability: k in {3,8,10,15}: ARI vs k=5 +0.54, +0.84, +0.66, +0.65; 20 seeds: 7-8 communities, mean pairwise ARI 0.78; other rounds vs first_ndc partition: revised +0.38, third +0.49, indc +0.37 (vs region .29 / .41 / .31).
+Alternating edges (k=5 kNN on same nodes; ARI of Louvain partitions): language-geography +0.44; language-emissions +0.04; language-income +0.05; emissions-income +0.02; geography-income +0.03.
+ Edge-set Jaccard: language-geography 0.22; all others <=0.05. Happiness layer (111 nodes): ARI with language +0.23, income +0.26, geography +0.18.
+CHECK: source-language artefact ruled out as far as detectable: all 195 first_ndc texts are English by stop-word detection (Climate Watch stores English). Drafting style/translation of the English could still carry regional signal.
+READING: NDC language is organised into regional and 'bloc-like' communities (e.g. small islands, Gulf states, francophone Africa), nearly independent of emission structure and income. TO DO: UNFCCC bloc membership (AOSIS, LDC, G77, Arab Group, ...)
+ needs a trustworthy list; say-vs-do on emission TRENDS; figure polish; paper outline.
