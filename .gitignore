@@ -6,6 +6,7 @@ data/processed/trade_parlamint_pairs.csv
 *.tgz
 # environments and junk
 .venv/
+.venv-nlp/
 venv/
 __pycache__/
 .ipynb_checkpoints/
@@ -13,3 +14,6 @@ __pycache__/
 # course material is copyrighted: never commit
 *.pdf
 material/
+# large angle-B working files (rebuilt by notebooks/b_pool_and_embed.py)
+data/processed/b_pool.csv.gz
+data/processed/b_speech_vectors.npy

@@ -166,3 +166,199 @@ Net exports per person vs livestock emissions per person (Spearman, n=26):
 - DECISION: main text corpus = food/agriculture speeches (ample in all 26); treat climate as a DIMENSION (share, framing, sentiment)
   within it, not as a hard filter (too thin for UA, BG, EE, CZ, ...).
 - Emissions intensities (FAO, 3 MB) downloaded: 14 foods (cattle/pig/chicken/sheep/goat/buffalo meat, milk, eggs, rice, cereals excl. rice).
+
+## Three-topic split from flagged text (14 Nov; notebooks/split_topics.py -> data/processed/parlamint/topic_flags_XX.csv.gz)
+- Lumped 'food' list split into AGRI (agricultur*, farm*, crop, harvest, fertili*, livestock, cattle, CAP, fisher*) and
+  FOOD (food, nutrition, hunger, diet, grocer*, supermarket) from saved flagged text; CLIMATE unchanged. Substantive (>=50 words):
+  agri 157k, food 83k, climate 115k. Overlaps: agri&food 37k, agri&climate 21k, food&climate 12k, all three 7.2k.
+  One-topic-only: agri 107k, food 41k, climate 89k -> topics are mostly distinct; splitting was worth it.
+- Countries with >=300 substantive speeches: agri 26/26, food 25, climate 25; agri&climate 20 countries; food&climate only 14.
+  Thin: BA, LV (food 608, food&climate 27), ES, UA. Largest: GB, NL, NO, FR, TR.
+- LIMITATION: only speeches already matched by the first lists are searchable; food-availability vocabulary (prices, shortage,
+  security, imports) needs a full re-parse of raw text with a wider FOOD list.
+- Cloud: user created a cloud environment; start_session could not launch it from this window -> brief saved in CLOUD_TEST_PROMPT.md.
+
+## Cloud decision (14 Nov): stay LOCAL
+- Cloud test passed (Ubuntu VM, 4 CPU, 15 GB RAM, 25 GB free; FAOSTAT rebuild + LV parse exact match) but: no push-back from the
+  test session (GitHub not linked), command limit ~10 min + 30 min background (full ParlaMint transfer ~63 min needs chunking),
+  ephemeral VM, 4 CPU and no GPU (slower than the laptop for embeddings). Long jobs are already done locally.
+- Fixed notebooks/fetch_parlamint_en_txt.sh to pick bsdtar (--include) vs GNU tar (--wildcards). Tested on macOS only.
+- Revisit only for a long unattended job: link GitHub to the environment, set network to Full, run in chunks.
+
+## Do imports hide emissions? (14 Nov; notebooks/embodied_emissions.py -> data/processed/embodied_emissions_by_{country,food}.csv)
+- Method: PBA (FAO farm-gate) - exports*own intensity + imports*exporter's intensity (FAO emissions intensities, kg CO2eq/kg).
+  Foods: cattle/pig/sheep/goat/chicken/buffalo meat, hen eggs, cereals incl. rice. NOT covered: dairy products, fruit/veg, oilseeds,
+  sugar, processed, fish. 0.1% of import tonnage needed imputed partner intensity.
+- Result: trade-adjusted footprint differs from production-based by -39% (UA) to +73% (GR). Net importers of embodied emissions:
+  GR +73%, IT +57%, PT +42%, BA +34%, SE +33%, NL +31%, NO +20%. Net exporters: UA -39, PL -36, BG -32, DK -32, LV -30, HU -28.
+  Rank of kg CO2eq/person moves a lot: GR up 18 places, IT 15, SE 12; BG down 13. Spearman(PBA_pc, CBA_pc) = 0.49.
+  Meat dominates: of all embodied imports (70 Mt) meat is 57 Mt, cereals 13, eggs 0.5.
+- Mostly an accounting identity (sign follows net trade); import dependence vs shift only +0.33 (exports matter too).
+- NOT mechanical: median ratio (import-weighted intensity / home intensity) ~1 (cereals 0.85, pig 0.93, cattle 0.96, chicken 1.01,
+  sheep 1.00): countries do NOT systematically import from dirtier producers; the hidden amount comes from VOLUME, not source.
+- CAVEATS: FAO intensities are farm-gate (no feed, no land-use change) -> pig/chicken look clean (median 3.6 and 0.8 kg/kg vs cattle 35);
+  NL/BE re-exports valued at own intensity (NL imports = 92% of its footprint, CBA probably understated); import_dep unreliable for small/hub
+  economies (SI 1.0, NL 0.9); product-weight vs carcass-weight not reconciled; 8 yr means.
+- NEXT: use shift_pct and E_imp_pc as country variables in the language test (do countries with large hidden imported emissions talk
+  less about agriculture/climate?).
+
+## OPTION A chosen (14 Nov): do countries talk about what they hide? -- PRE-DECLARED before running (no peeking)
+Question: does what a parliament talks about (agriculture, food, climate) track the country's position in the food system
+(net trade, self-sufficiency, emissions hidden in imports)?
+Text measures (per country, 2015-2022, substantive speeches >=50 words, chair speeches excluded; keyword lists from split_topics.py):
+- attention_X = speeches mentioning topic X (agri / food / climate) per 10,000 substantive speeches.
+- climate_in_agri = share of agriculture-keyword speeches that ALSO mention climate (framing; removes volume effects).
+Country variables: net meat+dairy+eggs exports per person; food self-sufficiency (mean log2 of production/supply for cereals, veg, fruit,
+meat, milk, eggs, clipped [-2,2]); shift_pct (trade-adjusted vs production-based footprint, + = importer of hidden emissions).
+Controls: log population; region (North/West/South/East; permutation of x within regions).
+PRIMARY hypotheses (3; Holm correction across these 3 only):
+ P1  climate_in_agri  vs shift_pct              predicted NEGATIVE (hidden importers frame farming less in climate terms)
+ P2  attention_agri   vs net meat+dairy exports pc  predicted POSITIVE (exporters talk about farming more)
+ P3  attention_food   vs food self-sufficiency  predicted NEGATIVE (less self-sufficient -> more food talk)
+Everything else is EXPLORATORY and labelled as such. Report effect sizes with bootstrap CIs, not only p-values.
+Known threats: n=26; keyword measures unvalidated (hand-label 100 speeches next); corpus composition differs by country
+(plenary vs committee, length of speeches); NL/BE re-exports; translation noise (machine-translated English).
+
+## OPTION A RESULTS (14 Nov; notebooks/country_text_vs_food_system.py -> data/processed/country_text_and_food_system.csv)
+PRE-DECLARED tests, n=26 countries, Holm over 3, controlled p = log pop partialled + x permuted within regions:
+- P1 climate_in_agri vs shift_pct (pred. NEGATIVE): rho=+0.38 (raw p=.057), partial +0.37, controlled p=.089, Holm .27, CI [-0.06,+0.72]. WRONG DIRECTION, n.s.
+- P2 attention_agri vs net animal exports pc (pred. POSITIVE): rho=-0.23, controlled p=.36. Wrong direction, n.s.
+- P3 attention_food vs food self-sufficiency (pred. NEGATIVE): rho=-0.26, partial -0.28, controlled p=.11, Holm .27. Right direction, n.s.
+=> NONE of the three pre-declared hypotheses is supported. CIs are wide (about +-0.35), so this is INCONCLUSIVE, not evidence of no effect.
+Exploratory grid (42 cells, 6 significant vs ~2 expected): climate talk and climate_in_agri correlate with CBA_pc (trade-adjusted
+footprint per person; rho +0.65 and +0.76), topic_label_agri negatively with E_imp_pc (-0.43). NOT corrected; CBA_pc likely proxies wealth/diet.
+Descriptive pattern: climate_in_agri is highest in SE .29, DK .24, ES .24, AT .23, NO .22, NL .21 and lowest in UA .02, BA .04, LV .04, BG .05,
+PL .06 -> a north/west vs east gradient, i.e. looks regional/economic more than food-system related.
+Measurement caveats: keyword measures not yet validated; corpora differ (11.9k substantive non-chair speeches BA .. 492k GB).
+
+## ROUND 2 (14 Nov): direct measure + country-year panel -- PRE-DECLARED before running
+Honesty note: round 1 was null, and we then LOOKED at an exploratory grid (climate talk vs hidden emissions +0.42, E_imp_pc +0.35).
+Round 2 hypotheses are therefore informed by seen data and are NOT a clean confirmatory test; say so in the paper.
+(A) DIRECT MEASURE: talk that is specifically about outsourced / consumption-side emissions, from the raw text (full re-parse):
+  direct_A terms: carbon leakage, embodied/embedded carbon|emission(s), imported emission(s)/carbon/deforestation, consumption-based,
+    (carbon|climate|ecological|environmental|water|food|consumption) footprint, carbon border / border (carbon|adjustment|tax), CBAM,
+    deforestation, emissions abroad/elsewhere/overseas/outside.
+  direct_B: 'import*' within 12 words of emission|carbon|climate|greenhouse (only checked in speeches that already mention climate words).
+  Measure: direct_share = speeches with direct_A or direct_B per 1,000 CLIMATE speeches (substantive, non-chair).
+  Precision of the terms will be CHECKED BY READING a sample of matches before any test (report the false-positive rate).
+  Cross-section (n=26): D1 direct_share vs shift_pct, predicted POSITIVE (countries hiding more emissions in imports talk more about
+  outsourced emissions). Controlled p (log pop partialled, x permuted within region) is the primary p. Single primary test, no correction.
+(B) PANEL (country-year 2015-2022, country FE + year FE, cluster bootstrap over countries, 2000 resamples):
+  PP1 climate_in_agri ~ net animal-food exports pc (yearly), predicted POSITIVE (more exporting -> more climate framing; importing hides it)
+  PP2 attention_agri  ~ net animal-food exports pc, predicted POSITIVE
+  PP3 attention_food  ~ food self-sufficiency (yearly), predicted NEGATIVE
+  Holm over PP1-PP3. Yearly hidden-emission shift is NOT available (embodied estimate is an 8-yr mean) -> net exports is the proxy.
+Caveat: only ~8 years; within-country variation in trade is small; France has 6 years; ParlaMint ends mid-2022 (2022 partial).
+
+## ROUND 2: measurement check FAILED for v1 patterns -> v2 (14 Nov; BEFORE any round-2 test was run)
+Read 10 random matches per category (single reader = Claude; a teammate should re-label independently):
+- IMPORT-near-climate: 0/10 on target. BUG: 'import*' matched 'important/importance' (12,420 of 16,047 matches).
+- LEAK (carbon leakage, border terms): 6/10 on target; false: 'cross-border tax units', municipal 'border adjustments', 'overborder taxation'.
+- FOOT (footprint terms): 3/10 about imports/consumption; 7/10 generic footprint (personal, ministers, devices).
+- DEFOR: 3/10 about imported commodities; 7/10 domestic/general.
+v2 changes (parse_measures.py): import forms explicit (import, imports, imported, importing, importer(s), importation); LEAK drops generic
+'border tax/adjustment', keeps carbon leakage, carbon/CO2/climate border, border adjustment mechanism, CBAM; FOOT keeps consumption-based,
+embodied/embedded carbon|emissions, imported emissions/carbon/deforestation, emissions abroad/elsewhere/overseas, and 'footprint' ONLY within
+12 words of import*/abroad/overseas/outsourc*/supply chain/trade; DEFOR only within 15 words of import*/supply chain/soy/palm/beef/commodit*/trade/
+Amazon/Brazil/Indonesia. D1 hypothesis (direct_share vs shift_pct, predicted positive) stays as pre-declared; only the measure's definition changed.
+Next: re-parse, read a FRESH sample of v2 matches, and only if precision is acceptable (>=70% on target) run D1.
+
+## ROUND 2: v2 precision check (14 Nov, fresh sample of 12 per category, seeds 101-104; single reader = Claude; BEFORE running D1)
+- LEAK 12/12 on target (CBAM, carbon border adjustment, carbon leakage; mostly industry competitiveness, not food).
+- FOOT 10/12 (false: 'embedded carbon' in building construction; generic 'ecological footprint of food trade').
+- DEFOR ~10-11/12 (borderline: domestic government's Amazon policy).
+- IMPORT-near-climate (NEAR) ~3-4/12 -> FAILS the >=70% rule: mostly ENERGY imports (oil, coal, fossil fuels), 'greenhouse' = glasshouse, 'importer'.
+DECISION (per the rule set earlier): drop NEAR. direct measure v2 = speeches with LEAK or FOOT or DEFOR, per 1,000 climate speeches.
+Counts are SPARSE: 1,851 matches in total with NEAR; without it ~1,000 (leak 370, foot 337, defor 539 incl. overlap). Countries with >=30 v2 matches (any type): 11 of 26
+(BG, PL, DK, IS, FI, BE, NO, SE, NL, FR, GB). SI 3, RS 3, UA 5, EE 11. D1 on 26 countries will mostly rest on tiny counts -> low power; the >=30 sensitivity (n~11) has almost none.
+Sensitivity (exploratory): restrict direct matches to speeches that also contain an agriculture or food keyword.
+
+## ROUND 2 RESULTS (14 Nov; notebooks/round2_tests.py, parse_measures.py v2, yearly_food_system.py; data/processed/country_direct_measure.csv)
+D1 (pre-declared; direct_share = speeches with LEAK|FOOT|DEFOR per 1,000 climate speeches, vs shift_pct, predicted positive), n=26:
+  rho=-0.03, partial -0.10, controlled p=.82, CI [-0.38,+0.34]. NULL. Sensitivity >=30 matches (only 8 countries): CI [-1.0,+0.75] = uninformative.
+  Exploratory (matches that also mention agri/food): rho=+0.07, p=.93. Null.
+PANEL (206 country-years, 26 countries, country+year FE, cluster bootstrap over countries; std_beta in within-country SDs):
+  PP1 climate_in_agri ~ net animal exports pc: +0.002 [-0.19,+0.17], p=.99.  PP2 attention_agri ~ net animal exports: +0.008 [-0.14,+0.20], p=.89.
+  PP3 attention_food ~ food self-sufficiency (pred. negative): +0.068 [-0.16,+0.28], p=.54 (wrong direction, n.s.). Holm all 1.0.
+  Within-country variation is tiny (net exports SD 7.7 kg/person vs 87 between; self-sufficiency 0.05 vs 0.38) -> panel speaks only to small within-country changes.
+Descriptive (direct talk per 1,000 climate speeches): highest BE 26.9, FR 18.9, GB 17.2, BG 13.3 (13 matches), NL 12.8, NO 10.0, ES 8.5; lowest TR 0.4,
+  HR 0.8, GR 1.0, HU 2.1 and zero in BA, RS, LV. GR (+73% hidden) and IT (+57%) are LOW; BE/FR/GB (net exporters or near zero) are HIGH.
+  Matches read in the samples point to POLICY EVENTS: EU carbon border adjustment (CBAM), France's national strategy against imported deforestation,
+  UK Environment Bill due-diligence on forest-risk commodities, EU deforestation regulation. Talk seems driven by policy agendas, not by exposure to hidden emissions.
+CONCLUSION so far: no support for 'hidden emissions -> talk' in 4 pre-declared tests (3 round 1, 1 round 2 + 3 panel). Moderate effects (|rho|~0.3) can't be excluded at n=26;
+  strong effects (|rho|>0.4) are unlikely. Direct measure too sparse for most countries (only 8 have >=30 matches).
+
+## ANGLE B chosen (14 Nov): do countries that trade more talk alike about food & agriculture? -- PRE-DECLARED before building
+(Hidden-emissions hypothesis closed: no detectable effect in 4 pre-declared tests; angle A (Ukraine shock) declined by user.)
+Question: is language similarity between two parliaments, on food and agriculture, related to how intensely the two countries trade,
+beyond distance, EU membership, region and source-language family?
+Language measure: pool = substantive (>=50 words), non-chair speeches 2015-2022 matching the AGRI or FOOD list (split_topics.py lists; text from
+flagged files, so 'livestock'/'cattle'-only speeches are missed). Random sample of up to 1,500 speeches per country (seed fixed; BA smaller).
+Embedding: sentence-transformers all-MiniLM-L6-v2; max_seq_length 256 -> speeches cut into passages of <=180 words on sentence boundaries,
+passage vectors averaged, then normalised (week 7 rule). Country vector = mean of its speech vectors, MINUS the global mean (removes the shared
+'parliament' component). Language similarity_ij = cosine of country vectors. 26 x 26 = 325 dyads.
+Trade measure: all-food trade volume, symmetrised log(1 + tonnes_ij + tonnes_ji) (worldwide tonnage not needed: use the 26-country matrix).
+PRIMARY test (one): MRQAP (permute node labels jointly, 5,000 permutations) of language similarity on log trade volume, with controls:
+  log distance (capitals), both-in-EU, same region, same source-language family (Germanic, Romance, Slavic, Baltic, Uralic, Greek, Turkic, other).
+  Prediction: coefficient on log trade POSITIVE.
+SECONDARY (exploratory, Holm over the 9 commodity layers): same regression per commodity layer.
+STRUCTURE: compare three partitions of the 26 countries - language clusters (Ward on 1 - similarity, k by silhouette), trade communities (all_food Louvain),
+  region, language family - by adjusted Rand index with permutation p; and within-vs-between community mean similarity, permuting trade labels within regions.
+VALIDATION (course requirement), done BEFORE the tests: (1) split-half reliability: random halves of each country's speeches -> two similarity matrices ->
+  correlation (Mantel); (2) read the 5 nearest language neighbours of 3 countries plus a few of their top speeches; (3) check for machine-translation artefacts:
+  does similarity cluster by source-language family more than by anything else?; (4) bootstrap CI over speeches for the key correlation.
+SUPPORTING (if time): BERTopic topic-share vectors per country as a second language measure (Jensen-Shannon), compare with the embedding measure.
+Threats: n=26 countries; translation noise and shared MT pipeline; embeddings capture topic AND style and names; country corpora differ (plenary vs committee);
+trade and language may both follow geography/politics (controls only partly handle it); all trade and text variables are time averages.
+
+## ANGLE B RESULTS v0 (14 Nov; notebooks/b_pool_and_embed.py, b_language_network.py; data/processed/b_language_similarity.csv)
+Data: 37,848 agri/food speeches (<=1,500 per country, BA 348), 159,510 passages (4.2 per speech), all-MiniLM-L6-v2 (max_seq_length 256, 384-d), 7 min on MPS.
+VALIDATION (before the tests): split-half reliability r=0.99 (sampling noise is tiny; says nothing about validity). Nearest neighbours sensible: NO: DK .56, SE .55, FI .33;
+ GR: ES .34, IT .34, TR .22; PL: CZ .36, HU .25, UA .25; BA: RS .44, HR .34, SI .30; GB (native English, not translated): NL .35, BE .32, DK .28 -> GB is not an outlier.
+ Similarity is organised by region and source-language family: same family within +0.18 vs between -0.09 (p=.0002); same region +0.14 vs -0.10 (p=.0002).
+ => cannot separate real regional discourse from machine-translation style; family/region are entered as controls.
+PRIMARY (pre-declared, DSP-MRQAP, 325 dyads, R^2=0.51): language similarity ~ log trade: beta=+0.154, p=.0004 (predicted positive: YES).
+ Controls: log distance -0.267 (p=.0002), same region +0.313, same language family +0.322, both EU 0.000 (p=.99). Raw Spearman trade-similarity +0.345.
+SECONDARY (exploratory, Holm over 9 layers): positive in all 9; significant after Holm: beverages +.205, dairy_eggs +.164, cereals +.159, pulses +.140,
+ fruit_veg +.130, oilseeds +.127, sugar +.112; not meat (+.067, p=.12) or feed (+.086, Holm .078). Layers are correlated, not independent evidence.
+PARTITIONS: language clusters k=2 (silhouette .22, weak): {BE DK EE FI FR GB IS NL NO SE} vs the other 16. ARI vs trade communities +0.25 (p=.001), region +0.36,
+ language family +0.21, EU -0.02 (n.s.). Within-minus-between language similarity for trade communities +0.197; permuting labels within regions p=.0006.
+CAVEATS / TO DO (robustness): size control (log population product); drop fisheries speeches (Nordic similarity may be fisheries; fish is NOT in the FAO trade matrix);
+ leave-one-region-out / drop Nordic block; gravity residual ('excess trade') as the trade measure; period split 2015-18 vs 2019-22; TF-IDF as alternative language measure;
+ BERTopic topic profiles as a second language measure; interpret what the similarity captures (topics vs style vs names); causal direction unknown.
+
+## ANGLE B: how much is geography? (14 Nov, EXPLORATORY, not pre-declared; notebooks/b_geography_check.py)
+R^2 of language similarity across 325 pairs: distance alone .279; + same region .404; + language family .494; + EU .495; + log trade .513 (trade adds +.018 = 3.5% of the full model's R^2).
+Trade alone .136. Geography + size explain 71.9% of the variation in log trade (corr(log trade, log distance) = -0.45).
+Trade coefficient (standardised, DSP-MRQAP): no controls +.37; distance only +.17; + region +.15; + family+EU (pre-declared model) +.154; + population product +.35 (p=.0004);
+ + lat/lon gaps +.31 (p=.002); + region-pair FE +.32 (p=.003); + COUNTRY fixed effects +.24 (p=.086, not significant at .05); region-pair + country FE +.25 (p=.092).
+Excess trade (gravity residual, geography and size removed) vs similarity: +.215 (p=.0002); with geography/family controls +.186 (p=.0006).
+Within vs across regions (partial Spearman, distance controlled): same-region dyads (n=80) +.38; cross-region (n=245) +.16; inside East +.54 (n=10), South +.49 (n=36), North +.28 (n=28).
+READING: language similarity is mostly geography/family (R^2 ~.49 without trade). Trade has a small, positive, fairly stable independent association (beta .15-.35), stronger WITHIN regions,
+ but it loses significance when each country gets its own baseline (n=26 limits power). Region and language family cannot be separated from translation style with this data.
+
+## ANGLE B: food-system common cause + topic model (14 Nov; exploratory unless stated)
+FOOD-SYSTEM CONTROL (notebooks/b_food_system_control.py): adding diet-profile and supply-profile distances (FAOSTAT food balance) as controls leaves the trade coefficient at
+ +0.148 (was +0.154, -4%); the distances themselves have beta ~0 (p>.6). => explanation 'similar food systems cause both trade and talk' NOT supported with these coarse profiles.
+BERTopic (notebooks/b_topics.py fit; all-MiniLM-L6-v2 vectors; UMAP 5d cosine seed 42; HDBSCAN min_cluster_size 80; outliers reassigned by embeddings; names/procedural words removed):
+ 87 topics on 37,848 speeches. Reading them: ~40 are food/agriculture/environment/trade topics; ~40 are general politics where a farming word appears in passing; ~15 are COUNTRY-STYLE
+ topics (currency, possessive country names, party names: kuna, forints, kr, serbias, latvias, Sanchez, New Democracy, M5S, PSS...).
+KEEP-LIST FIXED BEFORE ANY TRADE RESULT ON TOPICS (user agreed to proceed and to check samples by hand later):
+ farming: 9 44 82 59 69 | land: 7 19 56 61 70 | animals: 3 38 26 1 71 | markets: 25 68 74 83 63 | food policy: 29 37 39 46 52 58 85 |
+ env+farming: 20 23 43 6 8 5 57 84 | trade: 34 41 | climate: 0 78 73.   (40 topics). Borderline, NOT kept: 54 (production/food/meat/customs), 30 (school food), 17 (draft law agri-env), 51 (BiH).
+PLANNED (exploratory): (a) repeat the pre-declared primary test with language vectors built ONLY from kept-topic speeches; (b) per-topic overlap vs trade (Holm over 40); (c) topic-profile
+ similarity as a second language measure; (d) regional drivers. Sampling sheet data/processed/b_topic_samples.csv for hand review of kept AND dropped topics.
+
+## ANGLE B: topic-level results with the fixed keep-list (14 Nov, exploratory; notebooks/b_topics.py analyze)
+Kept 18,314 of 37,848 speeches (48%; 40 topics). Kept per country is uneven: BA 48/348 (too few), LV 283, TR 329, GR 507, RS 490, IS 502 ... NL 1042, DK 1026.
+36 topics have >60% of their speeches from ONE country, 14 of them in the keep list (e.g. 19 UA 99% land-sale referendum, 61 HR, 70 RS, 56 PL, 39 SE, 43 DK, 59 AT, 52 FI, 46 NO, 41 GB, 85 GB,
+ 68 EE, 78 FI, 69 ES): even the food topics are largely NATIONAL debates.
+(a) Primary model re-run on kept-topic speeches only: similarity matrix correlates r=0.94 with the all-speech one; trade beta +0.131 (p=.0008), distance -0.253, same region +0.317,
+ same language family +0.371, EU +0.005 -> the trade link is NOT an artefact of off-topic general-politics speeches. R^2=.539.
+(c) Topic-share overlap (Bray-Curtis, 40 topics) ~ trade + controls: trade beta +0.058 (p=.73, NOT significant); EU +0.320 (p=.038), region +0.242 (p=.0008), family +0.154 (p=.036); R^2=.18.
+ Correlation of topic-overlap with embedding similarity 0.37 (all) / 0.45 (kept). => the trade-language link is NOT visible in WHICH topics countries discuss; EU membership matters for topic mix but not for embedding similarity.
+(b) Per-topic overlap vs trade: none significant after Holm (all Holm p=1); smallest raw p: topic 3 animal welfare beta -0.35 (p=.03), 19 land +0.21 (p=.05); 14 of 40 betas negative.
+(d) Regional over-representation (mostly single-country topics): East: 19 land (UA), 56 farmers (PL), 83 wine; North: 39 food strategy (SE), 43 nature (DK), 78 climate (FI), 68 dairy (EE);
+ South: 61 and 70 agricultural land (HR, RS), 69 citrus/olive (ES), 73 disasters; West: 59 farmers (AT), 23 nitrogen (NL), 20 glyphosate, 34 trade.
+Sampling sheet for HAND REVIEW: data/processed/b_topic_samples.csv (4 random speeches per topic for all 87, kept flag, empty your_label column).
+OPEN: still no mechanism. Idea: topic-CONDITIONED similarity (compare countries within the same topic, e.g. 'farmers/rural development', 'food safety', 'energy/climate') to separate subject from phrasing/style.
