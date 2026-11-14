@@ -119,3 +119,27 @@ H4 (pre-declared): pledged reduction vs progress share rho=-0.09 (p=.77, n=13): 
 CONTEXT (non-checkable pledge types, emission change 2015->2023, EU members excluded): BAU (n=75) median +13.5%, 83% growing; fixed level (n=6) +19.9%, all growing; intensity (n=11) +12.1%, 64% growing; base-year (n=30) 0.0%, 43% growing; other (n=40) +10.4%.
 LIMITS: 2023 is not 2030 ('behind' is not 'failed'); many pledges have since been revised; modelled emissions; LULUCF treatment varies by country; small n; checkable subset is rich/post-Soviet.
 IDEA (not done): the 2020 pledges ('pledges' source, 73 countries) include 'Projected baseline emissions in target year' -> BAU pledges can be checked for target year 2020 (2020 is the COVID dip: also check 2019).
+
+## 2020 PLEDGES (Copenhagen/Cancun round; document 'pledges', 73 countries): FINISHED-outcome check -- rules set BEFORE computing (14 Nov)
+Structured fields: types Base year 18, BAU 11, fixed level 3, intensity 2, 'Not applicable' 39 (actions/NAMAs only). 'Projected baseline emissions in target year' is EMPTY for all 73 (my earlier suggestion that it would unlock BAU checks was WRONG);
+ BAU projections are not in the texts either (e.g. BRA gives only '36.1-38.9% below projected emissions') -> the 11 BAU pledges (BRA CHL IDN ISR KGZ KOR MEX PNG SGP THA ZAF) CANNOT be checked here.
+CHECKABLE (hand-extracted from the pledge text; the UNCONDITIONAL or LOWER-BOUND figure is the pledge): AUS 5% vs 2000 (conditional 15-25%); BLR 5% vs 1990 (5-10%); CAN 17% vs 2005; CHE 20% vs 1990 (conditional 30%);
+ EUU 20% vs 1990 on EU28 emissions (conditional 30%); ISL 30% vs 1990 (stated, in a joint effort with the EU); JPN 3.8% vs 2005; KAZ 15% vs 1990; MDA 25% vs 1990; NOR 30% vs 1990 (conditional 40%); NZL 5% vs 1990;
+ RUS 15% vs 1990 (15-25%); UKR 20% vs 1990; USA 17% vs 2005. Excluded as tiny emitters (<1 Mt): ATG LIE MCO MHL (MHL is also CO2-only). Intensity pledges: CHN CO2 per GDP -40% (lower bound of 40-45%) vs 2005;
+ IND emissions intensity of GDP excluding agriculture -20% (lower bound of 20-25%) vs 2005; GDP = World Bank constant-2015-US$ GDP.
+MEASURE: target level = E_base * (1 - r); outcome = total GHG excl. LULUCF (Climate Watch) in 2019 and 2020 (2020 = target year but a COVID dip; 2019 = last pre-COVID year); sensitivity incl. LULUCF.
+ met = E_year <= target. A reader should re-check my hand extraction against the 'Pledge content' texts (data in ndc_indicators_long.csv, document 'pledges').
+HYPOTHESES (declared): H6 more than half of checkable 2020 pledges were met in 2020. H7 COVID helped: more pledges are met in 2020 than in 2019 (paired comparison).
+
+## 2020 PLEDGES RESULTS (14 Nov; ndc/notebooks/ndc_pledge2020.py; ndc/figures/pledge2020_vs_outcome.png; data/processed/ndc_pledge2020_outcomes.csv)
+GDP for the intensity pledges: the World Bank API timed out (3 x 60 s and 2 x 120 s); used the Our World in Data copy of NY.GDP.MKTP.KD (constant 2015 US$) in ndc/data/raw/owid_gdp.csv. China's intensity uses Climate Watch CO2 (total excl. LULUCF).
+ABSOLUTE pledges (14; total GHG excl. LULUCF), change vs base year in 2019 / 2020 vs pledge: UKR -73.0/-74.1 vs -20 met; MDA -66.2/-67.6 vs -25 met; BLR -35.6/-37.3 vs -5 met; EUU(EU28) -27.7/-33.6 vs -20 met; RUS -23.6/-26.1 vs -15 met;
+ ISL -16.7/-21.9 vs -30 missed; CHE -14.1/-18.6 vs -20 missed (near); USA -9.5/-17.7 vs -17 (met in 2020 ONLY); JPN -9.6/-13.9 vs -3.8 met; KAZ -13.8/-12.7 vs -15 missed (near); AUS -0.2/-6.8 vs -5 (met in 2020 ONLY);
+ CAN +6.3/-2.2 vs -17 missed; NOR +2.7/-0.9 vs -30 missed; NZL +14.6/+10.6 vs -5 missed.
+INTENSITY: CHN CO2/GDP -42.6/-43.3 vs -40 met (both years); IND GHG excl. agriculture/GDP -19.9/-20.8 vs -20 (met in 2020 only, by a hair).
+H6: met in 2020: 8/14 absolute (+2/2 intensity) = 10/16. H7: met in 2019: 6/14; in 2020: 8/14; COVID-assisted (met only in 2020): AUS, USA (+IND on intensity); none met in 2019 but not 2020.
+ Median distance to target (% of base-year emissions): +3.0 in 2019, -1.2 in 2020. Incl. LULUCF: only USA's verdict changes (7/14 met).
+ Of the 10 met: 4 are post-Soviet pledges set below an already-collapsed 1990 base (UKR MDA BLR RUS: met with no effort), 2-3 owe the result to COVID (USA, AUS, IND) => about 3-4 of 16 look genuinely policy-driven (EUU, JPN, CHN).
+ Counts not captured: Kyoto flexibility mechanisms / purchased units (CHE, NOR, ISL, MCO mention them), LULUCF accounting rules, base-year revisions.
+TWO PLEDGES, same countries (13): met 2020 pledge AND on track for the 2015-NDC target: EUU JPN MDA UKR (4); met 2020 but NOT on track: AUS RUS USA (3); missed 2020 AND not on track: CAN CHE ISL KAZ NOR NZL (6). No country that missed 2020 is on track now (0/6).
+NOT CHECKABLE: the 11 BAU pledges of 2020 (BRA CHL IDN ISR KGZ KOR MEX PNG SGP THA ZAF) have no BAU numbers in the data.
