@@ -36,6 +36,7 @@ has = {(rd, t): np.array([bool(re.search(p, txt[(rd, i)].replace("eu ", "eu ")))
 print(f"{'idea':28s}" + "".join(f"{r:>19s}" for r in ROUNDS) + "   (share of these countries mentioning it)")
 for t in TERMS:
     print(f"{t:28s}" + "".join(f"{has[(r, t)].mean():19.0%}" for r in ROUNDS))
+pd.DataFrame([{"idea": t, **{r: round(100 * has[(r, t)].mean(), 1) for r in ROUNDS}, "n_countries": len(both)} for t in TERMS]).to_csv(PROC / "ndc_idea_diffusion.csv", index=False)
 
 # neighbour exposure: language kNN on first NDC (all 154 nodes); adopters = absent in first_ndc, present in third_ndc
 pos = {i: k for k, i in enumerate(D.nodes)}

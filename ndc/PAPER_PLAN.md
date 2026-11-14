@@ -23,7 +23,7 @@ RQ3 Plan vs talk: do parliaments discuss the sectors that their own long-term st
 | Significance statement | 100 | Plain-language, ≤120 words (PNAS rule) |
 | Introduction | 400 | Pledges vs delivery; why language + network; three RQs; hypotheses pre-declared |
 | Results 1: language network | 600 | Fig 1. H1 beta +0.039 (tiny); H2 happiness +0.002 p=.91; communities vs region ARI +0.40 (p=.0002) vs emissions +0.04; rewired null; layer comparison (language-geography +0.44, others ≤0.05) |
-| Results 2: say vs do | 600 | Fig 2 (2015 NDC progress) + Fig 3 (2020 pledges). 13 checkable 2015 pledges; H4 rho −0.09; 2020: 10 of 16 met but only ~3–4 look policy-driven; 0/6 that missed 2020 are on track. EU member decomposition: 3 sentences (descriptive) |
+| Results 2: say vs do | 600 | Fig 2 (2015 NDC progress) + Fig 3 (2020 pledges). 19 checkable 2015 pledges (13 needed real cuts after 2015), 7 on track; H4 rho −0.09 (n=13); 2020: 10 of 16 met but only ~3–4 look policy-driven; 0/6 that missed 2020 are on track. EU member decomposition: 3 sentences (descriptive) |
 | Results 3: strategies vs parliament | 500 | Fig 4. P-A median rho +0.26 (n=18, p=.007); P-B own parliament +0.51 vs others +0.34 (16/18); P-C gaps: removals +2.23, land +2.02 ... energy −0.73, transport −0.35 |
 | Discussion | 450 | What it means; limits (below); what a stronger design needs |
 | Methods | 600 | Data sources, embeddings, kNN network, Louvain, nulls, DSP-MRQAP, pledge rules, translation, term lists |
@@ -44,7 +44,7 @@ Drop EU decomposition figure to supplement; mention in text.
 
 ## Honest limits that must appear (Discussion), one line each
 - NDC summaries/early rounds; language reliability 0.66 (attenuation); length artefact controlled.
-- Checkable pledges are few (13 + 16) and skewed to rich and post-Soviet countries; 2023 is not 2030.
+- Checkable pledges are few (19 + 16) and skewed to rich and post-Soviet countries; 2023 is not 2030.
 - Emissions data are modelled; LULUCF treatment varies; Montenegro data mismatch.
 - LTS comparison: n=18–20, shared circumstances confound, document types differ, machine translation, national vs EU/other-country talk not separated.
 - Machine-translated parliaments (ParlaMint English MT); regex lists are broad (instruments/energy include generic words).
@@ -68,7 +68,7 @@ Drop EU decomposition figure to supplement; mention in text.
 - Why is a cosine similarity between embeddings meaningful here? (split-half 0.66, validation)
 - Why Louvain, and how do we know the communities are not noise? (rewired null, 20 seeds, k sweep)
 - What does DSP-MRQAP do and why not plain regression? (dyads not independent)
-- Why can only 13 pledges be checked? What is excluded and why? Which rule was added after seeing results (tiny emitters)?
+- Why can only 19 of ~190 first pledges be checked? What is excluded and why? Which rule was added after seeing results (tiny emitters)?
 - Why is "met 2020" mostly not policy? (post-Soviet base, COVID)
 - What does "own parliament +0.51 vs others +0.34" show and what does it not? (shared circumstances)
 - How were the term lists made and checked? What is their precision?

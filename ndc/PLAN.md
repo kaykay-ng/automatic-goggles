@@ -301,3 +301,8 @@ H13 PARLIAMENT ATTENTION vs EMISSIONS: NOT SUPPORTED. 26 parliaments. Climate at
  Raw Spearman with 2015-19 trend -0.29, but attention tracks income (+0.73) and after log GDPpc the partial is -0.06 (p=.40). Secondary: change in attention vs 2017-22 trend partial -0.14 (two-sided p=.50).
  Descriptive: attention more than doubled (median 2.2% of speeches in 2015-17 -> 5.2% in 2020-22), rising in 24/26 parliaments.
  Reading: richer parliaments talk more about climate and richer countries cut more; talk adds nothing beyond wealth. Low power (n=26).
+
+## PAPER GROUNDWORK (14 Nov night)
+Figures at PNAS widths: ndc/figures/paper/fig1-fig4 (PDF + PNG) from ndc/notebooks/paper_figures.py (reads saved CSVs only; diffusion table now saved by ndc_diffusion.py to ndc_idea_diffusion.csv).
+Numbers sheet: ndc/NUMBERS.md (every citable number -> script -> file; CSV-checked vs log-only marked).
+CORRECTION: 'only 13 checkable first-NDC pledges' (said in the 14 Nov evening summary and PAPER_PLAN.md) was wrong: 19 checkable in the main set (24 before dropping <1 Mt), 13 of them needed real cuts after 2015. PAPER_PLAN.md fixed.
