@@ -90,3 +90,32 @@ Most agriculture-heavy terms: agriculture 8.0, agricultural 7.2, adaptation 7.2,
 Most energy-heavy terms: gas -9.9, emissions -9.8, greenhouse -8.6, sea -7.9, target -7.7, greenhouse gas -7.7, sea level -7.0, islands -6.9, energy -6.8, rise -6.2, oil -5.8, states -5.6, fuel -5.1, industrial -4.9, energy efficiency -4.8.
 CONFOUND: the two groups differ in income: agriculture-heavy = 20 low + 22 lower-middle + 7 upper-middle + 3 high; energy-heavy = 23 high + 22 upper-middle + 7 lower-middle. Word differences (adaptation, NAPA, USD, communities,
  gender vs emissions, targets, energy, oil, sea level/islands) therefore mix emission structure with development level and small-island status. Consistent with H1 being tiny once income gap is controlled.
+
+## SAY vs DO: did countries keep their pledges? (14 Nov; ndc/notebooks/ndc_pledge_check.py) -- definitions set BEFORE computing
+Checkable pledges only: first NDC with structured type 'Base year target' AND a quantified reduction in the 'GHG target' text, NOT relative to a BAU/baseline scenario, base year 1990-2015, target year 2020-2030.
+ 61 countries have a base-year type; 58 parse; checks of 18 random parses found problems fixed in v2: EU members all carry the joint pledge (-40% vs 1990 by 2030, 'EU and its 28 Member States') -> ONE entry 'EUU'
+ evaluated on EU28 emissions (27 members + GBR); BAU-relative pledges (e.g. ZMB) excluded; fiscal-year base years (JPN FY2013) accepted; 'not exceed X% of YEAR level' means a (100-X)% reduction (UKR, TJK).
+ NOT checkable here: BAU/baseline-scenario pledges (the largest group, ~290 rows), intensity pledges, fixed-level pledges (net/gross definitions), countries without a quantified base-year pledge.
+Actual emissions: Climate Watch All GHG, 'Total excluding LULUCF' (primary), 'Total including LULUCF' (sensitivity), to 2023.
+Pledge year = 2015 (first NDC). Lower bound of a range is the pledged reduction r (sensitivity: midpoint). E_target = E_base * (1 - r).
+PROGRESS MEASURES: (1) target_met_2023 = E_2023 <= E_target. (2) on_track: E_2023 <= linear path from E_2015 to E_target at the target year, evaluated at 2023 (ahead of schedule).
+ (3) gap_remaining = (E_2023 - E_target)/E_base (share of base-year emissions still to cut; negative = overshoot of the target).
+ (4) required_pace = annual cut needed from 2023 to the target year vs actual_pace = average annual change 2015-2023 (both as % of E_base).
+HYPOTHESES (declared): H4 'ambitious pledges are not kept better': Spearman between pledged reduction r and progress share is NOT positive (selection of already-decarbonising countries into pledges is the competing story).
+ H5 high-income countries are more often on track than low/middle-income. Exploratory: relation between the language measures (sector emphasis, similarity communities) and keeping the pledge.
+LIMITS: base-year pledges are mostly rich countries (1990 base) = non-random 'checkable' subset; LULUCF treatment varies by country; pledges often cover specific gases/sectors; emissions data are modelled estimates;
+ 2023 is mid-way to 2030 so 'not on track yet' is not 'failed'; revised/2025 NDCs replaced some pledges.
+
+## SAY vs DO RESULTS (14 Nov; ndc/notebooks/ndc_pledge_check.py compute; ndc/figures/pledge_vs_emissions.png; data/processed/ndc_pledge_progress.csv, ndc_pledges_parsed.csv)
+Parser fixes after reading all 27 texts: RUS 'reduction ... to 70 percent relative to the 1990 level' = 30% reduction (was parsed as 70%); sector-only pledges (PLW energy, COK/TUV electricity) excluded;
+ tiny emitters (base-year emissions < 1 Mt: DMA FSM GRD LIE MHL) excluded (rule added AFTER seeing results); MNE kept but flagged: Climate Watch 1990 ~1 Mt vs its own pledge text 5.2 Mt (data mismatch).
+CHECKABLE = base-year, economy-wide, non-BAU, quantified pledges in the first NDC: 24 (EU once); MAIN SET 19 (base-year emissions >= 1 Mt). Of 193 first NDCs, ~85% are NOT checkable this way (BAU 75, intensity 11, fixed level 6, other 40).
+MAIN SET: target already met by 2023: 5; on track (ahead of the straight line 2015 -> target): 7; behind: 12.
+ ALREADY MET AT THE TIME OF THE PLEDGE (E_2015 <= target): AZE BWA KAZ MDA SRB UKR (mostly post-Soviet collapse before 2015; BWA and KAZ have since risen back above the target).
+ 13 pledges needed real cuts after 2015: ahead of path: GNQ (after a 2007 peak; needed only 3.5%), EUU (needs 22.3% from 2015 level, achieved 17.8%), JPN (21.1 vs 16.3). Behind: ISL 37.6 vs 15.5, CHE 44.4 vs 14.3, NOR 45.2 vs 13.1,
+ NZL 27.7 vs 9.2, USA 18.8 vs 7.4 (target year 2025), CAN 31.7 vs 0.5, AUS 32.3 vs -3.9, BRA 48.8 vs -4.9 (target 2025), MNE (data problem), RUS 3.0 vs -12.2. Emissions ROSE since 2015 in AUS, BRA, MNE, RUS.
+Sensitivity: including LULUCF changes on-track status for EUU, MDA, RUS (3 of 19); using the midpoint of ranges changes none.
+H4 (pre-declared): pledged reduction vs progress share rho=-0.09 (p=.77, n=13): ambitious pledges are NOT kept better. H5: on track high income 2/10 vs others 5/9 (Fisher p=.17): no support for 'rich countries more on track' (driven by the already-met post-Soviet group).
+CONTEXT (non-checkable pledge types, emission change 2015->2023, EU members excluded): BAU (n=75) median +13.5%, 83% growing; fixed level (n=6) +19.9%, all growing; intensity (n=11) +12.1%, 64% growing; base-year (n=30) 0.0%, 43% growing; other (n=40) +10.4%.
+LIMITS: 2023 is not 2030 ('behind' is not 'failed'); many pledges have since been revised; modelled emissions; LULUCF treatment varies by country; small n; checkable subset is rich/post-Soviet.
+IDEA (not done): the 2020 pledges ('pledges' source, 73 countries) include 'Projected baseline emissions in target year' -> BAU pledges can be checked for target year 2020 (2020 is the COVID dip: also check 2019).
