@@ -143,3 +143,20 @@ H6: met in 2020: 8/14 absolute (+2/2 intensity) = 10/16. H7: met in 2019: 6/14; 
  Counts not captured: Kyoto flexibility mechanisms / purchased units (CHE, NOR, ISL, MCO mention them), LULUCF accounting rules, base-year revisions.
 TWO PLEDGES, same countries (13): met 2020 pledge AND on track for the 2015-NDC target: EUU JPN MDA UKR (4); met 2020 but NOT on track: AUS RUS USA (3); missed 2020 AND not on track: CAN CHE ISL KAZ NOR NZL (6). No country that missed 2020 is on track now (0/6).
 NOT CHECKABLE: the 11 BAU pledges of 2020 (BRA CHL IDN ISR KGZ KOR MEX PNG SGP THA ZAF) have no BAU numbers in the data.
+
+## EU MEMBER STATES, unpacking the joint pledge (14 Nov; user wanted the nuance behind 'EUU'; EXPLORATORY/descriptive)
+The EU's first NDC (-40% vs 1990 by 2030) and its 2020 pledge (-20% vs 1990) are COLLECTIVE; member states have differentiated national targets (effort sharing for non-ETS sectors; the ETS cap is EU-wide) that are NOT in our data and that I will not type from memory.
+So comparing each member with the EU-wide benchmark is DESCRIPTIVE: it shows who delivered the reduction, not who 'broke' a national commitment.
+Data: Climate Watch total GHG excl. LULUCF per member (27 members + GBR, which was in the EU28 for the 2015 NDC), 1990-2023. Measures per member: % change 1990 -> 2019 and 2020; cut 2015 -> 2023 vs the 22.3% cut from the 2015 EU level needed
+ for -40% by 2030; each member's contribution (Mt) to the EU28 change 1990 -> 2019.
+
+## EU MEMBER-STATE RESULTS (14 Nov; ndc/notebooks/ndc_eu_members.py; ndc/figures/eu_members_decomposition.png; data/processed/eu_members_pledge_decomposition.csv)
+EU28 (27 members + GBR): 1990 5,361 Mt -> 2019 3,876 (-27.7%) -> 2020 3,558 (-33.6%) vs the -20% 2020 pledge; 2015 4,141 -> 2023 3,406 = 17.8% cut vs 22.3% needed by 2030 (11.9% by 2023 on a straight line => ahead).
+ EU27 without the UK: 1990 4,596 -> 2019 3,433 (-25.3%), 2020 -31.3%; 2015 3,642 -> 2023 3,022 = 17.0% cut. UK = 12.0% of EU28 emissions in 2015.
+WHO DELIVERED (1990 -> 2019): DEU -383 Mt (26% of the net EU28 cut), GBR -321 (22%), ROU -129 (9%), POL -110 (7%), FRA -89 (6%); top 3 = 56%; members that INCREASED added 38 Mt (ESP +25, IRL, PRT, CYP).
+SPREAD per member 1990 -> 2019: EST -68% ... CYP +60%, median -22%. Only 15/28 members are individually below -20% in 2019 (21/28 in 2020 incl. COVID). Above their 1990 level in 2019: CYP, ESP, IRL, PRT (AUT -0.3%).
+WHEN THE CUTS HAPPENED (share of each member's 1990->2019 cut already done by 2000): LVA 106%, LTU 103%, HRV 93%, BGR 88%, ROU 84%, EST 82%, POL 79%, SVK 72%, HUN 64%, CZE 59%, DEU 44%, GBR 21%, FIN 8%, SWE 3%, DNK -2%.
+ => the big percentage cuts of the Baltic/Eastern members are the early-1990s economic collapse (same pre-collapse-baseline effect as UKR, MDA, BLR, RUS); post-2000 policy-driven cuts: UK, Denmark, Sweden, Finland (and part of Germany).
+2030 PACE (straight line: 11.9% cut by 2023): 16/28 at or above (EST NLD FIN LUX DEU BGR GBR PRT GRC DNK CZE ESP BEL SWE FRA AUT); 12 below: ITA 11.8, IRL 10.8, SVN 10.3, HUN 10.0, LVA 9.4, POL 8.9, ROU 7.6, SVK 7.1, LTU 4.5, CYP -3.0, HRV -4.7, MLT -15.0.
+ A first version compared members with the FULL 22.3% instead of 11.9% (wrong benchmark: made only 7 look on pace); caught and fixed before use.
+CAVEATS: national targets differ under effort sharing (not in our data and NOT entered from memory); Climate Watch excl. LULUCF; per-member 'meeting the EU-wide target' is descriptive, not a legal test; UK counted because it was in the EU28 for the 2015 NDC.
