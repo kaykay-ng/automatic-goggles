@@ -26,3 +26,24 @@ Threats: summaries not full documents; early submitters self-select; targets for
 - NEW EDGE TYPE (user idea): 'feels alike' = similarity of World Happiness Report variables (ladder score; six explanatory factors: GDP per capita, social support, healthy life expectancy, freedom, generosity, corruption).
   Source: WHR Figure 2.1 Excel (2011-2024, ~140-150 countries) or Our World in Data Cantril ladder CSV (ladder only). NOT yet downloaded. Expected: happiness similarity ~ income/region similarity (strong confound).
   Use as one more layer: does climate-talk similarity (NDC) track happiness similarity beyond income, region and emissions structure?
+
+## DESIGN v1, PRE-DECLARED before any test (14 Nov). User approved: main corpus = first NDC (2015-16 pledges), downloads of WHR 2026 + World Bank.
+Data now in place: first_ndc text for 195 countries (median 1,597 words, ~12 passages); emissions 1990-2023 (13 sectors); World Bank income/region/pop/GDP pc/capital lat-lon (217);
+ World Happiness Report 2026 (Figure 2.1 data, 3-year averages 2023-25: ladder + six 'explained by' factors; 146 countries matched to ISO3; North Cyprus, Somaliland, Taiwan unmatched).
+VALIDATION (done first): (1) 29 first_ndc texts are IDENTICAL (cosine>0.98): the 27 EU member states + EUU + GBR (the EU's joint INDC) -> collapse into ONE node 'EUU' (emissions = sum of the 27
+ members, income/region/coords = EU values). (2) neighbours sensible: FJI -> TON, VUT, SLB; IND -> LKA, NPL, BGD, BTN; NGA -> SSD, BEN, SDN; USA -> KOR, EUU, JPN, GBR; CHN -> VNM, LAO.
+ (3) split-half reliability across passages r=0.66 (mean; range .63-.69): moderate, similarity is noisy. (4) LENGTH ARTEFACT: Spearman(n_words, mean similarity to others) = +0.75.
+ => length enters every model as a control (log product of word counts); robustness: equal-sized passage subsamples.
+NODES: countries with first_ndc text AND emissions AND World Bank controls, EU collapsed (~165). DYAD MATRICES:
+ L language similarity = cosine of centred first_ndc country vectors.  M emission-profile similarity = minus Euclidean distance (standardised) between 2015 profiles
+ [energy, industrial processes, agriculture, waste shares of total excl. LULUCF; LULUCF/total excl. LULUCF clipped to [-1,1]].  Hh happiness similarity = minus Euclidean distance (standardised)
+ over ladder + six factors (nodes with WHR data only).
+ Controls: |log GDPpc gap|, same World Bank region, same income group, log capital-to-capital distance, log population product, log product of word counts.
+PRIMARY TESTS (DSP-MRQAP: Dekker double semi-partialling with node-label permutation of the response, 5,000 permutations; standardised coefficients):
+ H1 L ~ M + controls; prediction POSITIVE (countries with similar emission structure write similar NDCs).
+ H2 (nodes with happiness): L ~ M + Hh + controls; the coefficient on Hh is the test, TWO-SIDED, single test (does happiness similarity add anything beyond income, region and emissions?).
+ H3 SAY vs DO (country level): for each sector s in {energy, agriculture, land_forest, waste, industry}: Spearman between NDC text emphasis (mentions per 10,000 words) and the actual 2015 emission share
+   of s (industry compared with industrial processes; land_forest compared with LULUCF/total), partial on log words and log GDPpc; predicted POSITIVE; Holm over the 5 sectors.
+EXPLORATORY (labelled): extra layers (pledge-indicator similarity, trade), other rounds (revised_first_ndc, third_ndc), equal-passage subsamples, per-sector breakdowns, changes between rounds.
+THREATS: short texts (noise, attenuation), EU/UK collapse, node-level income confound, happiness confounded by income, mixed vintages inside 'first_ndc', countries without text excluded,
+ text is Climate Watch's extracts of the NDC documents not the full PDFs, sector words are keyword counts.
