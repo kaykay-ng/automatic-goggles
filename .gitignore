@@ -1,0 +1,15 @@
+# raw and bulky data: rebuilt by the scripts in notebooks/ (see README.md)
+data/raw/
+data/processed/parlamint/
+data/processed/trade_parlamint_pairs.csv
+*.zip
+*.tgz
+# environments and junk
+.venv/
+venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+# course material is copyrighted: never commit
+*.pdf
+material/
