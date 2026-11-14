@@ -271,3 +271,19 @@ EXPLORATORY idea diffusion (77 countries, shared fields; % mentioning in first -
  Article 6 caveat: the 'international market mechanisms' field may simply be filled more often in later rounds.
 H10 LANGUAGE NEIGHBOURS SHARE TRAJECTORIES: WEAK. r(own trend, language-neighbour mean) = +0.19; shuffle-all p=.037; within-region p=.047 (borderline).
  Comparison: geography neighbours +0.25 (within-region p=.013), emission-profile neighbours +0.15 (p=.07). Reading: trajectories cluster geographically; writing alike adds little beyond being near.
+
+## ROUND 4 (overnight, user said "do all of that"; started 21:30 on 14 Nov, 2-hour cap). PRE-DECLARED before computing.
+H8b FIRM LIST v2 (replaces v1 after the hand-check found ~5/10 precision). Drop 'absolute' and noun/generic 'commitment(s)'. Firm v2:
+ 'commit(s|ted) to'; 'commitment to (reduc|achiev|limit|cut)'; unconditional(ly); binding; net zero / carbon neutral* / climate neutral*; economy-wide; 'will (reduce|achieve|cut|limit)'. Hedged list unchanged.
+ Same test as H8 (partial Spearman with 2015-19 trend, ctl log GDPpc + 2005-15 trend, one-sided negative). Hand-check 10 new firm matches. v1 result kept on record.
+H11 DID PLEDGES FIRM UP? Firmness v2 computed per round on the 36 shared fields (as in H9), countries present in first_ndc and third_ndc.
+ PRIMARY: firmness rises from first to third NDC (paired Wilcoxon, one-sided). Descriptive: Spearman of first vs third firmness (persistence); change by first-NDC tercile,
+ reported WITH the warning that regression to the mean alone makes low starters rise, so 'hedgers firmed up most' is NOT tested as a claim.
+ EXPLORATORY: change in firmness (first->third) vs 2015-23 trend.
+H12 HEDGING BEYOND INCOME PEERS: stricter version of H8 that does not assume a linear income effect. Statistic: Spearman(firmness v2, residual of 2015-19 trend after the 2005-15 trend);
+ NULL: firmness shuffled WITHIN strata of income group x World Bank region (strata with <2 countries kept fixed), 5,000 permutations, one-sided negative. (Close cousin of H8: a robustness test, not new evidence.)
+H13 PARLIAMENT CLIMATE ATTENTION vs EMISSIONS (ParlaMint, ~26 parliaments, 2015-2022; data/processed/parlamint/index_XX.csv.gz has every speech, so the denominator exists).
+ Speeches: >=50 words, not chairperson. Climate attention = share of speeches with >=1 climate keyword (the existing broad list: climate, greenhouse, global warming, carbon, emission(s), decarbonis*, net zero, fossil fuel(s)), per country, averaged over years 2015-2019 that have data.
+ PRIMARY: Spearman(attention 2015-19, emission trend 2015-19), partial on log GDPpc, ONE-SIDED negative (more attention, faster decline). n is small (~26): low power, report effect size.
+ SECONDARY (two-sided): change in attention (mean 2020-22 minus mean 2015-17) vs trend 2017-2022.
+ Expected confound: rich northern parliaments both talk more and cut more; the GDP control and EU membership (descriptive split) address this only partly.
