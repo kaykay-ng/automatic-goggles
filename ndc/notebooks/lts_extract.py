@@ -4,7 +4,7 @@ Expects ndc/data/raw/lts_pdfs/<CC>_<n>.pdf as listed in ndc/lts_download_list.md
 SHARED CATEGORY LISTS (also used on the parliament side, see ndc/PLAN.md 'LTS vs PARLIAMENT, pathway comparison'):
 energy, transport, buildings, industry, agriculture, land_forest, waste, instruments, removals.
 """
-import re, sys
+import re, sys, urllib.parse
 from pathlib import Path
 import pandas as pd
 from pypdf import PdfReader
@@ -37,6 +37,10 @@ if __name__ == "__main__":
     links = pd.read_csv(PROC / "lts_links.csv"); n = {}; rows = []; missing = []
     for r in links.itertuples():
         n[r.cc] = n.get(r.cc, 0) + 1; name = f"{r.cc}_{n[r.cc]}"; f = RAW / f"{name}.pdf"
+        if not f.exists():                                   # also accept the file under its ORIGINAL portal name (no renaming needed)
+            orig = urllib.parse.unquote(r.url.rsplit("/", 1)[1])
+            for cand in (RAW / orig, RAW / (orig.rsplit(".", 1)[0] + " (1).pdf")):
+                if cand.exists(): f = cand; break
         if not f.exists() or f.stat().st_size < 5000 or f.read_bytes()[:5] != b"%PDF-":
             missing.append(name); continue
         pages = extract(f); text = "\n".join(pages); (OUT / f"{name}.txt").write_text(text)
