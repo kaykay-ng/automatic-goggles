@@ -235,3 +235,21 @@ RESULTS with ES and BE (n=18 goal-window view, n=20 all-speeches view) vs WITHOU
  P-B goal windows: own +0.51 vs others +0.34, own better in 16/18, p=.008 [was +0.51 vs +0.33, 15/16, p=.014]; ES own rho +0.57, BE +0.33.
  All climate speeches: P-A median +0.44 (p=.0002) [was +0.40]; P-B own +0.50 vs +0.37, 17/20, p=.004; ES +0.40, BE +0.43.
  P-C gaps almost unchanged: removals +2.23, land_forest +2.02, waste +1.21, buildings +0.98, agriculture +0.85, industry +0.54, instruments -0.32, transport -0.35, energy -0.73.
+
+## ROUND 3 HYPOTHESES (overnight run, user asked for new questions; 2-hour cap, started 21:19 on 14 Nov). PRE-DECLARED before any of these numbers were computed.
+Shared setup: nodes and EU collapse from ndc_common.py (first NDC, 154 nodes). Emission trend = annualised % change of total GHG excl. LULUCF (Climate Watch).
+ PRIMARY window 2015->2019 (before COVID); SECONDARY 2015->2023. Tiny emitters (<1 Mt in 2015) excluded from trend tests (same rule as the pledge check).
+H8 FIRM vs HEDGED WORDING -> DELIVERY. Do countries whose first NDC is written in firm language cut (or slow) emissions more than countries writing in hedged language?
+ Firm terms (regex, case-insensitive): commit/commits/committed/commitment; unconditional(ly); binding; net zero / carbon neutral* / climate neutral*; economy-wide; absolute; 'will (reduce|achieve|cut|limit)'.
+ Hedged terms: conditional (not 'unconditional'); subject to; provided that; international (support|finance|assistance|funding); business as usual / BAU; depend(s|ent|ing) on.
+ Firmness = log((firm+1)/(hedged+1)). Test: partial Spearman of firmness with the 2015-19 trend, controlling log GDP per capita and the 2005-15 trend. ONE-SIDED, predicted NEGATIVE.
+ Expected confound: hedging tracks poverty (conditional on finance) and poorer countries' emissions grow; the GDP control is meant for this. Hand-check: 10 random firm and 10 hedged matches.
+H9 CONVERGENCE ACROSS ROUNDS. Do pledges become more alike over time (shared templates after the Paris rulebook)?
+ To avoid Climate Watch's changing field set, re-embed each round using ONLY the 36 text fields present in all of indc, first_ndc, revised_first_ndc and third_ndc; countries present in all four rounds; EU joint texts collapsed per round.
+ Statistic: mean pairwise raw cosine per round. PRIMARY contrast third_ndc minus first_ndc, ONE-SIDED predicted POSITIVE; 2,000 bootstrap resamples of countries.
+ Secondary (two-sided): regional clustering = mean within-region minus between-region similarity; does it shrink from first to third?
+ Threat: field fill rates and text lengths change between rounds; report median words per round.
+H10 LANGUAGE NEIGHBOURS SHARE TRAJECTORIES (network test). On the k=5 language kNN network, is a country's 2015-19 trend correlated with the mean trend of its language neighbours?
+ Statistic: Pearson r(own trend, neighbour mean trend), trends winsorised at the 2.5/97.5 percentiles. NULL 1: trends shuffled across all nodes. NULL 2 (PRIMARY): trends shuffled WITHIN World Bank region,
+ so region-level similarity is kept and only within-region neighbour choice is tested. 5,000 permutations, ONE-SIDED positive. Comparison (descriptive): same statistic on the geography kNN network.
+EXPLORATORY (labelled): pledge type (GHG target type field) vs trend; firmness vs being on track among the 13 checkable pledges; repeat H8 on 2015-23.
