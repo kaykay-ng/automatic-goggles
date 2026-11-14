@@ -1,0 +1,804 @@
+ 
+ 
+ 
+ 
+ 
+ 
+Climate Protection Policy 
+of the Czech Republic 
+ 
+Update for the period from 2025 to 2050 
+ 
+Summary for Policymakers 
+ 
+2025 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+2 
+ 
+Executive Summary 
+ 
+The Climate Protection Policy is the Czech Republic's contribution to global efforts to 
+keep global warming below 1.5°C compared to pre-industrial levels and to the European 
+Union's common goal of achieving climate neutrality by 2050. 
+The Climate Protection Policy is a strategic document which focuses on the vision, objectives and 
+gradual transformation pathway of the Czech Republic towards achieving the climate neutrality 
+goal by 2050. The Czech Republic's main objective is to reduce greenhouse gas emissions by at 
+least 55% by 2030 compared to 1990 levels through the development of renewable and zero-
+emission energy sources, accumulation and flexibility, energy savings and the phase out of fossil 
+fuels, including the complete exit from coal mining and combustion for electricity and heat 
+production by 2033. The policy was updated to reflect new EU-level targets and legislation and to 
+ensure affordable clean energy for households and businesses. 
+In December 2024, the Czech government approved the Czech Republic's National Energy and 
+Climate Plan as a fundamental strategic document for energy and climate fields. The update of the 
+Climate Protection Policy is in line with this approved document and elaborates further on the 
+analytical part with focus on the climate protection. 
+In line with the Paris Agreement and European legislation, the Climate Protection Policy aims to 
+formulate a long-term strategy for reducing greenhouse gas emissions. The main purpose is to 
+propose specific and effective measures and policies, including scenarios, that lead to climate 
+neutrality in the Czech Republic.  
+The Czech Republic is active in implementing the European climate policies and the legislation. 
+These documents and legislation include several measures and targets in the areas of energy, 
+industry, buildings, the circular economy, forestry, biodiversity and sustainable agriculture. 
+The Climate Protection Policy presents a scenario for decarbonising the Czech Republic's 
+economy by 2050, which also meets the commitments arising from the Fit for 55 legislative 
+package. It focuses on describing the current state, trends and vision for the future of individual 
+emission sectors and defines specific measures and instruments for the gradual reduction of 
+greenhouse gas emissions in these sectors. 
+The Climate Protection Policy also looks at the need for the effective use of funds for projects that 
+will contribute to the decarbonisation and modernisation of the Czech economy, and the 
+importance of interdisciplinary cooperation in addressing the climate crisis in all areas of human 
+life and the environment. 
+ 
+ 
+ 
+ 
+   
+ 
+3 
+1. Scientific and political context 
+ 
+The Czech Republic is warming at a rate of 0.33°C per decade and it has warmed by 2°C over the 
+last 60 years. Warming is thus proceeding at approximately twice the global average rate. 
+The impacts of climate change are already easily observable in the Czech Republic nowadays. 
+One of the main impacts is drought in the countryside, which has contributed, among other things, 
+to an extreme bark beetle infestation and increases the risk of fires. The frequency and intensity 
+of extreme weather events have also increased. Scenarios show a further significant increase in 
+the impacts of climate change up to 2100, even if the further average temperature increases would 
+be based on the most optimistic estimates. 
+There are three important strategic documents that will shape the country's path to a zero-emission 
+economy in the coming decades: the Climate Protection Policy, the State Energy Policy and the 
+National Energy and Climate Plan. 
+The task of creating a long-term strategy for reducing greenhouse gas emissions is set out in 
+Article 4 of the Paris Agreement and also in the Regulation (EU) 2018/1999 of the European 
+Parliament and of the Council, which contains the process for developing long-term strategies and 
+outlines their basic structure. These strategies should also be consistent in their objectives with 
+the content of the National Energy and Climate Plans. The first climate strategy was the 2017 
+Climate Protection Policy, which, however, no longer corresponds to the current state of scientific 
+knowledge, development of policies and measures and the Czech Republic's commitments within 
+the European Union. 
+EU climate policy and legislation is primarily framed by the European Climate Law, the Fit for 55 
+package, the REPowerEU plan and the Green Deal Industrial Plan. These are not only policies in 
+the field of energy and industry, but also strategies in the areas of biodiversity protection, 
+sustainable agriculture, quality living environment and pollution prevention (including water and 
+air). These frameworks guide specific measures adopted in the form of regulations and directives 
+on the EU level, as well as their financial support. 
+Climate Protection Policy is the Czech Republic's main strategic document for climate change 
+mitigation and thus complements the Strategy for Adaptation to Climate Change in the Czech 
+Republic and the National Action Plan for Adaptation to Climate Change. It does not replace other 
+sectoral national policies and strategies but complements and develops them appropriately. The 
+crosscutting target should be the natural inclusion of climate protection aspects in all national and 
+regional strategies and decision-making processes, particularly in the areas of planning, financing 
+and investments.  
+ 
+2. Vision, goals and priorities  
+ 
+The Climate Protection Policy of the Czech Republic is a concept developed by the Ministry of the 
+Environment of the Czech Republic which sets out the basic objectives and strategy of the Czech 
+Republic in the field of climate protection in the long term. Its purpose is to propose effective and 
+efficient measures leading to the reduction of greenhouse gas emissions and to achieve climate 
+neutrality by 2050 while ensuring favourable socio-economic development. The medium-term goal 
+is to achieve the energy and climate targets set for 2030 in the updated Czech National Energy 
+and Climate Plan, which will bring a significant reduction in national greenhouse gas emissions. 
+ 
+4 
+A broad range of new policies and measures will be needed to implement these objectives.  The 
+purpose of the Climate Protection Policy is therefore to present a comprehensive overview of 
+measures for the next 5–10 years that will be in line with the 2030 targets and the long-term vision 
+for 2050. As the Czech economy is strongly linked to the global and, in particular, the European 
+economy, this set of measures also ensures compliance with European legislation and, at the 
+same time, with the decarbonisation trends of other European countries. 
+Decarbonisation affects a significant part of the Czech economy and is therefore an extremely 
+complex challenge. In order to deliver informed and economically effective measures, it uses 
+robust modelling of the possibilities and scenarios for decarbonising the Czech economy. 
+The Policy and its targets cover all GHG emissions and all sectors of the economy excluding 
+international bunkers. 
+The Czech Republic's goal is to reduce greenhouse gas emissions by at least 55% 
+compared to 1990 levels by 2030 , i.e. to approximately achieve 87 Mt CO 2 eq. The model 
+decarbonisation scenario even shows the possibility of reducing the Czech Republic's emissions 
+by up to 68% by 2030, mainly thanks to the development of renewable energy sources, the 
+implementation of energy savings and the phasing out of fossil fuels, including the complete exit 
+from coal mining and combustion for electricity and heat production by 2033. 
+This main objective is further broken down into sub-objectives. The key tools for decarbonisation 
+and reducing the use of fossil fuels are the development of renewable energy sources (RES) and 
+increasing energy efficiency. The Czechia's targets for 2030 are as follows: 
+• to increase the share of RES in final energy consumption to 30.1%,  
+• to reduce final energy consumption from the current 1064 PJ in 2021 to 852 PJ.  
+Other sub-targets for 2030 directly relate to greenhouse gas emissions, with percentage reductions 
+relative to 2005 (when the EU Emissions Trading Scheme was launched): 
+• For the EU ETS system (covering large emitters in energy, industry and aviation), there 
+is only a common EU target to achieve a 62% reduction in emissions in these sectors . 
+According to the model decarbonisation scenario, emissions under the EU ETS in 
+Czechia could be reduced by as much as 72%. 
+• The Effort Sharing Regulation (ESR) sets targets for reducing all remaining emissions 
+outside the EU ETS (except for the land use and forestry sector below). These are the 
+sectors of buildings, land transport, agriculture, waste and parts of industry and energy 
+outside the EU ETS. For Czechia, the target is a 26% reduction of these emissions. 
+According to the model decarbonisation scenario, Czechia could achieve a reduction 
+of up to 34% in these sectors.  
+• In the area of land use and forestry, the Czechia's target is to achieve carbon 
+sequestration (i.e. negative emissions) of −1.2 Mt CO 2eq by 2030. According to the 
+model decarbonisation scenario, the Czechia can achieve negative emissions of -3.8 
+Mt CO 2eq in this area. 
+The goal for 2050 is to strive towards the climate neutrality , i.e. a balance between remaining 
+greenhouse gas emissions and natural and industrial carbon dioxide absorption and storage. An 
+important secondary goal for achieving climate neutrality is to reduce the share of fossil fuels (used 
+without greenhouse gas capture technology) in primary energy consumption to 0%. 
+According to the model decarbonisation scenario, the Czech Republic's total net emissions in 2050 
+would still be slightly positive (at around 4% compared to 1990). Future developments are subject 
+to a high degree of uncertainty; modelling is based primarily on knowledge of existing technologies 
+ 
+5 
+and takes economic factors into account. Under these assumptions, modelling was unable to 
+achieve overall emission neutrality, and the decarbonisation trajectory will continue to be refined 
+over time. 
+Efforts to achieve carbon neutrality therefore require not only reducing climate impacts in all 
+segments of the economy and society, but also significant support for research and development. 
+The main Czech priorities for the period up to 2030 are as follows: 
+• Effective use of economic instruments and all available sources of funding to 
+accelerate the transition to climate neutrality, meet the Czech Republic's commitments 
+by 2030 and, at the same time, maintain social cohesion in the Czech society (including 
+a just transition for coal regions and social measures). 
+• Rapid decarbonisation of the electricity and heating sectors in line with the goal 
+of phasing out coal in electricity and heat production by 2033 and in line with the 
+expected further electrification and thus increase in electricity consumption in the 
+industry, transport and buildings sectors. During this period, Czechia should add at 
+least 8 GW of installed solar capacity and 1.2 GW of installed wind power capacity.  
+• Increasing energy efficiency in all sectors of the economy with the aim of gradually 
+decarbonising industry and services, including transport, and considerably reducing 
+energy consumption in the buildings sector and promoting comprehensive and 
+intelligent solutions. 
+• Reducing energy and emission intensity in the transport sector , using zero-
+emission and low-emission transport wherever possible, and promoting active mobility, 
+especially in built-up areas of municipalities and cities. Given the density of the Czech 
+Republic's railway network, road and rail transport needs to be optimised so that the 
+effect of the European legislation to reduce emissions in the Czech Republic is as 
+greater – this applies in particular to e-mobility and hydrogen. 
+• Launching decarbonisation of industry in line with the Czech Republic's 
+commitments to minimise greenhouse gas emissions and pollution without 
+jeopardising the competitiveness of industry. Consider supporting the voluntary 
+introduction of ESG into companies of all sizes. Also support research and 
+development of CCUS technologies so that it could be applied in the Czech Republic 
+in a cost-effective manner. 
+• Change the regulatory framework for land management (i.e. primarily forestry and 
+agriculture) to support nature-friendly agricultural practices and natural forest 
+regeneration, and to be consistent with other objectives in the areas of climate change 
+adaptation, biodiversity protection and soil protection. In particular, it is necessary to 
+effectively prevent further widespread disruption of the forest environment, which, 
+among other things, significantly increases emissions and threatens the sustainable 
+use of wood biomass for energy purposes. Furthermore, in the waste  sector, it is 
+necessary to significantly reduce the landfilling of biodegradable municipal waste, 
+which is the main source of emissions in this sector. 
+• Regional development and careful spatial planning with a view to achieving 
+carbon neutrality through comprehensive solutions in the territory, in 
+municipalities, towns and regions . By using regional energy concepts, supporting 
+community energy, supporting research, development and innovation in the field of 
+climate protection, involving citizens, associations and companies in activities covered 
+by the European Climate Pact, and supporting regional initiatives, it is possible to 
+ 
+6 
+achieve a significant increase in the contribution to reducing greenhouse gas 
+emissions through 'soft' instruments. 
+ 
+  
+ 
+3. Greenhouse gas emissions projections 
+by 2050 and assessment of the decarbonisation 
+impacts  
+ 
+At the heart of the modelling is a decarbonisation scenario (WAM, With Additional Measures), 
+which represents a realistic plan for the Czech Republic's transition to climate neutrality.  
+The main assumptions of the decarbonisation scenario are: 
+• the effort to achieve climate neutrality at the level of the Czech Republic, or the maximum 
+degree of decarbonisation in the modelled sectors by 2050, 
+• cost optimisation, i.e. achieving this goal (subject to other given constraints) at the lowest 
+possible cost, 
+• taking into account the EU's Fit for 55 policy package and its implementation in the Czech 
+Republic, in particular the assumption of EU ETS allowance prices as recommended by 
+the European Commission for modelling the impacts of decarbonisation, and 
+• effective and full use of emissions trading revenues for decarbonisation and a just 
+transition. 
+New installed capacity by 2030 is expected mainly from renewable sources. This represents 
+8 GWe from solar sources, 1.2 GWe from wind sources and 0.4 GWe from biomass sources. The 
+share of RES in gross final energy consumption thus reaches 30%, while the share of RES in gross 
+final electricity consumption is 28%. The stability of the energy supply network was also modelled. 
+
+ 
+7 
+The decarbonisation scenario does not anticipate any fundamental behavioural changes (e.g. 
+a change in attitudes towards car ownership and transport, a reduction in heating temperatures, 
+etc.), but it does include a continuation of the current trend towards changing dietary habits. No 
+EU regulation is anticipated beyond the Fit for 55 package and other EU regulations adopted during 
+the 2019–2024 term of the European Commission. 
+The decarbonisation scenario meets most of the European greenhouse gas emission reduction 
+targets for 2030. It shows the potential for reducing emissions by 68% by 2030 and 96% by 2050. 
+The following figure shows the expected decrease in emissions in the Reference and 
+Decarbonisation scenarios for the main GHG emission sectors. 
+ 
+ 
+Modelling also shows that the decarbonisation strategy could lead to reducing energy import 
+dependency from 42% today to 26% in 2050 and support economic growth by 1 to 2 percentage 
+points. This is because most of the necessary investments are made in domestic products and 
+services, unlike the operating costs for fossil fuels, which are predominantly imported from 
+geopolitically problematic regions. 
+Main economic conclusions 
+→ Decarbonisation requires significant investments, and the development of functional 
+models for financing energy infrastructure, renewable energy development and energy 
+storage will be key to supporting and meeting investment needs. Roughly one-third of the 
+costs of investments and other measures will be covered by EU funds and revenues from 
+emissions trading. 
+→ In addition to the transformation of energy and industry, the building and transport 
+sectors must also be a priority. A successful wave of renovation and the development 
+of low-emission transport will reduce the risks of energy and transport poverty and enable 
+the transformation to be socially acceptable. 
+→ Investments in decarbonisation have a positive multiplier effect on GDP , but the 
+implementation of investments depends on the quality of public institutions, the speed of 
+permitting processes and, last but not least, the effective preparation of investment projects 
+using green technologies on the part of the business sector and households. 
+
+ 
+8 
+→ Decarbonisation must be linked to sensitive social policy and the transformation of 
+coal regions ; the application of new technologies and the prosperity of society also 
+depends on priorities in the areas of education and labour market policy. 
+ 
+4. Cross-cutting policies and measures 
+ 
+Measures whose implementation contributes to reducing greenhouse gas emissions in multiple 
+sectors include, in particular, the  European Union Emissions Trading System  (EU ETS) and 
+Integrated  Pollution  Prevention  and Control (IPPC). Another example is the EU taxonomy , which 
+is primarily a tool for classifying sustainable economic activities. Their functioning is regulated by 
+European legislation, which, in the case of directives, is transposed into Czech law by the relevant 
+legislation.  
+However, cutting-edge science, research and innovation , as well as awareness-raising, 
+education and training of future generations, are also key to successful decarbonisation. 
+Environmental standards enforced by legislation are to be complemented by voluntary  
+environmental protection instruments.  
+At the same time, the EU ETS generates significant revenues from the auctioning of emission 
+allowances, which are also used by EU Member States to finance measures to reduce emissions 
+through modern technologies and the replacement of fossil fuels. 
+The effective use of revenues from the EU ETS is key to successful decarbonisation. These 
+are funds that will be available to the Czech Republic in this decade in the Modernisation Fund 
+and the Social Climate Fund, and from the proceeds of the sale of emission allowances in the EU 
+ETS. The effective use of these funds is absolutely crucial to provide additional support for strategic 
+investments in decarbonisation, adaptation and additional social measures in order to achieve the 
+climate and energy targets by 2030 and climate neutrality by 2050, maintaining the 
+competitiveness of Czech industry and preventing the negative economic and social impacts of 
+the transition. These funds will ensure an effective transition and support the positive impacts of 
+the transition on Czech households and industry. The policy also proposes allocating at least 0.5% 
+per year of the proceeds from emission allowances to help the poorest and most vulnerable 
+developing countries. 
+Integrated Pollution Prevention and Control is an advanced method of regulating selected industrial 
+and agricultural activities while achieving a high level of protection for the environment as such.  
+The aim of IPPC is to prevent or reduce pollution by selecting appropriate production processes 
+and technologies . At the same time , there should be savings in the costs of raw materials, energy 
+and end technologies consumed.  A higher level of environmental protection is achieved through 
+the use of  Best Available Techniques (BAT) . In 2024, a revision of Directive 2010/75/EU of the 
+European Parliament and of the Council on industrial emissions was approved . This primarily 
+extends the scope of the directive to a larger number of facilities, in particular intensive livestock 
+farming, and now also includes the extraction of industrial minerals and metals and large-scale 
+battery production. 
+The vision for the future is to provide a set of state-validated data and methodological 
+procedures to enable the implementation of sustainability financing policies . From a climate 
+protection perspective, this involves an application for assessing investments in terms of their 
+climate impact, as well as applying the principle of energy efficiency, primarily in the setting of 
+subsidy titles and in public procurement. The vision for the future is to further strengthen the 
+measurability of the transition in terms of the necessary investments and to support the 
+ 
+9 
+preparation of investment projects so that they are in line with decarbonisation targets and are 
+resilient to the impacts of climate change. These principles should also be applied in the context 
+of financing from national sources and in public procurement. The application of the Do No 
+Significant Harm principle will also play an important role. 
+The aim of public communication on climate protection and decarbonisation policy is to increase 
+acceptance of the measures taken by the public and key players from the academic, business and 
+political spheres. It is therefore important for the Ministry of the Environment to be able to 
+communicate the opportunities available to these players. These include, in particular, the 
+modernisation of industry, services, housing, public institutions and municipalities. This 
+modernisation can effectively save these actors operating costs, and they can obtain support from 
+the state for their initial investments. However, it is also important that the public is informed about 
+the social aspects of the measures and must be assured that their standard of living will not decline. 
+The communication campaign should also be accompanied by educational activities. 
+Environmental education, training and awareness-raising , and environmental consulting 
+are globally recognised fields that have been developed in Czechia for decades and are linked to 
+broader education on sustainable development. To achieve their goals, a whole system based on 
+the State Programme for Environmental Education, Training and Awareness in the Czech Republic 
+has been developed. Climate change is one of the key topics of the State Programme for 2016–
+2025. Objective 5.5, entitled Climate in Context, calls for the provision of opportunities for key 
+target groups to understand the causes of climate change and its negative impacts in the Czech 
+Republic, Europe and the world, so that they are aware of and knowledgeable about international 
+climate protection negotiations and have the competence to adopt and implement mitigation and 
+adaptation measures.  
+ 
+5.1. Energy  
+ 
+Emissions from the energy sector, mainly CO 2 emissions from the combustion of coal and natural 
+gas in the production of electricity and heat, amount to approximately 40 Mt CO 2 eq per year and 
+represent about 33% of all emissions produced in the Czech Republic. The vast majority of 
+emissions comes from large power plants and heating plants covered by the Emissions Trading 
+Scheme (EU ETS), where emissions fell by 30.82% between 2005 and 2022. The energy intensity 
+of the Czech economy decreased by 34.8% between 2010 and 2020, reaching 7.8 MJ/EUR in 
+2020, which is still almost double the energy intensity of the EU27.  
+The priorities for 2030 are to: 
+→ Accelerate the development of renewable energy sources 
+especially photovoltaic and wind power plants, biomethane and ambient energy. 
+→ Develop storage and consumption flexibility  
+to effectively ensure power balance and integrate solar and wind energy. 
+→ Transform heating  
+including the implementation of energy savings, the use of large heat pumps, and energy 
+storage. 
+→ Build resources for a secure transition away from coal mining and combustion 
+for electricity and heat production by 2033. 
+The main elements of the Czech energy transition include: 
+ 
+10  
+• The development of renewable energy sources (primarily photovoltaic and wind power 
+plants, the use of biogas primarily for biomethane production, secondarily in cogeneration, 
+geothermal energy and waste energy and ambient energy using heat pumps), 
+• Transformation of the heating industry to effectively meet the energy needs of its 
+customers (shift from the concept of heat supply to the provision of energy services), 
+• Development of community energy and modernisation of networks, including the use of 
+storage, aggregation and other flexibility elements, 
+• Construction of new nuclear power plants, 
+• Controlled phase-out of coal mining and use for electricity and heat production by 2033 at 
+the latest and ensuring sufficient installed capacity of new flexible sources for system 
+management, 
+• Ensuring conditions for the use of renewable hydrogen, which will gradually replace natural 
+gas together with other renewable gases. 
+By 2030, photovoltaic and wind power plants will play a key role in the decarbonisation of the 
+electricity sector. According to the update of the National Energy and Climate Plan, the 
+construction of new 8 GWe of installed capacity of photovoltaic power plants and 1.2 GWe of 
+installed capacity of wind power plants connected to the grid is planned by 2030. Thanks to the 
+new RES capacity, their share of final consumption should reach at least 30% by 2030. 
+In the longer term, by 2040, according to the National Energy and Climate Plan, up to two new 
+nuclear power plant units are expected to be built in Dukovany, another two new units in Temelín, 
+and at least one SMR with a total capacity of 4.7 GWe. 
+Another key task for the coming years is the modernisation of the Czech heating industry, which 
+is currently undergoing a transition from coal to other energy sources (natural gas, biomethane, 
+biomass, ambient energy, geothermal energy, waste energy, waste heat and nuclear energy) and 
+then also the development of cogeneration, where there could be a potential of about 3 GW of new 
+installed capacity by 2033.  
+At present, roughly half of the sources in the heating industry still function only as heating plants 
+without also producing electricity, which means that the potential of these sources is not being fully 
+exploited. The heating industry has great potential to be a very efficient way of meeting the heating 
+needs of households and businesses, but it must undergo a fundamental transformation beyond 
+the current modernisation process.  
+Important measures also include, for example, mapping and defining acceleration areas to speed 
+up the development of renewable energy sources, setting rules for community energy and 
+supporting the production, distribution and use of biomethane.   
+ 
+5.2. Industry 
+ 
+In 2021, Czech industry produced 31 Mt CO 2eq (2.9 tonnes of CO 2 eq per capita), which is 
+approximately  24% of greenhouse gas emissions in the Czech Republic. In the 1990s, emissions 
+from industry fell significantly , mainly due to the closure of some energy-intensive industries , but 
+also to a lesser extent due to the introduction of energy-saving measures. Since then, the decline 
+in emissions in the sector has slowed.  
+ 
+11  
+The steel and other metals manufacturing sector is the most emission-intensive (28.7%). Czech 
+steel is used, for example, in engineering and construction. In second place is the production of 
+minerals and cement (19.9%). These are key to the construction industry, but glass production 
+also falls into this category. Next in line is the chemical industry (17.5%). 
+The priorities for 2030 are to: 
+→ Clarify the strategy for decarbonisation of industry.  
+→ Electrify and deploy other currently available technologies  
+to save emissions and energy (with investment and other state support). 
+→ Prepare conditions and infrastructure for the future use of low-emission hydrogen 
+and CCUS.  
+→ Develop the principles of the circular economy , 
+increase the recycling rate of emission-intensive raw materials, extend the life of 
+products. 
+The replacement with low-emission fuels, primarily electricity (where technically possible) and 
+hydrogen (where direct use of electricity is not possible), are the main solutions for combustion 
+emissions. To a lesser extent, biomass or biomethane can also serve as a substitute for fossil 
+fuels. 
+Process emissions can largely be addressed by changing production processes and technologies 
+(e.g. replacing reducing agents), replacing input raw materials with secondary or low-carbon 
+alternatives (e.g. iron ore and coke with steel scrap) or CO 2 capture technology with its utilisation 
+or geological storage (CCUS), which is suitable for chemical processes that cannot be replaced in 
+production. 
+By 2030, it will be possible to reduce emissions in industry by deploying mainly existing 
+technologies that contribute to reducing emissions, improving operational efficiency, utilising waste 
+heat and other forms of energy savings, and further applying the principles of circularity. Even at 
+this stage, an increase in electricity consumption must be expected, as many measures will involve 
+the electrification of processes. At the same time, it is necessary to prepare the infrastructure 
+needed for the complete decarbonisation of industry in the coming decades. 
+In the coming decades, it will be possible to decarbonise large parts of certain industrial sectors 
+and processes, particularly in light industry (but in some cases also in heavy industry), through 
+further electrification. However, this option does not apply to certain segments of heavy industry, 
+in particular the production of cement, fertilisers and, to a certain extent, steel, whose complete 
+decarbonisation cannot be achieved without the use of hydrogen and CO 2 capture and utilisation.  
+The successful decarbonisation of Czech industry in the 2030s and 2040s therefore depends on 
+the development of infrastructure for low-emission electricity, renewable or low-carbon hydrogen 
+and CCUS. 
+ 
+5.3. Buildings 
+ 
+In 2021, the building sector produced approximately 11.6 Mt CO 2 eq. The building sector accounts 
+for approximately 9% of total greenhouse gas emissions. These are mainly emissions from the 
+combustion of fuels in households for heating and preparation of hot water. Approximately one-
+fifth of these greenhouse gas emissions come from commercial and public buildings. Households 
+ 
+12  
+have long accounted for approximately 30% of total final energy consumption in the Czech 
+Republic. 
+The priorities for 2030 are to: 
+→ Increase the rate of deep renovations to 3% of buildings per year, 
+including public buildings and households at risk of energy poverty. 
+→ Raise energy and emission standards for new buildings 
+so that these buildings are energy efficient, use sustainable building materials and are 
+well adapted to climate change. 
+→ Increase the use of renewable energy sources in new buildings and renovations, 
+such as ambient energy or solar energy. 
+→ Increase the proportion of buildings connected to efficient heat supply systems 
+that can use a wider range of technologies for decarbonisation. 
+The vision for the transformation of the buildings sector is based on the following principles: 
+1. Deep renovation 
+Most existing buildings, where possible in terms of heritage protection and social significance, will 
+gradually undergo deep renovation. 
+The basic modelled scenario takes into account the progressive building renovation scenario from 
+the Long-Term Building Renovation Strategy, which was also modelled in the decarbonisation 
+scenario. Between 2025 and 2030, the annual rate of high-quality building renovation will gradually 
+increase to 3%. This is a significant increase, but within realistic limits.  
+There is also considerable potential for improving energy efficiency in public and state-owned 
+buildings, with the state setting an example in this area and meeting the requirements set out in 
+the Energy Efficiency Directive.  
+2. High energy standards in new buildings 
+All new buildings will be constructed to a high energy standard, making maximum use of renewable 
+resources, using sustainable materials and environmentally friendly processes to minimise 
+emissions throughout the building's life cycle. Buildings will be adapted to climate change and will 
+provide a high-quality indoor environment for the inhabitants of the Czech Republic. Higher use of 
+wood in building construction will contribute significantly to long-term carbon sequestration. 
+The use of modern air conditioning technologies and taking this requirement into account when 
+designing the overall concept of the building will also significantly contribute to reducing the energy 
+requirements for air conditioning buildings: the size and layout of the building, the orientation of 
+the building, the size and placement of windows, thickness of walls, internal layout allowing air 
+flow, shading and cooling functions of vegetation and water features both inside (green walls) and 
+outside (green roofs, vegetation on vertical and horizontal structures, trees) and the use of external 
+sunshades. 
+3. Increasing renewable energy sources in new buildings and renovations 
+In line with the revised Renewable Energy Directive, the Czech Republic should also set a target 
+in line with the indicative target of achieving at least a 49% share of energy from renewable sources 
+in the Union's final consumption in the buildings sector. EU Member States should take this 
+requirement into account in their building regulations and support programmes. This is an 
+extension of the existing requirement to set a minimum amount of energy from renewable sources 
+for new buildings and renovations. 
+ 
+13  
+4. Increasing the share of buildings connected to efficient heat supply systems 
+Connecting buildings to efficient heating systems, which will be gradually decarbonised in line with 
+the requirements of the Energy Efficiency Directive, can significantly contribute to meeting the 
+targets in this sector and complement building renovations. 
+ 
+5.4. Transport 
+ 
+Passenger and freight transport in the Czech Republic causes 20 Mt CO 2eq annually, which 
+corresponds to 15% of the Czech Republic's emissions, and is the sector where emissions are 
+increasing the most in connection with the growth in transport performance and demand.  
+The priorities for 2030 are to: 
+→ Significant investment in rail infrastructure and public transport , which will enable 
+the transfer of part of road freight transport to rail and part of individual car transport to 
+public transport in the future. 
+→ Develop charging and refuelling infrastructure  
+and biomethane production facilities, which are necessary for zero-emission road 
+transport. 
+→ Accelerate the transition to zero-emission vehicles through investment support  
+for businesses, the public sector and public transport. 
+→ Appropriately set up support for transport decarbonisation from the Social Climate 
+Fund and communicate clearly with citizens. 
+Reducing emissions in transport is closely linked to energy savings . Therefore, the following is 
+essential for the decarbonisation of transport: 
+1. Strengthen modes of transport that are energy efficient and reduce the share of 
+energy-intensive car transport: i.e. develop walking , public transport and rail freight 
+transport . 
+2. Seek energy savings within individual modes of transport. Of the current technologies, 
+electrification , i.e. the gradual replacement of combustion engines with electric ones and 
+further electrification of rail transport, can bring significant energy savings. 
+In some remaining transport segments, significant energy savings are practically impossible. In 
+the case of air transport and part of road freight transport, other fuels can also play a significant 
+role in decarbonisation: the use of low-carbon hydrogen, advanced biofuels or synthetic fuels. 
+The decarbonisation of passenger transport rests on several pillars: 
+• High-quality, zero-emission public transport is a key component of future passenger 
+transport, which also fulfils an important social service role. Its significant development will 
+enable a further increase in its share of transport performance. This applies to cities 
+(construction of new metro, trolleybus and tram lines), suburban regional rail transport and 
+long-distance rail transport. New public transport concepts (e.g. support for e-
+carsharing, new demand-responsive transport systems, and perhaps, at a later stage, 
+autonomous vehicles, which could completely change the nature of public passenger 
+transport) may play a complementary role. 
+ 
+14  
+• An essential part of this is the decarbonisation of individual transport . This will probably 
+be based primarily on the transition to battery electric vehicles . 
+• Well-thought-out urban planning for the further development of cities and towns, 
+including well-thought-out incentives for users of individual car transport, can play a 
+supporting role. These measures can facilitate and strengthen the use of public 
+transport, walking and cycling .  
+The development of public rail transport requires significant development of the rail 
+infrastructure , which is currently at the limits of its capacity on key routes. Although many rail 
+projects are planned for this decade, this will require a longer-term effort. The development of the 
+railways must also enable the transfer of part of freight transport to the railways . 
+A significant transition to electromobility or hydrogen mobility requires: 
+• Competitive prices of zero-emission and low-emission vehicles with those of 
+conventional vehicles  
+• Charging and refuelling infrastructure , including a large number of slow charging points 
+in cities (domestic, corporate and public charging points on the streets). The development 
+of charging infrastructure in the coming years is key to getting electric mobility off the 
+ground in Czechia, which also requires the development of the electricity distribution 
+network. 
+• Sufficient affordable low-emission electricity and hydrogen  
+The decarbonisation of freight transport will take place somewhat later than for passenger transport 
+for technological reasons. It will be based on several pillars: 
+• Transferring part of heavy and regular transport from roads to electrified railways . 
+• The  likely electrification of delivery lorries in all weight categories and the development 
+of zero-emission urban logistics. 
+• The development of low-emission and zero-emission lorry transport , which in the 
+coming years may take place primarily through advanced bioCNG and bioLNG vehicles, 
+followed by battery-powered lorries and, especially for longer routes, hydrogen lorries (or 
+synthetic fuel vehicles). 
+• Another alternative for longer routes is the aforementioned shift of part of truck transport to 
+rail  through the development of multimodal transport. 
+ 
+5.5. Landscape management  
+ 
+On the one hand, landscape management emits greenhouse gases, mainly through livestock 
+farming, the use of nitrogen fertilisers and soil cultivation, but on the other hand, it absorbs and 
+stores carbon from CO 2 into biomass and forest and agricultural land. At the same time, agricultural 
+and forestry management in the landscape is essential for the protection of biodiversity, can 
+increase or reduce soil erosion, influences the availability of water in the landscape, and thus also 
+the impacts of possible drought, and fulfils other ecosystem functions. Landscape management 
+therefore represents a complex situation in which efforts to protect the climate and adapt to climate 
+change meet the need to maintain agricultural and forestry production and create a healthy 
+environment for nature and people.  
+ 
+15  
+Agriculture in the Czech Republic accounts for 9.1 Mt CO 2eq emissions per year, which is 
+approximately 7.6% of greenhouse gas emissions in the Czech Republic. Approximately half of 
+these emissions are directly related to cattle farming, where methane is produced by the 
+fermentation of food in the digestive tract of cattle. Another half of emissions in agriculture are 
+related to the use of nitrogen fertilisers. In forestry, greenhouse gas emissions have undergone 
+significant developments in recent years in connection with the consequences of the catastrophic 
+bark beetle calamity, which has temporarily transformed the LULUCF sector into a significant 
+source of CO 2 emissions.  
+Priorities for 2030 include to: 
+→ Significantly strengthen the health and resilience of forests and agricultural 
+landscapes and create a diverse landscape structure that fulfils its productive functions, 
+is well adapted to future climate impacts and creates conditions for biodiversity 
+conservation and CO 2 sequestration. 
+→ Improve practices in the application of nitrogen fertilisers and use precision and 
+organic farming methods. 
+→ Support the natural regeneration of forests  and a diverse species, age and spatial 
+composition that corresponds to the given habitat. 
+→ Strive for the balanced fulfilment of the productive and non-productive functions of 
+forests  and encourage nature-friendly management through an appropriate framework for 
+payments for ecosystem services. 
+The main objective is to significantly strengthen the health and resilience of forests and 
+agricultural land and to create a diverse landscape structure – i.e. a landscape that is well 
+adapted to future climatic influences, fulfils its production functions, provides space for recreation, 
+creates an environment for the protection and promotion of biodiversity, and sequesters CO 2. 
+Measures for biodiversity protection, climate change adaptation and other aspects of landscape 
+protection are generally consistent with mitigation measures and therefore have a synergistic 
+effect. 
+Greenhouse gas emissions can be reduced in agriculture, but they cannot be completely 
+eliminated. The main objectives should be to minimise the use of nitrogenous mineral 
+fertilisers , improve soil health and make greater use of its sequestration potential. The following 
+measures can contribute most to this: 
+• Improving practices in the application of nitrogen fertilisers to reduce N 2O 
+emissions,  
+• Use of precision farming methods, 
+• Further reductions in emissions in agriculture can be achieved by optimising livestock 
+farming in terms of breeding technology, feed quality and manure management. 
+Other important steps to strengthen the resilience of the agricultural landscape and increase 
+the sequestration potential of agricultural land include, in particular: 
+• Transition to environmentally friendly farming methods (organic farming, regenerative 
+agriculture, carbon farming, etc.).  
+• Exploiting the potential for carbon storage in arable land through innovative practices 
+(regenerative agriculture, crop rotation, use of biochar) and the systematic creation of 
+conditions for the implementation of these practices, in particular support for research and 
+development of technologies, pilot farms and the creation of an implementation plan for 
+carbon sequestration on agricultural land . 
+ 
+16  
+• Restoration of a diverse landscape structure through the establishment of landscape 
+features such as hedgerows, copses, avenues, wetlands, etc., and their subsequent 
+maintenance. These features increase the heterogeneity of the landscape and thus its 
+resistance to various stress factors (drought, heavy rainfall, heat waves), prevent soil 
+erosion and accelerated water runoff from the landscape, and promote biodiversity (natural 
+refuge and sources of water and food for many species of animals, plants and fungi). 
+• Various other measures are also important for adapting the landscape to climate change, 
+such as protection against soil erosion and support for CO ₂ sequestration (e.g. the use of 
+cover crops and catch crops, reducing the size of uninterrupted soil blocks by placing 
+landscape features such as avenues, copses or swales, etc.). 
+In forestry, it is particularly important to take a differentiated approach according to the 
+condition of the forest in a specific location and to target the process accordingly. In particular, 
+the following forest management objectives need to be applied: 
+• Support natural forest regeneration and strengthen their resilience and stability in 
+view of changing conditions by increasing the proportion of site-appropriate ameliorative 
+and stabilising tree species and, in general, a diverse species, age and spatial composition 
+that corresponds to the given site.  
+• Reduce the numbers of cloven-hoofed game , which damages young trees, complicates 
+forest regeneration and increases the costs of such regeneration. To this end, it is 
+necessary to amend the Hunting Act to enable effective regulation and restore the balance 
+between forests and game. 
+• Support the afforestation of non-forest land as a fundamental contribution of forests 
+and forestry to mitigation and increasing carbon sequestration potential . 
+• Protect existing carbon stocks and increase their sequestration potential by caring 
+for forest soil . 
+• Transition from clear-cutting to undergrowth and selective forms of forest 
+management .  
+• Strive for the balanced fulfilment of the productive and non-productive functions of 
+forests – it is necessary to create a suitable framework that will enable payments for 
+ecosystem services. 
+• Systematically reduce the risk of forest fires and thus prevent the destruction of 
+vegetation and the release of carbon stocks.  
+• The  increased use of wood in construction (or in other long-lasting products) and its 
+processing in Czechia will also play an important role. This area is covered by the new 
+Raw Materials Policy for Wood. 
+The instruments of the EU's Common Agricultural Policy, which also aims to contribute to climate 
+change mitigation and resilience, will also play a very important role. The Strategic Plan for the 
+Common Agricultural Policy 2023–2027 has significantly increased the contribution allocated to 
+climate change mitigation. 
+ 
+ 
+ 
+ 
+ 
+17  
+5.6. Waste management 
+ 
+In 2021, the waste management sector produced  5.7 million tonnes of CO 2eq greenhouse gases, 
+which represented 4.8% of total greenhouse gas emissions in the Czech Republic. It is one of two 
+sectors of the economy in which emissions are still growing (the other is transport). The vast 
+majority (94%) of these emissions are methane, which is released during the biological 
+decomposition of waste in landfills (approximately 65% of the sector's emissions).  
+The main priorities in this area include:  
+→ Ending the landfilling of recyclable, energy-recoverable and, above all, 
+biodegradable municipal waste.  
+→ Modern ise biogas stations  to prevent biogas leaks and, at the same time, expand the 
+network of waste biogas plants. Convert plants to biomethane production. 
+→ Capture most of the methane generated during wastewater treatment  
+and maximise its use for the production of electricity, heat or biomethane. 
+→ Strengthen the implementation of circular economy principles to reduce waste 
+generation. 
+ 
+6. Monitoring, reporting, evaluation and update 
+ 
+International climate agreements, i.e. the United Nations Framework Convention on Climate 
+Change, its Kyoto Protocol and the Paris Agreement, require a uniform, transparent, consistent 
+and verifiable method of national inventory of greenhouse gas emissions and removals. Each party 
+to the UNFCCC, including the Czech Republic, has established a National Inventory System (NIS) 
+that must comply with the rules adopted and agreed upon at UNFCCC meetings. 
+EU Member States are also bound by the obligations arising from Regulation (EU) 2018/1999 
+of the European Parliament and of the Council of 11 December 2018 on the Governance of the 
+Energy Union and Climate Action and related EU implementing regulations.  
+These obligations include the provision of annual reports on greenhouse gas emissions and 
+removals inventories, the preparation and reporting of emissions projections (every two years), 
+Biennial Transparency Reports and National Communications. The reporting rules in this area are 
+based primarily on the enhanced transparency framework for action and support adopted by the 
+24th Conference of the Parties to the UNFCCC. 
+Responsibility for the functioning of the NIS lies with the Ministry of the Environment, which has 
+appointed the Czech Hydrometeorological Institute (CHMI) as the organisation responsible for 
+coordinating the preparation of the greenhouse gas emissions and removals inventory, including 
+partial processing of the inventory. 
+Other obligations arising from the above-mentioned UNFCCC commitments and EU regulations 
+include the preparation of a long-term low-carbon development strategy and the establishment of 
+a national system for policies, measures and projections.  
+The national system for policies, measures and projections, established in accordance with the 
+relevant rules on 9 July 2015, enshrines the coordinating role of the Ministry of the Environment 
+and the CHMI, the role of NIS sectoral implementers and the involvement of the Interministerial 
+ 
+18  
+Working Group on Climate Protection. However, this system needs to be further developed and 
+deepened in order to meet the demanding requirements for consistency and completeness of 
+reported data and information. 
+Given the time required for the preparation and implementation of individual measures and 
+instruments and the response time, it is necessary to consider the Policy and its settings in the 
+long term, with the assumption of regular evaluation and updating every five years. The time frame 
+of the Policy respects the three basic levels of needs and requirements in the area of greenhouse 
+gas emission reduction, i.e. at national level and in the context of European and international 
+policy. 
+The evaluation process will also be linked to the cycle of assessing the EU's joint progress in 
+accordance with Regulation (EU) 2021/1119 of the European Parliament and of the Council (EU) 
+2021/1119, which establishes a framework for achieving climate neutrality (‘European climate law’) 
+and the cycle of global assessment of the fulfilment of commitments by the Parties to the Paris 
+Agreement. 
+The evaluation of the Policy itself will focus not only on progress in meeting greenhouse gas 
+emission reduction targets in relation to national, European and international targets, but also on 
+the implementation of individual policies and measures in various sectors. The Platform for Energy 
+and Climate Strategy and the Interministerial Working Group on Climate Protection will also be 
+involved in assessing progress. Basic information on progress in meeting climate protection targets 
+is updated annually in the Report on the State of the Environment in the Czech Republic. 
+As part of the preparation of the Climate Protection Policy update, an online public consultation 
+was held, in which every citizen of the Czech Republic could participate. Drafts of individual 
+chapters were provided to various stakeholders (non-profit organizations, industry representatives, 
+and ministries) for comment within the framework of the Platform for Energy and Climate Strategy. 
+Consultations on individual emission sectors were also held in the form of expert workshops. 
+Subsequently, a comprehensive draft of the Policy was again provided to Platform members for 
+comments. Future updates to the Policy will also be prepared with the involvement of public. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+19  
+List of abbreviations 
+ 
+BAT  Best Available Technique  
+ 
+CCUS  Carbon Capture, Utilisation and Storage  
+ 
+CO 2 eq.  Carbon Dioxide Equivalent  
+ 
+ESG  Environmental, Social, and Governance  
+ 
+ESR  Effort Sharing Regulation  
+ 
+EU  European Union  
+ 
+EU ETS  European Union Emissions Trading Syst em 
+ 
+GDP  Gross Domestic Product  
+ 
+GHG  Greenhouse Gas Emissions  
+ 
+GW  Gigawatt  
+ 
+GWe  Gigawatt -Electric  
+ 
+CHMI  Czech Hydromet eorological Institute  
+ 
+IPPC  Integrated Pollution Prevention and Control  
+ 
+LULUCF  Land Use, Land -Use Change and Forestry  
+ 
+NIS  National Inventory Syst em 
+ 
+PJ  Petajoule  
+ 
+RES  Renewable Energy Source  
+ 
+UNFCCC  United Nations Framework Convention on Climate Change  
+ 
+WAM  With Additional Measures  
+ 

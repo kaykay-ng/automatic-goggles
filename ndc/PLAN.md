@@ -202,3 +202,21 @@ Step 3 PRE-DECLARED tests (n up to 20 countries; exploratory unless marked):
  P-C: sector 'gap': categories heavily emphasised in the LTS but rare in parliament (and the reverse) -> list for the paper (descriptive).
  Hand-check: read ~20 goal-window excerpts for 3 countries to check precision of the shared lists (agriculture/land lists are broad here: 'forest', 'farm' etc. match more than the narrow lists used for the earlier 34% figure).
 Limits: n<=20; PDFs differ in kind (a short LTS, a 300-page strategy, a climate programme such as DK's); parliament talk covers EU/other countries too; machine-translated English on the parliament side vs original English documents; documents are policy texts, parliament is debate.
+
+## LTS extraction RESULT (14 Nov): 23 PDFs in place and extracted (ndc/notebooks/lts_extract.py; data/processed/lts_profiles.csv, lts_text/). None are scanned (>=1,575 chars/page).
+BE_1 is French and ES_1 is SPANISH (tiny counts with English lists) -> EXCLUDED from the quantitative comparison (parliament side is machine-translated English; lists are English). 21 English documents for 18 countries.
+Document used per country (plan): CZ_2 (2018 summary, 18 pages), GB_1 (2021 Net Zero Strategy, 368 pages), UA_2 (2018 strategy); BA_1 is the 2020-2030 adaptation and low-emission development strategy (not a 2050 LTS); DK_1 is the Climate Programme 2020.
+Parliament-side minimum for the goal-window profile: >=30 strict goal speeches (excludes BA 0, UA 6).
+
+## LTS PATHWAY vs PARLIAMENT RESULTS (14 Nov; ndc/notebooks/lts_vs_parliament.py; ndc/figures/lts_vs_parliament.png; data/processed/lts_vs_parliament_profiles.csv, parliament_category_profiles.csv)
+Countries: 18 with an English LTS profile; 16 with >=30 strict goal speeches (AT CZ DK FI FR GB HU IS LV NL NO PT RS SE SI TR); UA (6) and BA (0) excluded from the goal-window view.
+Mean theme shares (LTS | parliament goal windows | all climate speeches): energy .21|.41|.24; transport .06|.09|.08; buildings .08|.05|.06; industry .13|.12|.10; agriculture .12|.09|.18; land_forest .16|.07|.09; waste .11|.08|.06; instruments .08|.08|.19; removals .04|.015|.004.
+P-A (primary view, goal windows, n=16): across-country rho per theme: land_forest +0.63, transport +0.48, industry +0.28, energy +0.27, removals +0.26, buildings +0.23, agriculture +0.07, waste +0.03, instruments 0.00; MEDIAN +0.26 vs permuted null 0.00 (sd .11), one-sided p=.012.
+ Second view (all climate speeches, n=18): median +0.40, p=.0002 (energy +.57, waste +.60, transport +.49, land_forest +.49, removals +.40).
+P-B within-country (goal windows): own LTS vs own parliament median rho +0.51 vs +0.33 against OTHER countries' parliaments; own better in 15/16; permutation p=.014. Per country: CZ .73, DK .70, PT .68, GB .67, TR .58, SE .55, AT .52, NL .51, HU .51, FI .50, RS .50, NO .48, SI .48, FR .32, LV .23, IS .16.
+ Second view: own +0.52 vs +0.38; 14/18; p=.006.
+P-C gaps (log2 LTS share / parliament share): removals +2.27, land_forest +1.72, waste +1.10, buildings +1.07, agriculture +0.85, industry +0.65, instruments -0.17, transport -0.32, energy -0.78.
+HAND-CHECK (18 goal windows read: FI, GB, NL): matched themes mostly relevant (biomass, peat, emissions trading; electrification, cycling, railway; nuclear; coal; public transport), some weak ('building' in building-safety talk, generic 'electricity', 'tax');
+ 6 of 18 windows matched no theme at all (consistent with ~1/3 naming a means). Lists are broad: 'instruments' includes generic tax/subsidy words (inflates the all-speeches view: .19), 'energy' includes electricity/coal.
+CAVEATS: n=16-18; profiles are compositional (energy dominates); alignment can reflect shared national circumstances (forests in FI, IS) as much as parliaments following the strategy; document types differ (DK programme, CZ 18-page summary, GB 368 pages);
+ parliament text is machine-translated; BE (French) and ES (Spanish) strategies not analysed; not separated: talk about EU/other countries.
