@@ -47,3 +47,14 @@ PRIMARY TESTS (DSP-MRQAP: Dekker double semi-partialling with node-label permuta
 EXPLORATORY (labelled): extra layers (pledge-indicator similarity, trade), other rounds (revised_first_ndc, third_ndc), equal-passage subsamples, per-sector breakdowns, changes between rounds.
 THREATS: short texts (noise, attenuation), EU/UK collapse, node-level income confound, happiness confounded by income, mixed vintages inside 'first_ndc', countries without text excluded,
  text is Climate Watch's extracts of the NDC documents not the full PDFs, sector words are keyword counts.
+
+## RESULTS of the pre-declared tests (14 Nov; ndc/notebooks/ndc_tests.py; first_ndc, 154 nodes after EU collapse, 11,781 dyads)
+Dropped for missing emissions/controls: COK CUB ERI LIE MCO MHL NIU PRK PSE SMR SSD VAT VEN. Language similarity (centred cosine) mean -0.005, sd 0.144.
+H1  L ~ emission-profile similarity + controls (R^2=.240): emission_similarity beta=+0.039 (p=.0006; predicted POSITIVE: yes but TINY; raw Spearman +0.10).
+    Dominant: same_region +0.248, log_distance -0.245, income_gap -0.119; same_income_group +0.028, log_pop_product -0.024, log_words_product +0.045.
+H2  nodes with happiness 111 (dyads 6,105): happiness_similarity beta=+0.002 (p=.91, TWO-SIDED): NO added information. Raw Spearman(L, happiness)=+0.24 but happiness similarity vs income gap = -0.63
+    (happiness similarity is mostly an income/development map). Emission similarity in this subset +0.064 (p=.0004); R^2 .288 with and without happiness.
+H3  say vs do (partial rho controlling log words + log GDPpc; one-sided; Holm over 5): energy +0.15 (Holm .115), industry +0.19 (Holm .048), agriculture +0.10 (raw +0.42! mostly length/income; Holm .130),
+    waste +0.12 (.130), land_forest +0.14 (.130). Only industry passes Holm. => NDC sector emphasis follows actual emissions only weakly.
+READING: NDC language similarity is organised by REGION, DISTANCE and INCOME GAP; emission structure adds a tiny amount; happiness adds nothing beyond income. Attenuation caveat: split-half
+ reliability of the language measure is only .66, so true effects of emission similarity may be somewhat larger; with 11.8k dyads even tiny effects reach p<.001, so report effect sizes.
