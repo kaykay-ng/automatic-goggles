@@ -220,3 +220,9 @@ HAND-CHECK (18 goal windows read: FI, GB, NL): matched themes mostly relevant (b
  6 of 18 windows matched no theme at all (consistent with ~1/3 naming a means). Lists are broad: 'instruments' includes generic tax/subsidy words (inflates the all-speeches view: .19), 'energy' includes electricity/coal.
 CAVEATS: n=16-18; profiles are compositional (energy dominates); alignment can reflect shared national circumstances (forests in FI, IS) as much as parliaments following the strategy; document types differ (DK programme, CZ 18-page summary, GB 368 pages);
  parliament text is machine-translated; BE (French) and ES (Spanish) strategies not analysed; not separated: talk about EU/other countries.
+
+## TRANSLATING THE SPANISH AND FRENCH STRATEGIES (user suggestion, 14 Nov; NOT yet run, awaiting OK for the model download)
+Confirmed: ES_1 is Spanish (es stop-words 0.39, en 0.001) and BE_1 French (fr 0.31, en 0.002). Plan: machine-translate to English with the OPUS-MT models Helsinki-NLP/opus-mt-es-en (312 MB) and opus-mt-fr-en (301 MB), Apache-2.0, from Hugging Face --
+ the SAME model family ParlaMint used for the parliament speeches, so both sides carry comparable translation noise. Needs `sentencepiece` (small) in .venv-nlp. ~81k words (ES 24k, BE 57k) -> a few thousand sentences, minutes on the Mac GPU.
+Method: rejoin PDF line breaks into sentences, translate sentence by sentence, save to ndc/data/processed/lts_text_translated/, re-run the same 9-theme profile, read ~6 translated passages per document, and report results WITH and WITHOUT ES/BE as a sensitivity check (n goes 16 -> 18 in the goal-window view).
+Caveat: machine translation can blur theme words (e.g. 'renovacion' -> 'renovation' is fine, 'eolica' -> 'wind' is fine, but idioms and headings can be garbled).
