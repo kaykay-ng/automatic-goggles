@@ -253,3 +253,21 @@ H10 LANGUAGE NEIGHBOURS SHARE TRAJECTORIES (network test). On the k=5 language k
  Statistic: Pearson r(own trend, neighbour mean trend), trends winsorised at the 2.5/97.5 percentiles. NULL 1: trends shuffled across all nodes. NULL 2 (PRIMARY): trends shuffled WITHIN World Bank region,
  so region-level similarity is kept and only within-region neighbour choice is tested. 5,000 permutations, ONE-SIDED positive. Comparison (descriptive): same statistic on the geography kNN network.
 EXPLORATORY (labelled): pledge type (GHG target type field) vs trend; firmness vs being on track among the 13 checkable pledges; repeat H8 on 2015-23.
+
+## ROUND 3 RESULTS (14 Nov evening; ndc/notebooks/ndc_round3.py, ndc_convergence.py, ndc_diffusion.py; data/processed/round3_firmness.csv, round3_h8_handcheck.csv)
+Trend sample 135 of 154 nodes (19 tiny island emitters <1 Mt dropped).
+H8 FIRM vs HEDGED WORDING: SUPPORTED, MODEST. Partial Spearman (ctl log GDPpc, 2005-15 trend) firmness vs 2015-19 trend = -0.18, one-sided p=.020; 2015-23: -0.18, p=.017.
+ Robust to adding log words (-0.18) and region dummies (-0.20). Same sign in every income group (rho -0.19 to -0.39). Firm-rate alone -0.12, hedged-rate alone +0.09 (both halves contribute).
+ HAND-CHECK (10 each): hedged matches 10/10 genuine (BAU baselines, finance conditions); firm matches only ~5/10 (misses: 'absolute emissions' as a ranking, 'commitments under Article 4.1', 'does not establish commitments', 'shown its commitment to combat climate change'). The firm list is noisy, so the effect is likely understated, but the claim should rest on the hedged side.
+ Reading: countries whose pledges are hedged (conditional, BAU-relative) grew emissions faster even compared with countries of similar income and similar prior trend. Not causal: hedging may simply mark countries that EXPECTED growth.
+ EXPLORATORY: 2015-19 median trend by pledge type: base-year +0.1%/yr (n=19), BAU-scenario +2.2 (58), intensity +2.1 (9), fixed level +1.9 (6), no GHG target +1.3 (31); confounded by income.
+ EXPLORATORY: among the checkable pledges, on-track ones are NOT firmer (+0.29 vs +0.51; n=7 vs 15).
+H9 CONVERGENCE: SUPPORTED. 36 shared fields, 78 countries in all four rounds. Mean pairwise cosine indc .620, first .622, revised .701, third .716; third minus first +0.093 [95% CI +0.067, +0.119], p=.0005.
+ Holds among the 33 countries whose text length changed <1.5x (.660 -> .717). Regional clustering unchanged (+0.066 -> +0.062, diff -0.004 [-0.032, +0.018]): pledges grow alike everywhere, regions stay distinct.
+ Caveats: 78 early third-round submitters only; Climate Watch's summaries are written by the same team (house style could converge); indc and first_ndc texts are mostly identical for these fields.
+EXPLORATORY idea diffusion (77 countries, shared fields; % mentioning in first -> revised -> third NDC): Article 6/carbon markets 6 -> 56 -> 86%; methane 26 -> 39 -> 51; 1.5 degrees 9 -> 22 -> 35; gender 13 -> 34 -> 34;
+ electric vehicles 1 -> 21 -> 30; net zero 1 -> 25 -> 29; circular economy 0 -> 12 -> 22; hydrogen 0 -> 8 -> 14; loss and damage 3 -> 4 -> 12; just transition 0 -> 1 -> 10.
+ Neighbour exposure (did adopters have language neighbours that adopted earlier? within-region permutation): only Article 6 (adopters .47 vs .23, p=.001, survives Holm over 12); net zero .28 vs .17 (p=.14); others null.
+ Article 6 caveat: the 'international market mechanisms' field may simply be filled more often in later rounds.
+H10 LANGUAGE NEIGHBOURS SHARE TRAJECTORIES: WEAK. r(own trend, language-neighbour mean) = +0.19; shuffle-all p=.037; within-region p=.047 (borderline).
+ Comparison: geography neighbours +0.25 (within-region p=.013), emission-profile neighbours +0.15 (p=.07). Reading: trajectories cluster geographically; writing alike adds little beyond being near.
