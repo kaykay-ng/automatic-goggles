@@ -82,3 +82,11 @@ Alternating edges (k=5 kNN on same nodes; ARI of Louvain partitions): language-g
 CHECK: source-language artefact ruled out as far as detectable: all 195 first_ndc texts are English by stop-word detection (Climate Watch stores English). Drafting style/translation of the English could still carry regional signal.
 READING: NDC language is organised into regional and 'bloc-like' communities (e.g. small islands, Gulf states, francophone Africa), nearly independent of emission structure and income. TO DO: UNFCCC bloc membership (AOSIS, LDC, G77, Arab Group, ...)
  needs a trustworthy list; say-vs-do on emission TRENDS; figure polish; paper outline.
+
+## WORD PLOT for H1 (14 Nov; ndc/notebooks/ndc_wordplot.py, ndc/figures/wordplot_agri_vs_energy.png, data/processed/ndc_wordplot_agri_vs_energy.csv; descriptive, NOT a test)
+Groups from 2015 emission shares: agriculture-heavy (agri share >= 0.37, energy share below top tercile) 52 countries vs energy-heavy (energy share >= 0.74, agri below top tercile) 52 countries.
+Score = Monroe-Colaresi-Quinn log-odds with informative Dirichlet prior, z-scored; 2,742 terms (>=5 countries, >=8 uses). A first version had the colour scale reversed vs the legend; fixed.
+Most agriculture-heavy terms: agriculture 8.0, agricultural 7.2, adaptation 7.2, livestock 5.9, climate 5.9, management 5.3, million 4.9, implementation 4.9, national adaptation 4.8, usd 4.6, resilient 4.6, napa 4.6, communities 4.6, rural 4.3, gender 4.0.
+Most energy-heavy terms: gas -9.9, emissions -9.8, greenhouse -8.6, sea -7.9, target -7.7, greenhouse gas -7.7, sea level -7.0, islands -6.9, energy -6.8, rise -6.2, oil -5.8, states -5.6, fuel -5.1, industrial -4.9, energy efficiency -4.8.
+CONFOUND: the two groups differ in income: agriculture-heavy = 20 low + 22 lower-middle + 7 upper-middle + 3 high; energy-heavy = 23 high + 22 upper-middle + 7 lower-middle. Word differences (adaptation, NAPA, USD, communities,
+ gender vs emissions, targets, energy, oil, sea level/islands) therefore mix emission structure with development level and small-island status. Consistent with H1 being tiny once income gap is controlled.
