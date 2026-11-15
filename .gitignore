@@ -31,3 +31,4 @@ upf/data/processed/off_names_en.csv.gz
 upf/data/raw/nrc/
 upf/data/processed/emotion_top_words.csv
 upf/data/processed/amazon_meta_compact.csv.gz
+upf/data/processed/soj/

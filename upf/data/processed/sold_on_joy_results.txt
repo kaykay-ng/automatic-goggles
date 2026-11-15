@@ -1,0 +1,25 @@
+products 75,933; with marketing text >= 10 words 61,397; with marketing text and >= 5 reviews 38,308
+mean shares by NOVA (no food words; per 100 words): joy+anticipation in marketing / trust in marketing / joy+anticipation in reviews
+      m_ja_share_nf  m_trust_share_nf  r_ja_share_nf
+nova                                                
+1.0            4.24              3.83           5.83
+2.0            3.64              3.49           5.79
+3.0            4.05              3.67           5.94
+4.0            4.48              3.78           5.95
+
+== PRE-DECLARED TESTS (within-category, 5,000 permutations within category; Holm over 4) ==
+  H1 joy+anticipation in marketing (NOVA4 > 1-3): estimate +0.00341 (difference in share; x100 = per 100 words), p = 0.0002, Holm p = 0.0008; categories 25, products 29,852
+  H2 trust in marketing (two-sided): estimate +0.00079 (difference in share; x100 = per 100 words), p = 0.0506, Holm p = 0.1012; categories 25, products 29,852
+  H3 promise-experience gap (NOVA4 larger): estimate +0.00085 (difference in share; x100 = per 100 words), p = 0.1080, Holm p = 0.1080; categories 12, products 13,483
+  H4 shopper-network assortativity (> null): estimate +0.27874, p = 0.0002, Holm p = 0.0008; network nodes 3,672, backbone edges 11,766 of 2,854,237; null mean +0.004
+
+== ROBUSTNESS ==
+  high-confidence matches : H1 -0.00004 (p 0.515, 12,396 products) | H2 -0.00134 (p 0.020) | H3 -0.00078 (p 0.804, 6,298)
+  one product per brand   : H1 +0.00586 (p 0.001, 1,834 products) | H2 +0.00242 (p 0.098) | H3 +0.00349 (p 0.067, 980)
+  ALL words (incl. food)  : H1 +0.00717 (p 0.000) | H2 +0.00376 (p 0.000) | H3 +0.00263 (p 0.001)
+  H4 on high-confidence matches: assortativity +0.272 (null +0.001), p 0.0005, nodes 2,145, edges 6,662
+  NOVA gradient (mean per 100 words, no food words):
+nova               1.0   2.0   3.0   4.0
+m_ja_share_nf     4.42  3.75  4.25  4.66
+m_trust_share_nf  3.99  3.60  3.85  3.92
+  nova | 1.0   -0.75 | 2.0   -1.39 | 3.0   -0.92 | 4.0   -0.69

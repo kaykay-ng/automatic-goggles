@@ -125,3 +125,14 @@ LIMITS to state: reviewers are not all buyers and Amazon is not the whole market
   A1-H3 promise vs experience on ONE scale: (mean valence of marketing words) minus (mean valence of review words) is LARGER for NOVA 4 (one-sided).
   Reviews by emotion: EmoLex shares per emotion, NOVA 4 vs 1-3 within category (descriptive profile, Holm over 8 emotions if tested).
   The original H1-H4 results are reported in full as pre-declared; A1 is an added, pre-declared measurement, not a replacement chosen after seeing results.
+
+## STORY v1 RESULTS: pre-declared H1-H4 (15 Nov; upf/notebooks/sold_on_joy.py; upf/data/processed/sold_on_joy_results.txt)
+Samples: 75,933 matched products; marketing text >= 10 words 61,397; + >= 5 reviews 38,308. Within-category tests use the 25 (H1/H2) and 12 (H3) categories with >= 100 products on both sides.
+ Mean per 100 marketing words (no food words), NOVA 1/2/3/4: joy+anticipation 4.24/3.64/4.05/4.48; trust 3.83/3.49/3.67/3.78; reviews joy+anticipation 5.83/5.79/5.94/5.95.
+H1 SOLD ON JOY: +0.34 joy/anticipation words per 100 marketing words for NOVA 4 within category (29,852 products), p=.0002, Holm .0008: SUPPORTED, small (about 8% more than NOVA 1-3).
+ ROBUSTNESS MIXED: high-confidence matches -0.004 per 100 (p=.52, 12,396 products) -> GONE; one product per brand +0.59 (p=.001, 1,834) -> holds; all words +0.72 (p<.001) -> stronger.
+H2 TRUST: +0.08 per 100, two-sided p=.051, Holm .10: NOT SUPPORTED (high-confidence subset: -0.13, p=.02, opposite sign).
+H3 PROMISE vs EXPERIENCE (EmoLex version): +0.09 per 100, p=.11: NOT SUPPORTED (one per brand +0.35, p=.07; all words +0.26, p=.001).
+H4 ULTRA-PROCESSED SHOPPERS: NOVA assortativity on the shopper backbone +0.279 vs null (labels shuffled within category) +0.004, p=.0002, Holm .0008: SUPPORTED, large. 3,672 products, 11,766 backbone edges of 2.85M co-review pairs.
+ Holds on high-confidence matches (+0.272 vs +0.001, p=.0005).
+ CAVEAT NOT YET TESTED: the same brand's variants are often reviewed together and share a NOVA group, so brand could drive part of the assortativity; also Open Food Facts main category is coarse. Needs a follow-up (e.g. drop same-brand edges / shuffle within brand) before it is a finding.
