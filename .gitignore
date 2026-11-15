@@ -19,3 +19,6 @@ data/processed/b_pool.csv.gz
 data/processed/b_speech_vectors.npy
 # NDC project raw data: re-fetched from the Climate Watch API (see ndc/PLAN.md)
 ndc/data/raw/
+
+ndc/data/processed/climate_passages.csv.gz
+ndc/data/processed/climate_passages_vectors.npy
