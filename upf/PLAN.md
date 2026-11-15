@@ -206,3 +206,17 @@ WORD PLOT (15 Nov; upf/notebooks/marketing_wordplot.py; upf/figures/marketing_wo
   Sections: aisle facts (nutrition-label style), category-balanced word plot (interactive, searchable), valence comparison, the 'treat' trap, shopper-network picture (2-core of the largest component: 1,328 products,
   9,908 links; 72% NOVA 4; 69% of links join same kind vs ~60% expected) with a shuffle button, corrected assortativity nulls, 'what did not hold up', credits (Open Food Facts ODbL attribution, Amazon Reviews 2023, NRC lexicons).
   The page embeds only our own log-odds scores and network coordinates, no lexicon entries.
+
+## CROSS-CATEGORY REVIEWERS (15 Nov; user: test whether we can see what the same reviewers review elsewhere)
+FEASIBILITY (checked before any hypothesis): Amazon Reviews 2023 uses the SAME hashed user_id across category files. Health_and_Personal_Care (69.5 MB; 494,121 reviews, 461,656 reviewers):
+ 4.6% of the 1,643,635 grocery reviewers of matched products and 9.2% of the 336,899 shopper-network reviewers also review there. No profile data, no re-identification: aggregate patterns of pseudonymous reviewers only.
+ Reviews are not purchases (92% of grocery reviews are verified purchases, but most purchases are never reviewed).
+PRE-DECLARED (before downloading the other categories): who are the ultra-processed shoppers?
+ Reviewers: >= 3 reviews of matched grocery products. UPF share = share of those reviews on NOVA-4 products. Groups: ALL-UPF (share = 1.0) vs MOSTLY-NOT (share <= 0.5).
+ Outcome per category: the reviewer has >= 1 review in that category file. Statistic: difference in presence rate (ALL-UPF minus MOSTLY-NOT), weighted over activity strata of matched grocery reviews (3, 4, 5-9, 10+),
+ p from 2,000 shuffles of group labels WITHIN strata (heavier reviewers appear in more categories). Categories: Video_Games, Toys_and_Games, Sports_and_Outdoors, Health_and_Household, Baby_Products, Pet_Supplies, Health_and_Personal_Care.
+ H5a ALL-UPF reviewers are MORE likely to review Video Games and Toys & Games (one-sided each).
+ H5b ALL-UPF reviewers are LESS likely to review Sports & Outdoors and Health & Household (one-sided each).
+ H5c Baby Products: difference in either direction (two-sided). Holm over the 5 tests in H5a-c. Pet Supplies and Health & Personal Care: descriptive only.
+ Robustness: UPF share as a continuous score (Spearman with number of categories reviewed); reviewers in the shopper-network backbone only.
+ Caveat: reviewing a video game is not the same as being a gamer household; the claims are about review behaviour.
