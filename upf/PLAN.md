@@ -195,3 +195,10 @@ CORRECTED H4 (pre-declared null = labels shuffled within Open Food Facts categor
 CORRECTED BRAND CHECK (2,000 perms each): null within BRAND +0.200 (observed +0.279, p=.0005); different-brand edges only +0.208 vs within-category null +0.073; different brand AND category +0.179 vs +0.060 (both p=.0005).
 READING (revised): category mix explains about a third of the clustering (null .09) and brand portfolios explain most of it (null .20: brands tend to be all-ultra-processed or all-not, and shoppers move between
  similar brands); there is still clustering beyond both (+0.08 above the brand null, +0.12-0.13 above the category null on cross-brand links). The finding survives, but it is SMALLER and largely a brand-level sorting.
+WORD PLOT (15 Nov; upf/notebooks/marketing_wordplot.py; upf/figures/marketing_wordplot.png; data/processed/marketing_wordplot.csv; descriptive):
+ Monroe log-odds with informative prior, z-scored; marketing copy (features + description); CATEGORY-BALANCED (25 categories, larger side downsampled; 10,349 products per side); document counts; brand/store/pack-size words removed; 2,194 words in >= 30 products.
+ Most NOVA 1-3 words: gmo -16.9, non -14.8, certified -14.0, usda -12.5, verified -10.2, additives -9.7, virgin, harvested, chemicals, slowly, batches, nutrients, milled, refined, soil, pesticides, earthy
+  -> PURITY / CERTIFICATION / CRAFT / ORIGIN, often stated as absences ('non-GMO', 'no additives', 'no chemicals').
+ Most NOVA 4 words: flavored 16.8, cheddar 12.1, calories 11.5, includes, filling, fun 9.9, creamy, serving, strawberry, grams, cheesy, school, caramel, artificial, gum, irresistible 7.9, individually, satisfy, adults, packet, dinner, quick, favorite, minutes, colors
+  -> PLEASURE (fun, irresistible, satisfy, favorite, creamy, cheesy) + CONVENIENCE / PORTIONS (individually, packet, quick, minutes, school) + nutrition-label talk (calories, grams, serving).
+ Caveat: some words are still food sub-type within a category (cheddar within cheese, olives within oils); 'artificial' can be negated ('no artificial colors').
