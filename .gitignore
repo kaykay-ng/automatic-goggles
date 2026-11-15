@@ -22,3 +22,5 @@ ndc/data/raw/
 
 ndc/data/processed/climate_passages.csv.gz
 ndc/data/processed/climate_passages_vectors.npy
+ndc/data/processed/climate_passage_topics.csv.gz
+ndc/data/processed/climate_passages_kept.csv.gz

@@ -352,3 +352,17 @@ CUTOFF (set by the user's hand labels, blind to score): sheet of 100 passages, 1
  Rule: cutoff c* = the lowest score such that the labelled precision among all labelled passages with score >= c* is at least 0.90 and at least 30 labelled passages lie above it. Report: precision at c*, passages kept/dropped overall and per country; flag countries with fewer than 200 kept passages.
  Robustness: repeat main results at the next decile boundary above c*. Baseline to beat: the old filter had 21/25 (84%) genuine.
 NEXT (after the cutoff is fixed, pre-declared separately): topic model (BERTopic, week 7 recipe) on kept parliament passages pooled with strategy passages, compare strategy and parliament topic profiles by cosine, own country vs other countries; topics named by reading their top words, not by lists.
+
+## CLIMATE PASSAGES: CUTOFF RESULT (15 Nov; user labelled 100 blind: 74 climate, 21 not, 5 unsure; ndc/data/processed/cutoff_labelling_sheet_labelled.csv)
+Pre-declared rule (cutoff with labelled precision >= 0.90 and >= 30 labelled above it): NO CUTOFF QUALIFIES. Precision by score decile (low to high): .4 .7 .7 .8 .8 1.0 .9 .7 .5 .9 -- not monotone; the two highest-but-one deciles are the weakest.
+Reading of the failures: high-score false positives are budget/programme speeches that mention climate in passing (recovery package, the ECB's mandate, a subsidies board); the pledge-centroid score picks up policy register, not 'about climate'. The user's rubric is strict (passing mention = 0), so even the raw concordance has only 74% precision.
+Diagnostics (n=100, AUC for 'climate' vs 'not'): pledge-centroid cosine .60; matches per passage .57; match density .57; passages per speech .60; hits per speech .60; leave-one-out cosine to labelled-climate vs labelled-not centroids .76 (tiny training set).
+FALLBACK (pre-declared before fitting; the rule said 'reading needed'): use the topic model as the selector, which is a course tool. Fit BERTopic (week 7 recipe: stored MiniLM vectors, UMAP 5 dims cosine seed 42, HDBSCAN, c-TF-IDF; proper nouns and procedural words removed as in b_topics.py; outliers reassigned by embeddings) on ALL 158,233 passages.
+ KEEP list = topics whose top-10 words read as climate/energy/environment/emissions; decided by me from the words ALONE, written here BEFORE the labels are joined to topics.
+ VALIDATION on the user's labels: precision among labelled passages that fall in kept topics must be >= 0.90 with >= 30 labelled passages there. If it is not, report it as is; any tightening that uses the labels is tuning on 100 labels and will be labelled as such.
+ Sentiment (user idea): parked until the selection is fixed.
+
+## SENTIMENT (user idea, 15 Nov): PARKED, not pursued.
+Available: ParlaMint sentence sentiment (Senti_3, Senti_6, Senti_n ~0-6, higher = more positive; speech mean in index_XX.csv.gz as senti_mean), assigned by the corpus authors' model; we have not checked how it was built or validated.
+Reasons for parking (user): left vs right tone on climate mostly reproduces a pattern we already know; the score is ambiguous (negative tone can be angry support or angry opposition) and is not a course tool.
+If ever revisited: government vs opposition tone within the same party is the like-with-like comparison; hypotheses would be pre-declared first.
