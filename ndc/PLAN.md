@@ -312,3 +312,16 @@ Reasons given: the correlation is very small (about -0.16, p=.03; p=.06 within i
 Kept on record here as run and pre-declared (negative-ish and modest results are not deleted). Not to be cited as a finding. Fig 4A removed from the paper plan; NUMBERS.md rows marked DROPPED.
 Consequence to check next: the same 'who picked the keywords?' criticism applies to the other keyword lists (sector emphasis in H3, idea-diffusion terms, LTS/parliament theme lists, parliament climate-word list). Embedding-based results (language network, convergence) do not depend on hand-picked words.
 Note for any later version of the idea: Climate Watch itself codes pledge type (base-year, BAU, intensity, fixed level) and, in the full NDC texts, conditional vs unconditional parts, so a version built on those structured fields would not rely on my keywords.
+
+## KEYWORD-LIST REVIEW (15 Nov, user: "review lists"). Rules set BEFORE looking at any match.
+Lists in use (all written by me, none from a published dictionary): (1) NDC SECTORS (7 sector regexes, ndc_embed.py; used in H3 sector emphasis); (2) CATS (9 themes, lts_extract.py; used for strategies and parliaments, Result 3);
+ (3) GOAL + G2050 regexes (what counts as 'talk about the long-term goal', lts_vs_parliament.py); (4) CLIMATE regex (what counts as a climate speech, parse_parlamint.py; used in Result 3 and H13); (5) TERMS (12 ideas, ndc_diffusion.py; Fig 4B).
+ Superseded or dropped, not reviewed: MEANS (lts_parliament_means.py), FOOD/LIVESTOCK (food project), hedged/firm lists (dropped 15 Nov).
+Grounding: our emissions data (Climate Watch/CAIT) already defines the sector taxonomy: Energy, Electricity/Heat, Fugitive Emissions, Other Fuel Combustion, Manufacturing/Construction, Industrial Processes, Transportation, Building, Agriculture, Land Use/LULUCF, Waste.
+ Mapping to be reported in Methods: energy = Energy + Electricity/Heat + Fugitive + Other fuel combustion; industry = Manufacturing/Construction + Industrial Processes; transport = Transportation; buildings = Building; agriculture; land_forest = LULUCF; waste.
+ 'instruments' (carbon price, tax, ETS, subsidies) and 'removals' (CCS, negative emissions) are cross-cutting policy/technology groups with NO emissions-sector counterpart; they are not sectors and must be labelled that way.
+Procedure: seed 2026; for each list/theme draw 12 random matches (goal windows: 20; climate flag: 25) from the real texts, show +-70 characters of context, label relevant (1) or not (0) against this rubric:
+ relevant = the passage is, in context, about that theme as a climate-mitigation topic (for CLIMATE: about climate change/greenhouse emissions, not political climate or other uses; for ideas: the pledge actually mentions the idea).
+ Labelled by me (one rater: a known weakness); a 5-per-list subset is exported for you or your partner to label as an agreement check.
+Decision rules: precision < 70% on a theme -> find which terms the non-relevant matches come from and drop or tighten those terms, then recompute and report BEFORE and AFTER for the key results (P-A, P-B, gaps; H13 unaffected unless CLIMATE changes).
+ Also report per-theme top terms (a term supplying > 40% of a theme's matches gets read separately). Precision numbers go in the Methods table; no list is used in the paper without one.
