@@ -117,3 +117,11 @@ HYPOTHESES (within-category comparisons: categories with >= 100 NOVA-4 and >= 10
 DESCRIPTIVE (labelled exploratory): marketing topics by NOVA; emotion profile of ingredient-network communities; price per product by NOVA.
 ROBUSTNESS (pre-set): high-confidence match subset; one product per brand (brand boilerplate repeats); all-words emotion score; NOVA gradient 1-2-3-4.
 LIMITS to state: reviewers are not all buyers and Amazon is not the whole market; NOVA is assigned by rules; lexicon emotions are word associations, not felt emotions; the lexicon is not redistributed.
+- AMENDMENT A1 (15 Nov, user suggestion; written WHILE the H1-H4 run was in progress and BEFORE its output was read):
+  measure MARKETING language by VALENCE (and arousal) with the NRC VAD Lexicon v2.1 (Mohammad 2025, arXiv:2503.23547; >55k terms, scores 0-1 by best-worst scaling; non-commercial research use; not redistributed),
+  and REVIEWS by EMOTIONS (EmoLex, as already computed). Not yet downloaded (needs the user's OK on the same kind of terms).
+  New tests once downloaded (same within-category design, 5,000 permutations, food words excluded as primary):
+  A1-H1 NOVA-4 marketing copy has HIGHER mean valence than NOVA 1-3 copy (one-sided); A1-H1b arousal differs (two-sided).
+  A1-H3 promise vs experience on ONE scale: (mean valence of marketing words) minus (mean valence of review words) is LARGER for NOVA 4 (one-sided).
+  Reviews by emotion: EmoLex shares per emotion, NOVA 4 vs 1-3 within category (descriptive profile, Holm over 8 emotions if tested).
+  The original H1-H4 results are reported in full as pre-declared; A1 is an added, pre-declared measurement, not a replacement chosen after seeing results.
