@@ -230,3 +230,4 @@ H5 RESULTS (15 Nov; upf/notebooks/cross_category.py; data/processed/cross_catego
   continuous UPF share vs each category: Video Games +.044, Toys +.038, Sports -.037, Health & Household -.051, Health & Personal Care -.033 (small).
  READING: the ultra-processed side of the shopper network is also the games-and-toys side; the less processed side reviews more sports, household-health and personal-care products. Effects are modest (4-5 points).
  NOT CONTROLLED: what kind of groceries they buy (a candy-heavy basket may signal children in the household; Baby shows no difference though); demographics are unobservable (and not to be inferred).
+- 15 Nov: story page v2 adds 'Beyond the grocery aisle' (H5 cross-department results, dot chart) and a footer line on pseudonymous cross-category linking.
