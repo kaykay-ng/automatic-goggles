@@ -26,3 +26,4 @@ ndc/data/processed/climate_passage_topics.csv.gz
 ndc/data/processed/climate_passages_kept.csv.gz
 
 upf/data/raw/
+upf/data/processed/off_products.csv.gz
