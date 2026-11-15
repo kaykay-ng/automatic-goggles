@@ -136,3 +136,18 @@ H3 PROMISE vs EXPERIENCE (EmoLex version): +0.09 per 100, p=.11: NOT SUPPORTED (
 H4 ULTRA-PROCESSED SHOPPERS: NOVA assortativity on the shopper backbone +0.279 vs null (labels shuffled within category) +0.004, p=.0002, Holm .0008: SUPPORTED, large. 3,672 products, 11,766 backbone edges of 2.85M co-review pairs.
  Holds on high-confidence matches (+0.272 vs +0.001, p=.0005).
  CAVEAT NOT YET TESTED: the same brand's variants are often reviewed together and share a NOVA group, so brand could drive part of the assortativity; also Open Food Facts main category is coarse. Needs a follow-up (e.g. drop same-brand edges / shuffle within brand) before it is a finding.
+
+## STORY v1 RESULTS (15 Nov; upf/notebooks/sold_on_joy.py; upf/data/processed/sold_on_joy_results.txt). First run was cut off when the session ended; rerun completed. Reported in full as pre-declared.
+Sample: 75,933 matched products; marketing text >= 10 words 61,397; marketing + >= 5 reviews 38,308. Within-category tests use 25 categories (H1, H2; 29,852 products) and 12 (H3; 13,483).
+ Means per 100 words (no food words), NOVA 1/2/3/4: joy+anticipation in marketing 4.24/3.64/4.05/4.48; trust in marketing 3.83/3.49/3.67/3.78; joy+anticipation in reviews 5.83/5.79/5.94/5.95.
+H1 SOLD ON JOY: +0.34 per 100 words (NOVA 4 higher within category), p=.0002, Holm .0008 -> SUPPORTED in the main sample, but SMALL (about +8%) and NOT ROBUST:
+ high-confidence matches -0.00 (p=.52, 12,396 products); one product per brand +0.59 (p=.001, 1,834); all words incl. food +0.72 (p<.001). Gradient NOVA 1-4: 4.42/3.75/4.25/4.66.
+H2 SOLD ON TRUST: +0.08 per 100 words, p=.051, Holm .10 -> NOT SIGNIFICANT; high-confidence subset goes the other way (-0.13, p=.02).
+H3 PROMISE vs EXPERIENCE: +0.09, p=.11 -> NOT SUPPORTED. Descriptive surprise: the gap is NEGATIVE at every NOVA level (-0.7 to -1.4 per 100 words): reviews contain MORE joy/anticipation words than the marketing copy.
+H4 ULTRA-PROCESSED SHOPPERS: NOVA assortativity +0.279 on the shopper backbone (3,672 products, 11,766 edges of 2,854,237) vs within-category null +0.004, p=.0002, Holm .0008 -> STRONGLY SUPPORTED;
+ high-confidence matches +0.272 (p=.0005). EXPLORATORY check (not pre-declared; brand loyalty could create it): 12% of backbone edges are same-brand, 11% same-category;
+ different-brand edges only +0.223 (null +0.004); different brand AND different category +0.188 (null +0.002); both p=.001 (1,000 perms). Not brand loyalty.
+READING: the network result is the finding; the emotion-in-marketing result is small and fragile, trust and promise-vs-experience are null. Candidate new nut graf (to discuss):
+ 'Shoppers sort themselves by processing level: people who review ultra-processed groceries on Amazon mostly review other ultra-processed groceries, across brands and aisles,
+ while the emotional language used to sell them differs only slightly from that of less processed food.'
+LIMITS: reviewers are not all buyers; the backbone keeps a small, active part of the shopper network (3,672 of ~76k products); NOVA is rule-based; ~15% of matches are a different variant (robust in the high-confidence subset for H4, not for H1).
