@@ -202,3 +202,7 @@ WORD PLOT (15 Nov; upf/notebooks/marketing_wordplot.py; upf/figures/marketing_wo
  Most NOVA 4 words: flavored 16.8, cheddar 12.1, calories 11.5, includes, filling, fun 9.9, creamy, serving, strawberry, grams, cheesy, school, caramel, artificial, gum, irresistible 7.9, individually, satisfy, adults, packet, dinner, quick, favorite, minutes, colors
   -> PLEASURE (fun, irresistible, satisfy, favorite, creamy, cheesy) + CONVENIENCE / PORTIONS (individually, packet, quick, minutes, school) + nutrition-label talk (calories, grams, serving).
  Caveat: some words are still food sub-type within a category (cheddar within cheese, olives within oils); 'artificial' can be negated ('no artificial colors').
+- 15 Nov: STORY PAGE 'Sold on Pleasure' (draft, data-journalism style; no third-party branding): upf/site/sold-on-pleasure.html, published privately at https://claude.ai/artifact/RM7ax3VptsSo9ZDJrDneXC
+  Sections: aisle facts (nutrition-label style), category-balanced word plot (interactive, searchable), valence comparison, the 'treat' trap, shopper-network picture (2-core of the largest component: 1,328 products,
+  9,908 links; 72% NOVA 4; 69% of links join same kind vs ~60% expected) with a shuffle button, corrected assortativity nulls, 'what did not hold up', credits (Open Food Facts ODbL attribution, Amazon Reviews 2023, NRC lexicons).
+  The page embeds only our own log-odds scores and network coordinates, no lexicon entries.
