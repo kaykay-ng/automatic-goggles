@@ -220,3 +220,13 @@ PRE-DECLARED (before downloading the other categories): who are the ultra-proces
  H5c Baby Products: difference in either direction (two-sided). Holm over the 5 tests in H5a-c. Pet Supplies and Health & Personal Care: descriptive only.
  Robustness: UPF share as a continuous score (Spearman with number of categories reviewed); reviewers in the shopper-network backbone only.
  Caveat: reviewing a video game is not the same as being a gamer household; the claims are about review behaviour.
+H5 RESULTS (15 Nov; upf/notebooks/cross_category.py; data/processed/cross_category_results.txt; six more category files downloaded, all gzip OK: Video_Games 0.81 GB, Baby_Products 0.84, Toys_and_Games 1.95, Pet_Supplies 2.33, Sports_and_Outdoors 2.63, Health_and_Household 3.20; gitignored)
+ 141,977 reviewers with >= 3 matched grocery reviews: ALL-UPF 37,287; MOSTLY-NOT 40,577; between 64,113. Share also reviewing: Video Games 19%, Toys 51%, Sports 62%, Health & Household 89%, Baby 29%, Pet 57%, Health & Personal Care 13%.
+ Difference ALL-UPF minus MOSTLY-NOT (percentage points, weighted over activity strata; 2,000 shuffles within strata; Holm over 5):
+  H5a Video Games +4.3 (19.7% vs 16.3%), Holm p=.0025: SUPPORTED; Toys & Games +4.7 (51.4% vs 47.9%), Holm .0025: SUPPORTED.
+  H5b Sports & Outdoors -4.5 (58.1% vs 63.8%), Holm .0025: SUPPORTED; Health & Household -4.2 (85.7% vs 91.0%), Holm .0025: SUPPORTED.
+  H5c Baby Products -0.4, p=.20: no difference. Descriptive: Pet Supplies +0.2 (none); Health & Personal Care -2.7 (9.9% vs 13.5%).
+ Robustness: same differences among network-filter reviewers (3-50 matched reviews, 77,833). UPF share is NOT related to how many of the 7 categories a reviewer uses (Spearman -0.003), so it is not an activity artefact;
+  continuous UPF share vs each category: Video Games +.044, Toys +.038, Sports -.037, Health & Household -.051, Health & Personal Care -.033 (small).
+ READING: the ultra-processed side of the shopper network is also the games-and-toys side; the less processed side reviews more sports, household-health and personal-care products. Effects are modest (4-5 points).
+ NOT CONTROLLED: what kind of groceries they buy (a candy-heavy basket may signal children in the household; Baby shows no difference though); demographics are unobservable (and not to be inferred).

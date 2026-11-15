@@ -1,0 +1,36 @@
+reviewers with >= 3 matched grocery reviews: 141,977; ALL-UPF 37,287, MOSTLY-NOT 40,577, between 64,113
+strata sizes: {'3': 62346, '4': 28301, '5-9': 37846, '10+': 13484}
+  Video_Games               : 26,877 of our reviewers (18.9%)
+  Toys_and_Games            : 72,685 of our reviewers (51.2%)
+  Sports_and_Outdoors       : 88,137 of our reviewers (62.1%)
+  Health_and_Household      : 126,989 of our reviewers (89.4%)
+  Baby_Products             : 41,662 of our reviewers (29.3%)
+  Pet_Supplies              : 81,532 of our reviewers (57.4%)
+  Health_and_Personal_Care  : 17,893 of our reviewers (12.6%)
+/Users/kaykayng/02805-social-graphs/final_project/upf/notebooks/cross_category.py:62: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  R["n_cats"] = R[CATS].sum(1)
+
+== H5 (ALL-UPF minus MOSTLY-NOT, difference in % reviewing in the category, weighted over activity strata; 2,000 shuffles within strata) ==
+  Video_Games                (greater) difference +4.26 points; raw rates ALL-UPF 19.7% vs MOSTLY-NOT 16.3%; p = 0.0005; Holm p = 0.0025
+  Toys_and_Games             (greater) difference +4.67 points; raw rates ALL-UPF 51.4% vs MOSTLY-NOT 47.9%; p = 0.0005; Holm p = 0.0025
+  Sports_and_Outdoors        (less   ) difference -4.52 points; raw rates ALL-UPF 58.1% vs MOSTLY-NOT 63.8%; p = 0.0005; Holm p = 0.0025
+  Health_and_Household       (less   ) difference -4.23 points; raw rates ALL-UPF 85.7% vs MOSTLY-NOT 91.0%; p = 0.0005; Holm p = 0.0025
+  Baby_Products              (two    ) difference -0.42 points; raw rates ALL-UPF 26.7% vs MOSTLY-NOT 28.4%; p = 0.2034; Holm p = 0.2034
+  Pet_Supplies               (two    ) difference +0.22 points; raw rates ALL-UPF 55.5% vs MOSTLY-NOT 56.4%; p = 0.5452; descriptive
+  Health_and_Personal_Care   (two    ) difference -2.67 points; raw rates ALL-UPF 9.9% vs MOSTLY-NOT 13.5%; p = 0.0005; descriptive
+
+== ROBUSTNESS ==
+  continuous UPF share vs number of the 7 categories reviewed (all 141,977 reviewers): Spearman -0.003
+    UPF share vs reviewing Video_Games               : Spearman +0.044
+    UPF share vs reviewing Toys_and_Games            : Spearman +0.038
+    UPF share vs reviewing Sports_and_Outdoors       : Spearman -0.037
+    UPF share vs reviewing Health_and_Household      : Spearman -0.051
+    UPF share vs reviewing Baby_Products             : Spearman -0.002
+    UPF share vs reviewing Pet_Supplies              : Spearman +0.003
+    UPF share vs reviewing Health_and_Personal_Care  : Spearman -0.033
+  network-filter reviewers only (3-50 matched reviews, n=77,833):
+    Video_Games               : +4.26 points
+    Toys_and_Games            : +4.68 points
+    Sports_and_Outdoors       : -4.51 points
+    Health_and_Household      : -4.23 points
+    Baby_Products             : -0.41 points
