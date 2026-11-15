@@ -88,3 +88,32 @@ The partner is exploring a different idea (agri-environmental policies spreading
   UPC in 'details' for 339,849 items (56%) = the barcode link ('ISBN for groceries'); 75,933 items match an Open Food Facts product with NOVA (NOVA 1 7,337 / 2 1,537 / 3 14,923 / 4 52,136); 81% of matched items have marketing text.
   Reviews: 14,318,520 (92% verified purchases); ratings 1:1.86M 2:0.70M 3:0.90M 4:1.26M 5:9.61M; median 17 words; mostly 2013-2023; reviews on matched items: 2,519,089.
   MATCH CHECK (20 random matched items read side by side): ~17/20 the same product; ~3 same brand but a different variant (Amazon groups flavours under one parent item with one UPC), e.g. Yupik Inca berries vs Yupik hazelnuts.
+
+## STORY v1: "Sold on joy?" -- PRE-DECLARED 15 Nov, before any emotion score, topic model or network was computed on the Amazon text (user: "Yes, draft it").
+Partner alignment still pending (the partner explores agri-environmental policy diffusion); the paper has one story, so this needs their agreement.
+
+NUT GRAF (hypothesis form; rewrite with findings later):
+ Ultra-processed foods dominate America's online grocery aisle. Matching about 76,000 Amazon grocery products to their ingredient records by barcode, we ask whether ultra-processed food
+ is sold with a different emotional language than less processed food in the same aisle, whether shoppers' reviews deliver the emotions the marketing promises, and whether the people
+ who review ultra-processed products form their own cluster in the network of shoppers.
+
+DATA AND UNITS
+ Products = Amazon grocery items whose UPC matches an Open Food Facts product with a NOVA group (75,933 found); one row per parent item (drop duplicates); NOVA 4 vs NOVA 1-3.
+ Marketing text = Amazon 'features' + 'description' (NOT the title). Reviews = all reviews of matched items (about 2.5M). Category = Open Food Facts main category (harmonised), for within-category comparisons.
+ HIGH-CONFIDENCE subset (robustness): the Open Food Facts brand (first brand, >= 3 letters) appears in the Amazon title or store field (the match check found ~3/20 same-brand-other-flavour pairs).
+
+MEASURES (course tools only)
+ Emotion: NRC Word-Emotion Association Lexicon (Week 7 lexicon method): per document, share of words associated with each emotion (8 emotions + positive/negative).
+  PRIMARY score excludes food words (tokens of Open Food Facts ingredient names, as in name_emotions.py) because e.g. 'chocolate' is tagged joy; sensitivity: all words.
+ Topics: BERTopic on MiniLM embeddings of marketing text (week 7 recipe), topics named by reading their words; cosine similarity between a product's marketing text and its reviews.
+ Networks: (i) shopper network = products linked by shared reviewers (reviewers with 2-50 reviews among matched products), edge weight = shared reviewers, disparity backbone; (ii) the ingredient network already built.
+
+HYPOTHESES (within-category comparisons: categories with >= 100 NOVA-4 and >= 100 NOVA 1-3 products; statistic = product-weighted mean of within-category differences;
+ p from 5,000 permutations of NOVA labels WITHIN category; Holm over H1-H4)
+ H1 SOLD ON JOY: NOVA-4 marketing copy has a HIGHER share of joy + anticipation words than NOVA 1-3 copy in the same category. One-sided.
+ H2 SOLD ON TRUST: the share of trust words differs between NOVA-4 and NOVA 1-3 copy in the same category. Two-sided (no direction predicted).
+ H3 PROMISE vs EXPERIENCE: the gap (joy+anticipation share in marketing minus the same share in that product's reviews) is LARGER for NOVA-4 products. One-sided.
+ H4 ULTRA-PROCESSED SHOPPERS: on the shopper network, NOVA assortativity (NOVA 4 vs 1-3 as node label) is POSITIVE and above a null that shuffles labels within category (keeps the network and the category mix). One-sided.
+DESCRIPTIVE (labelled exploratory): marketing topics by NOVA; emotion profile of ingredient-network communities; price per product by NOVA.
+ROBUSTNESS (pre-set): high-confidence match subset; one product per brand (brand boilerplate repeats); all-words emotion score; NOVA gradient 1-2-3-4.
+LIMITS to state: reviewers are not all buyers and Amazon is not the whole market; NOVA is assigned by rules; lexicon emotions are word associations, not felt emotions; the lexicon is not redistributed.
