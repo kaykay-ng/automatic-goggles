@@ -1,0 +1,34 @@
+EU joint-text group: 29 entries (EU27 members 27 + EUU + GBR in first_ndc) -> one node 'EUU'
+nodes: 154 (of 167 after EU collapse; dropped for missing emissions/controls: ['COK', 'CUB', 'ERI', 'LIE', 'MCO', 'MHL', 'NIU', 'PRK', 'PSE', 'SMR', 'SSD', 'VAT', 'VEN'])
+
+language similarity (centred cosine): mean -0.005, sd 0.144; raw Spearman with emission similarity +0.104
+
+H1: L ~ emission similarity + controls (predicted POSITIVE on emission_similarity)   R^2=0.240   dyads=11781
+   emission_similarity    beta=+0.039  p=0.0006   <-- tested
+   income_gap             beta=-0.119  p=0.0002
+   same_region            beta=+0.248  p=0.0002
+   same_income_group      beta=+0.028  p=0.0100
+   log_distance           beta=-0.245  p=0.0002
+   log_pop_product        beta=-0.024  p=0.0016
+   log_words_product      beta=+0.045  p=0.0002
+   (for reference) emission similarity alone: Spearman +0.104
+
+nodes with happiness data: 111 of 154
+
+H2: L ~ emission + HAPPINESS similarity + controls (TWO-SIDED test on happiness_similarity)   R^2=0.288   dyads=6105
+   emission_similarity    beta=+0.064  p=0.0004
+   income_gap             beta=-0.127  p=0.0002
+   same_region            beta=+0.295  p=0.0002
+   same_income_group      beta=+0.023  p=0.1258
+   log_distance           beta=-0.229  p=0.0002
+   log_pop_product        beta=+0.040  p=0.0002
+   log_words_product      beta=+0.031  p=0.0040
+   happiness_similarity   beta=+0.002  p=0.9058   <-- tested
+   same subset WITHOUT happiness: R^2=0.288; emission_similarity beta=+0.064; happiness raw Spearman with L: +0.238; with income gap: -0.629
+
+H3: does NDC text emphasis on a sector follow the sector's actual share of emissions? (partial Spearman, controls log words + log GDPpc; Holm over 5)
+   energy       n=154  raw rho=+0.25  partial rho=+0.15  one-sided p=0.0287  Holm p=0.1149
+   industry     n=154  raw rho=+0.27  partial rho=+0.19  one-sided p=0.0096  Holm p=0.0481
+   agriculture  n=154  raw rho=+0.42  partial rho=+0.10  one-sided p=0.1221  Holm p=0.1301
+   waste        n=154  raw rho=+0.16  partial rho=+0.12  one-sided p=0.0634  Holm p=0.1301
+   land_forest  n=154  raw rho=+0.16  partial rho=+0.14  one-sided p=0.0434  Holm p=0.1301

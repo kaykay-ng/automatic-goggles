@@ -11,10 +11,11 @@ from pypdf import PdfReader
 
 RAW = Path("ndc/data/raw/lts_pdfs"); OUT = Path("ndc/data/processed/lts_text"); OUT.mkdir(parents=True, exist_ok=True)
 PROC = Path("ndc/data/processed")
+# LIST FIX 15 Nov (ndc/PLAN.md KEYWORD-LIST REVIEW): industry drops "hydrogen" (energy-system talk, precision 62%) and "pre-industrial"/"industrial revolution"; buildings drops singular verb uses and "capacity building".
 CATS = {"energy": r"renewable\w*|\bwind\b|solar|photovoltaic|nuclear|hydropower|biomass|biogas|geothermal|energy transition|electrif\w*|energy efficiency|coal|power sector|electricity",
         "transport": r"electric (?:vehicle|car)s?|\bEVs?\b|charging|public transport|railway|cycling|combustion engine|electromobility|transport sector|aviation|shipping",
-        "buildings": r"heat pumps?|insulation|renovation|retrofit\w*|district heating|buildings?\b",
-        "industry": r"hydrogen|\bsteel\b|\bcement\b|industrial|industry",
+        "buildings": r"heat pumps?|insulation|renovation|retrofit\w*|district heating|(?<!capacity )(?<!capacity-)buildings\b|\bbuilding (?:sector|codes?|stock|energy|envelope|regulations?|standards?|materials?)\b",
+        "industry": r"\bsteel\b|\bcement\b|(?<!pre-)(?<!pre)industrial(?! revolution)|industry",
         "agriculture": r"agricultur\w*|livestock|fertili[sz]\w*|farm\w*|manure|\bcrops?\b",
         "land_forest": r"forest\w*|afforestation|reforestation|\bpeat\w*|land use|lulucf|carbon sink\w*|wetland\w*",
         "waste": r"\bwaste\b|landfill|recycl\w*|circular economy|wastewater",

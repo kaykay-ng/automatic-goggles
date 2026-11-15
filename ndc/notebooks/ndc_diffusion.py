@@ -13,6 +13,10 @@ PROC = D.PROC; RNG = np.random.default_rng(55)
 ROUNDS = ["indc", "first_ndc", "revised_first_ndc", "third_ndc"]
 T = pd.read_csv(PROC / "ndc_text_long.csv"); T = T[T.document.isin(ROUNDS)]
 common = set.intersection(*[set(T[T.document == r].indicator) for r in ROUNDS]); T = T[T.indicator.isin(common)]
+# LIST FIX 15 Nov (ndc/PLAN.md KEYWORD-LIST REVIEW): drop Climate Watch tag-list rows ('End Use: ..., Fossil Fuels: Coal ...', 88 in revised, 54 in third round vs 16 in first)
+# and the gas-list / GWP fields, which inflate 'hydrogen', 'coal' and 'methane' without meaning a policy mention.
+T = T[~T.value.astype(str).str.contains(r"End Use:|Fossil Fuels:|Renewable Energy:|Energy: General")]
+T = T[~T.indicator.isin(["Greenhouse gases covered", "Methods: Global warming potential (GWP) values"])]
 TERMS = {"net zero / neutrality": r"net[- ]zero|carbon[- ]neutral|climate[- ]neutral",
          "1.5 degrees": r"1\.5\s?(?:°|degree|ºc|oc)",
          "just transition": r"just transition",

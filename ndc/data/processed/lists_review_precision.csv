@@ -1,0 +1,40 @@
+list,theme,n,relevant,precision
+CATS strategy,agriculture,12,9,0.75
+CATS strategy,buildings,12,11,0.9166666666666666
+CATS strategy,energy,12,11,0.9166666666666666
+CATS strategy,industry,12,6,0.5
+CATS strategy,instruments,12,11,0.9166666666666666
+CATS strategy,land_forest,12,11,0.9166666666666666
+CATS strategy,removals,12,11,0.9166666666666666
+CATS strategy,transport,12,11,0.9166666666666666
+CATS strategy,waste,12,12,1.0
+CATS parliament goal windows,agriculture,12,10,0.8333333333333334
+CATS parliament goal windows,buildings,12,10,0.8333333333333334
+CATS parliament goal windows,energy,12,12,1.0
+CATS parliament goal windows,industry,12,8,0.6666666666666666
+CATS parliament goal windows,instruments,12,10,0.8333333333333334
+CATS parliament goal windows,land_forest,12,12,1.0
+CATS parliament goal windows,removals,12,12,1.0
+CATS parliament goal windows,transport,12,12,1.0
+CATS parliament goal windows,waste,12,11,0.9166666666666666
+GOAL windows,goal,20,20,1.0
+CLIMATE flag,climate,25,21,0.84
+NDC SECTORS,agriculture,12,11,0.9166666666666666
+NDC SECTORS,buildings,12,5,0.4166666666666667
+NDC SECTORS,energy,12,12,1.0
+NDC SECTORS,industry,12,9,0.75
+NDC SECTORS,land_forest,12,11,0.9166666666666666
+NDC SECTORS,transport,12,11,0.9166666666666666
+NDC SECTORS,waste,12,12,1.0
+IDEAS,1.5 degrees,8,8,1.0
+IDEAS,Article 6 / carbon markets,8,8,1.0
+IDEAS,circular economy,8,8,1.0
+IDEAS,coal,8,7,0.875
+IDEAS,electric vehicles,8,8,1.0
+IDEAS,gender,8,8,1.0
+IDEAS,hydrogen,8,5,0.625
+IDEAS,just transition,8,8,1.0
+IDEAS,loss and damage,8,8,1.0
+IDEAS,methane,8,6,0.75
+IDEAS,nature-based solutions,8,8,1.0
+IDEAS,net zero / neutrality,8,7,0.875

@@ -9,13 +9,14 @@ import numpy as np, pandas as pd
 
 PROC = Path("ndc/data/processed")
 ROUNDS = ["indc", "first_ndc", "revised_first_ndc", "second_ndc", "third_ndc"]
+# LIST FIX 15 Nov (ndc/PLAN.md KEYWORD-LIST REVIEW): industry no longer matches "cement" inside enhancement/enforcement/... or "pre-industrial"; buildings no longer matches "capacity building".
 SECTORS = {"energy": r"energy|electricity|renewable|solar|wind|fossil|coal|\bpower\b|\bfuels?\b|efficiency",
            "agriculture": r"agricultur|\bfarm|livestock|\bcrops?\b|\brice\b|fertili|manure|\bsoils?\b",
            "land_forest": r"forest|afforest|reforest|land[- ]use|lulucf|deforest|mangrove|peat",
            "waste": r"\bwaste|landfill|recycl|sewage|wastewater",
-           "industry": r"industr|cement|manufactur|\bhfcs?\b|refrigerant",
+           "industry": r"(?<!pre-)(?<!pre)industr(?!ial revolution)|\bcement\b|manufactur|\bhfcs?\b|refrigerant",
            "transport": r"transport|vehicle|aviation|shipping|\broads?\b|\brail",
-           "buildings": r"building|housing|heating|cooling"}
+           "buildings": r"(?<!capacity )(?<!capacity-)\bbuildings\b|\bbuilding (?:sector|codes?|stock|energy|envelope|regulations?|standards?|materials?|insulation|efficiency)\b|\bhousing\b|heating|cooling"}
 
 
 def clean(t):

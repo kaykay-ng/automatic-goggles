@@ -47,6 +47,7 @@ All scripts run from `final_project/` with `./.venv-nlp/bin/python <script>`.
 | DROPPED: H11 firmness first → third NDC | median −0.61 → −0.32; firmer in 53/95; p = 0.019 | ndc_round4.py → round4_firmness_rounds.csv | LOG |
 
 ## Result 3: strategies vs parliaments
+**SUPERSEDED 15 Nov: every row in this section (and the Idea diffusion row above, and H13) rests on hand-written word lists, which we decided not to use. Values below are the OLD lists; the CSVs on disk now hold the list-fixed version (see PLAN.md KEYWORD-LIST REVIEW: RESULTS). Do not cite until rebuilt with topic models / cosine similarity.**
 | Number | Value | Source | Status |
 |---|---|---|---|
 | Countries (goal-window view / all speeches) | 18 / 20 (incl. translated ES, BE) | ndc/notebooks/lts_vs_parliament.py --with-translated | LOG |

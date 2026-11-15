@@ -1,0 +1,26 @@
+theme,source,matches,top_terms
+energy,strategy,5494,electricity 22%; renewable 20%; energy efficiency 11%; biomass 10%; wind 7%
+energy,parliament goal windows,4441,renewable 18%; electricity 16%; nuclear 16%; coal 12%; wind 10%
+transport,strategy,1493,cycling 20%; aviation 16%; transport sector 14%; public transport 10%; shipping 9%
+transport,parliament goal windows,1264,aviation 29%; transport sector 13%; railway 9%; shipping 9%; public transport 8%
+buildings,strategy,2305,buildings 40%; building 25%; renovation 14%; district heating 10%; heat pumps 5%
+buildings,parliament goal windows,964,building 39%; buildings 32%; renovation 10%; insulation 5%; heat pumps 5%
+industry,strategy,3329,industry 37%; hydrogen 29%; industrial 28%; steel 3%; cement 3%
+industry,parliament goal windows,2033,industry 43%; industrial 24%; hydrogen 24%; steel 8%; cement 2%
+agriculture,strategy,2721,agriculture 32%; agricultural 28%; livestock 6%; farming 5%; crops 5%
+agriculture,parliament goal windows,885,agriculture 37%; agricultural 16%; farmers 16%; farming 11%; farm 6%
+land_forest,strategy,3299,forest 28%; forestry 17%; forests 13%; lulucf 12%; land use 12%
+land_forest,parliament goal windows,707,forest 29%; forests 18%; land use 13%; forestry 10%; peat 8%
+waste,strategy,2579,waste 61%; circular economy 15%; recycling 8%; landfill 7%; wastewater 5%
+waste,parliament goal windows,539,waste 51%; circular economy 32%; recycling 11%; recycled 2%; landfill 2%
+instruments,strategy,1299,ets 33%; tax 24%; taxes 7%; emissions trading 7%; subsidies 6%
+instruments,parliament goal windows,952,tax 42%; subsidies 12%; taxes 9%; ets 9%; taxation 7%
+removals,strategy,779,carbon capture 28%; ccus 25%; sequestration 19%; ccs 17%; negative emissions 8%
+removals,parliament goal windows,373,carbon capture 52%; ccs 22%; negative emissions 9%; sequestration 9%; ccus 8%
+energy,NDC sectors,3725,energy 50%; renewable 13%; efficiency 7%; electricity 7%; power 6%
+agriculture,NDC sectors,2310,agricultur 60%; livestock 10%; farm 7%; crop 6%; soil 6%
+land_forest,NDC sectors,2445,forest 57%; land use 17%; land-use 7%; reforest 5%; lulucf 4%
+waste,NDC sectors,514,waste 82%; recycl 9%; landfill 6%; sewage 3%
+industry,NDC sectors,669,industr 67%; cement 19%; hfcs 9%; manufactur 3%; hfc 2%
+transport,NDC sectors,565,transport 68%; road 11%; vehicle 8%; roads 7%; rail 4%
+buildings,NDC sectors,689,building 84%; housing 10%; heating 3%; cooling 2%
