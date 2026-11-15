@@ -306,3 +306,9 @@ H13 PARLIAMENT ATTENTION vs EMISSIONS: NOT SUPPORTED. 26 parliaments. Climate at
 Figures at PNAS widths: ndc/figures/paper/fig1-fig4 (PDF + PNG) from ndc/notebooks/paper_figures.py (reads saved CSVs only; diffusion table now saved by ndc_diffusion.py to ndc_idea_diffusion.csv).
 Numbers sheet: ndc/NUMBERS.md (every citable number -> script -> file; CSV-checked vs log-only marked).
 CORRECTION: 'only 13 checkable first-NDC pledges' (said in the 14 Nov evening summary and PAPER_PLAN.md) was wrong: 19 checkable in the main set (24 before dropping <1 Mt), 13 of them needed real cuts after 2015. PAPER_PLAN.md fixed.
+
+## DECISION (15 Nov, user): DROP THE HEDGING TESTS (H8, H8b, H11, H12) from the paper and slides.
+Reasons given: the correlation is very small (about -0.16, p=.03; p=.06 within income x region strata), and the firm/hedged keyword lists were chosen by me, not taken from published climate-research or data-journalism practice, so the method is unvalidated.
+Kept on record here as run and pre-declared (negative-ish and modest results are not deleted). Not to be cited as a finding. Fig 4A removed from the paper plan; NUMBERS.md rows marked DROPPED.
+Consequence to check next: the same 'who picked the keywords?' criticism applies to the other keyword lists (sector emphasis in H3, idea-diffusion terms, LTS/parliament theme lists, parliament climate-word list). Embedding-based results (language network, convergence) do not depend on hand-picked words.
+Note for any later version of the idea: Climate Watch itself codes pledge type (base-year, BAU, intensity, fixed level) and, in the full NDC texts, conditional vs unconditional parts, so a version built on those structured fields would not rely on my keywords.

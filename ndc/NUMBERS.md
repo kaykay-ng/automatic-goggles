@@ -41,10 +41,10 @@ All scripts run from `final_project/` with `./.venv-nlp/bin/python <script>`.
 | 2020 pledges checked | 16 (14 absolute in CSV + China and India intensity) | ndc/notebooks/ndc_pledge2020.py → ndc_pledge2020_outcomes.csv | CSV (14 absolute: 8 met in 2020, 6 in 2019) |
 | 2020 pledges met | 10 of 16; ~3–4 policy-driven (EUU, JPN, CHN) | ndc_pledge2020.py; judgement in PLAN.md | LOG + judgement |
 | Missed 2020 and on track now | 0 of 6 | ndc_pledge2020.py | LOG |
-| H8b hedged wording vs trend 2015–19 | partial rho = −0.16, p = 0.034 (−0.17, p = 0.027 for 2015–23) | ndc/notebooks/ndc_round4.py → round4_firmness_v2.csv | LOG |
-| Hand-check precision | hedged 10/10, firm v2 ~6/10 | round3_h8_handcheck.csv, round4_firm_v2_handcheck.csv | CSV (read by hand) |
-| H12 within income × region | rho = −0.17, p = 0.064 (not significant) | ndc_round4.py | LOG |
-| H11 firmness first → third NDC | median −0.61 → −0.32; firmer in 53/95; p = 0.019 | ndc_round4.py → round4_firmness_rounds.csv | LOG |
+| DROPPED: H8b hedged wording vs trend 2015–19 | partial rho = −0.16, p = 0.034 (−0.17, p = 0.027 for 2015–23) | ndc/notebooks/ndc_round4.py → round4_firmness_v2.csv | LOG |
+| DROPPED: Hand-check precision | hedged 10/10, firm v2 ~6/10 | round3_h8_handcheck.csv, round4_firm_v2_handcheck.csv | CSV (read by hand) |
+| DROPPED: H12 within income × region | rho = −0.17, p = 0.064 (not significant) | ndc_round4.py | LOG |
+| DROPPED: H11 firmness first → third NDC | median −0.61 → −0.32; firmer in 53/95; p = 0.019 | ndc_round4.py → round4_firmness_rounds.csv | LOG |
 
 ## Result 3: strategies vs parliaments
 | Number | Value | Source | Status |
@@ -60,7 +60,10 @@ All scripts run from `final_project/` with `./.venv-nlp/bin/python <script>`.
 - fig1_language_network: double column; network coloured by community and by region.
 - fig2_say_vs_do: double column; A first NDC 2023 vs pledge (MNE clipped, flagged), B 2020 pledges with 2019 shown.
 - fig3_strategy_vs_parliament: single column; theme gaps.
-- fig4_hedging_and_diffusion: double column; A hedged wording vs trend, B ideas spreading.
+- fig4_hedging_and_diffusion: panel A (hedged wording vs trend) DROPPED by decision on 15 Nov, do not use; panel B (ideas spreading) uses my own keyword list, same caveat, keep only if the list is justified.
+
+## Dropped analyses
+- Hedged vs firm wording (H8, H8b, H11, H12): dropped on 15 Nov. Effect small (rho about -0.16), keyword lists chosen by me and not validated against published practice. Rows above kept only as a record; do not cite.
 
 ## Known corrections
 - 14 Nov night: earlier notes and the first paper plan said "13 checkable first-NDC pledges". Correct: 19 checkable (main set), of which 13 needed real cuts after 2015. PAPER_PLAN.md fixed.
