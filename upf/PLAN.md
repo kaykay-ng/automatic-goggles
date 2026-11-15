@@ -187,3 +187,11 @@ VALENCE WORDS READ (soj_checks.py valence; contribution c_w = valence_w x (share
  REVIEWS pooled valence is the SAME (+0.2071 vs +0.2066): NOVA-4 reviews use more flavor, candy, love, favorite, yummy, kids; NOVA 1-3 reviews more great, healthy, excellent, organic, good, best.
  -> READING: the valence gap is real but half of it is food type; the substantive contrast is NOT 'more positive' but WHICH positive: ultra-processed copy sells PLEASURE, fun and convenience;
   less processed copy sells HEALTH, PURITY and CERTIFICATION; reviews mirror that split (pleasure words vs quality/health praise). Next: a log-odds word plot (Monroe et al., as in ndc_wordplot.py) of marketing NOVA 4 vs NOVA 1-3 to show it directly.
+
+## CORRECTION (15 Nov): H4 NULL MODEL WAS WRONG IN THE FIRST RUN
+Bug: the 'shuffle within category / within brand' permutation took np.lexsort((random, group)) and applied it to products that were NOT sorted by group, so labels were in fact shuffled across ALL products
+ (a plain full shuffle). H1-H3 used a sorted table and are correct. Fixed with sold_on_joy.shuffle_within() (tested: each group keeps its own label counts). The fork's exploratory brand nulls (+0.004/+0.002) came from the same code and are wrong too.
+CORRECTED H4 (pre-declared null = labels shuffled within Open Food Facts category, 5,000 perms): observed +0.279 vs null mean +0.091, p=.0002 (Holm unchanged, <= .0008). High-confidence matches +0.272 vs +0.085, p=.0005.
+CORRECTED BRAND CHECK (2,000 perms each): null within BRAND +0.200 (observed +0.279, p=.0005); different-brand edges only +0.208 vs within-category null +0.073; different brand AND category +0.179 vs +0.060 (both p=.0005).
+READING (revised): category mix explains about a third of the clustering (null .09) and brand portfolios explain most of it (null .20: brands tend to be all-ultra-processed or all-not, and shoppers move between
+ similar brands); there is still clustering beyond both (+0.08 above the brand null, +0.12-0.13 above the category null on cross-brand links). The finding survives, but it is SMALLER and largely a brand-level sorting.

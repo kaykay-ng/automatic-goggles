@@ -34,7 +34,7 @@ def assort(lb, i, j):
 def null_test(lab, groups, i, j, nperm=2000):
     obs = assort(lab, i, j); null = np.empty(nperm)
     for k in range(nperm):
-        o = np.lexsort((RNG.random(len(lab)), groups)); null[k] = assort(lab[o], i, j)
+        null[k] = assort(S.shuffle_within(lab, groups), i, j)      # FIXED 15 Nov (first version shuffled across all products)
     return obs, null.mean(), (1 + np.sum(null >= obs)) / (nperm + 1)
 
 

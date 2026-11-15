@@ -114,9 +114,15 @@ def shopper_network(P, nperm=NPERM, subset=None):
         return (tr - ss) / (1 - ss)
     obs = assort(lab); null = np.empty(nperm)
     for k in range(nperm):
-        order = np.lexsort((RNG.random(len(lab)), cat)); null[k] = assort(lab[order])
+        null[k] = assort(shuffle_within(lab, cat))          # FIXED 15 Nov: the first version shuffled across ALL products (nodes are not sorted by category)
     nodes = len(np.unique(np.r_[i, j]))
     return obs, (1 + np.sum(null >= obs)) / (nperm + 1), float(null.mean()), nodes, len(i), int(W.nnz)
+
+
+def shuffle_within(lab, groups):
+    """permute labels only among items of the same group, whatever order the items are in"""
+    pos = np.argsort(groups, kind="stable"); src = np.lexsort((RNG.random(len(lab)), groups))
+    out = np.empty_like(lab); out[pos] = lab[src]; return out
 
 
 def holm(ps):
