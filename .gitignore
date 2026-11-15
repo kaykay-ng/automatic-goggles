@@ -27,3 +27,5 @@ ndc/data/processed/climate_passages_kept.csv.gz
 
 upf/data/raw/
 upf/data/processed/off_products.csv.gz
+upf/data/processed/off_names_en.csv.gz
+upf/data/raw/nrc/
