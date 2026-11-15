@@ -165,3 +165,17 @@ READING: ultra-processed food is marketed in slightly more pleasant and more exc
  and a little more anger, disgust and fear; the promise-experience gap is larger. All effects are SMALL in absolute size; the EmoLex joy measure (H1) was fragile, the valence measure is robust.
 TO DO before this is a finding: read samples of review passages driving anger/disgust/fear/trust for NOVA 4 (check they are not food words or artefacts such as 'hot', 'bitter');
  H4 brand confound (drop same-brand edges or shuffle within brand); report effect sizes in plain units.
+
+## CHECKS (15 Nov; upf/notebooks/soj_checks.py). Note: a forked session ('Course final project (fork)') worked in this folder and committed 21660d1 (its own write-up of H1-H4 + an exploratory brand check); only PLAN.md touched.
+H4 BRAND CHECK (brand = Open Food Facts first brand, else Amazon store): backbone 11,766 edges / 3,672 products; 16% same-brand edges, 11% same-category.
+ all edges, null within category +0.279 (null +0.004); null shuffled WITHIN BRAND +0.279 (null +0.012); different-brand edges only +0.208 (null +0.002); different brand AND category +0.179 (null +0.001); all p=.0005 (2,000 perms).
+ -> The shopper clustering is NOT brand loyalty; it survives across brands and aisles. (Agrees with the fork's numbers: +0.223 / +0.188.) H4 stands as the main finding.
+REVIEW EMOTION WORDS READ (25% sample of matched reviews: 12.6M NOVA-4 and 6.3M NOVA 1-3 tokens):
+ ANGER/DISGUST/FEAR excess in NOVA-4 reviews is driven largely by 'treat' (6.9 vs 3.3 per 10,000 words), which EmoLex tags with anger, disgust and fear but reviewers use POSITIVELY
+ ('a great outdoor treat', 'our favorite morning treat') -> LEXICON ARTEFACT; roughly most of the disgust and fear excess and over half of the anger excess (pooled rates, rough).
+ Also 'broken' (cookies arriving broken = shipping damage, not the food) and 'bear' (gummy bears), 'batter' (food words outside the ingredient vocabulary).
+ Genuine complaint words ARE somewhat more frequent in NOVA-4 reviews: bad 11.0/9.6, disappointed 7.9/6.6, horrible 3.5/2.5, terrible 3.8/2.9, awful 3.2/2.3, gross 2.7/1.8, disgusting 2.3/1.5, nasty 2.0/1.3, waste 3.5/2.8
+ (some negated: 'not bad', 'you will not be disappointed').
+ TRUST deficit in NOVA-4 reviews: about half artefact ('food' 12.1/15.2, 'ground' 0.8/2.3 as in ground pepper, 'grit', 'seal', 'cap' = packaging), half genuine praise words (excellent 10.0/14.1, wonderful 5.7/7.4, clean 1.0/2.4, top, recommend).
+ -> The EmoLex review-emotion results must NOT be reported as 'more anger, disgust and fear'. Defensible reading: slightly more complaint words and slightly less strong praise for ultra-processed products, partly about delivery damage.
+ Not yet checked the same way: which words drive the MARKETING valence difference (A1-H1) and the valence gap (A1-H3).
