@@ -179,3 +179,11 @@ REVIEW EMOTION WORDS READ (25% sample of matched reviews: 12.6M NOVA-4 and 6.3M 
  TRUST deficit in NOVA-4 reviews: about half artefact ('food' 12.1/15.2, 'ground' 0.8/2.3 as in ground pepper, 'grit', 'seal', 'cap' = packaging), half genuine praise words (excellent 10.0/14.1, wonderful 5.7/7.4, clean 1.0/2.4, top, recommend).
  -> The EmoLex review-emotion results must NOT be reported as 'more anger, disgust and fear'. Defensible reading: slightly more complaint words and slightly less strong praise for ultra-processed products, partly about delivery damage.
  Not yet checked the same way: which words drive the MARKETING valence difference (A1-H1) and the valence gap (A1-H3).
+VALENCE WORDS READ (soj_checks.py valence; contribution c_w = valence_w x (share in NOVA 4 - share in NOVA 1-3), sums to the pooled difference):
+ MARKETING pooled difference +0.0167 (NOVA 4 +0.286 vs NOVA 1-3 +0.269; within-category estimate was +0.0135).
+  Pushing NOVA 4 UP: (a) FOOD-TYPE words outside the ingredient vocabulary: candy +.0031, cookies +.0012, creamy +.0010, breakfast +.0008, dessert +.0007, dinner +.0007 (about 45% of the difference = 'what the food is');
+  (b) PLEASURE / FUN / CONVENIENCE words: flavor +.0030, delicious +.0020, enjoy +.0016, perfect +.0014, easy +.0011, fun +.0010, love +.0009, taste, favorite, tasty, kids, colors, real.
+  Pushing NOVA 4 DOWN = words more common on less processed products: HEALTH / PURITY / CERTIFICATION: organic -.0042, food -.0024, certified -.0017, ingredient -.0015, healthy -.0012, best, pure, health, verified.
+ REVIEWS pooled valence is the SAME (+0.2071 vs +0.2066): NOVA-4 reviews use more flavor, candy, love, favorite, yummy, kids; NOVA 1-3 reviews more great, healthy, excellent, organic, good, best.
+ -> READING: the valence gap is real but half of it is food type; the substantive contrast is NOT 'more positive' but WHICH positive: ultra-processed copy sells PLEASURE, fun and convenience;
+  less processed copy sells HEALTH, PURITY and CERTIFICATION; reviews mirror that split (pleasure words vs quality/health praise). Next: a log-odds word plot (Monroe et al., as in ndc_wordplot.py) of marketing NOVA 4 vs NOVA 1-3 to show it directly.

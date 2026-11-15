@@ -91,4 +91,61 @@ def words():
 
 
 if __name__ == "__main__":
-    {"brand": brand, "words": words}[sys.argv[1]]()
+    if sys.argv[1] in ("brand", "words"): {"brand": brand, "words": words}[sys.argv[1]]()
+
+
+def valence_words():
+    """Which words drive the valence differences (A1). Contribution of word w to the NOVA 4 minus NOVA 1-3 difference in mean valence:
+    c_w = v_w * (f4_w - f1_w), with f = share of the group's lexicon-matched non-food tokens that are w (sums exactly to the pooled difference)."""
+    _, food = S.lexicon()
+    V = pd.read_csv(RAW / "nrc/NRC-VAD-Lexicon-v2.1/Unigrams/unigrams-NRC-VAD-Lexicon-v2.1.txt", sep="\t", keep_default_na=False); val = dict(zip(V.term, V.valence))
+    P = pd.read_csv(CACHE / "products.csv.gz"); nova = dict(zip(P.parent_asin, P.nova))
+    def norm(w):
+        w = w.strip("'")
+        return w[:-1] if (w not in val and w.endswith("s") and w[:-1] in val) else w
+    def contrib(texts_by_group, label, snip_src):
+        cnt = {g: Counter() for g in (4, 1)}
+        for g, ts in texts_by_group.items():
+            for t in ts:
+                for w in re.findall(r"[a-z']+", t.lower()):
+                    w = norm(w)
+                    if w in val and w not in food: cnt[g][w] += 1
+        n = {g: sum(cnt[g].values()) for g in cnt}; mean = {g: sum(val[w] * c for w, c in cnt[g].items()) / n[g] for g in cnt}
+        c = sorted(((val[w] * (cnt[4][w] / n[4] - cnt[1][w] / n[1]), w) for w in set(cnt[4]) | set(cnt[1])), reverse=True)
+        print(f"\n{label}: mean valence NOVA 4 {mean[4]:+.4f}, NOVA 1-3 {mean[1]:+.4f}, pooled difference {mean[4] - mean[1]:+.4f} (lexicon tokens {n[4]:,} / {n[1]:,})")
+        print("  pushing NOVA 4 UP (word valence, rate per 1,000 lexicon words NOVA4/NOVA1-3, contribution):")
+        print("   " + "; ".join(f"{w} {val[w]:+.2f} {1e3 * cnt[4][w] / n[4]:.1f}/{1e3 * cnt[1][w] / n[1]:.1f} {x:+.4f}" for x, w in c[:20]))
+        print("  pushing NOVA 4 DOWN:")
+        print("   " + "; ".join(f"{w} {val[w]:+.2f} {1e3 * cnt[4][w] / n[4]:.1f}/{1e3 * cnt[1][w] / n[1]:.1f} {x:+.4f}" for x, w in c[::-1][:15]))
+        top = [w for _, w in c[:6]]
+        for w in top:
+            ex = [s for s in snip_src.get(w, [])][:2]
+            for s in ex: print(f"    [{w}] ...{s[:180]}...")
+        return c
+    M = pd.read_csv(PROC / "amazon_meta_compact.csv.gz", usecols=["parent_asin", "features", "description"]).drop_duplicates("parent_asin")
+    M = M[M.parent_asin.isin(nova)]; M["g"] = np.where(M.parent_asin.map(nova) == 4, 4, 1)
+    txt = (M.features.fillna("") + " " + M.description.fillna("")).str.strip()
+    groups = {g: txt[M.g == g].tolist() for g in (4, 1)}
+    snip = defaultdict(list)
+    for t in txt[M.g == 4].sample(frac=0.2, random_state=3):
+        for w in set(re.findall(r"[a-z']+", t.lower())):
+            if len(snip[w]) < 2:
+                m = re.search(r"[^.!?]{0,80}\b" + re.escape(w) + r"\b[^.!?]{0,80}", t, flags=re.I)
+                if m: snip[w].append(m.group(0).strip())
+    contrib(groups, "MARKETING (features + description)", snip)
+    rev = {4: [], 1: []}; rsnip = defaultdict(list)
+    with gzip.open(RAW / "amazon/Grocery_and_Gourmet_Food.jsonl.gz", "rt") as f:
+        for line in f:
+            d = json.loads(line); a = d.get("parent_asin")
+            if a not in nova or RNG.random() > 0.15: continue
+            g = 4 if nova[a] == 4 else 1; t = (d.get("title") or "") + ". " + (d.get("text") or ""); rev[g].append(t)
+    for t in rev[4][:200000]:
+        for w in set(re.findall(r"[a-z']+", t.lower())):
+            if len(rsnip[w]) < 2 and RNG.random() < 0.02:
+                m = re.search(r"[^.!?]{0,80}\b" + re.escape(w) + r"\b[^.!?]{0,80}", t, flags=re.I)
+                if m: rsnip[w].append(m.group(0).strip())
+    contrib(rev, "REVIEWS (15% sample)", rsnip)
+
+
+if __name__ == "__main__" and sys.argv[1] == "valence":
+    valence_words()
