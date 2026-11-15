@@ -1,0 +1,14 @@
+META items: 603,274
+  with features: 72%; with description: 63%; median words (when present): features 41, description 47
+  price present: 37%; bought_together present: 0.0%; categories present: 89%
+  most common detail keys: {'Manufacturer': 424566, 'UPC': 339849, 'Package Dimensions': 317045, 'Brand': 240401, 'Is Discontinued By Manufacturer': 188976, 'Product Dimensions': 168957, 'Unit Count': 150844, 'Flavor': 149209, 'Item Weight': 133229, 'Item Form': 125589, 'Item model number': 100271, 'Number of Items': 92766, 'Package Information': 65873, 'Package Weight': 50941, 'Specialty': 38911}
+  items with a UPC/EAN/GTIN-like code: 339,849 (56.3%)
+  items whose code matches an Open Food Facts product with NOVA: 75,933; NOVA among matches: {1.0: 7337, 2.0: 1537, 3.0: 14923, 4.0: 52136}
+  EXAMPLE features [Valentine's Day Candy Hershey's Kisses 1 lb - Red, Pink and ]: ✔ PEANUT BUTTER VALENTINES MINIATURES ► These valentines sweet milk chocolate and creamy peanut butter filling miniatures. Mix of red, pink and silver foil milk chocolate. Peanut Butter Miniatures bring together two great tastes--creamy peanut butter surrounded by smooth milk chocolate. Individually
+  EXAMPLE features [RED FORK SAUCE SSNNG POT ROAST 8OZ]: At red fork, we celebrate classic comfort foods and the contemporary American bistro flavors that food-lovers crave Best quality product Gluten-free and Non-GMO, Effervesce combines Authenticity with Elegance and Prestige
+  EXAMPLE features [365 by Whole Foods Market, Chips Corn Sea Salt Organic, 9 Ou]: 365 by Whole Foods Market products give you that dance-down-the-aisles feeling, virtual aisles too! Our huge range of choices with premium ingredients at prices you can get down with makes grocery shopping so much more than tossing the basics in your cart.
+
+REVIEWS: 14,318,520; verified purchases 92%; ratings {0.0: 1, 1.0: 1855049, 2.0: 695428, 3.0: 898317, 4.0: 1256795, 5.0: 9612930}
+  words per review (2% sample): median 17, mean 28; years: {2000: 5, 2001: 8, 2002: 21, 2003: 60, 2004: 230, 2005: 659, 2006: 3819, 2007: 11738, 2008: 15872, 2009: 25725, 2010: 40232, 2011: 70697, 2012: 120966, 2013: 316157, 2014: 521428, 2015: 796496, 2016: 954706, 2017: 1001387, 2018: 1185912, 2019: 1674633, 2020: 2262895, 2021: 2386226, 2022: 2150125, 2023: 778523}
+  items with reviews 603,182; reviews per item median 3, items with >= 50 reviews 47,940
+  reviews on items matched to a NOVA group: 2,519,089
