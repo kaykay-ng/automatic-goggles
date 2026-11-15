@@ -151,3 +151,17 @@ READING: the network result is the finding; the emotion-in-marketing result is s
  'Shoppers sort themselves by processing level: people who review ultra-processed groceries on Amazon mostly review other ultra-processed groceries, across brands and aisles,
  while the emotional language used to sell them differs only slightly from that of less processed food.'
 LIMITS: reviewers are not all buyers; the backbone keeps a small, active part of the shopper network (3,672 of ~76k products); NOVA is rule-based; ~15% of matches are a different variant (robust in the high-confidence subset for H4, not for H1).
+
+## AMENDMENT A1 RESULTS (15 Nov; upf/notebooks/sold_on_joy_vad.py; upf/data/processed/sold_on_joy_vad_results.txt; VAD v2.1 scale -1..1, food words excluded)
+Means NOVA 1/2/3/4: marketing valence .268/.250/.262/.277; marketing arousal -.140/-.139/-.128/-.120; review valence .231/.235/.226/.225.
+A1-H1 marketing valence higher for NOVA 4: +0.0135 within category (29,822 products, 25 categories), p=.0002, Holm .0006: SUPPORTED (small: about 5% of the mean).
+ Robust: high-confidence +0.0062 (p=.001); one per brand +0.0125 (p=.004); all words +0.0109 (p<.001).
+A1-H1b marketing arousal differs: +0.0099 (more aroused/exciting wording for NOVA 4), p=.0002, Holm .0006.
+A1-H3 promise vs experience (marketing valence minus review valence) larger for NOVA 4: +0.0087 (13,467 products, 12 categories), p=.0002, Holm .0006: SUPPORTED.
+ Robust: high-confidence +0.0072 (p=.002); one per brand +0.0090 (p=.07, n=1,168); all words +0.0058 (p<.001). Gradient of the gap NOVA 1/2/3/4: .038/.019/.036/.052.
+Reviews by emotion (EmoLex, NOVA 4 minus 1-3 within category, per 100 review words; Holm over 8): MORE anger +.058, anticipation +.094, disgust +.041, fear +.045 (all Holm <= .006); LESS trust -.108 (Holm .004);
+ joy +.048 (Holm .18), sadness +.030 (Holm .10), surprise -.005 (n.s.).
+READING: ultra-processed food is marketed in slightly more pleasant and more exciting words than less processed food in the same category, while its reviews are no more pleasant, carry less trust
+ and a little more anger, disgust and fear; the promise-experience gap is larger. All effects are SMALL in absolute size; the EmoLex joy measure (H1) was fragile, the valence measure is robust.
+TO DO before this is a finding: read samples of review passages driving anger/disgust/fear/trust for NOVA 4 (check they are not food words or artefacts such as 'hot', 'bitter');
+ H4 brand confound (drop same-brand edges or shuffle within brand); report effect sizes in plain units.

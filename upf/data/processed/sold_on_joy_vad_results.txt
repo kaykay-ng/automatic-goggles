@@ -1,0 +1,29 @@
+products with marketing >= 10 words and a valence score: 61,341; also >= 5 reviews: 38,274
+mean valence / arousal by NOVA (no food words; scale -1..1): marketing valence, marketing arousal, review valence
+      m_v_nf  m_a_nf  r_v_nf
+nova                        
+1.0    0.268  -0.140   0.231
+2.0    0.250  -0.139   0.235
+3.0    0.262  -0.128   0.226
+4.0    0.277  -0.120   0.225
+
+== AMENDMENT A1 TESTS (within category, 5,000 permutations; Holm over 3) ==
+  A1-H1 marketing valence higher for NOVA 4: estimate +0.0135 (valence units, -1..1), p = 0.0002, Holm p = 0.0006; categories 25, products 29,822
+  A1-H1b marketing arousal differs (two-sided): estimate +0.0099 (valence units, -1..1), p = 0.0002, Holm p = 0.0006; categories 25, products 29,822
+  A1-H3 valence gap marketing minus reviews larger for NOVA 4: estimate +0.0087 (valence units, -1..1), p = 0.0002, Holm p = 0.0006; categories 12, products 13,467
+
+== REVIEWS BY EMOTION (EmoLex, no food words): NOVA 4 minus NOVA 1-3 within category, share of review words (x100 = per 100 words); two-sided, Holm over 8 ==
+  anger        +0.058 per 100 words, p = 0.0005, Holm p = 0.0040
+  anticipation +0.094 per 100 words, p = 0.0005, Holm p = 0.0040
+  disgust      +0.041 per 100 words, p = 0.0015, Holm p = 0.0060
+  fear         +0.045 per 100 words, p = 0.0005, Holm p = 0.0040
+  joy          +0.048 per 100 words, p = 0.0925, Holm p = 0.1849
+  sadness      +0.030 per 100 words, p = 0.0350, Holm p = 0.1049
+  surprise     -0.005 per 100 words, p = 0.7711, Holm p = 0.7711
+  trust        -0.108 per 100 words, p = 0.0005, Holm p = 0.0040
+
+== ROBUSTNESS (A1) ==
+  high-confidence matches : A1-H1 +0.0062 (p 0.001, 12,382) | A1-H3 +0.0072 (p 0.002, 6,291)
+  one product per brand   : A1-H1 +0.0125 (p 0.004, 2,109) | A1-H3 +0.0090 (p 0.073, 1,168)
+  ALL words (incl. food)  : A1-H1 +0.0109 (p 0.000) | A1-H3 +0.0058 (p 0.000)
+  NOVA gradient:       m_v_nf  gap_v_nf | nova                   | 1.0    0.268     0.038 | 2.0    0.250     0.019 | 3.0    0.262     0.036 | 4.0    0.277     0.052
