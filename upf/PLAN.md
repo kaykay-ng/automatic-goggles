@@ -340,3 +340,10 @@ RESULTS OF THE THREE (16 Nov; upf/notebooks/habits.py; data/processed/h11_valida
   AROUSAL (balanced difference +0.011): about half because PURITY words are CALM (organic -.31 is the largest single contributor; also non[-GMO], vegan, simple, ingredient, healthy, pure),
    half because PLEASURE words are EXCITING (delicious, bite, enjoy, tasty, fun, up); calm convenience words (easy, box, pack, baked, minute, classic) pull the other way.
   READING: confirms the pleasure-vs-purity reading for all three dimensions; 'dominance' here = authority/certification vs portions/sensations, not hard-selling.
+
+## YELP LEXICON PILOT (16 Nov; user: 'test a small portion with Yelp') -- written BEFORE download and scoring
+Resource: NRC Yelp Restaurant Sentiment Lexicon (Kiritchenko et al., SemEval-2014; automatic from Yelp restaurant reviews; affirmative and negated-context entries; unigrams + bigrams; free for research, cite).
+Sample: 20,000 random reviews from the H11 validation draw (grocery reviews of matched products; seed fixed). Compare against stars: AUC 1-2 vs 4-5 stars and Spearman; and COVERAGE (share of tokens scored).
+Yelp score = mean of unigram scores, with tokens inside a negated context (from a negator such as not/no/never/n't to the next punctuation) looked up as their negated entry; bigram variant reported too.
+Reference on the SAME 20,000: our NRC VAD valence (AUC .886 on the full 200k). Decision rule: prefer Yelp only if AUC is >= 0.02 higher; note that Yelp scores were learned from review stars (partly circular).
+Also: what Yelp gives 'treat', 'hot', 'sweet', 'not happy' (the known failures).
