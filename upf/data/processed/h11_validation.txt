@@ -1,0 +1,16 @@
+reviews 200,000; stars {1.0: 26859, 2.0: 10003, 3.0: 12572, 4.0: 16954, 5.0: 133612}; with a valence score 99.8%
+
+== H11 ==
+  Spearman(valence, stars) = +0.547
+  AUC 1-2 vs 4-5 stars (n=186,967): VAD valence 0.886 | EmoLex pos-neg 0.801 | shuffled stars 0.500   (pre-set bar: >= 0.70)
+  mean valence by stars: {1.0: 0.058, 2.0: 0.125, 3.0: 0.168, 4.0: 0.258, 5.0: 0.337}
+  TF-IDF + logistic regression (held-out 20%, n=37,486): AUC 0.988  (upper benchmark)
+  most negative features: two stars, not, horrible, gross, not good, yuck, awful, disgusting, disappointing, one star, not worth, worst, terrible, expired, not great
+  most positive features: great, delicious, good, perfect, best, love, excellent, yummy, amazing, not bad, yum, not too, awesome, wonderful, nice
+  1-2 star reviews with the HIGHEST valence (where the lexicon is fooled):
+     1.0 | No lo volveré a comprar. Las galletas muy buena. Aunque el empaque es desastroso.<br />No lo cubren bien pero Y SE ROMPEN<br />TODAS
+     0.98 | One Star. Not happy with the product.
+     0.98 | Has sugar added!!. Sugar and oil.... not happy
+     0.94 | and i love ginger. Dway to strong with ginger, and i love ginger
+     0.92 | One Star. Not tasty
+     0.92 | Not flavorable. Not tasty

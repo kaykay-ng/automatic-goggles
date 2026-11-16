@@ -1,0 +1,8 @@
+products with >= 1 review before 2018: 253,995; new reviews in 2018 on them: 1,002,240; products with no 2018 review: 61%
+review-count distribution (all grocery products): share with >= k reviews: k=1: 1.0000, k=10: 0.2843, k=100: 0.0400, k=1000: 0.0023, k=10000: 0.0000; max 36,707
+
+== H10 == attachment exponent alpha = 0.925 (95% CI 0.910 to 0.936); uniform-attachment null alpha = -0.000
+  mean new 2018 reviews by prior reviews: {1: 0.43, 5: 1.91, 22: 6.36, 83: 20.26, 294: 72.82, 1034: 192.56}
+  exploratory NOVA 4  : products 29,095, alpha 0.898
+  exploratory NOVA 1-3: products 12,769, alpha 0.845
+saved upf/figures/rich_get_richer.png

@@ -1,0 +1,53 @@
+network: 16,729 products, 128,582 links
+Spearman PageRank vs degree +0.839; eigenvector vs degree +0.746
+
+TOP 15 by pagerank:
+  Health_and_Househo Amazon Basics 36-Pack AA Alkaline High-Performance Batt  (degree 3946)
+  Health_and_Househo Amazon Basics 20-Pack AAA Alkaline High-Performance Bat  (degree 3521)
+  Health_and_Househo Healing Solutions 10ml Oils - Cassia Essential Oil - 0.  (degree 2933)
+  Health_and_Househo Sun Essential Oils 2oz - Cedarwood Essential Oil - 2 Fl  (degree 2173)
+  Health_and_Househo Penetrex Joint & Muscle Therapy – 2oz Cream – Intensive  (degree 1869)
+  Health_and_Househo Kleenex Ultra Soft Facial Tissues, 1 Cube Box, 60 Tissu  (degree 1903)
+  Pet_Supplies       Dr. Elsey's Precious Cat Ultra Cat Litter, 18 pound bag  (degree 1663)
+  Health_and_Househo Glad® ForceFlex Tall Kitchen Drawstring Trash Bags – 13  (degree 1668)
+  Pet_Supplies       GREENIES Original Petite Natural Dental Care Dog Treats  (degree 1486)
+  Health_and_Househo Energizer CR2032 Batteries, 3V Lithium Coin Cell 2032 W  (degree 1370)
+  Health_and_Househo Plant Therapy Rosemary Essential Oil 100% Pure, Undilut  (degree 1150)
+  Pet_Supplies       Purina Fancy Feast Wet Cat Food, Medleys Tender Turkey   (degree 1165)
+  Health_and_Househo Etekcity Digital Body Weight Bathroom Scale with Step-O  (degree 1252)
+  Pet_Supplies       Medium Dog Crate | MidWest Life Stages 30" Folding Meta  (degree 1040)
+  Pet_Supplies       Temptations Classic Crunchy & Soft Cat Treats Shrimpy S  (degree 1071)
+
+TOP 15 by eigen:
+  Health_and_Househo Amazon Basics 36-Pack AA Alkaline High-Performance Batt  (degree 3946)
+  Health_and_Househo Amazon Basics 20-Pack AAA Alkaline High-Performance Bat  (degree 3521)
+  Health_and_Househo Healing Solutions 10ml Oils - Cassia Essential Oil - 0.  (degree 2933)
+  Health_and_Househo Kleenex Ultra Soft Facial Tissues, 1 Cube Box, 60 Tissu  (degree 1903)
+  Health_and_Househo Glad® ForceFlex Tall Kitchen Drawstring Trash Bags – 13  (degree 1668)
+  Health_and_Househo Sun Essential Oils 2oz - Cedarwood Essential Oil - 2 Fl  (degree 2173)
+  Health_and_Househo Amazon Basics 8-Pack 9 Volt Alkaline Performance All-Pu  (degree 723)
+  Pet_Supplies       Dr. Elsey's Precious Cat Ultra Cat Litter, 18 pound bag  (degree 1663)
+  Health_and_Househo Penetrex Joint & Muscle Therapy – 2oz Cream – Intensive  (degree 1869)
+  Health_and_Househo Energizer CR2032 Batteries, 3V Lithium Coin Cell 2032 W  (degree 1370)
+  Pet_Supplies       Purina Fancy Feast Wet Cat Food, Medleys Tender Turkey   (degree 1165)
+  Health_and_Househo Dawn Ultra Dishwashing Liquid Dish Soap, Original Scent  (degree 991)
+  Pet_Supplies       Temptations Classic Crunchy & Soft Cat Treats Shrimpy S  (degree 1071)
+  Health_and_Househo Affresh Washing Machine Cleaner, Cleans Front Load and   (degree 1137)
+  Health_and_Househo Etekcity Digital Body Weight Bathroom Scale with Step-O  (degree 1252)
+
+HUBS BEYOND THEIR DEGREE (highest PageRank residual, degree >= 10):
+  Health_and_Househo Amazon Basics 36-Pack AA Alkaline High-Performance Batt  (degree 3946, residual +2.16)
+  Health_and_Househo Amazon Basics 20-Pack AAA Alkaline High-Performance Bat  (degree 3521, residual +2.07)
+  Health_and_Househo Healing Solutions 10ml Oils - Cassia Essential Oil - 0.  (degree 2933, residual +2.02)
+  Health_and_Househo Sun Essential Oils 2oz - Cedarwood Essential Oil - 2 Fl  (degree 2173, residual +1.81)
+  Health_and_Househo Penetrex Joint & Muscle Therapy – 2oz Cream – Intensive  (degree 1869, residual +1.73)
+  Pet_Supplies       ZuPreem Smart Selects Bird Food for Medium Birds, 2.5 l  (degree 74, residual +1.70)
+  Pet_Supplies       Dr. Elsey's Precious Cat Ultra Cat Litter, 18 pound bag  (degree 1663, residual +1.68)
+  Health_and_Househo Kleenex Ultra Soft Facial Tissues, 1 Cube Box, 60 Tissu  (degree 1903, residual +1.66)
+  Pet_Supplies       GREENIES Original Petite Natural Dental Care Dog Treats  (degree 1486, residual +1.61)
+  Health_and_Househo Glad® ForceFlex Tall Kitchen Drawstring Trash Bags – 13  (degree 1668, residual +1.54)
+  Health_and_Househo Plant Therapy Rosemary Essential Oil 100% Pure, Undilut  (degree 1150, residual +1.54)
+  Grocery            Walden Farms Whipped Peanut Spread, Fat and Calorie Fre  (degree 12, residual +1.50)
+
+share of the top-100 PageRank products by department: {'Health_and_Household': 48, 'Pet_Supplies': 30, 'Grocery': 21, 'Baby_Products': 1}
+groceries: top-100 PageRank among groceries, NOVA-4 share 0.72 vs all network groceries 0.70

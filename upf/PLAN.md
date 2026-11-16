@@ -317,3 +317,13 @@ HUBS (week 3: eigenvector centrality, PageRank; exploratory). On the mixed produ
 H11 VALIDATING THE SENTIMENT INSTRUMENT (week 7: validate a sentiment measure; stars as labels). Random 200,000 grocery reviews of matched products with text and a star rating.
  Our measure = NRC VAD valence of the review (food words excluded, as used in the story). PREDICTION / BAR: AUC for telling 1-2 star from 4-5 star reviews >= 0.70, and Spearman(valence, stars) > 0.
  Benchmarks: shuffled stars (null, AUC ~ .5); EmoLex positive-minus-negative share; a TF-IDF + logistic regression classifier trained on 80% and tested on 20% (upper benchmark, week 7).
+RESULTS OF THE THREE (16 Nov; upf/notebooks/habits.py; data/processed/h11_validation.txt, h10_rich.txt, hubs.txt; upf/figures/rich_get_richer.png)
+ H11 SENTIMENT VALIDATION: PASSES. 200,000 random grocery reviews of matched products (5-star 67%). VAD valence vs stars Spearman +0.547; AUC 1-2 vs 4-5 stars 0.886 (bar 0.70); EmoLex pos-neg 0.801;
+  shuffled stars 0.500; TF-IDF + logistic regression (held-out) 0.988 = upper benchmark. Mean valence by stars 1..5: .058/.125/.168/.258/.337.
+  Failure modes read: negation ('Not happy', 'Not tasty' score high), non-English reviews. Our valence measure is a valid but blunt instrument; the classifier catches negation ('not good', 'not worth').
+ H10 RICH GET RICHER: SUPPORTED. 253,995 grocery products with reviews before 2018; 1,002,240 new reviews in 2018 (61% of products got none). Attachment exponent alpha 0.925 (95% CI 0.910-0.936), uniform null 0.000:
+  near-linear (slightly sublinear) preferential attachment. Review counts heavy-tailed: 28% of products >= 10 reviews, 4% >= 100, 0.23% >= 1,000, max 36,707.
+  Exploratory: alpha NOVA 4 .898 vs NOVA 1-3 .845. Caveat: 'fit get richer' (better products both had and get more reviews) is not separated from pure popularity; discontinued products also stop gaining.
+ HUBS (exploratory): PageRank vs degree Spearman +0.84 (eigenvector +0.75): hubs are mostly the high-degree products. Top hubs are everyday staples, not food: Amazon Basics AA/AAA batteries,
+  essential oils (cassia, cedarwood, rosemary), Kleenex, Glad trash bags, Penetrex pain cream, Dr. Elsey's cat litter, Greenies dog treats, Fancy Feast, a bathroom scale. Top-100 PageRank: Health & Household 48, Pet 30, Grocery 21, Baby 1.
+  Groceries among the top-100 grocery hubs are NOVA 4 at .72 vs .70 for all network groceries: hubs are not especially ultra-processed. Beyond-degree hubs include a bird food (degree 74) and a calorie-free peanut spread (degree 12).
