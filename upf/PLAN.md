@@ -306,3 +306,14 @@ H8/H9 RESULTS (16 Nov; upf/notebooks/elsewhere.py; data/processed/elsewhere_resu
  READING: the purity-and-certification vocabulary follows the less processed shoppers into supplements and wellness products; the ultra-processed shoppers' other products are family, kids and household
   goods sold on practicality, and they write warmer, gift-and-family reviews. Marketing pleasantness itself does not differ (H8 null).
  Mixed-network communities now have product names (e.g. 0 supplements + health foods; 6 Pampers, Play-Doh, Melissa & Doug; 7 video games; 9 camping/emergency; 10 board games + gummy vitamins; 13 Beyond Meat, Gardein, Oatly).
+
+## THREE MORE (16 Nov, user picks from the course list) -- PRE-DECLARED before running
+H10 RICH GET RICHER (week 2: preferential attachment). Grocery products (all Amazon grocery items). k0 = reviews a product had before 2018-01-01 (k0 >= 1); dk = new reviews during 2018.
+ Measured attachment Pi(k) = mean dk among products with k0 = k (log bins); fit log(mean dk) = a + alpha*log(k). PREDICTION: alpha > 0 (popular products attract more new reviews); report whether
+ alpha is near 1 (linear, as in the Barabasi-Albert model) or below 1 (sublinear). 95% CI by bootstrap over products (1,000). Null: the same number of 2018 reviews spread uniformly over products -> alpha 0.
+ Also: the review-count distribution (CCDF, log-log). Exploratory: alpha for NOVA-4 vs NOVA 1-3 matched products.
+HUBS (week 3: eigenvector centrality, PageRank; exploratory). On the mixed product network backbone (16,729 products): PageRank (weighted, alpha .85) and eigenvector centrality; top hubs by name;
+ 'compared to what': Spearman with degree, and the products with the highest PageRank relative to their degree (residual of log PageRank on log degree).
+H11 VALIDATING THE SENTIMENT INSTRUMENT (week 7: validate a sentiment measure; stars as labels). Random 200,000 grocery reviews of matched products with text and a star rating.
+ Our measure = NRC VAD valence of the review (food words excluded, as used in the story). PREDICTION / BAR: AUC for telling 1-2 star from 4-5 star reviews >= 0.70, and Spearman(valence, stars) > 0.
+ Benchmarks: shuffled stars (null, AUC ~ .5); EmoLex positive-minus-negative share; a TF-IDF + logistic regression classifier trained on 80% and tested on 20% (upper benchmark, week 7).
