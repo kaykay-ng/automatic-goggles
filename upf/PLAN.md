@@ -347,3 +347,9 @@ Sample: 20,000 random reviews from the H11 validation draw (grocery reviews of m
 Yelp score = mean of unigram scores, with tokens inside a negated context (from a negator such as not/no/never/n't to the next punctuation) looked up as their negated entry; bigram variant reported too.
 Reference on the SAME 20,000: our NRC VAD valence (AUC .886 on the full 200k). Decision rule: prefer Yelp only if AUC is >= 0.02 higher; note that Yelp scores were learned from review stars (partly circular).
 Also: what Yelp gives 'treat', 'hot', 'sweet', 'not happy' (the known failures).
+YELP PILOT RESULT (16 Nov; upf/notebooks/yelp_pilot.py; data/processed/yelp_pilot.txt; lexicon 2,191,177 B in upf/data/raw/nrc/yelp/, gitignored):
+ Same 20,000 reviews (18,770 with 1-2 or 4-5 stars): NRC VAD valence AUC .889, Spearman +.550; Yelp unigrams AUC .950, +.658; Yelp unigrams+bigrams AUC .964, +.683. Coverage: Yelp scores 94% of tokens.
+ Decision rule (>= .02 better) MET: Yelp (unigrams+bigrams) is the better review-sentiment instrument. Caveat: learned from Yelp review stars (partly circular), restaurant domain; scores are PMI differences (unbounded), not -1..1.
+ Fixes the known failures: 'Not happy' Yelp -1.47 (VAD +0.98), 'Not tasty' -2.31 (VAD +0.92), 'treat' +0.92 (positive, unlike EmoLex), 'stale' -2.57, 'arrived broken' -0.90.
+ Remaining errors are mostly label noise: 1-star reviews that read positive ('Great. Can't miss with skippy').
+ Implication: review-side results (H9 review valence elsewhere, A1-H3 promise-experience gap, review emotion comparisons) were measured with the weaker instrument; marketing copy stays on VAD (Yelp is review language).

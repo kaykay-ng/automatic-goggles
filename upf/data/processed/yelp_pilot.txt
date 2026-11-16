@@ -1,0 +1,19 @@
+pilot sample 20,000 reviews (of the 200,000 H11 draw); 1-2 vs 4-5 star reviews used for AUC: 18,770
+  vad        : AUC 0.889 | Spearman with stars +0.550 | reviews scored 99.8%
+  yelp_uni   : AUC 0.950 | Spearman with stars +0.658 | reviews scored 100.0%
+  yelp_unibi : AUC 0.964 | Spearman with stars +0.683 | reviews scored 100.0%
+  coverage: Yelp unigrams score 94% of tokens on average
+
+how Yelp scores the known problem words: {'treat': 0.92, 'hot': 0.434, 'sweet': 0.658, 'happy': 0.825, 'happy_NEGFIRST': -1.501, 'good_NEGFIRST': -2.117, 'bad_NEGFIRST': -0.468, 'disappointed': -1.683, 'chocolate': 1.056, 'broken': -1.008, 'stale': -2.57, 'bland': -2.224}
+   'Not happy with the product.'    Yelp -1.47 | VAD +0.98
+   'Not tasty'                      Yelp -2.31 | VAD +0.92
+   'Not bad at all'                 Yelp -0.17 | VAD -0.25
+   'Great morning treat'            Yelp +0.94 | VAD +0.48
+   'hot sauce is great'             Yelp +0.86 | VAD +0.46
+   'arrived broken'                 Yelp -0.90 | VAD -0.27
+
+1-2 star reviews Yelp still scores most positive:
+    1.39 | Great. Can't miss with skippy
+    0.77 | delicious and easy to make. Addicted to this soup
+    0.62 | poor assortment of nuts. mostly almonds , maybe ten pecans and pistachios .
+    0.62 | Prefer honey only. And i love coconut, just not in the almond butter.. I am a HUGE fan of coconut, but not in almond butter. Prefer just hon
