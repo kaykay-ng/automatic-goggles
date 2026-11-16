@@ -333,3 +333,10 @@ RESULTS OF THE THREE (16 Nov; upf/notebooks/habits.py; data/processed/h11_valida
   Means NOVA 1/2/3/4: valence .267/.252/.263/.280; arousal -.137/-.135/-.124/-.116; dominance .062/.070/.048/.031. Spearman: V-A .14, V-D .34, A-D .42.
   Within category (25 categories, 29,822 listings, 2,000 shuffles): valence +0.0135 (p=.0005), arousal +0.0099 (p=.0005), DOMINANCE -0.0180 (p=.0005; descriptive, not pre-declared):
   ultra-processed copy is slightly more pleasant and more exciting but LESS 'in control' (dominance = powerful/in-control vs weak/no control). All shifts small; the distributions overlap almost completely.
+- 16 Nov: DRIVERS of arousal and dominance (upf/notebooks/vad_drivers.py; category-balanced, 10,255 listings per side, 25 categories; descriptive):
+  DOMINANCE (balanced difference -0.014): less processed copy is pulled UP by authority/control words: certified (+.61; 5.8 vs 3.1 per 1k), healthy, Non-GMO 'project', best, most, pure, verified, world, all,
+   and the brand voice 'we' (9.6 vs 6.7 per 1k: smaller makers speaking as 'we'). Ultra-processed copy is pulled DOWN by sensory/portion/convenience words with low dominance: flavor, snack, box, cup, gram, easy, creamy.
+   Partly offset: ultra-processed copy uses more perfect, great, real, your, enjoy, favorite, ready (positive-dominance pleasure words) and fewer low-dominance purity words (kosher, vegan, simple).
+  AROUSAL (balanced difference +0.011): about half because PURITY words are CALM (organic -.31 is the largest single contributor; also non[-GMO], vegan, simple, ingredient, healthy, pure),
+   half because PLEASURE words are EXCITING (delicious, bite, enjoy, tasty, fun, up); calm convenience words (easy, box, pack, baked, minute, classic) pull the other way.
+  READING: confirms the pleasure-vs-purity reading for all three dimensions; 'dominance' here = authority/certification vs portions/sensations, not hard-selling.
