@@ -192,11 +192,32 @@ footer { border-top: 1px solid var(--rule); margin-top: 3rem; padding-top: 1rem 
   </figure>
   <p>The ultra-processed side of the network is also the games-and-toys side. Its reviewers are about 4 to 5 points more likely to review video games and toys, and about as much less likely to review sports gear and household health products. Baby products show no difference. These are review habits of pseudonymous accounts, not household profiles, and the gaps are modest. They do suggest that processing level is part of a wider way of shopping.</p>
 
+  <h2>Purity travels, pleasure stays home</h2>
+  <p>Does the pleasure language follow ultra-processed shoppers into other aisles? It does not. The toys, pet supplies and household goods they review are marketed just as pleasantly as the ones the other group reviews; across 1.6 million reviews in seven departments the gap is zero (every department within ±0.006 on the −1 to +1 scale).</p>
+  <p>The <span class="pu">purity</span> vocabulary does travel. Comparing the marketing copy of non-food products that lean towards each group, the less processed shoppers' side reads <i>non-GMO, potency, no fillers, no preservatives, USDA, tested</i>: chlorella, organic cinnamon capsules, vitamins. The <span class="pl">ultra-processed</span> shoppers' side reads <i>durable, comfortable, portable, stains, birthday, holiday</i>: baby wash, kids' paint books, batteries, a potty.</p>
+  <p>And they write differently. Ultra-processed shoppers' reviews in other departments are warmer (+0.011 on the same scale, higher in six of seven departments) and full of <i>love, perfect, gift, fun, daughter, birthday</i>. The other group writes about <i>weight, stomach, gut, effective, formula</i>.</p>
+
+  <div class="callout" style="border-left-color:var(--purity)">
+    <h3>Can we trust the pleasantness score?</h3>
+    <p style="margin:0">We checked it against star ratings on 200,000 grocery reviews. Average pleasantness climbs with every star, from 0.06 at one star to 0.34 at five, and the score tells one- and two-star reviews from four- and five-star reviews apart 89% of the time (AUC 0.89; shuffled stars give 0.50). A classifier trained on the stars does better (0.99), mainly because it understands "not": our word list scores "Not happy" as happy.</p>
+  </div>
+
+  <h2>The rich get richer</h2>
+  <p>A grocery product with one review before 2018 gained 0.4 new reviews during 2018. One with about a thousand gained about 190. Plot one against the other on log scales and the points fall on a line with slope 0.93: attention is handed out almost exactly in proportion to the attention a product already has. That is the mechanism behind the heavy tail. Most of the 600,000 grocery listings have a handful of reviews; 0.2% have more than a thousand.</p>
+  <figure>
+    <div class="chartbox" id="rich"></div>
+    <figcaption>Each dot: products grouped by how many reviews they had before 2018, against their average number of new reviews in 2018 (253,995 products). Line: fitted slope 0.93 (95% interval 0.91–0.94). If new reviews landed at random the slope would be 0. Popularity and quality cannot be separated here: good products may simply keep earning reviews.</figcaption>
+  </figure>
+
+  <h2>The hubs are not food</h2>
+  <p>Which products hold the shopping network together? We ranked products by PageRank, the measure that rewards being linked to other well-linked products. The top of the list is everyday staples: Amazon Basics AA and AAA batteries, essential oils, tissues, trash bags, cat litter, dog dental treats, a pain cream. Of the top 100, 48 are household goods, 30 pet supplies and 21 groceries, and those grocery hubs are no more ultra-processed than groceries in general (72% against 70%).</p>
+
   <h2>What did not hold up</h2>
   <ul class="held">
     <li><b>"Sold on joy."</b> Counting joy words in marketing copy gave a small difference that vanished on our most reliable matches. The pleasantness score held; the joy count did not.</li>
     <li><b>Anger, disgust and fear in reviews.</b> Mostly the word <i>treat</i>. See above.</li>
     <li><b>Trust words in marketing.</b> No reliable difference.</li>
+    <li><b>Pleasure everywhere.</b> We expected ultra-processed shoppers' other purchases to be marketed more pleasantly too. They are not.</li>
     <li><b>Promise versus experience, measured with emotion categories.</b> No difference. Measured with pleasantness, the gap between sunny copy and plain reviews is wider for ultra-processed food (+0.009), but small.</li>
   </ul>
 
@@ -292,6 +313,27 @@ footer { border-top: 1px solid var(--rule); margin-top: 3rem; padding-top: 1rem 
       <span style="position:absolute;top:.2rem;width:1rem;height:1rem;border-radius:50%;background:var(--purity);left:calc(${o}% - .5rem)" title="at most half ultra-processed: ${o}%"></span>
       <span style="position:absolute;top:.2rem;width:1rem;height:1rem;border-radius:50%;background:var(--pleasure);left:calc(${u}% - .5rem);opacity:.9" title="all ultra-processed: ${u}%"></span></div></div>`); });
   cr.insertAdjacentHTML("beforeend", `<div class="legend"><span><span class="dot" style="background:var(--pleasure)"></span>all grocery reviews ultra-processed</span><span><span class="dot" style="background:var(--purity)"></span>at most half</span><span>scale: 0 to 100%</span></div>`);
+
+  // rich-get-richer chart (log-log)
+  const RICH = { pts: [[1.0, 0.431], [2.37, 0.926], [4.0, 1.444], [5.83, 1.905], [9.69, 3.033], [15.21, 4.429], [22.93, 6.362], [35.62, 8.987], [54.56, 12.747], [83.17, 20.262], [126.3, 29.046], [191.99, 43.021], [294.31, 72.817], [449.99, 113.772], [677.86, 161.869], [1034.14, 192.556], [1591.39, 430.571], [2487.85, 606.879]], slope: 0.925, icpt: -0.988 };
+  function drawRich() {
+    const box = document.getElementById("rich"); box.querySelectorAll("svg").forEach(s => s.remove());
+    const Wd = Math.max(320, Math.min(640, box.clientWidth - 16)), H = Math.round(Wd * 0.62), m = { l: 52, r: 14, t: 12, b: 40 };
+    const X = v => m.l + (Math.log10(v) - 0) / (Math.log10(3000) - 0) * (Wd - m.l - m.r), Y = v => H - m.b - (Math.log10(v) + 1) / (Math.log10(1000) + 1) * (H - m.t - m.b);
+    const svg = document.createElementNS(NS, "svg"); svg.setAttribute("viewBox", `0 0 ${Wd} ${H}`); svg.setAttribute("width", Wd); svg.setAttribute("height", H);
+    const add = (t, a) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); svg.appendChild(e); return e; };
+    [1, 10, 100, 1000].forEach(v => { add("line", { x1: X(v), x2: X(v), y1: m.t, y2: H - m.b, stroke: css("--faint") }); add("text", { x: X(v), y: H - m.b + 16, "text-anchor": "middle" }).textContent = v; });
+    [0.1, 1, 10, 100, 1000].forEach(v => { add("line", { y1: Y(v), y2: Y(v), x1: m.l, x2: Wd - m.r, stroke: css("--faint") }); add("text", { x: m.l - 6, y: Y(v) + 4, "text-anchor": "end" }).textContent = v; });
+    const f = v => Math.exp(RICH.icpt) * Math.pow(v, RICH.slope);
+    add("line", { x1: X(1), y1: Y(f(1)), x2: X(2500), y2: Y(f(2500)), stroke: css("--ink"), "stroke-width": 1.2 });
+    RICH.pts.forEach(([k, d]) => add("circle", { cx: X(k), cy: Y(d), r: 4.5, fill: css("--pleasure") }));
+    add("text", { x: (Wd + m.l) / 2, y: H - 6, "text-anchor": "middle" }).textContent = "reviews before 2018";
+    add("text", { x: 14, y: (H - m.b + m.t) / 2, "text-anchor": "middle", transform: `rotate(-90 14 ${(H - m.b + m.t) / 2})` }).textContent = "new reviews in 2018";
+    box.appendChild(svg);
+  }
+  drawRich(); window.addEventListener("resize", () => setTimeout(drawRich, 160));
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", drawRich);
+  new MutationObserver(drawRich).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 
   drawWords(null); drawNet();
   let t; window.addEventListener("resize", () => { clearTimeout(t); t = setTimeout(() => drawWords(ws.value.trim().toLowerCase() || null), 150); });
