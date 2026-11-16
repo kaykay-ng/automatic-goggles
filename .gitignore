@@ -32,3 +32,4 @@ upf/data/raw/nrc/
 upf/data/processed/emotion_top_words.csv
 upf/data/processed/amazon_meta_compact.csv.gz
 upf/data/processed/soj/
+upf/data/processed/cj/

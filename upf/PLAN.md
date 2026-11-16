@@ -269,3 +269,13 @@ TYPE-LEVEL BRIDGE + HOUSEHOLD TESTS -- PRE-DECLARED 16 Nov before any match or h
  H7b estimated UPF share DECREASES with income (Spearman across the ordered income bands, one-sided; permutation 5,000). Holm over 2. Sample: the 801 households with demographics.
  Exploratory: private-label vs national-brand share; household similarity network (cosine of type profiles) and its communities vs income/kids/UPF share.
  Caveats to state: within-type variation lost; one retailer's frequent shoppers; reference shares come from what Open Food Facts volunteers scanned.
+BRIDGE + H7 RESULTS (16 Nov; upf/notebooks/cj_bridge.py; data/processed/cj/ gitignored; pyreadr used to read the R files)
+ 2,012 food product types; 499 Open Food Facts reference categories (>= 30 US NOVA products); 1,756 types matched (cosine >= .50; quartiles .57/.64/.71).
+ HAND-CHECK of 40 matched types: 27 sensible (68%). Misses: non-food types filed under GROCERY (bird seed, cleaners, 'kites', supplements), wrong food class (baby food -> crackers,
+  fresh papaya -> dried mangoes, fresh cranberries -> dried cranberries, creamer -> dairy drinks, fruit tray -> sandwiches, vegetarian meats -> frozen meats, honey -> condiments), a nonsense type ('condiments: covergirl').
+ Household estimates: 1,280,373 food purchase lines, 91% matched; 2,463 households; estimated UPF share mean .632 (quartiles .589/.631/.673).
+ H7a kids (288 households) vs none (513): .633 vs .619, +0.0145, one-sided p=.0002, Holm .0004: SUPPORTED (small).
+ H7b income: Spearman -0.190 (n=801), one-sided p=.0002, Holm .0004: SUPPORTED. Band means fall from about .64 (15-34K) to about .58-.60 (150K+); 'Under 15K' .625.
+ EXPLORATORY robustness (not pre-declared): only types with cosine >= .65 (954 types, 54% of lines): kids +0.014, income Spearman -0.173; cosine >= .75 (321 types, 21% of lines): kids +0.024, income -0.208. Holds.
+ Exploratory: private-label share vs estimated UPF share Spearman +0.085.
+ READING: households with children and lower-income households buy baskets whose product TYPES are more often ultra-processed; small effects; type-level estimate (within-type variation lost); one retailer's frequent shoppers.
