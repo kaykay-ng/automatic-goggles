@@ -282,3 +282,13 @@ BRIDGE + H7 RESULTS (16 Nov; upf/notebooks/cj_bridge.py; data/processed/cj/ giti
 DECISION (16 Nov, user): DROP the Complete Journey type-level link and the household income/children analysis from the story -- the type link loses too much nuance (68% sensible matches,
  within-type variation lost) and income/households do not add to the story. Results above stay on record, not to be cited. Focus instead: WHAT ELSE PEOPLE BUY (review) WHEN THEY BUY FOOD,
  with marketing VALENCE of those other products and the SENTIMENT of reviews across departments.
+
+## WHAT ELSE DO FOOD SHOPPERS BUY, HOW IS IT SOLD, HOW DO THEY FEEL? -- PRE-DECLARED 16 Nov, before the metadata files were downloaded
+Groups as in H5: reviewers with >= 3 reviews of matched groceries; ALL-UPF (share 1.0) vs MOSTLY-NOT (<= 0.5). Their reviews in the 7 departments (Video Games, Toys & Games, Sports & Outdoors, Health & Household,
+ Baby, Pet Supplies, Health & Personal Care). Marketing copy = product features + description from the department metadata (>= 10 words). Valence = NRC VAD v2.1 mean over lexicon words (scale -1..1),
+ ingredient-name words excluded as before. Comparisons are WITHIN department: per reviewer and department, the mean over their reviews; group difference per department weighted by number of reviewers;
+ p from 2,000 shuffles of group labels within activity strata (3, 4, 5-9, 10+ matched grocery reviews).
+ H8 PLEASURE EVERYWHERE: non-food products reviewed by ALL-UPF reviewers have HIGHER marketing valence than those reviewed by MOSTLY-NOT reviewers in the same department (one-sided).
+ H9 HOW THEY WRITE: the valence of the reviews ALL-UPF reviewers write in other departments DIFFERS from MOSTLY-NOT reviewers' (two-sided). Star ratings reported alongside (descriptive).
+ Holm over H8, H9. Descriptive: per-department breakdown; EmoLex emotions of these reviews (with the 'treat'-type artefact reading); a category-balanced log-odds word plot of the marketing copy of
+ products that lean ALL-UPF vs lean MOSTLY-NOT (lean = share of a product's group reviewers who are ALL-UPF), and product names for the mixed-network communities.
