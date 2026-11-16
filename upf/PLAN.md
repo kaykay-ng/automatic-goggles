@@ -250,3 +250,12 @@ MIXED NETWORK RESULTS (16 Nov; upf/notebooks/mixed_network.py; data/processed/mi
   video games; aquarium; emergency/camping food (sports + grocery, .71); GUMMY VITAMINS + GAMES (H&H + toys + grocery, .80); birds; small pets; VEGAN meat/cheese substitutes (76 groceries, .93).
  Reading: the network is organised mainly by department and by pet; the grocery side splits into a household-health cluster where only half the groceries are ultra-processed vs snack and pantry clusters at ~.77-.79.
  H6 (pre-declared): mean UPF lean of non-food neighbours, games/toys .756 vs sports/household .569, difference +0.187 vs null mean +0.142, one-sided p=.028 -> nominally SUPPORTED but WEAK: only 18 games/toys products have >= 3 grocery neighbours (828 sports/household).
+
+## THE COMPLETE JOURNEY (16 Nov; 84.51 deg / dunnhumby via the completejourney R package, CC0; downloaded to upf/data/raw/completejourney/, gitignored; read with pyreadr 0.5.9, newly installed in .venv-nlp)
+Files: transactions.rds 12,775,661 B; products.rda 869,019; demographics.rda 4,237; coupons.rda 324,969; coupon_redemptions.rda 8,370; campaigns.rda 8,264; campaign_descriptions.rda 496 (promotions.rds 25 MB skipped).
+Profile: 1,469,307 transaction lines, 2,469 households, 155,848 baskets, 68,509 distinct products bought, 2017-01-01 to 2018-01-01. Demographics for 801 households (age, income, home ownership, marital status, size, composition, kids).
+ Products (92,331): department (32), brand (National / Private), product_category (303), product_type (2,378, e.g. 'KIDS CEREAL', 'WAFFLES/PANCAKES/FRENCH TOAST'), package size. NO product barcode.
+ coupons.coupon_upc is the COUPON's code (one coupon covers many product_ids), not a product barcode.
+LINKING CONSTRAINT: no product-level link to Amazon or Open Food Facts is possible. Only a TYPE-level bridge: map each product type to Open Food Facts categories (embedding cosine between type names and
+ category names, hand-checked) -> typical NOVA-4 share per type -> estimated ultra-processed share of each household's basket; optionally attach the Amazon pleasure/purity vocabulary per category.
+ Within-type variation is lost (an organic and a sugary kids cereal get the same type). Not decided yet whether to link or to analyse Complete Journey on its own.
