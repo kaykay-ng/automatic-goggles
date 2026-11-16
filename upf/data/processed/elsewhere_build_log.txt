@@ -1,0 +1,15 @@
+  Video_Games               : 44,050 reviews by the two groups
+  Toys_and_Games            : 217,026 reviews by the two groups
+  Sports_and_Outdoors       : 225,778 reviews by the two groups
+  Health_and_Household      : 698,092 reviews by the two groups
+  Baby_Products             : 74,323 reviews by the two groups
+  Pet_Supplies              : 322,068 reviews by the two groups
+  Health_and_Personal_Care  : 12,290 reviews by the two groups
+  meta Video_Games: 17,489 products so far
+  meta Toys_and_Games: 121,490 products so far
+  meta Sports_and_Outdoors: 235,029 products so far
+  meta Health_and_Household: 407,088 products so far
+  meta Baby_Products: 434,383 products so far
+  meta Pet_Supplies: 516,092 products so far
+  meta Health_and_Personal_Care: 522,961 products so far
+reviews 1,593,627; products reviewed 522,958; metadata rows 522,961

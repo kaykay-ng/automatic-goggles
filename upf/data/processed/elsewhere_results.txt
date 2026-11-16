@@ -1,0 +1,55 @@
+reviews by the two groups in other departments: 1,593,627; with marketing valence 95%; with review valence 100%
+
+H8 marketing valence of reviewed products (ALL-UPF higher): difference -0.0008 (valence units, -1..1), null mean -0.0002, p = 0.9965
+    Baby_Products              ALL-UPF +0.221 (n 9,626) vs MOSTLY-NOT +0.218 (n 11,134): +0.0032
+    Health_and_Household       ALL-UPF +0.195 (n 31,694) vs MOSTLY-NOT +0.200 (n 36,682): -0.0052
+    Pet_Supplies               ALL-UPF +0.226 (n 20,425) vs MOSTLY-NOT +0.225 (n 22,608): +0.0012
+    Sports_and_Outdoors        ALL-UPF +0.199 (n 20,975) vs MOSTLY-NOT +0.198 (n 25,220): +0.0008
+    Toys_and_Games             ALL-UPF +0.257 (n 18,787) vs MOSTLY-NOT +0.257 (n 19,052): +0.0001
+    Video_Games                ALL-UPF +0.234 (n 7,055) vs MOSTLY-NOT +0.232 (n 6,310): +0.0021
+    Health_and_Personal_Care   ALL-UPF +0.185 (n 1,923) vs MOSTLY-NOT +0.191 (n 3,175): -0.0060
+
+H9 valence of their own reviews (two-sided): difference +0.0109 (valence units, -1..1), null mean +0.0000, p = 0.0005
+    Baby_Products              ALL-UPF +0.259 (n 9,938) vs MOSTLY-NOT +0.246 (n 11,496): +0.0132
+    Health_and_Household       ALL-UPF +0.235 (n 31,916) vs MOSTLY-NOT +0.227 (n 36,882): +0.0084
+    Pet_Supplies               ALL-UPF +0.232 (n 20,683) vs MOSTLY-NOT +0.223 (n 22,857): +0.0091
+    Sports_and_Outdoors        ALL-UPF +0.246 (n 21,646) vs MOSTLY-NOT +0.233 (n 25,861): +0.0131
+    Toys_and_Games             ALL-UPF +0.297 (n 19,125) vs MOSTLY-NOT +0.284 (n 19,403): +0.0133
+    Video_Games                ALL-UPF +0.273 (n 7,322) vs MOSTLY-NOT +0.255 (n 6,584): +0.0179
+    Health_and_Personal_Care   ALL-UPF +0.220 (n 3,673) vs MOSTLY-NOT +0.219 (n 5,447): +0.0006
+
+Holm: {'H8 ': np.float64(0.9965), 'H9 ': np.float64(0.001)}
+star ratings (mean) by department: {'Baby_Products': {'ALL-UPF': 4.4, 'MOSTLY-NOT': 4.34}, 'Health_and_Household': {'ALL-UPF': 4.34, 'MOSTLY-NOT': 4.31}, 'Health_and_Personal_Care': {'ALL-UPF': 4.15, 'MOSTLY-NOT': 4.18}, 'Pet_Supplies': {'ALL-UPF': 4.24, 'MOSTLY-NOT': 4.24}, 'Sports_and_Outdoors': {'ALL-UPF': 4.38, 'MOSTLY-NOT': 4.34}, 'Toys_and_Games': {'ALL-UPF': 4.46, 'MOSTLY-NOT': 4.42}, 'Video_Games': {'ALL-UPF': 4.18, 'MOSTLY-NOT': 4.15}}
+
+EMOTION WORDS in other-department reviews (per 10,000 words; ALL-UPF tokens 31,849,293, MOSTLY-NOT 54,672,388):
+  anger        total 111.7 vs 104.9 | most ALL-UPF: money 6.9/5.3, smell 10.9/9.9, treat 5.9/5.1, disappointed 2.8/2.2, fits 4.2/3.7, bad 5.9/5.5 | most MOSTLY-NOT: disease 0.3/0.5, cancer 0.3/0.5, feeling 1.6/1.8, resistance 0.5/0.6
+  anticipation total 279.0 vs 263.0 | most ALL-UPF: perfect 15.3/11.3, gift 9.1/6.4, money 6.9/5.3, fun 11.9/10.4, time 25.3/23.9, expected 4.7/3.7 | most MOSTLY-NOT: daily 2.5/3.1, result 2.3/2.8, cap 1.4/1.7, weight 4.6/4.9
+  disgust      total 98.6 vs 97.2 | most ALL-UPF: smell 10.9/9.9, treat 5.9/5.1, disappointed 2.8/2.2, waste 2.7/2.2, bad 5.9/5.5, toilet 1.7/1.5 | most MOSTLY-NOT: stomach 1.3/1.9, weight 4.6/4.9, gut 0.2/0.5, toxic 0.3/0.6
+  fear         total 123.9 vs 121.5 | most ALL-UPF: treat 5.9/5.1, broke 1.8/1.4, bad 5.9/5.5, broken 1.6/1.2, missing 1.1/0.9, crazy 1.3/1.1 | most MOSTLY-NOT: weight 4.6/4.9, avoid 0.7/1.0, disease 0.3/0.5, cancer 0.3/0.5
+  joy          total 319.8 vs 293.0 | most ALL-UPF: love 51.9/39.1, perfect 15.3/11.3, gift 9.1/6.4, money 6.9/5.3, fun 11.9/10.4, daughter 4.8/3.5 | most MOSTLY-NOT: food 10.8/12.1, helpful 1.6/2.0, excellent 6.8/7.2, smile 0.3/0.7
+  sadness      total 124.7 vs 121.4 | most ALL-UPF: treat 5.9/5.1, disappointed 2.8/2.2, broke 1.8/1.4, bad 5.9/5.5, broken 1.6/1.2, fall 2.3/2.1 | most MOSTLY-NOT: weight 4.6/4.9, disease 0.3/0.5, lower 1.5/1.7, cancer 0.3/0.5
+  surprise     total 148.0 vs 141.3 | most ALL-UPF: gift 9.1/6.4, money 6.9/5.3, treat 5.9/5.1, birthday 1.7/1.1, deal 3.6/3.1, pop 1.5/1.1 | most MOSTLY-NOT: smile 0.3/0.7, weight 4.6/4.9, pleasant 0.8/1.1, feeling 1.6/1.8
+  trust        total 332.4 vs 329.6 | most ALL-UPF: perfect 15.3/11.3, money 6.9/5.3, don 4.1/3.4, recommend 11.6/10.8, treat 5.9/5.1, durable 4.1/3.4 | most MOSTLY-NOT: food 10.8/12.1, effective 2.1/2.9, prefer 1.7/2.4, formula 0.7/1.2
+
+products with >= 5 group reviewers: 61,615; overall ALL-UPF share among group reviewers 0.48
+word plot: 15,552 products per side, balanced within 7 departments
+  words leaning to products of ALL-UPF reviewers: lasting (10.7), durable (10.6), material (10.2), bathroom (8.8), fabric (8.6), use (8.5), odors (8.4), clothes (8.2), comfortable (8.2), adjustable (8.1), birthday (7.7), disposable (7.7), minor (7.7), freshness (7.5), portable (7.5), machine (7.3), convenient (7.3), lightweight (7.1), handle (7.0), width (7.0), resistant (7.0), holiday (6.9), surfaces (6.9), polyester (6.8), aches (6.8), remover (6.7), large (6.7), stains (6.7), reusable (6.6), messes (6.5)
+  words leaning to products of MOSTLY-NOT reviewers: gmo (-24.8), soy (-19.7), dairy (-18.2), supports (-16.6), potency (-16.1), preservatives (-16.0), fillers (-16.0), artificial (-15.9), absorption (-14.3), benefits (-14.2), gmp (-14.1), antioxidant (-13.6), nutrient (-13.5), vegetarian (-13.4), usda (-13.1), facility (-13.1), digestion (-13.1), amino (-13.0), kosher (-12.9), acid (-12.8), capsules (-12.7), accordance (-12.6), recommendations (-12.2), arrive (-12.1), additives (-11.7), tested (-11.7), derived (-11.6), manufacturers (-11.4), verified (-11.3), non (-11.3)
+  top-leaning products (ALL-UPF): Baby Magic Hair and Body Wash, Original Baby  | Melissa & Doug Paint With Water Activity Book | Skylanders Trap Team: Triple Trap Pack: Air,  | GMS Optical® 2.5mm Anti-Slip Adhesive Contour | Baby Alive Powdered Doll Food - E0302 | KUNRO Round Storage Basket Coating Organizer  | Vitakraft Drops Rabbit Treat - Wild Berry - Y | Panasonic CR2025-4 CR2025 3V Lithium Coin Bat | Kenda K838 Slick Wire Bead Bicycle Tire, Blac | Ikea Lilla Children's Green Potty | Fisher-Price Octonauts Octo-Crew 8 Figure Pac | Bearington Baby Collection Lil’ Slugger Rattl
+  top-leaning products (MOSTLY-NOT): Mother Earth Products Dried Jalapeno Peppers, | Dr. Mercola, Fermented Chlorella Dietary Supp | Organic Ceylon Cinnamon (100% Certified) Supp | 365 by Whole Foods Market, Sustainably Soft F | BulkSupplements.com Pine Bark Extract Powder  | Garden of Life Mykind Organics Vitamin Once D | WellnessOne Ionic Zinc Liquid - Immune Suppor | Jarrow Formulas Evening Primrose 1300 mg - 60 | Ancient Minerals Magnesium Lotion of Pure Gen | NaturesPlus Source of Life Garden Certified O | Bone Dry DII Burlap Body Jungle Friends Squea | Do Vitamins PurePump - All-Natural Clean Pre-
+
+MIXED-NETWORK COMMUNITIES, example product names:
+   0: Optimum Nutrition Micronized Creatine Mo | Christmas Wreath Essential Oil Blend 100 | Jiva Organic Yellow Moong Dal 2 Pound -  | LÄRABAR Bluberry Muffin, Gluten Free Veg | Doctor's Best DRB-00107 High Absorption  | NOW Magnesium 400mg, 180 Veg Capsules
+   1: Downy Infusions Laundry Scent Booster Be | Duracell N 1.5V Alkaline Battery, 2 Coun | GoodSense Omeprazole Delayed Release Tab | Nature Made Extra Strength Vitamin C 100 | ihuan Ventilated Weight Lifting Gym Work | Sweet 'N Low Granulated Sugar Substitute
+   2: Outward Hound Nina Ottosson Dog Smart Or | VANFINE Dog Squeaky Toys Almost Indestru | IntelliLeash Intelli-Stayk with Special  | Perfect Coat White Pearl Shampoo For Dog | Furhaven Large Pillow Dog Bed Comfy Couc | Pet Tent-Soft Bed for Dog and Cat by Bes
+   3: Arm & Hammer Cat Litter Box with High Si | Blue Buffalo Freedom Grain Free Natural  | iPrimio Non-Stick Plated Stainless Steel | IVIA PET Food Can Lids, Universal BPA Fr | Pet Zone Fly By Spinner Butterfly Cat To | 9Lives Plus Care Dry Cat Food, 13.3 Lb (
+   4: Del Monte Canned Mandarin Oranges No Sug | Bicycle Dice, 10 Count (Six Sided, 16 mm | Westbrae Organic Stoneground Mustard No  | Dave's Killer Bread Good Seed Thin Slice | barkTHINS Dark Chocolate Almond and Sea  | 365 by Whole Foods Market, Bar Fruit Man
+   5: Woolite Damage Defense Liquid Laundry De | KIND Healthy Grains Bars, Maple Pumpkin  | Corn Chex Cereal, Gluten-Free Cereal, 12 | Sahale Snacks Maple Pecans Glazed Mix, 4 | Ziploc Quart Food Storage Slider Bags, P | Campbell's Homestyle New England Clam Ch
+   6: Melissa & Doug 20 Wooden Animal Magnets  | Pampers Easy Ups Training Pants Pull On  | Pampers Baby-Dry Disposable Diapers Size | Play-Doh Basic Fun Factory Shape Making  | Pampers Baby Wipes Tub, Sensitive - 64 W | NUK Infant/Baby Tooth and Gum Cleanser w
+   7: amFilm Tempered Glass Screen Protector f | NBA 2K14 - Xbox 360 | Pokémon Y | Tom Clancy's Splinter Cell Blacklist(XBo | Robinson: The Journey - PlayStation VR | Zensah Ankle Support - Compression Ankle
+   8: AquaClear Impeller Assembly for 110 Powe | Tetra Whisper Power Filter 10 Gallons, Q | Fluval BioMax Biological Material Remove | Marineland White Diamond 50 Ounces, Remo | AQUANEAT Aquarium Bio Sponge Filter Bree | Acurel F50 Millimeter Water Clarifier, A
+   9: HotHands Warmers (20 Pair) | Science Purchase-Emergency Mylar Thermal | TETON Sports Camping Cot with Patented P | Petsafe Extra Receiver Collar For Pif-30 | TOUGH-GRID Premium 750lb Paracord 100% N | B&M Bread Plain Brown, 16-Ounce (Pack of
+  10: CGE Czech Games Edition Codenames: Pictu | VitaFusion MultiVites Gummy Vitamins for | Gamewright Qwixx, Replacement Score Card | Aurora World 8" Llama | One a Day Women's Complete Multivitamin  | Catan Board Game (Base Game) | Family Bo
+  11: JW Pet Insight Sand Perch, Small, Assort | Kaytee Fiesta Cockatiel Pet Bird Food, 4 | JW Pet Comfy Perch For Birds Flexible Mu | Kaytee Avian Challenge Ladder, Medium Si | ZuPreem Smart Selects Bird Food for Medi | Zoo Med Mineral Block Original Formula B
+  12: Kaytee Food from The Wild Natural Snack  | Kaytee Lava Ledge for Attaching To Small | Carefresh 99% Dust-Free Natural Paper Sm | Prevue Hendryx 1097 Nature's Hideaway Gr | Kaytee Alfalfa Cubes for Rabbits, Guinea | Wild Harvest Advanced Nutrition Diet for
+  13: Gardein Plant-Based Sweet & Sour Porkles | Beyond Meat Beyond Sausage Plant-Based D | MIYOKO'S CREAMERY Organic Vegan Butter,  | 365 by Whole Foods Market, Vegetable Pot | Oatly Barista Oat Milk, 32 FZ | Violife, Cheese Alternative Colby Jack S

@@ -292,3 +292,17 @@ Groups as in H5: reviewers with >= 3 reviews of matched groceries; ALL-UPF (shar
  H9 HOW THEY WRITE: the valence of the reviews ALL-UPF reviewers write in other departments DIFFERS from MOSTLY-NOT reviewers' (two-sided). Star ratings reported alongside (descriptive).
  Holm over H8, H9. Descriptive: per-department breakdown; EmoLex emotions of these reviews (with the 'treat'-type artefact reading); a category-balanced log-odds word plot of the marketing copy of
  products that lean ALL-UPF vs lean MOSTLY-NOT (lean = share of a product's group reviewers who are ALL-UPF), and product names for the mixed-network communities.
+H8/H9 RESULTS (16 Nov; upf/notebooks/elsewhere.py; data/processed/elsewhere_results.txt, elsewhere_wordplot.csv; caches gitignored; metadata files downloaded, all gzip OK: 3.03 GB total)
+ 1,593,627 reviews by the two groups in the 7 departments; marketing valence for 95%. (A first run crashed after H8/H9 on a column named 'copy'; fixed, rerun identical for H8/H9.)
+ H8 PLEASURE EVERYWHERE: NOT SUPPORTED. Marketing valence of the non-food products ALL-UPF reviewers review vs MOSTLY-NOT: -0.0008 (null -0.0002), p=.997, Holm 1.0; every department within +-0.006.
+ H9 HOW THEY WRITE: SUPPORTED. ALL-UPF reviewers write warmer reviews in other departments: +0.011 valence (null 0.000), p=.0005, Holm .001; positive in 6/7 departments (Video Games +.018, Toys +.013, Sports +.013, Baby +.013, Pet +.009, H&H +.008; H&PC +.001).
+  Stars a little higher too (e.g. Toys 4.46 vs 4.42, Baby 4.40 vs 4.34; descriptive).
+ Emotion words (descriptive): ALL-UPF reviewers say love (51.9 vs 39.1 per 10k), perfect, gift, fun, daughter, birthday, money; also disappointed, bad, smell, broke(n). MOSTLY-NOT reviewers say health words:
+  weight, stomach, gut, disease, cancer, toxic, effective, formula, daily, result. 'treat' again inflates fear/sadness/disgust (artefact).
+ WORD PLOT of non-food marketing copy (products leaning ALL-UPF vs MOSTLY-NOT reviewers, top vs bottom quartile, balanced in 7 departments, 15,552 per side):
+  ALL-UPF side: durable, lasting, material, fabric, comfortable, adjustable, portable, convenient, lightweight, disposable, reusable, stains, odors, messes, birthday, holiday -> PRACTICAL / HOUSEHOLD / OCCASIONS.
+  MOSTLY-NOT side: non-GMO, soy, dairy, supports, potency, preservatives, fillers, artificial, absorption, antioxidant, USDA, kosher, vegetarian, capsules, tested, verified -> SUPPLEMENTS / PURITY / CERTIFICATION.
+  Top-leaning products: ALL-UPF baby wash, kids' paint books, Skylanders, doll food, batteries, potty; MOSTLY-NOT fermented chlorella, organic cinnamon supplement, vitamins, magnesium lotion.
+ READING: the purity-and-certification vocabulary follows the less processed shoppers into supplements and wellness products; the ultra-processed shoppers' other products are family, kids and household
+  goods sold on practicality, and they write warmer, gift-and-family reviews. Marketing pleasantness itself does not differ (H8 null).
+ Mixed-network communities now have product names (e.g. 0 supplements + health foods; 6 Pampers, Play-Doh, Melissa & Doug; 7 video games; 9 camping/emergency; 10 board games + gummy vitamins; 13 Beyond Meat, Gardein, Oatly).
