@@ -231,3 +231,14 @@ H5 RESULTS (15 Nov; upf/notebooks/cross_category.py; data/processed/cross_catego
  READING: the ultra-processed side of the shopper network is also the games-and-toys side; the less processed side reviews more sports, household-health and personal-care products. Effects are modest (4-5 points).
  NOT CONTROLLED: what kind of groceries they buy (a candy-heavy basket may signal children in the household; Baby shows no difference though); demographics are unobservable (and not to be inferred).
 - 15 Nov: story page v2 adds 'Beyond the grocery aisle' (H5 cross-department results, dot chart) and a footer line on pseudonymous cross-category linking.
+
+## MIXED PRODUCT NETWORK across departments (16 Nov; user: 'an interesting network of purchases from what we already have, scale to all categories later'). Design fixed BEFORE building.
+Nodes = products from groceries (matched to Open Food Facts) and the 7 downloaded departments; link = shared reviewers. Reviews, not purchases; pseudonymous IDs; aggregate only.
+ Reviewers: the shopper-network reviewers (2-50 reviews of matched groceries); drop accounts with > 200 reviews across the 7 departments (power reviewers would link everything).
+ Products: >= 10 distinct such reviewers. Projection = shared-reviewer counts; backbone = disparity filter (alpha .01); largest connected component.
+ Describe: Louvain communities (department mix, NOVA-4 share among their groceries), labelled by c-TF-IDF words from a sample of each community's review text (course method, no word lists);
+ bridges (betweenness); non-food products whose grocery neighbours lean most ultra-processed vs least.
+ Product names need the department METADATA files (not downloaded); labels come from review text for now.
+PRE-DECLARED H6 (product-level version of H5): for each non-food product in the backbone, 'UPF lean' = share of its grocery neighbours that are NOVA 4.
+ Mean UPF lean is HIGHER for Video Games + Toys products than for Sports + Health & Household products (one-sided).
+ Null: NOVA labels of grocery nodes shuffled within Open Food Facts category (correct within-group shuffle), 2,000 times. Exploratory otherwise.
