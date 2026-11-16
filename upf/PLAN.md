@@ -279,3 +279,6 @@ BRIDGE + H7 RESULTS (16 Nov; upf/notebooks/cj_bridge.py; data/processed/cj/ giti
  EXPLORATORY robustness (not pre-declared): only types with cosine >= .65 (954 types, 54% of lines): kids +0.014, income Spearman -0.173; cosine >= .75 (321 types, 21% of lines): kids +0.024, income -0.208. Holds.
  Exploratory: private-label share vs estimated UPF share Spearman +0.085.
  READING: households with children and lower-income households buy baskets whose product TYPES are more often ultra-processed; small effects; type-level estimate (within-type variation lost); one retailer's frequent shoppers.
+DECISION (16 Nov, user): DROP the Complete Journey type-level link and the household income/children analysis from the story -- the type link loses too much nuance (68% sensible matches,
+ within-type variation lost) and income/households do not add to the story. Results above stay on record, not to be cited. Focus instead: WHAT ELSE PEOPLE BUY (review) WHEN THEY BUY FOOD,
+ with marketing VALENCE of those other products and the SENTIMENT of reviews across departments.
