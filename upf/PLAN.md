@@ -242,3 +242,11 @@ Nodes = products from groceries (matched to Open Food Facts) and the 7 downloade
 PRE-DECLARED H6 (product-level version of H5): for each non-food product in the backbone, 'UPF lean' = share of its grocery neighbours that are NOVA 4.
  Mean UPF lean is HIGHER for Video Games + Toys products than for Sports + Health & Household products (one-sided).
  Null: NOVA labels of grocery nodes shuffled within Open Food Facts category (correct within-group shuffle), 2,000 times. Exploratory otherwise.
+MIXED NETWORK RESULTS (16 Nov; upf/notebooks/mixed_network.py; data/processed/mixed_network_results.txt, mixed_communities.csv; caches gitignored)
+ Collected 6,544,641 reviewer-product pairs (336,899 reviewers; 1.14M products; 8 departments). After filters (1,188 power reviewers dropped; products with >= 10 reviewers): 104,809 products; 47.5M co-review pairs;
+ disparity backbone 129,973 edges; largest component 16,729 products / 128,582 links (H&H 6,508, Pet 4,634, Grocery 3,020, Sports 862, Toys 713, Baby 542, Video Games 410). 67% of links stay within a department.
+ Louvain 104 communities, modularity .46. Labelled by c-TF-IDF of sampled reviews (no product names: department metadata not downloaded). Largest: household-health + groceries (714 groceries, NOVA-4 share .50; words taste, oil, pain, scent);
+  cleaning/batteries household (groceries .62); dogs; cats; SNACKS/SWEETS groceries (1,155 groceries, NOVA-4 .77: chocolate, snack, protein, cookies); PANTRY groceries (613, .79: pantry, sauce, soup); baby + toys (diapers, toys);
+  video games; aquarium; emergency/camping food (sports + grocery, .71); GUMMY VITAMINS + GAMES (H&H + toys + grocery, .80); birds; small pets; VEGAN meat/cheese substitutes (76 groceries, .93).
+ Reading: the network is organised mainly by department and by pet; the grocery side splits into a household-health cluster where only half the groceries are ultra-processed vs snack and pantry clusters at ~.77-.79.
+ H6 (pre-declared): mean UPF lean of non-food neighbours, games/toys .756 vs sports/household .569, difference +0.187 vs null mean +0.142, one-sided p=.028 -> nominally SUPPORTED but WEAK: only 18 games/toys products have >= 3 grocery neighbours (828 sports/household).

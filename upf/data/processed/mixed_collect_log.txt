@@ -1,0 +1,8 @@
+  Video_Games               : 159,776 reviews by our reviewers
+  Toys_and_Games            : 770,583 reviews by our reviewers
+  Sports_and_Outdoors       : 805,781 reviews by our reviewers
+  Health_and_Household      : 2,309,453 reviews by our reviewers
+  Baby_Products             : 270,334 reviews by our reviewers
+  Pet_Supplies              : 1,124,347 reviews by our reviewers
+  Health_and_Personal_Care  : 41,179 reviews by our reviewers
+pairs 6,544,641; reviewers 336,899; products 1,138,930; by dept: {'Health_and_Household': 2272212, 'Grocery': 1141551, 'Pet_Supplies': 1103759, 'Sports_and_Outdoors': 798824, 'Toys_and_Games': 763125, 'Baby_Products': 266691, 'Video_Games': 157812, 'Health_and_Personal_Care': 40667}

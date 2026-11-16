@@ -1,0 +1,23 @@
+after filters: reviewers 334,591 (dropped 1,188 power reviewers); products 104,809; {'Health_and_Household': 1502478, 'Grocery': 996059, 'Pet_Supplies': 741263, 'Sports_and_Outdoors': 301245, 'Toys_and_Games': 279482, 'Baby_Products': 134057, 'Video_Games': 77931, 'Health_and_Personal_Care': 11063}
+co-review pairs 47,472,443; backbone edges 129,973; largest component 16,729 products, 128,582 links
+links within the same department: 67%; product counts: {'Health_and_Household': 6508, 'Pet_Supplies': 4634, 'Grocery': 3020, 'Sports_and_Outdoors': 862, 'Toys_and_Games': 713, 'Baby_Products': 542, 'Video_Games': 410, 'Health_and_Personal_Care': 40}
+Louvain: 104 communities, modularity 0.462; sizes [4235, 3663, 2355, 1618, 1382, 789, 665, 356, 261, 249, 184, 151]
+ community  products                                                     top departments  groceries  NOVA4 share of groceries                                                                    c-TF-IDF words
+         0      4235       Health_and_Household 72%; Grocery 17%; Sports_and_Outdoors 6%        714                      0.50                  taste, oil, stars, pain, flavor, smell, taking, easy, scent, don
+         1      3663 Health_and_Household 74%; Sports_and_Outdoors 8%; Toys_and_Games 6%        201                      0.62             batteries, scent, stars, paper, clean, easy, smell, don, value, brand
+         2      2355   Pet_Supplies 94%; Health_and_Household 3%; Sports_and_Outdoors 1%         15                      0.40                    dog, dogs, loves, food, toy, puppy, treats, small, toys, stars
+         3      1618               Pet_Supplies 96%; Health_and_Household 3%; Grocery 1%         11                      0.64                     cat, cats, litter, food, kitty, loves, box, toy, eat, kitties
+         4      1382       Grocery 84%; Health_and_Household 13%; Sports_and_Outdoors 1%       1155                      0.77 taste, flavor, delicious, chocolate, fresh, snack, tasty, protein, cookies, stars
+         5       789       Grocery 78%; Health_and_Household 20%; Sports_and_Outdoors 1%        613                      0.79         stars, taste, flavor, delicious, snack, pantry, tasty, sauce, fresh, soup
+         6       665      Baby_Products 58%; Toys_and_Games 36%; Health_and_Household 5%          4                      0.50                  baby, diapers, diaper, toy, old, game, loves, easy, pampers, fun
+         7       356           Video_Games 88%; Health_and_Household 5%; Pet_Supplies 4%          5                      0.00        game, games, play, fun, graphics, controller, xbox, story, playing, played
+         8       261                                                   Pet_Supplies 100%          0                       NaN          tank, fish, filter, betta, water, aquarium, gallon, food, filters, tanks
+         9       249       Sports_and_Outdoors 75%; Health_and_Household 12%; Grocery 7%         17                      0.71            emergency, water, camping, stars, bag, dried, taste, easy, food, light
+        10       184            Health_and_Household 59%; Toys_and_Games 31%; Grocery 5%         10                      0.80            game, gummies, taste, fun, vitamin, vitamins, gummy, play, easy, pills
+        11       151                                                   Pet_Supplies 100%          0                       NaN        bird, birds, cage, parakeets, parrot, cockatiel, food, conure, seed, loves
+        12       148                                                   Pet_Supplies 100%          0                       NaN               guinea, hay, cage, pigs, hamster, bunny, rabbit, pig, rabbits, rats
+        13        76                                                        Grocery 100%         76                      0.93    vegan, cheese, taste, dairy, meat, flavor, texture, delicious, gardein, tastes
+bridges (betweenness): Health_and_Household/ 0.178; Health_and_Household/ 0.146; Health_and_Household/ 0.127; Health_and_Household/ 0.074; Health_and_Household/ 0.052; Pet_Supplies/ 0.047; Health_and_Household/ 0.042; Pet_Supplies/ 0.039; Health_and_Household/ 0.031; Health_and_Household/ 0.024; Health_and_Household/ 0.021; Pet_Supplies/ 0.021
+
+H6: non-food products with >= 3 grocery neighbours: 1,071 (games/toys 18, sports/household 828)
+  mean UPF lean: games/toys 0.756, sports/household 0.569, other 0.621; difference +0.187; null mean +0.142; one-sided p = 0.0275
