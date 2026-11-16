@@ -329,3 +329,7 @@ RESULTS OF THE THREE (16 Nov; upf/notebooks/habits.py; data/processed/h11_valida
   Groceries among the top-100 grocery hubs are NOVA 4 at .72 vs .70 for all network groceries: hubs are not especially ultra-processed. Beyond-degree hubs include a bird food (degree 74) and a calorie-free peanut spread (degree 12).
 - 16 Nov: story page v3 adds 'Purity travels, pleasure stays home' (H8 null, H9, non-food word contrast), a validation callout (stars, AUC .89), 'The rich get richer' (log-log chart, alpha .93), 'The hubs are not food' (PageRank), and H8 under 'What did not hold up'.
 - 16 Nov: story page v4 adds the NOVA breakdown of the 75,933 matched listings (1: 7,337 10% / 2: 1,537 2% / 3: 14,923 20% / 4: 52,136 69%) and the volunteer-scanning disclaimer under the Story Facts label.
+- 16 Nov: LISTING VAD (descriptive; upf/notebooks/listing_vad.py; data/processed/listing_vad.txt; upf/figures/listing_vad.png): 61,341 matched listings with copy >= 10 words (median 42 lexicon words), food words excluded.
+  Means NOVA 1/2/3/4: valence .267/.252/.263/.280; arousal -.137/-.135/-.124/-.116; dominance .062/.070/.048/.031. Spearman: V-A .14, V-D .34, A-D .42.
+  Within category (25 categories, 29,822 listings, 2,000 shuffles): valence +0.0135 (p=.0005), arousal +0.0099 (p=.0005), DOMINANCE -0.0180 (p=.0005; descriptive, not pre-declared):
+  ultra-processed copy is slightly more pleasant and more exciting but LESS 'in control' (dominance = powerful/in-control vs weak/no control). All shifts small; the distributions overlap almost completely.
