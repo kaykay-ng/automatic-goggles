@@ -259,3 +259,13 @@ Profile: 1,469,307 transaction lines, 2,469 households, 155,848 baskets, 68,509 
 LINKING CONSTRAINT: no product-level link to Amazon or Open Food Facts is possible. Only a TYPE-level bridge: map each product type to Open Food Facts categories (embedding cosine between type names and
  category names, hand-checked) -> typical NOVA-4 share per type -> estimated ultra-processed share of each household's basket; optionally attach the Amazon pleasure/purity vocabulary per category.
  Within-type variation is lost (an organic and a sugary kids cereal get the same type). Not decided yet whether to link or to analyse Complete Journey on its own.
+TYPE-LEVEL BRIDGE + HOUSEHOLD TESTS -- PRE-DECLARED 16 Nov before any match or household estimate was computed (user chose 'link by product type').
+ Food departments: GROCERY, PRODUCE, MEAT, MEAT-PCKGD, DELI, PASTRY, NUTRITION, SEAFOOD, SEAFOOD-PCKGD, SALAD BAR, FROZEN GROCERY, CHEF SHOPPE (drug/GM, fuel, cosmetics, floral, spirits, misc excluded).
+ Reference: Open Food Facts main categories with >= 30 NOVA-labelled products sold in the United States; for each, NOVA-4 share.
+ Match: embed 'product category: product type' (lowercased) and the readable Open Food Facts category name with all-MiniLM-L6-v2; each product type takes its TOP-1 category by cosine.
+  Types with best cosine < 0.50 are UNMATCHED (left out). Hand-check 40 random matched types (read by me) and report the share judged a sensible match.
+ Household estimate: estimated UPF share = mean of the matched types' NOVA-4 shares over the household's food purchase LINES (one line = one product bought); report the share of food lines matched.
+ H7a households with children (kids_count > 0) have a HIGHER estimated UPF share than households without (one-sided; permutation of the label, 5,000).
+ H7b estimated UPF share DECREASES with income (Spearman across the ordered income bands, one-sided; permutation 5,000). Holm over 2. Sample: the 801 households with demographics.
+ Exploratory: private-label vs national-brand share; household similarity network (cosine of type profiles) and its communities vs income/kids/UPF share.
+ Caveats to state: within-type variation lost; one retailer's frequent shoppers; reference shares come from what Open Food Facts volunteers scanned.
