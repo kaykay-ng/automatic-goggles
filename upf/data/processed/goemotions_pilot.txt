@@ -1,0 +1,35 @@
+sample 20,000 reviews, identical to the earlier pilots
+classified 20,000 reviews in 67s on mps (299.7 reviews/s)
+
+== G1 STARS == mean probability in 1-2 vs 4-5 star reviews:
+  admiration      0.039 -> 0.554 OK
+  approval        0.048 -> 0.134 OK
+  gratitude       0.005 -> 0.028 OK
+  joy             0.008 -> 0.053 OK
+  love            0.033 -> 0.215 OK
+  excitement      0.006 -> 0.016 OK
+  disappointment  0.168 -> 0.015 OK
+  annoyance       0.091 -> 0.009 OK
+  anger           0.016 -> 0.002 OK
+  disgust         0.090 -> 0.003 OK
+  sadness         0.046 -> 0.005 OK
+  directions right 11/11 (bar >= 10); composite AUC GoEmotions 0.959 | VAD 0.889 (bar: >= VAD) | Cardiff 0.983
+  G1 PASSES
+
+== G2 NEGATION ==
+  reviews with a negator  n= 6,388: AUC GoEmotions 0.940 | EmoLex 0.721 | advantage +0.219
+  reviews without         n=12,382: AUC GoEmotions 0.962 | EmoLex 0.840 | advantage +0.121
+
+share of reviews where each label is present (p >= .5): {'admiration': '46.1%', 'love': '17.8%', 'neutral': '11.8%', 'disappointment': '3.4%', 'disapproval': '3.3%', 'approval': '3.0%', 'joy': '2.9%', 'gratitude': '1.6%', 'disgust': '1.6%', 'desire': '1.0%', 'confusion': '0.8%', 'amusement': '0.6%', 'sadness': '0.5%', 'surprise': '0.5%', 'optimism': '0.4%', 'fear': '0.4%', 'curiosity': '0.3%', 'excitement': '0.2%', 'realization': '0.2%', 'caring': '0.2%', 'annoyance': '0.2%', 'remorse': '0.1%', 'anger': '0.0%', 'embarrassment': '0.0%', 'grief': '0.0%', 'nervousness': '0.0%', 'pride': '0.0%', 'relief': '0.0%'}
+share of 1-2 star reviews with disappointment present: 13.0% | with any of the 5 negative labels: 23.9%
+
+== DESCRIPTIVE: GoEmotions vs the OLD C4 labels (not a test) ==
+  joy       you 33 | GoEmotions  1 F1 0.00 | Cardiff F1 0.82
+  love      you  9 | GoEmotions 12 F1 0.57 | Cardiff F1 0.44
+  anger     you  7 | GoEmotions  0 F1 0.00 | Cardiff F1 0.25
+  disgust   you 18 | GoEmotions  3 F1 0.29 | Cardiff F1 0.46
+  sadness   you 20 | GoEmotions  1 F1 0.00 | Cardiff F1 0.60
+  surprise  you  5 | GoEmotions  0 F1 0.00 | Cardiff F1 0.00
+  fear      you  5 | GoEmotions  0 F1 0.00 | Cardiff F1 0.33
+  GoEmotions 'disappointment' vs your sadness-or-'disappointment'-note (21): F1 0.58
+saved upf/data/processed/soj/goemotions_pilot.csv.gz

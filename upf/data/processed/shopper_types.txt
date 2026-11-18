@@ -1,0 +1,162 @@
+reviewers kept (>= 5 non-food reviews): 58,391 (ALL-UPF 26,812); sub-categories 634; reviews 1,520,635
+kNN network: 58,391 reviewers, 464,468 links; Louvain 45 types, modularity 0.704; sizes [6451, 4748, 4721, 4555, 3431, 2846, 2814, 2454, 1918, 1883, 1834, 1815, 1341, 1338, 1172]
+
+T1: chi-square type x group 836 vs null mean 46 (95th pct 64); p = 0.0005
+
+TYPES (type -1 = all types under 300 reviewers), sorted by ALL-UPF share minus expected:
+
+ type  17   1,092 reviewers  ALL-UPF 57.3% (expected 46.0%, +11.4 pts)
+   over-represented: Toys & Games > Collectible Toys | Sports & Outdoors > Memorabilia Display & Storage | Toys & Games > Action Figures | Toys & Games > Toy Figures & Playsets | Toys & Games > Games & Accessories | Sports & Outdoors > Fan Shop
+   most reviewed:    Toys & Games > Toy Figures & Playsets | Health & Household > Household Supplies | Pet Supplies > Dogs | Health & Household > Health Care
+
+ type   3   4,555 reviewers  ALL-UPF 56.1% (expected 46.4%, +9.7 pts)
+   over-represented: Video Games > PlayStation 4 | Video Games > Xbox One | Video Games > Legacy Systems | Video Games > Nintendo Switch | Video Games > PC | Video Games > Online Game Services
+   most reviewed:    Health & Household > Household Supplies | Pet Supplies > Dogs | Video Games > Legacy Systems | Health & Household > Vitamins, Minerals & Supplements
+
+ type  30     429 reviewers  ALL-UPF 54.1% (expected 46.9%, +7.1 pts)
+   over-represented: Toys & Games > Party Supplies | Health & Household > Baby & Child Care: FREE Two-Day Shipping | Baby Products > Gifts | Toys & Games > Novelty & Gag Toys | Health & Household > Household Supplies | Sports & Outdoors > Fan Shop
+   most reviewed:    Health & Household > Household Supplies | Toys & Games > Party Supplies | Pet Supplies > Dogs | Health & Household > Vitamins, Minerals & Supplements
+
+ type  20     683 reviewers  ALL-UPF 52.9% (expected 46.8%, +6.0 pts)
+   over-represented: Toys & Games > Stuffed Animals & Plush Toys | Toys & Games > Kids' Electronics | Toys & Games > Preschool | Pet Supplies > Dogs | Toys & Games > Toy Figures & Playsets | Pet Supplies > Cats
+   most reviewed:    Pet Supplies > Dogs | Health & Household > Household Supplies | Health & Household > Health Care | Health & Household > Vitamins, Minerals & Supplements
+
+ type   0   6,451 reviewers  ALL-UPF 51.6% (expected 45.8%, +5.8 pts)
+   over-represented: Toys & Games > Building Toys | Toys & Games > Dolls & Accessories | Toys & Games > Vehicles | Toys & Games > STEM Toys | Toys & Games > Arts & Crafts | Toys & Games > Puppets & Puppet Theaters
+   most reviewed:    Health & Household > Household Supplies | Pet Supplies > Dogs | Toys & Games > Preschool | Health & Household > Vitamins, Minerals & Supplements
+
+ type  33     406 reviewers  ALL-UPF 51.7% (expected 46.3%, +5.4 pts)
+   over-represented: Pet Supplies > Cat Stocking Stuffers | Pet Supplies > Dog beds & supplies | Toys & Games > Novelty & Gag Toys | Pet Supplies > Cats | Pet Supplies > Dogs | Health & Household > Bathroom Safety, Aids & Accessories
+   most reviewed:    Pet Supplies > Dogs | Health & Household > Household Supplies | Pet Supplies > Cats | Health & Household > Health Care
+
+ type  32     421 reviewers  ALL-UPF 50.4% (expected 45.7%, +4.7 pts)
+   over-represented: Health & Household > Sexual Wellness | Sports & Outdoors > Tennis & Racket | Health & Household > Whole Foods Market - Save 25% on personal care. Prices as as marked. While supplies last. | Health & Household > Healthcare | Health & Household > Diet & Sports Nutrition | Health & Household > Wellness & Relaxation
+   most reviewed:    Health & Household > Household Supplies | Health & Household > Vitamins, Minerals & Supplements | Health & Household > Health Care | Pet Supplies > Dogs
+
+ type  14   1,172 reviewers  ALL-UPF 51.7% (expected 47.1%, +4.6 pts)
+   over-represented: Health & Household > P&G Coupons | Sports & Outdoors > Fan Shop | Pet Supplies > Dogs | Sports & Outdoors > Sports & Outdoor Recreation Accessories | Health & Household > Household Supplies | Health & Household > Oral Care
+   most reviewed:    Pet Supplies > Dogs | Health & Household > Household Supplies | Sports & Outdoors > Fan Shop | Health & Household > Vitamins, Minerals & Supplements
+
+ type  18   1,070 reviewers  ALL-UPF 49.6% (expected 45.6%, +4.1 pts)
+   over-represented: Pet Supplies > Small Animals | Pet Supplies > Buy $25 Save $5 on Kaytee | Pet Supplies > Reptiles & Amphibians | Pet Supplies > Pets Subscribe and Save Coupon | Pet Supplies > Birds | Pet Supplies > Fish & Aquatic Pets
+   most reviewed:    Pet Supplies > Dogs | Pet Supplies > Small Animals | Health & Household > Household Supplies | Pet Supplies > Cats
+
+ type  19     897 reviewers  ALL-UPF 49.6% (expected 46.9%, +2.8 pts)
+   over-represented: Toys & Games > Games & Accessories | Health & Household > Wellness & Relaxation | Sports & Outdoors > Sports & Outdoor Recreation Accessories | Health & Household > Household Supplies | Pet Supplies > Cats | Health & Household > Health Care
+   most reviewed:    Toys & Games > Games & Accessories | Health & Household > Household Supplies | Health & Household > Health Care | Pet Supplies > Dogs
+
+ type  13   1,338 reviewers  ALL-UPF 48.3% (expected 46.4%, +1.9 pts)
+   over-represented: Toys & Games > Puzzles | Toys & Games > Games & Accessories | Health & Household > Mobility & Daily Living Aids | Health & Household > Mobility Aids & Equipment | Health & Household > Medical Supplies & Equipment | Health & Household > Household Supplies
+   most reviewed:    Toys & Games > Puzzles | Health & Household > Household Supplies | Pet Supplies > Dogs | Health & Household > Health Care
+
+ type  22     652 reviewers  ALL-UPF 48.9% (expected 47.2%, +1.8 pts)
+   over-represented: Toys & Games > Remote & App Controlled Vehicle Parts | Toys & Games > Power Plant & Driveline Systems | Toys & Games > Remote & App Controlled Vehicles & Parts | Toys & Games > Kids' Birthdays | Toys & Games > Radio & Remote Control | Sports & Outdoors > Winter Storm Preparation
+   most reviewed:    Toys & Games > Remote & App Controlled Vehicles & Parts | Health & Household > Household Supplies | Pet Supplies > Dogs | Health & Household > Health Care
+
+ type   7   2,454 reviewers  ALL-UPF 47.5% (expected 45.9%, +1.6 pts)
+   over-represented: Pet Supplies > Fish & Aquatic Pets | Pet Supplies > Reptiles & Amphibians | Pet Supplies > Try Subscribe & Save | Pet Supplies > Top Selection from AmazonPets | Pet Supplies > Birds | Pet Supplies > Cats
+   most reviewed:    Pet Supplies > Fish & Aquatic Pets | Pet Supplies > Dogs | Health & Household > Household Supplies | Health & Household > Vitamins, Minerals & Supplements
+
+ type  31     426 reviewers  ALL-UPF 47.9% (expected 46.4%, +1.5 pts)
+   over-represented: Baby Products > Nursery | Pet Supplies > Cats | Pet Supplies > Dogs | Health & Household > Household Supplies | Health & Household > Health Care | Health & Household > Vitamins, Minerals & Supplements
+   most reviewed:    Health & Household > Household Supplies | Pet Supplies > Dogs | Health & Household > Health Care | Health & Household > Vitamins, Minerals & Supplements
+
+ type  11   1,815 reviewers  ALL-UPF 46.1% (expected 45.0%, +1.1 pts)
+   over-represented: Health & Household > Stationery & Gift Wrapping Supplies | Health & Household > Vision | Health & Household > Household Supplies | Pet Supplies > Cats | Pet Supplies > Dogs | Toys & Games > Party Supplies
+   most reviewed:    Health & Household > Household Supplies | Pet Supplies > Dogs | Health & Household > Health Care | Health & Household > Vitamins, Minerals & Supplements
+
+ type   1   4,748 reviewers  ALL-UPF 47.1% (expected 46.3%, +0.8 pts)
+   over-represented: Baby Products > Feeding | Baby Products > Potty Training | Baby Products > Activity & Entertainment | Baby Products > Strollers & Accessories | Baby Products > Travel Gear | Baby Products > Diapering
+   most reviewed:    Health & Household > Household Supplies | Toys & Games > Preschool | Health & Household > Vitamins, Minerals & Supplements | Health & Household > Health Care
+
+ type   6   2,814 reviewers  ALL-UPF 45.9% (expected 45.3%, +0.6 pts)
+   over-represented: Health & Household > Mobility Aids & Equipment | Health & Household > Bathroom Safety, Aids & Accessories | Health & Household > Mobility & Daily Living Aids | Health & Household > Medical Supplies & Equipment | Health & Household > Health Care | Health & Household > Vision
+   most reviewed:    Health & Household > Household Supplies | Health & Household > Health Care | Health & Household > Vitamins, Minerals & Supplements | Pet Supplies > Dogs
+
+ type  16   1,110 reviewers  ALL-UPF 47.1% (expected 46.7%, +0.4 pts)
+   over-represented: Pet Supplies > Pet Birthday | Toys & Games > Tricycles, Scooters & Wagons | Sports & Outdoors > Volleyball | Baby Products > Safety | Pet Supplies > Dogs | Sports & Outdoors > Outdoor Recreation
+   most reviewed:    Pet Supplies > Dogs | Health & Household > Household Supplies | Health & Household > Health Care | Health & Household > Vitamins, Minerals & Supplements
+
+ type  25     567 reviewers  ALL-UPF 44.4% (expected 44.5%, -0.1 pts)
+   over-represented: Baby Products > Diapering | Health & Household > Household Supplies | Pet Supplies > Cats | Health & Household > Oral Care | Health & Household > Health Care | Health & Household > Vitamins, Minerals & Supplements
+   most reviewed:    Health & Household > Household Supplies | Health & Household > Health Care | Health & Household > Vitamins, Minerals & Supplements | Pet Supplies > Dogs
+
+ type  36     351 reviewers  ALL-UPF 44.4% (expected 44.8%, -0.3 pts)
+   over-represented: Pet Supplies > Try Subscribe & Save | Pet Supplies > Pets Low Return Rate Alert | Pet Supplies > Dog Food & Supplies | Pet Supplies > Pets Subscribe and Save Coupon | Health & Household > Face Care | Sports & Outdoors > Start Exploring
+   most reviewed:    Pet Supplies > Cats | Pet Supplies > Dogs | Health & Household > Household Supplies | Health & Household > Vitamins, Minerals & Supplements
+
+ type  15   1,159 reviewers  ALL-UPF 43.9% (expected 45.0%, -1.1 pts)
+   over-represented: Pet Supplies > Top Dog Supplies | Pet Supplies > Top Selection from AmazonPets | Pet Supplies > Dog Stocking Stuffers: Toys & Treats | Pet Supplies > Pet Behavior Center | Pet Supplies > Dog Harnesses | Sports & Outdoors > Sports & Outdoors Low Return Rate Alert 1
+   most reviewed:    Pet Supplies > Dogs | Health & Household > Household Supplies | Health & Household > Vitamins, Minerals & Supplements | Health & Household > Health Care
+
+ type  12   1,341 reviewers  ALL-UPF 43.8% (expected 45.6%, -1.8 pts)
+   over-represented: Pet Supplies > Birds | Pet Supplies > Buy $25 Save $5 on Kaytee | Pet Supplies > Pets Subscribe and Save Coupon | Pet Supplies > Horses | Pet Supplies > Reptiles & Amphibians | Pet Supplies > Top Selection from AmazonPets
+   most reviewed:    Pet Supplies > Dogs | Health & Household > Household Supplies | Pet Supplies > Birds | Health & Household > Vitamins, Minerals & Supplements
+
+ type  29     454 reviewers  ALL-UPF 41.4% (expected 43.4%, -2.0 pts)
+   over-represented: Health & Household > MasterCard Subscribe & Save Show All | Health & Household > Subscribe & Save Prime Promo | Sports & Outdoors > Athletic Socks | Health & Household > All First Aid | Pet Supplies > Cat Food | Health & Household > Diet & Sports Nutrition
+   most reviewed:    Health & Household > Household Supplies | Health & Household > Vitamins, Minerals & Supplements | Pet Supplies > Dogs | Health & Household > Health Care
+
+ type   4   3,431 reviewers  ALL-UPF 44.0% (expected 46.2%, -2.2 pts)
+   over-represented: Pet Supplies > Cats | Pet Supplies > Dogs | Health & Household > Vitamins, Minerals & Supplements | Health & Household > Diet & Sports Nutrition | Health & Household > Household Supplies | Health & Household > Oral Care
+   most reviewed:    Pet Supplies > Cats | Health & Household > Household Supplies | Pet Supplies > Dogs | Health & Household > Vitamins, Minerals & Supplements
+
+ type  -1     940 reviewers  ALL-UPF 43.6% (expected 46.2%, -2.6 pts)
+   over-represented: Sports & Outdoors > Sports Medicine | Pet Supplies > Pet Content - Main | Health & Household > Household 15% | Pet Supplies > Coupons on dog food, treats, and supplies | Sports & Outdoors > Field, Court & Rink Equipment | Health & Household > Suds Sample Box Credit
+   most reviewed:    Health & Household > Household Supplies | Pet Supplies > Dogs | Health & Household > Vitamins, Minerals & Supplements | Health & Household > Health Care
+
+ type  27     503 reviewers  ALL-UPF 44.1% (expected 47.2%, -3.1 pts)
+   over-represented: Pet Supplies > Dogs | Health & Household > Vitamins, Minerals & Supplements | Health & Household > Household Supplies | Health & Household > Health Care
+   most reviewed:    Pet Supplies > Dogs | Health & Household > Household Supplies | Health & Household > Vitamins, Minerals & Supplements | Health & Household > Health Care
+
+ type  34     388 reviewers  ALL-UPF 41.5% (expected 45.0%, -3.5 pts)
+   over-represented: Pet Supplies > Top Cat Supplies | Health & Household > Vitamins & Supplements | Pet Supplies > Cat beds & furniture | Pet Supplies > Dog toys and supplies | Health & Household > Gut Health Supplements | Pet Supplies > Cats
+   most reviewed:    Pet Supplies > Cats | Pet Supplies > Dogs | Health & Household > Household Supplies | Health & Household > Vitamins, Minerals & Supplements
+
+ type  23     595 reviewers  ALL-UPF 41.8% (expected 46.1%, -4.3 pts)
+   over-represented: Sports & Outdoors > Clothing | Baby Products > Customers' Most-Loved: Baby | Sports & Outdoors > Backpacks | Sports & Outdoors > Exercise & Fitness | Health & Household > Diet & Sports Nutrition | Sports & Outdoors > Fan Shop
+   most reviewed:    Health & Household > Household Supplies | Health & Household > Vitamins, Minerals & Supplements | Pet Supplies > Dogs | Health & Household > Health Care
+
+ type  26     515 reviewers  ALL-UPF 41.4% (expected 46.4%, -5.1 pts)
+   over-represented: Toys & Games > Arts & Crafts Collection | Sports & Outdoors > Holiday 2014 Sports Gift Guides | Sports & Outdoors > Sports & Outdoor Recreation Accessories | Sports & Outdoors > Outdoor Recreation | Health & Household > Medical Supplies & Equipment | Sports & Outdoors > Exercise & Fitness
+   most reviewed:    Health & Household > Household Supplies | Health & Household > Vitamins, Minerals & Supplements | Health & Household > Health Care | Pet Supplies > Dogs
+
+ type  21     681 reviewers  ALL-UPF 39.9% (expected 45.3%, -5.4 pts)
+   over-represented: Health & Household > Baby & Child Care | Baby Products > Baby Care | Health & Household > Vitamins, Minerals & Supplements | Health & Household > Health Care | Health & Household > Household Supplies | Health & Household > Oral Care
+   most reviewed:    Health & Household > Household Supplies | Health & Household > Vitamins, Minerals & Supplements | Health & Household > Health Care | Pet Supplies > Dogs
+
+ type  24     574 reviewers  ALL-UPF 40.8% (expected 46.2%, -5.4 pts)
+   over-represented: Pet Supplies > Horses | Pet Supplies > Dogs | Pet Supplies > Top Dog Supplies | Pet Supplies > Top Selection from AmazonPets | Sports & Outdoors > Sports | Health & Household > Vitamins, Minerals & Supplements
+   most reviewed:    Pet Supplies > Dogs | Health & Household > Household Supplies | Health & Household > Vitamins, Minerals & Supplements | Health & Household > Health Care
+
+ type   2   4,721 reviewers  ALL-UPF 40.4% (expected 45.9%, -5.5 pts)
+   over-represented: Sports & Outdoors > Hunting & Fishing | Sports & Outdoors > Outdoor Recreation | Sports & Outdoors > Sports | Sports & Outdoors > Sports & Outdoor Recreation Accessories | Sports & Outdoors > Exercise & Fitness | Sports & Outdoors > Clothing
+   most reviewed:    Health & Household > Household Supplies | Sports & Outdoors > Hunting & Fishing | Sports & Outdoors > Sports | Pet Supplies > Dogs
+
+ type   9   1,883 reviewers  ALL-UPF 39.9% (expected 45.7%, -5.8 pts)
+   over-represented: Health & Household > Vision | Health & Household > Philips Norelco Men's Grooming Platform | Health & Household > Oral Care | Health & Household > Vitamins, Minerals & Supplements | Health & Household > Household Supplies | Health & Household > Health Care
+   most reviewed:    Health & Household > Household Supplies | Health & Household > Vitamins, Minerals & Supplements | Pet Supplies > Dogs | Health & Household > Health Care
+
+ type   5   2,846 reviewers  ALL-UPF 40.4% (expected 46.3%, -5.9 pts)
+   over-represented: Health & Household > Oral Care | Sports & Outdoors > Exercise & Fitness | Health & Household > Medical Supplies & Equipment | Health & Household > Vitamins, Minerals & Supplements | Health & Household > Household Supplies | Health & Household > Health Care
+   most reviewed:    Health & Household > Household Supplies | Health & Household > Vitamins, Minerals & Supplements | Health & Household > Health Care | Pet Supplies > Dogs
+
+ type  35     371 reviewers  ALL-UPF 38.3% (expected 45.5%, -7.3 pts)
+   over-represented: Health & Household > Cold and Flu | Baby Products > Travel Gear | Health & Household > Health Care | Health & Household > Wellness & Relaxation | Health & Household > Vitamins, Minerals & Supplements | Health & Household > Household Supplies
+   most reviewed:    Health & Household > Household Supplies | Health & Household > Vitamins, Minerals & Supplements | Health & Household > Health Care | Pet Supplies > Dogs
+
+ type  10   1,834 reviewers  ALL-UPF 37.7% (expected 45.4%, -7.7 pts)
+   over-represented: Health & Household > Wellness & Relaxation | Health & Household > Vitamins, Minerals & Supplements | Health & Household > Health Care | Health & Household > Medical Supplies & Equipment | Health & Household > Diet & Sports Nutrition | Sports & Outdoors > Exercise & Fitness
+   most reviewed:    Health & Household > Vitamins, Minerals & Supplements | Health & Household > Health Care | Health & Household > Household Supplies | Pet Supplies > Dogs
+
+ type  28     481 reviewers  ALL-UPF 35.1% (expected 45.3%, -10.2 pts)
+   over-represented: Health & Household > Heart Health Event | Health & Household > Healthcare | Health & Household > Sports Nutrition Sample Box Credit | Health & Household > Whole Foods Market | Health & Household > Vitamins, Minerals & Supplements | Health & Household > Diet & Sports Nutrition
+   most reviewed:    Health & Household > Vitamins, Minerals & Supplements | Health & Household > Health Care | Health & Household > Household Supplies | Pet Supplies > Dogs
+
+ type   8   1,918 reviewers  ALL-UPF 33.2% (expected 45.1%, -11.9 pts)
+   over-represented: Health & Household > MasterCard Subscribe & Save Nutrition & Fitness | Health & Household > Diet & Sports Nutrition | Health & Household > Vitamins, Minerals & Supplements | Sports & Outdoors > Exercise & Fitness | Health & Household > Oral Care | Health & Household > Health Care
+   most reviewed:    Health & Household > Vitamins, Minerals & Supplements | Health & Household > Household Supplies | Health & Household > Health Care | Health & Household > Diet & Sports Nutrition
+
+ type  37     305 reviewers  ALL-UPF 23.6% (expected 43.3%, -19.7 pts)
+   over-represented: Health & Household > Natural & Organic | Health & Household > Sales & Deals | Health & Household > Women's Care | Health & Household > Vitamins, Minerals & Supplements | Health & Household > Diet & Sports Nutrition | Health & Household > Oral Care
+   most reviewed:    Health & Household > Vitamins, Minerals & Supplements | Health & Household > Household Supplies | Health & Household > Health Care | Pet Supplies > Dogs

@@ -1,0 +1,53 @@
+listings 20,698 (50% NOVA 4); words 1,976 (word-plot vocabulary minus 218 ingredient words)
+half B: 10,417 listings; links (>= 15 co-occurring listings, PMI > 0): 16,265; words with a link 1,131
+W1 word-lean assortativity (A-half lean across B-half links): +0.293 vs null -0.003 (sd 0.010), p = 0.0010
+Louvain: 18 communities, modularity 0.530; sizes [432, 220, 137, 53, 44, 43, 41, 40, 34, 25, 23, 22]
+stability over 5 seeds: adjusted Rand 0.53 (min 0.40)
+
+[W1] 432 words; mean lean +0.36 (+ = ultra-processed); leaning UPF (z>=2) 25%, leaning less processed (z<=-2) 15%
+   most used: use, favorite, make, makes, colors, texture, creamy, dishes, serve, flavorful, used, using, years, quick, minutes, comes, salads, dish, bring, variety, versatile, addition
+   most UPF-leaning: creamy, dinner, packet, tangy, quick, need, colors, mouthwatering | most less-processed-leaning: batches, harvested, ripened, texture, using, slowly, earthy, handcrafted
+
+[W2] 220 words; mean lean +1.23 (+ = ultra-processed); leaning UPF (z>=2) 38%, leaning less processed (z<=-2) 13%
+   most used: serving, source, calories, convenient, cholesterol, trans, packed, grams, verified, total, includes, flavored, excellent, help, satisfying, contain, nutritious, perfectly, come, servings, fun, provides
+   most UPF-leaning: flavored, calories, includes, fun, cheesy, irresistible, grams, school | most less-processed-leaning: verified, nutrients, nutrient, calls, fatty, pecans, raise, nutritious
+
+[W3] 137 words; mean lean -0.95 (+ = ultra-processed); leaning UPF (z>=2) 7%, leaning less processed (z<=-2) 26%
+   most used: gmo, non, certified, highest, sourced, provide, dedicated, facility, possible, covered, derived, exceptional, communities, organically, expect, suppliers, journey, performance, domestic, thing, practices, innovative
+   most UPF-leaning: covered, designed, index, ships, multigrain, bits, bowls, required | most less-processed-leaning: gmo, non, certified, milled, soil, producers, region, organically
+
+[W4] 53 words; mean lean -1.09 (+ = ultra-processed); leaning UPF (z>=2) 2%, leaning less processed (z<=-2) 19%
+   most used: making, available, believe, additives, business, proud, order, customers, bpa, choose, allergens, industry, recyclable, foundation, fact, guarantee, common, panel, passionate, clear, agriculture, continue
+   most UPF-leaning: sizes, foundation, customers, inspected, recyclable, department, bodies, order | most less-processed-leaning: additives, common, bpa, believe, available, clear, proud, allergens
+
+[W5] 44 words; mean lean -0.84 (+ = ultra-processed); leaning UPF (z>=2) 7%, leaning less processed (z<=-2) 27%
+   most used: package, states, origin, manufactured, dimension, temperature, combines, room, freezing, ambient, unit, height, length, width, number, chilling, discover, lid, authenticity, ser, tiene, citric
+   most UPF-leaning: package, combines, citric, discover, number, authenticity, width, length | most less-processed-leaning: qualities, ser, tiene, multipacks, org, compatibility, manufactured, temperature
+
+[W6] 43 words; mean lean -1.91 (+ = ultra-processed); leaning UPF (z>=2) 5%, leaning less processed (z<=-2) 51%
+   most used: veggies, standards, offer, care, brought, keeps, set, meet, apart, stocking, pantries, flours, feeling, freezers, fridges, choices, trust, huge, compromising, prices, cart, excited
+   most UPF-leaning: alliance, rainforest, greens, strict, stored, exactly, offer, trust | most less-processed-leaning: flours, excited, shade, standards, apart, fridges, pantries, freezers
+
+[W7] 41 words; mean lean -1.07 (+ = ultra-processed); leaning UPF (z>=2) 2%, leaning less processed (z<=-2) 32%
+   most used: preservatives, generations, picked, commitment, olives, peak, freshly, proudly, delivery, exotic, guaranteed, away, stuffed, blueberries, firm, working, buying, strive, higher, dedication, typically, waste
+   most UPF-leaning: stuffed, meatballs, blueberries, strive, dedication, generations, martini, coloring | most less-processed-leaning: olives, pitted, typically, higher, preservatives, pickup, kalamata, firm
+
+[W8] 40 words; mean lean -0.04 (+ = ultra-processed); leaning UPF (z>=2) 0%, leaning less processed (z<=-2) 2%
+   most used: today, started, award, include, selling, founded, hours, result, fast, began, retail, expertly, did, sold, developed, producing, decades, finished, continues, founder, forward, soon
+   most UPF-leaning: began, selling, soon, fast, nationwide, today, continues, founded | most less-processed-leaning: result, hours, award, developed, outstanding, retail, finished, testing
+
+[W9] 34 words; mean lean -2.57 (+ = ultra-processed); leaning UPF (z>=2) 0%, leaning less processed (z<=-2) 68%
+   most used: usda, hormones, synthetic, antibiotics, nitrates, difference, nitrites, allowed, bleached, fully, cows, bromated, pesticides, treated, rbst, chemical, enzymes, fridge, casein, shown, ultra, qai
+   most UPF-leaning: fully, fridge, shown, guidelines, casein, significant, ultra, assurance | most less-processed-leaning: usda, chemical, allowed, bleached, nitrites, bromated, qai, hormones
+
+[W10] 25 words; mean lean -1.41 (+ = ultra-processed); leaning UPF (z>=2) 4%, leaning less processed (z<=-2) 44%
+   most used: ingredient, dietary, information, note, description, matter, informational, save, check, actual, professional, consult, related, possession, accurate, pareve, questions, prior, refer, doing, address, list
+   most UPF-leaning: refer, contact, questions, address, prior, matter, professional, doing | most less-processed-leaning: ingredient, related, actual, pareve, dietary, possession, accurate, informational
+
+[W11] 23 words; mean lean +0.48 (+ = ultra-processed); leaning UPF (z>=2) 13%, leaning less processed (z<=-2) 9%
+   most used: tasting, owned, share, varieties, generation, going, sustainably, future, operated, belief, believed, innovation, images, education, access, inspiring, trademarks, drives, copyright, deserved, bullets, subsidiaries
+   most UPF-leaning: share, future, innovation, tasting, deserved, bullets, education, believed | most less-processed-leaning: owned, sustainably, generation, affiliates, subsidiaries, copyright, operated, access
+
+[W12] 22 words; mean lean -2.03 (+ = ultra-processed); leaning UPF (z>=2) 5%, leaning less processed (z<=-2) 64%
+   most used: prepare, busy, produced, diets, gmos, chemicals, fillers, suitable, genetically, satisfaction, attention, nearly, customer, harmful, heating, careful, engineered, vegetarians, guest, aspect, insecticides, supervise
+   most UPF-leaning: prepare, busy, diets, satisfaction, nearly, fillers, genetically, engineered | most less-processed-leaning: chemicals, gmos, produced, suitable, heating, customer, vegetarians, aspect

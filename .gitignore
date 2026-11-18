@@ -33,3 +33,10 @@ upf/data/processed/emotion_top_words.csv
 upf/data/processed/amazon_meta_compact.csv.gz
 upf/data/processed/soj/
 upf/data/processed/cj/
+
+# hand-labelling page holds Amazon review text: keep local
+upf/label_emotions.html
+upf/label_emotions_set2.html
+
+# stale analyses and figures kept locally, not shared
+upf/_archive/

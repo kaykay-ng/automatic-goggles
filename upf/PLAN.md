@@ -353,3 +353,398 @@ YELP PILOT RESULT (16 Nov; upf/notebooks/yelp_pilot.py; data/processed/yelp_pilo
  Fixes the known failures: 'Not happy' Yelp -1.47 (VAD +0.98), 'Not tasty' -2.31 (VAD +0.92), 'treat' +0.92 (positive, unlike EmoLex), 'stale' -2.57, 'arrived broken' -0.90.
  Remaining errors are mostly label noise: 1-star reviews that read positive ('Great. Can't miss with skippy').
  Implication: review-side results (H9 review valence elsewhere, A1-H3 promise-experience gap, review emotion comparisons) were measured with the weaker instrument; marketing copy stays on VAD (Yelp is review language).
+
+## EMOTION CLASSIFIER PILOT (16 Nov; user: emotion over positive/negative; 'classifiers handle negation better than a lexicon'; picked 'Cardiff large only') -- written BEFORE download and scoring
+Why: EmoLex counts words, so 'not happy' scores as joy and 'treat' as anger/disgust/fear. A contextual classifier reads the whole sentence.
+Model: cardiffnlp/twitter-roberta-large-emotion-latest (RoBERTa-large fine-tuned on SemEval-2018 Task 1 tweets via SuperTweetEval; MIT; safetensors).
+ 11 emotions, multi-label (a sigmoid per emotion): anger, anticipation, disgust, fear, joy, love, optimism, pessimism, sadness, surprise, trust.
+ The 8 Plutchik emotions overlap EmoLex exactly, so results line up with the EmoLex numbers. Not trained on product reviews: must be validated here.
+Sample: the SAME 20,000 reviews as the Yelp pilot (H11 draw, same seeds); text = review title + '. ' + body, truncated to 512 tokens. No food-word exclusion (the model needs whole sentences).
+Scores: per-emotion probability; an emotion is 'present' if probability >= 0.5 (the model's own rule). EmoLex on the same reviews = share of words tagged with each emotion (food words excluded, as before).
+PRE-DECLARED CHECKS
+ C1 STARS: 4-5 star reviews should have higher joy, love, optimism, trust and lower anger, disgust, sadness, pessimism than 1-2 star reviews.
+  Bar: correct direction for at least 7 of these 8 emotions; AND the composite (mean of joy, love, optimism, trust minus mean of anger, disgust, sadness, pessimism) separates 1-2 from 4-5 stars with AUC >= the VAD valence AUC on the same reviews (.889).
+  Same check reported for EmoLex as the comparison.
+ C2 NEGATION (the course's argument): split reviews by whether they contain a negator (not, no, never, cannot, none, nothing, nobody, nowhere, neither, nor, or any word ending in n't).
+  Prediction: the classifier's composite AUC beats EmoLex's on both subsets, and its advantage is LARGER on reviews with a negator. Also report 'joy' among 1-2 star reviews with a negator (EmoLex should be fooled, the classifier less so).
+ C3 'TREAT' ARTEFACT: reviews containing 'treat': mean anger/disgust/fear from the classifier vs EmoLex, against matched reviews without it. Prediction: the classifier does not show EmoLex's excess.
+ C4 HAND LABELS (after the user labels ~100 reviews, stratified by stars, blind to model output): for each emotion present >= 10 times in the labels, F1 of the classifier vs EmoLex.
+  Bar: classifier macro-F1 >= 0.5 and higher than EmoLex's.
+DECISION RULE: the classifier replaces EmoLex as the review-emotion measure if C1 and C4 pass. Then the review-emotion comparisons (UPF vs less processed, ALL-UPF vs MOSTLY-NOT reviewers elsewhere) are rerun with it on samples sized by the measured speed.
+ If C1 or C4 fails, EmoLex stays and the classifier is reported as a robustness check. Marketing copy is NOT scored (the model was trained on personal expression, not ad copy).
+EMOTION PILOT RESULT (16 Nov; upf/notebooks/emotion_pilot.py; data/processed/emotion_pilot.txt; soj/emotion_pilot.csv.gz; model 1.42 GB in ~/.cache/huggingface, user-approved download)
+ Sample verified identical to the Yelp pilot. Speed 91 reviews/s on the Mac GPU (MPS): 20,000 in 220 s; 1M reviews ~3 h.
+ C1 PASSES: 8/8 directions right (joy .09 -> .93, love .02 -> .54, optimism .04 -> .70, trust .01 -> .14; anger .73 -> .05, disgust .80 -> .04, sadness .54 -> .04, pessimism .14 -> .01).
+  Composite AUC 1-2 vs 4-5 stars: classifier .983 | VAD valence .889 | EmoLex .785 (TF-IDF+LR benchmark on the 200k was .988).
+ C2 SUPPORTED: advantage over EmoLex +.251 on reviews with a negator (AUC .972 vs .721) vs +.144 without (.984 vs .840). 1-2 star reviews with a negator: joy present 4.6% (classifier) vs 47.8% with a joy word (EmoLex).
+  'Not happy with the product.' -> anger .99, sadness .96 (EmoLex: joy, trust, anticipation). "Not bad at all, I'd buy again." -> optimism .95, joy .70 (EmoLex: anger, disgust, fear, sadness).
+ C3 SUPPORTED: reviews with 'treat' (n=280) have LESS anger/disgust/fear from the classifier (.057/.065/.009 vs .194/.213/.015) where EmoLex had 5-6x MORE.
+ C4 PENDING (user's ~100 hand labels).
+ CAVEATS: (1) anticipation, fear, surprise, trust, pessimism are present (p >= .5) in under 2% of reviews: in practice the instrument has ~6 working emotions (joy, optimism, love | disgust, anger, sadness).
+  (2) The emotions are strongly correlated (Spearman joy-disgust -.82, anger-disgust +.89, sadness-pessimism +.86): much of the signal is one positive-negative axis.
+  Within 5-star reviews the positive emotions still separate (love present in 58%, joy 96%; joy-love Spearman .32, joy-optimism .23), so 'love' vs plain 'joy' is the usable nuance.
+  (3) Remaining errors are mostly star-label noise (1-star reviews whose text is glowing).
+ C4 SET-UP (16 Nov): upf/label_emotions.html (built by upf/notebooks/make_emotion_label_tool.py; gitignored, holds review text). 100 reviews = 20 per star level from the pilot 20,000,
+  random order, stars and all scores hidden; 11 emotions + None, multi-label. Key (id -> stars) in soj/emotion_label_ids.csv. Scoring: upf/notebooks/emotion_c4.py (dry-run on fake labels only).
+ C4 RESULT (16 Nov; user labelled all 100; data/processed/emotion_c4.txt): FAILS the pre-declared bar.
+  User ticked: joy 33, sadness 20, disgust 18, pessimism 15, trust 12, love 9, anger 7, anticipation/surprise/fear 5 each, optimism 2, None 12. Notes: 'disappointment' (x2).
+  Emotions ticked >= 10 times: joy, trust, disgust, sadness, pessimism. Classifier macro-F1 .396 (bar .50). On the shared emotions (joy, trust, disgust, sadness) classifier .470 vs EmoLex .409.
+  Per emotion F1 classifier | EmoLex: joy .82 | .58; sadness .60 | .43; disgust .46 | .36; trust .00 | .27; pessimism .10 | n/a.
+  Why: (1) the classifier OVER-labels: optimism 37 reviews vs user 2, anger 33 vs 7, disgust 43 vs 18, love 23 vs 9: complaints get anger + disgust + sadness together (a negativity detector).
+   (2) it almost never fires trust (0) or pessimism (5) where the user saw 12 and 15. (3) the user's notes ask for 'disappointment', which neither instrument has as a category.
+  DECISION (pre-declared rule): EmoLex stays the review-emotion measure; the classifier is reported as a robustness check. Both beat chance mainly on POLARITY;
+   neither reproduces a human's distinction between specific negative emotions. Only joy (F1 .82) and sadness (.60) reach usable agreement. Caveat: one labeller, 100 reviews.
+
+## GOEMOTIONS PILOT (16 Nov; user: 'Try GoEmotions model') -- written BEFORE download, scoring and labelling
+Why: C4 failed; the user's notes asked for 'disappointment', which GoEmotions has (also approval, annoyance, gratitude, admiration: closer to review language).
+Model: SamLowe/roberta-base-go_emotions (RoBERTa-base on GoEmotions, 58k Reddit comments, 28 labels incl. neutral; multi-label sigmoid; MIT; safetensors 0.5 GB).
+Same 20,000 pilot reviews, same text and truncation. Present = probability >= 0.5 (fixed now; NO per-label threshold tuning on our labels).
+LABEL SET for the new hand labels (12 + None; chosen now for review relevance, before seeing any GoEmotions output):
+ positive: admiration, approval, gratitude, joy, love, excitement | negative: disappointment, annoyance, anger, disgust, sadness | other: surprise.
+ The other 16 GoEmotions labels are scored but not hand-labelled and not used in G4.
+FRESH LABELS: 100 NEW reviews (20 per star level) from the 20,000, excluding the 100 used for C4 (re-using those would bias the test). Blind: stars and all scores hidden.
+PRE-DECLARED CHECKS
+ G1 STARS: admiration, approval, gratitude, joy, love, excitement higher in 4-5 than 1-2 star reviews; disappointment, annoyance, anger, disgust, sadness lower.
+  Bar: >= 10 of these 11 directions right AND composite (mean positive six minus mean negative five) AUC 1-2 vs 4-5 >= .889 (VAD on the same reviews).
+ G2 NEGATION: as C2: composite AUC beats EmoLex on reviews with and without a negator; report the advantage on each.
+ G4 HAND LABELS: per emotion the user ticks >= 10 times, F1 of GoEmotions (p >= .5).
+  Bar: macro-F1 >= 0.5; AND on the emotions that Cardiff also has (joy, love, anger, disgust, sadness, surprise) GoEmotions macro-F1 > Cardiff's; AND > EmoLex on the ones EmoLex has (joy, anger, disgust, sadness, surprise).
+  Disappointment F1 reported on its own (the user's own category).
+ DESCRIPTIVE ONLY (not a test): GoEmotions vs the OLD 100 C4 labels on the shared emotions (joy, love, anger, disgust, sadness, surprise, fear).
+DECISION RULE: if G1 and G4 pass, GoEmotions becomes the review-emotion measure; else 'joy and sadness only' (from C4) with EmoLex + both classifiers as robustness.
+GOEMOTIONS RESULT G1-G2 (16 Nov; upf/notebooks/goemotions_pilot.py; data/processed/goemotions_pilot.txt; soj/goemotions_pilot.csv.gz; model 0.5 GB in ~/.cache/huggingface)
+ 300 reviews/s on MPS (3x Cardiff). G1 PASSES: 11/11 directions; composite AUC .959 (VAD .889, Cardiff .983). G2: advantage over EmoLex +.219 with a negator vs +.121 without.
+ RISK SEEN BEFORE LABELLING: at p >= .5 it is SPARSE. Present in: admiration 46%, love 18%, neutral 12%, disappointment 3.4%, approval 3.0%, joy 2.9%, disgust 1.6%, sadness .5%, anger 0%.
+  Only 24% of 1-2 star reviews get any of the five negative labels (13% disappointment). Happy reviews come out as 'admiration' rather than 'joy'.
+ DESCRIPTIVE vs the OLD C4 labels: joy F1 .00 (it says admiration), love .57 (Cardiff .44), disgust .29, sadness .00; its 'disappointment' vs the user's sadness-or-disappointment-note: F1 .58.
+ G4 SET-UP: upf/label_emotions_set2.html (gitignored), 100 NEW reviews (0 overlap with set 1; 20 per star level; seeds 21/22), 12 labels + None; key soj/go_label_ids.csv; scoring upf/notebooks/go_g4.py (dry-run on fake labels only).
+ G4 RESULT (16 Nov; user labelled all 100; data/processed/go_g4.txt): FAILS. Emotions ticked >= 10 times: approval 29, disappointment 29, admiration 18, annoyance 10.
+  GoEmotions F1: admiration .49, approval .13, disappointment .23, annoyance .00 -> macro-F1 .212 (bar .50). No shared emotion reached 10 ticks, so the Cardiff/EmoLex comparisons are empty.
+  Cause = UNDER-labelling at p >= .5 (the risk logged before labelling): approval 2 vs user 29, disappointment 6 vs 29, annoyance 0 vs 10.
+  EXPLORATORY (threshold-free, not a test): GoEmotions RANKS the reviews sensibly: ranking AUC admiration .82, approval .77, disappointment .77, annoyance .79, disgust .96.
+   So the information is there but the fixed cut-off is too high; choosing a lower cut-off on these labels would be tuning on the test set and is NOT done.
+  FINDING ABOUT THE LABELS THEMSELVES: with set-2's label list the user ticked joy 4 and sadness 1 (set 1: joy 33, sadness 20); approval and disappointment took their place.
+   Human emotion labels depend on the label list offered: the same kind of review is 'joy' or 'approval', 'sadness' or 'disappointment' depending on the menu.
+  DECISION (pre-declared): fallback = emotion claims restricted to the polarity-level signal (joy-like vs sadness/disappointment-like), EmoLex + both classifiers as robustness;
+   no classifier is adopted as a fine-grained emotion measure.
+ DISTRIBUTIONS (20,000 reviews, p >= .5): Cardiff 2.4 emotions per review, 3.5% with none; 4-5 stars joy 95% / optimism 85% / love 54%, 1-2 stars disgust 85% / anger 76% / sadness 52%.
+  GoEmotions 0.9 labels per review, 24% with none (excluding neutral); 4-5 stars admiration 59% / love 23% / joy 4%; 1-2 stars neutral 26% / disappointment 13% / disapproval 13%.
+ DOMAIN SHIFT (user, 16 Nov): both models were trained on social media (Cardiff: tweets; GoEmotions: Reddit comments), not product reviews; each carries its platform's idea of an emotion
+  (Cardiff 'optimism' on 85% of good reviews; GoEmotions calls praise 'admiration' and a quarter of complaints 'neutral'). For the limitations section.
+
+## EXTRA OPEN FOOD FACTS FIELDS (16 Nov; descriptive; soj/off_fields_matched.csv.gz, gitignored)
+The 75,933 matched listings are 58,051 distinct barcodes (several listings share one). Coverage among them:
+ countries 99.9% but 81.5% list ONLY the United States (scan location, not market: useless for cross-country comparison); origins 2.3%, manufacturing places 0.8%, stores 1.7%.
+ Nutrition per 100 g: energy 96.5%, salt 95.0%, sugars 92.4%, saturated fat 86.3%, fibre 79.2%. Nutri-Score grade 100% (unknown ~10-20%). Additives count 100% (mean NOVA 1/2/3/4: .08/.04/.32/3.24).
+ Labels 32% (organic 9.6%, kosher 4.3%, vegan 4.0%). Brand owner 80% (Whole Foods 1,420 products, NOVA-4 share .46; General Mills .90, Kellogg .96, Mondelez .93, Nestle .92).
+ Environmental score 72.5% unknown. Palm oil tag 13%; vegan 18% / non-vegan 42%.
+ Nutri-Score by NOVA: NOVA 1 is 42% grade A; NOVA 4 is 34% grade E (processing and nutrition overlap but are not the same).
+
+## PROCESSING OR NUTRITION? (16 Nov; user: 'try comparing with Nutri-Score on language sentiment') -- written BEFORE computing
+Question: is the warmer, livelier marketing copy of NOVA 4 (A1: valence +0.0135, arousal +0.0099 within category) about PROCESSING, or just about worse NUTRITION (sweet treats)?
+Data: soj/listing_vad.csv.gz (61,341 listings with copy >= 10 words; NRC VAD, food words excluded) joined to Open Food Facts Nutri-Score grade A-E by barcode; listings with grade unknown / not-applicable dropped.
+ N1 (primary) PROCESSING BEYOND NUTRITION: within strata of category x Nutri-Score grade, NOVA 4 copy has HIGHER valence than NOVA 1-3 copy (one-sided).
+  Strata need >= 20 listings per side. Baseline on the SAME listings and the same >= 20 rule, strata = category only. Report the share of the baseline effect that remains.
+  Reading fixed now: >= 50% retained and p < .05 -> 'about processing, not only nutrition'; < 50% or p >= .05 -> 'nutrition explains much of it'.
+ N2 NUTRITION BEYOND PROCESSING: within strata of category x NOVA group (4 vs 1-3), does valence change with Nutri-Score grade (A=1 ... E=5)?
+  Statistic: listing-weighted mean of within-stratum Spearman(grade, valence), strata with >= 30 listings and >= 3 grades; two-sided.
+ Arousal is reported the same way (N1b, N2b). Nulls: labels (N1) or grades (N2) shuffled within strata, 5,000 times. Holm over the four p-values.
+ Descriptive: mean valence by NOVA group x grade.
+RESULT (16 Nov; upf/notebooks/nutri_vs_nova.py; data/processed/nutri_vs_nova.txt). 50,004 of 61,341 listings have a Nutri-Score A-E (82%).
+ N1 SUPPORTED, 'ABOUT PROCESSING, NOT ONLY NUTRITION': within category x grade NOVA 4 copy valence +0.0117 (p=.0002, Holm .0008; 100 strata, 30,556 listings);
+  on exactly those listings the category-only effect is +0.0108 -> 108% retained (holding nutrition fixed does not shrink it). Baseline on all graded listings +0.0127.
+ N1b arousal: +0.0116 within category x grade vs +0.0118 category-only on the same listings -> 98% retained (p=.0002, Holm .0008).
+ N2 valence vs grade within category x NOVA: Spearman +0.009, p=.067 (Holm .067): NOT significant -> worse nutrition alone does not make copy warmer.
+ N2b arousal vs grade: +0.023, p=.0002 (Holm .0008): worse nutrition goes with slightly livelier copy (tiny).
+ Descriptive: NOVA 1-3 copy valence is flat across grades (.258-.272); NOVA 4 copy is warmer at EVERY grade, including grade A (.273 vs .265) and E (.284 vs .258).
+ READING: the pleasure-vs-purity wording follows PROCESSING, not nutrition. A grade-A ultra-processed product is still sold more warmly than a grade-A less processed one.
+Status: the pre-declared fallback above stands until the TAs advise: no classifier is adopted for specific emotions.
+Questions to ask:
+ 1. Which emotion classifier (if any) should we use for review text: Cardiff (11 emotions, over-labels), GoEmotions (28, under-labels), or stay with EmoLex? Is a transformer classifier acceptable as the course's 'classifier' technique?
+ 2. Both failed our hand-label bar (macro-F1 .40 and .21 vs .50) but beat EmoLex and track stars well (AUC .98 / .96). Is that enough to use one at the polarity level, or for a few emotions (joy, sadness, disgust)?
+ 3. Is lowering GoEmotions' 0.5 cut-off acceptable if chosen on a SEPARATE labelled set (its ranking AUC is .77-.96), or is that out of scope?
+ 4. Domain shift (tweets / Reddit vs product reviews): is a short limitations note enough, or should we fine-tune / use a review-trained model?
+ 5. One labeller, 2 x 100 reviews, and labels that shift with the label list: should the partner label the same reviews for inter-annotator agreement (Cohen's kappa)?
+Bring: C1-C4 and G1-G4 numbers above, the distribution chart, the two label sets.
+- 16 Nov: COMMUNITY MAP (descriptive figure; upf/notebooks/community_map.py -> upf/figures/community_map.png). The 14 largest Louvain communities of the mixed network (16,132 of 16,729 products)
+  as bubbles (area = products, colour = main department), links = backbone links between communities (>= 30), layout by link strength relative to size (Kamada-Kawai + overlap removal).
+  Strongest between-community links: household health -- household essentials 9,700; household essentials -- snacks & sweets 6,105; -- dogs 4,815; household health -- dogs 3,986; household essentials -- pantry 3,685.
+  Reading: the two grocery communities (snacks 77% UPF, pantry 79%) sit beside household essentials, while the healthier grocery mix (50% UPF) sits inside the household-health community;
+  video games, aquarium and camping are on the edge; birds, small pets and vegan substitutes are islands (< 30 links to any other community). UPF shares shown only where a community holds >= 50 groceries.
+- 16 Nov: HOUSEHOLD 'CHECKOUT AISLE' IDEA (user hypothesis: buying household products on Amazon makes it easy to sneak in UPF). EXPLORATORY count, not pre-declared.
+  Health & Household split by Amazon sub-category (soj/hh_subcategories.csv.gz; 172,058 reviewed products, 100% have one): Household Supplies 39k, Health Care 39k, Vitamins/Supplements 39k, ...
+  Share of reviewers who reviewed >= 1 product (activity-adjusted, ALL-UPF vs MOSTLY-NOT): household supplies 63.0% vs 66.1%; vitamins/diet 46.3% vs 59.5%; health care 60.2% vs 66.1%.
+  ALL-UPF reviewers with both UPF and household supplies: 23,094 vs 24,163 expected if UPF made no difference (ratio 0.96). Mean household-supplies reviews 2.37 vs 2.98.
+  READING: NOT supported at the population level: ultra-processed reviewers are slightly LESS likely to review household supplies. The big gap is supplements (the less processed group).
+  The strong snacks <-> household-essentials link on the community map is a BASE-RATE / HUB effect: about two-thirds of everyone reviews household supplies, so those products link to everything.
+  Not tested: same-day co-occurrence within reviewer (needs timestamps).
+
+## SHOPPER TYPES (16 Nov; user: 'shopper profiles') -- written BEFORE building. EXPLORATORY (one pre-declared test, T1).
+Question: what kinds of shoppers are there among grocery reviewers, judged only by what they review OUTSIDE groceries, and how ultra-processed is each type's grocery reviewing?
+Reviewers: the two groups with cached reviews in other departments (soj/elsewhere_reviews.csv.gz): ALL-UPF (UPF share 1.0) and MOSTLY-NOT (<= 0.5); the 'between' group is not cached (limit).
+ Keep reviewers with >= 5 non-food reviews. Groceries are NOT in the profile, so the types are not built from the thing we compare (no circularity).
+Profile: counts over Amazon sub-categories (second level of each product's category path, all 7 departments), weighted TF-IDF style so that categories nearly everyone reviews
+ (e.g. Household Supplies) count less (the base-rate trap found on 16 Nov). Similarity: cosine. Network: each reviewer linked to their 10 most similar reviewers (kNN, symmetrised).
+Types: Louvain communities (seed fixed); described by over-represented sub-categories (lift vs all kept reviewers) and size. Names are our reading.
+T1 (pre-declared): ALL-UPF share differs across types more than chance. Statistic: chi-square of type x group; null: group labels shuffled across reviewers within activity strata, 2,000 times.
+ Per type, report the ALL-UPF share against its EXPECTED share given its members' activity strata (so busy-reviewer types are not mistaken for UPF types).
+SHOPPER TYPES RESULT (16 Nov; upf/notebooks/shopper_types.py, shopper_types_plot.py; data/processed/shopper_types.txt; soj/shopper_types*.csv*; upf/figures/shopper_types.png)
+ 58,391 reviewers (ALL-UPF 26,812) with >= 5 non-food reviews; 634 sub-categories; 1.52M reviews. kNN (k=10) cosine network 464,468 links; Louvain 45 types, modularity .704.
+ T1 SUPPORTED: chi-square type x group 836 vs null mean 46 (95th pct 64), p = .0005: shopper types differ strongly in how ultra-processed their grocery reviewing is.
+ ALL-UPF share minus expected-from-activity (overall ~46%): collectors (action figures, fan shop; 1,092) +11.4 pts; gamers (consoles; 4,555) +9.7; party & novelty gifts +7.1;
+  little kids' toys +6.0; toy builders & crafters (6,451) +5.8; sports fans with dogs +4.6; small-pet keepers +4.1 ... baby gear +0.8; mobility/medical +0.6;
+  outdoors (hunting, fishing; 4,721) -5.5; grooming/oral/vision -5.8; fitness & oral care -5.9; wellness & supplements -7.7; heart health & Whole Foods -10.2;
+  sports nutrition (1,918) -11.9; natural & organic women's health (305) -19.7.
+ READING: play and fandom go with ultra-processed groceries; health maintenance, fitness and natural products go with less processed groceries. Baby gear and medical supplies are neutral.
+ CAVEATS: exploratory beyond T1; names are our reading; some Amazon sub-category labels are promotions (e.g. 'MasterCard Subscribe & Save'), left in as data;
+  only the two extreme groups (the 'between' group is not cached); reviews not purchases; Louvain types depend on k and resolution (not yet checked).
+SHOPPER TYPES STABILITY CHECK (16 Nov; user: 'why >= 5 non-food reviews? seems trivial'; 'try different cut-offs') -- written BEFORE running
+ The settings were judgement calls: minimum non-food reviews 5, neighbours k = 10, Louvain resolution 1.0. Re-run with: minimum 3, 10, 20 (k 10, res 1); k 5 and 20 (min 5); resolution 0.5 and 2 (min 5, k 10).
+ Per setting: T1 chi-square vs 500 within-strata shuffles; for the baseline types collectors, gamers, toy builders (+) and sports nutrition, wellness, outdoors (-), the type in the new run
+  that holds most of their members and its ALL-UPF share minus expected; Spearman (over reviewers in both runs) of 'my type's share minus expected' between baseline and new run.
+ Pattern HOLDS if, in every setting: T1 p < .01; all six anchor types keep their sign; Spearman >= .5.
+STABILITY RESULT (16 Nov; upf/notebooks/shopper_stability.py; data/processed/shopper_stability.txt; soj/shopper_stability.csv): PATTERN HOLDS IN ALL 8 SETTINGS.
+ Every run: T1 p = .002 (smallest possible with 500 shuffles); Spearman vs baseline .66-.81; all six anchors keep their sign.
+ Collectors +8.5 to +13.6 pts; gamers +5.9 to +13.1; toy builders +2.8 to +7.0 (weakest); sports nutrition -7.1 to -14.3; wellness -5.3 to -12.4; outdoors -0.8 to -7.1 (near zero at minimum 20 reviews).
+ Types found: 21 (resolution .5) to 85 (resolution 2); at resolution .5 the three minus-anchors merge into one type (-7.1).
+ DISCLAIMER for paper/figure: 'We tried minimum 3, 5, 10 and 20 non-food reviews, 5, 10 and 20 neighbours and Louvain resolution 0.5, 1 and 2; the same types lean the same way in all eight runs.'
+ Figure upf/figures/shopper_types.png footnote updated with this.
+- 16 Nov: SHOPPER MIX, GROCERIES INCLUDED (descriptive; upf/notebooks/shopper_mix_full.py -> upf/figures/shopper_mix_full.png, soj/shopper_mix_full.csv). User: types looked 'strictly categorised'.
+  Each type's reviews split into UPF groceries, less processed groceries, household supplies, health/vitamins/care, pets, toys & games, video games, sports & outdoors, baby, other.
+  Types are NOT exclusive: the defining category is 18-32% of a type's reviews (collectors' toys 27%, gamers' video games 18%, outdoors' sports 32%); every type spends 9-17% on
+  household supplies and 20%+ on health/vitamins/care. The health share is what grows down the ranking (collectors 20% -> sports nutrition 48%, heart health 50%).
+  UPF share of the type's groceries: collectors 69%, gamers 68%, party 68%, toy builders 65% ... wellness 54%, sports nutrition 51%, heart health 50%, natural & organic 45%.
+  Also kNN link mix (shopper_network_view.py first run): 64-81% of each type's similarity links stay inside the type. Network drawing of reviewers set aside by the user (unclear value).
+- 16 Nov: WHICH UPF DO THE TYPES REVIEW? (descriptive; reviewer_pairs x products). Average UPF share of grocery reviews over all 58,391 typed reviewers: 60.5%.
+  Fitness & oral care 57% (near average, not high): ordinary staples plus diet items (instant oatmeal, stevia drops, Cheerios, Crystal Light; over-represented NOVA-4 categories multigrain bread 1.9x, peanut butter 1.7x, ice cream 1.5x).
+  Sports nutrition 51%: its UPF is 'health-coded': protein bars 3.7x over-represented, sweeteners 2.1x, plant-based milks 1.8x, meat analogues 1.8x (RXBAR, KIND, Lakanto, SweetLeaf, Nutpods).
+  Collectors 69%: crisps 1.8x, beef jerky 1.8x, stews 1.6x, ready meals 1.6x, sweetened drinks 1.5x.
+  Protein powder and creatine are sold under Health & Household (Sports Nutrition), not Grocery, so they are NOT in the grocery match or NOVA at all.
+- 16 Nov: WHO ARE OUR REVIEWERS? (selection caveat for the paper). All Amazon grocery reviews: 7,034,393 reviewers, 14,318,520 reviews; mean 2.04, median 1; 65.6% wrote exactly one.
+  >= 3 reviews: 17.2% of reviewers but 50.9% of reviews; >= 10: 2.0% of reviewers, 18.6% of reviews. Our 141,977 (>= 3 MATCHED grocery reviews) are 2.0% of grocery reviewers;
+  their total grocery reviews: median 11, mean 15.8. Shopper types add >= 5 non-food reviews (collectors: median 16). All shopper results describe heavy reviewers, not typical shoppers.
+- 16 Nov: SHOPPER TYPE MAP (descriptive; upf/notebooks/shopper_type_map.py -> upf/figures/shopper_type_map.png; kNN edges saved soj/shopper_knn_edges.csv.gz, 583,910 links).
+  38 types with >= 300 members as bubbles, colour = lean (diverging, -20..+20 pts), lines = >= 300 between-type links, layout by link strength relative to size.
+  76% of similarity links stay inside a type. Strongest between-type links: toy builders - baby gear 5,973; toy builders - gamers 2,379; toy builders - outdoors 2,309; outdoors - gamers 2,041;
+  outdoors - fitness & oral care 1,773; fitness & oral care - sports nutrition 1,538. Reading: play/family types (orange) on one side, body-care types (blue) on the other,
+  outdoors and pets+supplements in the middle as bridges; natural & organic and heart health are small and peripheral.
+- 16 Nov: COMMUNITY PROFILES, UNNAMED (user: pool the communities and show what members have in common without labels). upf/notebooks/community_profiles.py -> upf/figures/community_profiles.png, soj/community_profiles.csv.
+  15 largest communities C1-C15 (by size) x sub-categories; cell = share of members who reviewed >= 1 product there.
+  Common base in every community: Household Supplies 68-84%, Health Care 59-80%, Vitamins 49-80%, Dogs 36-67%.
+  Most communities are ONE shared interest on top of that base: C5 cats 99%, C12 stationery 99%, C13 birds 98%, C14 puzzles 100%, C10 vision 96%, C11 wellness 96%, C15 fan shop 94%,
+  C9 diet & sports nutrition 88%, C8 fish 86%, C3 hunting & fishing 81%. Broader ones: C1 (toys across building, dolls, preschool 75%, games 45%), C2 (baby feeding 65%, preschool 67%, diapering 48%),
+  C4 (video games 55% / 48%), C6 (diffuse: oral care 44%, exercise 33%).
+  METHOD NOTE: TF-IDF down-weights common categories, so a shared less-common category dominates cosine similarity; communities therefore crystallise around one distinctive interest.
+- 16 Nov: CONSISTENCY CHECK (descriptive). Share of people who are all-UPF, games & figures types (gamers + collectors) vs health & fitness types (sports nutrition, wellness, heart health, natural & organic) vs everyone else:
+  by quartile of grocery share of a person's reviews (edges .12/.20/.30): games & figures 53.3/56.5/61.0/54.3% vs everyone else 46.4/45.9/46.8/43.6% vs health & fitness 32.0/34.0/40.0/31.9%.
+  by grocery-review count (3 / 4 / 5-9 / 10+): games & figures 63.3/50.6/51.5/31.8 vs everyone else 54.7/40.1/39.1/15.9 vs health & fitness 45.7/31.4/24.3/6.9.
+  Reading: the gap holds in every band of grocery share and every activity level (games & figures +7 to +16 pts above everyone else; health & fitness 6 to 15 pts below).
+- 16 Nov: PRODUCT LEAN, PRE-DECLARED (written before computing anything; user asked for the 'one row per food category' strip chart).
+  Question: which grocery products are reviewed mostly by hobby-minded vs health-minded shoppers, and do ultra-processed products sit on the hobby side WITHIN the same food category?
+  Reviewers: the 58,391 shopper-type reviewers (>= 3 matched grocery reviews, >= 5 non-food reviews). Groceries NOT used for the lean (it is the outcome side).
+  HEALTH-CODED set (narrow core): H&H > Vitamins, Minerals & Supplements; H&H > Diet & Sports Nutrition; H&H > Wellness & Relaxation; Sports & Outdoors > Exercise & Fitness.
+  HOBBY set (narrow core): Toys & Games > Toy Figures & Playsets, Collectible Toys, Games & Accessories, Puzzles, Building Toys, Novelty & Gag Toys; all Video Games; Sports & Outdoors > Fan Shop, Memorabilia Display & Storage.
+   (Kids' toys - preschool, dolls, plush, pretend play, outdoor play, learning - are left out: those mark parents, not hobbies.)
+  Reviewer lean = (health-coded reviews - hobby reviews) / all non-food reviews; -1 = all hobby, +1 = all health-coded. 'Health-coded' = sold as healthy, NOT shown to be healthy.
+  Product lean = mean lean of its reviewers; products with >= 20 of our reviewers. Rows = Amazon grocery category (level 2 > level 3) with >= 15 such products.
+  Null: shuffle reviewer leans within activity strata (3 / 4 / 5-9 / 10+ matched grocery reviews), 1,000 shuffles; per-product two-sided p; products flagged at Benjamini-Hochberg FDR 5%.
+  L1 (pre-declared test): within each Amazon category, mean lean of NOVA 4 products minus NOVA 1-3 products, averaged over categories weighted by the smaller side; same shuffle null.
+   Prediction: negative (UPF products lean hobby). Categories need >= 3 products on each side.
+  Robustness: WIDE sets (health adds Oral Care and Vision; hobby adds all Toys & Games). Result holds if L1 keeps its sign with p < .05 in both.
+PRODUCT LEAN RESULT (16 Nov; upf/notebooks/product_lean.py; data/processed/product_lean.txt; soj/product_lean.csv.gz): L1 SUPPORTED, holds in both sets.
+ 2,373 products with >= 20 of our reviewers (1,347 UPF). L1 narrow -0.071 (null -0.005, sd .002), p = .001 (smallest possible); wide -0.095, p = .001.
+ 588 products lean beyond chance at FDR 5% (256 hobby side, 332 health side). Reviewers: 19% have lean exactly 0 (no hobby or health-coded reviews); 5.5% >= +.5, 1.6% <= -.5.
+ Within category, UPF products sit on the hobby side of less processed ones in nearly every Amazon category (drink mixes, cookies, cereals, canned foods, sauces, soups, snack foods, spices);
+ exceptions: plant-based milk and milk & cream, where the UPF products lean health (health-coded UPF again).
+- 16 Nov: PRODUCT BINS (descriptive companion to PRODUCT LEAN; user found the lean axis too abstract). upf/notebooks/product_bins_plot.py -> upf/figures/product_bins.png, soj/product_bins.csv.
+  Reviewers in 5 groups by rank of lean (narrow sets): hobby side and health side each split at their median, 'neither' = lean exactly 0. Sizes 13 / 13 / 19 / 26 / 29%.
+  Per food category x processing: share of its reviewers (unique people, all matched products) in each group; rows ranked by mean group.
+  Within every category except milk & plant milk, the UPF bar has more strong-hobby and fewer strong-health reviewers than the less processed bar
+  (strong health: candy 23 vs 42%, cookies 23 vs 40%, jerky 24 vs 40%, crackers 23 vs 39%, nut butters 32 vs 45%; milk & plant milk 36 vs 33%, the health-coded exception).
+  CAVEAT: category bars count people who reviewed that category, so heavy reviewers (in many categories) weigh more than in the 'all reviewers' bar; compare UPF vs less processed WITHIN a row.
+  The activity-adjusted test is L1 (PRODUCT LEAN), not this chart.
+  DIVERGING VERSION (16 Nov, user: hard to see at a glance): upf/figures/product_bins_diverging.png (same script). Centre = middle of 'neither'; hobby groups left, health right.
+  Reference bar = 'average food bar' (all category bars pooled: 12 / 13 / 18 / 27 / 30%), so it has the same weighting as the rows.
+  Why the bars lean blue: (1) groups are unequal by construction (hobby side 26% of reviewers, health side 55%: health-coded products are common, vitamins reviewed by 58%);
+  (2) heavier grocery reviewers lean health (strong health 28% at 3 grocery reviews vs 37% at 10+) and appear in more category bars.
+  So the absolute amount of blue says nothing about grocery reviewers being healthy; only the shift between the two bars of a row is the finding.
+- 16 Nov: ONE CURVE, PRE-DECLARED (written before computing; user asked for the health-share curve proposed earlier).
+  Question: if health-coded products make up a bigger part of someone's non-food reviews, are they less likely to have only ultra-processed grocery reviews?
+  Reviewers: the 58,391 shopper-type reviewers (ALL-UPF 26,812 vs MOSTLY-NOT 31,579; 'between' reviewers are not in this set). Groceries not used on the x-axis.
+  x = health-coded share of non-food reviews (narrow set as PRODUCT LEAN). Bins: 'none' (share 0) + deciles of the positive shares. Second panel: hobby share, same binning.
+  y = % ALL-UPF in the bin, with 95% binomial interval; expected = mean of the activity-stratum rate (3 / 4 / 5-9 / 10+), as in SHOPPER TYPES.
+  C1 (test): reviewer-level slope of (ALL-UPF - expected) on health share; null = health shares shuffled within activity strata, 2,000 shuffles. Prediction: negative.
+  C2 (test): same for hobby share. Prediction: positive. Holm over C1, C2.
+  Robustness: WIDE sets; and C1 among reviewers with no hobby reviews only (the two shares compete for the same reviews, so each curve partly mirrors the other).
+ONE CURVE RESULT (16 Nov; upf/notebooks/one_curve.py; data/processed/one_curve.txt; soj/one_curve.csv; upf/figures/one_curve.png): C1 AND C2 SUPPORTED.
+ C1 health share: -5.0 pts ALL-UPF per 10 pts of share, p = .0005 (Holm .001); wide -4.8; among reviewers with no hobby reviews -4.2 (all p = .0005).
+ C2 hobby share: +4.5 pts per 10 pts, p = .0005 (Holm .0005); wide +3.6.
+ Curve (observed vs expected ~45%): health none 57% -> top tenth (44-100% health-coded) 26%; hobby none 42%, lowest tenth 36%, top tenth (33-100% hobby) 63%.
+ Expected barely moves (45-47%), so activity does not explain the curves. Dip at the lowest hobby tenth (0.1-3.3% hobby: 1 hobby review among many) is unexplained; probably very heavy reviewers.
+- 16 Nov: story page v7. Removed 'Purity travels, pleasure stays home' (user: the purity words just mirror vitamins vs toys, the shopper-type split again; pleasantness elsewhere confusing).
+  H8 null kept as one line and H9 (+0.011 warmer reviews) added as one line under 'What did not hold up' (gift/toy reviews are warm anyway). Pleasantness validation callout moved up to 'Two vocabularies'.
+  New section 'Hobbies and health': ONE CURVE chart (log x, both panels), then 'Who reviews the candy?' (diverging bars) as a subsection. one_curve.png now also on a log x-axis.
+- 16 Nov: OPEN, HAND-LABELLING ACCURACY CHECK (planned by the user for Wed 18 Nov, after checking with the TA; nothing built yet).
+  Trigger: concordance snippets for the dial words showed lexicon words used across both sides (e.g. a NOVA-4 listing 'certified organic, non GMO, vegan';
+  'pure butter' on the NOVA-4 side), raising (a) whether words are used in the sense the lexicon scores and (b) whether OFF NOVA labels are right.
+  Candidate checks (pre-declare the pass rule here BEFORE labelling; blind to side/label; offline labelling page like the emotion ones, gitignored):
+   (1) WORD-IN-CONTEXT: ~25 dial words x ~10 random snippets per side (~500), label 'used in the sense the lexicon scores' yes/no; compare error rates by side.
+   (2) NOVA LABEL: 50-100 random matched products, hand-classify NOVA from the OFF ingredient list, report agreement with the OFF label.
+  Concordance tooltips for the dials are ON HOLD until then: snippets drafted (1 random per word and side, brand-named ones filtered out, one dropped by hand;
+  scratchpad kwic.json, not saved in the project). If shown later, draw them from the labelled sample and say they are random.
+- 16 Nov: story page v23 (after review comments, v8-v22): facts-card hand-check note removed; 'Two vocabularies' intro paragraph removed; VAD paragraph covers all three
+  dimensions + interactive 'three dials' (Valence / Arousal / Dominance tabs, words at rounded lexicon scores, side averages; zoom toggle removed); box 'Why a fixed word list?'
+  (static lexicon chosen on purpose; only valence validated by stars); dumbbell chart and the whole 'Do shoppers feel it?' section removed (user: thin value);
+  its results kept as two lines under 'What did not hold up' (equal review pleasantness 0.207 vs 0.207; 'treat' artefact). Hover tooltips moved to the page's own tooltip.
+- 18 Nov: NETWORK STRUCTURES, EXPLORATORY + CORRECTED H4 (user: most reviewers review few products, so check how connected the co-review network really is; try other structures).
+  Reason for the correction: Week 4 says the backbone is for drawing, not data; H4 assortativity and the product-community Louvain ran on the disparity backbone (alpha = .01).
+  CORRECTED H4 (pre-declared now, before computing): NOVA assortativity (NOVA 4 vs 1-3) on the FULL weighted grocery co-review projection (reviewers with 2-50 matched reviews,
+   weight = shared reviewers), null = NOVA labels shuffled within Open Food Facts category (as the original H4), 1,000 shuffles, one-sided. This replaces the backbone number in the paper;
+   the backbone stays only for the drawing.
+  EXPLORATORY comparison (descriptive, no new claims): S1 full projection; S2 links with >= 2 shared reviewers; S3 kNN product graph (cosine on reviewer sets, k = 10, products with >= 5 reviewers);
+   S4 the old disparity backbone; S5 category network (Amazon grocery sub-category x processing level, links = shared reviewers relative to expectation).
+   For each: nodes, links, share of products connected, giant component, clustering, Louvain modularity, NOVA assortativity vs within-category null.
+NETWORK STRUCTURES RESULT (18 Nov; upf/notebooks/network_structures.py; data/processed/network_structures.txt; soj/network_structures.csv, category_network.csv; figure upf/figures/network_structures.png):
+ CONNECTIVITY: 79.5% of grocery reviewers wrote exactly 1 matched review (52.7% of reviews) and create no links. Projection (2-50 reviewers): 63,841 products, 2.85M links, giant component ~100%,
+  but 92.5% of links rest on ONE shared reviewer; requiring >= 2 shared reviewers keeps 212,774 links and only 21,019 products (33%), giant 19,859.
+ CORRECTED H4 (full weighted projection): NOVA assortativity +0.105 vs within-category null +0.028 (sd .001), p = .001 (1,000 shuffles) -> SUPPORTED, but about a third of the
+  backbone value (+0.28 vs +0.09) that the page and earlier notes report. Unweighted +0.093 vs +0.024.
+ Structures (weighted assortativity, observed vs null; modularity of Louvain):
+  S2 >= 2 shared reviewers +0.176 vs +0.055; modularity .43, 13 communities >= 20 products, clustering .25.
+  S3 kNN cosine k=10 (products >= 5 reviewers, 32,016 = 50%) +0.158 vs +0.039; modularity .41, 34 communities >= 20.
+  S4 disparity backbone +0.281 vs +0.090; modularity .53; only 6% of products. The stricter the link rule, the higher the assortativity: strong ties are more same-kind.
+ S5 CATEGORY NETWORK (123 nodes = Amazon grocery sub-category x UPF/less, link = reviewers of both relative to chance, 'lift'): UPF-UPF lift 2.71, less-less 2.82, UPF-less 2.34
+  (different sub-categories); same sub-category UPF-less 6.12. Louvain (lift > 1) finds 2 weak communities (modularity .09) that split FRESH / CHILLED / FROZEN (deli, cheese,
+  meat, bread, yogurt, ice cream, fresh produce, pizza) from SHELF-STABLE PANTRY (candy, cereal, cookies, canned, snacks, spices, pasta, tea, nut butters), each holding both
+  the UPF and less-processed versions. READING: at category level shoppers sort by how food is stored and delivered, not by processing level.
+ TO DO (not yet run): the category / brand shuffle bars on the story page are backbone-based; rerun them on the full projection before the paper uses them.
+- 18 Nov: IS THERE A REAL PRODUCT COMMUNITY? (exploratory; user: '2 shared reviewers sounds like coincidence; interesting would be most repeat reviewers reviewing the same few foods').
+  OVERLAP: product pairs where >= 50% of the smaller product's repeat reviewers (2-50 matched reviews) also reviewed the other: 246 pairs / 460 products with >= 3 shared;
+   62 pairs / 113 products with >= 5 shared; 5 pairs with >= 10. Same processing level 90%+, and they are PRODUCT LINES: same brand 52-60% by name, and the 'different brand' ones
+   checked by hand are the same brand spelled differently (Cypress Grove goat cheeses, Erin Baker's breakfast cookies, Mrs. Wages salsa mixes, Jolly Rancher gelatin).
+  CONCENTRATION (50,938 reviewers with 5-50 matched reviews, median 7; null = products shuffled across all reviews, 5 shuffles): top brand 24.9% of a reviewer's reviews vs 20.4%;
+   top Amazon sub-category 33.3% vs 25.6%; distinct brands per review 86.8% vs 93.4%; ALL reviews ultra-processed 14.0% vs 7.9%; NO ultra-processed 1.0% vs 0.1%.
+   (brand strings normalised to 8 letters; missing brands pooled, which inflates both sides a little.)
+  READING: no 'overwhelming majority reviews the same few foods'. Repeat reviewers spread their reviews; the only tight product clusters are flavours of one product line.
+   What sorts people beyond chance is processing level (all-UPF 1.8x chance) more than brand (1.2x) or sub-category (1.3x). So the network is better used as a TEST of sorting
+   (corrected H4, person-level all-UPF vs mostly-not) than as a source of product communities; drop product-community detection as a headline.
+- 18 Nov: CATEGORY CO-REVIEW NETWORK (exploratory; user: 'of those who reviewed food category X, what other clusters of Amazon categories do they also review?').
+  upf/notebooks/category_network.py -> data/processed/category_network.txt, soj/category_nodes.csv, category_links.csv, category_food_nonfood_rel.csv; figure category_network_plot.py -> upf/figures/category_clusters.png.
+  141,977 reviewers (>= 3 matched grocery reviews); nodes = Amazon grocery sub-categories (81) and non-food sub-categories (68), each >= 500 reviewers; promo pseudo-categories removed.
+  A (all links, lift): trivial split food vs non-food (everyone here reviews food). B (food x non-food only): cell = reviewers of both / expected from reviewers with the same number of
+   non-food categories (strata 0/1-2/3-5/6-10/11-20/21-40/41+). (A first null that shuffled non-food categories across reviewers was biased: duplicates collapsed, inflating popular
+   categories like Household Supplies; replaced.) 141 pairs > 1.25x, 106 < 0.8x. Bipartite Louvain (links > 1.15x, >= 50 shared): 6 clusters, modularity .49, adjusted Rand over seeds .69.
+  Clusters (our names): YOUNG FAMILIES (chilled & frozen: ice cream, yogurt, milk, cheese, meats, ready meals, pizza; food 71% UPF) with baby feeding/care/nursery, toddler toys, party,
+   Switch (up to 1.6x); PANTRY & HOME CARE (cooking & baking, canned, sauces, soups, spices, tea; 64% UPF) with mobility aids, bathroom safety, cold & flu, hunting & fishing, birds (weak, ~1.1-1.3x);
+   HEALTH & FITNESS (nut butters, plant milk, oats, dried fruit, eggs, beans, granola, organic; 51% UPF) with diet & sports nutrition (1.3-1.5x), vitamins, exercise, wellness;
+   TREATS & GAMING (candy, cereal bars, chocolate, toaster pastries, cold cereal, syrups; 95% UPF) with video games, collectibles, fan shop, novelty toys (up to 1.5x).
+  READING: at category level the network IS informative: four lifestyle clusters spanning food and non-food, and their food's UPF share ranges 51% (health & fitness) to 95% (treats & gaming).
+   Effects are modest (1.2-1.6x), clusters only moderately stable; describe as exploratory. Fits the shopper-type and hobbies/health results from the other direction (food first).
+- 18 Nov: 2018 CO-PURCHASE NETWORK (user OK to download; upf/data/raw/amazon/2018/meta_Grocery_and_Gourmet_Food.json.gz, 110 MB, gzip OK, Amazon Review Data 2018,
+  Ni, Li & McAuley EMNLP 2019, research use). 283,354 grocery products; also_buy for 29%, also_view for 42%.
+  Linking: 2018 ASINs mapped to 2023 parent_asin via the 2023 reviews' (asin, parent_asin) pairs (soj/asin_to_parent_2023.csv.gz, 240,059 variants). Coverage of our 75,933 matched products:
+  37% present in 2018; also_buy links between matched products 78,781 (undirected) on 18,415 products (24%), 17% listed in both directions; also_view 55,278 links, 22,703 products.
+  PRE-DECLARED (before building): H4-CP NOVA assortativity on the undirected also_buy network among matched products (weight 2 if listed both ways, else 1) is above a null that shuffles
+   NOVA labels within Open Food Facts category (1,000 shuffles), one-sided. Robustness (pre-set): (a) drop same-brand links; (b) null shuffled within brand; (c) also_view network.
+  EXPLORATORY: Louvain communities on the also_buy network (no backbone: it is already sparse); describe each by Amazon sub-categories, brands and UPF share; compare with the review network.
+CO-PURCHASE RESULT (18 Nov; upf/notebooks/copurchase_network.py, copurchase_describe.py; data/processed/copurchase_network.txt; soj/copurchase_*.csv*):
+ 30,842 matched products found in 2018; also_buy network 18,415 products, 78,781 links (same brand 17%, same OFF category 20%, same processing level 76%; products 71% UPF).
+ H4-CP SUPPORTED: NOVA assortativity +0.425 vs within-category null +0.118 (sd .009), p = .001.
+ Robustness all hold (p = .001): without same-brand links +0.350 vs +0.103; null shuffled within brand +0.425 vs +0.314 (brand explains part, not all); also_view +0.567 vs +0.163.
+ Compare: review network (full) +0.105 vs +0.028. Co-purchase links are far more processing-sorted than review overlaps.
+ Communities (exploratory): giant component 17,464 products (95%); Louvain 60 communities, modularity .698; stability adjusted Rand .56 over 5 seeds (moderate).
+ Read by TF-IDF of titles (brand words removed) and UPF vs expected from the community's OFF category mix: they look like SHOPPING MISSIONS, e.g.
+  C2 whole-food baking & health (ghee, hulled, bran, crispbread, carob; Bob's Red Mill) UPF 38% vs 57% expected (-19 pts); C5 organic/natural (muesli, Edensoy, Amy's) 55% vs 66% (-11);
+  C18 fish & Latin pantry (herring, mole, achiote; Goya) 30% vs 44% (-13); C7 Asian/global cooking (Patak's, mirin, tempura) 49% vs 56% (-8);
+  C1 chilled & frozen convenience (refrigerated, battered, Steamfresh) 79% vs 71% (+7); C3 boxed sides & convenience (Suddenly Salad, Fluff, chowder) 77% vs 65% (+12);
+  C16 barbecue (Kansas City, Stubb's, breading) 83% vs 67% (+17); C4 seasonal candy (Valentine, Easter, Halloween) 98% vs 90%; C19 drink mixes (Crystal Light) 95% vs 87%;
+  C6 gluten-free & allergy (Glutino, Passover) 76% vs 71%; C13 desserts (Jell-O pudding) 83% vs 80%; C14 coffee & cocktails at home 87% vs 83%.
+ READING: co-purchase gives a sensible community structure: missions (scratch baking, organic, world cooking, BBQ, convenience, holiday candy), and the mission shifts processing
+  level beyond the food types it contains (-19 to +17 pts). 'UPF vs expected' is descriptive (no test yet). Caveats: 2018 snapshot; 24% of matched products have a link;
+  'also bought' is Amazon's own aggregate (recommendation lists), not raw baskets.
+ FIGURE: upf/notebooks/copurchase_plot.py -> upf/figures/copurchase_missions.png (community map of the 20 largest communities + observed vs expected UPF per community).
+ CIRCULARITY CHECK (18 Nov, exploratory; user: 'isn't also-bought circular?'). NOVA is not used to build links or communities (Amazon computes also-bought from purchases; Louvain
+  uses links only), so not circular by construction. The real risk is SIMILARITY: also-bought includes substitutes (same kind of product), and similar products share processing level.
+  Of the links: same OFF category 20%, same Amazon sub-category 40%, same sub-sub-category 25%, same brand 17%.
+  Finer null (shuffle within Amazon sub-sub-category): +0.425 vs +0.134, p = .002 (500 shuffles).
+  CROSS links only (different OFF category AND different Amazon sub-category AND different brand: complements, not substitutes; 37,833 links): +0.252 vs +0.058 (within OFF category)
+   and vs +0.052 (within sub-sub-category), p = .002. Sorting by processing level survives among products that are NOT alike: baskets, not just look-alikes.
+  Remaining caveat: also-bought is shaped partly by Amazon's own recommendations (feedback loop); cannot be separated with this data.
+- 18 Nov: MARKETING WORD NETWORK (user: do the words form an interesting network?). Pre-declared before computing:
+  Listings: the category-balanced sample of the word plot (marketing_wordplot.py: 25 OFF categories, equal NOVA 4 / NOVA 1-3 per category). Words: the word-plot vocabulary
+  (>= 30 listings) minus Open Food Facts ingredient words (as for the VAD scores), so communities are about how food is sold, not what it is.
+  SPLIT-HALF: listings split at random into halves A and B. Word lean = log-odds z (NOVA 4 vs 1-3, Dirichlet prior) from half A; network from half B:
+   link = two words used in the same listing; weight = positive PMI; kept if >= 15 co-occurring listings and PMI > 0.
+  W1 (test): word-lean assortativity (Pearson correlation of A-half z across B-half links, weighted) > null from shuffling z across words (1,000), one-sided.
+  Exploratory: Louvain communities on the B-half network (stability over seeds); described by top words, mean lean, share of UPF- / less-processed-leaning words.
+WORD NETWORK RESULT (18 Nov; upf/notebooks/word_network.py; data/processed/word_network.txt; soj/word_nodes.csv, word_edges.csv.gz):
+ 20,698 balanced listings; 1,976 words (218 ingredient words removed). Half-B network: 16,265 PPMI links among 1,131 words.
+ W1 SUPPORTED: word-lean assortativity +0.293 vs null -0.003 (sd .010), p = .001 (split-half, so not circular): words that lean the same way are used together.
+ Louvain: 18 communities, modularity .53; stability adjusted Rand .53 (min .40) over 5 seeds (moderate). Our reading of the larger ones (mean lean, + = ultra-processed):
+  W1 432 cooking & use (favorite, make, creamy, quick, minutes, versatile) +0.36;  W2 220 nutrition panel + pleasure & convenience (serving, calories, grams, convenient, fun,
+  irresistible, school, satisfying) +1.23;  W3 137 certification & sourcing (non-GMO, certified, sourced, facility, organically, practices) -0.95;  W4 53 brand values (believe, proud,
+  customers, BPA, recyclable, additives, allergens) -1.09;  W7 41 heritage & freshness (generations, picked, freshly, peak, preservatives) -1.07;  W9 34 free-from claims (USDA, hormones,
+  antibiotics, nitrates, bleached, bromated, pesticides, rBST) -2.57;  W12 22 anti-GMO / no chemicals -2.03;  W8 40 company history (founded, decades) ~0.
+  Boilerplate communities: W5 package specs/dimensions/Spanish, W10 Amazon/seller disclaimer text ('actual', 'consult', 'professional'), W6 retailer pitch (pantries, freezers, standards).
+ READING: the purity side is several distinct vocabularies (certification, free-from, heritage/freshness, brand values), the ultra-processed side mostly one (pleasure + convenience
+  + nutrition-panel numbers) plus generic cooking language. Caveat: some communities are seller templates, not language choices.
+ FIGURE: upf/notebooks/word_network_plot.py -> upf/figures/word_network.png (7 main vocabularies, top 13 words each, groups ordered by mean lean; boilerplate groups left out).
+ NOVA 1-3 CHECK (18 Nov, exploratory; user hypothesis: less-processed side splits into several vocabularies because it pools NOVA 1, 2 and 3). NOT SUPPORTED.
+  Balanced sample: NOVA 1 13%, NOVA 2 0.5%, NOVA 3 36%, NOVA 4 50% (the 'less processed' side is mostly NOVA 3: cheese, cured meat, bread, canned).
+  Listings using >= 2 words of a purity vocabulary draw NOVA 1 / 2 / 3 in about their base proportions (NOVA 1 at 0.83-1.16x, NOVA 3 at 0.94-1.06x of the less-processed mix);
+  no vocabulary belongs to one NOVA group. And NOVA 4 listings use every purity vocabulary too (34-43% of users vs 50% base).
+  READING: the several clusters are distinct claim systems (free-from lists, Non-GMO/organic certification, heritage storytelling, brand values) that sellers adopt as packages,
+  across NOVA groups; the pleasure register is one generic style. Purity talk is a strategy, also used by ultra-processed products (health halo).
+- 18 Nov: NEGATION CHECK on marketing valence (exploratory; user: 'no pesticides'). Balanced word-plot sample; VADER negator list (Hutto & Gilbert 2014; no, not, never, without ...),
+  scope = next 3 words or punctuation. Negated share of scored words: 1.85% (UPF) vs 1.88% (less processed); 37% vs 39% of listings have one.
+  Most negated words on BOTH sides are positive ones in 'no artificial flavors or colors' (flavor +0.77, colors +0.75, ingredient +0.58), then cholesterol, antibiotics, nitrate.
+  Within-category valence gap (sample): +0.0110 as published; +0.0087 with negated words dropped; +0.0070 with their valence flipped. Gap shrinks 20-35%, stays positive (not yet
+  permutation-tested). Flipping is semantically wrong for 'no artificial flavors' (flavor is not bad), so DROPPING is the fairer correction. Not handled: '-free' compounds
+  (gluten-free, preservative-free; 'free' scores positive). TO DO before the paper: rerun A1-H1 within-category test with negated words dropped and '-free' compounds handled.
+- 18 Nov: CLAIM SYSTEMS (exploratory; upf/notebooks/claim_systems.py -> upf/figures/claim_systems.png, soj/claim_systems.csv, data/processed/claim_systems.txt).
+  Balanced sample (20,698). Free-from claims detected by NEGATION (VADER negators, 3-word scope; 'X-free'; 'free of/from X'), other systems = word-network communities (>= 2 words, not negated).
+  Share of NOVA 1 / NOVA 3 / NOVA 4 listings: free-from 54 / 54 / 47%; certification & sourcing 41 / 33 / 22%; heritage & freshness 6 / 7 / 4%; brand values 10 / 9 / 7%;
+   pleasure, convenience & nutrition panel 58 / 47 / 54% (this community mixes panel numbers and pleasure words, so it is not a clean UPF marker).
+  Free-from targets: gluten 3,093 listings, preservatives 1,581, flavors 1,429, MSG 942, sugar 903, colors 724, high(-fructose) 665, GMO 523, cholesterol, trans, hydrogenated, dairy, guilt(-free).
+  Combinations: free-from alone 12% (48% UPF); free-from + certification (+ pleasure) 16% (35-40% UPF); pleasure alone 14% (63% UPF); none 26% (53% UPF).
+  READING: free-from is a general register used by ultra-processed products almost as much (gluten-free, no preservatives, no artificial flavors, sugar-free, guilt-free);
+   CERTIFICATION is the claim system that marks less processed food. Revises the word-network reading ('several purity dialects'): only some are purity-specific.
+- 18 Nov: MATCHED-PRODUCT INGREDIENT NETWORK (exploratory; user: 'pick the ingredients out of the lists of the NOVA-matched foods, build a network, run community detection').
+  Differs from the 15 Nov ingredient network: only the 58,051 Amazon-matched barcodes, and ingredients PARSED FROM THE LIST TEXT (not Open Food Facts tags, so no parent-tag inflation).
+  upf/notebooks/matched_ingredients_extract.py -> soj/matched_ingredients_raw.csv.gz; matched_ingredient_parse.py -> soj/matched_ingredients_long.csv.gz;
+  matched_ingredient_network.py -> data/processed/matched_ingredient_network.txt, soj/matched_ingredient_{nodes,communities}.csv, _edges.csv.gz; figure matched_ingredient_network_plot.py -> upf/figures/matched_ingredient_network.png.
+  PARSE: brackets = sub-ingredients; compound 'X (a, b, c)' replaced by its leaves; single-item brackets kept as X unless X is a function word ('preservative (sodium benzoate)');
+   stops at allergen/facility statements ('contains: milk'); strips %, footnote marks, organic/non-GMO/pure, purpose phrases; dye and vitamin numbers kept (red 40, vitamin b12); small synonym map; plural merge.
+   57,870 products parsed, median 11 ingredients; 34,902 distinct strings, 1,174 in >= 50 products (87% of mentions). Known slips: bare 'corn' from 'sunflower, corn and/or canola oil'; 'durum (wheat) semolina' -> 'durum';
+   sea salt vs salt and cane sugar vs sugar kept apart on purpose (label choices). Not hand-validated yet.
+  NETWORK: 1,174 nodes, 250,438 co-occurrence links (density .36) -> disparity backbone (alpha .01) 19,931 links, giant component 1,166.
+  Louvain (weighted, 20 seeds): modularity .194 (range .188-.194), stability adjusted Rand .71 (min .52); unweighted .253 vs degree-preserving rewired null .105 (sd .008): structure is real but modest.
+  Communities (our names; members' median NOVA-4 share; products assigned to their majority community, NOVA-4 share):
+   C0 479 savoury (salt, water, spices, garlic, onion, dairy, meat) .85 / 64%;  C1 259 'clean label' (natural flavors, sea salt, cane sugar, honey, seeds, nuts, whole grains) .82 / 62%;
+   C2 190 confectionery & sweet drinks (sugar, corn syrup, cocoa butter, dyes, gum base, sweeteners) 1.00 / 94%;  C3 173 bakery (enriched wheat flour, leavening, dough conditioners) .95 / 81%;
+   C4 62 fortification (vitamins, calcium carbonate, BHT: cereals) .94 / 63%;  C5 3 French-language lists (sucre, sel, eau) -- artefact.
+  Second level (Louvain inside each community >= 100): the low-UPF pockets are fresh-veg cooking C0.1 (garlic, onion, tomatoes, olive oil, herbs) .58, nuts/honey/baking C1.3 .62, cane sugar & sea salt C1.1 .68,
+   whole grains C1.4 .76; at ~1.00: candy & dyes, dye lakes, sweeteners/gum/energy drinks; ~.95: savoury snack seasoning (MSG, yeast extract, disodium inosinate), processed meat (nitrite, erythorbate), dairy & cheese, cakes & mixes.
+  READING: ingredients sort into product families (savoury, sweet/confectionery, bakery, fortified cereal, 'clean label'), and processing level differs more WITHIN the savoury and clean-label families than between families.
+  CAVEATS: NOVA-4 share of marker ingredients (dyes, sweeteners, modified starch) is ~1 BY DEFINITION (OFF assigns NOVA from them), so their communities restate the rule; informative part = the non-marker families.
+   Centrality still tracks frequency. One product per barcode (not per listing). Louvain resolution limit: C0 lumps five families; the second level is descriptive.
+  HAND-CHECK OF THE PARSER (18 Nov; user asked). 50 random matched products (seed 2026), raw list read against parsed output by me (Claude), not by the user.
+   Before fixes: 625 items, 45 wrong (not an ingredient / two fused / fragment), 6 ingredients missed. Fixed: seed-name -> 'X oil' only inside 'and/or ... oil' or an oil bracket
+   ('organic coconut' had become coconut oil); inline 'contains 2% or less of' headers split instead of swallowing the item; text after a bracket kept ('ascorbic acid (vitamin c) and malic acid');
+   fragments dropped ('preserved with', 'includes', trailing 'added'); 'x and y' split when both are common ingredients, sharing a word across the 'and'
+   ('disodium inosinate and guanylate', 'palm and coconut oil'), with a keep-list of real compounds (natural and artificial flavors, mono and diglycerides, fruit and vegetable juice).
+   After: 630 items, 27 wrong (precision 96%), 0 missed found. 18 of the 27 come from broken source text: one OCR-garbled multi-flavour list gives 14, plus typos/missing commas;
+   multi-flavour lists also leave variant names as items ('strawberry :', 'cherry -'). Of the 630, 545 are in the network (>= 50 products); network-level errors are rare
+   (e.g. 'hydrolyzed corn' from 'hydrolyzed corn, soy and wheat protein'). Bare seed names remain at ~100 products each vs 5,000+ for the oil names.
+  REVISED RESULT after the fixes (supersedes the community list above): 57,901 products parsed; 1,153 nodes; backbone 19,965 links; Louvain modularity .194, stability ARI .75 (min .50);
+   unweighted .254 vs rewired null .108 (sd .009). Top level: C0 412 savoury (sauces, seasoning, meat, Asian cooking) products 63% NOVA 4; C1 269 'clean label' (cane sugar, sea salt,
+   starches, nuts, honey, whole grains, fruit, stevia drinks) 64%; C2 211 grain (enriched flour, bakery, fortified cereal: vitamins joined here) 76%; C3 186 confectionery 94%;
+   C4 65 dairy & cheese (now its own community) 67%; C5 3 French-language lists. Second-level lows unchanged: fresh-veg cooking .57, nuts/honey/baking .68, whole grains .75,
+   cane sugar & sea salt .77; highs ~1.00 candy, dyes, sweeteners, chocolate & sweet bakery, cakes & mixes. Reading unchanged.
+- 18 Nov: CENTRALITY CONTRAST (exploratory, ad hoc script; user: can centrality highlight the certification finding?). Two word co-occurrence networks from the balanced sample,
+  one from less processed listings, one from NOVA 4 listings (same vocabulary; links = >= 10 co-occurring listings with PMI > 0; weight = co-occurring listings); PageRank in each; ratio.
+  Certification words gain centrality only modestly on the less processed side (mean x1.4); 'certified' etc. are hubs on BOTH sides (kosher / gluten-free certifications are common in UPF copy too).
+  Biggest gains on the less processed side: PROCESS words (slowly x9.5, harvested x8.1, ripened x4.3, batches x3.3, soil x5.8), chemicals x6.4, additives x5.0, nutrients x3.7, USDA x3.2.
+  Biggest gains on the UPF side: OCCASION / ON-THE-GO words (lunchboxes x9.1, backpacks x7.9, stow x8.1, travel x6.1, office x5.0, night x5.4, adults x5.4, moments x5.3), cheesy x9.3, spoonful x7.0.
+  By claim system (mean log2 ratio less/UPF): no-GMO/chemicals +0.97, brand values +0.65, free-from +0.47, certification +0.46, heritage +0.43, cooking +0.09, pleasure/panel -0.85.
+  READING: centrality frames it as 'how it was made' (less processed) vs 'when and where you eat it' (ultra-processed); certification is better shown by prevalence than by centrality.

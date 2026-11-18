@@ -1,0 +1,56 @@
+matched products found in 2018: 30,842; also_buy links 78,781, also_view links 55,278
+also_buy links: same brand 17%, same OFF category 20%, same processing level 76% (products: 71% UPF)
+
+== H4-CP (pre-declared): also_buy network, null = labels shuffled within OFF category ==
+  also_buy, within-category null: 18,415 products, 78,781 links; NOVA assortativity +0.425 vs null +0.118 (sd 0.009), p = 0.0010
+== robustness ==
+  also_buy without same-brand links, within-category null: 15,567 products, 65,193 links; NOVA assortativity +0.350 vs null +0.103 (sd 0.009), p = 0.0010
+  also_buy, null shuffled within brand: 18,415 products, 78,781 links; NOVA assortativity +0.425 vs null +0.314 (sd 0.011), p = 0.0010
+  also_view, within-category null: 22,703 products, 55,278 links; NOVA assortativity +0.567 vs null +0.163 (sd 0.007), p = 0.0010
+
+== exploratory: Louvain communities on the also_buy network ==
+components 355; giant 17,464 products (95%), 78,082 links; clustering 0.250
+Louvain on the giant component: 60 communities, modularity 0.698; sizes [3673, 1757, 1466, 1349, 825, 802, 786, 712, 671, 589, 552, 439, 403, 381, 338]
+stability over 5 other seeds: adjusted Rand 0.56 (min 0.55)
+  C1  3,673 products, UPF 79%, top brand kelloggs 3%; Snack Foods 20%; Ice Cream & Novelties 5%; Dairy & Plant-Based Yogurt 5%; Cheese 4%
+  C2  1,757 products, UPF 38%, top brand bobsredm 12%; Cooking & Baking 28%; Snack Foods 16%; Nut & Seed Butters 7%; Cereals 6%
+  C3  1,466 products, UPF 77%, top brand delmonte 4%; Canned, Jarred & Packaged Foods 32%; Soups, Stocks & Broths 11%; Cooking & Baking 11%; Sauces, Gravies & Marinades 7%
+  C4  1,349 products, UPF 98%, top brand ghirarde 5%; Candy & Chocolate 43%; Chocolate Candy 31%;  10%; Chocolate 3%
+  C5    825 products, UPF 55%, top brand amys 8%; Snack Foods 19%; Soups, Stocks & Broths 12%; Canned, Jarred & Packaged Foods 9%; Bottled Beverages, Water & Drink Mixes 9%
+  C6    802 products, UPF 76%, top brand glutino 7%; Cooking & Baking 24%; Snack Foods 17%; Cookies 12%; Pasta & Noodles 10%
+  C7    786 products, UPF 49%, top brand kikkoman 5%; Sauces, Gravies & Marinades 30%; Cooking & Baking 19%; Herbs, Spices & Seasonings 10%; Canned, Jarred & Packaged Foods 9%
+  C8    712 products, UPF 76%, top brand cocacola 3%; Bottled Beverages, Water & Drink Mixes 38%; Tea 9%; Snack Foods 5%; Dairy & Plant-Based Yogurt 5%
+  C9    671 products, UPF 59%, top brand mccormic 21%; Herbs, Spices & Seasonings 61%; Sauces, Gravies & Marinades 12%; Soups, Stocks & Broths 6%; Cooking & Baking 4%
+  C10   589 products, UPF 67%, top brand celestia 11%; Tea 43%; Cookies 19%; Jams, Jellies & Sweet Spreads 9%; Cooking & Baking 6%
+  C11   552 products, UPF 72%, top brand atlantic 4%; Chocolate Candy 19%; Candy & Chocolate 15%; Cooking & Baking 8%;  7%
+  C12   439 products, UPF 60%, top brand bluediam 6%; Cooking & Baking 33%; Snack Foods 31%; Olives, Pickles & Relishes 8%; Dried Fruits & Vegetables 5%
+  C13   403 products, UPF 83%, top brand jello 25%; Cooking & Baking 72%;  5%; Snack Foods 2%; Butter, Margarine & Plant-Based Alternatives 2%
+  C14   381 products, UPF 87%, top brand starbuck 9%; Cooking & Baking 18%; Beverage Syrups & Concentrates 15%; Hot Chocolate & Malted Drinks 15%; Coffee 12%
+  C15   338 products, UPF 68%, top brand tabasco 10%; Sauces, Gravies & Marinades 48%; Condiments & Salad Dressings 8%; Herbs, Spices & Seasonings 8%;  6%
+  C16   319 products, UPF 83%, top brand stubbs 11%; Sauces, Gravies & Marinades 39%; Herbs, Spices & Seasonings 22%; Cooking & Baking 14%;  7%
+  C17   285 products, UPF 77%, top brand stonewal 29%; Condiments & Salad Dressings 26%; Jams, Jellies & Sweet Spreads 14%; Snack Foods 11%; Sauces, Gravies & Marinades 11%
+  C18   245 products, UPF 30%, top brand goya 18%; Canned, Jarred & Packaged Foods 42%; Herbs, Spices & Seasonings 18%; Sauces, Gravies & Marinades 6%; Olives, Pickles & Relishes 5%
+  C19   235 products, UPF 95%, top brand crystall 17%; Bottled Beverages, Water & Drink Mixes 59%; Tea 18%; Beverage Syrups & Concentrates 6%;  6%
+  C20   221 products, UPF 62%, top brand kelloggs 21%; Cereals 42%; Cold Cereal 19%;  11%; Pasta & Noodles 5%
+
+DESCRIBED (TF-IDF of titles across the 20 largest communities; brand words removed; UPF vs expected from OFF category mix):
+  C1  3,673 products  UPF 79% (expected 71%, +7 pts)  words: strudel, refrigerated, battered, icing, steamfresh, unfrosted, lowfat
+  C2  1,757 products  UPF 38% (expected 57%, -19 pts)  words: ghee, hulled, bran, crispbread, fava, carob, unfiltered
+  C3  1,466 products  UPF 77% (expected 65%, +12 pts)  words: suddenly, sides, fluff, deveined, chowder, clam, grits
+  C4  1,349 products  UPF 98% (expected 90%, +8 pts)  words: promises, valentine, easter, dots, cordial, halloween, conversation
+  C5    825 products  UPF 55% (expected 66%, -11 pts)  words: muesli, entree, edensoy, aseptic, hulls, bunnies, tape
+  C6    802 products  UPF 76% (expected 71%, +5 pts)  words: fusilli, tagliatelle, passover, capellini, nairns, oatcakes, allergy
+  C7    786 products  UPF 49% (expected 56%, -8 pts)  words: sunbird, pataks, gomasio, fodmap, mirin, tempura, mongolian
+  C8    712 products  UPF 76% (expected 74%, +2 pts)  words: strained, doubleshot, ayalas, electrolyte, nonfat, enhanced, frappuccino
+  C9    671 products  UPF 59% (expected 62%, -3 pts)  words: douglas, paprika, montreal, etouffee, crawfish, gumbo, mesquite
+  C10   589 products  UPF 67% (expected 68%, -1 pts)  words: decaf, zinger, mincemeat, stroopwafels, sleepytime, lactation, scone
+  C11   552 products  UPF 72% (expected 77%, -5 pts)  words: seitan, replacer, textured, chewie, fruities, gems, pectin
+  C12   439 products  UPF 60% (expected 60%, -0 pts)  words: cashews, nitrates, clusters, halves, olives, nitrite, castelvetrano
+  C13   403 products  UPF 83% (expected 80%, +3 pts)  words: pudding, gelatin, decorating, mousse, filling, whipped, refrigerated
+  C14   381 products  UPF 87% (expected 83%, +4 pts)  words: brewers, latte, bitters, cocktails, demerara, amarena, mocha
+  C15   338 products  UPF 68% (expected 66%, +2 pts)  words: oxtail, scotch, ecolier, spaetzle, walkerswood, habanero, scorpion
+  C16   319 products  UPF 83% (expected 67%, +17 pts)  words: kansas, cookin, stubbs, dissolve, everglades, breading, pourable
+  C17   285 products  UPF 77% (expected 67%, +10 pts)  words: aioli, chimichurri, cincinnati, horseradish, relish, coney, kentuckyaki
+  C18   245 products  UPF 30% (expected 44%, -13 pts)  words: fillets, herring, skinless, coles, mole, kipper, achiote
+  C19   235 products  UPF 95% (expected 87%, +8 pts)  words: pitcher, freezer, sodamix, perform, rush, ices, quarts
+  C20   221 products  UPF 62% (expected 63%, -2 pts)  words: wheats, stoned, bran, alphabet, quisp, prunes, malted

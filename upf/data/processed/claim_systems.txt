@@ -1,0 +1,25 @@
+listings 20,698: NOVA 1 13%, NOVA 2 0.5%, NOVA 3 36%, NOVA 4 50%
+share of listings using each system:
+                                          NOVA 1  NOVA 3  NOVA 4
+Free-from claims                            54.1    53.6    47.0
+Certification & sourcing                    40.8    32.8    22.3
+Heritage & freshness                         6.2     7.3     4.2
+Brand values                                10.0     8.7     7.2
+Pleasure, convenience\n& nutrition panel    58.0    47.0    53.7
+
+most common free-from targets (listings): gluten 3093, preservatives 1581, flavors 1429, msg 942, sugar 903, colors 724, high 665, gmo 523, cholesterol 478, trans 443, hydrogenated 442, dairy 410, fat 326, ingredients 318, salt 296, guilt 282, antibiotics 273, compromising 264, bleached 240, use 228, synthetic 216, additives 213, soy 196, matter 177, wheat 162
+
+top combinations (share of listings, share ultra-processed):
+  Pleasure, convenience & nutrition panel                                     14.0%  UPF 63%
+  Free-from claims + Pleasure, convenience & nutrition panel                  13.5%  UPF 58%
+  Free-from claims                                                            12.0%  UPF 48%
+  Free-from claims + Certification & sourcing + Pleasure, convenience & nutrition panel 11.1%  UPF 40%
+  Free-from claims + Certification & sourcing                                 4.9%  UPF 35%
+  Certification & sourcing + Pleasure, convenience & nutrition panel          3.9%  UPF 44%
+  Free-from claims + Certification & sourcing + Brand values + Pleasure, convenience & nutrition panel 2.8%  UPF 41%
+  Certification & sourcing                                                    2.2%  UPF 33%
+  Free-from claims + Brand values + Pleasure, convenience & nutrition panel   1.2%  UPF 60%
+  Free-from claims + Certification & sourcing + Heritage & freshness + Pleasure, convenience & nutrition panel 1.1%  UPF 37%
+  Free-from claims + Heritage & freshness + Pleasure, convenience & nutrition panel 1.0%  UPF 44%
+  Free-from claims + Certification & sourcing + Heritage & freshness + Brand values + Pleasure, convenience & nutrition panel 0.9%  UPF 33%
+  (none of these) 26.2%  UPF 53%

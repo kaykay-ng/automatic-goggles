@@ -1,0 +1,26 @@
+projection: 63,841 products, 2,854,237 links (reviewers with 2-50 matched grocery reviews: 336,899)
+
+== CORRECTED H4 + S1: full weighted projection ==
+  [S1 full projection] products 63,841 (100%), links 2,854,237, mean degree 89.4, giant 63,565 (100%), clustering 0.383, modularity nan, communities >= 20 products nan; NOVA assortativity weighted +0.105 (null +0.028 sd 0.001, p 0.0010), unweighted +0.093 (null +0.024, p 0.0050)
+
+== S2: only links with >= 2 shared reviewers ==
+  [S2 >= 2 shared reviewers] Louvain 3s
+  [S2 >= 2 shared reviewers] products 21,019 (33%), links 212,774, mean degree 20.2, giant 19,859 (94%), clustering 0.247, modularity 0.426, communities >= 20 products 13; NOVA assortativity weighted +0.176 (null +0.055 sd 0.005, p 0.0010), unweighted +0.155 (null +0.048, p 0.0050)
+
+== S3: kNN product graph (cosine on reviewer sets, k = 10, products with >= 5 reviewers) ==
+  [S3 kNN cosine k=10] Louvain 7s
+  [S3 kNN cosine k=10] products 32,016 (50%), links 226,720, mean degree 14.2, giant 32,016 (100%), clustering 0.084, modularity 0.410, communities >= 20 products 34; NOVA assortativity weighted +0.158 (null +0.039 sd 0.002, p 0.0010), unweighted +0.149 (null +0.038, p 0.0050)
+
+== S4: disparity backbone alpha = .01 (the old one; for drawing only) ==
+  [S4 disparity backbone a=.01] Louvain 0s
+  [S4 disparity backbone a=.01] products 3,672 (6%), links 11,766, mean degree 6.4, giant 2,455 (67%), clustering 0.228, modularity 0.533, communities >= 20 products 13; NOVA assortativity weighted +0.281 (null +0.090 sd 0.014, p 0.0010), unweighted +0.279 (null +0.090, p 0.0050)
+
+== S5: category network (Amazon grocery sub-category x processing level) ==
+  123 nodes (sub-category x UPF/less with >= 30 products), 336,899 reviewers
+  mean lift UPF - UPF                        2.71  (pairs 2556)
+  mean lift less - less                      2.82  (pairs 1275)
+  mean lift UPF - less                       2.34  (pairs 3625)
+  mean lift same sub-category, UPF - less    6.12  (pairs 47)
+  Louvain on links with lift > 1 (weight log lift): 2 communities, modularity 0.089
+   [42/67 UPF] Appetizers & Snacks | UPF; Bacon | UPF; Bacon | less; Bottled Beverages, Water & Drink Mixes | UPF; Bottled Beverages, Water & Drink Mixes | less; Bread & Dough | UPF; Bread & Dough | less; Breads | UPF; Breads | less; Breakfast Foods | UPF; Burgers & Patties | UPF; Butter, Margarine & Plant-Based Alternatives | UPF; Butter, Margarine & Plant-Based Alternatives | less; Cakes | UPF; Cheese | UPF; Cheese | less; Chicken | UPF; Coffee | UPF; Cottage Cheese | UPF; Cream Cheese | UPF; Dairy & Plant-Based Yogurt | UPF; Dairy & Plant-Based Yogurt | less; Deli Meats & Cheeses | UPF; Deli Meats & Cheeses | less; Deli Salads | UPF; Desserts & Toppings | UPF; Desserts | UPF; Dips, Salsas & Spreads | UPF; Dips, Salsas & Spreads | less; Eggs & Egg Substitutes | less; Entrees | UPF; Fresh Fruits | less; Fresh Pasta & Sauces | UPF; Fresh Vegetables | less; Fruit | less; Hot Dogs & Franks | UPF; Ice Cream & Novelties | UPF; Ice Cream & Novelties | less; Meals & Entrees | UPF; Meals & Entrees | less; Meats | UPF; Meats | less; Milk & Cream | UPF; Milk & Cream | less; Olives, Pickles & Relishes | UPF; Packaged Produce | UPF; Packaged Produce | less; Pasta & Sauces | UPF; Pastries & Bakery | UPF; Pastries & Bakery | less; Pizza Crusts | UPF; Pizza | UPF; Pizza | less; Plant-Based Cheese | UPF; Plant-Based Milk | UPF; Plant-Based Milk | less; Potatoes & Onion Rings | UPF; Refrigerated Doughs | UPF; Sausages | UPF; Sausages | less; Seafood | UPF; Seafood | less; Snack Packs & Lunches | UPF; Soups, Stews & Chili | UPF; Vegetables | UPF; Vegetables | less; Vegetarian Proteins | less
+   [30/56 UPF] Beverage Syrups & Concentrates | UPF; Breakfast & Cereal Bars | UPF; Breakfast & Cereal Bars | less; Candy & Chocolate | UPF; Candy & Chocolate | less; Canned, Jarred & Packaged Foods | UPF; Canned, Jarred & Packaged Foods | less; Cereals | UPF; Cereals | less; Certified Organic Store | UPF; Certified Organic Store | less; Chocolate Candy | UPF; Chocolate Candy | less; Chocolate | UPF; Coffee | less; Cold Cereal | UPF; Cold Cereal | less; Condiments & Salad Dressings | UPF; Condiments & Salad Dressings | less; Cookies | UPF; Cookies | less; Cooking & Baking | UPF; Cooking & Baking | less; Dried Beans, Lentils & Peas | UPF; Dried Beans, Lentils & Peas | less; Dried Fruits & Vegetables | UPF; Dried Fruits & Vegetables | less; Dried Grains & Rice | UPF; Dried Grains & Rice | less; Fresh Vegetables | UPF; Granola | UPF; Granola | less; Herbs, Spices & Seasonings | UPF; Herbs, Spices & Seasonings | less; Hot Chocolate & Malted Drinks | UPF; Jams, Jellies & Sweet Spreads | UPF; Jams, Jellies & Sweet Spreads | less; Nut & Seed Butters | UPF; Nut & Seed Butters | less; Oatmeal | UPF; Oatmeal | less; Olives, Pickles & Relishes | less; Pasta & Noodles | UPF; Pasta & Noodles | less; Plant-Based Coffee Creamers | UPF; Prime Day Grocery | UPF; Prime Day Grocery | less; Sauces, Gravies & Marinades | UPF; Sauces, Gravies & Marinades | less; Snack Foods | UPF; Snack Foods | less; Soups, Stocks & Broths | UPF; Soups, Stocks & Broths | less; Tea | UPF; Tea | less; Toaster Pastries | UPF

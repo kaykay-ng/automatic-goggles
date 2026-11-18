@@ -1,0 +1,57 @@
+products with NOVA and a parsed list: 57,901 (NOVA 4 share 0.69); distinct ingredients 34,312
+nodes: 1,153 ingredients in >= 50 products; they cover 56,277 products, 87% of all product-ingredient mentions
+co-occurrence links 250,467 (density 0.38); backbone 19,965 links, 7 isolated ingredients; giant component 1,146
+Louvain (weighted): best of 20 seeds modularity 0.194 (range 0.185-0.194); 6 communities, sizes [412, 269, 211, 186, 65, 3]; stability adjusted Rand mean 0.75 (min 0.50)
+null (unweighted backbone, 20 degree-preserving rewirings): observed modularity 0.254 vs null 0.108 (sd 0.009, max 0.118)
+products assigned to the community holding most of their ingredients: 56,277; median share of a product's ingredients in its community 0.65
+
+COMMUNITIES (most common members | most 'own' members = share of link weight inside the community, among >= 200 products):
+
+ C0: 412 ingredients; members' median NOVA-4 share 0.81; products assigned 24,483 (NOVA mix {1: 0.06, 2: 0.02, 3: 0.29, 4: 0.63})
+   common: salt, water, citric acid, spices, garlic, xanthan gum, onion, maltodextrin, garlic powder, onion powder, modified corn starch, caramel color, vinegar, yeast extract
+   own:    coriander, cumin, cilantro, thyme, celery seed, tomato juice, mustard, chili powder, green beans, diced tomatoes
+
+ C1: 269 ingredients; members' median NOVA-4 share 0.83; products assigned 12,216 (NOVA mix {1: 0.12, 2: 0.03, 3: 0.21, 4: 0.64})
+   common: natural flavors, sea salt, cane sugar, sunflower oil, guar gum, honey, molasses, brown sugar, filtered water, almonds, rice flour, potato starch, locust bean gum, vanilla extract
+   own:    acidophilus, bulgaricus, pumpkin seeds, thermophilus, chia seeds, coconut cream, black tea, quinoa, flax seeds, brown rice syrup
+
+ C2: 211 ingredients; members' median NOVA-4 share 0.94; products assigned 8,031 (NOVA mix {1: 0.13, 2: 0.0, 3: 0.11, 4: 0.76})
+   common: wheat flour, folic acid, niacin, riboflavin, sodium bicarbonate, soybean oil, thiamine mononitrate, dextrose, reduced iron, ascorbic acid, yeast, high fructose corn syrup, mono and diglycerides, monocalcium phosphate
+   own:    durum flour, semolina, vitamin b6, calcium propionate, zinc, grain vinegar, vitamin a, vitamin b1, zinc oxide, vitamin b12
+
+ C3: 186 ingredients; members' median NOVA-4 share 1.00; products assigned 9,805 (NOVA mix {1: 0.01, 2: 0.01, 3: 0.04, 4: 0.94})
+   common: sugar, soy lecithin, corn syrup, corn starch, palm oil, natural and artificial flavors, cocoa butter, red 40, yellow 5, artificial flavors, blue 1, potassium sorbate, skim milk, sodium citrate
+   own:    blue 2, artificial and natural flavors, blue 2 lake, xylitol, blue 1 lake, gum base, chocolate processed with alkali, cocoa mass, pgpr, confectioners glaze
+
+ C4: 65 ingredients; members' median NOVA-4 share 0.93; products assigned 1,611 (NOVA mix {1: 0.05, 2: 0.03, 3: 0.26, 4: 0.67})
+   common: canola oil, enzymes, milk, whey, cream, cheese cultures, lactic acid, nonfat milk, pasteurized milk, corn syrup solids, corn oil, annatto, nonfat dry milk, cultures
+   own:    natamycin, cultured pasteurized milk, pasteurized milk, powdered cellulose, milk protein concentrate, cultures, whey protein concentrate, pasteurized cream, cheese cultures, buttermilk
+
+ C5: 3 ingredients; members' median NOVA-4 share 0.86; products assigned 131 (NOVA mix {1: 0.02, 2: 0.01, 3: 0.13, 4: 0.85})
+   common: sucre, sel, eau
+   own:    
+
+SECOND LEVEL (Louvain inside each community of >= 100 ingredients, seed 0):
+ C0: 5 sub-communities, modularity within 0.129
+   C0.0 (168; members' median NOVA-4 share 0.81): salt, water, citric acid, xanthan gum, vinegar, modified food starch, distilled vinegar, turmeric, sodium benzoate, calcium chloride, egg yolks, lemon juice, dried garlic, dried onion
+   C0.1 (95; members' median NOVA-4 share 0.57): garlic, onion, tomato paste, black pepper, carrots, tomatoes, extra virgin olive oil, parsley, olive oil, ginger, celery, basil, red bell peppers, jalapeno peppers
+   C0.2 (81; members' median NOVA-4 share 0.95): spices, maltodextrin, garlic powder, onion powder, caramel color, yeast extract, paprika, monosodium glutamate, disodium inosinate, disodium guanylate, potatoes, dehydrated onion, silicon dioxide, dehydrated garlic
+   C0.3 (47; members' median NOVA-4 share 0.96): modified corn starch, sodium phosphate, flavor, pork, beef, potassium chloride, sodium nitrite, chicken fat, sodium erythorbate, sodium diacetate, chicken broth, soy protein concentrate, lactic acid starter culture, flavorings
+   C0.4 (21; members' median NOVA-4 share 0.81): soybeans, wheat, alcohol, sesame oil, rice vinegar, sodium carbonate, potassium carbonate, soy sauce, sesame seed oil, seaweed, ginger puree, succinic acid, ginger powder, noodles
+ C1: 4 sub-communities, modularity within 0.219
+   C1.0 (104; members' median NOVA-4 share 0.91): natural flavors, guar gum, locust bean gum, pectin, lemon juice concentrate, apples, apple juice concentrate, carbonated water, fruit pectin, strawberries, vegetable glycerin, erythritol, thermophilus, bulgaricus
+   C1.1 (102; members' median NOVA-4 share 0.77): sea salt, cane sugar, sunflower oil, filtered water, rice flour, potato starch, vanilla extract, tapioca starch, sunflower lecithin, safflower oil, tapioca syrup, expeller pressed canola oil, brown rice flour, rosemary extract
+   C1.2 (46; members' median NOVA-4 share 0.68): honey, molasses, brown sugar, almonds, cinnamon, sesame seeds, coconut, cashews, whole grain oats, sunflower seeds, raisins, pecans, mixed tocopherols, tocopherols
+   C1.3 (17; members' median NOVA-4 share 0.75): brown rice syrup, brown rice, oats, dried cane syrup, quinoa, millet, flaxseed, barley, amaranth, cane syrup, buckwheat, rye, triticale, sorghum
+ C2: 4 sub-communities, modularity within 0.155
+   C2.0 (93; members' median NOVA-4 share 0.90): wheat flour, folic acid, niacin, riboflavin, thiamine mononitrate, reduced iron, ferrous sulfate, vegetable oil, corn flour, calcium phosphate, ammonium bicarbonate, whole eggs, partially hydrogenated soybean oil, semolina
+   C2.1 (62; members' median NOVA-4 share 0.95): ascorbic acid, vitamin a palmitate, iron, calcium carbonate, vitamin d3, niacinamide, bht, vitamin b2, vitamin b1, rice, vitamin b12, vitamin b6, tricalcium phosphate, pyridoxine hydrochloride
+   C2.2 (34; members' median NOVA-4 share 0.98): sodium bicarbonate, soybean oil, dextrose, high fructose corn syrup, mono and diglycerides, monocalcium phosphate, eggs, sodium acid pyrophosphate, egg whites, cellulose gum, cottonseed oil, wheat starch, polysorbate, soy flour
+   C2.3 (22; members' median NOVA-4 share 0.85): yeast, malted barley flour, wheat gluten, whole wheat flour, flour, calcium sulfate, monoglycerides, calcium propionate, oat fiber, datem, unbleached wheat flour, vital wheat gluten, microbial enzymes, cultured wheat flour
+ C3: 4 sub-communities, modularity within 0.179
+   C3.0 (114; members' median NOVA-4 share 0.98): sugar, soy lecithin, corn starch, palm oil, cocoa butter, artificial flavors, skim milk, coconut oil, chocolate, cocoa, milk fat, carrageenan, palm kernel oil, peanuts
+   C3.1 (47; members' median NOVA-4 share 1.00): corn syrup, natural and artificial flavors, red 40, yellow 5, blue 1, potassium sorbate, sodium citrate, yellow 6, malic acid, gelatin, carnauba wax, titanium dioxide, confectioners glaze, fumaric acid
+   C3.2 (15; members' median NOVA-4 share 1.00): sucralose, acesulfame potassium, sorbitol, aspartame, gum base, maltitol, xylitol, glycerol, mannitol, natural, maltitol syrup, artificial flavoring, acesulfame k, isomalt
+   C3.3 (10; members' median NOVA-4 share 1.00): gum arabic, red 40 lake, yellow 5 lake, blue 1 lake, yellow 6 lake, dextrin, blue 2 lake, blue 2, artificial and natural flavors, calcium stearate
+
+all products NOVA mix: {1: 0.08, 2: 0.02, 3: 0.2, 4: 0.7}

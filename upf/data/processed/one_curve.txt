@@ -1,0 +1,37 @@
+reviewers 58,391; ALL-UPF 45.9%; no health-coded reviews 25.1%; no hobby reviews 46.9%; corr(health, hobby) -0.194
+C1 health share (narrow): slope -0.5028 per unit share (= -5.03 pts per 10 pts of share); null sd 0.0120; p = 0.0005
+C2 hobby share (narrow): slope +0.4511 per unit share (= +4.51 pts per 10 pts of share); null sd 0.0162; p = 0.0005
+Holm: C1 p_adj = 0.0010, C2 p_adj = 0.0005
+C1 wide: slope -0.4779 per unit share (= -4.78 pts per 10 pts of share); null sd 0.0108; p = 0.0005
+C2 wide: slope +0.3592 per unit share (= +3.59 pts per 10 pts of share); null sd 0.0108; p = 0.0005
+C1 among reviewers with no hobby reviews: slope -0.4237 per unit share (= -4.24 pts per 10 pts of share); null sd 0.0147; p = 0.0005
+
+Health-coded share bins:
+          n     x  xmin   xmax     y     e   ci
+b                                              
+none  14659   0.0   0.0    0.0  57.1  47.3  0.8
+0      4374   3.5   0.3    5.0  54.5  45.2  1.5
+1      4373   6.2   5.0    7.5  48.4  45.3  1.5
+2      4373   8.7   7.5   10.0  48.1  45.7  1.5
+3      4373  11.3  10.0   12.5  46.9  45.8  1.5
+4      4373  14.2  12.5   16.0  44.8  45.4  1.5
+5      4373  17.7  16.0   20.0  44.5  45.5  1.5
+6      4373  21.9  20.0   25.0  40.2  45.6  1.5
+7      4373  28.7  25.0   33.3  35.0  45.1  1.4
+8      4373  38.2  33.3   44.4  33.2  45.6  1.4
+9      4374  59.8  44.4  100.0  26.3  45.4  1.3
+
+Hobby share bins:
+          n     x  xmin   xmax     y     e   ci
+b                                              
+none  27369   0.0   0.0    0.0  41.9  46.1  0.6
+0      3103   2.3   0.1    3.3  36.0  42.1  1.7
+1      3102   4.2   3.3    5.0  42.3  44.4  1.7
+2      3102   5.8   5.0    6.7  44.0  45.2  1.7
+3      3102   7.6   6.7    8.3  47.5  45.6  1.8
+4      3102   9.6   8.3   10.8  48.7  46.1  1.8
+5      3102  12.0  10.8   13.3  49.9  46.5  1.8
+6      3102  15.2  13.3   16.7  53.2  46.7  1.8
+7      3102  19.1  16.7   22.0  53.2  46.7  1.8
+8      3102  26.7  22.0   33.3  56.6  47.0  1.7
+9      3103  48.8  33.3  100.0  63.2  47.1  1.7

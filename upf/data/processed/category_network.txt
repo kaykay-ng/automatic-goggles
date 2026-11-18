@@ -1,0 +1,105 @@
+reviewers 141,977; nodes 149 (81 food, 68 non-food), each reviewed by >= 500
+links with lift > 1.2 and >= 50 shared reviewers: 4,146 of 11,026 pairs
+Louvain: 2 clusters, modularity 0.452
+stability over 10 other seeds: adjusted Rand 1.00 (min 1.00)
+
+[cluster 0] 79 nodes: 79 food (UPF share of their reviews 67%), 0 non-food
+  food: Cooking & Baking (48%); Snack Foods (71%); Canned, Jarred & Packaged Foods (59%); Bottled Beverages, Water & Drink Mixes (71%); Cookies (91%); Sauces, Gravies & Marinades (72%); Soups, Stocks & Broths (80%); Herbs, Spices & Seasonings (44%); Cereals (68%); Condiments & Salad Dressings (74%); Chocolate Candy (95%); Tea (57%); Ice Cream & Novelties (94%); Nut & Seed Butters (30%); Breads (89%); Meals & Entrees (88%); Pasta & Noodles (27%); Cheese (47%); Jams, Jellies & Sweet Spreads (90%); Dairy & Plant-Based Yogurt (86%); Milk & Cream (47%); Olives, Pickles & Relishes (50%); Plant-Based Milk (90%); Coffee (64%); Dried Grains & Rice (14%); Breakfast & Cereal Bars (94%); Dried Fruits & Vegetables (20%); Seafood (73%); Chocolate (91%); Meats (74%); Pastries & Bakery (92%); Plant-Based Coffee Creamers (91%); Pizza (89%); Toaster Pastries (100%); Hot Chocolate & Malted Drinks (97%); Deli Meats & Cheeses (72%); Cold Cereal (72%); Butter, Margarine & Plant-Based Alternatives (39%); Sausages (69%); Dips, Salsas & Spreads (42%); Vegetables (20%); Breakfast Foods (94%); Bread & Dough (73%); Bacon (30%); Eggs & Egg Substitutes (17%); Deli Salads (99%); Potatoes & Onion Rings (90%); Cakes (81%); Desserts & Toppings (98%); Plant-Based Cheese (89%); Oatmeal (49%); Dried Beans, Lentils & Peas (13%); Hot Dogs & Franks (82%); Fresh Vegetables (9%); Packaged Produce (46%); Fruit (5%); Appetizers & Snacks (97%); Desserts (88%); Beef (28%); Burgers & Patties (91%); Cottage Cheese (59%); Cream Cheese (91%); Certified Organic Store (63%); Deals on pantry staples from Happy Belly (90%); Meatballs, Chunks & Crumbles (92%); Granola (77%); Refrigerated Doughs (100%); Fresh Fruits (15%); Sour Cream (29%); Snack Packs & Lunches (90%); Vegetarian Proteins (18%); Turkey (45%); Entrees (80%); Chicken (42%); Pasta & Sauces (73%); Whipped Toppings (100%); Deals in 365 Everyday Value (57%); Fresh Pasta & Sauces (74%); Pizza Crusts (97%)
+  non-food: 
+
+[cluster 1] 70 nodes: 2 food (UPF share of their reviews 98%), 68 non-food
+  food: Candy & Chocolate (98%); Beverage Syrups & Concentrates (93%)
+  non-food: H&H > Household Supplies; H&H > Health Care; H&H > Vitamins, Minerals & Supplements; Pets > Dogs; H&H > Medical Supplies & Equipment; Pets > Cats; H&H > Oral Care; Sports > Sports; Sports > Outdoor Recreation; Sports > Exercise & Fitness; Toys > Preschool; H&H > Diet & Sports Nutrition; Sports > Fan Shop; Toys > Games & Accessories; Sports > Sports & Outdoor Recreation Accessories; H&H > Vision; Sports > Hunting & Fishing; H&H > Wellness & Relaxation; Toys > Sports & Outdoor Play; Toys > Arts & Crafts; Baby > Nursery; Baby > Baby Care; Video Games > Legacy Systems; H&H > Stationery & Gift Wrapping Supplies; Baby > Feeding
+
+Each food category's 5 most over-represented NON-FOOD categories (lift, shared reviewers >= 50):
+  Cooking & Baking                         (UPF 48%): H&H > Healthcare 1.3x, Pets > Horses 1.3x, H&H > Baby & Child Care 1.2x, Sports > Sports Medicine 1.2x, H&H > Diet & Sports Nutrition 1.2x
+  Snack Foods                              (UPF 71%): Baby > Travel Gear 1.2x, Toys > Vehicles 1.2x, Baby > Gifts 1.2x, Baby > Strollers & Accessories 1.1x, Baby > Car Seats & Accessories 1.1x
+  Canned, Jarred & Packaged Foods          (UPF 59%): H&H > Cold and Flu 1.0x, Pets > Birds 1.0x, Sports > Outdoor Recreation 0.9x, H&H > Bathroom Safety, Aids & Accessories 0.9x, H&H > Mobility & Daily Living Aids 0.9x
+  Bottled Beverages, Water & Drink Mixes   (UPF 71%): H&H > Cold and Flu 1.1x, H&H > Baby & Child Care 1.1x, Video Games > PlayStation 4 1.0x, Video Games > Nintendo Switch 1.0x, Video Games > Xbox One 1.0x
+  Cookies                                  (UPF 91%): Baby > Gifts 1.0x, Toys > Vehicles 1.0x, H&H > Mobility Aids & Equipment 1.0x, H&H > Stationery & Gift Wrapping Supplies 1.0x, Toys > Toy Figures & Playsets 1.0x
+  Candy & Chocolate                        (UPF 98%): Toys > Novelty & Gag Toys 1.4x, Toys > Kids' Electronics 1.3x, Toys > Toy Figures & Playsets 1.3x, Toys > Party Supplies 1.3x, Toys > Collectible Toys 1.3x
+  Sauces, Gravies & Marinades              (UPF 72%): H&H > Cold and Flu 1.2x, Sports > Hunting & Fishing 1.1x, Pets > Small Animals 1.1x, Pets > Reptiles & Amphibians 1.1x, Sports > Clothing 1.0x
+  Soups, Stocks & Broths                   (UPF 80%): H&H > Cold and Flu 1.1x, H&H > Sexual Wellness 1.0x, H&H > Mobility & Daily Living Aids 1.0x, H&H > Bathroom Safety, Aids & Accessories 1.0x, H&H > Mobility Aids & Equipment 1.0x
+  Herbs, Spices & Seasonings               (UPF 44%): H&H > Healthcare 1.7x, Pets > Birds 1.4x, Sports > Hunting & Fishing 1.3x, Toys > Puppets & Puppet Theaters 1.3x, H&H > Cold and Flu 1.3x
+  Cereals                                  (UPF 68%): H&H > Baby & Child Care 1.3x, Baby > Diapering 1.2x, Toys > Building Toys 1.2x, Toys > STEM Toys 1.2x, H&H > Healthcare 1.1x
+  Condiments & Salad Dressings             (UPF 74%): H&H > Sexual Wellness 0.9x, H&H > Vision 0.9x, H&H > Bathroom Safety, Aids & Accessories 0.9x, H&H > Cold and Flu 0.9x, Pets > Birds 0.9x
+  Chocolate Candy                          (UPF 95%): H&H > Sexual Wellness 1.3x, Toys > Vehicles 1.3x, H&H > Mobility Aids & Equipment 1.3x, Baby > Gifts 1.3x, H&H > Stationery & Gift Wrapping Supplies 1.2x
+  Tea                                      (UPF 57%): H&H > Healthcare 1.5x, H&H > Baby & Child Care 1.4x, H&H > Sexual Wellness 1.3x, H&H > Cold and Flu 1.3x, Toys > Puppets & Puppet Theaters 1.2x
+  Ice Cream & Novelties                    (UPF 94%): Baby > Feeding 0.8x, Video Games > Nintendo Switch 0.8x, Baby > Safety 0.7x, Pets > Small Animals 0.7x, Baby > Strollers & Accessories 0.7x
+  Nut & Seed Butters                       (UPF 30%): H&H > Diet & Sports Nutrition 1.7x, H&H > Healthcare 1.5x, Sports > Sports Medicine 1.5x, Sports > Clothing 1.5x, H&H > Baby & Child Care 1.5x
+  Breads                                   (UPF 89%): H&H > Baby & Child Care 0.9x, Baby > Potty Training 0.8x, Baby > Baby Care 0.8x, Baby > Feeding 0.7x, Baby > Activity & Entertainment 0.7x
+  Meals & Entrees                          (UPF 88%): Pets > Small Animals 0.7x, Baby > Feeding 0.7x, Video Games > Nintendo Switch 0.6x, Pets > Cats 0.6x, Toys > Party Supplies 0.6x
+  Pasta & Noodles                          (UPF 27%): Toys > STEM Toys 1.3x, H&H > Cold and Flu 1.3x, H&H > Baby & Child Care 1.2x, Pets > Horses 1.2x, Sports > Clothing 1.2x
+  Cheese                                   (UPF 47%): Baby > Strollers & Accessories 0.8x, Baby > Diapering 0.8x, Baby > Feeding 0.8x, H&H > Household Supplies 0.7x, Baby > Baby Care 0.7x
+  Jams, Jellies & Sweet Spreads            (UPF 90%): H&H > Mobility Aids & Equipment 1.1x, H&H > Bathroom Safety, Aids & Accessories 1.0x, Pets > Birds 1.0x, H&H > Baby & Child Care 1.0x, H&H > Mobility & Daily Living Aids 1.0x
+  Dairy & Plant-Based Yogurt               (UPF 86%): Baby > Strollers & Accessories 0.9x, Baby > Feeding 0.9x, Baby > Potty Training 0.8x, Baby > Diapering 0.8x, Baby > Car Seats & Accessories 0.8x
+  Milk & Cream                             (UPF 47%): Baby > Strollers & Accessories 1.0x, Baby > Baby Care 1.0x, Baby > Diapering 1.0x, Baby > Feeding 1.0x, Baby > Activity & Entertainment 0.9x
+  Olives, Pickles & Relishes               (UPF 50%): Pets > Horses 1.1x, H&H > Vision 1.0x, H&H > Mobility & Daily Living Aids 1.0x, Pets > Birds 0.9x, Sports > Clothing 0.9x
+  Plant-Based Milk                         (UPF 90%): H&H > Diet & Sports Nutrition 1.1x, Pets > Reptiles & Amphibians 1.0x, Baby > Feeding 1.0x, Baby > Strollers & Accessories 1.0x, Baby > Baby Care 0.9x
+  Coffee                                   (UPF 64%): Sports > Clothing 1.1x, Toys > Collectible Toys 1.1x, Pets > Reptiles & Amphibians 1.1x, H&H > Mobility Aids & Equipment 1.1x, Sports > Fan Shop 1.0x
+  Dried Grains & Rice                      (UPF 14%): H&H > Baby & Child Care 1.9x, Sports > Clothing 1.7x, Pets > Horses 1.5x, Toys > STEM Toys 1.4x, Baby > Diapering 1.4x
+  Breakfast & Cereal Bars                  (UPF 94%): Video Games > Xbox One 1.2x, Baby > Car Seats & Accessories 1.2x, Toys > Vehicles 1.2x, Baby > Potty Training 1.2x, Toys > Dress Up & Pretend Play 1.1x
+  Dried Fruits & Vegetables                (UPF 20%): Baby > Potty Training 1.6x, H&H > Baby & Child Care 1.6x, H&H > Diet & Sports Nutrition 1.4x, Baby > Strollers & Accessories 1.4x, Sports > Clothing 1.4x
+  Seafood                                  (UPF 73%): H&H > Household Supplies 0.7x, H&H > Stationery & Gift Wrapping Supplies 0.7x, H&H > Health Care 0.7x, H&H > Vitamins, Minerals & Supplements 0.7x, H&H > Oral Care 0.7x
+  Chocolate                                (UPF 91%): Toys > Vehicles 1.5x, Toys > Collectible Toys 1.3x, H&H > Stationery & Gift Wrapping Supplies 1.3x, Video Games > PlayStation 4 1.2x, Pets > Small Animals 1.2x
+
+== B. food x non-food: observed shared reviewers relative to reviewers with the same number of non-food categories ==
+  81 food x 68 non-food = 5,508 pairs; relative > 1.25 with >= 50 shared: 141; < 0.8: 106
+  bipartite Louvain (links relative > 1.15): 6 clusters, modularity 0.491
+  stability over 10 seeds: adjusted Rand 0.69 (min 0.51)
+
+  [B0] 18 food (UPF share 71%) + 20 non-food
+    food: Ice Cream & Novelties (94%); Meals & Entrees (88%); Cheese (47%); Dairy & Plant-Based Yogurt (86%); Milk & Cream (47%); Meats (74%); Pastries & Bakery (92%); Pizza (89%); Butter, Margarine & Plant-Based Alternatives (39%); Sausages (69%); Dips, Salsas & Spreads (42%); Vegetables (20%); Breakfast Foods (94%); Bread & Dough (73%); Bacon (30%); Deli Salads (99%); Plant-Based Cheese (89%); Fresh Vegetables (9%)
+    non-food: Sports > Sports & Outdoor Recreation Accessories; Toys > Sports & Outdoor Play; Toys > Arts & Crafts; Baby > Nursery; Baby > Baby Care; Baby > Feeding; Baby > Diapering; Toys > Toy Figures & Playsets; Baby > Safety; Toys > Learning & Education; Toys > Party Supplies; Toys > Stuffed Animals & Plush Toys; Toys > Dolls & Accessories; Toys > Baby & Toddler Toys; Baby > Car Seats & Accessories; Pets > Small Animals; Video Games > Nintendo Switch; Baby > Strollers & Accessories
+
+  [B1] 16 food (UPF share 64%) + 12 non-food
+    food: Cooking & Baking (48%); Canned, Jarred & Packaged Foods (59%); Bottled Beverages, Water & Drink Mixes (71%); Cookies (91%); Sauces, Gravies & Marinades (72%); Soups, Stocks & Broths (80%); Herbs, Spices & Seasonings (44%); Cereals (68%); Chocolate Candy (95%); Tea (57%); Breads (89%); Pasta & Noodles (27%); Jams, Jellies & Sweet Spreads (90%); Olives, Pickles & Relishes (50%); Dried Grains & Rice (14%); Hot Chocolate & Malted Drinks (97%)
+    non-food: Sports > Hunting & Fishing; H&H > Mobility & Daily Living Aids; Pets > Birds; H&H > Mobility Aids & Equipment; Toys > STEM Toys; H&H > Bathroom Safety, Aids & Accessories; Pets > Horses; H&H > Baby & Child Care; Baby > Gifts; H&H > Cold and Flu; H&H > Sexual Wellness; H&H > Healthcare
+
+  [B2] 18 food (UPF share 51%) + 9 non-food
+    food: Nut & Seed Butters (30%); Plant-Based Milk (90%); Coffee (64%); Dried Fruits & Vegetables (20%); Plant-Based Coffee Creamers (91%); Eggs & Egg Substitutes (17%); Oatmeal (49%); Dried Beans, Lentils & Peas (13%); Packaged Produce (46%); Beef (28%); Burgers & Patties (91%); Certified Organic Store (63%); Deals on pantry staples from Happy Belly (90%); Meatballs, Chunks & Crumbles (92%); Granola (77%); Fresh Fruits (15%); Vegetarian Proteins (18%); Turkey (45%)
+    non-food: H&H > Vitamins, Minerals & Supplements; H&H > Oral Care; Sports > Outdoor Recreation; Sports > Exercise & Fitness; H&H > Diet & Sports Nutrition; H&H > Wellness & Relaxation; Sports > Clothing; Pets > Reptiles & Amphibians; Sports > Sports Medicine
+
+  [B3] 6 food (UPF share 95%) + 12 non-food
+    food: Candy & Chocolate (98%); Breakfast & Cereal Bars (94%); Chocolate (91%); Toaster Pastries (100%); Cold Cereal (72%); Beverage Syrups & Concentrates (93%)
+    non-food: Sports > Fan Shop; Video Games > Legacy Systems; Video Games > PC; Toys > Novelty & Gag Toys; Toys > Puzzles; Pets > Fish & Aquatic Pets; Toys > Dress Up & Pretend Play; Toys > Remote & App Controlled Vehicles & Parts; Video Games > PlayStation 4; Video Games > Xbox One; Toys > Collectible Toys; Toys > Vehicles
+
+  [B4] 9 food (UPF share 79%) + 5 non-food
+    food: Condiments & Salad Dressings (74%); Potatoes & Onion Rings (90%); Desserts & Toppings (98%); Appetizers & Snacks (97%); Cottage Cheese (59%); Cream Cheese (91%); Refrigerated Doughs (100%); Entrees (80%); Fresh Pasta & Sauces (74%)
+    non-food: Pets > Cats; Sports > Sports; Toys > Preschool; Toys > Games & Accessories; H&H > Vision
+
+  [B5] 4 food (UPF share 65%) + 1 non-food
+    food: Seafood (73%); Deli Meats & Cheeses (72%); Cakes (81%); Fruit (5%)
+    non-food: H&H > Stationery & Gift Wrapping Supplies
+
+Each food category's 5 most over-represented non-food categories vs reviewers of the same activity (>= 50 shared):
+  Cooking & Baking                       (UPF 48%): H&H > Healthcare 1.17x, Pets > Horses 1.15x, H&H > Vitamins, Minerals & Supplements 1.12x, H&H > Diet & Sports Nutrition 1.11x, H&H > Oral Care 1.08x
+  Snack Foods                            (UPF 71%): Baby > Diapering 1.11x, Video Games > Xbox One 1.11x, Toys > Vehicles 1.09x, Baby > Gifts 1.09x, Baby > Strollers & Accessories 1.08x
+  Canned, Jarred & Packaged Foods        (UPF 59%): H&H > Cold and Flu 1.17x, Pets > Birds 1.12x, H&H > Sexual Wellness 1.11x, Sports > Outdoor Recreation 1.10x, H&H > Bathroom Safety, Aids & Accessories 1.10x
+  Bottled Beverages, Water & Drink Mixes (UPF 71%): H&H > Cold and Flu 1.24x, Video Games > PlayStation 4 1.16x, H&H > Baby & Child Care 1.15x, Video Games > Xbox One 1.15x, Video Games > Nintendo Switch 1.15x
+  Cookies                                (UPF 91%): H&H > Mobility Aids & Equipment 1.21x, H&H > Stationery & Gift Wrapping Supplies 1.19x, H&H > Cold and Flu 1.16x, Baby > Gifts 1.16x, H&H > Mobility & Daily Living Aids 1.16x
+  Candy & Chocolate                      (UPF 98%): Toys > Novelty & Gag Toys 1.22x, Video Games > PlayStation 4 1.18x, Toys > Collectible Toys 1.17x, Video Games > Xbox One 1.17x, Toys > Party Supplies 1.16x
+  Sauces, Gravies & Marinades            (UPF 72%): H&H > Cold and Flu 1.29x, Sports > Hunting & Fishing 1.19x, Pets > Small Animals 1.13x, Sports > Outdoor Recreation 1.12x, Pets > Reptiles & Amphibians 1.12x
+  Soups, Stocks & Broths                 (UPF 80%): H&H > Cold and Flu 1.27x, H&H > Sexual Wellness 1.23x, H&H > Mobility & Daily Living Aids 1.23x, H&H > Bathroom Safety, Aids & Accessories 1.19x, H&H > Mobility Aids & Equipment 1.17x
+  Herbs, Spices & Seasonings             (UPF 44%): H&H > Healthcare 1.48x, Pets > Birds 1.25x, Sports > Hunting & Fishing 1.21x, H&H > Vision 1.17x, H&H > Mobility & Daily Living Aids 1.14x
+  Cereals                                (UPF 68%): H&H > Baby & Child Care 1.19x, H&H > Diet & Sports Nutrition 1.16x, Baby > Diapering 1.16x, H&H > Healthcare 1.12x, Toys > Building Toys 1.10x
+  Condiments & Salad Dressings           (UPF 74%): H&H > Vision 1.15x, H&H > Bathroom Safety, Aids & Accessories 1.15x, H&H > Sexual Wellness 1.14x, H&H > Cold and Flu 1.14x, Pets > Birds 1.12x
+  Chocolate Candy                        (UPF 95%): H&H > Mobility Aids & Equipment 1.32x, H&H > Sexual Wellness 1.31x, H&H > Stationery & Gift Wrapping Supplies 1.27x, Video Games > PlayStation 4 1.24x, Toys > Vehicles 1.24x
+  Tea                                    (UPF 57%): H&H > Healthcare 1.31x, H&H > Baby & Child Care 1.17x, H&H > Vitamins, Minerals & Supplements 1.15x, H&H > Diet & Sports Nutrition 1.14x, H&H > Cold and Flu 1.13x
+  Ice Cream & Novelties                  (UPF 94%): Video Games > Nintendo Switch 1.42x, Baby > Feeding 1.42x, Baby > Activity & Entertainment 1.38x, Baby > Strollers & Accessories 1.37x, Baby > Safety 1.37x
+  Nut & Seed Butters                     (UPF 30%): H&H > Diet & Sports Nutrition 1.52x, H&H > Healthcare 1.23x, Sports > Exercise & Fitness 1.22x, Sports > Sports Medicine 1.21x, Sports > Clothing 1.17x
+  Breads                                 (UPF 89%): H&H > Baby & Child Care 1.51x, Baby > Potty Training 1.30x, Baby > Baby Care 1.23x, Baby > Feeding 1.20x, Baby > Activity & Entertainment 1.19x
+  Meals & Entrees                        (UPF 88%): Pets > Small Animals 1.36x, Baby > Feeding 1.34x, Video Games > Nintendo Switch 1.29x, Toys > Party Supplies 1.28x, Baby > Potty Training 1.25x
+  Pasta & Noodles                        (UPF 27%): H&H > Cold and Flu 1.25x, Pets > Horses 1.24x, H&H > Bathroom Safety, Aids & Accessories 1.18x, Toys > STEM Toys 1.17x, Sports > Clothing 1.17x
+  Cheese                                 (UPF 47%): Baby > Strollers & Accessories 1.43x, Baby > Diapering 1.31x, Baby > Feeding 1.31x, Baby > Baby Care 1.19x, Baby > Potty Training 1.18x
+  Jams, Jellies & Sweet Spreads          (UPF 90%): H&H > Mobility Aids & Equipment 1.29x, H&H > Baby & Child Care 1.23x, H&H > Bathroom Safety, Aids & Accessories 1.20x, Pets > Birds 1.17x, H&H > Mobility & Daily Living Aids 1.17x
+  Dairy & Plant-Based Yogurt             (UPF 86%): Baby > Strollers & Accessories 1.60x, Baby > Potty Training 1.56x, Baby > Feeding 1.49x, Baby > Car Seats & Accessories 1.45x, Baby > Diapering 1.39x
+  Milk & Cream                           (UPF 47%): Baby > Strollers & Accessories 1.44x, Baby > Baby Care 1.37x, Baby > Diapering 1.34x, Baby > Feeding 1.34x, Baby > Activity & Entertainment 1.30x
+  Olives, Pickles & Relishes             (UPF 50%): Pets > Horses 1.34x, H&H > Vision 1.30x, H&H > Mobility & Daily Living Aids 1.19x, Pets > Birds 1.15x, Sports > Clothing 1.14x
+  Plant-Based Milk                       (UPF 90%): H&H > Diet & Sports Nutrition 1.36x, Pets > Reptiles & Amphibians 1.23x, Baby > Feeding 1.21x, Baby > Strollers & Accessories 1.20x, Baby > Baby Care 1.19x
+  Coffee                                 (UPF 64%): Sports > Clothing 1.19x, H&H > Mobility Aids & Equipment 1.15x, Toys > Collectible Toys 1.11x, H&H > Oral Care 1.11x, Pets > Reptiles & Amphibians 1.10x
+  Dried Grains & Rice                    (UPF 14%): H&H > Baby & Child Care 1.48x, Sports > Clothing 1.35x, Pets > Horses 1.24x, H&H > Vitamins, Minerals & Supplements 1.20x, H&H > Diet & Sports Nutrition 1.18x
+  Breakfast & Cereal Bars                (UPF 94%): Video Games > Xbox One 1.38x, Toys > Vehicles 1.34x, Baby > Car Seats & Accessories 1.32x, Baby > Potty Training 1.30x, Toys > Dress Up & Pretend Play 1.28x
+  Dried Fruits & Vegetables              (UPF 20%): H&H > Baby & Child Care 1.30x, Baby > Potty Training 1.28x, H&H > Diet & Sports Nutrition 1.26x, H&H > Vitamins, Minerals & Supplements 1.19x, H&H > Oral Care 1.17x
+  Seafood                                (UPF 73%): H&H > Stationery & Gift Wrapping Supplies 1.19x, Baby > Feeding 1.16x, Baby > Baby Care 1.13x, Toys > Party Supplies 1.11x, Baby > Diapering 1.10x
+  Chocolate                              (UPF 91%): Toys > Vehicles 1.42x, Toys > Collectible Toys 1.34x, H&H > Stationery & Gift Wrapping Supplies 1.32x, Video Games > PlayStation 4 1.27x, Pets > Small Animals 1.25x

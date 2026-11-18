@@ -14,6 +14,6 @@ how Yelp scores the known problem words: {'treat': 0.92, 'hot': 0.434, 'sweet': 
 
 1-2 star reviews Yelp still scores most positive:
     1.39 | Great. Can't miss with skippy
-    0.77 | delicious and easy to make. Addicted to this soup
-    0.62 | poor assortment of nuts. mostly almonds , maybe ten pecans and pistachios .
-    0.62 | Prefer honey only. And i love coconut, just not in the almond butter.. I am a HUGE fan of coconut, but not in almond butter. Prefer just hon
+    0.77 | [review text omitted]
+    0.62 | [review text omitted]
+    0.62 | [review text omitted]

@@ -1,5 +1,5 @@
 """Word plot: which words sell ultra-processed (NOVA 4) vs less processed (NOVA 1-3) food on Amazon? Descriptive (illustrates A1), not a test.
-Run from final_project/ with the NLP env:  ./.venv-nlp/bin/python upf/notebooks/marketing_wordplot.py
+Run from final_project/ with the NLP env:  ./.venv-nlp/bin/python upf/notebooks/marketing_wordplot.py  [--neg for the negation-aware version]
 Text = Amazon marketing copy (features + description). Score = log-odds ratio with an informative Dirichlet prior (Monroe, Colaresi & Quinn 2008), z-scored (same method as ndc/notebooks/ndc_wordplot.py).
 To keep 'what the food is' out of it, products are CATEGORY-BALANCED: in each Open Food Facts category with >= 100 products on both sides, the larger side is randomly
 downsampled to the size of the smaller one. Counts are document counts (a word counts once per product), so long boilerplate descriptions do not dominate.
@@ -29,7 +29,15 @@ brandw = set()
 for x in pd.concat([B.brand.dropna().astype(str), B.store.dropna().astype(str)]): brandw |= set(re.findall(r"[a-z]{3,}", x.lower()))
 STOP = set(ENGLISH_STOP_WORDS) | brandw | {"oz", "ounce", "ounces", "pack", "packs", "count", "lb", "lbs", "pound", "pounds", "fl", "size", "bag", "bags", "box", "boxes", "case",
                                            "bottle", "bottles", "can", "cans", "jar", "jars", "per", "product", "products", "item", "items", "amazon", "br"}
-docs = {g: [set(w for w in re.findall(r"[a-z]{3,}", t.lower()) if w not in STOP) for t in B.text[B.u == g]] for g in (True, False)}
+import sys
+NEGMODE = "--neg" in sys.argv                                  # negation-aware version: words inside a negation become 'no_<word>' (negation.py)
+if NEGMODE:
+    sys.path.insert(0, str(Path(__file__).parent)); from negation import mark
+    keepw = lambda w: (len(w[3:] if w.startswith("no_") else w) >= 3) and ((w[3:] if w.startswith("no_") else w) not in STOP) and re.fullmatch(r"(no_)?[a-z]+", w)
+    docs = {g: [set(w for w in mark(t) if keepw(w)) for t in B.text[B.u == g]] for g in (True, False)}
+else:
+    docs = {g: [set(w for w in re.findall(r"[a-z]{3,}", t.lower()) if w not in STOP) for t in B.text[B.u == g]] for g in (True, False)}
+SUF = "_neg" if NEGMODE else ""
 ca = Counter(w for d in docs[True] for w in d); cb = Counter(w for d in docs[False] for w in d)
 na, nb = len(docs[True]), len(docs[False])
 vocab = [w for w in set(ca) | set(cb) if ca[w] + cb[w] >= 30]
@@ -39,7 +47,7 @@ delta = np.log((ya + alpha) / (Na + a0 - ya - alpha)) - np.log((yb + alpha) / (N
 z = delta / np.sqrt(1 / (ya + alpha) + 1 / (yb + alpha))
 fa, fb = 100 * ya / na, 100 * yb / nb                        # % of products whose copy uses the word
 W = pd.DataFrame({"word": vocab, "pct_nova4": fa, "pct_nova123": fb, "z": z}).sort_values("z")
-W.to_csv(PROC / "marketing_wordplot.csv", index=False)
+W.to_csv(PROC / f"marketing_wordplot{SUF}.csv", index=False)
 print(f"categories {len(cats)}; balanced products {na:,} per side; vocabulary {len(vocab):,} words (>= 30 products)")
 print("MOST 'NOVA 1-3' words: " + ", ".join(f"{r.word} ({r.z:.1f})" for r in W.head(30).itertuples()))
 print("MOST 'NOVA 4' words: " + ", ".join(f"{r.word} ({r.z:.1f})" for r in W.tail(30).iloc[::-1].itertuples()))
@@ -58,7 +66,7 @@ for r in cand.itertuples():
     tx, ty = (lx - 0.03, ly + 0.035) if up else (lx + 0.03, ly - 0.045)
     if any(abs(tx - px) < 0.022 * max(len(r.word), 4) / 4 + 0.05 and abs(ty - py) < 0.05 for px, py in placed): continue
     placed.append((tx, ty))
-    ax.annotate(r.word, (10 ** lx, 10 ** ly), xytext=(10 ** tx, 10 ** ty), textcoords="data", fontsize=8.5, color=INK, ha="right" if up else "left",
+    ax.annotate(r.word.replace("no_", "no "), (10 ** lx, 10 ** ly), xytext=(10 ** tx, 10 ** ty), textcoords="data", fontsize=8.5, color=INK, ha="right" if up else "left",
                 arrowprops=dict(arrowstyle="-", color=MUTED, lw=0.4, shrinkA=0, shrinkB=2))
 ax.grid(color=GRID, lw=0.5); ax.set_axisbelow(True)
 for s in ("top", "right"): ax.spines[s].set_visible(False)
@@ -70,4 +78,4 @@ ax.legend(handles=[plt.Line2D([], [], marker="o", ls="", color=ORANGE, label="us
                    plt.Line2D([], [], marker="o", ls="", color=BLUE, label="used more for less processed (z <= -3)"),
                    plt.Line2D([], [], marker="o", ls="", color="#cfcdc6", label="no clear difference")], loc="upper left", frameon=False, fontsize=8.5)
 fig.text(0.01, 0.005, "Data: Amazon Reviews 2023 (Hou et al. 2024) matched by barcode to Open Food Facts (ODbL). Brand, store and pack-size words removed.", fontsize=7.5, color=MUTED)
-fig.tight_layout(rect=(0, 0.02, 1, 1)); fig.savefig(FIG / "marketing_wordplot.png", dpi=170); print("saved upf/figures/marketing_wordplot.png")
+fig.tight_layout(rect=(0, 0.02, 1, 1)); fig.savefig(FIG / f"marketing_wordplot{SUF}.png", dpi=170); print(f"saved upf/figures/marketing_wordplot{SUF}.png")

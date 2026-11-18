@@ -1,0 +1,50 @@
+W1116 10:52:35.025000 45679 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+sample 20,000 reviews; identical to the Yelp pilot sample: True
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 6908.82it/s]
+  0/20,000 reviews, 1s
+  3,200/20,000 reviews, 10s
+  6,400/20,000 reviews, 24s
+  9,600/20,000 reviews, 43s
+  12,800/20,000 reviews, 71s
+  16,000/20,000 reviews, 110s
+  19,200/20,000 reviews, 181s
+upf/notebooks/emotion_pilot.py:69: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  S["cls_comp"] = C[POS].mean(1) - C[NEGE].mean(1); S["lex_comp"] = L[["joy", "trust"]].mean(1) - L[["anger", "disgust", "sadness"]].mean(1)
+classified 20,000 reviews in 220s on mps (90.7 reviews/s)
+
+== C1 STARS == mean in 1-2 vs 4-5 star reviews (classifier probability | EmoLex share of words):
+  joy        classifier 0.092 -> 0.932 OK | EmoLex 0.0188 -> 0.0812
+  love       classifier 0.023 -> 0.543 OK | EmoLex n/a (not in EmoLex)
+  optimism   classifier 0.036 -> 0.701 OK | EmoLex n/a (not in EmoLex)
+  trust      classifier 0.012 -> 0.138 OK | EmoLex 0.0242 -> 0.0553
+  anger      classifier 0.728 -> 0.045 OK | EmoLex 0.0298 -> 0.0067
+  disgust    classifier 0.796 -> 0.044 OK | EmoLex 0.0305 -> 0.0046
+  sadness    classifier 0.538 -> 0.037 OK | EmoLex 0.0278 -> 0.0064
+  pessimism  classifier 0.139 -> 0.012 OK | EmoLex n/a (not in EmoLex)
+  directions right 8/8 (bar >= 7); composite AUC classifier 0.983 | EmoLex 0.785 | VAD valence 0.889 (bar: classifier >= VAD)
+  C1 PASSES
+
+== C2 NEGATION ==
+  reviews with a negator  n= 6,388: AUC classifier 0.972 | EmoLex 0.721 | advantage +0.251
+  reviews without         n=12,382: AUC classifier 0.984 | EmoLex 0.840 | advantage +0.144
+  1-2 star reviews with a negator (n=2,366): joy classifier share present 4.6% | EmoLex share with any joy word 47.8%
+   'Not happy with the product.'                           classifier anger 0.99, sadness 0.96, disgust 0.89 | EmoLex {'anticipation': 0.2, 'joy': 0.2, 'trust': 0.2}
+   'Not tasty at all.'                                     classifier disgust 0.98, anger 0.87, sadness 0.79 | EmoLex {}
+   "Not bad at all, I'd buy again."                        classifier optimism 0.95, joy 0.70, trust 0.36 | EmoLex {'anger': 0.14, 'disgust': 0.14, 'fear': 0.14, 'sadness': 0.14}
+   'Great morning treat for the kids.'                     classifier joy 1.00, love 0.92, optimism 0.72 | EmoLex {'anger': 0.17, 'anticipation': 0.17, 'disgust': 0.17, 'fear': 0.17, 'joy': 0.17, 'sadness': 0.17, 'surprise': 0.17, 'trust': 0.17}
+   'Arrived broken and stale.'                             classifier sadness 0.93, disgust 0.63, anger 0.37 | EmoLex {'anger': 0.25, 'fear': 0.25, 'sadness': 0.25}
+   "I was afraid it would be too sweet but it's perfect."  classifier joy 0.99, optimism 0.94, love 0.76 | EmoLex {'anticipation': 0.09, 'fear': 0.09, 'joy': 0.09, 'trust': 0.09}
+
+== C3 'TREAT' ==
+  anger    classifier: with 'treat' 0.057 vs without 0.194 | EmoLex: 0.0561 vs 0.0109   (n with 'treat' 280; mean stars 4.71 vs 4.08)
+  disgust  classifier: with 'treat' 0.065 vs without 0.213 | EmoLex: 0.0557 vs 0.0093   (n with 'treat' 280; mean stars 4.71 vs 4.08)
+  fear     classifier: with 'treat' 0.009 vs without 0.015 | EmoLex: 0.0560 vs 0.0091   (n with 'treat' 280; mean stars 4.71 vs 4.08)
+
+share of reviews where each emotion is present (p >= 0.5): {'anger': '18.4%', 'anticipation': '1.2%', 'disgust': '21.0%', 'fear': '0.4%', 'joy': '74.1%', 'love': '41.2%', 'optimism': '65.2%', 'pessimism': '1.1%', 'sadness': '13.6%', 'surprise': '0.7%', 'trust': '1.6%'}
+
+most-joyful 1-star reviews by the classifier (where it may be fooled):
+   1.00 | [review text omitted]
+   1.00 | [review text omitted]
+   1.00 | [review text omitted]
+   1.00 | [review text omitted]
+saved upf/data/processed/soj/emotion_pilot.csv.gz

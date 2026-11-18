@@ -71,7 +71,7 @@ svg text { fill: var(--ink2); font-family: var(--mono); font-size: 11px }
 input[type=search] { font: inherit; padding: 0.35rem 0.6rem; border: 1px solid var(--rule); background: var(--bg); color: var(--ink); min-width: 0; width: 14rem; max-width: 100% }
 button { font-family: var(--mono); font-size: 0.85rem; padding: 0.45rem 0.8rem; border: 1px solid var(--ink); background: var(--ink); color: var(--bg); cursor: pointer }
 button.ghost { background: transparent; color: var(--ink) }
-.tip { position: absolute; pointer-events: none; background: var(--panel); border: 1px solid var(--ink); padding: 0.35rem 0.55rem; font-family: var(--mono); font-size: 0.78rem; color: var(--ink); white-space: nowrap }
+.tip { position: absolute; z-index: 20; max-width: min(22rem, calc(100vw - 32px)); white-space: normal !important; pointer-events: none; background: var(--panel); border: 1px solid var(--ink); padding: 0.35rem 0.55rem; font-family: var(--mono); font-size: 0.78rem; color: var(--ink); white-space: nowrap }
 .rel { position: relative }
 
 /* dumbbell + bars */
@@ -91,6 +91,62 @@ canvas { width: 100%; height: auto; display: block; background: var(--panel); bo
 .legend { display: flex; flex-wrap: wrap; gap: 0.9rem; font-family: var(--mono); font-size: 0.8rem; color: var(--ink2) }
 .dot { display: inline-block; width: 0.7rem; height: 0.7rem; border-radius: 50%; margin-right: 0.3rem; vertical-align: -0.05rem }
 ul.held { padding-left: 1.1rem } ul.held li { margin-bottom: 0.5rem }
+/* diverging shopper-type bars */
+.types { display: grid; gap: 0.35rem; font-family: var(--mono); font-size: 0.8rem }
+.trow { display: grid; grid-template-columns: minmax(0, 18rem) 1fr; gap: 0.8rem; align-items: center }
+.trow .lab { text-align: right; color: var(--ink); font-size: 0.74rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis } .trow .lab small { color: var(--ink2) }
+.trow .ax { position: relative; height: 1.15rem }
+.trow .ax::before { content: ""; position: absolute; left: 50%; top: -0.2rem; bottom: -0.2rem; border-left: 1px solid var(--rule) }
+.trow .b { position: absolute; top: 0.15rem; height: 0.85rem } .trow .ci { position: absolute; top: 0.55rem; height: 1px; background: var(--ink2) }
+.trow .v { position: absolute; top: 0; color: var(--ink2); font-size: 0.75rem }
+.typescale { display: grid; grid-template-columns: minmax(0, 18rem) 1fr; gap: 0.8rem; font-family: var(--mono); font-size: 0.75rem; color: var(--ink2) }
+.typescale div { display: flex; justify-content: space-between }
+@media (max-width: 620px) { .trow, .typescale { grid-template-columns: 1fr } .trow .lab { text-align: left } .typescale > span { display: none } }
+/* diverging stacked bars: who reviews each kind of food */
+.whobars { --s1: var(--pleasure); --s2: color-mix(in srgb, var(--pleasure) 42%, var(--panel)); --s3: var(--neutral);
+  --s4: color-mix(in srgb, var(--purity) 42%, var(--panel)); --s5: var(--purity); font-family: var(--mono); font-size: 0.74rem; display: grid; gap: 2px }
+.wrow { display: grid; grid-template-columns: minmax(0, 10.5rem) 2.6rem 1fr; gap: 0.5rem; align-items: center }
+.wrow.first { margin-top: 0.55rem }
+.wrow .cat { text-align: right; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+.wrow .tag { color: var(--ink2); font-size: 0.68rem }
+.wrow .trk { position: relative; height: 1.05rem }
+.wrow .trk span { position: absolute; top: 0; bottom: 0; border-right: 2px solid var(--panel); display: flex; align-items: center; justify-content: center; font-size: 0.64rem; overflow: hidden }
+.wrow .trk span.d { color: #fff } .wrow .trk span.l { color: var(--ink) }
+.wrow .trk i { position: absolute; top: -2px; bottom: -2px; border-left: 1px dashed var(--ink2); z-index: 1 }
+.wrow .trk b { position: absolute; top: -2px; bottom: -2px; border-left: 1px solid var(--rule); z-index: 0 }
+.wrow.avg .trk { height: 1.25rem } .wrow.avg .cat { font-weight: 600 }
+.wscale { display: grid; grid-template-columns: minmax(0, 10.5rem) 2.6rem 1fr; gap: 0.5rem; font-family: var(--mono); font-size: 0.72rem; color: var(--ink2); margin-top: 0.4rem }
+.wscale div { position: relative; height: 1.2rem } .wscale div span { position: absolute; white-space: nowrap }
+.wkey { display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem; font-family: var(--mono); font-size: 0.74rem; color: var(--ink2); margin-bottom: 0.5rem }
+.wkey i { display: inline-block; width: 0.8rem; height: 0.8rem; margin-right: 0.3rem; vertical-align: -0.1rem }
+@media (max-width: 620px) { .wrow, .wscale { grid-template-columns: minmax(0, 6.5rem) 2.2rem 1fr; gap: 0.35rem } .wrow .trk span { font-size: 0 } }
+/* three dials (VAD) */
+.dials { background: var(--panel); border: 1px solid var(--rule); padding: 1rem 1rem 0.8rem }
+.dtabs { display: flex; gap: 0; border: 1.5px solid var(--ink); width: fit-content; max-width: 100% }
+.dtabs button { background: transparent; color: var(--ink); border: 0; border-right: 1.5px solid var(--ink); font-family: var(--display); font-weight: 800; font-size: 1rem; padding: 0.4rem 0.9rem }
+.dtabs button:last-child { border-right: 0 }
+.dtabs button[aria-selected="true"] { background: var(--ink); color: var(--bg) }
+.dlede { font-size: 1.02rem; margin: 0.9rem 0 0.4rem; min-height: 3.2em }
+.dtrack { position: relative; height: 13rem; margin-top: 0.4rem; border-bottom: 1.5px solid var(--ink); overflow: hidden }
+.dtrack::before { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; border-left: 1px dashed var(--rule) }
+.dtrack .w { position: absolute; transform: translateX(-50%); font-family: var(--display); font-weight: 800; line-height: 1; white-space: nowrap; transition: left .6s cubic-bezier(.3,.8,.3,1), top .6s cubic-bezier(.3,.8,.3,1), opacity .3s; cursor: default }
+.dtrack .w.u { color: var(--pleasure) } .dtrack .w.p { color: var(--purity) }
+.dtrack .w::after { content: ""; position: absolute; left: 50%; top: 100%; height: 999px; border-left: 1px solid currentColor; opacity: .18 }
+.dends { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 0.74rem; color: var(--ink2); margin-top: 0.25rem }
+.dmeans { margin-top: 1.1rem; border-top: 1px solid var(--rule); padding-top: 0.7rem }
+.dmhead { display: flex; justify-content: space-between; align-items: center; gap: 0.6rem; flex-wrap: wrap }
+.dmhead button { font-size: 0.78rem; padding: 0.3rem 0.6rem }
+.dpins { position: relative; height: 4.2rem; margin-top: 0.4rem; border-bottom: 1px solid var(--ink2) }
+.dpins .pin { position: absolute; bottom: 0; transform: translateX(-50%); transition: left .7s cubic-bezier(.3,.8,.3,1); text-align: center; font-family: var(--mono); font-size: 0.7rem; white-space: nowrap }
+.dpins .pin i { display: block; width: 2px; height: 1.2rem; margin: 0.15rem auto 0; background: currentColor }
+.dpins .pin.u { color: var(--pleasure) } .dpins .pin.p { color: var(--purity) } .dpins .pin.u i { height: 2.1rem } .dpins .pin.p i { height: 0.7rem }
+.dpins .tick { position: absolute; bottom: -1.2rem; transform: translateX(-50%); font-family: var(--mono); font-size: 0.66rem; color: var(--ink2); transition: left .7s }
+.dmeans .note { margin: 1.5rem 0 0 }
+@media (max-width: 560px) { .dtabs button { font-size: 0.85rem; padding: 0.35rem 0.55rem } .dtrack { height: 11rem } }
+.curves { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem }
+.curves > div { background: var(--panel); border: 1px solid var(--rule); padding: 0.5rem 0.4rem 0.2rem; min-width: 0 }
+.curves h4 { font-family: var(--mono); font-size: 0.78rem; font-weight: 600; margin: 0 0 0.2rem 0.3rem }
+@media (max-width: 620px) { .curves { grid-template-columns: 1fr } }
 footer { border-top: 1px solid var(--rule); margin-top: 3rem; padding-top: 1rem }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important } }
 </style>
@@ -127,7 +183,6 @@ footer { border-top: 1px solid var(--rule); margin-top: 3rem; padding-top: 1rem 
       <div class="row"><span>of which ultra-processed</span><span class="num">69%</span></div>
       <div class="row"><span>with marketing copy</span><span class="num">81%</span></div>
       <div class="row thick"><b>Reviews read</b><span class="num">2,519,089</span></div>
-      <div class="foot">In a hand check of 20 random matches, 17 were the same product and 3 were the same brand in another flavour.</div>
     </aside>
     <div class="nova" aria-label="Processing level of the matched listings">
       <div class="kicker">Processing level of the 75,933 matched listings</div>
@@ -141,7 +196,6 @@ footer { border-top: 1px solid var(--rule); margin-top: 3rem; padding-top: 1rem 
   </div>
 
   <h2>Two vocabularies</h2>
-  <p>If you compare all ultra-processed copy with all other copy, you mostly learn that candy is ultra-processed. So we compared like with like. In each of 25 food categories we took the same number of ultra-processed and less processed products, 10,349 of each in total, and asked which words each side uses more.</p>
   <p>The <span class="pl">ultra-processed</span> side talks about pleasure and ease: <i>flavored, fun, irresistible, satisfy, favorite, creamy, cheesy</i>, and about portions and speed: <i>individually, packet, quick, minutes, school</i>. The <span class="pu">less processed</span> side talks about purity and paperwork: <i>non-GMO, certified, USDA, verified, harvested, slowly, batches</i>, and often about what is <i>not</i> in the product: no additives, no chemicals, no pesticides.</p>
 </section>
 
@@ -156,20 +210,27 @@ footer { border-top: 1px solid var(--rule); margin-top: 3rem; padding-top: 1rem 
 </figure>
 
 <section class="col">
-  <p>A second measure agrees. We scored every word for how pleasant it feels, from −1 to +1, using a crowd-rated word list (the NRC Valence lexicon). Ultra-processed copy averages <span class="num">0.286</span>, other copy <span class="num">0.269</span>. Within the same category the gap is <span class="num">+0.014</span>. It is small, and about half of it comes from food words with sunny scores, like <i>candy</i> and <i>dessert</i>. The rest is the split above: pleasure words on one side, health words on the other.</p>
-
-  <h2>Do shoppers feel it?</h2>
-  <p>The marketing is a little sunnier for ultra-processed food. The reviews are not. Measured the same way, reviews of both kinds average almost exactly the same pleasantness: <span class="num">0.207</span> against <span class="num">0.207</span>.</p>
-  <figure>
-    <div class="bars" id="dumb"></div>
-    <figcaption>Average word pleasantness (NRC Valence, −1 to +1, food words removed). Pooled over all matched products.</figcaption>
+  <p>A second measure agrees. A crowd-rated word list (the NRC Valence, Arousal and Dominance lexicon) scores every word on three scales from −1 to +1: how <b>pleasant</b> it feels (valence), how <b>exciting</b> it feels (arousal) and how <b>in control</b> it sounds (dominance). On pleasantness, ultra-processed copy averages <span class="num">0.286</span>, other copy <span class="num">0.269</span>. Within the same category the gap is <span class="num">+0.014</span>. It is small, and about half of it comes from food words with sunny scores, like <i>candy</i> and <i>dessert</i>. The rest is the split above: pleasure words on one side, health words on the other.</p>
+  <figure class="dials" id="dials">
+    <div class="dtabs" role="tablist" aria-label="Choose a scale">
+      <button type="button" role="tab" data-d="valence" aria-selected="true">Valence</button>
+      <button type="button" role="tab" data-d="arousal" aria-selected="false">Arousal</button>
+      <button type="button" role="tab" data-d="dominance" aria-selected="false">Dominance</button>
+    </div>
+    <p class="dlede" id="dlede"></p>
+    <div class="dtrack" id="dwords" aria-hidden="true"></div>
+    <div class="dends"><span id="dlo"></span><span id="dhi"></span></div>
+    <div class="dmeans">
+      <div class="dmhead"><span class="kicker">Average word, each side</span></div>
+      <div class="dpins" id="dpins"></div>
+      <p class="note" id="dnote"></p>
+    </div>
+    <figcaption>Words are placed at their lexicon score (rounded); orange words appear more often in ultra-processed copy, green ones in less processed copy, and bigger words differ more. Hover a word for how often each side uses it per 1,000 scored words. Averages come from a sample with equal numbers of each kind of listing in each of 25 food categories.</figcaption>
   </figure>
-  <p>What changes is <i>how</i> people praise. Reviews of ultra-processed products say <i>love, favorite, yummy, kids</i>. Reviews of less processed products say <i>great, excellent, healthy, organic</i>. Shoppers echo the vocabulary they were sold.</p>
-
-  <div class="callout">
-    <h3>The "treat" trap</h3>
-    <p>Our first emotion count said reviews of ultra-processed food carry more anger, disgust and fear. Then we read the reviews. The biggest single cause was the word <i>treat</i>, which appears 6.9 times per 10,000 words in ultra-processed reviews and 3.3 times in the rest. The emotion lexicon tags <i>treat</i> with anger, disgust and fear. Shoppers mean "a great morning treat".</p>
-    <p style="margin:0">Other culprits were <i>broken</i> (cookies damaged in the post) and <i>bear</i> (gummy bears). We dropped that finding. The genuine complaint words, like <i>disappointed</i> and <i>horrible</i>, are only slightly more common.</p>
+  <div class="callout" style="border-left-color:var(--purity)">
+    <h3>Why a fixed word list?</h3>
+    <p>We chose a static lexicon on purpose, not a model trained on text. Every word's score was set years ago by people rating words out of context, before anyone looked at Amazon groceries. So the scores carry what the lexicon's raters felt about each word, not anything learned from our reviews or listings, and the same word always gets the same score. That makes the measure transparent and impossible to tune to our data. The price is context: "treat", "broken" or "not happy" are scored as single words, whatever the sentence means.</p>
+    <p style="margin:0">Does it still measure something real? We could only check pleasantness, because star ratings say how much people liked something, not how excited or in control they felt. We checked it against star ratings on 200,000 grocery reviews. Average pleasantness climbs with every star, from 0.06 at one star to 0.34 at five, and the score tells one- and two-star reviews from four- and five-star reviews apart 89% of the time (AUC 0.89; shuffled stars give 0.50).</p>
   </div>
 
   <h2>Who reviews what</h2>
@@ -201,22 +262,39 @@ footer { border-top: 1px solid var(--rule); margin-top: 3rem; padding-top: 1rem 
   <p>So the honest version is this. Shoppers do sort themselves by processing level, a bit beyond what category and brand alone would produce, but mostly by sticking to brands of one kind.</p>
 
   <h2>Beyond the grocery aisle</h2>
-  <p>The same anonymous reviewer IDs appear across Amazon's other departments, so we can ask what else the two kinds of grocery shoppers review. We took 141,977 reviewers with at least three reviews of matched groceries and compared two groups: people whose grocery reviews are all ultra-processed (37,287) and people for whom ultra-processed is at most half (40,577). We compared people with similar numbers of grocery reviews, and wrote our predictions down before downloading the other departments.</p>
+  <p>The same anonymous reviewer IDs appear in Amazon's other departments. So we compared people whose grocery reviews are all ultra-processed (37,287) with people for whom it is at most half (40,577): what else do they review?</p>
   <figure>
     <div class="bars" id="cross"></div>
-    <figcaption>Share of reviewers who also reviewed at least one product in each department. Dots show raw shares; the numbers are differences adjusted for how many grocery reviews people wrote. Tested with 2,000 label shuffles; the four predicted directions all held (p = 0.0025 after correction).</figcaption>
+    <figcaption>Share of reviewers who also reviewed at least one product in each department. Dots show raw shares; the numbers are differences adjusted for how many grocery reviews people wrote. Reviewers with at least three matched grocery reviews. Predicted before we downloaded the other departments; all four predicted directions held (2,000 label shuffles, p = 0.0025 after correction).</figcaption>
   </figure>
-  <p>The ultra-processed side of the network is also the games-and-toys side. Its reviewers are about 4 to 5 points more likely to review video games and toys, and about as much less likely to review sports gear and household health products. Baby products show no difference. These are review habits of pseudonymous accounts, not household profiles, and the gaps are modest. They do suggest that processing level is part of a wider way of shopping.</p>
+  <p>The ultra-processed side is also the games-and-toys side, by a modest 4 to 5 points, and less often sports and health. Whole departments are blunt, though, so next we look closer.</p>
 
-  <h2>Purity travels, pleasure stays home</h2>
-  <p>Does the pleasure language follow ultra-processed shoppers into other aisles? It does not. The toys, pet supplies and household goods they review are marketed just as pleasantly as the ones the other group reviews; across 1.6 million reviews in seven departments the gap is zero (every department within ±0.006 on the −1 to +1 scale).</p>
-  <p>The <span class="pu">purity</span> vocabulary does travel. Comparing the marketing copy of non-food products that lean towards each group, the less processed shoppers' side reads <i>non-GMO, potency, no fillers, no preservatives, USDA, tested</i>: chlorella, organic cinnamon capsules, vitamins. The <span class="pl">ultra-processed</span> shoppers' side reads <i>durable, comfortable, portable, stains, birthday, holiday</i>: baby wash, kids' paint books, batteries, a potty.</p>
-  <p>And they write differently. Ultra-processed shoppers' reviews in other departments are warmer (+0.011 on the same scale, higher in six of seven departments) and full of <i>love, perfect, gift, fun, daughter, birthday</i>. The other group writes about <i>weight, stomach, gut, effective, formula</i>.</p>
+  <h2>Shopper types</h2>
+  <p>Departments are blunt: "Toys & Games" holds both Lego and party balloons. So we let the shoppers sort themselves. For 58,391 of these reviewers with at least five reviews outside groceries, we built a profile of which Amazon sub-categories they review, gave less weight to the ones nearly everyone reviews (batteries and paper towels link everyone to everything), and linked each person to the ten people whose profiles are most alike. Louvain community detection then split this similarity network into 45 shopper types. Their groceries were left out of the profiles, so the types know nothing about processing.</p>
+  <p>Then we looked at each type's groceries. The types differ far more than chance would allow (a reshuffle test, p = 0.0005). <span class="pl">Collectors</span> of action figures and fan gear, <span class="pl">gamers</span> and families buying toys and party supplies include more people whose grocery reviews are all ultra-processed. <span class="pu">Sports nutrition</span>, <span class="pu">wellness and supplements</span>, heart health and <span class="pu">natural and organic</span> products go with less processed groceries. Baby gear and medical supplies sit in the middle.</p>
+  <figure>
+    <div class="types" id="types"></div>
+    <figcaption>Each row is a shopper type found from what its members review outside groceries (19 of 45 shown; members in brackets). Bar: share of members whose grocery reviews are all ultra-processed, minus the share expected from how many grocery reviews they wrote (about 46% overall), in percentage points. Lines: 95% intervals. Names are our reading of each type's most distinctive sub-categories. We tried a minimum of 3, 5, 10 and 20 non-food reviews, 5, 10 and 20 neighbours, and three Louvain resolutions; the same types lean the same way in all eight runs.</figcaption>
+  </figure>
+  <p>Read it as play and fandom on one side, upkeep of the body on the other. These are pseudonymous review habits of fairly active reviewers, not households, and the outdoor type fades when only the heaviest reviewers are kept.</p>
 
-  <div class="callout" style="border-left-color:var(--purity)">
-    <h3>Can we trust the pleasantness score?</h3>
-    <p style="margin:0">We checked it against star ratings on 200,000 grocery reviews. Average pleasantness climbs with every star, from 0.06 at one star to 0.34 at five, and the score tells one- and two-star reviews from four- and five-star reviews apart 89% of the time (AUC 0.89; shuffled stars give 0.50). A classifier trained on the stars does better (0.99), mainly because it understands "not": our word list scores "Not happy" as happy.</p>
-  </div>
+  <h2>Hobbies and health</h2>
+  <p>The types hint at a sliding scale, so we measured it directly, without any types. For each reviewer we took two shares of their non-food reviews: the share that are <span class="pu">health-coded</span> (vitamins, sports nutrition, wellness, exercise gear) and the share that are <span class="pl">hobby</span> items (figures, collectibles, games, puzzles, building toys, video games, fan gear). "Health-coded" means sold as healthy, not shown to be healthy. Groceries are left out, so neither share knows anything about processing.</p>
+  <figure>
+    <div class="curves" id="curves"></div>
+    <figcaption>Each point: a tenth of the reviewers who have at least one review of that kind, placed at their average share (log scale); "none" = no such reviews. Coloured line: share whose grocery reviews are all ultra-processed, with 95% intervals. Grey dashed line: expected from how many grocery reviews they wrote. 58,391 reviewers whose grocery reviews are either all ultra-processed or at most half.</figcaption>
+  </figure>
+  <p>The more of someone's reviewing goes to <span class="pu">health-coded</span> products, the less likely their grocery reviews are all ultra-processed: 57% of people with no health-coded reviews, 26% of those for whom it is more than 44%. <span class="pl">Hobby</span> runs the other way, up to 63%. The expected line hardly moves, so how much people review does not explain it. Both directions were predicted in advance and are far outside what shuffling the shares among similarly active reviewers produces (p = 0.0005); the health curve holds even among people with no hobby reviews at all.</p>
+
+  <h3 style="margin-top:2.2rem">Who reviews the candy?</h3>
+  <p>Now turn the question around and start from the food. We combined the two shares into one score (health-coded minus hobby) and called the most health-focused 30% of reviewers <span class="pu">health-coded shoppers</span>. Then, for each kind of food, we asked what share of its reviewers are health-coded shoppers, separately for its ultra-processed and its less processed products.</p>
+  <figure>
+    <div class="bars" id="whobars"></div>
+    <figcaption>Share of the people who reviewed at least one product of that kind who are health-coded shoppers (hover a dot for the number of reviewers). The number is the gap, ultra-processed minus less processed, in percentage points; rows are sorted by it. Health-coded shoppers: the top half of reviewers whose non-food reviews lean health-coded rather than hobby. "Health-coded" means sold as healthy, not shown to be healthy. Kinds of food with fewer than 200 reviewers on either side left out.</figcaption>
+  </figure>
+  <p>In every row but one, the <span class="pl">ultra-processed</span> dot sits to the left of its less processed partner. Among people who reviewed less processed cookies, crackers or jerky, about 40% are health-coded shoppers; among those who reviewed the ultra-processed versions, about 23%. The exception is milk, where the ultra-processed products are mostly plant milks and creamers, and the health-coded shoppers like them as much. Within the same kind of food, the gap is far larger than when we shuffle the scores among reviewers who write similar numbers of grocery reviews (p = 0.001, and the same with broader definitions of hobby and health).</p>
+  <p>Two cautions. Compare the two dots of a row, not a dot with the average line: the busiest reviewers appear in many rows and lean health-coded, which pushes most less processed dots above 30%. And this is who <i>reviews</i> together among the most active 2% of grocery reviewers. It says nothing about what hobbies do to diets, and health-coded shoppers are still about a quarter of the people reviewing candy.</p>
+
 
   <h2>The rich get richer</h2>
   <p>A grocery product with one review before 2018 gained 0.4 new reviews during 2018. One with about a thousand gained about 190. Plot one against the other on log scales and the points fall on a line with slope 0.93: attention is handed out almost exactly in proportion to the attention a product already has. That is the mechanism behind the heavy tail. Most of the 600,000 grocery listings have a handful of reviews; 0.2% have more than a thousand.</p>
@@ -231,9 +309,11 @@ footer { border-top: 1px solid var(--rule); margin-top: 3rem; padding-top: 1rem 
   <h2>What did not hold up</h2>
   <ul class="held">
     <li><b>"Sold on joy."</b> Counting joy words in marketing copy gave a small difference that vanished on our most reliable matches. The pleasantness score held; the joy count did not.</li>
-    <li><b>Anger, disgust and fear in reviews.</b> Mostly the word <i>treat</i>. See above.</li>
+    <li><b>Sunnier reviews.</b> The marketing is a little sunnier for ultra-processed food; the reviews are not (0.207 against 0.207).</li>
+    <li><b>Anger, disgust and fear in reviews.</b> Mostly the word <i>treat</i>, which the emotion lexicon tags with all three; shoppers mean "a great morning treat".</li>
     <li><b>Trust words in marketing.</b> No reliable difference.</li>
-    <li><b>Pleasure everywhere.</b> We expected ultra-processed shoppers' other purchases to be marketed more pleasantly too. They are not.</li>
+    <li><b>Pleasure everywhere.</b> We expected ultra-processed shoppers' other purchases to be marketed more pleasantly too. They are not: across 1.6 million reviews in seven departments the gap is zero.</li>
+    <li><b>Warmer reviews elsewhere.</b> Ultra-processed shoppers' reviews in other departments are slightly warmer (+0.011 on the −1 to +1 scale). Gift and toy reviews are warm anyway, so we don't read much into it.</li>
     <li><b>Promise versus experience, measured with emotion categories.</b> No difference. Measured with pleasantness, the gap between sunny copy and plain reviews is wider for ultra-processed food (+0.009), but small.</li>
   </ul>
 
@@ -289,16 +369,6 @@ footer { border-top: 1px solid var(--rule); margin-top: 3rem; padding-top: 1rem 
   ws.addEventListener("input", () => { const q = ws.value.trim().toLowerCase(); drawWords(q || null);
     const hit = q ? W.filter(d => d.w.startsWith(q)) : []; wf.textContent = q ? (hit.length ? hit.slice(0, 3).map(d => `${d.w}: ${d.z > 0 ? "leans ultra-processed" : "leans less processed"} (z ${d.z.toFixed(1)})`).join(" · ") : "not among the 2,194 words") : ""; });
 
-  // dumbbell (valence)
-  const dumb = document.getElementById("dumb");
-  [["Marketing copy", 0.286, 0.269], ["Reviews", 0.207, 0.207]].forEach(([nm, u, o]) => {
-    const lo = 0.15, hi2 = 0.32, P = v => ((v - lo) / (hi2 - lo) * 100).toFixed(1) + "%";
-    dumb.insertAdjacentHTML("beforeend", `<div class="bar"><span>${nm} <span class="num" style="color:var(--ink2)">${u.toFixed(3)} vs ${o.toFixed(3)}</span></span><div class="track" style="background:var(--faint)">
-      <span style="position:absolute;top:.2rem;width:1rem;height:1rem;border-radius:50%;background:var(--purity);left:calc(${P(o)} - .5rem)" title="less processed ${o}"></span>
-      <span style="position:absolute;top:.2rem;width:1rem;height:1rem;border-radius:50%;background:var(--pleasure);left:calc(${P(u)} - .5rem);opacity:.9" title="ultra-processed ${u}"></span>
-      </div></div>`); });
-  dumb.insertAdjacentHTML("beforeend", `<div class="legend"><span><span class="dot" style="background:var(--pleasure)"></span>ultra-processed</span><span><span class="dot" style="background:var(--purity)"></span>less processed</span><span>scale shown: 0.15 to 0.32</span></div>`);
-
   // assortativity bars
   const as = document.getElementById("assort");
   [["Shuffle within category", 0.279, 0.091], ["Shuffle within brand", 0.279, 0.200], ["Cross-brand links only (within category)", 0.208, 0.073], ["Cross-brand and cross-category links", 0.179, 0.060]].forEach(([nm, o, n]) => {
@@ -326,9 +396,116 @@ footer { border-top: 1px solid var(--rule); margin-top: 3rem; padding-top: 1rem 
   const cr = document.getElementById("cross");
   [["Video Games", 19.7, 16.3, "+4.3"], ["Toys & Games", 51.4, 47.9, "+4.7"], ["Sports & Outdoors", 58.1, 63.8, "−4.5"], ["Health & Household", 85.7, 91.0, "−4.2"], ["Baby Products", 26.7, 28.4, "−0.4, no difference"]].forEach(([nm, u, o, d]) => {
     cr.insertAdjacentHTML("beforeend", `<div class="bar"><span>${nm} <span class="num" style="color:var(--ink2)">${d} pts</span></span><div class="track">
-      <span style="position:absolute;top:.2rem;width:1rem;height:1rem;border-radius:50%;background:var(--purity);left:calc(${o}% - .5rem)" title="at most half ultra-processed: ${o}%"></span>
-      <span style="position:absolute;top:.2rem;width:1rem;height:1rem;border-radius:50%;background:var(--pleasure);left:calc(${u}% - .5rem);opacity:.9" title="all ultra-processed: ${u}%"></span></div></div>`); });
+      <span style="position:absolute;top:.2rem;width:1rem;height:1rem;border-radius:50%;background:var(--purity);left:calc(${o}% - .5rem)" data-tip="at most half ultra-processed: ${o}%"></span>
+      <span style="position:absolute;top:.2rem;width:1rem;height:1rem;border-radius:50%;background:var(--pleasure);left:calc(${u}% - .5rem);opacity:.9" data-tip="all ultra-processed: ${u}%"></span></div></div>`); });
   cr.insertAdjacentHTML("beforeend", `<div class="legend"><span><span class="dot" style="background:var(--pleasure)"></span>all grocery reviews ultra-processed</span><span><span class="dot" style="background:var(--purity)"></span>at most half</span><span>scale: 0 to 100%</span></div>`);
+
+  // shopper types (diverging bars, -25..+15 points)
+  const TY = [["Collectors (figures, fan shop)", 1092, 11.4, 2.9], ["Gamers (consoles, PC games)", 4555, 9.7, 1.4], ["Party & novelty gifts", 429, 7.1, 4.7],
+    ["Little kids' toys", 683, 6.0, 3.7], ["Toy builders & crafters", 6451, 5.8, 1.2], ["Sports fans with dogs", 1172, 4.6, 2.9],
+    ["Small-pet & reptile keepers", 1070, 4.1, 3.0], ["Puzzles & mobility aids", 1338, 1.9, 2.7], ["Aquarium keepers", 2454, 1.6, 2.0], ["Baby gear", 4748, 0.8, 1.4],
+    ["Mobility & medical supplies", 2814, 0.6, 1.8], ["Pet owners who take supplements", 3431, -2.2, 1.7], ["Outdoors (hunting, fishing)", 4721, -5.5, 1.4],
+    ["Grooming, oral & vision care", 1883, -5.8, 2.2], ["Fitness & oral care", 2846, -5.9, 1.8], ["Wellness & supplements", 1834, -7.7, 2.2],
+    ["Heart health & Whole Foods", 481, -10.2, 4.3], ["Sports nutrition", 1918, -11.9, 2.1], ["Natural & organic women's health", 305, -19.7, 4.8]];
+  const tyEl = document.getElementById("types"), LIM = 25, X = v => 50 + 50 * v / LIM;
+  TY.forEach(([nm, n, d, ci]) => {
+    const col = d > 0 ? "var(--pleasure)" : "var(--purity)", l = Math.min(X(0), X(d)), w = Math.abs(X(d) - X(0));
+    tyEl.insertAdjacentHTML("beforeend", `<div class="trow"><span class="lab">${nm} <small>(${n.toLocaleString("en")})</small></span><div class="ax">
+      <span class="b" style="left:${l}%;width:${w}%;background:${col}"></span><span class="ci" style="left:${X(d - ci)}%;width:${X(d + ci) - X(d - ci)}%"></span>
+      <span class="v" style="${d > 0 ? `left:calc(${X(d + ci)}% + .3rem)` : "left:calc(50% + .3rem)"}">${d > 0 ? "+" : "−"}${Math.abs(d).toFixed(1)}</span></div></div>`); });
+  tyEl.insertAdjacentHTML("beforeend", `<div class="typescale"><span></span><div><span>← less processed</span><span>0</span><span>more ultra-processed →</span></div></div>`);
+
+  // who reviews each kind of food (diverging stacked bars; shares in %, groups strong hobby .. strong health-coded)
+  const WHO = [["Toaster pastries",1,1046,22.8,17.4,19.9,23.9,16.1],["Candy & chocolate",1,12632,15.7,16.1,18.6,26.5,23.1],["Candy & chocolate",0,649,7.5,10.0,12.9,27.3,42.2],["Popcorn & pretzels",1,2585,15.9,14.7,19.9,27.2,22.2],["Popcorn & pretzels",0,1155,10.9,14.4,17.7,28.0,29.1],["Cookies",1,7023,15.4,14.5,20.2,26.7,23.2],["Cookies",0,1016,6.4,10.9,16.6,26.5,39.6],["Chips & crisps",1,2710,16.6,14.9,20.7,24.3,23.6],["Chips & crisps",0,2316,10.7,12.0,17.5,27.1,32.8],["Crackers",1,4160,15.5,15.1,20.9,25.7,22.8],["Crackers",0,1689,6.6,11.2,15.8,26.8,39.5],["Bottled drinks & drink mixes",1,7982,14.6,15.3,19.8,26.4,24.0],["Bottled drinks & drink mixes",0,3983,9.0,10.2,17.7,26.8,36.3],["Jerky & meat snacks",1,2183,16.9,14.1,19.5,26.1,23.5],["Jerky & meat snacks",0,1365,7.8,12.2,13.3,26.9,39.8],["Canned & packaged foods",1,6791,15.0,15.3,22.1,25.7,21.8],["Canned & packaged foods",0,6260,8.2,10.4,18.4,27.5,35.4],["Sauces & condiments",1,8652,12.9,13.2,20.6,26.8,26.5],["Sauces & condiments",0,4351,9.6,11.7,17.1,27.8,33.8],["Coffee",1,1179,12.9,14.0,18.5,27.8,26.8],["Coffee",0,674,9.2,12.5,15.9,30.6,31.9],["Soups & broths",1,4997,12.9,13.2,19.5,28.6,25.8],["Soups & broths",0,1790,7.8,9.2,16.1,28.7,38.3],["Breakfast cereals",1,4051,14.1,14.4,18.4,26.7,26.5],["Breakfast cereals",0,2610,8.3,10.0,15.0,29.1,37.5],["Snack & protein bars",1,3498,11.8,13.3,15.9,28.1,31.0],["Snack & protein bars",0,1258,8.0,11.5,11.6,29.7,39.1],["Herbs & spices",1,3006,13.0,15.2,18.7,28.6,24.5],["Herbs & spices",0,4661,8.0,10.8,15.3,28.6,37.3],["Milk & plant milk",1,2357,9.8,9.9,18.1,26.7,35.5],["Milk & plant milk",0,1306,9.3,11.4,21.7,24.9,32.7],["Cooking & baking",1,14165,11.6,13.0,17.5,27.0,30.9],["Cooking & baking",0,16757,8.0,10.1,14.9,27.4,39.6],["Tea",1,2717,12.2,12.5,17.6,27.1,30.6],["Tea",0,2627,7.9,9.1,12.5,28.4,42.1],["Nut butters",1,1026,11.4,12.5,16.2,28.0,32.0],["Nut butters",0,3283,6.5,9.0,13.0,26.7,44.8]];
+  // simple dot version: share of each kind of food's reviewers who are health-coded shoppers (strongest group, ~30% of everyone), ultra-processed vs less processed
+  const whoEl = document.getElementById("whobars"), WP = v => (v / 50 * 100).toFixed(1) + "%", WAV = 30.4;
+  const pairs = {}; WHO.forEach(([c, u, n, ...v]) => { (pairs[c] = pairs[c] || {})[u ? "u" : "p"] = [v[4], n]; });
+  Object.entries(pairs).filter(([, d]) => d.u && d.p).map(([c, d]) => [c, d.u, d.p, d.u[0] - d.p[0]]).sort((a, b) => a[3] - b[3]).forEach(([c, u, p, g]) => {
+    whoEl.insertAdjacentHTML("beforeend", `<div class="bar"><span>${c} <span class="num" style="color:var(--ink2)">${g > 0 ? "+" : "−"}${Math.abs(g).toFixed(0)} pts</span></span><div class="track" role="img" aria-label="${c}: ${Math.round(u[0])}% of reviewers of ultra-processed products are health-coded shoppers, ${Math.round(p[0])}% for less processed">
+      <span style="position:absolute;top:-.15rem;bottom:-.15rem;left:${WP(WAV)};border-left:1px dashed var(--ink2)"></span>
+      <span style="position:absolute;top:.2rem;width:1rem;height:1rem;border-radius:50%;background:var(--purity);left:calc(${WP(p[0])} - .5rem)" data-tip="${c}, less processed: ${Math.round(p[0])}% of ${p[1].toLocaleString("en")} reviewers are health-coded shoppers"></span>
+      <span style="position:absolute;top:.2rem;width:1rem;height:1rem;border-radius:50%;background:var(--pleasure);left:calc(${WP(u[0])} - .5rem);opacity:.9" data-tip="${c}, ultra-processed: ${Math.round(u[0])}% of ${u[1].toLocaleString("en")} reviewers are health-coded shoppers"></span></div></div>`); });
+  whoEl.insertAdjacentHTML("beforeend", `<div class="legend"><span><span class="dot" style="background:var(--pleasure)"></span>ultra-processed products</span><span><span class="dot" style="background:var(--purity)"></span>less processed products</span><span>dashed: average 30%</span><span>scale: 0 to 50%</span></div>`);
+
+  // shared tooltip for any element with data-tip (dials, who-reviews bars, curves); tap works on touch screens
+  const showTip = ev => { const t = ev.target.closest && ev.target.closest("[data-tip]"); if (!t) { if (ev.type !== "mousemove" || !ev.target.closest("#wchart")) tip.hidden = true; return; }
+    tip.hidden = false; tip.textContent = t.getAttribute("data-tip"); const x = Math.min(ev.pageX + 12, window.scrollX + document.documentElement.clientWidth - tip.offsetWidth - 8); tip.style.left = Math.max(8, x) + "px"; tip.style.top = (ev.pageY + 14) + "px"; };
+  document.addEventListener("mousemove", showTip); document.addEventListener("pointerdown", showTip);
+  document.addEventListener("mouseleave", () => tip.hidden = true);
+
+  // three dials: lexicon score (rounded) of words that each side uses more; [word, score, per 1k in ultra-processed copy, per 1k in less processed copy]
+  const DIAL = {
+    valence: { lo: "← unpleasant", hi: "pleasant →", u: 0.282, p: 0.270, gap: "+0.014", swap: "about 13 neutral words swapped for <i>delicious</i>",
+      lede: "Ultra-processed copy reaches for <b class='pl'>flavor, delicious, perfect, enjoy</b>. Less processed copy says <b class='pu'>organic, ingredient, certified</b>, words the lexicon finds only mildly pleasant.",
+      words: [["flavor",.8,17.8,13.4],["delicious",.9,9.8,8.0],["perfect",1.0,6.2,5.0],["enjoy",.9,4.5,3.5],["easy",.7,4.0,2.5],["meal",.7,4.4,3.0],["organic",.4,6.0,14.6],["ingredient",.6,8.5,11.7],["certified",.6,3.1,5.8],["healthy",.9,2.4,3.8],["pure",.6,0.6,1.8],["best",.9,2.8,3.6]] },
+    arousal: { lo: "← calm", hi: "exciting →", u: -0.098, p: -0.109, gap: "+0.010", swap: "about 16 calm words like <i>simple</i> swapped for neutral ones",
+      lede: "Purity is calm. <b class='pu'>Organic, non-GMO, vegan, simple</b> all sit on the quiet side, and less processed copy uses them two to three times as often. Ultra-processed copy adds a <b class='pl'>bite</b> you'll <b class='pl'>enjoy</b>.",
+      words: [["bite",.6,2.1,1.3],["enjoy",.5,4.5,3.5],["delicious",.3,9.8,8.0],["pack",-.3,5.0,3.5],["box",-.6,2.3,1.1],["easy",-.6,4.0,2.5],["organic",-.3,6.0,14.6],["non-GMO",-.5,2.8,5.5],["vegan",-.5,1.6,3.6],["simple",-.7,1.6,2.9],["healthy",-.4,2.4,3.8],["ingredient",-.3,8.5,11.7]] },
+    dominance: { lo: "← not in control", hi: "in control →", u: 0.049, p: 0.063, gap: "−0.018", swap: "about 23 words like <i>certified</i> swapped for neutral ones",
+      lede: "Less processed copy speaks with authority: <b class='pu'>certified, healthy</b>, the Non-GMO <b class='pu'>Project</b>. Ultra-processed copy talks in <b class='pl'>flavors, snacks and grams</b>, words that sound less in charge, even with a <b class='pl'>perfect</b> and a <b class='pl'>great</b> thrown in.",
+      words: [["perfect",.6,6.2,5.0],["great",.6,6.0,5.0],["real",.4,4.1,2.7],["your",.3,16.0,13.6],["flavor",-.2,17.8,13.4],["snack",-.3,7.5,5.4],["gram",-.5,2.6,1.5],["certified",.6,3.1,5.8],["Project",.7,0.7,1.5],["healthy",.6,2.4,3.8],["all",.4,6.9,8.5],["kosher",-.4,2.8,4.6],["vegan",-.3,1.6,3.6]] } };
+  let dcur = "valence", dz = false;
+  const dW = document.getElementById("dwords"), dP = document.getElementById("dpins"), DX = v => 4 + (v + 1) / 2 * 92;
+  function drawDial() {
+    const D = DIAL[dcur];
+    document.getElementById("dlede").innerHTML = D.lede; document.getElementById("dlo").textContent = D.lo; document.getElementById("dhi").textContent = D.hi;
+    const keep = new Map([...dW.children].map(e => [e.dataset.k, e]));
+    const seen = new Set(); const lanesU = [], lanesP = [], H = dW.clientHeight;
+    D.words.forEach(([w, s, a, b]) => {
+      const k = w.toLowerCase(), up = a > b, r = Math.max(a, b) / Math.max(0.3, Math.min(a, b)); seen.add(k);
+      let e = keep.get(k); if (!e) { e = document.createElement("span"); e.dataset.k = k; e.style.opacity = 0; e.style.left = "50%"; e.style.top = (H / 2) + "px"; dW.appendChild(e); }
+      e.className = "w " + (up ? "u" : "p"); e.textContent = w; e.style.fontSize = (0.78 + Math.min(0.8, Math.log2(r) * 0.42)).toFixed(2) + "rem";
+      e.dataset.tip = `${w}: ${a} per 1,000 scored words in ultra-processed copy, ${b} in less processed copy`;
+      e._up = up; e._w = e.getBoundingClientRect().width / dW.clientWidth * 100 + 1.5; e._x = Math.min(100 - e._w / 2, Math.max(e._w / 2, DX(s))); });
+    keep.forEach((e, k) => { if (!seen.has(k)) { e.style.opacity = 0; setTimeout(() => !DIAL[dcur].words.some(x => x[0].toLowerCase() === k) && e.remove(), 400); } });
+    [...dW.children].filter(e => seen.has(e.dataset.k)).sort((x, y) => parseFloat(y.style.fontSize) - parseFloat(x.style.fontSize)).forEach(e => {
+      const fs = parseFloat(e.style.fontSize) * 16, l = e._x - e._w / 2, r = e._x + e._w / 2; let L = 0, top;
+      do { top = e._up ? 4 + L * 13 : H - fs - 6 - L * 13; L++; }
+      while (L < 40 && lanesU.some(p => l < p.r && r > p.l && top < p.b + 2 && top + fs > p.t - 2));
+      lanesU.push({ l, r, t: top, b: top + fs });
+      requestAnimationFrame(() => { e.style.left = e._x + "%"; e.style.top = Math.max(0, top) + "px"; e.style.opacity = 1; }); });
+    const mid = (D.u + D.p) / 2, span = dz ? 0.05 : 1, PX = v => 4 + (v - (dz ? mid : 0) + span) / (2 * span) * 92;
+    const ticks = dz ? [mid - 0.04, mid - 0.02, mid, mid + 0.02, mid + 0.04].map(v => +v.toFixed(2)) : [-1, -0.5, 0, 0.5, 1];
+    const lab = v => dz ? `${Math.round(v * 1000)} per 1,000 words` : v.toFixed(3), tl = t => dz ? Math.round(t * 1000) : `${t > 0 ? "+" : ""}${t}`;
+    dP.innerHTML = `<div class="pin u" style="left:${PX(D.u)}%"><span>ultra-processed ${lab(D.u)}</span><i></i></div><div class="pin p" style="left:${PX(D.p)}%"><span>less processed ${lab(D.p)}</span><i></i></div>` +
+      ticks.map(t => `<span class="tick" style="left:${PX(t)}%">${tl(t)}</span>`).join("");
+    const gp = Math.round((D.u - D.p) * 1000);
+    document.getElementById("dnote").innerHTML = dz ? `Zoomed in 20 times, scores added up over every 1,000 words: ${Math.round(D.u * 1000)} against ${Math.round(D.p * 1000)}, a gap of ${gp > 0 ? "+" : "−"}${Math.abs(gp)} points. That is ${D.swap} in every 1,000 words of copy (${D.gap} per word within the same food category). Real, tested against thousands of shuffles, and small: a random ultra-processed listing out-scores a less processed one from the same category only ${{ valence: "54%", arousal: "53%", dominance: "44%" }[dcur]} of the time.` : `The two averages sit almost on top of each other: a gap of ${D.gap} per word within the same food category. It is real (tested against thousands of shuffles) but small: a random ultra-processed listing out-scores a less processed one from the same category ${{ valence: "54%", arousal: "53%", dominance: "44%" }[dcur]} of the time.`;
+  }
+  document.querySelectorAll(".dtabs button").forEach(b => b.addEventListener("click", () => { dcur = b.dataset.d;
+    document.querySelectorAll(".dtabs button").forEach(x => x.setAttribute("aria-selected", x === b)); drawDial(); }));
+  drawDial(); window.addEventListener("resize", () => setTimeout(drawDial, 160));
+
+  // one curve: health-coded / hobby share (log x) vs share all ultra-processed; rows = [mean share %, observed %, expected %, ci, n]; first row = none
+  const CUR = {"health":[[0.0,57.1,47.3,0.8,14659],[3.45,54.5,45.2,1.5,4374],[6.24,48.4,45.3,1.5,4373],[8.72,48.1,45.7,1.5,4373],[11.31,46.9,45.8,1.5,4373],[14.18,44.8,45.4,1.5,4373],[17.67,44.5,45.5,1.5,4373],[21.87,40.2,45.6,1.5,4373],[28.66,35.0,45.1,1.4,4373],[38.18,33.2,45.6,1.4,4373],[59.76,26.3,45.4,1.3,4374]],"hobby":[[0.0,41.9,46.1,0.6,27369],[2.33,36.0,42.1,1.7,3103],[4.21,42.3,44.4,1.7,3102],[5.84,44.0,45.2,1.7,3102],[7.59,47.5,45.6,1.8,3102],[9.6,48.7,46.1,1.8,3102],[12.02,49.9,46.5,1.8,3102],[15.17,53.2,46.7,1.8,3102],[19.12,53.2,46.7,1.8,3102],[26.68,56.6,47.0,1.7,3102],[48.78,63.2,47.1,1.7,3103]]};
+  function drawCurves() {
+    const box = document.getElementById("curves"); box.innerHTML = "";
+    [["health", "Health-coded share", "--purity"], ["hobby", "Hobby share", "--pleasure"]].forEach(([key, title, col], pi) => {
+      const wrap = document.createElement("div"); wrap.innerHTML = `<h4 style="color:var(${col})">${title} of non-food reviews</h4>`; box.appendChild(wrap);
+      const Wd = Math.max(260, wrap.clientWidth - 8), H = Math.round(Math.min(300, Wd * 0.8)), m = { l: 38, r: 10, t: 8, b: 34 }, x0 = m.l + 40;
+      const X = v => v === 0 ? m.l + 14 : x0 + (Math.log10(v) - 0) / 2 * (Wd - x0 - m.r), Y = v => m.t + (68 - v) / (68 - 22) * (H - m.t - m.b);
+      const svg = document.createElementNS(NS, "svg"); svg.setAttribute("viewBox", `0 0 ${Wd} ${H}`); svg.setAttribute("width", Wd); svg.setAttribute("height", H);
+      svg.setAttribute("role", "img"); svg.setAttribute("aria-label", `${title}: all ultra-processed ${CUR[key][0][1]}% with none, ${CUR[key][10][1]}% in the top tenth; expected about 45%.`);
+      const add = (t, a, txt) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (txt != null) e.textContent = txt; svg.appendChild(e); return e; };
+      [30, 40, 50, 60].forEach(v => { add("line", { x1: m.l, x2: Wd - m.r, y1: Y(v), y2: Y(v), stroke: css("--faint") }); add("text", { x: m.l - 6, y: Y(v) + 4, "text-anchor": "end" }, v + "%"); });
+      [2, 5, 10, 20, 50].forEach(v => add("text", { x: X(v), y: H - m.b + 15, "text-anchor": "middle" }, v + "%"));
+      add("text", { x: X(0), y: H - m.b + 15, "text-anchor": "middle" }, "none");
+      add("line", { x1: x0 - 14, x2: x0 - 14, y1: m.t, y2: H - m.b, stroke: css("--rule"), "stroke-dasharray": "2 3" });
+      const R = CUR[key], pts = R.slice(1), path = f => pts.map((r, i) => `${i ? "L" : "M"}${X(r[0]).toFixed(1)},${Y(f(r)).toFixed(1)}`).join("");
+      add("path", { d: path(r => r[2]), fill: "none", stroke: css("--ink2"), "stroke-width": 1.5, "stroke-dasharray": "5 4" });
+      add("circle", { cx: X(0), cy: Y(R[0][2]), r: 3, fill: css("--ink2") });
+      add("path", { d: path(r => r[1]), fill: "none", stroke: css(col), "stroke-width": 2 });
+      R.forEach(r => { add("line", { x1: X(r[0]), x2: X(r[0]), y1: Y(r[1] - r[3]), y2: Y(r[1] + r[3]), stroke: css(col), "stroke-width": 1.2 });
+        add("circle", { cx: X(r[0]), cy: Y(r[1]), r: 4.5, fill: css(col), stroke: css("--panel"), "stroke-width": 1.5 });
+        add("circle", { cx: X(r[0]), cy: Y(r[1]), r: 11, fill: "transparent", "data-tip": `${r[0] ? "average share " + r[0].toFixed(1) + "%" : "no such reviews"} (${r[4].toLocaleString("en")} people): ${r[1]}% all ultra-processed, expected ${r[2]}%` }); });
+      if (pi === 0) { add("line", { x1: Wd - m.r - 120, x2: Wd - m.r - 100, y1: m.t + 10, y2: m.t + 10, stroke: css("--ink2"), "stroke-dasharray": "5 4", "stroke-width": 1.5 });
+        add("text", { x: Wd - m.r - 95, y: m.t + 14 }, "expected"); }
+      add("text", { x: (x0 + Wd) / 2, y: H - 4, "text-anchor": "middle" }, "share of non-food reviews (log)");
+      wrap.appendChild(svg); });
+  }
+  drawCurves(); window.addEventListener("resize", () => setTimeout(drawCurves, 160));
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", drawCurves);
+  new MutationObserver(drawCurves).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 
   // rich-get-richer chart (log-log)
   const RICH = { pts: [[1.0, 0.431], [2.37, 0.926], [4.0, 1.444], [5.83, 1.905], [9.69, 3.033], [15.21, 4.429], [22.93, 6.362], [35.62, 8.987], [54.56, 12.747], [83.17, 20.262], [126.3, 29.046], [191.99, 43.021], [294.31, 72.817], [449.99, 113.772], [677.86, 161.869], [1034.14, 192.556], [1591.39, 430.571], [2487.85, 606.879]], slope: 0.925, icpt: -0.988 };
