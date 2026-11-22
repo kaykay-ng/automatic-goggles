@@ -1,0 +1,20 @@
+
+== StopEatingSeedOils: 224,414 scored comments; mean percentile 0.526 (0.5 + tie effects)
+  by length (words): 1-5 0.489, 6-15 0.516, 16-40 0.534, 41-100 0.546, 100+ 0.557
+  paper_link           share  0.7% | with 0.535 vs without 0.538 -> -0.003  (pre2024: +0.018; from2024: -0.013)
+  other_link           share  3.4% | with 0.529 vs without 0.538 -> -0.010  (pre2024: -0.008; from2024: -0.012)
+  study_words          share  5.8% | with 0.504 vs without 0.540 -> -0.036  (pre2024: +0.002; from2024: -0.045)
+  hedging              share 10.0% | with 0.543 vs without 0.538 -> +0.005  (pre2024: +0.006; from2024: +0.004)
+  distrust_words       share  3.0% | with 0.566 vs without 0.537 -> +0.028  (pre2024: +0.050; from2024: +0.026)
+  seed_oils_bad_words  share  5.4% | with 0.558 vs without 0.537 -> +0.021  (pre2024: +0.030; from2024: +0.019)
+  question             share 17.8% | with 0.501 vs without 0.546 -> -0.045  (pre2024: -0.048; from2024: -0.045)
+
+== ScientificNutrition: 131,816 scored comments; mean percentile 0.527 (0.5 + tie effects)
+  by length (words): 1-5 0.468, 6-15 0.499, 16-40 0.519, 41-100 0.538, 100+ 0.563
+  paper_link           share  6.7% | with 0.582 vs without 0.525 -> +0.058  (pre2024: +0.045; from2024: +0.080)
+  other_link           share  7.1% | with 0.537 vs without 0.528 -> +0.009  (pre2024: +0.006; from2024: +0.015)
+  study_words          share 27.1% | with 0.541 vs without 0.524 -> +0.017  (pre2024: +0.017; from2024: +0.018)
+  hedging              share 17.4% | with 0.550 vs without 0.524 -> +0.026  (pre2024: +0.022; from2024: +0.031)
+  distrust_words       share  2.4% | with 0.538 vs without 0.528 -> +0.010  (pre2024: +0.011; from2024: +0.009)
+  seed_oils_bad_words  share  2.6% | with 0.538 vs without 0.528 -> +0.010  (pre2024: +0.004; from2024: +0.019)
+  question             share 29.2% | with 0.510 vs without 0.536 -> -0.026  (pre2024: -0.025; from2024: -0.028)

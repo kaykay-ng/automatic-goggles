@@ -1,0 +1,80 @@
+<title>Niche Network</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
+<style>
+/* Layout: two views of the same backbone network, a timeline and an outcome overlay. Test page, not the paper. */
+:root{--bg:#f6f7f9;--card:#ffffff;--fg:#1b1f24;--mut:#5a6470;--line:#dde1e7;--edge:#c3cad3;--old:#3d5a73;--new:#c4521a;--lo:#e6eaef;--hi:#c4521a;--head:"Space Grotesk","Inter",system-ui,sans-serif;--body:"Inter",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14171b;--card:#1b1f25;--fg:#e8ebef;--mut:#99a3af;--line:#2d333b;--edge:#363e48;--old:#7fa4c4;--new:#f08a4b;--lo:#2a313a;--hi:#f08a4b;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#14171b;--card:#1b1f25;--fg:#e8ebef;--mut:#99a3af;--line:#2d333b;--edge:#363e48;--old:#7fa4c4;--new:#f08a4b;--lo:#2a313a;--hi:#f08a4b;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.55;padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:920px;margin:0 auto;display:flex;flex-direction:column;gap:26px}h1{font:600 28px/1.15 var(--head);margin:0 0 6px;text-wrap:balance}h2{font:600 19px/1.3 var(--head);margin:0 0 4px;text-wrap:balance}p{margin:0}
+.lede,.sub,.note{color:var(--mut);max-width:72ch}.note{font-size:13.5px}.note b{color:var(--fg);font-weight:600}
+.fig{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:20px;display:flex;flex-direction:column;gap:14px}
+.ctl{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;font-size:13px;color:var(--mut)}.ctl label{display:inline-flex;align-items:center;gap:8px}
+select{font:500 13px var(--body);padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--fg)}
+button.play{font:500 13px var(--body);padding:7px 14px;border:1px solid var(--line);border-radius:6px;background:var(--fg);color:var(--bg);cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--new);outline-offset:2px}
+input[type=range]{flex:1;min-width:180px;accent-color:var(--new)}.month{font:600 15px var(--head);color:var(--fg);min-width:78px;font-variant-numeric:tabular-nums}
+.legend{display:flex;flex-wrap:wrap;gap:5px 14px;font-size:12.5px;color:var(--mut)}.legend span{display:inline-flex;align-items:center;gap:6px;font-variant-numeric:tabular-nums}.legend i{width:11px;height:11px;border-radius:50%;display:inline-block}
+.grad{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--mut)}.grad div{width:160px;height:10px;border-radius:5px;background:linear-gradient(90deg,var(--lo),var(--hi))}
+svg{width:100%;height:auto;display:block}.cl{font:600 12px var(--body);fill:var(--fg);paint-order:stroke;stroke:var(--card);stroke-width:3.5px;stroke-linejoin:round;pointer-events:none}
+.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:700px}th,td{padding:7px 9px;text-align:left;border-bottom:1px solid var(--line)}th{font-size:12px;color:var(--mut);font-weight:600}td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}tr.row:hover{background:color-mix(in srgb,var(--fg) 6%,transparent)}.chip{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:7px;vertical-align:-1px}.up{color:var(--new);font-weight:600}
+.tip{position:fixed;z-index:20;pointer-events:none;background:var(--fg);color:var(--bg);font-size:12.5px;padding:7px 10px;border-radius:5px;max-width:280px;line-height:1.4}.tip[hidden]{display:none}
+@media (max-width:620px){h1{font-size:24px}.fig{padding:16px}}
+</style>
+<div class="wrap">
+ <header><h1>When the niches formed, and where hostility sits</h1>
+ <p class="lede">Test figures, not yet in the paper. Both maps are the backbone of topic similarity among r/StopEatingSeedOils commenters: each dot is a commenter, close dots talk about similar things. Same layout in both, so you can compare them.</p></header>
+ <section class="fig"><div><h2>Figure A. The niches filling in</h2><p class="sub">Drag the slider or press play. A dot appears the month the person first commented. Faint dots are people who have not appeared yet.</p></div>
+ <div class="ctl"><button class="play" id="play" type="button">Play</button><input type="range" id="slider" min="0" max="0" value="0" aria-label="Month"><span class="month" id="month"></span></div>
+ <div class="legend" id="legA"></div><svg id="mapA" viewBox="0 0 1000 760" role="img" aria-label="Network of commenters appearing month by month, coloured by community"></svg><p class="note" id="noteA"></p></section>
+ <section class="fig"><div><h2>Figure B. Where hostility and downvotes sit</h2><p class="sub">The same map, coloured by an outcome of each person's comments.</p></div>
+ <div class="ctl"><label>Colour by <select id="what"><option value="h">Share of hostile comments</option><option value="v">Share of downvoted comments</option></select></label><label>Period <select id="per"><option value="">All time</option><option value="0">Before 2024</option><option value="1">From 2024</option></select></label></div>
+ <div class="grad" id="gradB"></div><svg id="mapB" viewBox="0 0 1000 760" role="img" aria-label="Network of commenters coloured by hostile or downvoted share"></svg><p class="note" id="noteB"></p>
+ <p class="note" id="noteC"></p></section>
+ <section class="fig"><h2>What to be careful about</h2><p class="note">Hostile means a GoEmotions score of 0.5 or more on anger, annoyance, disapproval or disgust, an unchecked classifier, and mostly disapproval. Downvoted means a score of 0 or lower. Each person has only 10 to 30 comments in the topic model, so a person's own share is shrunk toward the average (as if they had 15 extra average comments) and a single dot says little; read the colour of a whole area. People who first commented before 2022 appear at the start of the slider. The 788 heavy commenters with no link are not drawn. The niches were found from everyone's whole history.</p></section>
+</div><div class="tip" id="tip" hidden></div>
+<script>
+const D=__DATA__;const NS='http://www.w3.org/2000/svg';
+const LAB=['Condiments, snacks, bread','Olive oil and other oils','Politics (RFK, Trump)','Eggs and raw milk','Bread, butter, nuts','Organic, protein, soy','Ingredient labels, ice cream','Sugar, carbs, weight','Vaccines, fluoride','LDL and cholesterol','Skin and sun','Infant formula','Coffee, plastics, sushi','Tallow and fries','MSG','Vitamins, supplements'];
+const CL=['#d55e00','#0072b2','#009e73','#cc79a7','#e69f00','#56b4e9','#7a5195','#8c6d31','#2a9d8f','#b5179e'],CD=['#f08a4b','#4aa3e0','#2fc9a0','#e59ac4','#f0b429','#7cc4ee','#a98bd6','#c9a45c','#5fd0c2','#e060c8'];
+const dark=()=>document.documentElement.dataset.theme==='dark'||(document.documentElement.dataset.theme!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches);
+const colOf=c=>c<10?(dark()?CD:CL)[c]:(dark()?'#6f7d8d':'#9aaabb');
+const tip=document.getElementById('tip');const show=(e,t)=>{tip.textContent=t;tip.hidden=false;tip.style.left=Math.max(8,Math.min(e.clientX+12,innerWidth-300))+'px';tip.style.top=(e.clientY+14)+'px'};const hide=()=>{tip.hidden=true};
+const el=(t,a,p)=>{const x=document.createElementNS(NS,t);for(const k in a)x.setAttribute(k,a[k]);if(p)p.appendChild(x);return x};const fmt=n=>n.toLocaleString('en-US');
+const X=v=>30+v*940,Y=v=>30+v*700,rad=n=>1.6+.42*Math.sqrt(n.d);
+const SH=D.short;
+// ---------- Figure A: timeline
+const A={c:[],svg:document.getElementById('mapA')};let m=0,timer=null;
+function buildA(){const svg=A.svg;svg.replaceChildren();A.edge=el('path',{fill:'none',stroke:'var(--edge)','stroke-width':.6,opacity:.6},svg);A.c=D.nodes.map(n=>{const c=el('circle',{cx:X(n.x),cy:Y(n.y),r:rad(n),fill:colOf(n.c),stroke:'var(--card)','stroke-width':.5},svg);c.addEventListener('mousemove',e=>show(e,LAB[n.c]+'\n'+(n.o?'Long-time commenter':'Newcomer')+'\nFirst commented: '+(n.fm===0?'2021 or earlier':D.months[n.fm])));c.addEventListener('mouseleave',hide);return c});
+ A.lab=[];for(let c=0;c<10;c++){const mm=D.nodes.filter(n=>n.c===c);A.lab.push(el('text',{x:X(mm.reduce((s,n)=>s+n.x,0)/mm.length),y:Y(mm.reduce((s,n)=>s+n.y,0)/mm.length),'text-anchor':'middle',class:'cl'},svg));A.lab[c].textContent=(c+1)+' '+SH[c]}}
+function stepA(){document.getElementById('month').textContent=m===0?'to '+D.months[0]:D.months[m];const here=D.nodes.map(n=>n.fm<=m);
+ D.nodes.forEach((n,i)=>{A.c[i].setAttribute('fill-opacity',here[i]?.92:.07)});
+ let d='';D.edges.forEach(([a,b])=>{if(here[a]&&here[b])d+='M'+X(D.nodes[a].x).toFixed(1)+' '+Y(D.nodes[a].y).toFixed(1)+'L'+X(D.nodes[b].x).toFixed(1)+' '+Y(D.nodes[b].y).toFixed(1)});A.edge.setAttribute('d',d);
+ const cnt=Array(16).fill(0),tot=Array(16).fill(0);D.nodes.forEach((n,i)=>{tot[n.c]++;if(here[i])cnt[n.c]++});
+ const L=document.getElementById('legA');L.replaceChildren();for(let c=0;c<10;c++){const s=document.createElement('span'),i=document.createElement('i');i.style.background=colOf(c);s.append(i,(c+1)+' '+SH[c]+': '+cnt[c]+' of '+tot[c]);L.appendChild(s)}
+ A.lab.forEach((t,c)=>t.setAttribute('opacity',cnt[c]>=tot[c]*.05?1:0));
+ const all=here.filter(Boolean).length;document.getElementById('noteA').innerHTML='By <b>'+(m===0?'the start of 2022':D.months[m])+'</b>, <b>'+fmt(all)+'</b> of the '+fmt(D.nodes.length)+' people in the map have appeared.'+noteFor()}
+function noteFor(){const at=mo=>{const i=D.months.indexOf(mo);const cnt=Array(16).fill(0);D.nodes.forEach(n=>{if(n.fm<=i)cnt[n.c]++});return cnt};const a=at('2023-12'),b=at('2024-12'),tot=Array(16).fill(0);D.nodes.forEach(n=>tot[n.c]++);
+ return ' At the end of 2023 only <b>'+a[2]+'</b> of the <b>'+tot[2]+'</b> people in the politics niche had appeared, against <b>'+a[3]+'</b> of <b>'+tot[3]+'</b> in eggs and raw milk. By the end of 2024 it was <b>'+b[2]+'</b> and <b>'+b[3]+'</b>.'}
+function playA(){const btn=document.getElementById('play');if(timer){clearInterval(timer);timer=null;btn.textContent='Play';return}if(m>=D.months.length-1)m=0;btn.textContent='Pause';timer=setInterval(()=>{if(m>=D.months.length-1){clearInterval(timer);timer=null;btn.textContent='Play';return}m++;document.getElementById('slider').value=m;stepA()},280)}
+// ---------- Figure B: outcomes
+const B={svg:document.getElementById('mapB')};let hl=null;
+const hex=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16));const mix=(a,b,t)=>'rgb('+a.map((v,i)=>Math.round(v+(b[i]-v)*t)).join(',')+')';
+function scale(){const lo=hex(dark()?'#2a313a':'#e6eaef'),hi=hex(dark()?'#f08a4b':'#c4521a');return(v,max)=>mix(lo,hi,Math.max(0,Math.min(1,v/max)))}
+function drawB(){const svg=B.svg;svg.replaceChildren();const what=document.getElementById('what').value,per=document.getElementById('per').value;const sc=scale(),max=what==='h'?14:22,grey=dark()?'#444b55':'#cfd5dc';
+ let d='';D.edges.forEach(([a,b])=>{d+='M'+X(D.nodes[a].x).toFixed(1)+' '+Y(D.nodes[a].y).toFixed(1)+'L'+X(D.nodes[b].x).toFixed(1)+' '+Y(D.nodes[b].y).toFixed(1)});el('path',{d,fill:'none',stroke:'var(--edge)','stroke-width':.6,opacity:.55},svg);
+ B.c=D.nodes.map(n=>{const v=n[what+per];const fill=(v===null||v===undefined)?grey:sc(v,max);
+  const c=el('circle',{cx:X(n.x),cy:Y(n.y),r:rad(n),fill,'fill-opacity':.95,stroke:'var(--card)','stroke-width':.5,'data-c':n.c},svg);
+  c.addEventListener('mousemove',e=>show(e,LAB[n.c]+'\n'+(what==='h'?'Hostile':'Downvoted')+' share (shrunk): '+(v===null||v===undefined?'no comments in this period':v+'%')+'\n'+n.d+' comments in the topic model'));c.addEventListener('mouseleave',hide);return c});
+ for(let c=0;c<10;c++){const mm=D.nodes.filter(n=>n.c===c);const t=el('text',{x:X(mm.reduce((s,n)=>s+n.x,0)/mm.length),y:Y(mm.reduce((s,n)=>s+n.y,0)/mm.length),'text-anchor':'middle',class:'cl','data-c':c},svg);t.textContent=(c+1)+' '+SH[c]}
+ const g=document.getElementById('gradB');g.replaceChildren();const l=document.createElement('span');l.textContent='0%';const bar=document.createElement('div');const r=document.createElement('span');r.textContent=max+'% or more';g.append(l,bar,r);const q=document.createElement('span');q.textContent='   Grey: no comments in this period';g.appendChild(q);
+ hi(hl)}
+function hi(c){hl=c;document.querySelectorAll('#mapB circle').forEach(n=>{n.style.opacity=c===null||Number(n.getAttribute('data-c'))===c?'':'0.12'});document.querySelectorAll('#mapB text.cl').forEach(n=>{n.style.opacity=c===null||Number(n.getAttribute('data-c'))===c?'':'0'})}
+function notes(){const sigU=(k)=>D.comms.filter(r=>{const ci=r[k+'ci'];return ci&&ci[0]!==null&&ci[0]>0});const hs=sigU('h'),vs=sigU('v'),nm=a=>a.filter(r=>r.c>=0).map(r=>'<b>'+r.label+'</b>').join('; ');
+ const ok=D.comms.filter(r=>r.c>=0&&r.h0!==null).sort((a,b)=>b.h0-a.h0);
+ document.getElementById('noteB').innerHTML='Overall the hostile share rose from <b>'+D.overall.h0+'%</b> to <b>'+D.overall.h1+'%</b> and the downvoted share from <b>'+D.overall.v0+'%</b> to <b>'+D.overall.v1+'%</b>.';
+ document.getElementById('noteC').innerHTML='<b>Where hostility clearly rose</b> (95% interval above zero): '+nm(hs)+(hs.some(r=>r.c===-1)?', and the general core of heavy commenters':'')+'. In every other niche the interval includes zero, so the data cannot tell a change from no change. That includes <b>'+ok[0].label+'</b> and <b>'+ok[1].label+'</b>, the two most hostile niches before 2024 ('+ok[0].h0+'% and '+ok[1].h0+'%): their estimates fell slightly, but few comments before 2024 ('+ok[0].n0+' and '+ok[1].n0+') make the interval wide. <b>Downvotes</b> clearly rose in '+nm(vs)+'. Niches with fewer than 30 comments in a period are not shown for it.'}
+document.getElementById('slider').max=D.months.length-1;document.getElementById('slider').addEventListener('input',e=>{m=Number(e.target.value);stepA()});document.getElementById('play').addEventListener('click',playA);
+document.getElementById('what').addEventListener('change',drawB);document.getElementById('per').addEventListener('change',drawB);
+function all(){buildA();stepA();drawB();notes()}all();matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{all()});
+</script>

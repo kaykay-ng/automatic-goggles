@@ -1,0 +1,17 @@
+period=pre2024 authors=1,184 camp sizes (single-camp) {'StopEatingSeedOils': 1116}
+subreddits kept=764 edges=113,051 density=0.3879
+Louvain communities=4 modularity=0.147
+
+community 0: 220 subreddits, mean lean +1.00
+  top by PageRank: nottheonion (1.0), UpliftingNews (1.0), SandersForPresident (1.0), bestof (1.0), gifs (1.0), OutOfTheLoop (1.0), IAmA (1.0), PublicFreakout (1.0), dataisbeautiful (1.0), space (1.0), gadgets (1.0), GetMotivated (1.0)
+
+community 1: 210 subreddits, mean lean +1.00
+  top by PageRank: LifeProTips (1.0), TrueOffMyChest (1.0), interestingasfuck (1.0), mildlyinteresting (1.0), aww (1.0), food (1.0), AskMen (1.0), Frugal (1.0), science (1.0), unpopularopinion (1.0), BuyItForLife (1.0), Cooking (1.0)
+
+community 2: 172 subreddits, mean lean +1.00
+  top by PageRank: blackmagicfuckery (1.0), oddlysatisfying (1.0), Whatcouldgowrong (1.0), Wellthatsucks (1.0), YouShouldKnow (1.0), technicallythetruth (1.0), Unexpected (1.0), oddlyterrifying (1.0), NatureIsFuckingLit (1.0), ABoringDystopia (1.0), ATBGE (1.0), woahdude (1.0)
+
+community 3: 162 subreddits, mean lean +1.00
+  top by PageRank: MadeMeSmile (1.0), nextfuckinglevel (1.0), therewasanattempt (1.0), WhitePeopleTwitter (1.0), EverythingScience (1.0), meirl (1.0), Damnthatsinteresting (1.0), libertarianmeme (1.0), MapPorn (1.0), entertainment (1.0), Funnymemes (1.0), Weird (1.0)
+
+bridges (betweenness): ShittyLifeProTips c2, reactiongifs c2, fffffffuuuuuuuuuuuu c0, NetflixBestOf c0, GifRecipes c2, softwaregore c2, AskEngineers c0, SubredditDrama c0, Tools c3, MovieDetails c2

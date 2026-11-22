@@ -1,0 +1,146 @@
+[
+ {
+  "community": 0,
+  "size": 712,
+  "long_time_pct": 39.9,
+  "docs_per_user": 34.2,
+  "top_topics": [
+   17,
+   4,
+   12,
+   9
+  ]
+ },
+ {
+  "community": 1,
+  "size": 317,
+  "long_time_pct": 25.9,
+  "docs_per_user": 32.4,
+  "top_topics": [
+   43,
+   20,
+   10,
+   46
+  ]
+ },
+ {
+  "community": 2,
+  "size": 253,
+  "long_time_pct": 60.5,
+  "docs_per_user": 88.0,
+  "top_topics": [
+   0,
+   3,
+   1,
+   19
+  ]
+ },
+ {
+  "community": 3,
+  "size": 247,
+  "long_time_pct": 26.3,
+  "docs_per_user": 39.9,
+  "top_topics": [
+   2,
+   16,
+   53,
+   52
+  ]
+ },
+ {
+  "community": 4,
+  "size": 209,
+  "long_time_pct": 46.4,
+  "docs_per_user": 46.5,
+  "top_topics": [
+   1,
+   24,
+   59,
+   36
+  ]
+ },
+ {
+  "community": 5,
+  "size": 199,
+  "long_time_pct": 36.7,
+  "docs_per_user": 35.4,
+  "top_topics": [
+   5,
+   11,
+   30,
+   55
+  ]
+ },
+ {
+  "community": 6,
+  "size": 152,
+  "long_time_pct": 36.8,
+  "docs_per_user": 27.5,
+  "top_topics": [
+   25,
+   57,
+   35,
+   121
+  ]
+ },
+ {
+  "community": 7,
+  "size": 139,
+  "long_time_pct": 47.5,
+  "docs_per_user": 32.4,
+  "top_topics": [
+   15,
+   27,
+   66,
+   47
+  ]
+ },
+ {
+  "community": 8,
+  "size": 121,
+  "long_time_pct": 38.0,
+  "docs_per_user": 43.5,
+  "top_topics": [
+   8,
+   22,
+   99,
+   60
+  ]
+ },
+ {
+  "community": 9,
+  "size": 102,
+  "long_time_pct": 49.0,
+  "docs_per_user": 30.3,
+  "top_topics": [
+   3,
+   18,
+   91,
+   5
+  ]
+ },
+ {
+  "community": 10,
+  "size": 97,
+  "long_time_pct": 44.3,
+  "docs_per_user": 39.0,
+  "top_topics": [
+   13,
+   123,
+   7,
+   27
+  ]
+ },
+ {
+  "community": 11,
+  "size": 70,
+  "long_time_pct": 37.1,
+  "docs_per_user": 34.8,
+  "top_topics": [
+   32,
+   88,
+   42,
+   8
+  ]
+ }
+]

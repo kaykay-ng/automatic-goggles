@@ -1,0 +1,12 @@
+
+== scholarly: 1,643 nodes, 6,244 edges, mean degree 7.6
+  observed: modularity 0.635 (44 communities), side assortativity 0.306
+  NULL 1 rewiring (50 reps): modularity 0.327 +/- 0.002 -> z = 151.1, observed - null = +0.308
+                              side assortativity 0.000 +/- 0.010 -> z = 30.0
+  NULL 2 label shuffle (200 reps): side assortativity -0.001 +/- 0.011 -> z = 28.5
+
+== reddit: 1,969 nodes, 167,668 edges, mean degree 170.3
+  observed: modularity 0.388 (20 communities), side assortativity 0.141
+  NULL 1 rewiring (50 reps): modularity 0.217 +/- 0.001 -> z = 240.8, observed - null = +0.171
+                              side assortativity -0.004 +/- 0.002 -> z = 82.0
+  NULL 2 label shuffle (200 reps): side assortativity -0.001 +/- 0.002 -> z = 82.5

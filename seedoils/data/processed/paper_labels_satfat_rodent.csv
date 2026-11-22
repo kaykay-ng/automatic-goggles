@@ -1,0 +1,176 @@
+openalex_id,relevance,direction,outcome,population,design,main_claim,confidence
+https://openalex.org/W1534180127,yes,benefit,hard,humans,rct,Soybean-oil-rich cholesterol-lowering diet reduced coronary mortality in Finnish mental hospitals,medium
+https://openalex.org/W1575865313,yes,benefit,hard,humans,narrative_review,Replacing animal fats with non-hydrogenated vegetable oils markedly lowers CHD; n-6:n-3 ratio unhelpful,high
+https://openalex.org/W1600958960,partly,benefit,hard,humans,meta_trials,Reducing saturated fat cuts cardiovascular events; PUFA replacement appears beneficial,high
+https://openalex.org/W1749005812,yes,benefit,hard,humans,cohort,Replacing saturated fat with PUFA or quality carbohydrate lowers CHD risk,high
+https://openalex.org/W1808498245,yes,benefit,intermediate,humans,narrative_review,PUFA lower LDL because liver oxidises them to ketones rather than VLDL,medium
+https://openalex.org/W1848464647,no,NA,intermediate,humans,rct,Comprehensive lifestyle change regressed coronary atherosclerosis within one year,high
+https://openalex.org/W1888412742,yes,no_effect,hard,humans,meta_observational,Evidence does not support that frying with vegetable oils raises CVD risk,medium
+https://openalex.org/W1958401950,no,NA,intermediate,humans,meta_trials,Lower total fat intake leads to small reductions in body weight,high
+https://openalex.org/W1963785816,no,NA,intermediate,humans,rct,High saturated fat increases small dense LDL and apoCIII in men,high
+https://openalex.org/W1963842597,yes,benefit,hard,humans,rct,Diet high in unsaturated fat reduced atherosclerotic complications in veterans,medium
+https://openalex.org/W1970126899,yes,benefit,intermediate,humans,rct,Saturated fat meal impairs HDL anti-inflammatory function; PUFA meal improves it,high
+https://openalex.org/W1983531379,partly,no_effect,hard,humans,rct,Advice to raise P:S ratio did not change mortality; fish advice did,high
+https://openalex.org/W1991289303,yes,benefit,hard,humans,rct,Linoleic-rich diet reduced atherosclerotic events; total mortality similar,high
+https://openalex.org/W1996530838,no,NA,intermediate,humans,rct,Weight-loss diets regressed carotid wall volume regardless of diet type,high
+https://openalex.org/W2012136540,yes,harm,hard,humans,cohort,High n-6 relative to marine n-3 intake associated with higher breast cancer risk,medium
+https://openalex.org/W2014432068,no,NA,mechanistic,cells,in_vitro,Industrial trans fatty acid isomers induce endothelial inflammation and reduce NO,high
+https://openalex.org/W2030042443,partly,harm,hard,humans,rct,"ALA-rich Mediterranean diet, lower in linoleic acid, reduced coronary events and death",medium
+https://openalex.org/W2032408973,no,NA,hard,humans,narrative_review,Evidence of low ischaemic heart disease among Inuit is weak,high
+https://openalex.org/W2036578487,no,NA,hard,humans,cohort,Erythrocyte trans fatty acids associated with higher CHD risk in women,high
+https://openalex.org/W2042176241,yes,harm,hard,mixed,narrative_review,Low saturated and low omega-6 intake with omega-3 best for CVD and cancer,high
+https://openalex.org/W2047709447,yes,harm,hard,humans,rct,Corn oil did not help ischaemic heart disease patients and tended to worsen outcomes,medium
+https://openalex.org/W2049646863,yes,benefit,hard,humans,rct,Serum-cholesterol-lowering PUFA diet substantially reduced CHD incidence,high
+https://openalex.org/W205036531,no,NA,intermediate,humans,narrative_review,Appraisal of limitations of the STARS lipid-lowering diet regression trial,low
+https://openalex.org/W2064981684,no,NA,mechanistic,mixed,narrative_review,Weighs benefits of n-3 PUFA against possible pro-oxidant carcinogenic effects,medium
+https://openalex.org/W2074115218,yes,harm,hard,humans,cohort,High n-6 intake with low marine n-3 associated with higher breast cancer risk,high
+https://openalex.org/W2075826151,no,NA,hard,humans,cohort,"Serum cholesterol predicts mortality under age 50, not after",high
+https://openalex.org/W2083666530,partly,benefit,mechanistic,cells,in_vitro,Saturated but not unsaturated fatty acids induce COX-2 via TLR4,medium
+https://openalex.org/W2090103746,partly,harm,hard,humans,cohort,Higher omega-6 intake linked to premenopausal breast cancer; omega-3 protective in obese,high
+https://openalex.org/W2091533321,yes,benefit,hard,humans,narrative_review,Trials show replacing saturated fat with polyunsaturated fat prevents coronary events,high
+https://openalex.org/W2094780060,no,NA,intermediate,humans,narrative_review,Avocados are nutrient dense and may support cardiovascular health,high
+https://openalex.org/W2094981066,no,NA,hard,humans,rct,Mediterranean diet protective against recurrence after myocardial infarction,high
+https://openalex.org/W2095073323,no,NA,hard,humans,rct,Dietary advice did not reduce mortality in angina; fish advice increased cardiac death,high
+https://openalex.org/W2097226936,yes,benefit,hard,humans,meta_trials,Replacing saturated fat with PUFA reduces CHD events in trials,high
+https://openalex.org/W2097301645,no,NA,hard,humans,meta_observational,Saturated fat intake not significantly associated with CHD or CVD,high
+https://openalex.org/W2101683206,no,NA,hard,humans,rct,Long-term follow-up of dietary advice after MI showed no survival benefit,medium
+https://openalex.org/W2102323857,yes,no_effect,hard,humans,meta_observational,Evidence does not clearly support high PUFA and low saturated fat guidelines,high
+https://openalex.org/W2102578839,yes,benefit,hard,humans,narrative_review,Replacing saturated with unsaturated fat more effective for CHD than lowering total fat,high
+https://openalex.org/W2103099107,no,NA,intermediate,humans,rct,Dietary flaxseed strongly lowered blood pressure in hypertensive PAD patients,high
+https://openalex.org/W2103904025,no,NA,other,humans,other,Interviewer-administered food frequency questionnaire is valid and reproducible,high
+https://openalex.org/W2108408292,no,NA,intermediate,humans,rct,Avocado diet lowered LDL particle number beyond its fatty acid profile,high
+https://openalex.org/W2108791220,yes,harm,hard,humans,rct,Replacing saturated fat with linoleic acid increased death rates in Sydney trial,high
+https://openalex.org/W2109239176,no,NA,hard,humans,rct,Low-fat diet reduced occurrence of non-melanoma skin cancer,high
+https://openalex.org/W2112032034,partly,benefit,intermediate,humans,cohort,Hydrogenated oils linked to more inflammation; non-hydrogenated oils to less,high
+https://openalex.org/W2112728975,no,NA,hard,humans,rct,Low-fat dietary pattern did not reduce CVD in postmenopausal women,high
+https://openalex.org/W2117752401,no,NA,mechanistic,mixed,narrative_review,Saturated fatty acids may promote inflammation via Toll-like receptor signalling,low
+https://openalex.org/W2119624564,yes,benefit,intermediate,humans,rct,Unsaturated fat diet lowered serum cholesterol and raised adipose linoleic acid,medium
+https://openalex.org/W2122457445,partly,benefit,intermediate,humans,rct,"High saturated fat impaired flow-mediated dilatation versus PUFA, MUFA or carbohydrate",high
+https://openalex.org/W2122656413,partly,benefit,mechanistic,cells,in_vitro,"Polyunsaturated fatty acids, especially n-3, inhibit endothelial activation",medium
+https://openalex.org/W2126271291,no,NA,hard,humans,narrative_review,Trans fats raise CHD risk; eliminating partially hydrogenated oils is feasible,high
+https://openalex.org/W2130681733,yes,benefit,hard,humans,cohort,Polyunsaturated fat intake inversely associated with CHD risk in women,high
+https://openalex.org/W2132473642,no,NA,intermediate,humans,meta_trials,"All trans fatty acids, including ruminant and CLA, raise LDL:HDL ratio",high
+https://openalex.org/W2132894645,no,NA,hard,humans,cohort,Trans fat intake from all sources associated with increased CVD mortality,high
+https://openalex.org/W2132942256,no,NA,intermediate,humans,rct,Lipid-lowering diet slowed coronary atherosclerosis progression in men with CHD,medium
+https://openalex.org/W2140239376,no,NA,hard,humans,cohort,Dairy fat biomarker 15:0 inversely associated with incident CVD,high
+https://openalex.org/W2145172093,yes,harm,hard,humans,rct,Safflower-oil diet in secondary prevention did not reduce and possibly raised mortality,medium
+https://openalex.org/W2147139214,yes,benefit,intermediate,humans,rct,Polyunsaturated versus saturated fat diet lowered plasma cholesterol and LDL,high
+https://openalex.org/W2147201798,no,NA,hard,humans,meta_observational,"Fruit and vegetables protective against stroke, weaker for CHD",high
+https://openalex.org/W2151604950,no,NA,hard,humans,meta_observational,Saturated fat not associated with mortality or CVD; trans fat associated,high
+https://openalex.org/W2154366826,yes,no_effect,hard,humans,rct,PUFA-rich cholesterol-lowering diet did not reduce cardiovascular events or mortality,high
+https://openalex.org/W2156924995,yes,benefit,hard,humans,meta_observational,"Replacing saturated fat with PUFA, not MUFA or carbohydrate, prevents CHD",high
+https://openalex.org/W2161970713,yes,harm,hard,humans,meta_trials,"n-6-specific PUFA trials tended to increase CHD and death, unlike mixed trials",high
+https://openalex.org/W2166000498,no,NA,hard,humans,rct,Mediterranean diet with olive oil or nuts reduced major cardiovascular events,high
+https://openalex.org/W2175950475,no,NA,hard,humans,narrative_review,"Sugar, not saturated fat, is the main dietary driver of CHD",medium
+https://openalex.org/W2177663233,partly,no_effect,hard,humans,meta_observational,Dietary total fat and fatty acids not associated with breast cancer risk,high
+https://openalex.org/W2265918551,no,NA,hard,humans,rct,Low-fat diet trial after myocardial infarction,medium
+https://openalex.org/W2273941262,yes,no_effect,intermediate,humans,rct,Coconut versus sunflower cooking oil did not change lipids or events,high
+https://openalex.org/W2314171198,yes,benefit,hard,humans,narrative_review,n-6 intake lowers CVD risk; cutting linoleic acid would raise CVD,high
+https://openalex.org/W2321381216,no,NA,intermediate,humans,cohort,Very low-fat diet plus drugs arrested or reversed coronary disease,high
+https://openalex.org/W2336342927,no,NA,hard,humans,rct,Wheat-bran fibre supplement did not prevent recurrent colorectal adenomas,high
+https://openalex.org/W2340016801,yes,no_effect,hard,humans,rct,Linoleic acid diet lowered cholesterol but not coronary or all-cause death,medium
+https://openalex.org/W2467699439,no,NA,hard,humans,meta_observational,"Butter weakly associated with mortality, not CVD, inversely with diabetes",high
+https://openalex.org/W2512438732,no,NA,hard,humans,meta_trials,Trial evidence does not support current dietary fat guidelines,medium
+https://openalex.org/W2525662188,yes,benefit,hard,humans,narrative_review,"Replacing saturated fat with unsaturated, especially PUFA, significantly reduces CVD",high
+https://openalex.org/W2528258469,no,NA,hard,humans,meta_observational,Cohort evidence shows no link between total or saturated fat and CHD mortality,high
+https://openalex.org/W2578381348,no,NA,hard,humans,meta_trials,No clear evidence dietary fibre prevents recurrent colorectal adenomas,high
+https://openalex.org/W2586301549,no,NA,intermediate,humans,rct,Very high saturated fat raises small LDL in atherogenic dyslipidaemia,high
+https://openalex.org/W2594648396,partly,benefit,intermediate,humans,rct,Cheese and butter SFA raise LDL compared with MUFA and PUFA diets,high
+https://openalex.org/W2609534392,no,NA,hard,humans,narrative_review,Saturated fat does not clog arteries; CHD is inflammatory,high
+https://openalex.org/W2615979720,yes,no_effect,hard,humans,meta_trials,Replacing saturated fat with n-6 PUFA unlikely to reduce CHD or mortality,high
+https://openalex.org/W2625336870,yes,benefit,hard,humans,narrative_review,Replacing saturated fat with polyunsaturated vegetable oil lowers CVD about 30%,high
+https://openalex.org/W2739967969,no,NA,hard,humans,cohort,Dairy associations with diabetes vary by product type and glycaemic status,high
+https://openalex.org/W2751423033,partly,benefit,hard,humans,cohort,"Fats, including PUFA, linked to lower mortality; carbohydrate to higher",high
+https://openalex.org/W2765688195,yes,benefit,hard,humans,narrative_review,"Replacing saturated fat with PUFA, MUFA or quality carbohydrate lowers CHD",medium
+https://openalex.org/W2773877339,yes,mixed,intermediate,animals,animal_experiment,Both high and low soybean oil intake impaired glucose and inflammation in mice,high
+https://openalex.org/W2789411764,no,NA,hard,humans,meta_observational,Higher ALA intake associated with lower composite and fatal CHD,high
+https://openalex.org/W2792784776,no,NA,intermediate,humans,rct,Butter raised LDL more than coconut or olive oil,high
+https://openalex.org/W2883579500,yes,no_effect,hard,humans,meta_trials,Increasing omega-6 has little or no effect on mortality or CVD events,high
+https://openalex.org/W2884415415,no,NA,hard,humans,meta_trials,Omega-3 has little effect on mortality; modest CHD benefit,high
+https://openalex.org/W2887100970,no,NA,hard,humans,narrative_review,Saturated fat is not the villain and can be part of healthy diet,high
+https://openalex.org/W2891504254,no,NA,hard,humans,meta_observational,Antioxidant-rich diets associated with lower all-cause mortality,high
+https://openalex.org/W2910421614,partly,benefit,hard,humans,cohort,Replacing saturated fat with linoleic acid associated with lower total and CVD mortality,high
+https://openalex.org/W2939225615,no,NA,hard,humans,meta_trials,Re-analysis finds Hooper evidence for limiting saturated fat not robust,high
+https://openalex.org/W2943623935,partly,no_effect,hard,humans,meta_observational,"Total fat, SFA, MUFA, PUFA not associated with CVD; trans fat harmful",medium
+https://openalex.org/W2960707476,yes,no_effect,other,humans,meta_trials,Little evidence PUFA affect musculoskeletal health or functional status,high
+https://openalex.org/W2979218563,no,NA,hard,humans,meta_observational,Higher saturated fat intake associated with lower stroke risk,high
+https://openalex.org/W2981085442,no,NA,hard,humans,meta_observational,Dietary calcium not linked to CVD; calcium supplements may raise MI risk,high
+https://openalex.org/W2982224367,no,NA,other,none,narrative_review,Interesterified fats replace trans fats; health evidence is limited,high
+https://openalex.org/W2990576802,no,NA,mechanistic,mixed,narrative_review,"Industrial trans fats promote inflammation, ER stress and cholesterol synthesis",high
+https://openalex.org/W2996055323,partly,no_effect,hard,humans,narrative_review,Evidence for replacing saturated with polyunsaturated fat is overstated and flawed,high
+https://openalex.org/W3004500872,no,NA,intermediate,humans,rct,MUFA-enriched dairy attenuated LDL increase and improved endothelial function,high
+https://openalex.org/W3005344633,yes,benefit,hard,humans,meta_observational,Higher linoleic acid intake and biomarkers associated with lower mortality,high
+https://openalex.org/W3007938422,yes,mixed,hard,humans,meta_trials,More total PUFA may slightly raise cancer risk but protects cardiovascularly,high
+https://openalex.org/W3014947543,partly,benefit,hard,humans,cohort,PUFA intake associated with lower all-cause mortality; SFA with higher,high
+https://openalex.org/W3036732773,no,NA,hard,humans,narrative_review,Evidence does not support further limiting saturated fat-rich whole foods,high
+https://openalex.org/W3043468756,partly,benefit,hard,humans,meta_observational,"Polyunsaturated fat associated with lower all-cause, CVD and cancer mortality",high
+https://openalex.org/W3081569835,no,NA,other,humans,meta_trials,Omega-3 improves respiratory function and recovery in acute lung injury,high
+https://openalex.org/W3094320729,yes,no_effect,other,humans,meta_trials,PUFA have little or no effect on IBD or long-term inflammation,high
+https://openalex.org/W3182663601,no,NA,intermediate,humans,rct,Full-fat dairy did not adversely affect lipids or blood pressure,high
+https://openalex.org/W3184283970,partly,no_effect,hard,humans,cohort,"No association of fatty acid classes, including PUFA, with incident CHD",high
+https://openalex.org/W3184937099,no,NA,other,humans,other,RCT and cohort bodies of evidence in nutrition are often concordant,high
+https://openalex.org/W3187790062,partly,benefit,intermediate,humans,narrative_review,"Fat consumption shifts LDL toward larger particles, affecting CVD risk",low
+https://openalex.org/W3197148389,yes,harm,mechanistic,animals,animal_experiment,"Sunflower, maize and canola oils showed estrogenic ovarian toxicity in rats",high
+https://openalex.org/W3200094880,no,NA,other,humans,other,Nutrition RCT and cohort evidence mostly agree; differences from PI/ECO dissimilarity,high
+https://openalex.org/W3202621141,partly,benefit,hard,humans,narrative_review,Replacing saturated fat with PUFA may reduce ASCVD; keep SFA limits,high
+https://openalex.org/W3205230916,no,NA,hard,humans,meta_observational,Higher ALA intake associated with lower all-cause and CVD mortality,high
+https://openalex.org/W4205804462,partly,harm,hard,humans,cohort,Rising vegetable oils and processed foods paralleled chronic disease; animal fat inverse,medium
+https://openalex.org/W4213393160,partly,benefit,hard,humans,meta_trials,Reducing saturated fat lowers cardiovascular events; PUFA replacement beneficial,medium
+https://openalex.org/W4214780521,partly,benefit,hard,humans,meta_trials,Reducing saturated fat cuts cardiovascular events; PUFA replacement appears beneficial,high
+https://openalex.org/W4246040671,yes,benefit,hard,humans,meta_trials,"Increasing PUFA slightly reduces CHD and CVD events, not mortality",high
+https://openalex.org/W4251209195,yes,no_effect,hard,humans,meta_trials,Increasing omega-6 has little or no effect on mortality or CVD events,medium
+https://openalex.org/W4288685606,no,NA,other,humans,cohort,Fish intake inversely and processed meat positively associated with rheumatoid arthritis,high
+https://openalex.org/W4294585874,no,NA,hard,humans,narrative_review,Saturated fat not significantly associated with CVD risk or mortality,medium
+https://openalex.org/W4318339149,yes,benefit,hard,humans,cohort,Higher PUFA intake associated with lower heart disease mortality,high
+https://openalex.org/W4366817322,no,NA,other,mixed,cohort,Fried food and acrylamide linked to anxiety and depression via neuroinflammation,medium
+https://openalex.org/W4390577244,no,NA,other,humans,other,RCT and cohort estimates in nutrition syntheses are generally similar,high
+https://openalex.org/W4399297032,no,NA,hard,humans,meta_observational,"Reducing saturated fat probably lowers cardiovascular events, not mortality",medium
+https://openalex.org/W4401828516,partly,benefit,hard,humans,cohort,Dietary PUFA intake inversely associated with history of stroke,high
+https://openalex.org/W4402412058,partly,mixed,hard,humans,cohort,"Some circulating n-6 fatty acids linked to higher mortality, DHA to lower",medium
+https://openalex.org/W4406686224,no,NA,other,humans,other,Individual nutrition RCTs and cohort studies give generally similar estimates,high
+https://openalex.org/W4409125186,no,NA,hard,humans,meta_trials,Saturated fat reduction did not reduce cardiovascular or all-cause mortality,high
+https://openalex.org/W4411066559,no,NA,intermediate,humans,rct,Full-fat yogurt lowered triacylglycerol versus non-fat yogurt in prediabetes,high
+https://openalex.org/W4417342684,partly,benefit,hard,humans,meta_trials,Replacing saturated with polyunsaturated fat reduces mortality and MI in high-risk people,high
+https://openalex.org/W7125185314,no,NA,other,humans,narrative_review,Ultra-processed food linked to dysregulated lipid metabolism and mental illness,high
+https://openalex.org/W7129513700,no,NA,intermediate,humans,rct,Daily avocado and mango improved vascular function in prediabetes,high
+https://openalex.org/W7141230273,no,NA,intermediate,humans,meta_trials,Trans fatty acids from dairy do not harm cardiometabolic health,high
+https://openalex.org/W1508183282,no,NA,other,animals,other,Grain feeding lowers n-3 and CLA and raises trans and saturated fat in beef,high
+https://openalex.org/W1542208203,yes,harm,mechanistic,animals,animal_experiment,High corn oil diet enhanced DMBA mammary carcinogenesis versus coconut oil,high
+https://openalex.org/W1543068948,no,NA,hard,humans,meta_observational,Evidence suggestive but inadequate that n-3 PUFA protect against skin cancer,high
+https://openalex.org/W1791903289,yes,mixed,mechanistic,animals,animal_experiment,Linoleic acid reduced skin papillomas but increased mammary tumours in mice,high
+https://openalex.org/W1924846213,yes,harm,mechanistic,animals,animal_experiment,High linoleic safflower and corn oils promoted NMU mammary tumours in rats,high
+https://openalex.org/W1931225401,yes,harm,mechanistic,animals,animal_experiment,Dietary linoleate enhanced transplanted mammary tumour growth in mice,high
+https://openalex.org/W1990381156,yes,benefit,mechanistic,animals,animal_experiment,"n-6-rich corn and primrose oils were not tumour promoters, showed anticancer activity",high
+https://openalex.org/W1994798330,no,NA,mechanistic,animals,narrative_review,Conjugated linoleic acid from animal fats is a potent anticarcinogen,medium
+https://openalex.org/W1997020407,yes,harm,mechanistic,animals,animal_experiment,More polyunsaturated sunflower oil increased UV skin carcinogenesis in mice,high
+https://openalex.org/W2003425261,yes,harm,mechanistic,animals,animal_experiment,High linoleic acid oils promote mammary tumours above a fat threshold,medium
+https://openalex.org/W2007465979,yes,harm,mechanistic,animals,animal_experiment,Polyunsaturated fat diet after DMBA increased mammary tumour incidence in rats,high
+https://openalex.org/W2009438450,no,NA,mechanistic,animals,animal_experiment,Dietary stearate reduced breast cancer tumour size and metastasis in mice,high
+https://openalex.org/W2015308396,no,NA,mechanistic,cells,in_vitro,Stearate preferentially induces apoptosis in breast cancer cells,high
+https://openalex.org/W2024660458,no,NA,intermediate,humans,rct,Fish oil reduced UVB erythema sensitivity but raised skin lipid peroxidation,high
+https://openalex.org/W2043032675,yes,benefit,mechanistic,animals,animal_experiment,Corn and primrose oils slowed mammary tumour growth; EFA deficiency promoted it,high
+https://openalex.org/W2043116422,yes,harm,mechanistic,animals,animal_experiment,Polyunsaturated fat required for UV skin tumour promotion; saturated fat protected,high
+https://openalex.org/W2060954806,yes,no_effect,mechanistic,animals,animal_experiment,GLA was no better than linoleic acid on human breast cancer growth in mice,medium
+https://openalex.org/W2062495245,yes,harm,mechanistic,animals,animal_experiment,Unsaturated corn oil accelerated UV carcinogenesis versus hydrogenated corn oil,high
+https://openalex.org/W2069458887,partly,harm,mechanistic,animals,animal_experiment,"Stearic acid diet delayed mammary tumours, possibly by limiting PUFA availability",medium
+https://openalex.org/W2075589691,yes,harm,mechanistic,animals,animal_experiment,More corn oil and unsaturated fats increased DMBA mammary adenocarcinomas,high
+https://openalex.org/W2092337476,yes,harm,mechanistic,animals,animal_experiment,Switching from corn oil to fat-free diet inhibited mammary tumour growth,high
+https://openalex.org/W2100243990,yes,harm,mechanistic,animals,animal_experiment,Dietary linoleate increased mammary tumour incidence; stearate decreased it,high
+https://openalex.org/W2102556566,yes,harm,mechanistic,animals,animal_experiment,Sunflower oil diet enhanced DMBA carcinogenesis versus tallow during promotion,high
+https://openalex.org/W2106472472,yes,harm,mechanistic,animals,animal_experiment,High corn oil exacerbated UV carcinogenesis at promotion; omega-3 inhibited it,high
+https://openalex.org/W2111731557,yes,harm,mechanistic,cells,in_vitro,"Omega-6 PUFA increased oxidative damage in epidermal reconstructs, possibly raising melanoma",high
+https://openalex.org/W2116398950,yes,harm,mechanistic,animals,animal_experiment,Higher dietary linoleic acid increased DMBA mammary tumours in SENCAR mice,high
+https://openalex.org/W2116796045,yes,harm,mechanistic,animals,animal_experiment,"Unsaturated fat diets promoted azaserine pancreatic carcinogenesis, saturated fat did not",high
+https://openalex.org/W2118137802,partly,harm,mechanistic,animals,animal_experiment,"Selenium deficiency enhanced mammary tumours, especially with high polyunsaturated fat",high
+https://openalex.org/W2122027420,yes,harm,mechanistic,animals,animal_experiment,High corn and safflower oil promoted colon tumours; olive and coconut did not,high
+https://openalex.org/W2122162501,no,NA,intermediate,humans,narrative_review,Stearic acid does not raise LDL cholesterol unlike palmitic acid,high
+https://openalex.org/W2128249468,no,NA,hard,humans,narrative_review,Stearic acid likely neutral and chocolate flavonoids protective for CHD,high
+https://openalex.org/W2131817388,yes,harm,mechanistic,animals,animal_experiment,Linoleic acid diet increased azoxymethane colon tumours versus stearic acid,high
+https://openalex.org/W2146492926,yes,harm,mechanistic,animals,animal_experiment,Mammary tumorigenesis rose with linoleate intake up to about 4 percent,high
+https://openalex.org/W2148022591,yes,no_effect,hard,mixed,meta_observational,High linoleic acid intake unlikely to substantially raise human cancer risk,high
+https://openalex.org/W2160715047,no,NA,mechanistic,animals,animal_experiment,Stearate inhibits breast cancer cell proliferation and carcinogen-induced tumours,high
+https://openalex.org/W2166531963,no,NA,other,animals,narrative_review,"Grass-fed beef has more n-3, CLA and antioxidants than grain-fed",high
+https://openalex.org/W2342931161,yes,harm,mechanistic,animals,animal_experiment,Some polyunsaturated fat plus high fat required to promote mammary carcinogenesis,high
+https://openalex.org/W2797031474,partly,harm,hard,humans,cohort,Polyunsaturated fat intake modestly associated with higher skin cancer risk,high
+https://openalex.org/W4301873578,yes,harm,mechanistic,animals,animal_experiment,"Linoleate, not oleate, doubled DMBA mammary tumour yield in rats",high
+https://openalex.org/W7119502555,no,NA,intermediate,humans,rct,Plant-based meat and beef types gave similar postprandial inflammation,high

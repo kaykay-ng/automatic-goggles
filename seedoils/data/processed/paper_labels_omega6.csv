@@ -1,0 +1,201 @@
+openalex_id,relevance,direction,outcome,population,design,main_claim,confidence
+https://openalex.org/W1516538270,yes,mixed,intermediate,humans,rct,Canola and olive oil improved NAFLD markers; soybean/safflower control oil showed no change,medium
+https://openalex.org/W1536552191,yes,benefit,intermediate,humans,rct,Replacing dairy fat with rapeseed oil rapidly improves lipoprotein profile,high
+https://openalex.org/W1551052904,yes,harm,mechanistic,animals,animal_experiment,Soybean oil diet more obesogenic and diabetogenic than coconut oil or fructose in mice,high
+https://openalex.org/W1564357076,yes,harm,intermediate,humans,narrative_review,High LA intake lowers n-3 LCPUFA status; questions high-n-6 recommendations,medium
+https://openalex.org/W1568588240,yes,harm,mechanistic,animals,narrative_review,High-LA seed oils in pregnancy cause neural and visual deficits in animal offspring,high
+https://openalex.org/W1623946117,yes,harm,hard,humans,narrative_review,"High omega-6 intake in Israel may promote insulin resistance, atherosclerosis and cancer",high
+https://openalex.org/W1656523635,partly,harm,intermediate,humans,narrative_review,ALA conversion to EPA/DHA is limited and reduced further by high n-6 diets,medium
+https://openalex.org/W1768572786,no,NA,intermediate,humans,cohort,Plasma HETE and HODE levels track NAFLD stage and fall with diet,medium
+https://openalex.org/W1779282090,partly,mixed,intermediate,humans,rct,PUFA meals altered satiety hormones but not appetite ratings or energy intake,medium
+https://openalex.org/W1799771689,yes,mixed,intermediate,humans,rct,PUFA diet lowers cholesterol more than MUFA but raises lipid peroxidation,high
+https://openalex.org/W1968528693,yes,harm,hard,humans,narrative_review,High omega-6/omega-3 ratio promotes chronic disease; lower ratio is desirable,high
+https://openalex.org/W1968693059,no,NA,intermediate,humans,rct,Replacing saturated with monounsaturated fat improves insulin sensitivity,high
+https://openalex.org/W1970385641,partly,harm,other,humans,cohort,"Higher vegetable fat, PUFA and linoleic acid intake associated with advanced AMD",high
+https://openalex.org/W1972541725,partly,harm,intermediate,humans,cohort,Long-term high-linoleic vegan diet strongly depresses tissue n-3 fatty acids,medium
+https://openalex.org/W1975198322,yes,harm,mechanistic,animals,animal_experiment,Calorie-restricted mice live longer on lard than on soybean or fish oil,high
+https://openalex.org/W1975327354,no,NA,other,none,other,Unhydrogenated US soybean and canola oils contain trans isomers of essential fatty acids,high
+https://openalex.org/W1982714231,yes,harm,intermediate,humans,meta_trials,Lowering LA intake can raise n-3 LCPUFA status; study quality is poor,medium
+https://openalex.org/W1983519516,yes,no_effect,intermediate,humans,narrative_review,High LA intake is not associated with increased inflammation in humans,high
+https://openalex.org/W1985592156,no,NA,intermediate,humans,other,Liver fat in NAFLD comes mainly from circulating fatty acids and lipogenesis,high
+https://openalex.org/W1987335225,partly,no_effect,intermediate,humans,rct,Sunflower oil LA barely changes arachidonic acid; long-chain conversion is very low,medium
+https://openalex.org/W1987657041,partly,mixed,intermediate,humans,rct,MUFA diet best for LDL oxidation; n-6 PUFA lowers LDL but also HDL,medium
+https://openalex.org/W1991069383,partly,harm,intermediate,humans,cohort,Oxidized linoleic acid (9-HODE) in LDL rises with atherosclerosis and age,medium
+https://openalex.org/W2003366525,partly,harm,mechanistic,mixed,narrative_review,Linoleic acid peroxidation products may contribute to aging and age-related disease,medium
+https://openalex.org/W2004504740,yes,benefit,intermediate,humans,rct,Cold-pressed rapeseed oil lowers LDL and oxidized LDL versus butter,high
+https://openalex.org/W2007094035,partly,harm,mechanistic,mixed,animal_experiment,Linoleic acid metabolite 13-S-HODE causes airway epithelial injury in asthma,medium
+https://openalex.org/W2009718837,yes,harm,hard,humans,narrative_review,High omega-6/omega-3 ratio promotes CVD and chronic disease,high
+https://openalex.org/W2016860607,yes,harm,intermediate,humans,rct,Lowering dietary LA reduces potentially harmful oxidized LA metabolites,high
+https://openalex.org/W2017942001,partly,harm,hard,humans,cohort,Very high omega-6 PUFA intake may promote breast cancer; heterocyclic amines not linked,high
+https://openalex.org/W2019222409,no,NA,intermediate,humans,rct,High-antioxidant diet improves endothelial function,high
+https://openalex.org/W2020311764,partly,harm,mechanistic,animals,animal_experiment,Injected soybean and sunflower oils induce adipose insulin resistance in rats,medium
+https://openalex.org/W2024602731,yes,no_effect,intermediate,humans,rct,Rapeseed oil diet does not increase lipid peroxidation versus saturated fat diet,high
+https://openalex.org/W2028105898,no,NA,mechanistic,mixed,narrative_review,Carbon from linoleate and linolenate is extensively recycled into new lipids,high
+https://openalex.org/W2029818488,yes,harm,intermediate,humans,rct,Linoleate-enriched diets make LDL more susceptible to oxidation than oleate diets,high
+https://openalex.org/W2033949202,yes,mixed,intermediate,humans,rct,Sunflower oil diet raises in vitro LDL oxidation but not in vivo peroxidation markers,high
+https://openalex.org/W2034629044,no,NA,mechanistic,animals,other,"Mammal lifespan falls with higher membrane n-3/n-6 ratio, not unsaturation",medium
+https://openalex.org/W2035013753,yes,harm,other,humans,cohort,High linoleic acid in colostrum associated with poorer child cognitive development,high
+https://openalex.org/W2035206687,partly,benefit,intermediate,humans,rct,Adding walnuts to a fatty meal improves endothelial function versus olive oil,medium
+https://openalex.org/W2035500411,yes,mixed,mechanistic,mixed,animal_experiment,n-6 PUFA adipogenic effect depends on cAMP signalling and diet context,high
+https://openalex.org/W2036231919,yes,harm,mechanistic,animals,animal_experiment,Dietary LA raises endocannabinoids and induces obesity in mice,high
+https://openalex.org/W2037573666,no,NA,mechanistic,animals,animal_experiment,Small amounts of carbohydrate maximize high-fat-diet insulin resistance in mice,high
+https://openalex.org/W2039127164,no,NA,intermediate,humans,cohort,"FADS variants raise arachidonic acid conversion, more so in African Americans",high
+https://openalex.org/W2043413905,yes,harm,hard,humans,narrative_review,High dietary n-6/n-3 ratio linked to chronic inflammatory diseases; raise n-3,high
+https://openalex.org/W2045504209,no,NA,intermediate,humans,rct,Algal-oil DHA capsules and cooked salmon raise blood DHA equally,high
+https://openalex.org/W2053770058,no,NA,intermediate,humans,rct,Saturated fat lowers Lp(a); typical trans intakes have little effect,high
+https://openalex.org/W2057605095,yes,harm,intermediate,humans,rct,Lowering dietary n-6 raises plasma n-3 PUFA without changing arachidonic acid,medium
+https://openalex.org/W2064320740,no,NA,intermediate,humans,other,Young women convert ALA to EPA and DHA better than men,high
+https://openalex.org/W2075898111,no,NA,intermediate,humans,rct,Milled chia seed raises plasma ALA and EPA but not risk factors,high
+https://openalex.org/W2079690545,yes,benefit,intermediate,humans,rct,"Safflower oil improves glycemia, inflammation and lipids in type 2 diabetes",high
+https://openalex.org/W2081333152,partly,harm,mechanistic,cells,in_vitro,Unsaturated fatty acids depolarize mitochondria and kill cells more than saturated,medium
+https://openalex.org/W2083216589,yes,harm,intermediate,humans,rct,High linoleic acid diet increases oxidative stress and affects nitric oxide,high
+https://openalex.org/W2085296874,partly,harm,intermediate,humans,rct,"Lower saturated, higher polyunsaturated fat diets raised oxidized LDL and Lp(a)",medium
+https://openalex.org/W2086685655,no,NA,intermediate,humans,narrative_review,Adult conversion of ALA to EPA and DHA is extremely limited,medium
+https://openalex.org/W2088341880,no,NA,mechanistic,none,in_vitro,Tocopherols and tocotrienols have similar antioxidant activity but differ physically,high
+https://openalex.org/W2092117950,yes,benefit,intermediate,humans,rct,Replacing butter with sunflower oil lowers postprandial lipemia and inflammation markers,high
+https://openalex.org/W2095712348,yes,mixed,intermediate,humans,rct,Rapeseed oil improves lipids and liver enzymes but acutely raises adipose inflammation,high
+https://openalex.org/W2096269289,partly,benefit,intermediate,humans,rct,Soybean oil lowers cholesterol more than oleic acid; stearic acid neutral,high
+https://openalex.org/W2099903211,yes,harm,intermediate,humans,rct,Linoleate-rich diets increase LDL oxidation susceptibility versus oleate-rich diets,high
+https://openalex.org/W2100961491,partly,harm,mechanistic,cells,in_vitro,Linoleic acid oxidation products in LDL are key toxic events in atherogenesis,medium
+https://openalex.org/W2103009316,no,NA,intermediate,humans,cohort,Higher coconut saturated fat raises cholesterol; vascular disease uncommon in atolls,high
+https://openalex.org/W2103010344,no,NA,mechanistic,mixed,narrative_review,"Lipoxins, resolvins and protectins actively resolve inflammation",high
+https://openalex.org/W2103708195,partly,benefit,hard,humans,cohort,High long-chain omega-3 raises prostate cancer risk; linoleic acid linked lower,high
+https://openalex.org/W2105953302,yes,benefit,hard,humans,narrative_review,AHA advisory: omega-6 intake of 5-10% energy lowers CHD risk,medium
+https://openalex.org/W2108487714,partly,mixed,other,mixed,narrative_review,Vitamin E requirement rises with PUFA intake; match vitamin E to PUFA,medium
+https://openalex.org/W2108514581,yes,mixed,intermediate,humans,rct,High LA lowers plasma EPA but does not change lipids or inflammation,medium
+https://openalex.org/W2115302005,yes,benefit,mechanistic,animals,animal_experiment,Polyunsaturated fat protects monkeys from coronary atherosclerosis versus MUFA and SFA,high
+https://openalex.org/W2115826909,no,NA,intermediate,humans,narrative_review,ALA supplements raise EPA but not DHA; preformed DHA needed,high
+https://openalex.org/W2116488160,yes,no_effect,intermediate,humans,meta_trials,Trials show adding linoleic acid does not raise inflammatory markers,high
+https://openalex.org/W2117659050,yes,harm,mechanistic,animals,animal_experiment,High dietary PUFA including LA suppresses DHA synthesis from ALA in rats,medium
+https://openalex.org/W2117994717,yes,harm,intermediate,humans,cohort,20th-century soybean oil rise in LA likely lowered tissue EPA and DHA,high
+https://openalex.org/W2119936926,yes,no_effect,intermediate,humans,meta_trials,Changing dietary linoleic acid does not change tissue arachidonic acid,high
+https://openalex.org/W2120590794,yes,benefit,intermediate,humans,rct,n-6 PUFA versus SFA reduces liver fat without inflammation,high
+https://openalex.org/W2127287605,yes,benefit,hard,humans,meta_observational,Higher dietary linoleic acid associated with lower CHD events and deaths,high
+https://openalex.org/W2135051330,no,NA,mechanistic,animals,narrative_review,High n-6/n-3 membrane ratio enhances hibernation by protecting cardiac function,high
+https://openalex.org/W2136604885,yes,benefit,hard,humans,cohort,Higher circulating linoleic acid associated with lower total and CHD mortality,high
+https://openalex.org/W2138024339,partly,no_effect,mechanistic,animals,animal_experiment,SFA raises and n-3 lowers endotoxin transport; vegetable oil had no effect,medium
+https://openalex.org/W2140114458,no,NA,intermediate,humans,rct,Cream raises endotoxin and TLR-4; glucose and cream raise inflammation,high
+https://openalex.org/W2140376288,no,NA,intermediate,humans,rct,Grass-fed red meat raises consumers' plasma long-chain n-3 PUFA,high
+https://openalex.org/W2140389582,no,NA,mechanistic,humans,other,Oxidized LDL taken up by macrophages in MS plaques may drive demyelination,high
+https://openalex.org/W2141779129,partly,benefit,intermediate,humans,rct,"SFA meal reduces insulin sensitivity more than n-6 PUFA, n-3 or MUFA meals",medium
+https://openalex.org/W2142920451,no,NA,intermediate,humans,rct,Milk fat within globule membrane does not impair lipoprotein profile,high
+https://openalex.org/W2145992696,no,NA,intermediate,humans,rct,Orange juice prevents inflammation and endotoxin rise after high-fat high-carbohydrate meal,high
+https://openalex.org/W2149265526,partly,harm,other,humans,narrative_review,Balancing dietary essential fatty acid eicosanoid precursors could prevent many diseases,low
+https://openalex.org/W2149633369,no,NA,intermediate,humans,other,"Flaxseed oil raises milk ALA, EPA and DPA but not DHA",high
+https://openalex.org/W2151249621,yes,harm,mechanistic,animals,animal_experiment,n-6 PUFA-rich diets cause intestinal dysbiosis and inflammation in aged mice,high
+https://openalex.org/W2156492085,partly,benefit,intermediate,humans,rct,"Ileal unsaturated fats, including linoleic, increase satiety; saturated fat does not",medium
+https://openalex.org/W2158097489,yes,harm,intermediate,humans,rct,Soybean oil worsened lipid profile while coconut oil reduced abdominal obesity,medium
+https://openalex.org/W2158369256,no,NA,intermediate,humans,narrative_review,ALA is a limited source of long-chain n-3 PUFA in humans,high
+https://openalex.org/W2159707119,no,NA,intermediate,humans,narrative_review,Vegetarians should change diets to optimize low long-chain n-3 status,medium
+https://openalex.org/W2160283765,no,NA,intermediate,humans,rct,Amount of dietary fat influences liver fat content,high
+https://openalex.org/W2162221183,yes,benefit,intermediate,humans,rct,Safflower oil lowered trunk fat and glucose; CLA lowered BMI,medium
+https://openalex.org/W2163481424,no,NA,intermediate,humans,cohort,Non-fish-eaters have lower n-3 intake but smaller status differences than expected,high
+https://openalex.org/W2170028724,yes,harm,other,humans,cohort,Rising seed-oil linoleic acid intake correlates with higher homicide rates,high
+https://openalex.org/W2171699937,yes,benefit,intermediate,humans,rct,Overfeeding sunflower oil PUFA adds less liver and visceral fat than SFA,high
+https://openalex.org/W2199051871,yes,harm,other,humans,cohort,High dietary linoleic acid intake associated with increased ulcerative colitis risk,high
+https://openalex.org/W2205718184,no,NA,intermediate,humans,meta_observational,US adipose tissue linoleic acid rose 136% alongside dietary intake,medium
+https://openalex.org/W2292502644,yes,harm,intermediate,mixed,narrative_review,Rising omega-6/omega-3 ratio increases obesity risk,high
+https://openalex.org/W2315812734,no,NA,intermediate,humans,narrative_review,Vegetarians have low EPA/DHA and should raise ALA or use algal supplements,high
+https://openalex.org/W2333779581,yes,harm,other,humans,cohort,Higher maternal omega-6 and LA status associated with more child autistic traits,high
+https://openalex.org/W2346312442,yes,benefit,intermediate,humans,rct,Replacing SFA with PUFA improves triglycerides and endothelial function more than MUFA,high
+https://openalex.org/W2409199587,no,NA,other,animals,other,Eggs from range-fed Greek chickens are rich in n-3 fatty acids,medium
+https://openalex.org/W2486542695,partly,benefit,intermediate,humans,meta_trials,PUFA most consistently improves glycaemia and insulin measures versus other macronutrients,high
+https://openalex.org/W2536497858,no,NA,intermediate,humans,rct,High animal or plant protein diets reduce liver fat in type 2 diabetes,high
+https://openalex.org/W2569972134,partly,harm,other,humans,cohort,Breastfeeding linked to higher IQ; high colostrum linoleic acid to lower IQ,high
+https://openalex.org/W2583507097,yes,no_effect,intermediate,humans,cohort,PUFA-rich cooking oils not associated with arachidonic acid status; red meat is,medium
+https://openalex.org/W2592523469,no,NA,intermediate,humans,meta_trials,ALA supplementation does not reduce inflammatory markers,high
+https://openalex.org/W2595982682,no,NA,mechanistic,cells,in_vitro,Short UVA exposure alters keratinocyte PUFA without harmful lipid peroxidation,high
+https://openalex.org/W2598726680,yes,harm,mechanistic,cells,in_vitro,High n-6/n-3 breastmilk raises inflammatory cytokines and lipogenic genes in adipocytes,medium
+https://openalex.org/W2601819344,no,NA,intermediate,humans,rct,Virgin coconut oil raised cholesterol including HDL; high-oleic safflower oil neutral,medium
+https://openalex.org/W2606243860,yes,harm,other,humans,cohort,Higher maternal n-6/n-3 and LA/ALA intake linked to poorer infant development,high
+https://openalex.org/W2612404926,yes,harm,intermediate,humans,rct,"Soy oil linoleic acid raises Lp-PLA2 activity, apoB and oxidized LDL",high
+https://openalex.org/W2739493897,yes,no_effect,intermediate,humans,meta_trials,Increasing dietary linoleic acid does not change blood inflammatory markers,high
+https://openalex.org/W2757622536,yes,harm,mechanistic,animals,animal_experiment,Linoleic acid oxylipins implicated in soybean oil-induced obesity in mice,high
+https://openalex.org/W2761089438,partly,harm,other,humans,cohort,Processed foods including vegetable oils and sugar proposed as primary cause of AMD,high
+https://openalex.org/W2761192596,yes,benefit,hard,humans,meta_observational,Higher linoleic acid biomarkers associated with lower type 2 diabetes risk,high
+https://openalex.org/W2769211066,partly,benefit,hard,humans,cohort,Higher plasma linoleic and ALA associated with lower colon cancer risk,medium
+https://openalex.org/W2771524220,yes,harm,mechanistic,animals,animal_experiment,Chronic canola oil intake worsens memory and synaptic integrity in AD mice,high
+https://openalex.org/W2778259961,no,NA,intermediate,humans,meta_trials,CLA supplementation may increase CRP and TNF-alpha,medium
+https://openalex.org/W2787596323,yes,benefit,intermediate,humans,cohort,"Higher plasma linoleic acid associated with lower adiposity, insulin resistance, inflammation",high
+https://openalex.org/W2790905595,yes,benefit,hard,humans,cohort,Higher serum linoleic acid associated with lower total and CVD mortality,high
+https://openalex.org/W2791386016,yes,mixed,intermediate,mixed,narrative_review,LA does not raise inflammatory markers but may blunt omega-3 effects; complex,high
+https://openalex.org/W2794178959,partly,no_effect,other,humans,narrative_review,"n-6:n-3 ratio is flawed; real problem is low EPA+DHA, use Omega-3 Index",medium
+https://openalex.org/W2799372743,no,NA,intermediate,humans,rct,Ad libitum Mediterranean and low-fat diets reduce hepatic steatosis equally,high
+https://openalex.org/W2807637161,partly,benefit,intermediate,humans,rct,Overfeeding saturated fat raises liver fat more than unsaturated fat or sugar,high
+https://openalex.org/W2884371913,partly,no_effect,intermediate,humans,rct,"Coconut oil aided weight and glycemia, chia oil lipids; safflower unremarkable",low
+https://openalex.org/W2887947549,yes,harm,intermediate,humans,rct,Low-LA high-ALA diet raises EPA more efficiently than high-LA diet,medium
+https://openalex.org/W2894317301,yes,harm,hard,humans,narrative_review,Oxidized linoleic acid from omega-6 vegetable oils drives coronary heart disease,high
+https://openalex.org/W2899274615,yes,benefit,intermediate,humans,meta_trials,Canola oil lowers total and LDL cholesterol,high
+https://openalex.org/W2902193001,yes,harm,intermediate,humans,narrative_review,High omega-6/omega-3 ratio from seed oils promotes inflammation; keep ratio low,medium
+https://openalex.org/W2909433864,yes,mixed,intermediate,humans,rct,Inflammatory and glucose responses to dietary LA depend on FADS1 genotype,high
+https://openalex.org/W2924007167,no,NA,intermediate,humans,rct,EPA+DHA but not ALA improves lipids and inflammation,high
+https://openalex.org/W2928127566,yes,mixed,hard,humans,other,Genetically higher LA lowers diabetes and lipids but not ischemic heart disease,high
+https://openalex.org/W2929715122,yes,benefit,hard,humans,meta_observational,Higher linoleic acid biomarkers associated with lower CVD and cardiovascular mortality,high
+https://openalex.org/W2942143569,no,NA,other,humans,narrative_review,"Thermic effect of food rises with carbohydrate, protein and larger meals",high
+https://openalex.org/W2944250858,no,NA,intermediate,humans,rct,Mediterranean/low-carb diet cuts hepatic fat more than low-fat diet,high
+https://openalex.org/W2944943767,no,NA,intermediate,humans,narrative_review,Reviews dietary arachidonic acid intake and supplementation effects in adults,medium
+https://openalex.org/W2964856589,yes,benefit,intermediate,humans,rct,Overeating sunflower oil PUFA prevents the liver fat gain seen with SFA,high
+https://openalex.org/W2972037924,no,NA,intermediate,humans,cohort,Liver disease etiology determines dyslipidemia patterns; advanced disease lowers cholesterol,high
+https://openalex.org/W2983464518,no,NA,other,humans,rct,High-dose EPA improves attention in ADHD youth with low EPA,high
+https://openalex.org/W2987944394,yes,benefit,hard,humans,narrative_review,Higher linoleic acid intake improves lipids and lowers CVD and diabetes risk,high
+https://openalex.org/W2996584516,yes,benefit,hard,humans,cohort,Higher plasma n-6 PUFA associated with lower cardiovascular disease risk,high
+https://openalex.org/W2998537204,yes,harm,mechanistic,mixed,narrative_review,Excess dietary linoleic acid may adversely affect the brain via inflammation,high
+https://openalex.org/W2999801248,yes,harm,mechanistic,animals,animal_experiment,Soybean oil diets dysregulate hypothalamic genes and oxytocin in mice,high
+https://openalex.org/W3000415179,partly,benefit,intermediate,humans,meta_trials,Coconut oil raises LDL cholesterol compared with nontropical vegetable oils,high
+https://openalex.org/W3009292460,no,NA,intermediate,humans,rct,Saturated fat diet raises liver fat and glycemia more than free sugars,high
+https://openalex.org/W3012110397,no,NA,intermediate,humans,other,Ketogenic diet reverses NAFLD via altered hepatic mitochondrial fluxes,high
+https://openalex.org/W3013214255,no,NA,mechanistic,mixed,narrative_review,EPA protects cardiovascular system through multiple mechanisms,high
+https://openalex.org/W3022864527,no,NA,mechanistic,mixed,narrative_review,Oxidized LDL plays a central role in atherogenesis,high
+https://openalex.org/W3036811653,yes,benefit,intermediate,humans,meta_trials,Canola oil improves cardiometabolic risk factors versus other edible oils,high
+https://openalex.org/W3041586634,yes,harm,intermediate,humans,other,Low n-6:n-3 diet reduces liver fat and oxidized LA metabolites in obese youth,medium
+https://openalex.org/W3093552679,partly,benefit,intermediate,humans,meta_trials,Replacing saturated with unsaturated fat reduces liver fat,high
+https://openalex.org/W3124419862,yes,benefit,intermediate,humans,narrative_review,"High PUFA, especially LA and ALA, improves body composition and cardiometabolic health",high
+https://openalex.org/W3127321038,no,NA,intermediate,humans,meta_trials,Flaxseed oils do not raise Omega-3 Index; algal oil does,high
+https://openalex.org/W3131108717,partly,benefit,intermediate,humans,narrative_review,Saturated fat and sugar raise liver fat; unsaturated fats are protective,high
+https://openalex.org/W3158869430,yes,mixed,hard,humans,other,Genetically higher LA lowers CAD risk while arachidonic acid raises it,medium
+https://openalex.org/W3162078374,yes,benefit,hard,humans,narrative_review,Soybean oil lowers cholesterol and CHD risk without raising inflammation or oxidation,high
+https://openalex.org/W3170612514,yes,harm,mechanistic,mixed,animal_experiment,High omega-6 diet causes reversible peripheral nerve dysfunction and pain in mice,high
+https://openalex.org/W3173225581,partly,harm,other,humans,rct,Raising n-3 reduced migraine headaches; additionally lowering LA gave extra benefit,high
+https://openalex.org/W3174725418,partly,mixed,intermediate,humans,cohort,Serum LA and ALA higher in lupus; both may participate in inflammation,low
+https://openalex.org/W3178703016,partly,benefit,intermediate,humans,narrative_review,Saturated fat raises liver fat more than polyunsaturated or monounsaturated fat,high
+https://openalex.org/W3183815414,no,NA,other,humans,cohort,Fat-free-mass-adjusted energy expenditure follows four distinct life stages,high
+https://openalex.org/W3194681951,yes,benefit,hard,humans,meta_observational,Higher linoleic acid intake and biomarkers associated with lower type 2 diabetes risk,high
+https://openalex.org/W3205216602,yes,harm,other,humans,narrative_review,"High omega-6/3 ratio from seed oils promotes inflammation, allergy and autoimmunity",high
+https://openalex.org/W3211395210,no,NA,other,humans,meta_trials,Omega-3 supplements show no cognitive benefit in healthy older people,high
+https://openalex.org/W414781422,no,NA,mechanistic,mixed,narrative_review,DHA synthesized from ALA may suffice for adult brain needs,high
+https://openalex.org/W4214935721,yes,mixed,hard,humans,meta_observational,"PUFA-diabetes associations vary by type, region and sex; LA inversely associated",high
+https://openalex.org/W4221085166,partly,mixed,mechanistic,animals,animal_experiment,Fat source in high-fat diets alters weight and microbiota; canola least disruptive,medium
+https://openalex.org/W4229011939,yes,harm,other,humans,cohort,Higher linoleic acid intake associated with depression and psychological distress,high
+https://openalex.org/W4230141246,yes,benefit,hard,humans,narrative_review,Overview of linoleic acid as essential fatty acid with cardiometabolic benefits,low
+https://openalex.org/W4283787730,yes,harm,intermediate,humans,cohort,High omega-6 intake and n-6/n-3 ratio associated with fatty liver trajectories,high
+https://openalex.org/W4286470703,yes,benefit,intermediate,humans,meta_trials,Canola oil lowers LDL and total cholesterol compared with olive oil,high
+https://openalex.org/W4287958235,yes,benefit,intermediate,humans,cohort,Higher dietary linoleic acid and PUFA associated with lower liver fibrosis risk,high
+https://openalex.org/W4307939989,no,NA,other,animals,other,Pasture-raised corn- and soy-free eggs have lower omega-6/omega-3 ratio,high
+https://openalex.org/W4318208103,no,NA,mechanistic,cells,narrative_review,"Lipid droplets regulate PUFA trafficking, peroxidation and ferroptosis",medium
+https://openalex.org/W4362602340,yes,benefit,hard,humans,narrative_review,Linoleic acid reduces inflammation and cardiometabolic disease risk,high
+https://openalex.org/W4366463376,yes,benefit,hard,humans,meta_observational,Higher tissue linoleic acid associated with lower prostate cancer risk; intake neutral,high
+https://openalex.org/W4367048865,no,NA,other,humans,cohort,Adjusted total energy expenditure declined due to lower basal expenditure,high
+https://openalex.org/W4379184873,yes,harm,mechanistic,animals,animal_experiment,High-LA high-fat diet worsens obesity and liver injury in mice; vitamin E mitigates,high
+https://openalex.org/W4383058720,yes,harm,mechanistic,mixed,animal_experiment,High-LA soybean oil diet increases colitis susceptibility in mice,high
+https://openalex.org/W4384447475,yes,harm,hard,humans,narrative_review,Excess linoleic acid intake forms OXLAMs and likely contributes to chronic disease,high
+https://openalex.org/W4388762857,yes,mixed,hard,humans,cohort,"Higher omega-6/omega-3 ratio linked to mortality, yet omega-6 itself inversely associated",high
+https://openalex.org/W4389779489,yes,no_effect,intermediate,humans,rct,Lowering dietary LA does not lower arachidonic acid or endocannabinoids,high
+https://openalex.org/W4391359772,yes,harm,hard,humans,cohort,High linoleic acid intake associated with proximal colon cancer risk,high
+https://openalex.org/W4391750556,no,NA,mechanistic,animals,animal_experiment,Mussel oil prevents atherosclerosis in ApoE-/- mice better than fish oil,high
+https://openalex.org/W4392969074,yes,benefit,intermediate,humans,rct,Replacing ghee with rapeseed oil improves liver steatosis and metabolic markers,high
+https://openalex.org/W4400510374,no,NA,other,humans,other,Mediterranean diet plus algal omega-3 raises omega-3 index and improves acne,high
+https://openalex.org/W4401123617,yes,mixed,intermediate,humans,meta_trials,Soybean and sunflower oils linked to weight gain; sesame oil to weight loss,medium
+https://openalex.org/W4402491257,yes,benefit,hard,humans,narrative_review,Higher LA intake and blood levels improve cardiometabolic outcomes,high
+https://openalex.org/W4403136762,yes,benefit,mechanistic,animals,animal_experiment,Canola oil ameliorates obesity and lipogenesis in high-fat-fed mice,high
+https://openalex.org/W4405352365,partly,harm,intermediate,humans,rct,"High omega-3, low omega-6 diet with fish oil lowers prostate Ki-67",high
+https://openalex.org/W4408388856,yes,harm,mechanistic,mixed,in_vitro,"Linoleic acid activates FABP5-mTORC1 growth signalling, relevant to breast cancer",medium
+https://openalex.org/W4408787458,yes,mixed,intermediate,mixed,narrative_review,"Omega-6 subtypes differ: LA benefits fatty liver, some metabolites pro-inflammatory",medium
+https://openalex.org/W4408851358,yes,harm,other,humans,narrative_review,Omega-6/omega-3 imbalance contributes to severe COVID-19 via LA metabolites,medium
+https://openalex.org/W4409573769,yes,harm,hard,humans,meta_observational,"Dietary linoleic acid intake, not tissue levels, associated with higher colorectal cancer",high
+https://openalex.org/W4409957759,yes,harm,hard,none,narrative_review,Refined seed oils hypothesized to drive insulin resistance and cancer via oxidative stress,high
+https://openalex.org/W560330100,yes,harm,mechanistic,animals,animal_experiment,High omega-6 tissue levels increase metabolic endotoxemia via gut microbiota,high
+https://openalex.org/W7158106817,yes,benefit,hard,humans,narrative_review,Evidence supports seed oil and LA safety and benefits; harm claims unfounded,high
+https://openalex.org/W7162031032,yes,harm,mechanistic,animals,animal_experiment,Soybean oil PUFA diet increases DNA damage and lipid peroxidation in mice,high
+https://openalex.org/W7212247409,yes,harm,mechanistic,animals,animal_experiment,Sunflower oil high-fat diet causes dysbiosis and steatohepatitis versus fish oil,medium
+https://openalex.org/W7224345065,partly,harm,mechanistic,animals,animal_experiment,Linoleic acid metabolite EKODE drives itch and inflammation via Gpr35,medium
+https://openalex.org/W72789316,no,NA,intermediate,humans,rct,Olive oil meals raise postprandial fat oxidation versus cream,high

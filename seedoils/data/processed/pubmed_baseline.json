@@ -1,0 +1,38 @@
+[
+ {
+  "era": "all years",
+  "all": 60416,
+  "human trials": 2635,
+  "meta-analyses and systematic reviews": 424,
+  "animal studies": 21329,
+  "human studies (any)": 16494,
+  "reviews": 3535
+ },
+ {
+  "era": "before 2000",
+  "all": 13642,
+  "human trials": 571,
+  "meta-analyses and systematic reviews": 3,
+  "animal studies": 7748,
+  "human studies (any)": 3790,
+  "reviews": 518
+ },
+ {
+  "era": "2000-2009",
+  "all": 10536,
+  "human trials": 701,
+  "meta-analyses and systematic reviews": 32,
+  "animal studies": 4442,
+  "human studies (any)": 3276,
+  "reviews": 725
+ },
+ {
+  "era": "2010 onwards",
+  "all": 36449,
+  "human trials": 1375,
+  "meta-analyses and systematic reviews": 390,
+  "animal studies": 9223,
+  "human studies (any)": 9489,
+  "reviews": 2313
+ }
+]

@@ -1,0 +1,23 @@
+SciNut: commenters before 2024 6,365, from 2024 7,596; from-2024 commenters already active before: 1,058 (14%)
+SESO: commenters before 2024 5,677, from 2024 22,356; from-2024 commenters already active before: 1,905 (9%)
+
+Q1b crossover, share of each period's commenters who EVER comment in the other subreddit:
+  SciNut  pre2024   n= 6,365: also SESO 8.2%, also carnivore 7.5%
+  SciNut  from2024  n= 7,596: also SESO 10.0%, also carnivore 4.0%
+  SESO    pre2024   n= 5,677: also SciNut 8.5%, also carnivore 15.3%
+  SESO    from2024  n=22,356: also SciNut 3.7%, also carnivore 6.7%
+  share of each period's COMMENTS written by people who ever comment in the other subreddit:
+  SciNut  pre2024  : by SESO commenters 22.3% of 90,616 comments
+  SciNut  from2024 : by SESO commenters 35.7% of 64,900 comments
+  SESO    pre2024  : by SciNut commenters 24.0% of 51,056 comments
+  SESO    from2024 : by SciNut commenters 14.5% of 187,170 comments
+
+Q1c / Q6: authors of the opinion-sample comments, by position (H harmful, NH not harmful)
+  SciNut  pre2024   H  n= 35: authors also commenting in SESO 43%; also carnivore 26%; first comment in SciNut from 2024 on: 0%
+  SciNut  pre2024   NH n= 27: authors also commenting in SESO 7%; also carnivore 4%; first comment in SciNut from 2024 on: 0%
+  SciNut  from2024  H  n= 21: authors also commenting in SESO 62%; also carnivore 57%; first comment in SciNut from 2024 on: 33%
+  SciNut  from2024  NH n= 29: authors also commenting in SESO 31%; also carnivore 7%; first comment in SciNut from 2024 on: 41%
+  SESO    pre2024   H  n= 71: authors also commenting in SciNut 25%; also carnivore 31%; first comment in SESO from 2024 on: 0%
+  SESO    pre2024   NH n=  3: authors also commenting in SciNut 100%; also carnivore 0%; first comment in SESO from 2024 on: 0%
+  SESO    from2024  H  n= 65: authors also commenting in SciNut 23%; also carnivore 12%; first comment in SESO from 2024 on: 54%
+  SESO    from2024  NH n= 13: authors also commenting in SciNut 8%; also carnivore 8%; first comment in SESO from 2024 on: 85%

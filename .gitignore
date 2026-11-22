@@ -34,9 +34,42 @@ upf/data/processed/amazon_meta_compact.csv.gz
 upf/data/processed/soj/
 upf/data/processed/cj/
 
+# seed-oils strand: Reddit text from Arctic Shift, rebuilt by seedoils/notebooks/fetch_arctic_shift.py
+seedoils/data/raw/
+# derived files that still hold Reddit text or per-document vectors
+seedoils/data/processed/*_docs.csv.gz
+seedoils/data/processed/*_vectors.npy
+seedoils/data/processed/*_doc_topics.csv.gz
+seedoils/data/processed/seed_authors*.csv
+seedoils/data/processed/citations.csv.gz
+seedoils/data/processed/stance_sheet*.csv
+seedoils/data/processed/stance_key.csv
+seedoils/data/processed/stance_labels*.csv
+seedoils/label_stance.html
+seedoils/data/processed/comments_to_label.jsonl
+seedoils/data/processed/comments_key.csv
+seedoils/data/processed/comment_labels*.csv
+
 # hand-labelling page holds Amazon review text: keep local
 upf/label_emotions.html
 upf/label_emotions_set2.html
 
 # stale analyses and figures kept locally, not shared
 upf/_archive/
+
+# happiness project raw data (WVS registration terms; HappyDB licence unclear)
+happiness/data/raw/
+
+# belief-network project raw data (ESS, login-gated)
+beliefs/data/raw/
+
+# Manifesto Project data and texts: redistribution forbidden by their terms of use; API key must never be committed
+beliefs/data/processed/manifesto_text/
+beliefs/.manifesto_api_key
+
+# more local-only files from the seed-oils strand
+.venv-*/
+seedoils/data/processed/*.npz
+seedoils/data/processed/hostility_sample_to_label.csv
+seedoils/data/processed/artifact/_k50_backup/
+seedoils/data/processed/artifact/_layout_backup/

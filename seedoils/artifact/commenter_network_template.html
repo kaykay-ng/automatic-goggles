@@ -1,0 +1,67 @@
+<title>Commenter Communities</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
+<style>
+/* Layout: one backbone network, a colour toggle, then a table that names each community. Test page, not the paper. */
+:root{--bg:#f6f7f9;--card:#ffffff;--fg:#1b1f24;--mut:#5a6470;--line:#dde1e7;--edge:#c3cad3;--old:#1d5967;--new:#c4521a;--head:"Space Grotesk","Inter",system-ui,sans-serif;--body:"Inter",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14171b;--card:#1b1f25;--fg:#e8ebef;--mut:#99a3af;--line:#2d333b;--edge:#363e48;--old:#7cc4d1;--new:#f08a4b;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#14171b;--card:#1b1f25;--fg:#e8ebef;--mut:#99a3af;--line:#2d333b;--edge:#363e48;--old:#7cc4d1;--new:#f08a4b;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.55;padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:920px;margin:0 auto;display:flex;flex-direction:column;gap:26px}
+h1{font:600 28px/1.15 var(--head);margin:0 0 6px;text-wrap:balance}h2{font:600 19px/1.3 var(--head);margin:0 0 4px;text-wrap:balance}p{margin:0}
+.lede,.sub,.note{color:var(--mut);max-width:72ch}.note{font-size:13.5px}.note b{color:var(--fg);font-weight:600}
+.fig{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:20px;display:flex;flex-direction:column;gap:14px}
+.seg-ctl{display:inline-flex;border:1px solid var(--line);border-radius:6px;overflow:hidden;align-self:flex-start}.seg-ctl button{font:500 13px var(--body);padding:7px 14px;background:transparent;color:var(--fg);border:0;cursor:pointer}.seg-ctl button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}.seg-ctl button:focus-visible{outline:2px solid var(--new);outline-offset:2px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--mut)}.legend span{display:inline-flex;align-items:center;gap:6px}.legend i{width:12px;height:12px;border-radius:50%;display:inline-block}
+svg{width:100%;height:auto;display:block}.cl{font:600 12px var(--body);fill:var(--fg);paint-order:stroke;stroke:var(--card);stroke-width:3.5px;stroke-linejoin:round;pointer-events:none}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}.stat{border:1px solid var(--line);border-radius:6px;padding:10px 12px}.stat b{display:block;font:600 20px var(--head);font-variant-numeric:tabular-nums}.stat span{font-size:12.5px;color:var(--mut)}
+.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:640px}th,td{padding:7px 9px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}th{font-size:12px;color:var(--mut);font-weight:600}td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}tr.row{cursor:default}tr.row:hover{background:color-mix(in srgb,var(--fg) 6%,transparent)}.chip{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:7px;vertical-align:-1px}
+.tip{position:fixed;z-index:20;pointer-events:none;background:var(--fg);color:var(--bg);font-size:12.5px;padding:7px 10px;border-radius:5px;max-width:280px;line-height:1.4}.tip[hidden]{display:none}
+@media (max-width:620px){h1{font-size:24px}.fig{padding:16px}}
+</style>
+<div class="wrap">
+ <header><h1>Who talks about the same things</h1>
+ <p class="lede">Test figure, not yet in the paper. Each dot is a commenter in r/StopEatingSeedOils. A line joins two commenters whose topic mix is unusually similar, after a statistical filter removes almost every possible link. Groups of dots are communities.</p></header>
+ <section class="fig"><div><h2>Figure A. The backbone of topic similarity</h2><p class="sub" id="subA"></p></div>
+ <div class="seg-ctl" role="group" aria-label="Colour by"><button type="button" id="c-comm" aria-pressed="true">Community</button><button type="button" id="c-new" aria-pressed="false">Newcomer or long-time</button></div>
+ <div class="legend" id="leg"></div><svg id="net" viewBox="0 0 1000 760" role="img" aria-label="Network of commenters linked by similar topics, coloured by community"></svg>
+ <p class="note" id="noteA"></p></section>
+ <section class="fig"><div><h2>Figure B. What each community talks about</h2><p class="sub">Communities are named by me from their most over-represented topics. Hover a row to highlight it on the map.</p></div><div class="scroll"><table id="tab"></table></div>
+ <p class="note" id="noteB"></p></section>
+ <section class="fig"><h2>How the backbone was made, and what to be careful about</h2><div class="stats" id="stats"></div><p class="note" id="method"></p>
+ <p class="note">The communities are built from what people talk about, so each one is a topic niche by construction. They show who occupies each niche, not that these people interact or know each other. Results depend on the filter: a stricter setting leaves more people unlinked and a looser one makes the communities less stable. Only comments of 15 words or more are used, and "long-time" means a first comment in the subreddit before 2024.</p></section>
+</div><div class="tip" id="tip" hidden></div>
+<script>
+const D=__DATA__;D.gen_all_label=D.iso.gen_all;const NS='http://www.w3.org/2000/svg';
+const LAB=['Condiments, snacks, bread','Olive oil and other oils','Politics (RFK, Trump)','Eggs and raw milk','Bread, butter, nuts','Organic, protein, soy','Ingredient labels, ice cream','Sugar, carbs, weight','Vaccines, fluoride','LDL and cholesterol','Skin and sun','Infant formula','Coffee, plastics, sushi','Tallow and fries','MSG','Vitamins, supplements'];
+const SH=['Condiments, snacks','Olive oil','Politics','Eggs, raw milk','Bread, butter','Organic, protein','Labels, ice cream','Sugar, carbs','Vaccines','LDL'];
+const CL=['#d55e00','#0072b2','#009e73','#cc79a7','#e69f00','#56b4e9','#7a5195','#8c6d31','#2a9d8f','#b5179e'],CD=['#f08a4b','#4aa3e0','#2fc9a0','#e59ac4','#f0b429','#7cc4ee','#a98bd6','#c9a45c','#5fd0c2','#e060c8'];
+const dark=()=>document.documentElement.dataset.theme==='dark'||(document.documentElement.dataset.theme!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches);
+const GREY=()=>dark()?'#6f7d8d':'#9aaabb';const colOf=c=>c<10?(dark()?CD:CL)[c]:GREY();
+const tip=document.getElementById('tip');const show=(e,t)=>{tip.textContent=t;tip.hidden=false;tip.style.left=Math.max(8,Math.min(e.clientX+12,innerWidth-300))+'px';tip.style.top=(e.clientY+14)+'px'};const hide=()=>{tip.hidden=true};
+const fmt=n=>n.toLocaleString('en-US');const el=(t,a,p)=>{const x=document.createElementNS(NS,t);for(const k in a)x.setAttribute(k,a[k]);if(p)p.appendChild(x);return x};
+let mode='comm',hl=null;const cx=c=>{const n=D.nodes.filter(v=>v.c===c);return[n.reduce((s,v)=>s+v.x,0)/n.length,n.reduce((s,v)=>s+v.y,0)/n.length]};
+function legend(){const L=document.getElementById('leg');L.replaceChildren();if(mode==='comm'){for(let c=0;c<10;c++){const s=document.createElement('span'),i=document.createElement('i');i.style.background=colOf(c);s.append(i,(c+1)+' '+SH[c]);L.appendChild(s)}const s=document.createElement('span'),i=document.createElement('i');i.style.background=GREY();s.append(i,'11 to 16: smaller communities');L.appendChild(s)}
+ else{[['var(--old)','Long-time commenter (first comment before 2024)'],['var(--new)','Newcomer (first comment from 2024)']].forEach(([c,t])=>{const s=document.createElement('span'),i=document.createElement('i');i.style.background=c;s.append(i,t);L.appendChild(s)})}}
+function draw(){const svg=document.getElementById('net');svg.replaceChildren();const X=v=>30+v*940,Y=v=>30+v*700;const g=el('g',{},svg);
+ D.edges.forEach(([a,b])=>{const A=D.nodes[a],B=D.nodes[b];el('line',{x1:X(A.x),y1:Y(A.y),x2:X(B.x),y2:Y(B.y),stroke:'var(--edge)','stroke-width':.6,opacity:hl===null?.55:(A.c===hl&&B.c===hl?.9:.12)},g)});
+ D.nodes.forEach(n=>{const r=1.6+.42*Math.sqrt(n.d);const c=el('circle',{cx:X(n.x),cy:Y(n.y),r:r,fill:mode==='comm'?colOf(n.c):(n.o?'var(--old)':'var(--new)'),'fill-opacity':hl===null||n.c===hl?.9:.15,stroke:'var(--card)','stroke-width':.5},svg);
+  c.addEventListener('mousemove',e=>show(e,'Community '+(n.c+1)+': '+LAB[n.c]+'\n'+(n.o?'Long-time commenter':'Newcomer')+', '+n.d+' comments in the topic model'));c.addEventListener('mouseleave',hide)});
+ for(let c=0;c<10;c++){const [x,y]=cx(c);if(hl!==null&&hl!==c)continue;const t=el('text',{x:X(x),y:Y(y),'text-anchor':'middle',class:'cl'},svg);t.textContent=(c+1)+' '+SH[c]}}
+function render(){legend();draw()}
+function setMode(m){mode=m;document.getElementById('c-comm').setAttribute('aria-pressed',m==='comm');document.getElementById('c-new').setAttribute('aria-pressed',m==='new');render()}
+document.getElementById('c-comm').addEventListener('click',()=>setMode('comm'));document.getElementById('c-new').addEventListener('click',()=>setMode('new'));
+function table(){const t=document.getElementById('tab');t.replaceChildren();const h=t.createTHead().insertRow();['','Community','People','Long-time','Comments per person','Talk about more than others'].forEach((x,i)=>{const th=document.createElement('th');th.textContent=x;if(i>=2&&i<=4)th.className='num';h.appendChild(th)});
+ const b=t.createTBody();D.comms.forEach(c=>{const r=b.insertRow();r.className='row';const a=r.insertCell();a.textContent=c.id+1;const n=r.insertCell();const i=document.createElement('i');i.className='chip';i.style.background=colOf(c.id);n.append(i,LAB[c.id]);
+  [[fmt(c.size),'num'],[c.long+'%','num'],[c.dpu,'num']].forEach(([v,k])=>{const d=r.insertCell();d.textContent=v;d.className=k});
+  const w=r.insertCell();w.textContent=c.topics.slice(0,2).map(x=>x.w+' ('+x.s+'% of their comments, '+x.o+'% overall)').join('; ');
+  r.addEventListener('mouseenter',()=>{hl=c.id;draw()});r.addEventListener('mouseleave',()=>{hl=null;draw()})})}
+function info(){const n=D.nodes.length,avg=D.nodes.reduce((s,v)=>s+v.d,0)/n;
+ document.getElementById('subA').textContent=fmt(n)+' commenters who are linked by the backbone. Dot size is how many comments they wrote; closeness on the page is only for display.';
+ document.getElementById('noteA').innerHTML='Of '+fmt(D.n_users)+' commenters, <b>'+fmt(D.iso.n)+'</b> ('+Math.round(D.iso.n/D.n_users*100)+'%) have no link left and are not drawn. They are the general core: <b>'+D.iso.docs+'</b> comments each on average against <b>'+Math.round(avg)+'</b> for those drawn, and <b>'+D.iso.gen_share+'%</b> of their comments are in the one general seed-oil topic ("'+D.iso.gen_words+'", '+D.gen_all_label+'% of all comments) against <b>'+D.iso.gen_share_linked+'%</b> for those drawn. Their topic mix looks like everyone\'s, so no single link is unusually strong and the filter leaves them out. They are not cut off from the conversation.';
+ document.getElementById('noteB').innerHTML='Overall <b>'+D.long_all+'%</b> of these commenters are long-time. The politics community is the newcomer pocket (<b>'+D.comms[2].long+'%</b> long-time); eggs and raw milk is the most established (<b>'+D.comms[3].long+'%</b>). The differences between communities are larger than chance (permutation test, p = 0.013).';
+ const S=document.getElementById('stats');S.replaceChildren();[[fmt(D.n_users),'commenters with 10 or more comments in the topic model'],[fmt(D.links_full),'possible links (every pair has some similarity)'],[fmt(D.links_kept),'links kept, '+(D.links_kept/D.links_full*100).toFixed(2)+'% of them'],[D.comms.length,'communities found ('+D.comms.filter(c=>c.size>=100).length+' with 100 or more people)']].forEach(([a,b])=>{const d=document.createElement('div');d.className='stat';const x=document.createElement('b');x.textContent=a;const y=document.createElement('span');y.textContent=b;d.append(x,y);S.appendChild(d)});
+ document.getElementById('method').innerHTML='Filter: the <b>disparity filter</b> (Serrano and others, 2009) at significance <b>'+D.alpha+'</b>. For each commenter it keeps a link only if that link is unusually strong compared with their other links, so light commenters keep their best ties and no single cut-off favours heavy commenters. Similarity is the cosine of two commenters\' mixes over 50 data-driven topics. Communities come from Louvain, stable across 20 runs (agreement 0.95). With the topic labels shuffled, the same filter keeps only 0 to 44 links instead of '+fmt(D.links_kept)+'.'}
+info();table();render();
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{table();render()});
+</script>

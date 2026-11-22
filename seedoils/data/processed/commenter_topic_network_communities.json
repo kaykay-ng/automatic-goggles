@@ -1,0 +1,194 @@
+[
+ {
+  "community": 0,
+  "size": 217,
+  "long_time_pct": 42.9,
+  "docs_per_user": 30.4,
+  "top_topics": [
+   22,
+   26,
+   42,
+   41
+  ]
+ },
+ {
+  "community": 1,
+  "size": 185,
+  "long_time_pct": 29.2,
+  "docs_per_user": 35.2,
+  "top_topics": [
+   23,
+   10,
+   28,
+   41
+  ]
+ },
+ {
+  "community": 2,
+  "size": 184,
+  "long_time_pct": 21.7,
+  "docs_per_user": 30.7,
+  "top_topics": [
+   34,
+   35,
+   41,
+   48
+  ]
+ },
+ {
+  "community": 3,
+  "size": 175,
+  "long_time_pct": 53.1,
+  "docs_per_user": 35.8,
+  "top_topics": [
+   44,
+   6,
+   41,
+   42
+  ]
+ },
+ {
+  "community": 4,
+  "size": 148,
+  "long_time_pct": 45.9,
+  "docs_per_user": 23.7,
+  "top_topics": [
+   42,
+   21,
+   29,
+   9
+  ]
+ },
+ {
+  "community": 5,
+  "size": 147,
+  "long_time_pct": 39.5,
+  "docs_per_user": 26.0,
+  "top_topics": [
+   14,
+   15,
+   27,
+   41
+  ]
+ },
+ {
+  "community": 6,
+  "size": 144,
+  "long_time_pct": 27.1,
+  "docs_per_user": 28.1,
+  "top_topics": [
+   41,
+   3,
+   42,
+   22
+  ]
+ },
+ {
+  "community": 7,
+  "size": 139,
+  "long_time_pct": 42.4,
+  "docs_per_user": 42.4,
+  "top_topics": [
+   38,
+   36,
+   39,
+   33
+  ]
+ },
+ {
+  "community": 8,
+  "size": 125,
+  "long_time_pct": 33.6,
+  "docs_per_user": 34.7,
+  "top_topics": [
+   35,
+   40,
+   34,
+   19
+  ]
+ },
+ {
+  "community": 9,
+  "size": 106,
+  "long_time_pct": 38.7,
+  "docs_per_user": 37.9,
+  "top_topics": [
+   33,
+   38,
+   39,
+   20
+  ]
+ },
+ {
+  "community": 10,
+  "size": 62,
+  "long_time_pct": 46.8,
+  "docs_per_user": 31.4,
+  "top_topics": [
+   37,
+   42,
+   46,
+   7
+  ]
+ },
+ {
+  "community": 11,
+  "size": 59,
+  "long_time_pct": 47.5,
+  "docs_per_user": 35.5,
+  "top_topics": [
+   7,
+   42,
+   44,
+   27
+  ]
+ },
+ {
+  "community": 12,
+  "size": 41,
+  "long_time_pct": 39.0,
+  "docs_per_user": 17.9,
+  "top_topics": [
+   2,
+   18,
+   13,
+   42
+  ]
+ },
+ {
+  "community": 13,
+  "size": 34,
+  "long_time_pct": 41.2,
+  "docs_per_user": 24.1,
+  "top_topics": [
+   25,
+   42,
+   41,
+   26
+  ]
+ },
+ {
+  "community": 14,
+  "size": 33,
+  "long_time_pct": 42.4,
+  "docs_per_user": 25.4,
+  "top_topics": [
+   48,
+   40,
+   25,
+   18
+  ]
+ },
+ {
+  "community": 15,
+  "size": 31,
+  "long_time_pct": 48.4,
+  "docs_per_user": 26.7,
+  "top_topics": [
+   32,
+   28,
+   37,
+   47
+  ]
+ }
+]
