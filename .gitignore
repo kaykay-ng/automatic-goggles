@@ -90,3 +90,10 @@ seedoils/data/processed/*.log
 seedoils/artifact/preview_local.html
 seedoils/check_aliases.html
 alias_decisions*.csv
+seedoils/check_papers.html
+paper_checks*.csv
+seedoils/check_conclusions.html
+conclusion_checks*.csv
+seedoils/label_positions.html
+position_labels*.csv
+seedoils/data/processed/position_sample_key.csv

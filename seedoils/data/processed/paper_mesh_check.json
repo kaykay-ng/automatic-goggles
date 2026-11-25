@@ -1,0 +1,44 @@
+{
+ "relevant_papers": 242,
+ "with_openalex_record": 242,
+ "mesh_type_known": 161,
+ "mesh_type_counts": {
+  "unknown": 81,
+  "review / statement": 68,
+  "animal / cell": 43,
+  "human observational": 30,
+  "human trials / meta of trials": 20
+ },
+ "agreement_pct": 72.7,
+ "kappa": 0.645,
+ "confusion_ai_rows_mesh_cols": {
+  "animal / cell": {
+   "animal / cell": 43,
+   "human observational": 0,
+   "human trials / meta of trials": 0,
+   "other": 0,
+   "review / statement": 0
+  },
+  "human observational": {
+   "animal / cell": 0,
+   "human observational": 26,
+   "human trials / meta of trials": 3,
+   "other": 1,
+   "review / statement": 0
+  },
+  "human trials / meta of trials": {
+   "animal / cell": 0,
+   "human observational": 0,
+   "human trials / meta of trials": 20,
+   "other": 0,
+   "review / statement": 0
+  },
+  "review / statement": {
+   "animal / cell": 1,
+   "human observational": 15,
+   "human trials / meta of trials": 23,
+   "other": 1,
+   "review / statement": 28
+  }
+ }
+}

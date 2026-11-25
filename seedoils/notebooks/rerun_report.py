@@ -418,6 +418,34 @@ def reply_findings_section():
     return sec + "</section>"
 
 
+def paper_check_section():
+    fm, fc = PROC / "paper_mesh_check.json", PROC / "conclusion_eval.json"
+    if not (fm.exists() or fc.exists()):
+        return ""
+    sec = ('<section id="paperchecks"><h2>Checks of the AI paper labels</h2><p>The 499 cited papers behind Figure 3a/3c were labelled by Claude subagents from their abstracts '
+           '(relevance, conclusion about more seed oil / linoleic acid / PUFA, design, population). Two checks, chosen so no nutrition expertise is needed.</p>')
+    if fm.exists():
+        M = json.loads(fm.read_text()); ct = pd.DataFrame(M["confusion_ai_rows_mesh_cols"]).fillna(0).astype(int)
+        nonrev = [c for c in ct.columns if not c.startswith("review")]; diag = sum(ct.loc[c, c] for c in nonrev if c in ct.index); tot = int(ct[nonrev].values.sum())
+        sec += (f"<h3>Evidence type vs PubMed MeSH (expert-assigned)</h3><p>{M['relevant_papers']} relevant papers, {M['mesh_type_known']} with a MeSH study-design tag: agreement "
+                f"{M['agreement_pct']}% (kappa {M['kappa']}). Most disagreements are meta-analyses, which OpenAlex types as reviews while the AI codebook counts a meta-analysis of trials as trial evidence. "
+                f"Where MeSH names a design (not review), the AI matches in <b>{diag} of {tot}</b> ({100 * diag / tot:.0f}%). The AI saw a coarse MeSH humans/animals tag, so that split is not fully independent; trial vs observational is. "
+                "<code>paper_mesh_check.py</code>.</p>")
+        sec += table(["AI evidence type", *[e(c) for c in ct.columns]], [(e(r), *[str(ct.loc[r, c]) for c in ct.columns]) for r in ct.index], num=tuple(range(1, len(ct.columns) + 1)))
+    if fc.exists():
+        C = json.loads(fc.read_text())
+        for who, v in C["labellers"].items():
+            sec += (f"<h3>Conclusions, non-expert check ({e(who)}, blind, {C['papers']} papers)</h3><p>The page showed each abstract&#8217;s conclusion sentences "
+                    f"(section heading {C['conclusion_rule_counts'].get('section', 0)}, cue phrase {C['conclusion_rule_counts'].get('cue', 0)}, last two sentences {C['conclusion_rule_counts'].get('last two sentences', 0)}). "
+                    f"Unclear: {v['unclear']}. On the {v['compared']} judged: agreement with the AI <b>{v['agreement_pct']}%</b> (kappa {v['kappa_HBEM']}); harm vs not harm "
+                    f"<b>{v['agreement_harm_vs_not_pct']}%</b> (kappa {v['kappa_harm_vs_not']}). Disagreements are mostly borderline mixed findings and papers framed around lowering linoleic acid "
+                    "or raising omega-3 (the codebook asks about eating <i>more</i> seed oil); some extracted &#8216;conclusions&#8217; were a methods sentence. <code>conclusion_eval.py</code>.</p>")
+            cf = pd.DataFrame(v["confusion_ai_rows_hand_cols"]).fillna(0).astype(int)
+            sec += table(["AI \\ hand", *cf.columns], [(r, *[str(cf.loc[r, c]) for c in cf.columns]) for r in cf.index], num=tuple(range(1, len(cf.columns) + 1)))
+    sec += "<p>Comment positions (Figure 3b) are not checked: their sample files are not on this machine.</p>"
+    return sec + "</section>"
+
+
 def themes_section():
     out = []
     for pfx, name, f in (("seso", "r/StopEatingSeedOils", "themes_confirmed.json"), ("scinut", "r/ScientificNutrition", "scinut_themes_confirmed.json")):
@@ -562,6 +590,7 @@ def main():
                         + "</section>")
     # emoji
     sections.append(hostility_eval_section())
+    sections.append(paper_check_section())
     sections.append(emoji_section())
     # votes
     vs = []
