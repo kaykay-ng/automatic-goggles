@@ -54,9 +54,22 @@ L = np.array(list(labs.values())); valid = np.isin(L, ["H", "C", "N"]).all(0)
 # reference per target: a comment counts when every labeller gave H/C/N and they agree on the yes/no question being tested (H vs not; H or C vs N)
 TARGETS = {"strict: H": ["H"], "lenient: H or C": ["H", "C"]}
 REF = {}
+V = np.isin(L, ["H", "C", "N"])  # per labeller and item: gave a usable label
 for t, pos in TARGETS.items():
-    yes = np.isin(L, pos); agree = valid & (yes == yes[0]).all(0); REF[t] = (agree, yes[0])
-out["reference"] = {t: int(a.sum()) for t, (a, _) in REF.items()} | {"rule": "labellers agree on the yes/no question" if len(labs) > 1 else "single labeller"}
+    yes = np.isin(L, pos) & V; ny, nv = yes.sum(0), V.sum(0)
+    if len(labs) >= 3:  # majority of the labellers with a usable label; ties (e.g. 1 vs 1 when one said U) left out
+        ok_t = (nv >= 2) & (2 * ny != nv); REF[t] = (ok_t, 2 * ny > nv)
+    else:  # one or two labellers: they must agree
+        agree = valid & (yes == yes[0]).all(0); REF[t] = (agree, yes[0])
+out["reference"] = {t: int(a.sum()) for t, (a, _) in REF.items()} | {"rule": ("majority of labellers (ties left out)" if len(labs) >= 3 else
+                                                                           "labellers agree on the yes/no question" if len(labs) == 2 else "single labeller")}
+if len(labs) >= 3:  # Fleiss' kappa over items every labeller gave a usable label
+    def fleiss(cats):
+        M = np.array([[np.sum(L[:, i] == c) for c in cats] for i in range(L.shape[1]) if V[:, i].all()], float); n = M.sum(1)[0]
+        Pi = ((M * (M - 1)).sum(1) / (n * (n - 1))).mean(); pj = M.sum(0) / M.sum(); Pe = (pj ** 2).sum(); return float((Pi - Pe) / (1 - Pe)), int(len(M))
+    k3, n3 = fleiss(["H", "C", "N"]); Lb = L.copy(); L = np.where(np.isin(L, ["C", "N"]), "R", L); k_h, _ = fleiss(["H", "R"])
+    L = np.where(np.isin(Lb, ["H", "C"]), "X", Lb); k_hc, _ = fleiss(["X", "N"]); L = Lb
+    out["fleiss_kappa"] = {"items_all_labelled": n3, "H_C_N": round(k3, 3), "H_vs_rest": round(k_h, 3), "H_or_C_vs_N": round(k_hc, 3)}
 if len(labs) >= 2:
     for d in out["agreement"]:
         a, b = d["pair"].split("-"); okp = np.isin(labs[a], ["H", "C", "N"]) & np.isin(labs[b], ["H", "C", "N"])

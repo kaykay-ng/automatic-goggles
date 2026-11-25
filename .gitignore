@@ -74,6 +74,16 @@ seedoils/data/processed/hostility_sample_to_label.csv
 seedoils/data/processed/artifact/_k50_backup/
 seedoils/data/processed/artifact/_layout_backup/
 
+# hostility hand-labelling page holds Reddit text: keep local
+seedoils/label_hostility.html
+seedoils/label_hostility_sampleA.html
+
+# paper build output
+paper/build/
+
+# third-party papers kept locally
+paper/refs/
+
 # third-party code and model weights (torchMoji), fetched by hand: see seedoils/notebooks/torchmoji_check.py
 vendor/
 seedoils/data/processed/negation_check*.csv
@@ -88,3 +98,12 @@ seedoils/data/processed/lda/
 seedoils/data/processed/seeds/
 seedoils/data/processed/*.log
 seedoils/artifact/preview_local.html
+seedoils/check_aliases.html
+alias_decisions*.csv
+seedoils/check_papers.html
+paper_checks*.csv
+seedoils/check_conclusions.html
+conclusion_checks*.csv
+seedoils/label_positions.html
+position_labels*.csv
+seedoils/data/processed/position_sample_key.csv

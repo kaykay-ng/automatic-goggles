@@ -22,7 +22,7 @@ trump,president trump,
 maha,make america healthy again,
 ray-peat,ray peat,
 ray-peat,raypeat,
-# ray-peat,peat,mostly Ray Peat here but check (peat moss / gardening)
+ray-peat,peat,mostly Ray Peat here but check (peat moss / gardening); checked 25 Nov (HC)
 chris-knobbe,knobbe,
 chris-knobbe,chris knobbe,
 chris-knobbe,christopher knobbe,
@@ -38,20 +38,20 @@ tucker-goodrich,goodrich,
 tucker-carlson,tucker carlson,
 ancel-keys,ancel keys,
 ancel-keys,ancel,
-# ancel-keys,keys,ambiguous: ordinary word
+ancel-keys,keys,ambiguous: ordinary word; checked 25 Nov (HC)
 brad-marshall,brad marshall,
-# brad-marshall,marshall,check by reading
+brad-marshall,marshall,check by reading; checked 25 Nov (HC)
 # brad-marshall,brad,check by reading
 paul-saladino,paul saladino,
 paul-saladino,saladino,
 minnesota-coronary-experiment,minnesota coronary experiment,
 minnesota-coronary-experiment,minnesota coronary survey,
-# minnesota-coronary-experiment,mce,check by reading
+minnesota-coronary-experiment,mce,check by reading; checked 25 Nov (HC)
 sydney-diet-heart-study,sydney diet heart study,
 sydney-diet-heart-study,sydney diet heart,
 fda,food and drug administration,
 american-heart-association,american heart association,
-# american-heart-association,aha,ambiguous: the interjection "aha"
+american-heart-association,aha,ambiguous: the interjection "aha"; checked 25 Nov (HC)
 # ---- MULTI-WORD TERMS (decision 22 Nov): kept as one token, so a negation marks the whole term ("no seed oils" -> no_seed-oils).
 # Singular and plural stay separate (no lemmatization). Hyphenated spellings people type ("seed-oil", "peer-reviewed") are already one token.
 seed-oil,seed oil,
@@ -60,15 +60,35 @@ peer-review,peer review,
 peer-reviews,peer reviews,
 peer-reviewed,peer reviewed,
 # Candidates from the most frequent word pairs; switch on by removing the #:
-# olive-oil,olive oil,
-# avocado-oil,avocado oil,
-# coconut-oil,coconut oil,
-# vegetable-oil,vegetable oil,
-# vegetable-oils,vegetable oils,
-# linoleic-acid,linoleic acid,
-# saturated-fat,saturated fat,
-# processed-food,processed food,
-# processed-foods,processed foods,
-# heart-disease,heart disease,
-# red-meat,red meat,
-# weight-loss,weight loss,
+olive-oil,olive oil,checked by reading 25 Nov (HC)
+avocado-oil,avocado oil,checked by reading 25 Nov (HC)
+coconut-oil,coconut oil,checked by reading 25 Nov (HC)
+vegetable-oil,vegetable oil,checked by reading 25 Nov (HC)
+vegetable-oils,vegetable oils,checked by reading 25 Nov (HC)
+linoleic-acid,linoleic acid,checked by reading 25 Nov (HC)
+saturated-fat,saturated fat,checked by reading 25 Nov (HC)
+processed-food,processed food,checked by reading 25 Nov (HC)
+processed-foods,processed foods,checked by reading 25 Nov (HC)
+heart-disease,heart disease,checked by reading 25 Nov (HC)
+red-meat,red meat,checked by reading 25 Nov (HC)
+weight-loss,weight loss,checked by reading 25 Nov (HC)
+olive-oil,olive oils,plural of an approved term (25 Nov)
+avocado-oil,avocado oils,plural of an approved term (25 Nov)
+coconut-oil,coconut oils,plural of an approved term (25 Nov)
+linoleic-acid,linoleic acids,plural of an approved term (25 Nov)
+saturated-fat,saturated fats,plural of an approved term (25 Nov)
+heart-disease,heart diseases,plural of an approved term (25 Nov)
+red-meat,red meats,plural of an approved term (25 Nov)
+omega-6,omega 6,spelling variant: '6' alone is dropped by the tokenizer (25 Nov)
+omega-6,omega6,spelling variant (25 Nov)
+omega-6,omega 6s,spelling variant (25 Nov)
+omega-3,omega 3,spelling variant: '3' alone is dropped by the tokenizer (25 Nov)
+omega-3,omega3,spelling variant (25 Nov)
+omega-3,omega 3s,spelling variant (25 Nov)
+seed-oil,seedoil,spelling variant (25 Nov)
+seed-oils,seedoils,spelling variant (25 Nov)
+anti-seed-oil,anti-seed oil,hyphenated form kept whole (25 Nov)
+anti-seed-oils,anti-seed oils,hyphenated form kept whole (25 Nov)
+seed-oil-free,seed oil-free,hyphenated form kept whole (25 Nov)
+omega-6,omega6s,spelling variant (25 Nov)
+omega-3,omega3s,spelling variant (25 Nov)

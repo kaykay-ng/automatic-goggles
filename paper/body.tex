@@ -1,0 +1,37 @@
+% Paper text, shared by main.tex (PNAS template, for Overleaf) and preview.tex (plain two-column preview that compiles here).
+% Write the paper HERE. Plan: REPORT_PLAN.md. Limit: 6 pages including figures and references. Every number must come from rerun_results.html or a script in seedoils/notebooks.
+% Macros used below (\matmethods, \showmatmethods, \dropcap) exist in the PNAS class and are stubbed in preview.tex. Title, abstract, significance statement, author contributions: meta.tex.
+
+\dropcap{T}ODO: opening sentence. One paragraph: what happened in 2024 on r/StopEatingSeedOils, why it matters, and the question.
+
+\section*{Introduction}
+TODO (about 0.6 page). Seed-oil claims moved from a nutrition argument to a political one. Question: did the 2024 surge change what the conversation is about, who takes part and how they talk, and which findings survive a second method, a null model and a hand check? Data: Reddit (Arctic Shift), r/StopEatingSeedOils and r/ScientificNutrition. Tools: topic models and emotion classifiers (text), commenter and citation networks (network science).
+
+% \Endparasplit ends the first-page column setting from main.tex: move it to the end of the paragraphs that fill the first page.
+\Endparasplit
+
+\section*{Results}
+\subsection*{The conversation shifted from fatty-acid science to politics, vaccines and shopping}
+TODO. Activity, topic growth (Fig.~1), topic-model stability across five seeds and agreement with LDA.
+
+\subsection*{The new crowd forms its own communities}
+TODO. Commenter topic-similarity network: backbone, Louvain communities, null models, centralities, newcomer share (Fig.~2). What the thread and reply checks say.
+
+\subsection*{Hostility rose among old and new commenters; downvotes rose mostly for newcomers}
+TODO. GoEmotions flag and its hand-label agreement, alternative definitions, decomposition into old guard, topic mix and newcomers (Fig.~3).
+
+\section*{Discussion}
+TODO. What the results mean, and for each analysis one sentence on what it measures and one on what it misses. Limits: Reddit only, heavy commenters only, hostility is mostly disapproval, no causal claim about the cause of the 2024 surge.
+
+\matmethods{
+\textbf{Data.} TODO: what, where from, when collected (Arctic Shift, 22 November 2026), how many items per subreddit. \\
+\textbf{Topic models.} TODO. \\
+\textbf{Networks.} TODO. \\
+\textbf{Emotion and hostility scoring.} TODO. \\
+\textbf{Checks.} TODO: seeds, LDA, nulls, second community method, hand-labelled sample.
+}
+
+\showmatmethods{}
+
+
+\bibliography{references}
