@@ -1,6 +1,7 @@
 """Do user niches emerge in 2024? (1) active people per month per niche (communities from the all-period backbone, commenter_topic_network.py); (2) the same method run separately on before-2024 and from-2024 comments and communities matched by topic profile;
 (3) do niche members reply to each other more than chance. Same settings as Figure 7: >= 10 topic comments in the period, 50 topics, IDF cosine, disparity filter alpha 0.05, Louvain.
 Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/niche_emergence.py"""
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import gzip, glob, json
 from pathlib import Path
 import numpy as np, pandas as pd, networkx as nx
@@ -11,7 +12,7 @@ with gzip.open(glob.glob("seedoils/data/raw/*StopEatingSeedOils_comments.jsonl.g
     for l in f:
         x = json.loads(l); raw.append((x["id"], x["author"], str(x.get("parent_id", "")), int(x["created_utc"])))
 R = pd.DataFrame(raw, columns=["id", "a", "p", "t"]); who = dict(zip(R.id, R.a))
-D = pd.read_csv(P / "seso_k50_doc_topics.csv.gz"); D = D[D.kind == "comment"]; D["a"] = D.id.map(who); D = D[D.a.notna() & ~D.a.isin(["[deleted]", "AutoModerator"])]
+D = pd.read_csv(P / "seso_k50_doc_topics.csv.gz"); D = D[D.kind == "comment"]; D["a"] = D.id.map(who); D = D[D.a.notna() & (~D.a.isin(["[deleted]", "AutoModerator"]) & not_bot(D.a))]
 tinfo = pd.read_csv(P / "seso_k50_topics_info.csv").set_index("topic"); W = lambda t: ", ".join(w.strip() for w in tinfo.loc[t, "top_words"].split(",")[:2])
 # ---- all-period communities -> author map
 nd = D.groupby("a").size(); U = np.array(sorted(nd[nd >= 10].index)); Nn = pd.read_csv(P / "commenter_topic_network_nodes.csv"); assert len(U) == len(Nn)

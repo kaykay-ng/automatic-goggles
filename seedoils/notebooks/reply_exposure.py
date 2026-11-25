@@ -7,6 +7,7 @@ Linear probability models with two-way fixed effects (replier and thread, by alt
  C. Old guard's hostile share ~ newcomers' share of the thread's commenters | replier, month  (do old-guard people get harsher in threads with more newcomers?)
  D. Downvoted ~ replier is a newcomer + reply is hostile + parent is hostile | thread  (is the newcomer gap in downvotes about content or reception?)
 Run from final_project/ with the NLP env:  ./.venv-nlp/bin/python seedoils/notebooks/reply_exposure.py   (aggregates only)"""
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import glob
 import gzip
 import json
@@ -23,14 +24,14 @@ with gzip.open(glob.glob("seedoils/data/raw/*StopEatingSeedOils_comments.jsonl.g
 R = pd.DataFrame(rows, columns=["id", "a", "thread", "parent", "t", "score"]).set_index("id")
 LABS = list(pd.read_csv(P / "goemo_monthly.csv", nrows=1).columns[1:29]); HI = [LABS.index(k) for k in ("anger", "annoyance", "disapproval", "disgust")]
 host = {}
-for fn in ("goemo_seso.npz", "goemo_seso_short.npz"):
+for fn in ("goemo_seso.npz",):  # 15+ words only (decision 22 Nov): replies shorter than 15 words have no hostility label and drop out
     z = np.load(P / fn, allow_pickle=True); h = z["p"][:, HI].max(1) >= .5; host.update(zip(z["id"].astype(str), h.astype(float)))
 R["host"] = R.index.map(host); print(f"comments {len(R):,}; with a hostility label {R.host.notna().mean():.0%}")
 first = R.groupby("a").t.min(); R["new"] = (R.a.map(first) >= CUT).astype(int)
-ok = ~R.a.isin(["[deleted]", "AutoModerator"])
+ok = (~R.a.isin(["[deleted]", "AutoModerator"]) & not_bot(R.a))
 rep = R[ok & R.parent.str.startswith("t1_") & (R.t >= CUT)].copy(); rep["pid"] = rep.parent.str[3:]
 for c in ("a", "host", "new", "score"): rep["p_" + c] = rep.pid.map(R[c])
-rep = rep[rep.p_a.notna() & ~rep.p_a.isin(["[deleted]", "AutoModerator"]) & (rep.p_a != rep.a) & rep.host.notna() & rep.p_host.notna()].copy()
+rep = rep[rep.p_a.notna() & (~rep.p_a.isin(["[deleted]", "AutoModerator"]) & not_bot(rep.p_a)) & (rep.p_a != rep.a) & rep.host.notna() & rep.p_host.notna()].copy()
 rep["down"] = (rep.score.astype(float) <= 0).astype(float); rep["month"] = pd.to_datetime(rep.t, unit="s").dt.to_period("M").astype(str)
 print(f"replies from 2024 between two real people: {len(rep):,}; by old guard {int((rep.new == 0).sum()):,}, by newcomers {int((rep.new == 1).sum()):,}")
 print("raw hostile share of replies by (replier cohort -> parent cohort):")

@@ -83,3 +83,27 @@ paper/build/
 
 # third-party papers kept locally
 paper/refs/
+
+# third-party code and model weights (torchMoji), fetched by hand: see seedoils/notebooks/torchmoji_check.py
+vendor/
+seedoils/data/processed/negation_check*.csv
+seedoils/data/processed/concordance_*.txt
+seedoils/label_hostility.html
+seedoils/data/processed/hostility_labels*.csv
+seedoils/label_negation*.html
+negation_labels*.csv
+
+# per-document intermediates, run logs and the local preview build (regenerable)
+seedoils/data/processed/lda/
+seedoils/data/processed/seeds/
+seedoils/data/processed/*.log
+seedoils/artifact/preview_local.html
+seedoils/check_aliases.html
+alias_decisions*.csv
+seedoils/check_papers.html
+paper_checks*.csv
+seedoils/check_conclusions.html
+conclusion_checks*.csv
+seedoils/label_positions.html
+position_labels*.csv
+seedoils/data/processed/position_sample_key.csv

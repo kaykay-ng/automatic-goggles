@@ -1,5 +1,6 @@
 """Is the small fall in 'reception' (mean within-thread percentile of a comment's score) after 2024 specific to some themes, or general? Same percentile as seso_topics.votes(); thread-cluster bootstrap (300) for intervals.
 Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/reception_dip.py"""
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import gzip, json
 from pathlib import Path
 import numpy as np, pandas as pd
@@ -8,9 +9,10 @@ CUT = pd.Timestamp("2024-01-01").timestamp(); rng = np.random.default_rng(0)
 rows = []
 with gzip.open(RAW, "rt", encoding="utf-8") as f:
     for line in f:
-        x = json.loads(line); rows.append((x["id"], x["link_id"], str(x.get("parent_id", "")).startswith("t3_"), int(x["created_utc"]), x.get("score"), len((x.get("body") or "").split())))
+        x = json.loads(line)
+        if is_bot(x.get("author")): continue
+        rows.append((x["id"], x["link_id"], str(x.get("parent_id", "")).startswith("t3_"), int(x["created_utc"]), x.get("score"), len((x.get("body") or "").split())))
 C = pd.DataFrame(rows, columns=["id", "link_id", "top_level", "created_utc", "score", "words"]).dropna(subset=["score"])
-C = C[C.created_utc < C.created_utc.max() - 3 * 86400]
 g = C.groupby(["link_id", "top_level"]).score; C["n_in_group"] = g.transform("size"); C = C[C.n_in_group >= 5].copy(); C["vote_pct"] = g.rank(method="average", pct=True).loc[C.index]
 C["post"] = C.created_utc >= CUT
 T = pd.read_csv(PROC / "seso_doc_topics.csv.gz", usecols=["id", "kind", "topic"]); T = T[T.kind == "comment"]

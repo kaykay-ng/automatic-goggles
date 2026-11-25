@@ -1,5 +1,6 @@
 """Where do links inside comments and self-posts lead? Counts of documents containing a URL, grouped by domain type (our grouping), r/StopEatingSeedOils vs r/ScientificNutrition. Aggregates only.
 Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/link_domains.py"""
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import gzip, glob, json, re, collections
 import pandas as pd
 URL = re.compile(r"https?://([A-Za-z0-9.-]+)[^\s)\]>]*"); CUT = pd.Timestamp("2024-01-01").timestamp()
@@ -16,7 +17,9 @@ for sub in ("StopEatingSeedOils", "ScientificNutrition"):
     for kindf in ("comments", "posts"):
         with gzip.open(glob.glob(f"seedoils/data/raw/*{sub}_{kindf}.jsonl.gz")[0], "rt", encoding="utf-8") as f:
             for l in f:
-                x = json.loads(l); txt = (x.get("body") if kindf == "comments" else (x.get("selftext") or "") + " " + (x.get("url") or "")) or ""
+                x = json.loads(l)
+                if is_bot(x.get("author")): continue
+                txt = (x.get("body") if kindf == "comments" else (x.get("selftext") or "") + " " + (x.get("url") or "")) or ""
                 u = URL.findall(txt); n += 1; p = per["from 2024" if int(x["created_utc"]) >= CUT else "before 2024"]; p[0] += 1
                 if kindf == "posts" and x.get("url") and "reddit.com" in x["url"] and not (x.get("selftext") or "").strip(): u = []  # self posts only link to themselves
                 if u: withurl += 1; p[1] += 1; ks = {kind(d) for d in u}; [cnt.update([k]) for k in ks]; dom.update({d.lower() for d in u})

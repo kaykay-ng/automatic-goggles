@@ -1,0 +1,14 @@
+[
+ {"long": "Shopping and everyday food", "short": "Shopping"},
+ {"long": "Politics, vaccines and distrust", "short": "Politics"},
+ {"long": "Eggs, raw milk and sugar", "short": "Farm foods"},
+ {"long": "Omega-6 science", "short": "Omega-6"},
+ {"long": "Arguing about evidence and the sub", "short": "Evidence"},
+ {"long": "Olive, avocado and other oils", "short": "Other oils"},
+ {"long": "Calories, carbs and insulin", "short": "Carbs and weight"},
+ {"long": "Vegan, soy and grass-fed", "short": "Vegan and meat"},
+ {"long": "LDL and cholesterol", "short": "Cholesterol"},
+ {"long": "Sun, skin and plastics", "short": "Sun and plastics"},
+ {"long": "Allergies and canola", "short": "Allergies"},
+ {"long": "Infant formula and kids", "short": "Kids"}
+]

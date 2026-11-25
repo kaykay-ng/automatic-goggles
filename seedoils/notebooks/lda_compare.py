@@ -1,11 +1,16 @@
-"""LDA next to BERTopic on the same r/StopEatingSeedOils documents (comments of >= 15 words plus self-posts, quotes and links removed; seso_docs.csv.gz).
-LDA = scikit-learn LatentDirichletAllocation (online variational Bayes), unigrams, English stop words + the topic model's Reddit filler, words in 30..30% of documents (max_df drops words nearly every comment uses: seed, oil, fat, food ...).
-For k in KS and two seeds each:
- - coherence: mean NPMI of each topic's top-10 words over documents (same function as the k-sweep), BERTopic's ~130 topics scored the same way on their top unigrams;
- - seed stability: adjusted mutual information (AMI) of the dominant-topic labels between the two seeds;
- - growth: each topic's mean share (sum of document-topic weights) before 2024 and from 2024, ratio, topics with >= 1% share kept;
- - agreement with BERTopic: AMI of dominant LDA topic vs BERTopic topic, and where the five fastest-growing BERTopic topics (46 rfk/trump, 43 trump/vote, 20 vaccines/covid, 68, 107 political/left-right) land.
-Run from final_project/ with the NLP env (slow; background):  ./.venv-nlp/bin/python seedoils/notebooks/lda_compare.py   -> data/processed/lda_compare_summary.json, lda_k<k>_topics.csv. No text written."""
+"""LDA (course week 6) against BERTopic on the same r/StopEatingSeedOils documents (topic corpus: comments and self-posts of 15+ words).
+Words: the same counting rules as the topic labels (seedoil_common.bertopic_clean: names merged, negations marked no_x; English stop words + Reddit
+filler removed), single words only, kept when in >= 20 documents and <= 40% of documents. The document-term matrix is cached (lda_dtm.npz).
+LDA: scikit-learn LatentDirichletAllocation, online variational Bayes (batch 4,096, 10 passes), default priors (1/K). A document's LDA topic = its most
+probable topic (LDA gives every document a MIXTURE; the argmax makes it comparable with BERTopic's one topic per document).
+  fit K SEED   -> data/processed/lda/lda_k<K>_s<SEED>_doc_topics.csv.gz (id, topic, top_prob), _topics.csv (top words, share before / from 2024)
+  compare      -> data/processed/lda_comparison.json:
+     agreement with BERTopic (AMI, NMI; argmax topics vs BERTopic seed 42), LDA stability across its own seeds (AMI), coherence (mean NPMI of each
+     topic's top 10 words, computed for both models on the same document-term matrix; BERTopic's top words recomputed as c-TF-IDF over this
+     matrix so both use the same vocabulary), diversity (share of distinct words among all topics' top 10s), how mixed LDA documents are (mean
+     top probability), and, once themes_confirmed.json exists, each theme's share before / from 2024 under LDA (LDA topics mapped to themes by
+     majority overlap with the BERTopic themes) next to BERTopic.
+Run from the repo root:  ./.venv-nlp/bin/python seedoils/notebooks/lda_compare.py fit 123 0 ; ... compare"""
 import itertools
 import json
 import sys
@@ -15,50 +20,109 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import scipy.sparse as sp
-from sklearn.decomposition import LatentDirichletAllocation
-from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, CountVectorizer
-from sklearn.metrics import adjusted_mutual_info_score as ami
 
 sys.path.insert(0, str(Path(__file__).parent))
 import seso_topics as st  # noqa: E402
+from seedoil_common import TOKEN_PATTERN, bertopic_clean  # noqa: E402
 
-P = Path("seedoils/data/processed"); CUT = 1704067200; KS = [20, 40]; SEEDS = [0, 1]
-D = pd.read_csv(P / "seso_docs.csv.gz", keep_default_na=False); T = pd.read_csv(P / "seso_doc_topics.csv.gz", usecols=["id", "topic"]); assert (D.id.values == T.id.values).all()
-bert = T.topic.values; post = (D.created_utc >= CUT).values; n = len(D)
-cv = CountVectorizer(stop_words=list(ENGLISH_STOP_WORDS | st.REDDIT_FILLER), min_df=30, max_df=0.30, ngram_range=(1, 1))
-X = cv.fit_transform(D.text.tolist()).tocsr(); V = cv.get_feature_names_out(); print(f"documents {n:,}; vocabulary {len(V):,} words (30 docs min, 30% max)", flush=True)
-Xb = (X > 0).astype(np.float64).tocsc(); df = np.asarray(Xb.sum(0)).ravel(); vi = {w: i for i, w in enumerate(V)}
-def npmi(words):
-    ids = [vi[w] for w in words if w in vi][:10]; sc = []
-    for a, b in itertools.combinations(ids, 2):
-        co = Xb[:, a].multiply(Xb[:, b]).sum()
-        if co == 0: sc.append(-1.0); continue
-        pa, pb, pab = df[a] / n, df[b] / n, co / n; sc.append(np.log(pab / (pa * pb)) / -np.log(pab))
-    return float(np.mean(sc)) if sc else np.nan
-# BERTopic topics scored the same way (top unigrams that are in this vocabulary)
-info = pd.read_csv(P / "seso_topics_info.csv"); bc = []
-for w in info.top_words:
-    uni = [x.strip() for x in w.split(",") if " " not in x.strip() and x.strip() in vi]
-    if len(uni) >= 5: bc.append(npmi(uni))
-print(f"BERTopic ({len(info)} topics; {len(bc)} with >= 5 top unigrams in this vocabulary): mean NPMI {np.nanmean(bc):.3f}", flush=True)
-out = {"bertopic_npmi": float(np.nanmean(bc)), "runs": []}
-top5 = {46: "rfk, trump", 43: "trump, vote", 20: "vaccines, covid", 68: "political, right wing", 107: "left, political"}
-for k in KS:
-    labs = []; th = []
-    for s in SEEDS:
-        t0 = time.time(); lda = LatentDirichletAllocation(n_components=k, learning_method="online", batch_size=4096, max_iter=8, random_state=s, n_jobs=-1, evaluate_every=-1)
-        W = lda.fit_transform(X); W = W / W.sum(1, keepdims=True); comp = lda.components_ / lda.components_.sum(1, keepdims=True)
-        tops = [[V[j] for j in np.argsort(-comp[t])[:10]] for t in range(k)]; coh = [npmi(w) for w in tops]
-        lab = W.argmax(1); labs.append(lab); th.append((W, tops, coh)); print(f"k={k} seed {s}: fitted in {time.time() - t0:.0f}s; mean NPMI {np.mean(coh):.3f}", flush=True)
-    stab = ami(labs[0], labs[1]); a_b = [ami(l, bert) for l in labs]; print(f"k={k}: seed stability AMI {stab:.3f}; AMI with BERTopic labels {a_b[0]:.3f}, {a_b[1]:.3f}", flush=True)
-    W, tops, coh = th[0]; share_pre, share_post = W[~post].mean(0) * 100, W[post].mean(0) * 100; ratio = share_post / share_pre
-    rows = [{"topic": t, "share_pre": round(share_pre[t], 2), "share_post": round(share_post[t], 2), "ratio": round(ratio[t], 2), "npmi": round(coh[t], 3), "top_words": ", ".join(tops[t])} for t in range(k)]
-    pd.DataFrame(rows).sort_values("ratio", ascending=False).to_csv(P / f"lda_k{k}_topics.csv", index=False)
-    print(f"k={k} (seed 0) topics by growth:", flush=True)
-    for r in sorted(rows, key=lambda r: -r["ratio"])[:6]: print(f"   x{r['ratio']:<5} share {r['share_pre']}% -> {r['share_post']}%  npmi {r['npmi']}  {r['top_words']}", flush=True)
-    for r in sorted(rows, key=lambda r: r["ratio"])[:3]: print(f"   x{r['ratio']:<5} share {r['share_pre']}% -> {r['share_post']}%  npmi {r['npmi']}  {r['top_words']}", flush=True)
-    land = {}
-    for b, nm in top5.items():
-        m = bert == b; c = pd.Series(labs[0][m]).value_counts(normalize=True); land[nm] = (int(c.index[0]), round(float(c.iloc[0]), 2)); print(f"   BERTopic {nm}: {int(m.sum())} docs, {c.iloc[0]:.0%} fall in LDA topic {int(c.index[0])} ({', '.join(tops[int(c.index[0])][:5])})", flush=True)
-    out["runs"].append({"k": k, "npmi": [float(np.mean(t[2])) for t in th], "stability_ami": float(stab), "ami_bertopic": [float(x) for x in a_b], "landing": land})
-(P / "lda_compare_summary.json").write_text(json.dumps(out, indent=1)); print("done", flush=True)
+PROC = st.PROC; OUT = PROC / "lda"; SPLIT = 1704067200; DTM = OUT / "lda_dtm.npz"; MAP_MIN = 0.2
+
+
+def dtm():
+    OUT.mkdir(parents=True, exist_ok=True)
+    D = pd.read_csv(PROC / "seso_docs.csv.gz", usecols=["id", "created_utc", "text"], keep_default_na=False)
+    if DTM.exists():
+        z = np.load(DTM, allow_pickle=True)
+        return D, sp.csr_matrix((z["data"], z["indices"], z["indptr"]), shape=tuple(z["shape"])), z["vocab"]
+    from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, CountVectorizer
+    cv = CountVectorizer(preprocessor=bertopic_clean, token_pattern=TOKEN_PATTERN, stop_words=list(ENGLISH_STOP_WORDS | st.REDDIT_FILLER | {"emptydoc"}),
+                         min_df=20, max_df=0.4)
+    X = cv.fit_transform(D.text).tocsr(); vocab = cv.get_feature_names_out()
+    np.savez_compressed(DTM, data=X.data, indices=X.indices, indptr=X.indptr, shape=X.shape, vocab=vocab)
+    print(f"document-term matrix {X.shape[0]:,} x {X.shape[1]:,}, {X.nnz:,} non-zeros", flush=True)
+    return D, X, vocab
+
+
+def fit(K, seed):
+    from sklearn.decomposition import LatentDirichletAllocation
+    D, X, vocab = dtm(); t0 = time.time()
+    lda = LatentDirichletAllocation(n_components=K, learning_method="online", batch_size=4096, max_iter=10, random_state=seed, n_jobs=2)
+    theta = lda.fit_transform(X)
+    top = theta.argmax(1); post = (D.created_utc >= SPLIT).values
+    pd.DataFrame({"id": D.id, "topic": top, "top_prob": theta.max(1).round(3)}).to_csv(OUT / f"lda_k{K}_s{seed}_doc_topics.csv.gz", index=False)
+    rows = [{"topic": k, "n_docs": int((top == k).sum()), "share_pre2024": round(float((top[~post] == k).mean()), 4), "share_from2024": round(float((top[post] == k).mean()), 4),
+             "top_words": ", ".join(vocab[j] for j in np.argsort(-lda.components_[k])[:10])} for k in range(K)]
+    pd.DataFrame(rows).sort_values("n_docs", ascending=False).to_csv(OUT / f"lda_k{K}_s{seed}_topics.csv", index=False)
+    print(f"LDA K={K} seed={seed}: {time.time() - t0:.0f}s; perplexity {lda.perplexity(X):.0f}; empty topics {sum(r['n_docs'] == 0 for r in rows)}", flush=True)
+
+
+def npmi(top_idx, Xb, N, df):
+    sc = []
+    for ws in top_idx:
+        v = []
+        for a, b in itertools.combinations(ws, 2):
+            co = Xb[:, a].multiply(Xb[:, b]).sum()
+            if co == 0:
+                v.append(-1.0); continue
+            pa, pb, pab = df[a] / N, df[b] / N, co / N
+            v.append(math_log(pab / (pa * pb)) / -math_log(pab))
+        sc.append(np.mean(v))
+    return float(np.mean(sc))
+
+
+def math_log(x):
+    return float(np.log(x))
+
+
+def compare():
+    from sklearn.metrics import adjusted_mutual_info_score as ami, normalized_mutual_info_score as nmi
+    from sklearn.preprocessing import normalize
+    D, X, vocab = dtm(); N = X.shape[0]; Xb = (X > 0).astype(np.float64).tocsc(); df = np.asarray(Xb.sum(0)).ravel()
+    B = pd.read_csv(PROC / "seso_doc_topics.csv.gz", usecols=["id", "topic"]).set_index("id").topic.reindex(D.id).values
+    post = (D.created_utc >= SPLIT).values
+    runs = {}
+    for f in sorted(OUT.glob("lda_k*_s*_doc_topics.csv.gz")):
+        K, s = f.name.split("_")[1][1:], f.name.split("_")[2][1:]
+        runs[(int(K), int(s))] = pd.read_csv(f).set_index("id").reindex(D.id)
+    # c-TF-IDF top words of the BERTopic topics over THIS matrix, so both models are scored on the same vocabulary
+    ids = sorted(set(B)); M = sp.csr_matrix((np.ones(N), (np.searchsorted(ids, B), np.arange(N))), shape=(len(ids), N)) @ X
+    C = sp.csr_matrix(M, dtype=float); idf = np.log(int(C.sum(1).mean()) / np.maximum(np.asarray(C.sum(0)).ravel(), 1) + 1)
+    W = normalize(C, norm="l1", axis=1).multiply(idf).toarray(); b_top = [np.argsort(-w)[:10] for w in W]
+    diversity = lambda tops: round(len({j for t in tops for j in t}) / (10 * len(tops)), 3)
+    out = {"bertopic": {"topics": len(ids), "coherence_npmi": round(npmi(b_top, Xb, N, df), 3), "diversity": diversity(b_top)}, "lda": []}
+    vidx = {w: i for i, w in enumerate(vocab)}
+    for (K, s), R in sorted(runs.items()):
+        T = pd.read_csv(OUT / f"lda_k{K}_s{s}_topics.csv")
+        l_top = [[vidx[w.strip()] for w in tw.split(",")] for tw in T.top_words]
+        out["lda"].append({"K": K, "seed": s, "used_topics": int((T.n_docs > 0).sum()), "ami_vs_bertopic": round(float(ami(B, R.topic.values)), 3),
+                           "nmi_vs_bertopic": round(float(nmi(B, R.topic.values)), 3), "mean_top_prob": round(float(R.top_prob.mean()), 3),
+                           "coherence_npmi": round(npmi(l_top, Xb, N, df), 3), "diversity": diversity(l_top)})
+    stab = [{"K": K, "a": a, "b": b, "ami": round(float(ami(runs[(K, a)].topic.values, runs[(K, b)].topic.values)), 3)}
+            for K in {k for k, _ in runs} for a, b in itertools.combinations(sorted(s for k, s in runs if k == K), 2)]
+    out["lda_stability"] = stab
+    tf = PROC / "themes_confirmed.json"
+    if tf.exists():
+        themes = json.loads(tf.read_text()); bt = pd.Series("other", index=range(N))
+        for th, tids in themes.items():
+            bt[np.isin(B, tids)] = th
+        out["themes"] = {}
+        for th in themes:
+            row = {"bertopic": [round(float((bt.values[~post] == th).mean() * 100), 2), round(float((bt.values[post] == th).mean() * 100), 2)]}
+            for (K, s), R in runs.items():
+                # an LDA topic counts toward the theme holding the largest share of its documents, if that share is >= MAP_MIN (LDA topics are
+                # mixtures, so a majority rule leaves almost every LDA topic unmapped; 30% leaves several themes without any LDA topic)
+                df_ = pd.DataFrame({"t": R.topic.values, "th": bt.values}); n_t = df_.groupby("t").size()
+                sh = df_[df_.th != "other"].groupby("t").th.value_counts().div(n_t, level=0)
+                best = sh.groupby(level=0).idxmax().map(lambda x: x[1]); val = sh.groupby(level=0).max()
+                mp = {t: best[t] for t in val.index if val[t] >= MAP_MIN}
+                lt = np.array([mp.get(t, "other") for t in R.topic.values], dtype=object)
+                row[f"lda_k{K}_s{s}"] = [round(float((lt[~post] == th).mean() * 100), 2), round(float((lt[post] == th).mean() * 100), 2)]
+            out["themes"][th] = row
+    (PROC / "lda_comparison.json").write_text(json.dumps(out, indent=1)); print(json.dumps(out, indent=1))
+
+
+if __name__ == "__main__":
+    if sys.argv[1] == "fit":
+        fit(int(sys.argv[2]), int(sys.argv[3]))
+    else:
+        compare()

@@ -7,6 +7,7 @@ and keep the merge distances. Seed-1 merges are saved per k for charting.
 Run from final_project/ with the NLP env (slow: one full fit per seed; run in the background):
   ./.venv-nlp/bin/python seedoils/notebooks/seso_topics_k_sweep.py
   -> seedoils/data/processed/seso_k_sweep.csv, seso_k_sweep_merges.csv, seso_k<k>_topics_info.csv, seso_k<k>_doc_topics.csv.gz (first seed). No text written."""
+from seedoil_common import TOKEN_PATTERN, bertopic_clean, hyphen_bertopic  # hyphen-keeping tokenizer (omega-6 stays whole)
 import itertools
 import sys
 from pathlib import Path
@@ -49,6 +50,7 @@ def npmi_coherence(W, Xb, N, df, topn=10):
 
 def main():
     from bertopic import BERTopic
+    HyphenBERTopic = hyphen_bertopic()  # BERTopic, but hyphens survive its text clean-up
     from hdbscan import HDBSCAN
     from scipy.cluster.hierarchy import fcluster, linkage
     from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, CountVectorizer
@@ -58,14 +60,14 @@ def main():
     V = np.load(PROC / "seso_vectors.npy").astype(np.float32)
     docs = D.text.tolist()
     stop = list(ENGLISH_STOP_WORDS | st.REDDIT_FILLER)
-    vec = lambda: CountVectorizer(stop_words=stop, min_df=20, ngram_range=(1, 2))
-    cvx = CountVectorizer(stop_words=stop, min_df=20, ngram_range=(1, 2))
-    X = cvx.fit_transform(docs).tocsr(); vocab = cvx.get_feature_names_out()
+    vec = lambda: CountVectorizer(stop_words=stop, token_pattern=TOKEN_PATTERN, min_df=20, ngram_range=(1, 2))
+    cvx = CountVectorizer(stop_words=stop, token_pattern=TOKEN_PATTERN, min_df=20, ngram_range=(1, 2))
+    X = cvx.fit_transform([bertopic_clean(d) for d in docs]).tocsr(); vocab = cvx.get_feature_names_out()
     Xb = (X > 0).astype(np.float64).tocsc(); N = X.shape[0]; df = np.asarray(Xb.sum(axis=0)).ravel()
     pre, post = (D.created_utc < 1704067200).values, (D.created_utc >= 1704067200).values
     labels, coh, merges = {}, {}, []
     for seed in SEEDS:
-        tm = BERTopic(umap_model=UMAP(n_neighbors=15, n_components=5, min_dist=0.0, metric="cosine", random_state=seed),
+        tm = HyphenBERTopic(umap_model=UMAP(n_neighbors=15, n_components=5, min_dist=0.0, metric="cosine", random_state=seed),
                       hdbscan_model=HDBSCAN(min_cluster_size=150, min_samples=15, metric="euclidean", cluster_selection_method="eom", prediction_data=True),
                       vectorizer_model=vec(), calculate_probabilities=False, verbose=False)
         topics, _ = tm.fit_transform(docs, embeddings=V)

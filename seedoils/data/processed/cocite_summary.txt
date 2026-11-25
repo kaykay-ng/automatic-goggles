@@ -1,189 +1,183 @@
-works cited by >= 2 users: 1,985 {'both': 418, 'SESO': 88, 'SciNut': 1479}; citing users SESO 513, SciNut 1,293; users citing in both: 49
+works cited by >= 2 users: 1,987 {'both': 416, 'SESO': 88, 'SciNut': 1483}; citing users SESO 511, SciNut 1,291; users citing in both: 48
 
-== Reddit co-citation (same user cited both): nodes with edges 1,969, edges 167,668, Louvain communities 23 (>= 20 works: 15), modularity 0.389, side assortativity 0.141
-  c0: 384 works, mean lean -0.95, sides {'SciNut': 365, 'both': 18, 'SESO': 1}, animal 4%, humans-only 77%
-      [2 SESO / 15 SciNut] Effect of a plant-based, low-fat diet versus an animal-based, ketogenic diet on  (2021)
-      [3 SESO / 12 SciNut] Consumption of red meat and processed meat and cancer incidence: a systematic re (2021)
-      [2 SESO / 11 SciNut] The Effect of Coconut Oil Consumption on Cardiovascular Risk Factors: A Systemat (2020)
-      [0 SESO / 11 SciNut] Overfeeding Polyunsaturated and Saturated Fat Causes Distinct Effects on Liver a (2014)
-      [0 SESO / 11 SciNut] A satiety index of common foods. (1995)
-  c1: 248 works, mean lean -0.42, sides {'both': 90, 'SciNut': 142, 'SESO': 16}, animal 20%, humans-only 56%
+== Reddit co-citation (same user cited both): nodes with edges 1,971, edges 167,968, Louvain communities 20 (>= 20 works: 14), modularity 0.392, side assortativity 0.143
+  c0: 267 works, mean lean -0.49, sides {'SciNut': 163, 'both': 91, 'SESO': 13}, animal 22%, humans-only 55%
       [10 SESO / 8 SciNut] Use of dietary linoleic acid for secondary prevention of coronary heart disease  (2013)
-      [12 SESO / 4 SciNut] Re-evaluation of the traditional diet-heart hypothesis: analysis of recovered da (2016)
       [11 SESO / 5 SciNut] Soybean Oil Is More Obesogenic and Diabetogenic than Coconut Oil and Fructose in (2015)
+      [12 SESO / 4 SciNut] Re-evaluation of the traditional diet-heart hypothesis: analysis of recovered da (2016)
       [8 SESO / 4 SciNut] Dependence of photocarcinogenesis and photoimmunosuppression in the hairless mou (1996)
-      [5 SESO / 6 SciNut] United States Dietary Trends Since 1800: Lack of Association Between Saturated F (2022)
-  c2: 226 works, mean lean -0.46, sides {'SciNut': 132, 'both': 78, 'SESO': 16}, animal 3%, humans-only 78%
-      [7 SESO / 20 SciNut] Low-density lipoproteins cause atherosclerotic cardiovascular disease. 1. Eviden (2017)
+      [5 SESO / 6 SciNut] Linoleic acid–good or bad for the brain? (2020)
+  c1: 266 works, mean lean -0.62, sides {'SciNut': 192, 'both': 61, 'SESO': 13}, animal 2%, humans-only 76%
       [5 SESO / 22 SciNut] Dietary Fats and Cardiovascular Disease: A Presidential Advisory From the Americ (2017)
+      [7 SESO / 20 SciNut] Low-density lipoproteins cause atherosclerotic cardiovascular disease. 1. Eviden (2017)
       [7 SESO / 16 SciNut] Effects on Coronary Heart Disease of Increasing Polyunsaturated Fat in Place of  (2010)
-      [3 SESO / 19 SciNut] Reduction in saturated fat intake for cardiovascular disease (2020)
       [6 SESO / 16 SciNut] The effect of replacing saturated fat with mostly n-6 polyunsaturated fat on cor (2017)
-  c3: 204 works, mean lean +0.20, sides {'SESO': 45, 'SciNut': 51, 'both': 108}, animal 11%, humans-only 60%
-      [16 SESO / 15 SciNut] Saturated Fats and Health: A Reassessment and Proposal for Food-Based Recommenda (2020)
-      [5 SESO / 17 SciNut] LDL-C does not cause cardiovascular disease: a comprehensive review of the curre (2018)
-      [2 SESO / 19 SciNut] Total cholesterol and all-cause mortality by sex and age: a prospective cohort s (2019)
-      [6 SESO / 12 SciNut] Reduction in saturated fat intake for cardiovascular disease (2020)
-      [9 SESO / 6 SciNut] Cooking oil/fat consumption and deaths from cardiometabolic diseases and other c (2021)
-  c4: 170 works, mean lean -0.86, sides {'SciNut': 147, 'both': 23}, animal 2%, humans-only 69%
-      [0 SESO / 13 SciNut] High-Protein Plant-Based Diet Versus a Protein-Matched Omnivorous Diet to Suppor (2021)
-      [0 SESO / 12 SciNut] Primary Prevention of Cardiovascular Disease with a Mediterranean Diet Supplemen (2018)
-      [1 SESO / 9 SciNut] Cardiovascular Risk Reduction with Icosapent Ethyl for Hypertriglyceridemia (2018)
+      [3 SESO / 19 SciNut] Reduction in saturated fat intake for cardiovascular disease (2020)
+  c2: 213 works, mean lean -0.95, sides {'SciNut': 203, 'both': 10}, animal 5%, humans-only 72%
+      [0 SESO / 11 SciNut] Overfeeding Polyunsaturated and Saturated Fat Causes Distinct Effects on Liver a (2014)
+      [0 SESO / 10 SciNut] Plant‐Based Diets Are Associated With a Lower Risk of Incident Cardiovascular Di (2019)
+      [0 SESO / 8 SciNut] Weight Loss with a Low-Carbohydrate, Mediterranean, or Low-Fat Diet (2008)
+      [0 SESO / 8 SciNut] Persistent metabolic adaptation 6 years after “The Biggest Loser” competition (2016)
+      [0 SESO / 7 SciNut] Vegetarian diets and cancer risk: pooled analysis of 1.8 million women and men i (2026)
+  c3: 210 works, mean lean -0.85, sides {'SciNut': 179, 'both': 31}, animal 4%, humans-only 69%
+      [0 SESO / 11 SciNut] A satiety index of common foods. (1995)
+      [1 SESO / 9 SciNut] Saturated Fat Is More Metabolically Harmful for the Human Liver Than Unsaturated (2018)
+      [1 SESO / 9 SciNut] Substituting dietary saturated for monounsaturated fat impairs insulin sensitivi (2001)
+      [0 SESO / 9 SciNut] Fat and carbohydrate overfeeding in humans: different effects on energy storage (1995)
+      [0 SESO / 9 SciNut] Association of Animal and Plant Protein Intake With All-Cause and Cause-Specific (2016)
+  c4: 172 works, mean lean -0.79, sides {'SciNut': 145, 'both': 25, 'SESO': 2}, animal 6%, humans-only 56%
       [0 SESO / 8 SciNut] Prevalence of Optimal Metabolic Health in American Adults: National Health and N (2018)
       [2 SESO / 5 SciNut] Effect of Interventions Aimed at Reducing or Modifying Saturated Fat Intake on C (2025)
-  c5: 162 works, mean lean -0.82, sides {'SciNut': 139, 'both': 23}, animal 5%, humans-only 57%
-      [1 SESO / 8 SciNut] Position of the Academy of Nutrition and Dietetics: Vegetarian Diets (2016)
-      [0 SESO / 6 SciNut] Dietary advanced glycation end-products and their associations with body weight  (2024)
-      [1 SESO / 4 SciNut] Optimal dietary patterns for healthy aging (2025)
-      [2 SESO / 3 SciNut] Reducing food’s environmental impacts through producers and consumers (2018)
       [0 SESO / 5 SciNut] Heme Iron from Meat and Risk of Colorectal Cancer: A Meta-analysis and a Review  (2011)
-  c6: 89 works, mean lean -0.98, sides {'SciNut': 87, 'both': 2}, animal 3%, humans-only 74%
-      [0 SESO / 12 SciNut] Position of the American Dietetic Association: Vegetarian Diets (2009)
-      [0 SESO / 6 SciNut] Impact of a 2-year trial of nutritional ketosis on indices of cardiovascular dis (2020)
-      [1 SESO / 5 SciNut] Clinical studies show no effects of soy protein or isoflavones on reproductive h (2009)
-      [0 SESO / 5 SciNut] Dietary intake and status of n–3 polyunsaturated fatty acids in a population of  (2010)
-      [0 SESO / 5 SciNut] Financial Conflicts of Interest and Reporting Bias Regarding the Association bet (2013)
-  c7: 77 works, mean lean -0.77, sides {'both': 12, 'SciNut': 64, 'SESO': 1}, animal 12%, humans-only 61%
-      [0 SESO / 14 SciNut] Hunter‐gatherers as models in public health (2018)
-      [0 SESO / 8 SciNut] Weight Loss with a Low-Carbohydrate, Mediterranean, or Low-Fat Diet (2008)
-      [0 SESO / 6 SciNut] Short‐term feeding of a ketogenic diet induces more severe hepatic insulin resis (2018)
-      [0 SESO / 6 SciNut] Vegetarian and vegan diets and risks of total and site-specific fractures: resul (2020)
-      [0 SESO / 5 SciNut] Diets of modern hunter-gatherers vary substantially in their carbohydrate conten (2011)
-  c8: 73 works, mean lean -0.75, sides {'both': 12, 'SciNut': 60, 'SESO': 1}, animal 7%, humans-only 55%
-      [0 SESO / 13 SciNut] Long-Term Effects of a Novel Continuous Remote Care Intervention Including Nutri (2019)
-      [0 SESO / 9 SciNut] Association of Animal and Plant Protein Intake With All-Cause and Cause-Specific (2016)
-      [0 SESO / 8 SciNut] Low Protein Intake Is Associated with a Major Reduction in IGF-1, Cancer, and Ov (2014)
-      [0 SESO / 8 SciNut] Do ketogenic diets really suppress appetite? A systematic review and meta‐analys (2014)
-      [0 SESO / 6 SciNut] A randomized crossover trial on the effect of plant-based compared with animal-b (2020)
-  c9: 62 works, mean lean -0.70, sides {'both': 13, 'SciNut': 47, 'SESO': 2}, animal 16%, humans-only 66%
-      [10 SESO / 8 SciNut] The importance of the ratio of omega-6/omega-3 essential fatty acids (2002)
+      [0 SESO / 5 SciNut] Associations of Dietary Cholesterol, Serum Cholesterol, and Egg Consumption With (2022)
+      [1 SESO / 4 SciNut] Optimal dietary patterns for healthy aging (2025)
+  c5: 162 works, mean lean -0.84, sides {'SciNut': 138, 'both': 23, 'SESO': 1}, animal 6%, humans-only 73%
+      [2 SESO / 13 SciNut] Unprocessed Red Meat and Processed Meat Consumption: Dietary Guideline Recommend (2019)
+      [4 SESO / 5 SciNut] Association between low density lipoprotein cholesterol and all-cause mortality: (2021)
+      [1 SESO / 7 SciNut] Red and Processed Meat Consumption and Risk for All-Cause Mortality and Cardiome (2019)
+      [0 SESO / 8 SciNut] Long-Term Association of Low-Density Lipoprotein Cholesterol With Cardiovascular (2018)
       [1 SESO / 6 SciNut] Why Most Published Research Findings Are False (2005)
-      [0 SESO / 7 SciNut] Supplementation of the Diet by Exogenous Myrosinase via Mustard Seeds to Increas (2018)
-      [0 SESO / 6 SciNut] Urinary Sodium and Potassium Excretion, Mortality, and Cardiovascular Events (2014)
-      [1 SESO / 5 SciNut] Low‐density lipoprotein cholesterol and lifespan: A Mendelian randomization stud (2021)
-  c10: 60 works, mean lean -0.85, sides {'SciNut': 52, 'both': 6, 'SESO': 2}, animal 15%, humans-only 65%
-      [2 SESO / 9 SciNut] Carbohydrate Restriction-Induced Elevations in LDL-Cholesterol and Atheroscleros (2024)
-      [1 SESO / 7 SciNut] Effects of eight weeks of time-restricted feeding (16/8) on basal metabolism, ma (2016)
-      [0 SESO / 6 SciNut] Effect of a ketogenic diet versus Mediterranean diet on glycated hemoglobin in i (2022)
-      [0 SESO / 6 SciNut] RETRACTED: Primary Prevention of Cardiovascular Disease with a Mediterranean Die (2013)
-      [0 SESO / 6 SciNut] Prevalence and correlates of vitamin D deficiency in US adults (2011)
-  c11: 47 works, mean lean -0.94, sides {'SciNut': 45, 'both': 2}, animal 2%, humans-only 64%
+  c6: 147 works, mean lean +0.21, sides {'both': 77, 'SESO': 34, 'SciNut': 36}, animal 11%, humans-only 63%
+      [2 SESO / 19 SciNut] Total cholesterol and all-cause mortality by sex and age: a prospective cohort s (2019)
+      [8 SESO / 4 SciNut] INFLUENCE OF DIETARY OMEGA‐6, ‐3 FATTY ACID SOURCES ON THE INITIATION AND PROMOT (1992)
+      [7 SESO / 4 SciNut] Dietary linoleic acid is required for development of experimentally induced alco (1989)
+      [7 SESO / 3 SciNut] Fat Intake and Risk of Skin Cancer in U.S. Adults (2018)
+      [1 SESO / 9 SciNut] Cardiovascular Risk Reduction with Icosapent Ethyl for Hypertriglyceridemia (2018)
+  c7: 132 works, mean lean -0.89, sides {'SciNut': 119, 'both': 12, 'SESO': 1}, animal 2%, humans-only 77%
+      [3 SESO / 12 SciNut] Consumption of red meat and processed meat and cancer incidence: a systematic re (2021)
+      [0 SESO / 12 SciNut] Position of the American Dietetic Association: Vegetarian Diets (2009)
+      [1 SESO / 8 SciNut] Position of the Academy of Nutrition and Dietetics: Vegetarian Diets (2016)
+      [0 SESO / 9 SciNut] Health effects associated with consumption of unprocessed red meat: a Burden of  (2022)
+      [2 SESO / 6 SciNut] Neither soy nor isoflavone intake affects male reproductive hormones: An expande (2020)
+  c8: 118 works, mean lean -0.78, sides {'SciNut': 100, 'both': 13, 'SESO': 5}, animal 11%, humans-only 71%
+      [10 SESO / 8 SciNut] The importance of the ratio of omega-6/omega-3 essential fatty acids (2002)
+      [2 SESO / 15 SciNut] Effect of a plant-based, low-fat diet versus an animal-based, ketogenic diet on  (2021)
+      [2 SESO / 10 SciNut] The Effect of Coconut Oil Consumption on Cardiovascular Risk Factors: A Systemat (2020)
+      [0 SESO / 11 SciNut] Glucose and Lipid Homeostasis and Inflammation in Humans Following an Isocaloric (2019)
+      [0 SESO / 7 SciNut] A Mediterranean Diet and Low-Fat Vegan Diet to Improve Body Weight and Cardiomet (2021)
+  c9: 79 works, mean lean -0.10, sides {'SciNut': 33, 'both': 34, 'SESO': 12}, animal 4%, humans-only 61%
+      [16 SESO / 15 SciNut] Saturated Fats and Health: A Reassessment and Proposal for Food-Based Recommenda (2020)
+      [5 SESO / 17 SciNut] LDL-C does not cause cardiovascular disease: a comprehensive review of the curre (2018)
+      [0 SESO / 13 SciNut] Long-Term Effects of a Novel Continuous Remote Care Intervention Including Nutri (2019)
+      [3 SESO / 10 SciNut] The evolution of the human trophic level during the Pleistocene (2021)
+      [5 SESO / 5 SciNut] Dietary stearic acid regulates mitochondria in vivo in humans (2018)
+  c10: 54 works, mean lean -0.92, sides {'SciNut': 51, 'both': 3}, animal 0%, humans-only 65%
       [0 SESO / 11 SciNut] A systematic review, meta-analysis and meta-regression of the effect of protein  (2017)
       [0 SESO / 10 SciNut] Deming, Data and Observational Studies (2011)
       [0 SESO / 8 SciNut] Can adults adequately convert alpha-linolenic acid (18:3n-3) to eicosapentaenoic (1998)
-      [0 SESO / 6 SciNut] Gut Microbe-Generated Trimethylamine N -Oxide From Dietary Choline Is Prothrombo (2017)
       [0 SESO / 6 SciNut] Synergistic Effect of Increased Total Protein Intake and Strength Training on Mu (2022)
-  c12: 46 works, mean lean -0.90, sides {'SciNut': 42, 'both': 4}, animal 9%, humans-only 48%
+      [0 SESO / 6 SciNut] Gut Microbe-Generated Trimethylamine N -Oxide From Dietary Choline Is Prothrombo (2017)
+  c11: 35 works, mean lean -0.87, sides {'SciNut': 31, 'both': 4}, animal 11%, humans-only 46%
       [0 SESO / 8 SciNut] Meat consumption and risk of 25 common conditions: outcome-wide analyses in 475, (2021)
       [0 SESO / 7 SciNut] Vitamin B 12 Sources and Bioavailability (2007)
       [1 SESO / 5 SciNut] Patterns of Red and Processed Meat Consumption and Risk for Cardiometabolic and  (2019)
-      [0 SESO / 5 SciNut] Metabolic characteristics of keto-adapted ultra-endurance runners (2015)
-      [0 SESO / 5 SciNut] Statins stimulate atherosclerosis and heart failure: pharmacological mechanisms (2015)
-  c13: 43 works, mean lean -0.89, sides {'both': 6, 'SciNut': 37}, animal 0%, humans-only 74%
-      [2 SESO / 13 SciNut] Unprocessed Red Meat and Processed Meat Consumption: Dietary Guideline Recommend (2019)
-      [2 SESO / 10 SciNut] Dietary Cholesterol and Cardiovascular Risk: A Science Advisory From the America (2019)
-      [2 SESO / 5 SciNut] Effect of Lower Versus Higher Red Meat Intake on Cardiometabolic and Cancer Outc (2019)
-      [0 SESO / 5 SciNut] Effects of red meat, white meat, and nonmeat protein sources on atherogenic lipo (2019)
-      [1 SESO / 4 SciNut] Dietary saturated fat and heart disease: a narrative review (2019)
-  c14: 40 works, mean lean -0.90, sides {'SciNut': 37, 'both': 3}, animal 8%, humans-only 62%
-      [2 SESO / 6 SciNut] Neither soy nor isoflavone intake affects male reproductive hormones: An expande (2020)
-      [0 SESO / 8 SciNut] Persistent metabolic adaptation 6 years after “The Biggest Loser” competition (2016)
-      [0 SESO / 6 SciNut] Normal weight individuals who develop Type 2 diabetes: the personal fat threshol (2014)
-      [0 SESO / 5 SciNut] Glycogen storage capacity and de novo lipogenesis during massive carbohydrate ov (1988)
-      [3 SESO / 2 SciNut] Soybean oil lowers circulating cholesterol levels and coronary heart disease ris (2021)
+      [0 SESO / 5 SciNut] Cell-programmed nutrient partitioning in the tumour microenvironment (2021)
+      [0 SESO / 5 SciNut] Artificial sweeteners and cancer risk: Results from the NutriNet-Santé populatio (2022)
+  c12: 31 works, mean lean -0.86, sides {'SciNut': 28, 'both': 3}, animal 10%, humans-only 65%
+      [0 SESO / 6 SciNut] Antioxidant activity of blueberry fruit is impaired by association with milk (2008)
+      [0 SESO / 6 SciNut] Vegetarian and vegan diets and risks of total and site-specific fractures: resul (2020)
+      [0 SESO / 5 SciNut] Veganism, vegetarianism, bone mineral density, and fracture risk: a systematic r (2018)
+      [0 SESO / 4 SciNut] Dietary total fat, fatty acids intake, and risk of cardiovascular disease: a dos (2019)
+      [2 SESO / 2 SciNut] Elevated dietary ω-6 polyunsaturated fatty acids induce reversible peripheral ne (2021)
+  c13: 28 works, mean lean -0.73, sides {'SciNut': 22, 'both': 6}, animal 14%, humans-only 57%
+      [0 SESO / 7 SciNut] Supplementation of the Diet by Exogenous Myrosinase via Mustard Seeds to Increas (2018)
+      [1 SESO / 3 SciNut] Ketogenic diet induces p53-dependent cellular senescence in multiple organs (2024)
+      [0 SESO / 3 SciNut] Integration of epidemiological and blood biomarker analysis links haem iron inta (2024)
+      [0 SESO / 3 SciNut] Sulforaphane exhibits antiviral activity against pandemic SARS-CoV-2 and seasona (2022)
+      [1 SESO / 2 SciNut] Oxidized Cholesterol in the Diet Accelerates the Development of Atherosclerosis  (2000)
 
-== Scholarly citation (one references the other): nodes with edges 1,643, edges 6,244, Louvain communities 45 (>= 20 works: 15), modularity 0.643, side assortativity 0.306
-  c0: 230 works, mean lean -0.87, sides {'SciNut': 203, 'both': 27}, animal 6%, humans-only 76%
+== Scholarly citation (one references the other): nodes with edges 1,647, edges 6,259, Louvain communities 42 (>= 20 works: 15), modularity 0.637, side assortativity 0.307
+  c0: 251 works, mean lean -0.87, sides {'SciNut': 221, 'both': 29, 'SESO': 1}, animal 6%, humans-only 75%
       [2 SESO / 15 SciNut] Effect of a plant-based, low-fat diet versus an animal-based, ketogenic diet on  (2021)
       [0 SESO / 13 SciNut] Long-Term Effects of a Novel Continuous Remote Care Intervention Including Nutri (2019)
       [0 SESO / 11 SciNut] Glucose and Lipid Homeostasis and Inflammation in Humans Following an Isocaloric (2019)
       [2 SESO / 9 SciNut] Carbohydrate Restriction-Induced Elevations in LDL-Cholesterol and Atheroscleros (2024)
       [0 SESO / 9 SciNut] Fat and carbohydrate overfeeding in humans: different effects on energy storage (1995)
-  c1: 228 works, mean lean -0.86, sides {'SciNut': 199, 'both': 26, 'SESO': 3}, animal 2%, humans-only 67%
-      [2 SESO / 13 SciNut] Unprocessed Red Meat and Processed Meat Consumption: Dietary Guideline Recommend (2019)
-      [3 SESO / 12 SciNut] Consumption of red meat and processed meat and cancer incidence: a systematic re (2021)
-      [2 SESO / 10 SciNut] Dietary Cholesterol and Cardiovascular Risk: A Science Advisory From the America (2019)
-      [0 SESO / 11 SciNut] Meta-Analysis of Randomized Controlled Trials of Red Meat Consumption in Compari (2019)
-      [2 SESO / 8 SciNut] Exposure to exogenous estrogen through intake of commercial milk produced from p (2009)
-  c2: 179 works, mean lean +0.06, sides {'both': 85, 'SciNut': 59, 'SESO': 35}, animal 11%, humans-only 62%
-      [7 SESO / 14 SciNut] Biomarkers of Dietary Omega-6 Fatty Acids and Incident Cardiovascular Disease an (2019)
-      [10 SESO / 8 SciNut] The importance of the ratio of omega-6/omega-3 essential fatty acids (2002)
-      [11 SESO / 5 SciNut] Soybean Oil Is More Obesogenic and Diabetogenic than Coconut Oil and Fructose in (2015)
-      [6 SESO / 8 SciNut] Dietary Linoleic Acid and Risk of Coronary Heart Disease: A Systematic Review an (2014)
-      [5 SESO / 7 SciNut] Effect of Dietary Linoleic Acid on Markers of Inflammation in Healthy Persons: A (2012)
-  c3: 167 works, mean lean -0.30, sides {'both': 75, 'SciNut': 81, 'SESO': 11}, animal 3%, humans-only 77%
+  c1: 199 works, mean lean -0.17, sides {'SESO': 23, 'both': 94, 'SciNut': 82}, animal 1%, humans-only 80%
       [16 SESO / 15 SciNut] Saturated Fats and Health: A Reassessment and Proposal for Food-Based Recommenda (2020)
       [5 SESO / 22 SciNut] Dietary Fats and Cardiovascular Disease: A Presidential Advisory From the Americ (2017)
       [7 SESO / 16 SciNut] Effects on Coronary Heart Disease of Increasing Polyunsaturated Fat in Place of  (2010)
-      [3 SESO / 19 SciNut] Reduction in saturated fat intake for cardiovascular disease (2020)
       [6 SESO / 16 SciNut] The effect of replacing saturated fat with mostly n-6 polyunsaturated fat on cor (2017)
-  c4: 153 works, mean lean -0.87, sides {'SciNut': 136, 'both': 15, 'SESO': 2}, animal 0%, humans-only 80%
+      [3 SESO / 19 SciNut] Reduction in saturated fat intake for cardiovascular disease (2020)
+  c2: 184 works, mean lean -0.84, sides {'SciNut': 158, 'both': 23, 'SESO': 3}, animal 4%, humans-only 61%
+      [3 SESO / 12 SciNut] Consumption of red meat and processed meat and cancer incidence: a systematic re (2021)
+      [2 SESO / 13 SciNut] Unprocessed Red Meat and Processed Meat Consumption: Dietary Guideline Recommend (2019)
+      [0 SESO / 11 SciNut] Meta-Analysis of Randomized Controlled Trials of Red Meat Consumption in Compari (2019)
+      [2 SESO / 9 SciNut] Dietary Cholesterol and Cardiovascular Risk: A Science Advisory From the America (2019)
+      [2 SESO / 8 SciNut] Exposure to exogenous estrogen through intake of commercial milk produced from p (2010)
+  c3: 138 works, mean lean -0.80, sides {'SciNut': 116, 'SESO': 3, 'both': 19}, animal 1%, humans-only 72%
+      [9 SESO / 6 SciNut] Cooking oil/fat consumption and deaths from cardiometabolic diseases and other c (2021)
+      [0 SESO / 12 SciNut] Primary Prevention of Cardiovascular Disease with a Mediterranean Diet Supplemen (2018)
+      [5 SESO / 4 SciNut] Direct impact of commonly used dietary emulsifiers on human gut microbiota (2021)
+      [1 SESO / 6 SciNut] Ultra-Processed Diets Cause Excess Calorie Intake and Weight Gain: An Inpatient  (2019)
+      [0 SESO / 6 SciNut] Urinary Sodium and Potassium Excretion, Mortality, and Cardiovascular Events (2014)
+  c4: 138 works, mean lean -0.93, sides {'SciNut': 128, 'both': 10}, animal 0%, humans-only 80%
       [0 SESO / 12 SciNut] Position of the American Dietetic Association: Vegetarian Diets (2009)
-      [0 SESO / 10 SciNut] Deming, Data and Observational Studies (2011)
       [0 SESO / 10 SciNut] Plant‐Based Diets Are Associated With a Lower Risk of Incident Cardiovascular Di (2019)
+      [0 SESO / 10 SciNut] Deming, Data and Observational Studies (2011)
       [1 SESO / 8 SciNut] Position of the Academy of Nutrition and Dietetics: Vegetarian Diets (2016)
-      [1 SESO / 6 SciNut] Intensive Lifestyle Changes for Reversal of Coronary Heart Disease (1998)
-  c5: 128 works, mean lean -0.75, sides {'SciNut': 101, 'both': 26, 'SESO': 1}, animal 2%, humans-only 78%
+      [0 SESO / 7 SciNut] Vegetarian, vegan diets and multiple health outcomes: A systematic review with m (2017)
+  c5: 124 works, mean lean -0.75, sides {'SciNut': 98, 'both': 25, 'SESO': 1}, animal 2%, humans-only 80%
       [7 SESO / 20 SciNut] Low-density lipoproteins cause atherosclerotic cardiovascular disease. 1. Eviden (2017)
       [5 SESO / 17 SciNut] LDL-C does not cause cardiovascular disease: a comprehensive review of the curre (2018)
       [2 SESO / 19 SciNut] Total cholesterol and all-cause mortality by sex and age: a prospective cohort s (2019)
       [2 SESO / 12 SciNut] Optimal low-density lipoprotein is 50 to 70 mg/dl (2004)
       [0 SESO / 10 SciNut] Normal LDL-Cholesterol Levels Are Associated With Subclinical Atherosclerosis in (2017)
-  c6: 74 works, mean lean -0.92, sides {'SciNut': 69, 'both': 5}, animal 0%, humans-only 66%
+  c6: 121 works, mean lean +0.19, sides {'both': 64, 'SciNut': 33, 'SESO': 24}, animal 23%, humans-only 45%
+      [10 SESO / 8 SciNut] The importance of the ratio of omega-6/omega-3 essential fatty acids (2002)
+      [11 SESO / 5 SciNut] Soybean Oil Is More Obesogenic and Diabetogenic than Coconut Oil and Fructose in (2015)
+      [5 SESO / 6 SciNut] Linoleic acid–good or bad for the brain? (2020)
+      [7 SESO / 4 SciNut] Dietary linoleic acid is required for development of experimentally induced alco (1989)
+      [8 SESO / 2 SciNut] The effects of Canola oil on cardiovascular risk factors: A systematic review an (2020)
+  c7: 107 works, mean lean -0.87, sides {'SciNut': 95, 'both': 11, 'SESO': 1}, animal 7%, humans-only 74%
+      [0 SESO / 11 SciNut] Overfeeding Polyunsaturated and Saturated Fat Causes Distinct Effects on Liver a (2014)
+      [1 SESO / 9 SciNut] Saturated Fat Is More Metabolically Harmful for the Human Liver Than Unsaturated (2018)
+      [1 SESO / 9 SciNut] Substituting dietary saturated for monounsaturated fat impairs insulin sensitivi (2001)
+      [0 SESO / 7 SciNut] Is Meat Industry Affiliation Associated With Study Conclusion in Nutrition Resea (2026)
+      [0 SESO / 7 SciNut] A high-fat, high-saturated fat diet decreases insulin sensitivity without changi (2015)
+  c8: 66 works, mean lean -0.93, sides {'SciNut': 62, 'both': 4}, animal 0%, humans-only 68%
       [0 SESO / 13 SciNut] High-Protein Plant-Based Diet Versus a Protein-Matched Omnivorous Diet to Suppor (2021)
       [0 SESO / 11 SciNut] A systematic review, meta-analysis and meta-regression of the effect of protein  (2017)
       [0 SESO / 8 SciNut] No Difference Between the Effects of Supplementing With Soy Protein Versus Anima (2018)
       [2 SESO / 6 SciNut] Neither soy nor isoflavone intake affects male reproductive hormones: An expande (2020)
-      [0 SESO / 6 SciNut] Synergistic Effect of Increased Total Protein Intake and Strength Training on Mu (2022)
-  c7: 65 works, mean lean -0.91, sides {'SciNut': 61, 'SESO': 1, 'both': 3}, animal 6%, humans-only 71%
-      [0 SESO / 7 SciNut] Is Meat Industry Affiliation Associated With Study Conclusion in Nutrition Resea (2026)
-      [0 SESO / 6 SciNut] Normal weight individuals who develop Type 2 diabetes: the personal fat threshol (2014)
-      [0 SESO / 5 SciNut] Financial Conflicts of Interest and Reporting Bias Regarding the Association bet (2013)
-      [0 SESO / 4 SciNut] The small intestine shields the liver from fructose-induced steatosis (2020)
-      [0 SESO / 4 SciNut] Consuming fructose-sweetened, not glucose-sweetened, beverages increases viscera (2009)
-  c8: 53 works, mean lean -0.75, sides {'SciNut': 43, 'both': 8, 'SESO': 2}, animal 6%, humans-only 47%
-      [0 SESO / 14 SciNut] Hunter‐gatherers as models in public health (2018)
-      [3 SESO / 10 SciNut] The evolution of the human trophic level during the Pleistocene (2021)
-      [0 SESO / 11 SciNut] A satiety index of common foods. (1995)
-      [5 SESO / 4 SciNut] Direct impact of commonly used dietary emulsifiers on human gut microbiota (2021)
-      [0 SESO / 6 SciNut] Effect of a very-high-fiber vegetable, fruit, and nut diet on serum lipids and c (2001)
-  c9: 50 works, mean lean -0.19, sides {'both': 31, 'SciNut': 16, 'SESO': 3}, animal 58%, humans-only 22%
+      [1 SESO / 5 SciNut] Clinical studies show no effects of soy protein or isoflavones on reproductive h (2009)
+  c9: 52 works, mean lean -0.19, sides {'both': 32, 'SciNut': 17, 'SESO': 3}, animal 52%, humans-only 29%
       [8 SESO / 4 SciNut] Dependence of photocarcinogenesis and photoimmunosuppression in the hairless mou (1996)
       [8 SESO / 4 SciNut] INFLUENCE OF DIETARY OMEGA‐6, ‐3 FATTY ACID SOURCES ON THE INITIATION AND PROMOT (1992)
+      [7 SESO / 3 SciNut] Fat Intake and Risk of Skin Cancer in U.S. Adults (2018)
       [2 SESO / 6 SciNut] Requirement of essential fatty acid for mammary tumorigenesis in the rat. (1985)
       [5 SESO / 3 SciNut] Brief episode of STZ-induced hyperglycemia produces cardiac abnormalities in rat (2004)
-      [3 SESO / 4 SciNut] EFFECT OF DIETARY LIPID ON UV LIGHT CARCINOGENESIS IN THE HAIRLESS MOUSE (1988)
-  c10: 46 works, mean lean -0.73, sides {'SciNut': 37, 'both': 7, 'SESO': 2}, animal 2%, humans-only 83%
+  c10: 45 works, mean lean -0.72, sides {'SciNut': 36, 'SESO': 2, 'both': 7}, animal 2%, humans-only 82%
       [1 SESO / 9 SciNut] Cardiovascular Risk Reduction with Icosapent Ethyl for Hypertriglyceridemia (2018)
       [0 SESO / 5 SciNut] Marine Omega‐3 Supplementation and Cardiovascular Disease: An Updated Meta‐Analy (2019)
       [0 SESO / 4 SciNut] Vitamin D supplementation: upper limit for safety revisited? (2020)
-      [0 SESO / 4 SciNut] Vitamin D Supplements and Prevention of Cancer and Cardiovascular Disease (2018)
-      [0 SESO / 4 SciNut] Vitamin D Resistance as a Possible Cause of Autoimmune Diseases: A Hypothesis Co (2021)
-  c11: 45 works, mean lean -0.73, sides {'SciNut': 36, 'both': 8, 'SESO': 1}, animal 0%, humans-only 87%
-      [9 SESO / 6 SciNut] Cooking oil/fat consumption and deaths from cardiometabolic diseases and other c (2021)
-      [0 SESO / 12 SciNut] Primary Prevention of Cardiovascular Disease with a Mediterranean Diet Supplemen (2018)
-      [7 SESO / 4 SciNut] Fat Intake and Risk of Skin Cancer in U.S. Adults (2018)
-      [2 SESO / 3 SciNut] Butter and Plant-Based Oils Intake and Mortality (2025)
-      [0 SESO / 4 SciNut] Hierarchies of evidence applied to lifestyle Medicine (HEALM): introduction of a (2019)
-  c12: 36 works, mean lean -0.90, sides {'SciNut': 33, 'both': 2, 'SESO': 1}, animal 19%, humans-only 50%
+      [0 SESO / 4 SciNut] Vitamin D alleviates lipopolysaccharide-induced acute lung injury via regulation (2017)
+      [0 SESO / 4 SciNut] Vitamin D deficiency 2.0: an update on the current status worldwide (2020)
+  c11: 41 works, mean lean -0.77, sides {'SciNut': 34, 'SESO': 2, 'both': 5}, animal 2%, humans-only 49%
+      [0 SESO / 14 SciNut] Hunter‐gatherers as models in public health (2018)
+      [3 SESO / 10 SciNut] The evolution of the human trophic level during the Pleistocene (2021)
+      [0 SESO / 11 SciNut] A satiety index of common foods. (1995)
+      [1 SESO / 5 SciNut] The Evolution of Stomach Acidity and Its Relevance to the Human Microbiome (2015)
+      [0 SESO / 6 SciNut] Effect of a very-high-fiber vegetable, fruit, and nut diet on serum lipids and c (2001)
+  c12: 39 works, mean lean -0.82, sides {'SciNut': 34, 'both': 4, 'SESO': 1}, animal 13%, humans-only 64%
+      [0 SESO / 5 SciNut] Heme Iron from Meat and Risk of Colorectal Cancer: A Meta-analysis and a Review  (2011)
+      [0 SESO / 4 SciNut] Coffee consumption and all-cause and cause-specific mortality: a meta-analysis b (2019)
+      [0 SESO / 3 SciNut] Consumption of a dark roast coffee blend reduces DNA damage in humans: results f (2018)
+      [0 SESO / 3 SciNut] Association between red and processed meat consumption and colorectal cancer ris (2025)
+      [1 SESO / 2 SciNut] Dietary polyunsaturated fatty acids and heme iron induce oxidative stress biomar (2015)
+  c13: 34 works, mean lean -0.90, sides {'SciNut': 31, 'both': 2, 'SESO': 1}, animal 21%, humans-only 50%
       [1 SESO / 7 SciNut] Effects of eight weeks of time-restricted feeding (16/8) on basal metabolism, ma (2016)
       [0 SESO / 5 SciNut] Calorie Restriction with or without Time-Restricted Eating in Weight Loss (2022)
       [0 SESO / 5 SciNut] Effects of Intermittent Fasting on Health, Aging, and Disease (2019)
-      [1 SESO / 3 SciNut] The effect of replacing dietary saturated fat with polyunsaturated or monounsatu (2001)
+      [0 SESO / 4 SciNut] Changes in Energy Expenditure Resulting from Altered Body Weight (1995)
       [0 SESO / 4 SciNut] Is muscle and protein loss relevant in long‐term fasting in healthy men? A prosp (2021)
-  c13: 33 works, mean lean -0.48, sides {'SciNut': 21, 'SESO': 4, 'both': 8}, animal 6%, humans-only 55%
+  c14: 34 works, mean lean -0.43, sides {'SciNut': 21, 'both': 8, 'SESO': 5}, animal 6%, humans-only 56%
       [1 SESO / 6 SciNut] The role of dietary oxidized cholesterol and oxidized fatty acids in the develop (2005)
       [0 SESO / 6 SciNut] Dietary advanced glycation end-products and their associations with body weight  (2024)
       [2 SESO / 3 SciNut] Olive oil stability under deep-frying conditions (2010)
-      [1 SESO / 3 SciNut] Olive, soybean and palm oils intake have a similar acute detrimental effect over (2006)
       [0 SESO / 4 SciNut] Effect of a Single High-Fat Meal on Endothelial Function in Healthy Subjects (1997)
-  c14: 26 works, mean lean -0.68, sides {'SciNut': 20, 'both': 4, 'SESO': 2}, animal 0%, humans-only 65%
-      [1 SESO / 6 SciNut] Ultra-Processed Diets Cause Excess Calorie Intake and Weight Gain: An Inpatient  (2019)
-      [0 SESO / 4 SciNut] Ultra‐processed foods cause weight gain and increased energy intake associated w (2024)
-      [1 SESO / 2 SciNut] Ultra-processed food consumption and cardiometabolic risk in Canada: a cross-sec (2025)
-      [3 SESO / 0 SciNut] US tobacco companies selectively disseminated hyper‐palatable foods into the US  (2023)
-      [0 SESO / 3 SciNut] The Influence of Ultraprocessed Food Consumption on Energy Intake in Emerging Ad (2025)
+      [1 SESO / 3 SciNut] Olive, soybean and palm oils intake have a similar acute detrimental effect over (2006)
 
-agreement of the two partitions on 1,630 shared nodes: AMI 0.071 (0 = unrelated, 1 = identical)
-Reddit network betweenness (sampled, k=500), mean by side: SESO 0.0001 (n=87), SciNut 0.0004 (n=1470), both 0.0012 (n=412)
-  top bridges: Effect of a plant-based, low-fat diet versus an animal-based (both); Association of Dietary, Circulating, and Supplement Fatty Ac (both); Low-density lipoproteins cause atherosclerotic cardiovascula (both); The effect of replacing saturated fat with mostly n-6 polyun (both); Deming, Data and Observational Studies (SciNut); Effects on Coronary Heart Disease of Increasing Polyunsatura (both); Dietary Fats and Cardiovascular Disease: A Presidential Advi (both); LDL-C does not cause cardiovascular disease: a comprehensive (both)
+agreement of the two partitions on 1,634 shared nodes: AMI 0.076 (0 = unrelated, 1 = identical)
+Reddit network betweenness (sampled, k=500), mean by side: SESO 0.0001 (n=87), SciNut 0.0004 (n=1474), both 0.0012 (n=410)
+  top bridges: Effect of a plant-based, low-fat diet versus an animal-based (both); Association of Dietary, Circulating, and Supplement Fatty Ac (both); Low-density lipoproteins cause atherosclerotic cardiovascula (both); Effects on Coronary Heart Disease of Increasing Polyunsatura (both); Dietary Fats and Cardiovascular Disease: A Presidential Advi (both); The effect of replacing saturated fat with mostly n-6 polyun (both); Deming, Data and Observational Studies (SciNut); Reduction in saturated fat intake for cardiovascular disease (both)

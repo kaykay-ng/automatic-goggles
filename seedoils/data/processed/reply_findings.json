@@ -1,0 +1,143 @@
+{
+ "q1_mixing_and_tone": [
+  {
+   "from": "old guard",
+   "to": "old guard",
+   "replies": 14268,
+   "observed_share": 0.077,
+   "expected_share": 0.068,
+   "lift": 1.14,
+   "disapproving_pct": 6.22
+  },
+  {
+   "from": "old guard",
+   "to": "newcomer",
+   "replies": 35239,
+   "observed_share": 0.19,
+   "expected_share": 0.199,
+   "lift": 0.95,
+   "disapproving_pct": 6.8
+  },
+  {
+   "from": "newcomer",
+   "to": "old guard",
+   "replies": 32783,
+   "observed_share": 0.177,
+   "expected_share": 0.186,
+   "lift": 0.95,
+   "disapproving_pct": 6.37
+  },
+  {
+   "from": "newcomer",
+   "to": "newcomer",
+   "replies": 103068,
+   "observed_share": 0.556,
+   "expected_share": 0.547,
+   "lift": 1.02,
+   "disapproving_pct": 6.68
+  }
+ ],
+ "q1_tone_within_replier": {
+  "old guard repliers": {
+   "replies": 49266,
+   "repliers": 1929,
+   "within_replier_diff_pts_to_newcomer_vs_old": 0.53,
+   "ci95_pts": [
+    -0.02,
+    1.1
+   ]
+  },
+  "newcomer repliers": {
+   "replies": 134968,
+   "repliers": 20327,
+   "within_replier_diff_pts_to_newcomer_vs_old": 0.29,
+   "ci95_pts": [
+    -0.05,
+    0.68
+   ]
+  }
+ },
+ "q1_first_contribution": {
+  "newcomers": 21093,
+  "first_is_post_pct": 9.3,
+  "first_gets_reply_pct": 40.6,
+  "first_post_gets_reply_pct": 90.1,
+  "first_comment_gets_reply_pct": 35.5,
+  "any_contribution_from_2024_gets_reply_pct": 46.6,
+  "first_reply_by_old_guard_pct": 27.8,
+  "expected_old_guard_pct_from_reply_share_that_month": 27.4,
+  "hours_to_first_reply_median": 1.06
+ },
+ "q2_interest_similarity": {
+  "replies": 85628,
+  "repliers": 2410,
+  "threads": 5302,
+  "mean_similarity_to_replied": 0.367,
+  "mean_similarity_to_others_in_thread": 0.3672,
+  "mean_gap": -0.0002,
+  "gap_ci95": [
+   -0.002,
+   0.0021
+  ],
+  "share_replies_above_thread_mean_pct": 49.8
+ },
+ "q3_tone_by_similarity": {
+  "quintiles": [
+   {
+    "quintile": 1,
+    "similarity_range": [
+     0.0,
+     0.179
+    ],
+    "replies": 17024,
+    "disapproving_pct": 6.81
+   },
+   {
+    "quintile": 2,
+    "similarity_range": [
+     0.179,
+     0.296
+    ],
+    "replies": 17024,
+    "disapproving_pct": 6.48
+   },
+   {
+    "quintile": 3,
+    "similarity_range": [
+     0.296,
+     0.41
+    ],
+    "replies": 17024,
+    "disapproving_pct": 6.85
+   },
+   {
+    "quintile": 4,
+    "similarity_range": [
+     0.41,
+     0.548
+    ],
+    "replies": 17026,
+    "disapproving_pct": 7.07
+   },
+   {
+    "quintile": 5,
+    "similarity_range": [
+     0.548,
+     0.989
+    ],
+    "replies": 17022,
+    "disapproving_pct": 7.08
+   }
+  ],
+  "within_replier_pts_per_sd_similarity": -0.15,
+  "within_replier_ci95": [
+   -0.38,
+   0.1
+  ],
+  "within_thread_pts_per_sd_similarity": 0.14,
+  "within_thread_ci95": [
+   -0.07,
+   0.33
+  ]
+ }
+}

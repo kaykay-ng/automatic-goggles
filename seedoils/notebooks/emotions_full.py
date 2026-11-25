@@ -24,7 +24,7 @@ def main():
     out = []
     for sub, pfx in (("r/StopEatingSeedOils", "seso"), ("r/ScientificNutrition", "scinut")):
         PS, TS = [], []
-        for part in ("", "_short"):  # '' = >= 15 words (topic corpus); '_short' = 1-14 words (short_docs.py); resumable per part
+        for part in ("",):  # 15+ words only (decision 22 Nov: emotions use the topic corpus); the 1-14 word scores (goemo_*_short.npz) are kept but not used
             f = PROC / f"goemo_{pfx}{part}.npz"
             D = pd.read_csv(PROC / f"{pfx}{part}_docs.csv.gz", usecols=["id", "created_utc", "text"], keep_default_na=False)
             if f.exists():
