@@ -6,6 +6,7 @@ Why this filter: the network is complete (a plain threshold would keep mostly th
 Checks: topic-label permutation null (modularity of the backbone communities against chance), stability of communities across Louvain seeds and ALPHA values. Aggregates only; no text.
 Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/commenter_topic_network.py
 """
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import gzip, glob, json, sys
 from pathlib import Path
 import numpy as np, pandas as pd, networkx as nx
@@ -18,7 +19,7 @@ with gzip.open(glob.glob("seedoils/data/raw/*StopEatingSeedOils_comments.jsonl.g
     for l in f:
         x = json.loads(l); raw[x["id"]] = (x["author"], int(x["created_utc"]))
 first = pd.Series({}, dtype=float); allc = pd.DataFrame([(a, t) for a, t in raw.values()], columns=["a", "t"]); first = allc.groupby("a").t.min()
-D = pd.read_csv(P / "seso_doc_topics.csv.gz"); D = D[D.kind == "comment"]; D["a"] = D.id.map(lambda i: raw.get(i, (None,))[0]); D = D[D.a.notna() & ~D.a.isin(["[deleted]", "AutoModerator"])]
+D = pd.read_csv(P / "seso_doc_topics.csv.gz"); D = D[D.kind == "comment"]; D["a"] = D.id.map(lambda i: raw.get(i, (None,))[0]); D = D[D.a.notna() & (~D.a.isin(["[deleted]", "AutoModerator"]) & not_bot(D.a))]
 n_docs = D.groupby("a").size()
 for m in (5, 10, 20, 50): print(f"users with >= {m} topic docs: {(n_docs >= m).sum():,}")
 U = n_docs[n_docs >= MIN_DOCS].index; D = D[D.a.isin(U)]; users = np.array(sorted(U)); ui = {u: i for i, u in enumerate(users)}; K = int(pd.read_csv(P / "seso_doc_topics.csv.gz", usecols=["topic"]).topic.max()) + 1
@@ -65,6 +66,9 @@ for ci, c in enumerate(comm[:16] if EXPORT else comm[:8]):
     res.append({"community": ci, "size": len(c), "long_time_pct": round(old[idx].mean() * 100, 1), "docs_per_user": round(X[idx].sum() / len(c), 1), "top_topics": [int(t) for t in top]})
 pd.DataFrame({"user_index": range(n), "author": users, "community": [base.get(i, -1) for i in range(n)], "old": old, "docs": X.sum(1)}).drop(columns="author").to_csv(P / "commenter_topic_network_130_nodes.csv", index=False)
 json.dump(res, open(P / "commenter_topic_network_130_communities.json", "w"), indent=1)
+json.dump({"modularity_mean": round(float(np.mean(mods)), 3), "modularity_min": round(float(min(mods)), 3), "modularity_max": round(float(max(mods)), 3),
+           "ami_mean": round(float(np.mean(amis)), 3), "ami_min": round(float(np.min(amis)), 3), "communities": len(comm), "n_users": int(n), "links_full": full_edges, "links_kept": kept},
+          open(P / "commenter_topic_network_130_stats.json", "w"), indent=1)
 
 if EXPORT:
     pos = nx.spring_layout(H, weight="weight", k=0.12, iterations=400, seed=2); order = sorted(H.nodes); ix = {v: i for i, v in enumerate(order)}
@@ -72,6 +76,7 @@ if EXPORT:
     cid = {v: i for i, c in enumerate(comm) for v in c}
     nodes = [{"c": cid[v], "o": int(old[v]), "d": int(X[v].sum()), "x": round(float(xy[ix[v], 0]), 4), "y": round(float(xy[ix[v], 1]), 4)} for v in order]
     edges = [[ix[a], ix[b]] for a, b in H.edges]
+    pd.DataFrame([(ix[a], ix[b], round(float(H[a][b]["weight"]), 5)) for a, b in H.edges], columns=["s", "t", "w"]).to_csv(P / "commenter_backbone_edges.csv", index=False)  # weighted backbone for network_stats.py
     comms = []
     for ci, c in enumerate(comm):
         idx = np.array(sorted(c)); share = X[idx].sum(0) / X[idx].sum(); top = np.argsort(-(share - overall))[:3]

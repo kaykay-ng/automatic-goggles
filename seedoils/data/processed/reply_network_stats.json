@@ -1,0 +1,521 @@
+{
+ "period": "all",
+ "nodes": 26752,
+ "edges": 179665,
+ "replies": 233275,
+ "share_replies_to_posts": 0.384,
+ "density": 0.000251,
+ "largest_weak_component_share": 0.999,
+ "largest_strong_component_share": 0.554,
+ "reciprocity": 0.3964,
+ "mean_out_degree": 6.72,
+ "share_nodes_never_replied_to": 0.39,
+ "share_nodes_never_replying": 0.028,
+ "transitivity_undirected": 0.0373,
+ "degree_assortativity_undirected": -0.067,
+ "reciprocity_null_mean": 0.0276,
+ "reciprocity_null_range": [
+  0.0269,
+  0.0286
+ ],
+ "transitivity_null_mean": 0.028,
+ "transitivity_null_range": [
+  0.0278,
+  0.0283
+ ],
+ "in_degree_fit": {
+  "alpha": 2.26,
+  "xmin": 19,
+  "loglik_ratio_pl_vs_lognormal": -4.4,
+  "p": 0.0,
+  "better": "lognormal"
+ },
+ "out_degree_fit": {
+  "alpha": 1.75,
+  "xmin": 1,
+  "loglik_ratio_pl_vs_lognormal": -16.15,
+  "p": 0.0,
+  "better": "lognormal"
+ },
+ "in_degree_ccdf": [
+  [
+   1,
+   1.0
+  ],
+  [
+   2,
+   0.661176
+  ],
+  [
+   3,
+   0.517269
+  ],
+  [
+   4,
+   0.43711
+  ],
+  [
+   5,
+   0.381996
+  ],
+  [
+   6,
+   0.340845
+  ],
+  [
+   7,
+   0.307103
+  ],
+  [
+   8,
+   0.279914
+  ],
+  [
+   9,
+   0.256093
+  ],
+  [
+   10,
+   0.237538
+  ],
+  [
+   11,
+   0.221066
+  ],
+  [
+   12,
+   0.204287
+  ],
+  [
+   14,
+   0.179302
+  ],
+  [
+   15,
+   0.170423
+  ],
+  [
+   16,
+   0.159829
+  ],
+  [
+   18,
+   0.141764
+  ],
+  [
+   20,
+   0.127373
+  ],
+  [
+   22,
+   0.114636
+  ],
+  [
+   24,
+   0.103552
+  ],
+  [
+   26,
+   0.094795
+  ],
+  [
+   28,
+   0.086467
+  ],
+  [
+   31,
+   0.076852
+  ],
+  [
+   34,
+   0.068708
+  ],
+  [
+   38,
+   0.060441
+  ],
+  [
+   41,
+   0.05493
+  ],
+  [
+   45,
+   0.048745
+  ],
+  [
+   50,
+   0.041641
+  ],
+  [
+   55,
+   0.037722
+  ],
+  [
+   60,
+   0.033252
+  ],
+  [
+   66,
+   0.027985
+  ],
+  [
+   72,
+   0.024127
+  ],
+  [
+   79,
+   0.02131
+  ],
+  [
+   87,
+   0.018922
+  ],
+  [
+   95,
+   0.016656
+  ],
+  [
+   105,
+   0.014268
+  ],
+  [
+   115,
+   0.012431
+  ],
+  [
+   128,
+   0.010533
+  ],
+  [
+   141,
+   0.009002
+  ],
+  [
+   156,
+   0.00741
+  ],
+  [
+   175,
+   0.005756
+  ],
+  [
+   201,
+   0.004103
+  ],
+  [
+   248,
+   0.002633
+  ],
+  [
+   333,
+   0.001408
+  ],
+  [
+   3098,
+   6.1e-05
+  ]
+ ],
+ "out_degree_ccdf": [
+  [
+   1,
+   1.0
+  ],
+  [
+   2,
+   0.513174
+  ],
+  [
+   3,
+   0.367591
+  ],
+  [
+   4,
+   0.289703
+  ],
+  [
+   5,
+   0.240548
+  ],
+  [
+   6,
+   0.206431
+  ],
+  [
+   7,
+   0.180815
+  ],
+  [
+   8,
+   0.161045
+  ],
+  [
+   9,
+   0.146159
+  ],
+  [
+   10,
+   0.132428
+  ],
+  [
+   11,
+   0.121851
+  ],
+  [
+   12,
+   0.11162
+  ],
+  [
+   13,
+   0.103773
+  ],
+  [
+   15,
+   0.090157
+  ],
+  [
+   16,
+   0.084311
+  ],
+  [
+   17,
+   0.078965
+  ],
+  [
+   19,
+   0.070541
+  ],
+  [
+   21,
+   0.063772
+  ],
+  [
+   23,
+   0.057964
+  ],
+  [
+   25,
+   0.053117
+  ],
+  [
+   28,
+   0.046886
+  ],
+  [
+   30,
+   0.043386
+  ],
+  [
+   33,
+   0.03854
+  ],
+  [
+   37,
+   0.033463
+  ],
+  [
+   40,
+   0.03027
+  ],
+  [
+   44,
+   0.027193
+  ],
+  [
+   48,
+   0.023962
+  ],
+  [
+   53,
+   0.021309
+  ],
+  [
+   58,
+   0.019155
+  ],
+  [
+   63,
+   0.017155
+  ],
+  [
+   70,
+   0.014885
+  ],
+  [
+   76,
+   0.012924
+  ],
+  [
+   84,
+   0.01127
+  ],
+  [
+   92,
+   0.009885
+  ],
+  [
+   102,
+   0.008654
+  ],
+  [
+   113,
+   0.007462
+  ],
+  [
+   125,
+   0.006269
+  ],
+  [
+   138,
+   0.005231
+  ],
+  [
+   160,
+   0.004154
+  ],
+  [
+   181,
+   0.003192
+  ],
+  [
+   212,
+   0.002423
+  ],
+  [
+   239,
+   0.001654
+  ],
+  [
+   361,
+   0.000808
+  ],
+  [
+   1483,
+   3.8e-05
+  ]
+ ],
+ "top1pct_share_of_replies_received": 0.329,
+ "dropped": {
+  "replies_total": 243223,
+  "parent_missing_or_deleted": 2819,
+  "self_replies": 2764
+ },
+ "louvain": {
+  "nodes_in_largest_component": 26733,
+  "communities": 78,
+  "modularity": 0.389,
+  "largest_sizes": [
+   5977,
+   5584,
+   4435,
+   3149,
+   2870,
+   1855,
+   1518,
+   554,
+   331,
+   64,
+   53,
+   43
+  ],
+  "communities_with_100plus": 9,
+  "ami_across_5_seeds_mean": 0.573,
+  "vs_topic_communities": {
+   "people_in_both": 2621,
+   "ami": 0.036
+  }
+ },
+ "cohort_mixing": [
+  {
+   "from": "old guard",
+   "to": "old guard",
+   "observed": 0.267,
+   "expected": 0.17,
+   "lift": 1.57
+  },
+  {
+   "from": "old guard",
+   "to": "newcomer",
+   "observed": 0.151,
+   "expected": 0.248,
+   "lift": 0.61
+  },
+  {
+   "from": "newcomer",
+   "to": "old guard",
+   "observed": 0.141,
+   "expected": 0.237,
+   "lift": 0.59
+  },
+  {
+   "from": "newcomer",
+   "to": "newcomer",
+   "observed": 0.442,
+   "expected": 0.345,
+   "lift": 1.28
+  }
+ ],
+ "cohort_mixing_from2024": [
+  {
+   "from": "old guard",
+   "to": "old guard",
+   "observed": 0.077,
+   "expected": 0.068,
+   "lift": 1.14
+  },
+  {
+   "from": "old guard",
+   "to": "newcomer",
+   "observed": 0.19,
+   "expected": 0.199,
+   "lift": 0.95
+  },
+  {
+   "from": "newcomer",
+   "to": "old guard",
+   "observed": 0.177,
+   "expected": 0.186,
+   "lift": 0.95
+  },
+  {
+   "from": "newcomer",
+   "to": "newcomer",
+   "observed": 0.556,
+   "expected": 0.547,
+   "lift": 1.02
+  }
+ ],
+ "periods": [
+  {
+   "period": "before 2024",
+   "nodes": 5796,
+   "edges": 35367,
+   "replies": 47917,
+   "share_replies_to_posts": 0.374,
+   "density": 0.00105,
+   "largest_weak_component_share": 0.998,
+   "largest_strong_component_share": 0.598,
+   "reciprocity": 0.4394,
+   "mean_out_degree": 6.1,
+   "share_nodes_never_replied_to": 0.332,
+   "share_nodes_never_replying": 0.04,
+   "transitivity_undirected": 0.0663,
+   "degree_assortativity_undirected": -0.116
+  },
+  {
+   "period": "from 2024",
+   "nodes": 23106,
+   "edges": 145111,
+   "replies": 185358,
+   "share_replies_to_posts": 0.387,
+   "density": 0.000272,
+   "largest_weak_component_share": 0.992,
+   "largest_strong_component_share": 0.535,
+   "reciprocity": 0.3849,
+   "mean_out_degree": 6.28,
+   "share_nodes_never_replied_to": 0.399,
+   "share_nodes_never_replying": 0.034,
+   "transitivity_undirected": 0.0376,
+   "degree_assortativity_undirected": -0.069
+  }
+ ]
+}

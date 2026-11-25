@@ -241,11 +241,10 @@ def alignment_data():
 
 
 # ---------------------------------------------------------------- topics
-SESO_THEMES = {"Politics (RFK, Trump, left/right)": [46, 117, 43, 68, 107], "Vaccines and COVID": [20], "Pharma, FDA, corporations": [10, 50, 80, 116],
-               "Ingredient labels and processed food": [61, 92, 60], "Shopping (Costco, avocado oil, chips)": [17, 11, 9], "Studies and evidence": [23, 52, 53],
-               "Keto, carbs, fasting": [1, 66], "Omega-6 / PUFA biochemistry": [0, 79, 96]}
-SCINUT_THEMES = {"Creatine": [89], "Gut microbiome": [52], "Coronary plaque and keto LDL": [48, 90], "Ultra-processed food": [34], "Industry funding and bias": [100],
-                 "'95% CI' statistics": [59], "Cognition and dementia": [17], "Keto and insulin": [1], "Fasting": [14], "Vitamin D and sun": [3]}
+# Hand-picked topic ids per theme for the CURRENT topic models (refitted 22 Nov). Old ids are invalid after a refit, so they are read from files.
+SESO_THEMES = json.loads((PROC / "themes_confirmed.json").read_text())
+_SCI = PROC / "scinut_themes_confirmed.json"
+SCINUT_THEMES = json.loads(_SCI.read_text()) if _SCI.exists() else {}  # TODO: r/ScientificNutrition themes not yet re-picked on the new topics
 
 
 def topics():
@@ -287,7 +286,7 @@ def emotion():
                      "hostile_pct": f(100 * r.hostile_share, 1), "positive_pct": f(100 * r.positive_share, 1), "inquisitive_pct": f(100 * r.inquisitive_share, 1),
                      "neutral_pct": f(100 * r.neutral_share, 1), "hostile_mean": f(r.hostile_mean, 4)})
     save("emotion", rows, ("Classifier", "SamLowe/roberta-base-go_emotions (28 Reddit emotions, multi-label), text truncated to 256 tokens; share = documents whose group score is at least 0.5 "
-                                     "(hostile = anger, annoyance, disapproval, disgust). PROVISIONAL: the course's emotion-classifier choice is still open and this model was not validated by hand on this corpus."),
+                                     "(hostile_pct = disapproving tone: anger, annoyance, disapproval or disgust 0.5 or more; checked by hand on 150 comments: about 4 in 5 flagged comments are critical or hostile, about 1 in 4 hostile toward people)."),
          ("Sample", "r/StopEatingSeedOils: up to 1,200 documents per theme and period, plus a random baseline of 3,000 per period; r/ScientificNutrition: random 3,000 per period."))
     return rows
 
@@ -314,7 +313,7 @@ def cocommenter():
         camps[r["author"]].add(r["seed_subreddit"])
     fetched = Counter(s for r in recs for s in camps[r["author"]])
     print(f"co-commenter: {len(recs):,} authors fetched {dict(fetched)}")
-    SEEDS_ = {SESO, SCINUT, "carnivore"}
+    SEEDS_ = {SESO, SCINUT}  # r/carnivore no longer a seed (22 Nov)
     # an author is 'in' a subreddit with 3+ interactions (posts + comments) over the whole history; seed subreddits are left out
     subs_of = {}
     for r in recs:
@@ -392,7 +391,7 @@ def cocommenter():
 def who_stats():
     first, n_by = {}, defaultdict(Counter)
     author_of = {}
-    for s in (SESO, SCINUT, "carnivore"):
+    for s in (SESO, SCINUT):  # r/carnivore comments no longer downloaded (22 Nov)
         with gzip.open(RAW / f"{s}_comments.jsonl.gz", "rt", encoding="utf-8") as fh:
             for line in fh:
                 x = json.loads(line)
@@ -439,8 +438,8 @@ def facts(sci, online, matching, null, who, ever, first, author_of, topics_rows,
     pct1 = lambda a, b: round(100 * a / b, 1)
     add("scinut_new", round(100 * (1 - len(who[sn]["from2024"] & who[sn]["pre2024"]) / len(who[sn]["from2024"]))), "r/ScientificNutrition commenters from 2024 who had not commented there before", "%")
     add("seso_new", round(100 * (1 - len(who[se]["from2024"] & who[se]["pre2024"]) / len(who[se]["from2024"]))), "r/StopEatingSeedOils commenters from 2024 who had not commented there before", "%")
-    add("seso_carn_pre", pct1(len(who[se]["pre2024"] & ever["carnivore"]), len(who[se]["pre2024"])), "r/StopEatingSeedOils commenters before 2024 who also comment in r/carnivore", "%")
-    add("seso_carn_from", pct1(len(who[se]["from2024"] & ever["carnivore"]), len(who[se]["from2024"])), "r/StopEatingSeedOils commenters from 2024 who also comment in r/carnivore", "%")
+    # seso_carn_pre / seso_carn_from (overlap with r/carnivore only) removed 22 Nov: one diet subreddit biases the measure (people moved between
+    # r/carnivore, r/carnivorediet, r/AnimalBased). TODO: replace with overlap with a pre-declared SET of diet subreddits from the author histories.
     add("seso_commenters_from", len(who[se]["from2024"]), "r/StopEatingSeedOils commenters from 2024", "")
     add("seso_commenters_pre", len(who[se]["pre2024"]), "r/StopEatingSeedOils commenters before 2024", "")
     N = {(r["network"], r["measure"]): r for r in null}
@@ -480,12 +479,12 @@ def main():
     if emo:
         E = {(r["subreddit"], r["theme"], r["period"]): r for r in emo}
         g = lambda sub, th, per: E[(sub, th, per)]["hostile_pct"]
-        extra["host_seso_pre"] = (g("r/StopEatingSeedOils", "all (random)", "before 2024"), "Hostile comments in r/StopEatingSeedOils before 2024", "%")
-        extra["host_seso_from"] = (g("r/StopEatingSeedOils", "all (random)", "from 2024"), "Hostile comments in r/StopEatingSeedOils from 2024", "%")
-        extra["host_scinut_pre"] = (g("r/ScientificNutrition", "all (random)", "before 2024"), "Hostile comments in r/ScientificNutrition before 2024", "%")
-        extra["host_scinut_from"] = (g("r/ScientificNutrition", "all (random)", "from 2024"), "Hostile comments in r/ScientificNutrition from 2024", "%")
-        extra["host_evid_pre"] = (g("r/StopEatingSeedOils", "studies & evidence", "before 2024"), "Hostile comments about studies and evidence in r/StopEatingSeedOils before 2024", "%")
-        extra["host_evid_from"] = (g("r/StopEatingSeedOils", "studies & evidence", "from 2024"), "Hostile comments about studies and evidence in r/StopEatingSeedOils from 2024", "%")
+        extra["host_seso_pre"] = (g("r/StopEatingSeedOils", "all (random)", "before 2024"), "Comments with a disapproving tone in r/StopEatingSeedOils before 2024", "%")
+        extra["host_seso_from"] = (g("r/StopEatingSeedOils", "all (random)", "from 2024"), "Comments with a disapproving tone in r/StopEatingSeedOils from 2024", "%")
+        extra["host_scinut_pre"] = (g("r/ScientificNutrition", "all (random)", "before 2024"), "Comments with a disapproving tone in r/ScientificNutrition before 2024", "%")
+        extra["host_scinut_from"] = (g("r/ScientificNutrition", "all (random)", "from 2024"), "Comments with a disapproving tone in r/ScientificNutrition from 2024", "%")
+        extra["host_evid_pre"] = (g("r/StopEatingSeedOils", "studies & evidence", "before 2024"), "Comments with a disapproving tone about studies and evidence in r/StopEatingSeedOils before 2024", "%")
+        extra["host_evid_from"] = (g("r/StopEatingSeedOils", "studies & evidence", "from 2024"), "Comments with a disapproving tone about studies and evidence in r/StopEatingSeedOils from 2024", "%")
     facts(sci, online, matching, null, who, ever, first, author_of, trows, extra)
 
 

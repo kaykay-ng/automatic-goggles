@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import pandas as pd
 PROC = Path(__file__).resolve().parents[1] / "data" / "processed"
-LAB = {"hostile": "Hostile", "positive": "Positive", "inquisitive": "Inquisitive", "fearful": "Fearful"}
+LAB = {"hostile": "Disapproving tone", "positive": "Positive", "inquisitive": "Inquisitive", "fearful": "Fearful"}
 NOTE = {"hostile": "anger, annoyance, disapproval, disgust", "positive": "admiration, approval, gratitude, joy, love, optimism, excitement, amusement, caring, pride, relief", "inquisitive": "curiosity, confusion", "fearful": "fear, nervousness"}
 M = pd.read_csv(PROC / "goemo_monthly.csv")
 M["q"] = pd.PeriodIndex(M.month, freq="M").asfreq("Q").astype(str)

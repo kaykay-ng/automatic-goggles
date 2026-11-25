@@ -36,7 +36,7 @@ import networkx as nx
 ROOT = Path(__file__).resolve().parents[1]
 RAW, PROC = ROOT / "data" / "raw", ROOT / "data" / "processed"
 SEESO, SCINUT = "StopEatingSeedOils", "ScientificNutrition"
-SEEDS = {SEESO, SCINUT, "carnivore"}
+SEEDS = {SEESO, SCINUT}  # r/carnivore is no longer a seed (22 Nov): it is an ordinary subreddit here
 
 
 def read_counts(counts_file):

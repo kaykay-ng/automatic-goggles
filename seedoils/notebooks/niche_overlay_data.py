@@ -1,6 +1,7 @@
 """Data for the niche timeline and outcome overlay: the Figure 7 backbone with (1) each person's first-comment month (people appear as the slider moves) and (2) outcomes per person: share of hostile comments (GoEmotions hostile group >= 0.5) and share downvoted (score <= 0),
 before 2024 / from 2024 / all time. Per-person shares are shrunk toward the average (m = 15 pseudo-comments) because people have 10-30 comments; per-niche numbers are plain shares.
 Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/niche_overlay_data.py  -> data/processed/artifact/niche_network.json"""
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import gzip, glob, json
 from pathlib import Path
 import numpy as np, pandas as pd
@@ -11,7 +12,7 @@ with gzip.open(glob.glob("seedoils/data/raw/*StopEatingSeedOils_comments.jsonl.g
     for l in f:
         x = json.loads(l); raw[x["id"]] = (x["author"], int(x["created_utc"]), x.get("score"))
 R = pd.DataFrame([(i, a, t, s) for i, (a, t, s) in raw.items()], columns=["id", "a", "t", "score"]); first = R.groupby("a").t.min()
-D = pd.read_csv(P / "seso_k50_doc_topics.csv.gz"); D = D[D.kind == "comment"]; D["a"] = D.id.map(lambda i: raw.get(i, (None,))[0]); D = D[D.a.notna() & ~D.a.isin(["[deleted]", "AutoModerator"])]
+D = pd.read_csv(P / "seso_k50_doc_topics.csv.gz"); D = D[D.kind == "comment"]; D["a"] = D.id.map(lambda i: raw.get(i, (None,))[0]); D = D[D.a.notna() & (~D.a.isin(["[deleted]", "AutoModerator"]) & not_bot(D.a))]
 nd = D.groupby("a").size(); U = np.array(sorted(nd[nd >= 10].index)); N = pd.read_csv(P / "commenter_topic_network_nodes.csv"); assert len(U) == len(N)
 LABS = list(pd.read_csv(P / "goemo_monthly.csv", nrows=1).columns[1:29]); HOST = ["anger", "annoyance", "disapproval", "disgust"]
 docs = pd.read_csv(P / "seso_docs.csv.gz", usecols=["id"], keep_default_na=False); z = np.load(P / "goemo_seso.npz", allow_pickle=True); assert (z["id"].astype(str) == docs.id.astype(str).values).all()

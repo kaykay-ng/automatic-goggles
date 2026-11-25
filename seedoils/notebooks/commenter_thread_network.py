@@ -4,8 +4,10 @@ cosine; the same disparity filter (alpha 0.05) and Louvain (20 seeds) as the top
   (1) AMI between the thread-based communities and the topic-based niches (same people), next to the AMI of the thread communities with arrival year (time confound) and of two Louvain runs of the topic network;
   (2) for each thread-based community, which of the 50 topics its members' comments over-represent (topics are used ONLY here, to describe), and whether the politics and vaccine topics are among them;
   (3) the share of each topic-based niche that lands in each thread community.
-Run from final_project/ with the NLP env:  ./.venv-nlp/bin/python seedoils/notebooks/commenter_thread_network.py   (needs commenter_topic_network.py run first for commenter_topic_network_nodes.csv)
+Run from final_project/ with the NLP env:  ./.venv-nlp/bin/python seedoils/notebooks/commenter_thread_network.py   (needs commenter_topic_network_130.py run first for commenter_topic_network_130_nodes.csv)
 Aggregates only; no usernames or text are written."""
+from seedoil_common import community_labels  # hand-written community names
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import glob
 import gzip
 import json
@@ -26,9 +28,10 @@ with gzip.open(glob.glob("seedoils/data/raw/*StopEatingSeedOils_comments.jsonl.g
         rows.append((x["author"], x["link_id"], int(x["created_utc"])))
 R = pd.DataFrame(rows, columns=["a", "thread", "t"])
 first = R.groupby("a").t.min()
-D = pd.read_csv(P / "seso_k50_doc_topics.csv.gz"); D = D[D.kind == "comment"]; D["a"] = D.id.map(lambda i: raw.get(i, (None,))[0]); D = D[D.a.notna() & ~D.a.isin(["[deleted]", "AutoModerator"])]
+# the ~130 topics (refit 22 Nov; the k=50 merge is not rebuilt)
+D = pd.read_csv(P / "seso_doc_topics.csv.gz"); D = D[D.kind == "comment"]; D["a"] = D.id.map(lambda i: raw.get(i, (None,))[0]); D = D[D.a.notna() & (~D.a.isin(["[deleted]", "AutoModerator"]) & not_bot(D.a))]
 n_docs = D.groupby("a").size(); U = n_docs[n_docs >= MIN_DOCS].index; D = D[D.a.isin(U)]; users = np.array(sorted(U)); ui = {u: i for i, u in enumerate(users)}; n = len(users)
-N0 = pd.read_csv(P / "commenter_topic_network_nodes.csv"); assert len(N0) == n, (len(N0), n)
+N0 = pd.read_csv(P / "commenter_topic_network_130_nodes.csv"); assert len(N0) == n, (len(N0), n)
 topic_comm = N0.community.values  # -1 = not in the largest component
 print(f"commenters {n:,}; in topic-network niches (largest component) {np.sum(topic_comm >= 0):,}; niche sizes {np.bincount(topic_comm[topic_comm >= 0])[:10].tolist()}")
 # thread profiles
@@ -60,16 +63,16 @@ print(f"  AMI thread communities vs year of first comment: {ami(thread_comm[both
 # baseline: shuffled niche labels
 rng = np.random.default_rng(0); print(f"  shuffled niche labels (10 reps): AMI mean {np.mean([ami(thread_comm[both], rng.permutation(topic_comm[both])) for _ in range(10)]):.3f}")
 # topic description of thread communities
-tinfo = pd.read_csv(P / "seso_k50_topics_info.csv").set_index("topic"); Xt = np.zeros((n, 50)); np.add.at(Xt, (D.a.map(ui).values, D.topic.values), 1); overall = Xt.sum(0) / Xt.sum()
+tinfo = pd.read_csv(P / "seso_topics_info.csv").set_index("topic"); Xt = np.zeros((n, int(D.topic.max()) + 1)); np.add.at(Xt, (D.a.map(ui).values, D.topic.values), 1); overall = Xt.sum(0) / Xt.sum()
 word = lambda t: ", ".join(w.strip() for w in tinfo.loc[t, "top_words"].split(",")[:3])
-pol = [t for t in tinfo.index if any(w in tinfo.loc[t, "top_words"].split(",")[:4] for w in ("rfk", "trump"))]; vac = [t for t in tinfo.index if any(w.strip() in ("vaccines", "vaccine") for w in tinfo.loc[t, "top_words"].split(",")[:3])]
+pol = [t for t in tinfo.index if any(("rfk" in w or "trump" in w) for w in tinfo.loc[t, "top_words"].split(",")[:4])]; vac = [t for t in tinfo.index if any(w.strip() in ("vaccines", "vaccine") for w in tinfo.loc[t, "top_words"].split(",")[:3])]
 print(f"\n(2) topics over-represented in each thread-based community (politics topic ids {pol}, vaccine topic ids {vac}); topics used only to describe")
 for ci, c in enumerate(comm[:12]):
     idx = np.array(sorted(c)); sh = Xt[idx].sum(0) / Xt[idx].sum(); top = np.argsort(-(sh - overall))[:3]
     print(f"  T{ci}: {len(c):>4} people | " + "; ".join(f"[{t}] {word(t)} ({sh[t] * 100:.0f}% vs {overall[t] * 100:.0f}%)" for t in top) + f" | politics share {sh[pol].sum() * 100:.0f}% (all {overall[pol].sum() * 100:.0f}%), vaccines {sh[vac].sum() * 100:.1f}% (all {overall[vac].sum() * 100:.1f}%)")
 print("\n(3) where each topic-based niche's people land (% of the niche in thread community T0..T7; other = T8+ or none)")
-LAB = ['Condiments, snacks', 'Olive oil', 'Politics', 'Eggs, raw milk', 'Bread, butter', 'Organic, protein', 'Labels, ice cream', 'Sugar, carbs', 'Vaccines', 'LDL']
+LAB = community_labels(int(topic_comm.max()) + 1)[1]
 print(f"  {'niche':<20}{'n':>5} " + "".join(f"{'T' + str(j):>5}" for j in range(8)) + "  other")
-for ci in range(10):
+for ci in range(len(LAB)):
     m = topic_comm == ci; row = [np.sum(m & (thread_comm == j)) / m.sum() * 100 for j in range(8)]
     print(f"  {LAB[ci]:<20}{m.sum():>5} " + "".join(f"{v:>5.0f}" for v in row) + f"  {100 - sum(row):>4.0f}")

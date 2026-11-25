@@ -4,6 +4,7 @@ Decomposition of the change in theme share (all documents from 2024 minus all be
   change = (OLD from 2024 - OLD before)  [what long-time commenters changed]  +  w_new * (NEW from 2024 - OLD from 2024)  [what newcomers add, w_new = newcomers' share of documents from 2024].
 Also 'returners': the same people before and after (OLD authors with a topic-model document in both periods). Cluster bootstrap over commenters (300) for the intervals. Output: data/processed/topic_by_cohort.csv.
 Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/topic_by_cohort.py"""
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import sys
 from pathlib import Path
 import numpy as np, pandas as pd
@@ -15,7 +16,7 @@ TH = {"Politics": [46, 117, 43, 68, 107], "Vaccines and COVID": [20], "Pharma, F
 cols = ["id", "author", "created_utc"]
 first = pd.concat([pd.read_csv(PROC / f, usecols=cols, keep_default_na=False) for f in ("seso_docs.csv.gz", "seso_short_docs.csv.gz")]).groupby("author").created_utc.min()
 D = pd.read_csv(PROC / "seso_docs.csv.gz", usecols=cols, keep_default_na=False).merge(pd.read_csv(PROC / "seso_doc_topics.csv.gz", usecols=["id", "topic"]), on="id")
-D = D[~D.author.isin(["[deleted]", "AutoModerator"])].copy(); D["post"] = D.created_utc >= CUT; D["new"] = D.author.map(first) >= CUT
+D = D[(~D.author.isin(["[deleted]", "AutoModerator"]) & not_bot(D.author))].copy(); D["post"] = D.created_utc >= CUT; D["new"] = D.author.map(first) >= CUT
 print("docs", len(D), "pre", (~D.post).sum(), "post", D.post.sum(), "share of post docs by NEW", round(D[D.post].new.mean(), 3), "| authors", D.author.nunique())
 for th, ts in TH.items(): D[th] = D.topic.isin(ts)
 ret = set(D[(~D.new) & D.post].author) & set(D[~D.post].author)

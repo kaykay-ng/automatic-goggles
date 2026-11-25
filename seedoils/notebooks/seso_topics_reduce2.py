@@ -8,6 +8,7 @@ Per variant and k: stability (mean pairwise AMI between seeds) and coherence (me
 plus the share of comments in the largest topic. Topic tables for seed 42 are saved.
 Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/seso_topics_reduce2.py
  -> data/processed/seso_red2_sweep.csv, seso_red2_<A|B>_k<k>_topics_info.csv. No text written."""
+from seedoil_common import TOKEN_PATTERN, bertopic_clean, hyphen_bertopic  # hyphen-keeping tokenizer (omega-6 stays whole)
 import copy
 import itertools
 import sys
@@ -28,6 +29,7 @@ SHARED_DF = 0.05
 
 def main():
     from bertopic import BERTopic
+    HyphenBERTopic = hyphen_bertopic()  # BERTopic, but hyphens survive its text clean-up
     from hdbscan import HDBSCAN
     from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, CountVectorizer
     from sklearn.metrics import adjusted_mutual_info_score as ami
@@ -36,18 +38,18 @@ def main():
     V = np.load(PROC / "seso_vectors.npy").astype(np.float32)
     docs = D.text.tolist()
     stop = list(ENGLISH_STOP_WORDS | st.REDDIT_FILLER)
-    cvx = CountVectorizer(stop_words=stop, min_df=20, ngram_range=(1, 2))
-    X = cvx.fit_transform(docs).tocsr(); vocab = cvx.get_feature_names_out()
+    cvx = CountVectorizer(stop_words=stop, token_pattern=TOKEN_PATTERN, min_df=20, ngram_range=(1, 2))
+    X = cvx.fit_transform([bertopic_clean(d) for d in docs]).tocsr(); vocab = cvx.get_feature_names_out()
     Xb = (X > 0).astype(np.float64).tocsc(); N = X.shape[0]; df = np.asarray(Xb.sum(axis=0)).ravel()
     shared = set(vocab[df / N > SHARED_DF])
     print(f"shared words (in >{SHARED_DF:.0%} of comments): {len(shared)}: {sorted(shared)}", flush=True)
     keep_col = np.array([w not in shared for w in vocab])
     pre, post = (D.created_utc < 1704067200).values, (D.created_utc >= 1704067200).values
-    orig = lambda: CountVectorizer(stop_words=stop, min_df=20, ngram_range=(1, 2))
-    fixed = lambda v: CountVectorizer(stop_words=stop, ngram_range=(1, 2), vocabulary=list(v))
+    orig = lambda: CountVectorizer(stop_words=stop, token_pattern=TOKEN_PATTERN, min_df=20, ngram_range=(1, 2))
+    fixed = lambda v: CountVectorizer(stop_words=stop, token_pattern=TOKEN_PATTERN, ngram_range=(1, 2), vocabulary=list(v))
     labels, coh, big = {}, {}, {}
     for seed in SEEDS:
-        tm = BERTopic(umap_model=UMAP(n_neighbors=15, n_components=5, min_dist=0.0, metric="cosine", random_state=seed),
+        tm = HyphenBERTopic(umap_model=UMAP(n_neighbors=15, n_components=5, min_dist=0.0, metric="cosine", random_state=seed),
                       hdbscan_model=HDBSCAN(min_cluster_size=150, min_samples=15, metric="euclidean", cluster_selection_method="eom", prediction_data=True),
                       vectorizer_model=orig(), calculate_probabilities=False, verbose=False)
         topics, _ = tm.fit_transform(docs, embeddings=V)

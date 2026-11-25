@@ -6,6 +6,7 @@ Outcomes per comment: hostile (GoEmotions anger/annoyance/disapproval/disgust ma
     (standardising on the other group's topic mix).
 (3) Same people over time: long-time commenters with >= 5 comments in both periods, paired change in their own share.
 Intervals: bootstrap over people (300 resamples). Run from final_project/ with the NLP env:  ./.venv-nlp/bin/python seedoils/notebooks/people_vs_topic.py   (aggregates only)"""
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import glob
 import gzip
 import json
@@ -23,7 +24,7 @@ with gzip.open(glob.glob("seedoils/data/raw/*StopEatingSeedOils_comments.jsonl.g
         x = json.loads(l); raw[x["id"]] = (x["author"], int(x["created_utc"]), x.get("score"))
 first = pd.DataFrame([(a, t) for a, t, _ in raw.values()], columns=["a", "t"]).groupby("a").t.min()
 D = pd.read_csv(P / "seso_doc_topics.csv.gz"); D = D[D.kind == "comment"].copy(); D["a"] = D.id.map(lambda i: raw.get(i, (None,))[0])
-D = D[D.a.notna() & ~D.a.isin(["[deleted]", "AutoModerator"])]; nd = D.groupby("a").size(); U = set(nd[nd >= 10].index); D = D[D.a.isin(U)].copy()
+D = D[D.a.notna() & (~D.a.isin(["[deleted]", "AutoModerator"]) & not_bot(D.a))]; nd = D.groupby("a").size(); U = set(nd[nd >= 10].index); D = D[D.a.isin(U)].copy()
 LABS = list(pd.read_csv(P / "goemo_monthly.csv", nrows=1).columns[1:29]); HOST = ["anger", "annoyance", "disapproval", "disgust"]
 docs = pd.read_csv(P / "seso_docs.csv.gz", usecols=["id"], keep_default_na=False); z = np.load(P / "goemo_seso.npz", allow_pickle=True); assert (z["id"].astype(str) == docs.id.astype(str).values).all()
 hostile = pd.Series((pd.DataFrame(z["p"].astype(np.float32), columns=LABS)[HOST].max(axis=1) >= .5).values, index=docs.id.astype(str).values)

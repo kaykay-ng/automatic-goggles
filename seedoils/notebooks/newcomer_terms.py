@@ -4,6 +4,7 @@ Groups: old guard = the author's first comment in the subreddit is before 2024; 
 Terms: unigrams and bigrams counted once per comment (so a word repeated inside one comment counts once), (as in the topic model: English stop words + Reddit filler removed), used by at least MIN_AUTHORS different authors in each of the two groups combined (so one person's habit cannot make a term).
 Score: weighted log-odds with an informative Dirichlet prior (Monroe, Colaresi and Quinn 2008): the prior is the term's overall frequency, so rare terms are not over-read; z > 0 = newcomers, z < 0 = old guard.
 Run from final_project/ with the NLP env:  ./.venv-nlp/bin/python seedoils/notebooks/newcomer_terms.py  -> data/processed/artifact/newcomer_terms.json ({rows, meta}). Aggregates only: terms and counts, no text, no usernames."""
+from seedoil_common import is_bot, not_bot, TOKEN_PATTERN, bertopic_clean, hyphen_bertopic  # shared bot rule: AutoModerator + names ending in 'bot'
 import glob
 import gzip
 import json
@@ -23,11 +24,11 @@ with gzip.open(glob.glob("seedoils/data/raw/*StopEatingSeedOils_comments.jsonl.g
     for l in f:
         x = json.loads(l); a = x["author"]; t = int(x["created_utc"])
         if a not in raw_first or t < raw_first[a]: raw_first[a] = t
-D = pd.read_csv(P / "seso_docs.csv.gz", keep_default_na=False); D = D[(D.kind == "comment") & (D.created_utc >= CUT) & ~D.author.isin(["[deleted]", "AutoModerator"])].copy()
+D = pd.read_csv(P / "seso_docs.csv.gz", keep_default_na=False); D = D[(D.kind == "comment") & (D.created_utc >= CUT) & (~D.author.isin(["[deleted]", "AutoModerator"]) & not_bot(D.author))].copy()
 D["new"] = (D.author.map(raw_first) >= CUT).astype(int)
 print(f"documents from 2024: {len(D):,} (old guard {int((D.new == 0).sum()):,} by {D[D.new == 0].author.nunique():,} authors; newcomers {int((D.new == 1).sum()):,} by {D[D.new == 1].author.nunique():,} authors)")
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, CountVectorizer
-cv = CountVectorizer(stop_words=list(ENGLISH_STOP_WORDS | st.REDDIT_FILLER), ngram_range=(1, 2), min_df=30, binary=True)
+cv = CountVectorizer(stop_words=list(ENGLISH_STOP_WORDS | st.REDDIT_FILLER), token_pattern=TOKEN_PATTERN, preprocessor=bertopic_clean, ngram_range=(1, 2), min_df=30, binary=True)
 X = cv.fit_transform(D.text.tolist()).tocsr(); V = cv.get_feature_names_out()
 G = sp.csr_matrix((np.ones(len(D)), (D.new.values, np.arange(len(D)))), shape=(2, len(D)))
 C = np.asarray((G @ X).todense()); old, new = C[0], C[1]

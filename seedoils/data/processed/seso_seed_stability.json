@@ -1,0 +1,343 @@
+{
+ "n_runs": 5,
+ "seeds": [
+  1,
+  2,
+  3,
+  4,
+  42
+ ],
+ "per_run": [
+  {
+   "seed": 1,
+   "topics": 132,
+   "outliers": 0.4452
+  },
+  {
+   "seed": 2,
+   "topics": 131,
+   "outliers": 0.4362
+  },
+  {
+   "seed": 3,
+   "topics": 127,
+   "outliers": 0.4214
+  },
+  {
+   "seed": 4,
+   "topics": 132,
+   "outliers": 0.4099
+  },
+  {
+   "seed": 42,
+   "topics": 123,
+   "outliers": 0.3884
+  }
+ ],
+ "pairs": 10,
+ "ami": {
+  "mean": 0.811,
+  "min": 0.775,
+  "max": 0.846
+ },
+ "nmi": {
+  "mean": 0.814,
+  "min": 0.778,
+  "max": 0.848
+ },
+ "ami_confident": {
+  "mean": 0.962,
+  "min": 0.942,
+  "max": 0.978
+ },
+ "themes": {
+  "Politics (RFK, Trump, left/right)": [
+   {
+    "seed": 1,
+    "pre": 0.41,
+    "from": 2.34,
+    "ratio": 5.67
+   },
+   {
+    "seed": 2,
+    "pre": 0.51,
+    "from": 2.41,
+    "ratio": 4.78
+   },
+   {
+    "seed": 3,
+    "pre": 0.46,
+    "from": 2.7,
+    "ratio": 5.81
+   },
+   {
+    "seed": 4,
+    "pre": 0.55,
+    "from": 2.81,
+    "ratio": 5.12
+   },
+   {
+    "seed": 42,
+    "pre": 0.42,
+    "from": 2.54,
+    "ratio": 6.07
+   }
+  ],
+  "Vaccines and COVID": [
+   {
+    "seed": 1,
+    "pre": 0.36,
+    "from": 1.07,
+    "ratio": 3.0
+   },
+   {
+    "seed": 2,
+    "pre": 0.32,
+    "from": 0.97,
+    "ratio": 3.03
+   },
+   {
+    "seed": 3,
+    "pre": 0.32,
+    "from": 0.96,
+    "ratio": 2.97
+   },
+   {
+    "seed": 4,
+    "pre": 0.37,
+    "from": 1.12,
+    "ratio": 3.0
+   },
+   {
+    "seed": 42,
+    "pre": 0.31,
+    "from": 0.94,
+    "ratio": 3.06
+   }
+  ],
+  "Distrust of industry, medicine and media": [
+   {
+    "seed": 1,
+    "pre": 2.44,
+    "from": 4.7,
+    "ratio": 1.93
+   },
+   {
+    "seed": 2,
+    "pre": 1.95,
+    "from": 3.75,
+    "ratio": 1.93
+   },
+   {
+    "seed": 3,
+    "pre": 2.28,
+    "from": 4.59,
+    "ratio": 2.02
+   },
+   {
+    "seed": 4,
+    "pre": 1.8,
+    "from": 3.63,
+    "ratio": 2.01
+   },
+   {
+    "seed": 42,
+    "pre": 2.46,
+    "from": 4.76,
+    "ratio": 1.94
+   }
+  ],
+  "Omega-6 / PUFA biochemistry": [
+   {
+    "seed": 1,
+    "pre": 11.0,
+    "from": 6.2,
+    "ratio": 0.56
+   },
+   {
+    "seed": 2,
+    "pre": 11.21,
+    "from": 6.31,
+    "ratio": 0.56
+   },
+   {
+    "seed": 3,
+    "pre": 11.73,
+    "from": 6.72,
+    "ratio": 0.57
+   },
+   {
+    "seed": 4,
+    "pre": 11.03,
+    "from": 6.23,
+    "ratio": 0.56
+   },
+   {
+    "seed": 42,
+    "pre": 11.0,
+    "from": 6.1,
+    "ratio": 0.55
+   }
+  ],
+  "Keto, carbs, fasting": [
+   {
+    "seed": 1,
+    "pre": 3.44,
+    "from": 1.66,
+    "ratio": 0.48
+   },
+   {
+    "seed": 2,
+    "pre": 3.39,
+    "from": 1.62,
+    "ratio": 0.48
+   },
+   {
+    "seed": 3,
+    "pre": 4.33,
+    "from": 2.29,
+    "ratio": 0.53
+   },
+   {
+    "seed": 4,
+    "pre": 4.53,
+    "from": 2.34,
+    "ratio": 0.52
+   },
+   {
+    "seed": 42,
+    "pre": 3.52,
+    "from": 1.68,
+    "ratio": 0.48
+   }
+  ],
+  "Other diets (vegan, carnivore, ancestral, Mediterranean)": [
+   {
+    "seed": 1,
+    "pre": 2.31,
+    "from": 2.4,
+    "ratio": 1.04
+   },
+   {
+    "seed": 2,
+    "pre": 2.29,
+    "from": 2.41,
+    "ratio": 1.05
+   },
+   {
+    "seed": 3,
+    "pre": 2.64,
+    "from": 2.64,
+    "ratio": 1.0
+   },
+   {
+    "seed": 4,
+    "pre": 2.35,
+    "from": 2.38,
+    "ratio": 1.01
+   },
+   {
+    "seed": 42,
+    "pre": 2.59,
+    "from": 2.56,
+    "ratio": 0.99
+   }
+  ],
+  "Studies and evidence": [
+   {
+    "seed": 1,
+    "pre": 1.62,
+    "from": 1.57,
+    "ratio": 0.97
+   },
+   {
+    "seed": 2,
+    "pre": 3.28,
+    "from": 3.56,
+    "ratio": 1.09
+   },
+   {
+    "seed": 3,
+    "pre": 1.59,
+    "from": 1.56,
+    "ratio": 0.98
+   },
+   {
+    "seed": 4,
+    "pre": 3.33,
+    "from": 3.55,
+    "ratio": 1.07
+   },
+   {
+    "seed": 42,
+    "pre": 3.09,
+    "from": 3.41,
+    "ratio": 1.1
+   }
+  ],
+  "Shopping (stores, chips, avocado oil)": [
+   {
+    "seed": 1,
+    "pre": 2.82,
+    "from": 4.41,
+    "ratio": 1.56
+   },
+   {
+    "seed": 2,
+    "pre": 2.7,
+    "from": 4.34,
+    "ratio": 1.61
+   },
+   {
+    "seed": 3,
+    "pre": 2.75,
+    "from": 4.28,
+    "ratio": 1.56
+   },
+   {
+    "seed": 4,
+    "pre": 2.95,
+    "from": 4.7,
+    "ratio": 1.59
+   },
+   {
+    "seed": 42,
+    "pre": 2.86,
+    "from": 4.63,
+    "ratio": 1.62
+   }
+  ],
+  "Ingredient labels and processed food": [
+   {
+    "seed": 1,
+    "pre": 1.12,
+    "from": 2.37,
+    "ratio": 2.11
+   },
+   {
+    "seed": 2,
+    "pre": 1.38,
+    "from": 2.82,
+    "ratio": 2.04
+   },
+   {
+    "seed": 3,
+    "pre": 1.18,
+    "from": 2.37,
+    "ratio": 2.01
+   },
+   {
+    "seed": 4,
+    "pre": 1.09,
+    "from": 2.31,
+    "ratio": 2.11
+   },
+   {
+    "seed": 42,
+    "pre": 1.05,
+    "from": 2.15,
+    "ratio": 2.04
+   }
+  ]
+ }
+}

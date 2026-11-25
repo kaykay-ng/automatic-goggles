@@ -1,118 +1,125 @@
-topic,n_docs,share_pre2024,share_from2024,top_words,ratio_from2024_vs_pre
-0,12123,0.0873,0.1168,"comment, post, read, science, point, sub, evidence, comments, paper, answer",1.34
-1,10183,0.0942,0.0691,"insulin, keto, ketogenic, glucose, ketosis, diet, ketogenic diet, diabetes, diets, insulin resistance",0.73
-2,3387,0.0263,0.0299,"protein, muscle, amino, protein intake, whey, proteins, mass, strength, amino acids, plant",1.14
-8,3248,0.0292,0.0233,"weight, calories, loss, energy, body, calorie, weight loss, fat, bmi, mass",0.8
-4,3157,0.0293,0.0212,"ldl, ldlc, hdl, risk, cvd, causal, apob, cholesterol, atherosclerosis, low",0.72
-5,2989,0.0242,0.0251,"vegan, vegans, vegan diet, veganism, diet, vegetarian, animal, diets, meat, plant",1.04
-9,2430,0.02,0.0199,"supplements, vitamin, supplement, mg, dose, vitamins, taking, rda, day, doses",1.0
-7,2347,0.0229,0.0143,"carbs, carb, low carb, low, fat, carbohydrate, carbohydrates, high carb, diet, diets",0.62
-3,2213,0.0227,0.0119,"vitamin, sun, d3, iu, levels, ngml, deficiency, vitamin deficiency, vit, skin",0.52
-13,2162,0.0179,0.0175,"saturated, saturated fat, fat, fats, saturated fats, polyunsaturated, heart, fat intake, heart disease, disease",0.98
-62,2119,0.017,0.018,"study, diet, studies, food, data, dietary, group, diets, research, participants",1.06
-18,2085,0.0175,0.0167,"nutrition, science, sub, scientific, nutritional, nutrition science, rnutrition, research, post, studies",0.95
-96,1899,0.0142,0.0175,"food, foods, eat, healthy, eating, junk, junk food, health, diet, processed",1.23
-27,1775,0.0128,0.0171,"meat, beef, processed, meats, chicken, eat, meat consumption, eat meat, eating, processed meat",1.34
-12,1702,0.0142,0.0136,"hes, dr, book, science, guy, nutrition, medical, doctor, podcast, video",0.96
-6,1618,0.0141,0.0121,"salt, sodium, potassium, pressure, blood pressure, water, iodine, bp, blood, sodium intake",0.86
-10,1472,0.01,0.015,"milk, dairy, cheese, yogurt, lactose, dairy products, products, fat, fermented, fullfat",1.5
-59,1439,0.009,0.0158,"95, ci, 95 ci, risk, dietary, associated, intake, participants, mortality, diabetes",1.76
-29,1392,0.014,0.0079,"cholesterol, dietary cholesterol, cholesterol levels, ldl, levels, dietary, serum cholesterol, disease, lipoprotein, hdl",0.56
-14,1365,0.0135,0.008,"fasting, autophagy, fast, intermittent, intermittent fasting, tre, restriction, days, weight, loss",0.59
-20,1227,0.009,0.0117,"fiber, fibre, constipation, gut, fiber intake, soluble, fibers, dietary fiber, insoluble, psyllium",1.3
-11,1196,0.0091,0.0108,"coffee, caffeine, tea, green tea, consumption, green, drink, cups, drinking, cup",1.19
-39,1171,0.0096,0.0097,"plant, plantbased, plant based, plants, plant foods, foods, based, animal, diet, based diet",1.01
-23,1115,0.0075,0.0115,"red meat, red, meat, processed, unprocessed, unprocessed red, meat consumption, processed meat, consumption, processed red",1.53
-17,1095,0.007,0.0118,"cognitive, dementia, brain, alzheimers, function, ad, alzheimers disease, memory, cognitive function, decline",1.69
-25,1084,0.0104,0.0068,"humans, paleo, human, ancestors, modern, ate, evolution, meat, animals, plants",0.65
-16,1081,0.01,0.0073,"fruit, juice, fruits, fruit juice, sugar, vegetables, orange, orange juice, juices, apples",0.73
-76,1076,0.0097,0.0076,"cvd, mortality, heart, risk, events, disease, death, heart disease, deaths, cardiovascular",0.78
-19,1069,0.0101,0.0069,"pufa, sfa, pufas, sfas, mufa, fat, saturated, fats, saturated fat, oil",0.68
-15,1046,0.0101,0.0065,"b12, vitamin b12, vitamin, folate, deficiency, supplements, folic, folic acid, b6, b12 deficiency",0.64
-58,1043,0.0078,0.0096,"cup, cooking, cook, salad, eat, smoothie, high, rice, vegetables, raw",1.23
-51,1022,0.0096,0.0068,"sugar, sugars, added, added sugars, added sugar, fructose, glucose, sucrose, diabetes, honey",0.71
-26,988,0.0077,0.0088,"oils, seed, oil, seed oils, canola, seed oil, canola oil, frying, vegetable, cooking",1.14
-21,988,0.01,0.0055,"dha, epa, ala, epa dha, conversion, epadha, brain, fish, algae, dha epa",0.55
-32,964,0.0077,0.0082,"depression, mental, anxiety, mental health, symptoms, tryptophan, stress, depressive, adhd, serotonin",1.06
-91,936,0.0068,0.0089,"epidemiology, epidemiological, evidence, science, studies, vaccines, data, point, observational, study",1.31
-55,886,0.007,0.0076,"causal, causation, causality, correlation, observational, evidence, relationship, association, correlations, infer",1.09
-34,883,0.0043,0.0113,"processed, ultraprocessed, foods, nova, processed foods, food, upf, processing, ultraprocessed foods, upfs",2.63
-35,867,0.0069,0.0074,"animals, land, grass, farming, feed, cattle, animal, agriculture, meat, beef",1.07
-45,848,0.0065,0.0077,"carnivore, carnivore diet, carnivores, diet, meat, eat, omnivores, plants, herbivores, eating",1.18
-33,845,0.0066,0.0074,"cancer, cancers, risk, cancer risk, colorectal, prostate, 95, breast cancer, breast, prostate cancer",1.12
-75,831,0.006,0.008,"funding, industry, research, funded, study, studies, money, conflict, conflicts, researchers",1.33
-24,828,0.0073,0.0061,"statins, statin, ldl, ldlc, events, lowering, therapy, trials, pcsk9, cardiovascular",0.84
-22,821,0.0071,0.0063,"eggs, egg, cholesterol, egg consumption, dietary cholesterol, consumption, yolks, dietary, eating eggs, day",0.89
-40,803,0.0066,0.0066,"rcts, rct, observational, concordance, observational studies, studies, epidemiology, concordant, evidence, results",1.0
-81,779,0.0063,0.0065,"antioxidant, antioxidants, oxidative, compounds, oxidative stress, stress, effects, polyphenols, cells, potential",1.03
-44,772,0.007,0.0055,"grains, wheat, grain, oats, flour, bread, bran, oat, rice, gluten",0.79
-43,772,0.0061,0.0067,"microbiome, gut, bacteria, probiotics, gut microbiome, diversity, probiotic, gut bacteria, fermented, microbiota",1.1
-42,769,0.0056,0.0074,"smoking, lung, lung cancer, cigarettes, cancer, smoke, smokers, epidemiology, cigarette, nicotine",1.32
-57,758,0.0067,0.0056,"longevity, life, selection, live, lifespan, life expectancy, expectancy, evolution, reproductive, years",0.84
-94,744,0.0051,0.0075,"countries, norway, expectancy, life expectancy, ate, life, europe, country, world, rate",1.47
-38,732,0.0046,0.008,"sucralose, sweeteners, artificial, stevia, sweetener, artificial sweeteners, sweet, sugar, taste, erythritol",1.74
-100,726,0.0044,0.0081,"industry, funding, funded, research, bias, meat, dairy, beef, conflicts, food",1.84
-36,723,0.0068,0.0048,"fish, salmon, mercury, sardines, mackerel, tuna, canned, seafood, fish consumption, farmed",0.71
-37,719,0.0064,0.0053,"fructose, glucose, liver, high fructose, sugar, nafld, hepatic, gd, insulin, metabolic",0.83
-41,699,0.0054,0.0063,"meat, red, red meat, cancer, processed meat, processed, meat consumption, colorectal, risk, colorectal cancer",1.17
-28,689,0.0055,0.0059,"nuts, walnuts, nut, almonds, peanut, walnut, peanuts, almond, peanut butter, acrylamide",1.07
-74,687,0.0058,0.0054,"omega3, fish, fish oil, omega, epa, oil, dha, fatty, omega3 fatty, fatty acids",0.93
-87,679,0.0066,0.0041,"inflammation, inflammatory, antiinflammatory, immune, markers, il6, crp, chronic, proinflammatory, arthritis",0.62
-52,650,0.0027,0.0091,"gut, microbiota, gut microbiota, microbiome, intestinal, microbial, probiotics, mice, probiotic, gut microbiome",3.37
-48,640,0.0029,0.0085,"plaque, cac, progression, coronary, data, ldl, baseline, apob, lmhr, paper",2.93
-49,634,0.0054,0.0049,"olive, olive oil, oil, evoo, virgin, oils, extra virgin, virgin olive, extra, canola",0.91
-46,623,0.0063,0.0035,"glycine, collagen, methionine, amino, peptides, glutathione, skin, taurine, amino acids, amino acid",0.56
-63,618,0.0044,0.006,"trans, trans fats, butter, fats, trans fat, margarine, fat, oils, hydrogenated, oil",1.36
-115,614,0.0062,0.0035,"atherosclerosis, cells, plaques, artery, arteries, endothelial, ldl, atherosclerotic, plaque, vasorum",0.56
-78,610,0.005,0.0051,"nutrition, books, book, dietitian, biochemistry, education, science, medical, recommend, learn",1.02
-31,610,0.0051,0.0049,"alcohol, wine, drinking, alcohol consumption, drink, beer, drinkers, moderate, drinks, alcohol intake",0.96
-109,605,0.0054,0.0044,"rcts, rct, observational, studies, epidemiology, evidence, observational studies, nutrition, study, data",0.81
-73,599,0.0062,0.0032,"la, acid, linoleic, linoleic acid, fatty, fatty acids, acids, fatty acid, essential, essential fatty",0.52
-67,596,0.0042,0.0058,"breakfast, meal, skipping, timing, eating, circadian, meals, morning, evening, day",1.38
-85,595,0.0052,0.0045,"humans, human, mice, studies, animal, mouse, rodent, animals, research, models",0.87
-30,587,0.0041,0.0058,"iron, heme, heme iron, ferritin, iron deficiency, anemia, absorption, deficiency, women, meat",1.41
-56,587,0.0038,0.0062,"ages, aging, glycation, age, longevity, senescence, advanced glycation, lifespan, advanced, end products",1.63
-114,537,0.0046,0.0042,"liver, nafld, fatty liver, hepatic, liver disease, liver fat, fatty, fat, nonalcoholic, nonalcoholic fatty",0.91
-47,534,0.0043,0.0045,"oxalate, spinach, kidney, oxalates, stones, kidney stones, calcium, stone, ph, kale",1.05
-92,523,0.0048,0.0036,"muscle, protein, longevity, muscle mass, mass, strength, exercise, older, training, age",0.75
-82,521,0.004,0.0047,"confounders, confounding, confounder, observational, residual, observational studies, adjustments, adjust, variables, rcts",1.18
-64,500,0.0045,0.0035,"testosterone, men, hormones, hormone, levels, women, menopause, estrogen, cortisol, sex",0.78
-50,487,0.0046,0.0032,"soy, estrogen, isoflavones, milk, phytoestrogens, hormones, tofu, soy protein, testosterone, soybean",0.7
-105,486,0.0023,0.0064,"submission, rscientificnutrition, commenting, removed, posting, guidelines, claims, sources claim, helps prevent, sources",2.78
-107,483,0.0052,0.0023,"triglycerides, postprandial, triglyceride, trigs, fat, fatty, fasting, fatty acids, acids, glucose",0.44
-84,476,0.0043,0.0033,"omega, omega6, ratio, omega3, n6, 3s, o6, n3, la, omega 3s",0.77
-53,476,0.004,0.0038,"calcium, bone, bmd, bone health, fracture, mineral, fractures, milk, bones, bone mineral",0.95
-69,460,0.0035,0.0041,"curcumin, turmeric, lead, cinnamon, pepper, ginger, placebo, black, powder, extract",1.17
-61,459,0.0033,0.0044,"ffqs, ffq, validated, data, questionnaire, validity, food frequency, validation, frequency, frequency questionnaire",1.33
-110,446,0.0037,0.0036,"app, cronometer, tracking, database, usda, data, nutrition, nutrient, food, track",0.97
-90,438,0.0026,0.005,"ldl, keto, ketogenic, ldlc, lmhr, ketogenic diets, mgdl, apob, diets, cholesterol",1.92
-88,437,0.0042,0.0028,"mice, chow, humans, rats, mouse, fat, diet, fed, high fat, highfat",0.67
-54,428,0.0032,0.004,"cico, calories, energy, weight, calorie, model, loss, body, lose, gain",1.25
-93,412,0.0044,0.002,"coconut, oil, coconut oil, acid, palm, palm oil, palmitic, saturated, palmitic acid, oils",0.45
-86,411,0.0041,0.0024,"zinc, copper, phytate, minerals, phytic, phytic acid, iron, absorption, metals, phytates",0.59
-77,410,0.0022,0.0049,"beans, bean, lentils, kidney beans, lectins, legumes, kidney, protein, cooking, black beans",2.23
-79,406,0.0033,0.0034,"rscientificnutrition, posting, discussed, removed, commenting, blogs, videos, allowed, linked, post",1.03
-98,406,0.0026,0.0043,"glyphosate, pesticides, organic, microplastics, crops, gmo, exposure, chemicals, food, safe",1.65
-66,406,0.0039,0.0026,"broccoli, sulforaphane, sprouts, mustard, seeds, cabbage, cruciferous, powder, raw, garlic",0.67
-60,396,0.0036,0.0027,"k2, vitamin, vitamin k2, k1, calcium, calcification, natto, magnesium, vitamin k1, bone",0.75
-116,394,0.0029,0.0036,"ibd, ibs, bowel, gluten, symptoms, patients, crohns, gut, intestinal, inflammatory bowel",1.24
-71,392,0.0036,0.0026,"hong, pork, pigs, hong kong, kong, okinawan, pig, meat, sweet, japan",0.72
-83,377,0.0029,0.0034,"sleep, melatonin, sleep quality, night, quality, circadian, duration, morning, rhythm, sleeping",1.17
-89,369,0.0014,0.0053,"creatine, supplementation, performance, cognitive, muscle, hair, brain, exercise, placebo, dose",3.79
-72,357,0.0033,0.0024,"teeth, fluoride, dental, cavities, tooth, mouth, oral, gum, water, saliva",0.73
-65,354,0.0035,0.0021,"tmao, carnitine, lcarnitine, fish, choline, gut, levels, meat, plasma, red",0.6
-68,330,0.0022,0.0034,"choline, betaine, eggs, intake, phosphatidylcholine, tmao, taurine, egg, dietary, nutrient",1.55
-70,319,0.0026,0.0027,"magnesium, mg, calcium, mds, citrate, absorption, intake, deficiency, serum, supplements",1.04
-106,315,0.002,0.0034,"mediterranean, mediterranean diet, diet, meat, italy, diets, based, olive, eat, vegan",1.7
-95,312,0.003,0.0019,"cancer, cells, cancer cells, tumor, glucose, cancers, growth, glycolysis, cell, ketogenic",0.63
-103,310,0.0032,0.0017,"igf1, mtor, growth, protein, muscle, restriction, mtorc1, signaling, cancer, leucine",0.53
-101,310,0.0026,0.0025,"rice, starch, resistant starch, resistant, white rice, brown rice, white, brown, pasta, noodles",0.96
-80,309,0.002,0.0033,"adventists, adventist, vegetarians, vegetarian, 7th, religious, adventist health, religion, seventh, meat",1.65
-102,291,0.0025,0.0022,"blueberries, blueberry, berries, anthocyanins, peel, orange, strawberries, polyphenols, berry, citrus",0.88
-113,285,0.0021,0.0027,"potatoes, potato, fries, boiled, chips, baked, fried, potato chips, t2d, mashed",1.29
-99,283,0.003,0.0014,"chia, flax, seeds, chia seeds, flaxseed, ala, dha, flax seeds, ground, epa",0.47
-97,279,0.0024,0.0021,"carotenoids, carotene, retinol, beta carotene, vitamin, betacarotene, lutein, beta, carotenoid, zeaxanthin",0.88
-108,270,0.0022,0.0023,"inuit, atherosclerosis, ancient, indigenous, modern, populations, traditional, disease, maasai, heart",1.05
-104,230,0.0021,0.0017,"nitrate, nitrates, nitric, oxide, nitric oxide, bacon, vegetables, beets, niacin, celery",0.81
-111,221,0.0019,0.0017,"fructose, fruit, fruits, juice, sugar, fruit juice, sucrose, liver, fiber, apple",0.89
-112,193,0.0011,0.0022,"chocolate, cocoa, dark chocolate, dark, heavy, metals, magnesium, heavy metals, polyphenols, powder",2.0
+topic,n_docs,share_pre2024,share_from2024,top_words,ratio_from2024_vs_pre,top_words_before_relabel
+0,12214,0.0881,0.1171,"comment, post, read, point, claim, paper, science, sub, study, question",1.33,"comment, post, science, sub, read, point, comments, paper, study, evidence"
+1,4688,0.0368,0.0408,"protein, muscle, protein intake, amino, amino acid, kg, mass, strength, plant protein, whey",1.11,"protein, muscle, amino, protein intake, kg, mass, strength, proteins, whey, muscle mass"
+3,3972,0.0321,0.0333,"vegan, plant, vegan diet, vegetarian, diet, animal, plant based, plant-based, food, veganism",1.04,"vegan, vegans, plant, vegan diet, diet, animal, vegetarian, foods, plant based, plant-based"
+2,3305,0.023,0.0329,"fiber, gut, microbiome, microbiota, probiotic, bacteria, gut microbiota, intestinal, gut microbiome, microbial",1.43,"gut, fiber, microbiome, microbiota, bacteria, gut microbiota, probiotics, intestinal, gut microbiome, microbial"
+4,3142,0.0248,0.0272,"keto, ketogenic, ketosis, ketogenic diet, diet, keto diet, carb, fat, carnivore, ketone",1.1,"keto, ketogenic, ketosis, diet, ketogenic diet, keto diet, ketogenic diets, diets, no_keto, carb"
+10,2874,0.0255,0.021,"calorie, weight, energy, loss, weight loss, body, fat, exercise, caloric, lose",0.82,"weight, calories, energy, loss, calorie, weight loss, body, fat, exercise, caloric"
+61,2536,0.0205,0.0213,"diet, food, study, guideline, dietary, eating, eat, group, healthy, health",1.04,"diet, food, study, guidelines, dietary, diets, foods, eating, eat, healthy"
+6,2430,0.0238,0.0146,"carb, low carb, carbohydrate, low, fat, diet, carb diet, high carb, high, low-carb",0.61,"carbs, carb, low carb, low, fat, carbohydrate, diets, diet, carbohydrates, high"
+18,2079,0.0176,0.0163,"saturated, saturated fat, fat, polyunsaturated, fat intake, heart, polyunsaturated fat, acid, heart disease, unsaturated",0.93,"saturated, saturated fat, fat, fats, saturated fats, polyunsaturated, fat intake, heart, unsaturated, heart disease"
+11,2004,0.0181,0.0142,"ldl, ldl-c, apob, cvd, causal, risk, particle, hdl, atherosclerosis, ascvd",0.78,"ldl, ldl-c, apob, no_ldl, cvd, risk, causal, hdl, atherosclerosis, ascvd"
+21,1888,0.0133,0.0186,"meat, beef, processed, meat consumption, eat, chicken, processed meat, food, animal, eating",1.4,"meat, beef, no_meat, processed, meat consumption, meats, eat, chicken, consumption, eating"
+9,1798,0.0149,0.0146,"doctor, dr, book, guy, science, medical, research, quack, video, nutrition",0.98,"dr, science, medical, guy, book, research, nutrition, doctor, claims, podcast"
+25,1684,0.0144,0.0131,"nutrition, science, sub, scientific, comment, post, nutrition science, discussion, nutritional, question",0.91,"nutrition, science, sub, scientific, nutrition science, post, research, nutritional, no_nutrition, scientific nutrition"
+5,1602,0.014,0.012,"salt, sodium, potassium, pressure, blood pressure, water, iodine, bp, blood, sodium intake",0.86,"salt, sodium, potassium, pressure, blood pressure, iodine, water, bp, blood, sodium intake"
+15,1568,0.0131,0.0125,"vitamin, supplement, rda, nutrient, multivitamin, deficiency, mg, need, scurvy, mineral",0.95,"vitamin, supplements, supplement, vitamins, rda, nutrients, mg, nutrient, deficiency, scurvy"
+27,1494,0.0153,0.0081,"cholesterol, dietary cholesterol, cholesterol level, lipoprotein, level, ldl, hdl, ldl-c, disease, dietary",0.53,"cholesterol, dietary cholesterol, cholesterol levels, levels, ldl, lipoprotein, disease, hdl, ldl-c, no_cholesterol"
+7,1475,0.0101,0.0149,"milk, dairy, cheese, yogurt, lactose, dairy product, product, cow, fat, fermented",1.48,"milk, dairy, cheese, yogurt, lactose, dairy products, products, fat, full-fat, fermented"
+12,1401,0.0146,0.0073,"vitamin, iu, d3, ng, ml, ng ml, level, 25, oh, vitamin deficiency",0.5,"vitamin, iu, d3, ng, ml, ng ml, 25, oh, levels, vitamin deficiency"
+36,1378,0.0138,0.0078,"insulin, insulin resistance, resistance, glucose, diabetes, fat, cause, blood, cell, adipocyte",0.57,"insulin, insulin resistance, resistance, glucose, no_insulin, fat, diabetes, blood, cells, hyperinsulinemia"
+26,1323,0.0124,0.0087,"human, animal, plant, ate, paleo, ancestor, evolution, modern, meat, food",0.7,"humans, human, ate, plants, paleo, modern, evolution, ancestors, meat, animals"
+58,1316,0.0082,0.0144,"95, ci, 95 ci, risk, dietary, associated, intake, association, mortality, participant",1.76,"95, ci, 95 ci, risk, dietary, associated, intake, mortality, participants, total"
+34,1315,0.0134,0.0072,"ketosis, glucose, insulin, keto, t2d, ketogenic, ketogenic diet, diet, virta, ketone",0.54,"ketosis, glucose, insulin, keto, t2d, ketogenic, virta, diet, ketogenic diet, diabetes"
+8,1204,0.0092,0.0108,"coffee, caffeine, tea, cup, green tea, drink, consumption, migraine, green, drinking",1.17,"coffee, caffeine, tea, green tea, cups, consumption, green, drink, drinking, migraine"
+63,1192,0.0096,0.01,"dose, day, taking, mg, dosage, drug, effect, pill, placebo, dosing",1.04,"dose, day, taking, mg, doses, dosage, effects, drug, dosing, daily"
+14,1172,0.0109,0.0079,"fruit, juice, fruit juice, vegetable, orange, sugar, apple, fruit vegetable, orange juice, eat",0.72,"fruit, juice, fruits, fruit juice, sugar, vegetables, orange, no_fruit, apple, orange juice"
+98,1129,0.0109,0.007,"ldl, hdl, cholesterol, particle, ldl-c, saturated, fat, saturated fat, lipid, lipoprotein",0.64,"ldl, hdl, cholesterol, ldl-c, saturated, fat, saturated fat, particles, low, triglycerides"
+101,1115,0.011,0.0066,"insulin, carb, glucose, carbohydrate, insulin resistance, resistance, diabetes, fat, high, diet",0.6,"insulin, glucose, carbs, carb, insulin resistance, resistance, diabetes, fat, carbohydrate, high"
+28,1114,0.0112,0.0064,"fasting, fast, intermittent, intermittent fasting, day, tre, weight, body, hour, loss",0.57,"fasting, intermittent, fast, intermittent fasting, tre, days, weight, body, loss, restriction"
+114,1107,0.0084,0.01,"epidemiology, study, evidence, nutrition, science, data, grade, observational, nutritional, bias",1.19,"epidemiology, studies, evidence, nutrition, science, study, data, grade, observational, nutritional"
+22,1103,0.0075,0.0112,"red meat, red, meat, processed, unprocessed, unprocessed red, processed meat, meat consumption, consumption, risk",1.49,"red meat, red, meat, processed, unprocessed, unprocessed red, meat consumption, processed meat, no_red, consumption"
+20,1086,0.0093,0.0084,"grain, rice, oat, starch, wheat, bread, flour, resistant starch, resistant, cereal",0.9,"rice, grains, grain, starch, wheat, bread, oats, flour, resistant starch, resistant"
+53,1084,0.0081,0.01,"cup, salad, chicken, vegetable, green, eat, min, cook, veggie, rice",1.23,"cup, chicken, min, salad, eat, rice, smoothie, vegetables, cooking, high"
+16,1060,0.0068,0.0113,"cognitive, dementia, brain, alzheimer, function, ad, alzheimer disease, memory, cognitive function, decline",1.66,"cognitive, dementia, brain, alzheimer, ad, alzheimer disease, function, memory, cognitive function, decline"
+17,1051,0.0102,0.0065,"pufa, sfa, mufa, fat, saturated, oil, saturated fat, sfa pufa, acid, replacing",0.64,"pufa, sfa, pufas, mufa, sfas, fat, saturated, fats, oil, saturated fat"
+77,1031,0.0092,0.0074,"cvd, mortality, risk, heart, death, event, disease, heart disease, trial, cardiovascular",0.8,"cvd, mortality, risk, heart, events, disease, death, heart disease, cardiovascular, deaths"
+13,1021,0.0099,0.0063,"b12, vitamin b12, vitamin, folate, supplement, deficiency, vegan, b12 deficiency, folic acid, folic",0.64,"b12, vitamin b12, vitamin, folate, deficiency, no_b12, folic acid, folic, b12 deficiency, b6"
+37,1017,0.0053,0.0125,"food, processed, processed food, ultra-processed, upf, nova, ultra-processed food, processing, ingredient, ultra processed",2.36,"processed, foods, ultra-processed, food, nova, processed foods, upf, ultra-processed foods, processing, ingredients"
+59,1005,0.0094,0.0066,"sugar, added sugar, added, fructose, blood sugar, calorie, glucose, food, cause, spike",0.7,"sugar, sugars, added, no_sugar, added sugars, added sugar, fructose, glucose, blood sugar, calories"
+35,987,0.0079,0.0084,"depression, mental, anxiety, symptom, mental health, tryptophan, disorder, stress, depressive, serotonin",1.06,"depression, mental, anxiety, mental health, symptoms, tryptophan, stress, depressive, serotonin, adhd"
+48,971,0.0077,0.0084,"causal, correlation, causation, causality, observational, association, relationship, causal relationship, cause, evidence",1.09,"causal, correlation, causality, causation, no_causal, no_causation, observational, association, evidence, no_causality"
+30,967,0.0075,0.0085,"seed-oil, oil, canola, canola oil, frying, vegetable oil, seed, fried, olive, cooking",1.13,"oils, seed, oil, seed oils, canola, seed oil, canola oil, frying, vegetable, no_seed"
+19,956,0.0086,0.0068,"fructose, fruit, glucose, liver, sugar, high fructose, sucrose, nafld, hfcs, hepatic",0.79,"fructose, glucose, liver, fruit, high fructose, sugar, sucrose, nafld, hfcs, hepatic"
+23,948,0.0096,0.0053,"dha, epa, ala, epa dha, conversion, dha epa, brain, algae, fish, omega",0.55,"dha, epa, ala, epa dha, conversion, dha epa, no_dha, brain, algae, fish"
+113,926,0.0059,0.0099,"industry, company, food, government, fda, policy, food industry, money, product, public",1.68,"industry, food, companies, government, fda, public, food industry, money, corporate, policy"
+33,881,0.0072,0.0073,"cancer, prostate, risk, prostate cancer, cancer risk, colorectal, 95, ci, 95 ci, breast",1.01,"cancer, prostate, cancers, risk, prostate cancer, cancer risk, colorectal, 95, ci, 95 ci"
+94,881,0.0065,0.0082,"epidemiology, epidemiological, evidence, vaccine, covid, study, epidemiological study, science, epidemiologist, data",1.26,"epidemiology, epidemiological, evidence, no_epidemiology, vaccines, covid, studies, data, science, epidemiological studies"
+54,877,0.0076,0.0066,"longevity, life, life expectancy, expectancy, lifespan, live, selection, year, evolution, age",0.87,"longevity, life, expectancy, life expectancy, lifespan, selection, live, evolution, years, reproductive"
+42,864,0.007,0.0072,"animal, land, grass, cow, feed, farming, cattle, agriculture, fed, beef",1.03,"land, grass, animals, feed, farming, cattle, animal, cows, agriculture, fed"
+66,853,0.0085,0.0049,"keto, ketone, ketosis, loss, ketogenic, week, ketogenic diet, athlete, performance, weight",0.58,"keto, ketosis, loss, ketogenic, weight, performance, athletes, ketogenic diet, exercise, ketones"
+60,851,0.0068,0.0072,"antioxidant, compound, oxidative, cell, extract, polyphenol, effect, oxidative stress, stress, activity",1.06,"antioxidant, antioxidants, oxidative, compounds, effects, oxidative stress, stress, polyphenols, cells, potential"
+39,831,0.0069,0.0067,"rct, observational, observational study, concordance, study, epidemiology, concordant, evidence, result, data",0.97,"rcts, rct, observational, concordance, observational studies, studies, epidemiology, no_rcts, concordant, evidence"
+29,815,0.0071,0.0061,"statin, ldl, ldl-c, trial, event, statin therapy, therapy, lowering, drug, reduction",0.86,"statins, statin, ldl, ldl-c, statin therapy, therapy, events, lowering, trials, pcsk9"
+24,813,0.007,0.0063,"egg, cholesterol, egg consumption, egg day, dietary cholesterol, yolk, egg white, consumption, white, eating egg",0.9,"eggs, egg, cholesterol, egg consumption, dietary cholesterol, no_eggs, consumption, eggs day, yolks, day"
+44,786,0.0056,0.0076,"smoking, lung, cigarette, lung cancer, cancer, smoker, smoke, smoking cause, epidemiology, nicotine",1.36,"smoking, lung, lung cancer, cigarettes, cancer, smokers, smoke, no_smoking, cigarette, epidemiology"
+100,781,0.0072,0.0054,"diabetes, t2d, insulin, type, diabetic, type diabetes, remission, glucose, patient, blood",0.75,"diabetes, t2d, type, insulin, type diabetes, remission, glucose, diabetics, patients, diabetic"
+51,766,0.0054,0.0075,"carnivore, carnivore diet, diet, meat, animal, omnivore, eat, plant, elimination, eating",1.39,"carnivore, carnivore diet, diet, no_carnivore, carnivores, meat, eat, elimination, plants, eating"
+31,747,0.006,0.0063,"nut, walnut, peanut, almond, avocado, pistachio, peanut butter, butter, acrylamide, seed",1.05,"nuts, walnuts, nut, peanut, almonds, walnut, peanuts, avocado, almond, peanut butter"
+38,741,0.0048,0.0079,"sweetener, sucralose, artificial sweetener, artificial, aspartame, stevia, sugar, sweet, taste, erythritol",1.65,"sucralose, sweeteners, aspartame, artificial, stevia, sweetener, artificial sweeteners, sugar, sweet, taste"
+32,737,0.0067,0.0052,"fish, mercury, salmon, sardine, mackerel, tuna, canned, fish consumption, eating fish, seafood",0.78,"fish, salmon, mercury, sardines, mackerel, tuna, canned, fish consumption, seafood, no_fish"
+93,727,0.0068,0.0048,"bmi, mass, body, weight, body fat, obesity, overweight, obese, waist, lean",0.71,"bmi, mass, body, weight, body fat, obesity, obese, waist, overweight, fat"
+76,713,0.0066,0.0048,"inflammation, inflammatory, anti-inflammatory, immune, marker, pain, crp, il-6, cytokine, arthritis",0.73,"inflammation, inflammatory, anti-inflammatory, immune, markers, pain, il-6, crp, arthritis, chronic"
+49,651,0.0056,0.005,"olive, oil, olive oil, evoo, virgin, extra virgin, polyphenol, virgin olive, extra, canola",0.89,"olive, oil, olive oil, evoo, oils, virgin, extra virgin, virgin olive, extra, canola"
+122,636,0.0064,0.0035,"atherosclerosis, artery, plaque, cell, ldl, endothelial, wall, vessel, atherosclerotic, vasorum",0.55,"atherosclerosis, cells, ldl, endothelial, arteries, plaques, artery, vasorum, vasa vasorum, vasa"
+50,625,0.0049,0.0055,"meat, red, red meat, cancer, processed meat, processed, colorectal, colorectal cancer, meat consumption, risk",1.12,"meat, red, red meat, cancer, processed meat, processed, colorectal, meat consumption, colorectal cancer, risk"
+52,624,0.0029,0.0083,"plaque, cac, progression, coronary, year, ldl, data, apob, baseline, lmhr",2.86,"plaque, cac, progression, no_plaque, coronary, ldl, data, baseline, apob, atherosclerosis"
+43,622,0.0063,0.0034,"sun, skin, vitamin, exposure, sun exposure, uv, sunlight, skin cancer, winter, light",0.54,"sun, skin, vitamin, exposure, sun exposure, uv, sunlight, skin cancer, winter, no_sun"
+41,612,0.0051,0.0049,"alcohol, wine, drinking, drink, alcohol consumption, beer, drinker, moderate, alcohol intake, consumption",0.96,"alcohol, wine, drinking, alcohol consumption, beer, drink, moderate, drinkers, no_alcohol, drinks"
+88,609,0.0044,0.0058,"breakfast, meal, skipping, eating, timing, circadian, morning, hour, evening, window",1.32,"breakfast, meal, eating, skipping, timing, circadian, meals, morning, evening, dinner"
+47,588,0.0061,0.0031,"glycine, collagen, methionine, peptide, amino, amino acid, glutathione, skin, glutamine, acid",0.51,"glycine, collagen, methionine, amino, peptides, glutathione, skin, glutamine, synthesis, amino acid"
+82,581,0.0046,0.0049,"nutrition, book, dietitian, biochemistry, science, student, school, textbook, recommend, education",1.07,"nutrition, books, book, biochemistry, science, dietitian, recommend, education, learn, research"
+70,577,0.0036,0.0064,"age, aging, glycation, longevity, senescence, lifespan, nad, biological, tissue, advanced glycation",1.78,"ages, aging, age, glycation, longevity, senescence, lifespan, nad, biological, advanced glycation"
+85,574,0.0051,0.0042,"human, mouse, animal, rodent, study, rat, model, animal study, study human, mouse study",0.82,"humans, mice, human, studies, animal, rodent, animals, mouse, no_humans, models"
+40,570,0.004,0.0056,"iron, heme, heme iron, ferritin, iron deficiency, anemia, absorption, deficiency, woman, vegetarian",1.4,"iron, heme, heme iron, ferritin, iron deficiency, anemia, absorption, deficiency, no_iron, women"
+97,569,0.0036,0.0061,"industry, funding, funded, research, dairy, conflict, bias, beef, meat, meat industry",1.69,"industry, funding, funded, research, dairy, beef, bias, meat, meat industry, council"
+115,569,0.0046,0.0047,"liver, nafld, hepatic, fatty liver, liver disease, fatty, liver fat, fat, metabolic, steatosis",1.02,"liver, nafld, hepatic, fatty liver, liver disease, fatty, liver fat, fat, metabolic, steatosis"
+72,566,0.0039,0.0057,"trans, trans fat, butter, fat, margarine, oil, tfa, hydrogenated, acid, ruminant",1.46,"trans, trans fats, butter, fats, trans fat, margarine, fat, oils, hydrogenated, oil"
+108,566,0.005,0.0042,"rct, observational, study, observational study, epidemiology, trial, cohort, evidence, cohort study, nutrition",0.84,"rcts, rct, observational, studies, epidemiology, evidence, observational studies, cohort, study, cohort studies"
+46,562,0.0046,0.0046,"oxalate, spinach, stone, kidney, kidney stone, calcium, ph, kale, acidosis, acid",1.0,"oxalate, spinach, kidney, oxalates, stones, kidney stones, calcium, ph, stone, kale"
+74,543,0.0041,0.0049,"confounder, confounding, adjustment, observational, residual, rct, observational study, variable, adjust, bias",1.2,"confounders, confounding, confounder, no_confounders, observational, residual, adjustments, observational studies, rcts, effect"
+45,529,0.0048,0.0038,"soy, estrogen, isoflavone, tofu, phytoestrogen, milk, soybean, hormone, soy protein, soy milk",0.79,"soy, estrogen, tofu, milk, hormones, soy protein, soy milk, soybean, no_soy, testosterone"
+57,521,0.0046,0.0038,"testosterone, hormone, man, testosterone level, menopause, woman, estrogen, level, androgen, male",0.83,"testosterone, men, testosterone levels, menopause, hormone, hormones, women, estrogen, levels, cortisol"
+71,516,0.0046,0.0037,"omega, omega-6, ratio, omega-3, omega ratio, n-6, oil, 6s, n-3, acid",0.8,"omega, omega-6, ratio, omega-3, omega ratio, n-6, 6s, oil, no_omega, oils"
+112,507,0.0043,0.004,"app, cronometer, tracking, database, nutrient, usda, data, food, nutrition, track",0.93,"app, cronometer, tracking, database, usda, data, nutrition, food, nutrient, track"
+55,493,0.0042,0.0038,"calcium, bone, fracture, bmd, bone health, vitamin, mineral, calcium intake, milk, bone mineral",0.9,"calcium, bone, bmd, bone health, fracture, mineral, vitamin, fractures, bones, bone mineral"
+65,489,0.0046,0.0032,"zinc, copper, phytate, metal, heavy metal, mineral, phytic acid, phytic, heavy, iron",0.7,"zinc, copper, phytate, phytic, phytic acid, metals, heavy, iron, heavy metals, minerals"
+92,479,0.0045,0.0031,"hba1c, a1c, diabetes, glucose, diabetic, insulin, medication, type, type ii, ii",0.69,"hba1c, a1c, diabetes, glucose, insulin, type, diabetic, type ii, blood, ii"
+84,468,0.0034,0.0045,"ketogenic, ketogenic diet, ketone, disorder, kd, brain, symptom, adhd, mental, keto",1.32,"ketogenic, ketogenic diet, kd, brain, adhd, ketones, mental, symptoms, keto, disorder"
+64,463,0.0034,0.0044,"ffq, validated, data, questionnaire, validation, validate, validity, accurate, recall, frequency questionnaire",1.29,"ffqs, ffq, validated, data, validation, questionnaire, validity, food frequency, frequency, accurate"
+96,445,0.0047,0.0022,"coconut, oil, coconut oil, acid, palm, palmitic, palm oil, palmitic acid, fatty acid, saturated",0.47,"coconut, coconut oil, oil, acid, palm, palmitic, palm oil, palmitic acid, saturated, fatty"
+56,431,0.0032,0.004,"cico, calorie, cim, energy, weight, thermodynamics, body, loss, lose, gain",1.25,"cico, cim, calories, energy, weight, loss, model, calorie, body, gain"
+83,424,0.0025,0.0048,"ldl, keto, ketogenic, ketogenic diet, lmhr, ldl-c, diet, raise ldl, apob, keto diet",1.92,"ldl, keto, ketogenic, lmhr, ketogenic diets, ldl-c, diets, ketogenic diet, apob, cholesterol"
+106,423,0.0036,0.0033,"inuit, atherosclerosis, ancient, population, indigenous, disease, traditional, eskimo, modern, diet",0.92,"inuit, atherosclerosis, ancient, traditional, indigenous, populations, modern, disease, diet, heart"
+87,418,0.0041,0.0025,"mouse, chow, rat, human, rodent, fat, diet, fed, high fat, high-fat",0.61,"mice, chow, rats, humans, fat, mouse, fed, diet, high fat, rodent"
+109,415,0.0038,0.0028,"fish, fish oil, oil, dha, epa, omega-3, acid, fatty, fatty acid, omega",0.74,"fish, fish oil, oil, dha, epa, omega-3, fatty, omega, epa dha, fatty acids"
+116,406,0.0043,0.0019,"triglyceride, postprandial, trig, fat, fasting, acid, fatty acid, fatty, postprandial triglyceride, ffa",0.44,"triglycerides, triglyceride, postprandial, trigs, fat, fasting, fatty, blood, glucose, high"
+95,397,0.0026,0.0041,"glyphosate, pesticide, organic, microplastic, gmo, crop, exposure, chemical, plastic, human",1.58,"glyphosate, pesticides, organic, microplastics, gmo, crops, exposure, chemicals, food, human"
+118,390,0.0031,0.0033,"omega-3, omega, epa, dha, omega-3 fatty, fatty acid, fatty, acid, supplementation, epa dha",1.06,"omega-3, omega, epa, dha, omega-3 fatty, fatty, fatty acids, supplementation, acids, epa dha"
+68,386,0.0037,0.0024,"broccoli, sulforaphane, sprout, mustard, broccoli sprout, seed, cabbage, powder, frozen, cooked",0.65,"broccoli, sulforaphane, sprouts, mustard, broccoli sprouts, seeds, cabbage, powder, frozen, cooked"
+75,380,0.0034,0.0028,"k2, vitamin, k1, vitamin k2, calcification, calcium, natto, vitamin k1, bone, au",0.82,"k2, vitamin, k1, vitamin k2, calcification, calcium, natto, vitamin k1, au, d3"
+99,376,0.0024,0.004,"mediterranean, mediterranean diet, diet, italy, country, meat, olive, olive oil, europe, greece",1.67,"mediterranean, mediterranean diet, diet, italy, meat, olive, olive oil, countries, europe, greece"
+80,373,0.003,0.0032,"sleep, melatonin, sleep quality, night, circadian, quality, duration, rhythm, circadian rhythm, morning",1.07,"sleep, melatonin, sleep quality, night, circadian, quality, duration, morning, wake, sleeping"
+81,370,0.0015,0.0052,"creatine, performance, supplementation, muscle, cognitive, hair, brain, exercise, dose, supplement",3.47,"creatine, performance, supplementation, cognitive, muscle, brain, hair, exercise, placebo, dose"
+62,361,0.0035,0.0022,"tmao, carnitine, l-carnitine, choline, fish, gut, level, meat, plasma, microbiota",0.63,"tmao, carnitine, l-carnitine, choline, fish, gut, levels, meat, plasma, microbiota"
+102,359,0.0041,0.0014,"ogtt, glucose, insulin, test, tolerance, fasting, glucose tolerance, homa-ir, insulin resistance, resistance",0.34,"ogtt, glucose, insulin, test, tolerance, fasting, glucose tolerance, homa-ir, insulin resistance, diabetes"
+107,358,0.0023,0.0038,"diabetes, meat, red meat, red, type diabetes, type, meat consumption, india, risk, insulin",1.65,"diabetes, meat, red meat, red, type diabetes, type, meat consumption, india, insulin, risk"
+67,352,0.0028,0.0031,"carotenoid, lutein, retinol, carotene, vitamin, beta carotene, beta-carotene, zeaxanthin, eye, macular",1.11,"carotenoids, lutein, retinol, carotene, beta carotene, vitamin, beta-carotene, zeaxanthin, macular, eye"
+90,348,0.0032,0.0024,"pig, okinawan, pork, japan, sweet potato, japanese, potato, sweet, island, blue zone",0.75,"pork, pigs, japan, pig, okinawan, japanese, sweet, sweet potato, sweet potatoes, potato"
+73,337,0.0027,0.0028,"magnesium, mg, calcium, supplement, mineral, deficiency, mds, citrate, intake, vitamin",1.04,"magnesium, mg, calcium, deficiency, citrate, mds, vitamin, absorption, intake, serum"
+79,336,0.0031,0.0023,"tooth, fluoride, dental, cavity, gum, oral, mouth, water, saliva, bacteria",0.74,"teeth, fluoride, dental, cavities, tooth, oral, mouth, gum, water, bacteria"
+69,332,0.0023,0.0034,"choline, egg, betaine, intake, phosphatidylcholine, mg, nutrient, tmao, taurine, dietary",1.48,"choline, betaine, eggs, phosphatidylcholine, intake, mg, taurine, tmao, egg, dietary"
+105,322,0.0013,0.0046,"scientificnutrition, commenting, submission, nutrition advice, removed, posting, allowed, giving, personal, guideline",3.54,"scientificnutrition, commenting, submission, nutrition advice, no_allowed, removed, posting, giving, personal, guidelines"
+89,322,0.0031,0.002,"cancer, cell, tumor, cancer cell, glucose, growth, ketone, glycolysis, ketogenic, survival",0.65,"cancer, cells, cancer cells, tumor, glucose, cancers, growth, glycolysis, cell, ketogenic"
+111,320,0.0022,0.0032,"claim, source provided, scientificnutrition, source claim, removed, submission, foster, commenting, claim claim, claim need",1.45,"scientificnutrition, no_provided, removed, no_claims, submission, sources, sources claim, helps prevent, commenting, unsupported"
+86,317,0.0027,0.0024,"epilepsy, ketogenic, ketogenic diet, seizure, diet, kid, rx, kd, keto, child",0.89,"epilepsy, ketogenic, ketogenic diet, diet, kids, rx, kd, keto, restrictive, children"
+91,317,0.0024,0.0029,"potato, fry, chip, boiled, baked, french fry, fried, french, potato chip, t2d",1.21,"potatoes, potato, fries, chips, boiled, baked, french fries, fried, no_potatoes, french"
+78,311,0.002,0.0033,"adventist, vegetarian, day adventist, 7th, vegan, religion, religious, adventist health, church, adventist study",1.65,"adventists, adventist, vegetarians, vegetarian, 7th, religious, religion, adventist health, seventh, vegan"
+120,293,0.0033,0.0012,"la, acid, linoleic, linoleic acid, fatty acid, essential, fatty, essential fatty, aa, accessed",0.36,"la, acid, linoleic, linoleic acid, fatty, essential, accessed, deficiency, aa, essential fatty"
+110,286,0.0022,0.0025,"curcumin, turmeric, ginger, pepper, placebo, mg, black, supplementation, cinnamon, supplement",1.14,"curcumin, turmeric, ginger, pepper, placebo, black, mg, supplementation, cinnamon, bioavailability"
+123,275,0.0021,0.0025,"blog, video, article, discussed, link, post, primary source, link source, article link, linked",1.19,"blog, discussed, video, blogs, post, videos, article, research study, linked, primary source"
+103,272,0.0029,0.0014,"seed, chia, flax, chia seed, flaxseed, ala, flax seed, dha, epa, ground",0.48,"chia, seeds, flax, chia seeds, flaxseed, ala, dha, epa, flax seeds, ground"
+104,242,0.0021,0.0018,"nitrate, nitrite, nitric, nitric oxide, oxide, beet, bacon, vegetable, processed meat, meat",0.86,"nitrate, nitrates, nitrite, nitric, nitric oxide, oxide, bacon, vegetables, beets, niacin"
+119,240,0.002,0.0019,"blueberry, berry, anthocyanin, strawberry, juice, frozen, antioxidant, powder, fresh, polyphenol",0.95,"blueberries, blueberry, berries, anthocyanins, strawberries, juice, berry, frozen, powder, fresh"
+117,201,0.0012,0.0023,"chocolate, cocoa, dark chocolate, dark, metal, heavy metal, polyphenol, bar, heavy, magnesium",1.92,"chocolate, cocoa, dark chocolate, dark, heavy, metals, magnesium, heavy metals, powder, polyphenols"
+121,193,0.0015,0.0017,"garlic, berberine, aged, extract, raw, lectin, blood, swallow, onion, compound",1.13,"garlic, berberine, aged, extract, raw, blood, swallow, immune, 0001, effects"

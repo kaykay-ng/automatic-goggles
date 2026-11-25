@@ -1,28 +1,28 @@
 baseline share of paper citations from 2024: SESO 61%, SciNut 34%
 
-== c2 omega-6 / linoleic acid: 200 cited papers with community membership
-  StopEatingSeedOils     423 citing docs,  155 users; from 2024 58% (side baseline 61%); vote pct 0.514 (n=256)
-      topics: [pufa, omega, acid, linoleic] 171; [canola, canola oil, rapeseed, oil] 20; [seed oils, seed, oils, weight] 13
-  ScientificNutrition    650 citing docs,  155 users; from 2024 28% (side baseline 34%); vote pct 0.585 (n=494)
-      topics: [saturated, saturated fat, fat, fats] 81; [la, acid, linoleic, linoleic acid] 71; [pufa, sfa, pufas, sfas] 49
+== c2 omega-6 / linoleic acid: 211 cited papers with community membership
+  StopEatingSeedOils     462 citing docs,  160 users; from 2024 60% (side baseline 61%); vote pct 0.544 (n=277)
+      topics: [pufa, acid, omega, linoleic] 195; [seed-oil, no_seed-oil, food, health] 41; [canola, canola oil, rapeseed, oil] 20
+  ScientificNutrition    588 citing docs,  156 users; from 2024 33% (side baseline 34%); vote pct 0.589 (n=412)
+      topics: [dha, epa, ala, epa dha] 51; [pufa, sfa, mufa, fat] 49; [saturated, saturated fat, fat, polyunsaturated] 38
 
-== c10 rodent fat carcinogenesis: 40 cited papers with community membership
-  StopEatingSeedOils      83 citing docs,   16 users; from 2024 36% (side baseline 61%); vote pct 0.727 (n=38)
-      topics: [pufa, omega, acid, linoleic] 44; [sun, sunscreen, skin, sunburn] 17; [canola, canola oil, rapeseed, oil] 3
-  ScientificNutrition    309 citing docs,   29 users; from 2024 4% (side baseline 34%); vote pct 0.781 (n=231)
-      topics: [la, acid, linoleic, linoleic acid] 202; [omega, omega6, ratio, omega3] 17; [cancer, cancers, risk, cancer risk] 8
+== c10 rodent fat carcinogenesis: 37 cited papers with community membership
+  StopEatingSeedOils       4 citing docs,    4 users; from 2024 25% (side baseline 61%); vote pct 0.332 (n=4)
+      topics: [ldl, cholesterol, hdl, heart] 2; [fasting, fast, day, hour] 1
+  ScientificNutrition    132 citing docs,   57 users; from 2024 19% (side baseline 34%); vote pct 0.594 (n=86)
+      topics: [fasting, fast, intermittent, intermittent fasting] 26; [saturated, saturated fat, fat, polyunsaturated] 15; [breakfast, meal, eating, skipping] 8
 
-== c4 saturated fat & CVD: 135 cited papers with community membership
-  StopEatingSeedOils     247 citing docs,   95 users; from 2024 75% (side baseline 61%); vote pct 0.560 (n=174)
-      topics: [pufa, omega, acid, linoleic] 68; [saturated, saturated fat, fat, fats] 43; [ldl, hdl, cholesterol, high ldl] 9
-  ScientificNutrition    835 citing docs,  160 users; from 2024 33% (side baseline 34%); vote pct 0.617 (n=723)
-      topics: [saturated, saturated fat, fat, fats] 279; [pufa, sfa, pufas, sfas] 70; [cholesterol, dietary cholesterol, cholesterol levels, ldl] 28
+== c4 saturated fat & CVD: 125 cited papers with community membership
+  StopEatingSeedOils      61 citing docs,   35 users; from 2024 75% (side baseline 61%); vote pct 0.549 (n=55)
+      topics: [ldl, cholesterol, hdl, heart] 38; [pufa, acid, omega, linoleic] 11; [fat, saturated, saturated fat, trans] 2
+  ScientificNutrition    633 citing docs,  136 users; from 2024 27% (side baseline 34%); vote pct 0.568 (n=528)
+      topics: [ldl, ldl-c, apob, no_ldl] 159; [cholesterol, dietary cholesterol, cholesterol level, lipoprotein] 96; [statin, ldl, ldl-c, trial] 77
 
-== c5 LDL / lipoproteins: 124 cited papers with community membership
-  StopEatingSeedOils      63 citing docs,   36 users; from 2024 73% (side baseline 61%); vote pct 0.540 (n=57)
-      topics: [ldl, hdl, cholesterol, high ldl] 23; [cholesterol, high cholesterol, heart, disease] 14; [pufa, omega, acid, linoleic] 11
-  ScientificNutrition    629 citing docs,  136 users; from 2024 26% (side baseline 34%); vote pct 0.571 (n=532)
-      topics: [ldl, ldlc, hdl, risk] 210; [statins, statin, ldl, ldlc] 73; [cholesterol, dietary cholesterol, cholesterol levels, ldl] 72
+== c5 LDL / lipoproteins: 125 cited papers with community membership
+  StopEatingSeedOils     220 citing docs,   94 users; from 2024 72% (side baseline 61%); vote pct 0.524 (n=156)
+      topics: [pufa, acid, omega, linoleic] 47; [fat, saturated, saturated fat, trans] 36; [ldl, cholesterol, hdl, heart] 25
+  ScientificNutrition    793 citing docs,  155 users; from 2024 33% (side baseline 34%); vote pct 0.613 (n=672)
+      topics: [saturated, saturated fat, fat, polyunsaturated] 247; [pufa, sfa, mufa, fat] 68; [cholesterol, dietary cholesterol, cholesterol level, lipoprotein] 30
 
-stance sheet: 177 items -> stance_sheet.csv (blind; key in stance_key.csv). c2 Stop 24, c2 Scie 24, c10 Stop 19, c10 Scie 22, c4 Stop 24, c4 Scie 24, c5 Stop 18, c5 Scie 22
-citation windows (300 words around the link to the paper): link found in 168 of 177 items; otherwise the window is the first words of the text (e.g. a post whose link is the post URL)
+stance sheet: 144 items -> stance_sheet.csv (blind; key in stance_key.csv). c2 Stop 24, c2 Scie 24, c10 Stop 2, c10 Scie 6, c4 Stop 18, c4 Scie 22, c5 Stop 24, c5 Scie 24
+citation windows (300 words around the link to the paper): link found in 135 of 144 items; otherwise the window is the first words of the text (e.g. a post whose link is the post URL)

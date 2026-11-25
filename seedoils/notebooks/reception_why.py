@@ -1,5 +1,6 @@
 """Why did the relative comment score (within-thread percentile) dip after 2024, in both subreddits? Tests: (1) mechanical effect of bigger threads, (2) length premium, (3) top-level vs reply, (4) stratified by thread size, (5) old vs new commenters.
 Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/reception_why.py"""
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import gzip, json
 from pathlib import Path
 import numpy as np, pandas as pd
@@ -10,7 +11,7 @@ def load(pat):
         for line in fh:
             x = json.loads(line); rows.append((x["id"], x["link_id"], str(x.get("parent_id", "")).startswith("t3_"), int(x["created_utc"]), x.get("score"), len((x.get("body") or "").split()), x.get("author")))
     C = pd.DataFrame(rows, columns=["id", "link_id", "top", "t", "score", "words", "author"]).dropna(subset=["score"])
-    first = C.groupby("author").t.min(); C = C[C.t < C.t.max() - 3 * 86400]
+    C = C[not_bot(C.author)]; first = C.groupby("author").t.min()
     g = C.groupby(["link_id", "top"]).score; C["n"] = g.transform("size"); C = C[C.n >= 5].copy(); C["pct"] = g.rank(method="average", pct=True).loc[C.index]
     C["post"] = C.t >= CUT; C["expected"] = (C.n + 1) / (2 * C.n); C["long"] = C.words >= 15; C["new"] = C.author.map(first) >= CUT
     return C
@@ -27,5 +28,5 @@ for sub, pat in (("r/StopEatingSeedOils", "*StopEatingSeedOils_comments.jsonl.gz
     for lo, hi in ((5, 9), (10, 19), (20, 49), (50, 10**6)):
         X = L[(L.n >= lo) & (L.n <= hi)]
         if X.post.any() and (~X.post).any(): print(f"  thread-group size {lo}-{hi if hi<10**6 else '+'}: {X[~X.post].pct.mean():.3f} -> {X[X.post].pct.mean():.3f} ({d(X):+.3f}) n={len(X)}")
-    A = L[~L.author.isin(["[deleted]", "AutoModerator"])]; o, nw = A[~A.new], A[A.new]
+    A = L[(~L.author.isin(["[deleted]", "AutoModerator"]) & not_bot(L.author))]; o, nw = A[~A.new], A[A.new]
     print(f"  old commenters >=15 words: pre {o[~o.post].pct.mean():.3f} post {o[o.post].pct.mean():.3f} | new commenters from 2024: {nw[nw.post].pct.mean():.3f}")

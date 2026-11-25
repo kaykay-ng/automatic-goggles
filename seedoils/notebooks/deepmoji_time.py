@@ -1,4 +1,6 @@
-"""DeepMoji (emoji-prediction model trained on 1.2 billion tweets; ONNX port 'deepmoji-onnx') on the comments and self-posts of r/StopEatingSeedOils and r/ScientificNutrition
+"""SUPERSEDED by deepmoji_torch_time.py (torchMoji). This ONNX port agreed with torchMoji on the top emoji for only 44% of 600 comments (torchmoji_check.py),
+so its scores (deepmoji_monthly_onnx.csv) should not be used.
+DeepMoji (emoji-prediction model trained on 1.2 billion tweets; ONNX port 'deepmoji-onnx') on the comments and self-posts of r/StopEatingSeedOils and r/ScientificNutrition
 (ALL documents: those of >= 15 words as in seso_topics.py plus the 1-14 word ones from short_docs.py). For each document the model gives a probability over 64 emojis; texts longer than 30 tokens are truncated by the model.
 Outputs (local; scores only, no text): seedoils/data/processed/deepmoji_<sub>.npz (ids + created_utc + float16 probabilities, gitignored), deepmoji_monthly.csv (mean probability per emoji per month and subreddit).
 Needs its own env (onnxruntime had no Python 3.14 wheel): python3.12 -m venv .venv-moji; .venv-moji/bin/pip install deepmoji-onnx pandas

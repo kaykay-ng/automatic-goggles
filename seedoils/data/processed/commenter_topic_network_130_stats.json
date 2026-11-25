@@ -1,0 +1,11 @@
+{
+ "modularity_mean": 0.553,
+ "modularity_min": 0.549,
+ "modularity_max": 0.555,
+ "ami_mean": 0.785,
+ "ami_min": 0.693,
+ "communities": 12,
+ "n_users": 2621,
+ "links_full": 3193803,
+ "links_kept": 54246
+}

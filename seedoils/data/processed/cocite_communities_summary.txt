@@ -1,116 +1,136 @@
 
-== scholarly: 20 Louvain seeds; modularity 0.631-0.644; communities 42-48 (>= 20 papers: 13-16); pairwise AMI mean 0.788 (min 0.708); reference = seed 15
-  c2: 200 papers, stability 0.65, lean +0.12 (SESO-only 44, both 96, SciNut-only 60), animal 11%, median year 2015
-      words: acid, fatty, linoleic acid, linoleic, fatty acids, acids, polyunsaturated, omega-
-      topics: Fatty Acid Research and Health (120); Liver Disease Diagnosis and Treatment (19); Diet, Metabolism, and Disease (7)
+== scholarly: 20 Louvain seeds; modularity 0.634-0.645; communities 41-49 (>= 20 papers: 12-16); pairwise AMI mean 0.783 (min 0.696); reference = seed 5
+  c2: 211 papers, stability 0.59, lean +0.15 (SESO-only 46, both 105, SciNut-only 60), animal 10%, median year 2016
+      words: acid, fatty, acids, fatty acids, linoleic acid, linoleic, polyunsaturated, polyunsaturated fatty
+      topics: Fatty Acid Research and Health (138); Liver Disease Diagnosis and Treatment (11); Antioxidant Activity and Oxidative Stress (7)
       papers [SESO/SciNut users]: [7/14] Biomarkers of Dietary Omega-6 Fatty Acids and Incident Cardiovascular  (2019) | [10/8] The importance of the ratio of omega-6/omega-3 essential fatty acids (2002) | [11/5] Soybean Oil Is More Obesogenic and Diabetogenic than Coconut Oil and F (2015) | [6/8] Dietary Linoleic Acid and Risk of Coronary Heart Disease: A Systematic (2014)
-  c10: 40 papers, stability 0.92, lean -0.09 (SESO-only 1, both 31, SciNut-only 8), animal 68%, median year 1992
-      words: dietary, rats, induced, fat, influence, acid, dietary fat, fatty
-      topics: Fatty Acid Research and Health (16); Cancer, Lipids, and Metabolism (9); Carcinogens and Genotoxicity Assessment (4)
-      papers [SESO/SciNut users]: [8/4] Dependence of photocarcinogenesis and photoimmunosuppression in the ha (1996) | [8/4] INFLUENCE OF DIETARY OMEGA‐6, ‐3 FATTY ACID SOURCES ON THE INITIATION  (1992) | [7/4] Fat Intake and Risk of Skin Cancer in U.S. Adults (2018) | [2/6] Requirement of essential fatty acid for mammary tumorigenesis in the r (1985)
-  c4: 135 papers, stability 0.86, lean -0.38 (SESO-only 4, both 62, SciNut-only 69), animal 2%, median year 2015
-      words: fat, saturated, disease, dietary, saturated fat, coronary, cardiovascular disease, cardiovascular
-      topics: Fatty Acid Research and Health (67); Nutritional Studies and Diet (32); Lipoproteins and Cardiovascular Health (9)
+  c9: 51 papers, stability 0.82, lean -0.18 (SESO-only 3, both 32, SciNut-only 16), animal 57%, median year 1994
+      words: mammary, dietary, rats, induced, fat, dietary fat, fatty, influence
+      topics: Fatty Acid Research and Health (19); Cancer, Lipids, and Metabolism (9); Hormonal and reproductive studies (7)
+      papers [SESO/SciNut users]: [8/4] Dependence of photocarcinogenesis and photoimmunosuppression in the ha (1996) | [8/4] INFLUENCE OF DIETARY OMEGA‐6, ‐3 FATTY ACID SOURCES ON THE INITIATION  (1992) | [7/3] Fat Intake and Risk of Skin Cancer in U.S. Adults (2018) | [5/3] Brief episode of STZ-induced hyperglycemia produces cardiac abnormalit (2004)
+  c5: 125 papers, stability 0.90, lean -0.40 (SESO-only 3, both 57, SciNut-only 65), animal 2%, median year 2016
+      words: fat, saturated, disease, saturated fat, dietary, cardiovascular disease, cardiovascular, coronary
+      topics: Fatty Acid Research and Health (64); Nutritional Studies and Diet (29); Lipoproteins and Cardiovascular Health (6)
       papers [SESO/SciNut users]: [16/15] Saturated Fats and Health: A Reassessment and Proposal for Food-Based  (2020) | [5/22] Dietary Fats and Cardiovascular Disease: A Presidential Advisory From  (2017) | [7/16] Effects on Coronary Heart Disease of Increasing Polyunsaturated Fat in (2010) | [6/16] The effect of replacing saturated fat with mostly n-6 polyunsaturated  (2017)
-  c12: 33 papers, stability 0.90, lean -0.48 (SESO-only 4, both 8, SciNut-only 21), animal 6%, median year 2008
+  c11: 33 papers, stability 0.78, lean -0.48 (SESO-only 4, both 8, SciNut-only 21), animal 6%, median year 2008
       words: advanced, products, oils, postprandial, oxidized, development, atherosclerosis, olive
       topics: Advanced Glycation End Products research (9); Edible Oils Quality and Analysis (7); Cholesterol and Lipid Metabolism (5)
-      papers [SESO/SciNut users]: [1/6] The role of dietary oxidized cholesterol and oxidized fatty acids in t (2005) | [0/6] Dietary advanced glycation end-products and their associations with bo (2024) | [2/3] Olive oil stability under deep-frying conditions (2010) | [0/4] Effect of a Single High-Fat Meal on Endothelial Function in Healthy Su (1997)
-  c13: 30 papers, stability 0.67, lean -0.69 (SESO-only 1, both 6, SciNut-only 23), animal 0%, median year 2021
-      words: olive oil, olive, oil, mediterranean, cardiovascular, mediterranean diet, cardiovascular disease, disease
-      topics: Nutritional Studies and Diet (19); Nuts composition and effects (3); Edible Oils Quality and Analysis (1)
-      papers [SESO/SciNut users]: [9/6] Cooking oil/fat consumption and deaths from cardiometabolic diseases a (2021) | [0/12] Primary Prevention of Cardiovascular Disease with a Mediterranean Diet (2018) | [2/3] Butter and Plant-Based Oils Intake and Mortality (2025) | [0/4] Recipe for Heart Health: A Randomized Crossover Trial on Cardiometabol (2024)
-  c9: 48 papers, stability 0.80, lean -0.70 (SESO-only 3, both 7, SciNut-only 38), animal 2%, median year 2019
-      words: vitamin, supplementation, fatty, acids, fatty acids, deficiency, omega, patients
-      topics: Vitamin D Research Studies (25); Fatty Acid Research and Health (16); Magnesium in Health and Disease (3)
-      papers [SESO/SciNut users]: [1/9] Cardiovascular Risk Reduction with Icosapent Ethyl for Hypertriglyceri (2018) | [0/5] Marine Omega‐3 Supplementation and Cardiovascular Disease: An Updated  (2019) | [0/4] Vitamin D alleviates lipopolysaccharide-induced acute lung injury via  (2017) | [0/4] Blood n-3 fatty acid levels and total and cause-specific mortality fro (2021)
-  c5: 124 papers, stability 0.94, lean -0.74 (SESO-only 1, both 26, SciNut-only 97), animal 2%, median year 2018
-      words: cholesterol, coronary, disease, lipoprotein, cardiovascular, low-density, mendelian, heart
-      topics: Lipoproteins and Cardiovascular Health (83); Atherosclerosis and Cardiovascular Diseases (6); Genetic Associations and Epidemiology (4)
+      papers [SESO/SciNut users]: [1/6] The role of dietary oxidized cholesterol and oxidized fatty acids in t (2005) | [0/6] Dietary advanced glycation end-products and their associations with bo (2024) | [2/3] Olive oil stability under deep-frying conditions (2010) | [1/3] Olive, soybean and palm oils intake have a similar acute detrimental e (2006)
+  c13: 25 papers, stability 0.77, lean -0.67 (SESO-only 1, both 5, SciNut-only 19), animal 0%, median year 2021
+      words: olive oil, olive, oil, mediterranean, mediterranean diet, cardiovascular, cardiovascular disease, diet
+      topics: Nutritional Studies and Diet (17); Gut microbiota and health (2); Nuts composition and effects (1)
+      papers [SESO/SciNut users]: [9/6] Cooking oil/fat consumption and deaths from cardiometabolic diseases a (2021) | [0/12] Primary Prevention of Cardiovascular Disease with a Mediterranean Diet (2018) | [2/3] Butter and Plant-Based Oils Intake and Mortality (2025) | [1/3] Only virgin type of olive oil consumption reduces the risk of mortalit (2022)
+  c4: 125 papers, stability 0.96, lean -0.75 (SESO-only 1, both 25, SciNut-only 99), animal 2%, median year 2018
+      words: cholesterol, coronary, disease, lipoprotein, cardiovascular, low-density, mendelian, low-density lipoprotein
+      topics: Lipoproteins and Cardiovascular Health (82); Atherosclerosis and Cardiovascular Diseases (6); Genetic Associations and Epidemiology (4)
       papers [SESO/SciNut users]: [7/20] Low-density lipoproteins cause atherosclerotic cardiovascular disease. (2017) | [5/17] LDL-C does not cause cardiovascular disease: a comprehensive review of (2018) | [2/19] Total cholesterol and all-cause mortality by sex and age: a prospectiv (2019) | [2/12] Optimal low-density lipoprotein is 50 to 70 mg/dl (2004)
-  c8: 62 papers, stability 0.81, lean -0.80 (SESO-only 2, both 8, SciNut-only 52), animal 2%, median year 2018
-      words: food, foods, global, weight, implications, health, weight gain, healthy
-      topics: Consumer Attitudes and Food Labeling (15); Pleistocene-Era Hominins and Archaeology (10); Indigenous Health and Education (6)
+  c8: 62 papers, stability 0.77, lean -0.80 (SESO-only 2, both 8, SciNut-only 52), animal 2%, median year 2018
+      words: food, foods, ultra-processed, ultra-processed food, global, intake, energy, weight
+      topics: Consumer Attitudes and Food Labeling (13); Pleistocene-Era Hominins and Archaeology (10); Indigenous Health and Education (6)
       papers [SESO/SciNut users]: [0/14] Hunter‐gatherers as models in public health (2018) | [3/10] The evolution of the human trophic level during the Pleistocene (2021) | [0/11] A satiety index of common foods. (1995) | [1/6] Ultra-Processed Diets Cause Excess Calorie Intake and Weight Gain: An  (2019)
-  c0: 246 papers, stability 0.73, lean -0.84 (SESO-only 3, both 30, SciNut-only 213), animal 2%, median year 2019
-      words: consumption, meat, meta-analysis, mortality, prospective, intake, cohort, red
-      topics: Nutritional Studies and Diet (124); Gut microbiota and health (12); Sodium Intake and Health (10)
-      papers [SESO/SciNut users]: [3/12] Consumption of red meat and processed meat and cancer incidence: a sys (2021) | [2/13] Unprocessed Red Meat and Processed Meat Consumption: Dietary Guideline (2019) | [2/10] Dietary Cholesterol and Cardiovascular Risk: A Science Advisory From t (2019) | [0/11] Meta-Analysis of Randomized Controlled Trials of Red Meat Consumption  (2019)
-  c1: 236 papers, stability 0.93, lean -0.87 (SESO-only 1, both 27, SciNut-only 208), animal 6%, median year 2018
-      words: ketogenic, diet, ketogenic diet, weight, low-carbohydrate, carbohydrate, low, loss
-      topics: Diet and metabolism studies (154); Regulation of Appetite and Obesity (10); Diet, Metabolism, and Disease (8)
-      papers [SESO/SciNut users]: [2/15] Effect of a plant-based, low-fat diet versus an animal-based, ketogeni (2021) | [0/13] Long-Term Effects of a Novel Continuous Remote Care Intervention Inclu (2019) | [2/9] Carbohydrate Restriction-Induced Elevations in LDL-Cholesterol and Ath (2024) | [0/11] Glucose and Lipid Homeostasis and Inflammation in Humans Following an  (2019)
-  c3: 166 papers, stability 0.65, lean -0.87 (SESO-only 2, both 17, SciNut-only 147), animal 2%, median year 2015
-      words: diet, vegetarian, vegan, vegetarians, plant-based, diets, insulin, health
-      topics: Nutritional Studies and Diet (66); Diabetes, Cardiovascular Risks, and Lipoproteins (8); Iron Metabolism and Disorders (7)
+  c6: 109 papers, stability 0.77, lean -0.83 (SESO-only 2, both 13, SciNut-only 94), animal 8%, median year 2015
+      words: glucose, insulin, fat, metabolic, liver, sugar, sensitivity, dietary
+      topics: Diet, Metabolism, and Disease (50); Liver Disease Diagnosis and Treatment (9); Diabetes, Cardiovascular Risks, and Lipoproteins (5)
+      papers [SESO/SciNut users]: [1/9] Substituting dietary saturated for monounsaturated fat impairs insulin (2001) | [1/9] Saturated Fat Is More Metabolically Harmful for the Human Liver Than U (2018) | [5/4] Direct impact of commonly used dietary emulsifiers on human gut microb (2021) | [0/7] A high-fat, high-saturated fat diet decreases insulin sensitivity with (2015)
+  c1: 240 papers, stability 0.75, lean -0.84 (SESO-only 3, both 30, SciNut-only 207), animal 1%, median year 2019
+      words: consumption, meat, meta-analysis, mortality, prospective, cohort, intake, red
+      topics: Nutritional Studies and Diet (123); Sodium Intake and Health (10); Gut microbiota and health (9)
+      papers [SESO/SciNut users]: [2/13] Unprocessed Red Meat and Processed Meat Consumption: Dietary Guideline (2019) | [3/12] Consumption of red meat and processed meat and cancer incidence: a sys (2021) | [0/11] Meta-Analysis of Randomized Controlled Trials of Red Meat Consumption  (2019) | [2/9] Dietary Cholesterol and Cardiovascular Risk: A Science Advisory From t (2019)
+  c0: 249 papers, stability 0.84, lean -0.87 (SESO-only 1, both 28, SciNut-only 220), animal 6%, median year 2018
+      words: ketogenic, diet, ketogenic diet, low-carbohydrate, weight, carbohydrate, diets, loss
+      topics: Diet and metabolism studies (162); Regulation of Appetite and Obesity (10); Gut microbiota and health (6)
+      papers [SESO/SciNut users]: [2/15] Effect of a plant-based, low-fat diet versus an animal-based, ketogeni (2021) | [0/13] Long-Term Effects of a Novel Continuous Remote Care Intervention Inclu (2019) | [0/11] Glucose and Lipid Homeostasis and Inflammation in Humans Following an  (2019) | [2/9] Carbohydrate Restriction-Induced Elevations in LDL-Cholesterol and Ath (2024)
+  c3: 143 papers, stability 0.68, lean -0.89 (SESO-only 1, both 13, SciNut-only 129), animal 0%, median year 2016
+      words: vegetarian, vegan, diet, vegetarians, plant-based, diets, health, vegan diet
+      topics: Nutritional Studies and Diet (68); Iron Metabolism and Disorders (7); Phytase and its Applications (7)
       papers [SESO/SciNut users]: [0/12] Position of the American Dietetic Association: Vegetarian Diets (2009) | [0/10] Deming, Data and Observational Studies (2011) | [0/10] Plant‐Based Diets Are Associated With a Lower Risk of Incident Cardiov (2019) | [1/8] Position of the Academy of Nutrition and Dietetics: Vegetarian Diets (2016)
-  c6: 74 papers, stability 0.81, lean -0.87 (SESO-only 1, both 6, SciNut-only 67), animal 7%, median year 2017
-      words: sugar, metabolic, beverages, glucose, consumption, metabolic syndrome, weight, subjects
-      topics: Diet, Metabolism, and Disease (36); Pharmaceutical industry and healthcare (5); Obesity, Physical Activity, Diet (4)
-      papers [SESO/SciNut users]: [5/4] Direct impact of commonly used dietary emulsifiers on human gut microb (2021) | [0/7] Is Meat Industry Affiliation Associated With Study Conclusion in Nutri (2026) | [0/6] Normal weight individuals who develop Type 2 diabetes: the personal fa (2014) | [0/5] Artificial sweeteners and cancer risk: Results from the NutriNet-Santé (2022)
-  c11: 37 papers, stability 0.87, lean -0.91 (SESO-only 1, both 2, SciNut-only 34), animal 19%, median year 2019
-      words: fasting, restriction, calorie, calorie restriction, ketogenic, energy, eating, feeding
-      topics: Dietary Effects on Health (20); Diet and metabolism studies (6); Regulation of Appetite and Obesity (2)
-      papers [SESO/SciNut users]: [1/7] Effects of eight weeks of time-restricted feeding (16/8) on basal meta (2016) | [0/5] Effects of Intermittent Fasting on Health, Aging, and Disease (2019) | [0/5] Calorie Restriction with or without Time-Restricted Eating in Weight L (2022) | [0/4] Changes in Energy Expenditure Resulting from Altered Body Weight (1995)
-  c7: 73 papers, stability 0.82, lean -0.92 (SESO-only 0, both 5, SciNut-only 68), animal 0%, median year 2016
-      words: protein, muscle, resistance, strength, synthesis, soy, exercise, body
-      topics: Muscle metabolism and nutrition (46); Phytoestrogen effects and research (5); Nutrition and Health in Aging (3)
-      papers [SESO/SciNut users]: [0/13] High-Protein Plant-Based Diet Versus a Protein-Matched Omnivorous Diet (2021) | [0/11] A systematic review, meta-analysis and meta-regression of the effect o (2017) | [2/6] Neither soy nor isoflavone intake affects male reproductive hormones:  (2020) | [0/8] No Difference Between the Effects of Supplementing With Soy Protein Ve (2018)
+  c10: 37 papers, stability 0.72, lean -0.91 (SESO-only 1, both 2, SciNut-only 34), animal 19%, median year 2019
+      words: fasting, restriction, calorie, eating, restricted, life, feeding, energy
+      topics: Dietary Effects on Health (22); Nutritional Studies and Diet (3); Diet and metabolism studies (2)
+      papers [SESO/SciNut users]: [1/7] Effects of eight weeks of time-restricted feeding (16/8) on basal meta (2016) | [0/5] Calorie Restriction with or without Time-Restricted Eating in Weight L (2022) | [0/5] Effects of Intermittent Fasting on Health, Aging, and Disease (2019) | [0/5] Caloric Restriction, the Traditional Okinawan Diet, and Healthy Aging: (2007)
+  c7: 69 papers, stability 0.89, lean -0.94 (SESO-only 0, both 4, SciNut-only 65), animal 0%, median year 2017
+      words: protein, muscle, resistance, soy, strength, exercise, body, supplementation
+      topics: Muscle metabolism and nutrition (45); Phytoestrogen effects and research (6); Nutrition and Health in Aging (3)
+      papers [SESO/SciNut users]: [0/13] High-Protein Plant-Based Diet Versus a Protein-Matched Omnivorous Diet (2021) | [0/11] A systematic review, meta-analysis and meta-regression of the effect o (2017) | [0/8] No Difference Between the Effects of Supplementing With Soy Protein Ve (2018) | [2/6] Neither soy nor isoflavone intake affects male reproductive hormones:  (2020)
+  c12: 27 papers, stability 1.00, lean -1.00 (SESO-only 0, both 0, SciNut-only 27), animal 4%, median year 2018
+      words: vitamin, supplementation, deficiency, magnesium, patients, safety, absorption, acute
+      topics: Vitamin D Research Studies (23); Magnesium in Health and Disease (3); Vitamin C and Antioxidants Research (1)
+      papers [SESO/SciNut users]: [0/4] Vitamin D alleviates lipopolysaccharide-induced acute lung injury via  (2017) | [0/4] Vitamin D supplementation: upper limit for safety revisited? (2020) | [0/4] Daily oral dosing of vitamin D3 using 5000 TO 50,000 international uni (2019) | [0/4] Vitamin D Resistance as a Possible Cause of Autoimmune Diseases: A Hyp (2021)
+  c14: 20 papers, stability 0.81, lean -1.00 (SESO-only 0, both 0, SciNut-only 20), animal 0%, median year 2015
+      words: vitamin, lung, cancer, antioxidant, mineral, chronic disease, prevention, supplements
+      topics: Folate and B Vitamins Research (7); Antioxidant Activity and Oxidative Stress (5); Nutrition, Health, and Society Studies (1)
+      papers [SESO/SciNut users]: [0/7] Vitamin B 12 Sources and Bioavailability (2007) | [0/4] Meta-Analysis: High-Dosage Vitamin E Supplementation May Increase All- (2005) | [0/3] Dietary intake and blood concentrations of antioxidants and the risk o (2018) | [0/3] Nutraceutical potentials of synergic foods: a systematic review (2019)
 
-== reddit: 20 Louvain seeds; modularity 0.382-0.392; communities 17-24 (>= 20 papers: 14-18); pairwise AMI mean 0.521 (min 0.458); reference = seed 8
-  c4: 187 papers, stability 0.65, lean +0.13 (SESO-only 40, both 95, SciNut-only 52), animal 11%, median year 2017
-      words: fatty, acid, polyunsaturated fatty, acids, polyunsaturated, fatty acids, mortality, dietary
-      topics: Fatty Acid Research and Health (43); Nutritional Studies and Diet (22); Lipoproteins and Cardiovascular Health (17)
-      papers [SESO/SciNut users]: [16/15] Saturated Fats and Health: A Reassessment and Proposal for Food-Based  (2020) | [5/17] LDL-C does not cause cardiovascular disease: a comprehensive review of (2018) | [2/19] Total cholesterol and all-cause mortality by sex and age: a prospectiv (2019) | [8/4] INFLUENCE OF DIETARY OMEGA‐6, ‐3 FATTY ACID SOURCES ON THE INITIATION  (1992)
-  c10: 50 papers, stability 0.37, lean -0.07 (SESO-only 8, both 22, SciNut-only 20), animal 12%, median year 2012
-      words: fatty acids, acid, acids, fatty, diet, lipoprotein, high, linoleic
-      topics: Fatty Acid Research and Health (13); Diet and metabolism studies (7); Nutritional Studies and Diet (4)
-      papers [SESO/SciNut users]: [8/1] Impact of 8-week linoleic acid intake in soy oil on Lp-PLA2 activity i (2017) | [6/0] Dietary intakes of polyunsaturated fatty acids and indices of oxidativ (1999) | [0/6] Short‐term feeding of a ketogenic diet induces more severe hepatic ins (2018) | [4/1] Strong increase in hydroxy fatty acids derived from linoleic acid in h (1998)
-  c2: 242 papers, stability 0.82, lean -0.47 (SESO-only 12, both 85, SciNut-only 145), animal 22%, median year 2013
-      words: dietary, diet, fat, fatty, vitamin, acid, cancer, disease
-      topics: Fatty Acid Research and Health (37); Diet and metabolism studies (20); Cancer, Lipids, and Metabolism (17)
+== reddit: 20 Louvain seeds; modularity 0.382-0.391; communities 20-25 (>= 20 papers: 15-18); pairwise AMI mean 0.536 (min 0.449); reference = seed 5
+  c11: 77 papers, stability 0.45, lean +0.25 (SESO-only 19, both 41, SciNut-only 17), animal 4%, median year 2017
+      words: acid, cholesterol, linoleic acid, linoleic, fatty, lipoprotein, dietary, oils
+      topics: Fatty Acid Research and Health (21); Lipoproteins and Cardiovascular Health (10); Nutritional Studies and Diet (5)
+      papers [SESO/SciNut users]: [16/15] Saturated Fats and Health: A Reassessment and Proposal for Food-Based  (2020) | [5/17] LDL-C does not cause cardiovascular disease: a comprehensive review of (2018) | [2/19] Total cholesterol and all-cause mortality by sex and age: a prospectiv (2019) | [3/10] The evolution of the human trophic level during the Pleistocene (2021)
+  c4: 143 papers, stability 0.59, lean +0.22 (SESO-only 33, both 75, SciNut-only 35), animal 10%, median year 2015
+      words: fatty, oil, fatty acids, acids, dietary, acid, polyunsaturated fatty, cancer
+      topics: Fatty Acid Research and Health (43); Nutritional Studies and Diet (15); Lipoproteins and Cardiovascular Health (6)
+      papers [SESO/SciNut users]: [6/12] Reduction in saturated fat intake for cardiovascular disease (2020) | [9/6] Cooking oil/fat consumption and deaths from cardiometabolic diseases a (2021) | [8/4] INFLUENCE OF DIETARY OMEGA‐6, ‐3 FATTY ACID SOURCES ON THE INITIATION  (1992) | [3/9] Reduction in saturated fat intake for cardiovascular disease (2015)
+  c0: 265 papers, stability 0.74, lean -0.45 (SESO-only 17, both 91, SciNut-only 157), animal 21%, median year 2013
+      words: dietary, fatty, acid, vitamin, diet, fat, disease, acids
+      topics: Fatty Acid Research and Health (46); Diet and metabolism studies (21); Cancer, Lipids, and Metabolism (17)
       papers [SESO/SciNut users]: [10/8] Use of dietary linoleic acid for secondary prevention of coronary hear (2013) | [12/4] Re-evaluation of the traditional diet-heart hypothesis: analysis of re (2016) | [11/5] Soybean Oil Is More Obesogenic and Diabetogenic than Coconut Oil and F (2015) | [8/4] Dependence of photocarcinogenesis and photoimmunosuppression in the ha (1996)
-  c13: 31 papers, stability 0.56, lean -0.50 (SESO-only 0, both 17, SciNut-only 14), animal 0%, median year 2011
-      words: coronary, saturated, fat, impairs, sugars, growth, saturated fat, disease
-      topics: Lipoproteins and Cardiovascular Health (6); Fatty Acid Research and Health (5); Diet and metabolism studies (4)
-      papers [SESO/SciNut users]: [1/9] Saturated Fat Is More Metabolically Harmful for the Human Liver Than U (2018) | [1/9] Substituting dietary saturated for monounsaturated fat impairs insulin (2001) | [1/6] Intensive Lifestyle Changes for Reversal of Coronary Heart Disease (1998) | [1/5] Consumption of Saturated Fat Impairs the Anti-Inflammatory Properties  (2006)
-  c9: 54 papers, stability 0.33, lean -0.50 (SESO-only 4, both 15, SciNut-only 35), animal 6%, median year 2016
-      words: mortality, cooking, fatty, omega-, cardiovascular disease, healthy, all-cause mortality, diet
-      topics: Fatty Acid Research and Health (10); Nutritional Studies and Diet (9); Diet and metabolism studies (5)
-      papers [SESO/SciNut users]: [10/8] The importance of the ratio of omega-6/omega-3 essential fatty acids (2002) | [3/10] The evolution of the human trophic level during the Pleistocene (2021) | [2/9] Carbohydrate Restriction-Induced Elevations in LDL-Cholesterol and Ath (2024) | [1/7] Effects of eight weeks of time-restricted feeding (16/8) on basal meta (2016)
-  c1: 279 papers, stability 0.41, lean -0.65 (SESO-only 13, both 58, SciNut-only 208), animal 2%, median year 2017
-      words: disease, cardiovascular, meta-analysis, dietary, cardiovascular disease, food, cohort, intake
-      topics: Fatty Acid Research and Health (62); Nutritional Studies and Diet (60); Lipoproteins and Cardiovascular Health (32)
-      papers [SESO/SciNut users]: [7/20] Low-density lipoproteins cause atherosclerotic cardiovascular disease. (2017) | [5/22] Dietary Fats and Cardiovascular Disease: A Presidential Advisory From  (2017) | [7/16] Effects on Coronary Heart Disease of Increasing Polyunsaturated Fat in (2010) | [6/16] The effect of replacing saturated fat with mostly n-6 polyunsaturated  (2017)
-  c3: 240 papers, stability 0.67, lean -0.81 (SESO-only 1, both 35, SciNut-only 204), animal 4%, median year 2024
-      words: diets, meta-analysis, plant-based, dietary, ketogenic, protein, health, metabolic
-      topics: Nutritional Studies and Diet (59); Diet and metabolism studies (22); Muscle metabolism and nutrition (16)
-      papers [SESO/SciNut users]: [0/11] A systematic review, meta-analysis and meta-regression of the effect o (2017) | [1/8] Position of the Academy of Nutrition and Dietetics: Vegetarian Diets (2016) | [0/7] Red meat consumption, cardiovascular diseases, and diabetes: a systema (2023) | [0/7] Substitution of animal-based with plant-based foods on cardiometabolic (2023)
-  c8: 70 papers, stability 0.37, lean -0.82 (SESO-only 1, both 8, SciNut-only 61), animal 13%, median year 2019
-      words: dietary, intake, glycine, deficiency, health, clinical, insulin resistance, cardiovascular
-      topics: Fatty Acid Research and Health (11); Nutritional Studies and Diet (5); Dietary Effects on Health (4)
-      papers [SESO/SciNut users]: [0/8] Meat consumption and risk of 25 common conditions: outcome-wide analys (2021) | [0/7] Vitamin B 12 Sources and Bioavailability (2007) | [0/6] Antioxidant activity of blueberry fruit is impaired by association wit (2008) | [0/5] Artificial sweeteners and cancer risk: Results from the NutriNet-Santé (2022)
-  c5: 140 papers, stability 0.28, lean -0.82 (SESO-only 1, both 24, SciNut-only 115), animal 6%, median year 2017
-      words: diet, disease, intake, coronary, heart, low, meta-analysis, ketogenic
-      topics: Diet and metabolism studies (22); Nutritional Studies and Diet (21); Lipoproteins and Cardiovascular Health (14)
-      papers [SESO/SciNut users]: [2/13] Unprocessed Red Meat and Processed Meat Consumption: Dietary Guideline (2019) | [2/10] Dietary Cholesterol and Cardiovascular Risk: A Science Advisory From t (2019) | [2/8] Meta-analysis of prospective cohort studies evaluating the association (2010) | [1/7] Red and Processed Meat Consumption and Risk for All-Cause Mortality an (2019)
-  c12: 37 papers, stability 0.53, lean -0.85 (SESO-only 0, both 5, SciNut-only 32), animal 0%, median year 2020
-      words: diet, low-carbohydrate, clinical, meat, markers, vegan, low-fat, beef
-      topics: Nutritional Studies and Diet (13); Diet and metabolism studies (6); Vitamin D Research Studies (6)
-      papers [SESO/SciNut users]: [0/9] Health effects associated with consumption of unprocessed red meat: a  (2022) | [2/6] Neither soy nor isoflavone intake affects male reproductive hormones:  (2020) | [1/5] Low‐carbohydrate diets, low‐fat diets, and mortality in middle‐aged an (2023) | [0/5] A low-fat vegan diet and a conventional diabetes diet in the treatment (2009)
-  c6: 122 papers, stability 0.32, lean -0.88 (SESO-only 0, both 12, SciNut-only 110), animal 11%, median year 2017
-      words: fatty, disease, acids, fatty acids, cardiovascular, diet, acid, cardiovascular disease
-      topics: Fatty Acid Research and Health (17); Lipoproteins and Cardiovascular Health (12); Diet and metabolism studies (12)
-      papers [SESO/SciNut users]: [0/14] Hunter‐gatherers as models in public health (2018) | [0/8] Long-Term Association of Low-Density Lipoprotein Cholesterol With Card (2018) | [0/8] Weight Loss with a Low-Carbohydrate, Mediterranean, or Low-Fat Diet (2008) | [0/6] Vegetarian and vegan diets and risks of total and site-specific fractu (2020)
-  c11: 42 papers, stability 0.58, lean -0.89 (SESO-only 1, both 2, SciNut-only 39), animal 7%, median year 2014
-      words: protein, fat, lipogenesis, protein synthesis, resistance exercise, muscle, fatty, liver
-      topics: Fatty Acid Research and Health (6); Muscle metabolism and nutrition (5); Vitamin D Research Studies (3)
-      papers [SESO/SciNut users]: [0/8] Persistent metabolic adaptation 6 years after “The Biggest Loser” comp (2016) | [0/6] Normal weight individuals who develop Type 2 diabetes: the personal fa (2014) | [2/4] Avoidance of sun exposure as a risk factor for major causes of death:  (2016) | [0/5] Glycogen storage capacity and de novo lipogenesis during massive carbo (1988)
-  c0: 323 papers, stability 0.33, lean -0.95 (SESO-only 0, both 15, SciNut-only 308), animal 5%, median year 2016
-      words: diet, fat, dietary, intake, ketogenic, carbohydrate, consumption, diabetes
-      topics: Nutritional Studies and Diet (45); Diet and metabolism studies (43); Diet, Metabolism, and Disease (20)
-      papers [SESO/SciNut users]: [2/15] Effect of a plant-based, low-fat diet versus an animal-based, ketogeni (2021) | [2/11] The Effect of Coconut Oil Consumption on Cardiovascular Risk Factors:  (2020) | [0/11] A satiety index of common foods. (1995) | [0/11] Overfeeding Polyunsaturated and Saturated Fat Causes Distinct Effects  (2014)
-  c7: 84 papers, stability 0.38, lean -0.97 (SESO-only 0, both 3, SciNut-only 81), animal 2%, median year 2014
-      words: supplementation, exercise, meta-analysis, men, health, weight, vegan, body
-      topics: Nutritional Studies and Diet (11); Diet and metabolism studies (8); Muscle metabolism and nutrition (8)
-      papers [SESO/SciNut users]: [0/12] Position of the American Dietetic Association: Vegetarian Diets (2009) | [0/10] Deming, Data and Observational Studies (2011) | [0/8] Can adults adequately convert alpha-linolenic acid (18:3n-3) to eicosa (1998) | [1/6] Ultra-Processed Diets Cause Excess Calorie Intake and Weight Gain: An  (2019)
+  c14: 32 papers, stability 0.51, lean -0.47 (SESO-only 1, both 12, SciNut-only 19), animal 9%, median year 2017
+      words: diet, mitochondrial, deficiency, muscle, low-carbohydrate, skeletal muscle, skeletal, dysfunction
+      topics: Diet and metabolism studies (9); Fatty Acid Research and Health (5); Vitamin D Research Studies (3)
+      papers [SESO/SciNut users]: [0/6] Short‐term feeding of a ketogenic diet induces more severe hepatic ins (2018) | [1/4] Who and What Drove Walter Kempner? The Rice Diet Revisited (2014) | [1/3] Nationwide shift to grass-fed beef requires larger cattle population (2018) | [0/4] A Low-Carbohydrate as Compared with a Low-Fat Diet in Severe Obesity (2003)
+  c9: 85 papers, stability 0.40, lean -0.62 (SESO-only 4, both 20, SciNut-only 61), animal 9%, median year 2016
+      words: insulin resistance, insulin, meta-analysis, resistance, cardiovascular, acids, obesity, role
+      topics: Fatty Acid Research and Health (14); Nutritional Studies and Diet (8); Diet, Metabolism, and Disease (7)
+      papers [SESO/SciNut users]: [10/8] The importance of the ratio of omega-6/omega-3 essential fatty acids (2002) | [0/11] Meta-Analysis of Randomized Controlled Trials of Red Meat Consumption  (2019) | [4/7] Effects of Saturated Fat, Polyunsaturated Fat, Monounsaturated Fat, an (2016) | [5/4] Increasing dietary linoleic acid does not increase tissue arachidonic  (2011)
+  c3: 182 papers, stability 0.53, lean -0.66 (SESO-only 6, both 47, SciNut-only 129), animal 4%, median year 2014
+      words: disease, coronary, fat, dietary, heart, cardiovascular, coronary heart, heart disease
+      topics: Fatty Acid Research and Health (39); Nutritional Studies and Diet (22); Lipoproteins and Cardiovascular Health (18)
+      papers [SESO/SciNut users]: [5/22] Dietary Fats and Cardiovascular Disease: A Presidential Advisory From  (2017) | [7/20] Low-density lipoproteins cause atherosclerotic cardiovascular disease. (2017) | [7/16] Effects on Coronary Heart Disease of Increasing Polyunsaturated Fat in (2010) | [3/19] Reduction in saturated fat intake for cardiovascular disease (2020)
+  c13: 47 papers, stability 0.47, lean -0.73 (SESO-only 3, both 6, SciNut-only 38), animal 19%, median year 2017
+      words: diet, acid, metabolism, olive, reduces, insulin, fasting, mediterranean diet
+      topics: Fatty Acid Research and Health (8); Dietary Effects on Health (7); Nutritional Studies and Diet (6)
+      papers [SESO/SciNut users]: [0/12] Primary Prevention of Cardiovascular Disease with a Mediterranean Diet (2018) | [1/7] Effects of eight weeks of time-restricted feeding (16/8) on basal meta (2016) | [0/6] Effect of a ketogenic diet versus Mediterranean diet on glycated hemog (2022) | [0/6] Antioxidant activity of blueberry fruit is impaired by association wit (2008)
+  c17: 22 papers, stability 0.93, lean -0.75 (SESO-only 0, both 4, SciNut-only 18), animal 0%, median year 2014
+      words: sugar, adipose, cells, colon cancer, lipid metabolism, low, ketosis, ketogenic
+      topics: Diet and metabolism studies (7); Diet, Metabolism, and Disease (2); Healthcare Systems and Public Health (1)
+      papers [SESO/SciNut users]: [0/13] Long-Term Effects of a Novel Continuous Remote Care Intervention Inclu (2019) | [0/6] Effect of Different Cooking Methods on Vegetable Oxalate Content (2005) | [0/3] Added Sugar Intake and Cardiovascular Diseases Mortality Among US Adul (2014) | [0/3] The JUPITER Trial: Results, Controversies, and Implications for Preven (2009)
+  c2: 210 papers, stability 0.70, lean -0.78 (SESO-only 2, both 35, SciNut-only 173), animal 4%, median year 2024
+      words: plant-based, dietary, meta-analysis, diets, ketogenic, health, diet, protein
+      topics: Nutritional Studies and Diet (45); Diet and metabolism studies (17); Fatty Acid Research and Health (15)
+      papers [SESO/SciNut users]: [2/9] Carbohydrate Restriction-Induced Elevations in LDL-Cholesterol and Ath (2024) | [1/8] Position of the Academy of Nutrition and Dietetics: Vegetarian Diets (2016) | [0/7] Substitution of animal-based with plant-based foods on cardiometabolic (2023) | [2/5] Effect of Interventions Aimed at Reducing or Modifying Saturated Fat I (2025)
+  c10: 80 papers, stability 0.40, lean -0.79 (SESO-only 1, both 13, SciNut-only 66), animal 6%, median year 2021
+      words: intake, diets, meta-analysis, vegetarian, disease, comparison, patients, prospective
+      topics: Nutritional Studies and Diet (27); Fatty Acid Research and Health (6); Diet and metabolism studies (4)
+      papers [SESO/SciNut users]: [0/12] Position of the American Dietetic Association: Vegetarian Diets (2009) | [2/6] Neither soy nor isoflavone intake affects male reproductive hormones:  (2020) | [0/7] Vegetarian diets and cancer risk: pooled analysis of 1.8 million women (2026) | [2/4] Is Butter Back? A Systematic Review and Meta-Analysis of Butter Consum (2016)
+  c6: 122 papers, stability 0.33, lean -0.82 (SESO-only 0, both 22, SciNut-only 100), animal 3%, median year 2017
+      words: disease, coronary, saturated fat, cardiovascular, intake, diet, cohort, saturated
+      topics: Nutritional Studies and Diet (22); Lipoproteins and Cardiovascular Health (20); Diet and metabolism studies (16)
+      papers [SESO/SciNut users]: [2/13] Unprocessed Red Meat and Processed Meat Consumption: Dietary Guideline (2019) | [2/8] Meta-analysis of prospective cohort studies evaluating the association (2010) | [4/5] Association between low density lipoprotein cholesterol and all-cause  (2021) | [0/8] Meat consumption and risk of 25 common conditions: outcome-wide analys (2021)
+  c8: 104 papers, stability 0.39, lean -0.87 (SESO-only 0, both 10, SciNut-only 94), animal 8%, median year 2016
+      words: fatty, acids, acid, fatty acids, dietary, fatty acid, disease, cardiovascular
+      topics: Fatty Acid Research and Health (20); Nutritional Studies and Diet (10); Muscle metabolism and nutrition (6)
+      papers [SESO/SciNut users]: [0/14] Hunter‐gatherers as models in public health (2018) | [0/10] Deming, Data and Observational Studies (2011) | [0/8] Can adults adequately convert alpha-linolenic acid (18:3n-3) to eicosa (1998) | [0/8] Weight Loss with a Low-Carbohydrate, Mediterranean, or Low-Fat Diet (2008)
+  c12: 55 papers, stability 0.37, lean -0.91 (SESO-only 0, both 4, SciNut-only 51), animal 2%, median year 2019
+      words: cardiovascular, cardiovascular disease, mortality, dietary, disease, all-cause mortality, ketogenic diets, diet
+      topics: Nutritional Studies and Diet (13); Diet and metabolism studies (5); Fatty Acid Research and Health (4)
+      papers [SESO/SciNut users]: [2/10] The Effect of Coconut Oil Consumption on Cardiovascular Risk Factors:  (2020) | [0/7] A Mediterranean Diet and Low-Fat Vegan Diet to Improve Body Weight and (2021) | [0/7] Association of Major Dietary Protein Sources With All‐Cause and Cause‐ (2021) | [0/6] Gut Microbe-Generated Trimethylamine N -Oxide From Dietary Choline Is  (2017)
+  c7: 117 papers, stability 0.54, lean -0.92 (SESO-only 1, both 9, SciNut-only 107), animal 3%, median year 2018
+      words: food, validity, frequency, cardiovascular, meta-analysis, meta-analysis prospective, mortality, meat
+      topics: Nutritional Studies and Diet (46); Lipoproteins and Cardiovascular Health (12); Diet and metabolism studies (8)
+      papers [SESO/SciNut users]: [7/14] Biomarkers of Dietary Omega-6 Fatty Acids and Incident Cardiovascular  (2019) | [2/15] Effect of a plant-based, low-fat diet versus an animal-based, ketogeni (2021) | [3/12] Consumption of red meat and processed meat and cancer incidence: a sys (2021) | [2/12] Optimal low-density lipoprotein is 50 to 70 mg/dl (2004)
+  c5: 139 papers, stability 0.43, lean -0.94 (SESO-only 0, both 7, SciNut-only 132), animal 7%, median year 2018
+      words: diet, ketogenic, ketogenic diet, low-carbohydrate, exercise, diabetes, type, weight
+      topics: Diet and metabolism studies (36); Nutritional Studies and Diet (14); Fatty Acid Research and Health (8)
+      papers [SESO/SciNut users]: [0/7] Vitamin B 12 Sources and Bioavailability (2007) | [1/6] Ultra-Processed Diets Cause Excess Calorie Intake and Weight Gain: An  (2019) | [0/6] A Low-Carbohydrate, Ketogenic Diet versus a Low-Fat Diet To Treat Obes (2004) | [0/6] Effect of a very-high-fiber vegetable, fruit, and nut diet on serum li (2001)
+  c15: 24 papers, stability 0.71, lean -0.95 (SESO-only 0, both 1, SciNut-only 23), animal 0%, median year 2018
+      words: products, red meat, case report, meat, vitamin, glycation end, end products, end
+      topics: Nutritional Studies and Diet (7); Vitamin D Research Studies (5); Advanced Glycation End Products research (2)
+      papers [SESO/SciNut users]: [0/4] Red Meat Consumption and Mortality: Results From 2 Prospective Cohort  (2012) | [0/4] Red meat consumption and risk of frailty in older women (2021) | [0/4] Red meat, processed meat, and other dietary protein sources and risk o (2019) | [1/2] Advanced Glycation End Products: Sparking the Development of Diabetic  (2006)
+  c1: 215 papers, stability 0.37, lean -0.95 (SESO-only 0, both 8, SciNut-only 207), animal 4%, median year 2015
+      words: protein, fat, diet, carbohydrate, vitamin, restriction, men, dietary
+      topics: Diet and metabolism studies (18); Fatty Acid Research and Health (17); Nutritional Studies and Diet (16)
+      papers [SESO/SciNut users]: [0/11] Overfeeding Polyunsaturated and Saturated Fat Causes Distinct Effects  (2014) | [0/9] Association of Animal and Plant Protein Intake With All-Cause and Caus (2016) | [0/9] Fat and carbohydrate overfeeding in humans: different effects on energ (1995) | [0/8] Low Protein Intake Is Associated with a Major Reduction in IGF-1, Canc (2014)
+  c16: 24 papers, stability 0.41, lean -0.97 (SESO-only 0, both 1, SciNut-only 23), animal 8%, median year 2015
+      words: fiber, beneficial, fibre, prevention, dietary fiber, nonalcoholic, nonalcoholic fatty, patients
+      topics: Nutritional Studies and Diet (3); Kidney Stones and Urolithiasis Treatments (2); Food composition and properties (2)
+      papers [SESO/SciNut users]: [0/6] Prevalence and correlates of vitamin D deficiency in US adults (2011) | [0/5] Industry Funding and Cholesterol Research: A Systematic Review (2019) | [0/5] Role of phosphatidylcholine‐DHA in preventing APOE4‐associated Alzheim (2018) | [1/4] EFFECTS OF CHANGES IN FAT, FISH, AND FIBRE INTAKES ON DEATH AND MYOCAR (1989)

@@ -2,6 +2,8 @@
 Original: Data for the niche timeline and outcome overlay: the Figure 7 backbone with (1) each person's first-comment month (people appear as the slider moves) and (2) outcomes per person: share of hostile comments (GoEmotions hostile group >= 0.5) and share downvoted (score <= 0),
 before 2024 / from 2024 / all time. Per-person shares are shrunk toward the average (m = 15 pseudo-comments) because people have 10-30 comments; per-niche numbers are plain shares.
 Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/niche_overlay_data.py  -> data/processed/artifact/niche_network.json"""
+from seedoil_common import community_labels  # community names from data/processed/community_names.json (hand-written)
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import gzip, glob, json
 from pathlib import Path
 import numpy as np, pandas as pd
@@ -12,7 +14,7 @@ with gzip.open(glob.glob("seedoils/data/raw/*StopEatingSeedOils_comments.jsonl.g
     for l in f:
         x = json.loads(l); raw[x["id"]] = (x["author"], int(x["created_utc"]), x.get("score"))
 R = pd.DataFrame([(i, a, t, s) for i, (a, t, s) in raw.items()], columns=["id", "a", "t", "score"]); first = R.groupby("a").t.min()
-D = pd.read_csv(P / "seso_doc_topics.csv.gz"); D = D[D.kind == "comment"]; D["a"] = D.id.map(lambda i: raw.get(i, (None,))[0]); D = D[D.a.notna() & ~D.a.isin(["[deleted]", "AutoModerator"])]
+D = pd.read_csv(P / "seso_doc_topics.csv.gz"); D = D[D.kind == "comment"]; D["a"] = D.id.map(lambda i: raw.get(i, (None,))[0]); D = D[D.a.notna() & (~D.a.isin(["[deleted]", "AutoModerator"]) & not_bot(D.a))]
 nd = D.groupby("a").size(); U = np.array(sorted(nd[nd >= 10].index)); N = pd.read_csv(P / "commenter_topic_network_130_nodes.csv"); assert len(U) == len(N)
 LABS = list(pd.read_csv(P / "goemo_monthly.csv", nrows=1).columns[1:29]); HOST = ["anger", "annoyance", "disapproval", "disgust"]
 docs = pd.read_csv(P / "seso_docs.csv.gz", usecols=["id"], keep_default_na=False); z = np.load(P / "goemo_seso.npz", allow_pickle=True); assert (z["id"].astype(str) == docs.id.astype(str).values).all()
@@ -29,8 +31,7 @@ for n, u in zip(nodes, idxU):
     out_nodes.append({"c": n["c"], "o": n["o"], "d": n["d"], "x": n["x"], "y": n["y"], "fm": max(0, mi.get(fm, -1)) if fm >= "2022-01" else 0,
                       "h": shrunk(sub, "host", prior["host"]), "h0": shrunk(sp, "host", prior_p[("host", False)]), "h1": shrunk(sq, "host", prior_p[("host", True)]),
                       "v": shrunk(sub, "down", prior["down"]), "v0": shrunk(sp, "down", prior_p[("down", False)]), "v1": shrunk(sq, "down", prior_p[("down", True)]), "n0": int(len(sp)), "n1": int(len(sq))})
-LAB = ['Shopping and everyday food', 'Politics, vaccines, pharma', 'Omega-6 science', 'Arguing about evidence', 'Keto, LDL, cholesterol', 'Olive and other oils', 'Vegan, soy, land', 'Calories, weight, fasting', 'Mayo, sugar, processed food', 'Pork, canola, allergies', 'Sun, skin, inflammation', 'Infant formula, kids']
-SH = ['Shopping, food', 'Politics, vaccines', 'Omega-6 science', 'Evidence, the sub', 'Keto, LDL', 'Olive oil', 'Vegan, soy', 'Weight, fasting', 'Mayo, sugar', 'Pork, canola', 'Sun, skin', 'Formula, kids']
+LAB, SH = community_labels(int(N.community.max()) + 1)
 rng = np.random.default_rng(0)
 def change_ci(s, k, reps=400):
     """95% interval of the change (from 2024 minus before, percentage points), resampling people."""
@@ -41,7 +42,7 @@ def change_ci(s, k, reps=400):
         if r[1] > 0 and r[3] > 0: out.append((r[2] / r[3] - r[0] / r[1]) * 100)
     return [round(float(np.percentile(out, 2.5)), 1), round(float(np.percentile(out, 97.5)), 1)] if len(out) > 50 else [None, None]
 rows = []
-for c in list(range(12)) + [-1]:
+for c in list(range(len(LAB))) + [-1]:
     s = D[D.c == c]
     if len(s) == 0: continue
     a, b = s[~s.post], s[s.post]; pct = lambda x, k: round(float(x[k].mean() * 100), 1) if len(x) >= 30 else None

@@ -2,6 +2,7 @@
 CAUTION: flair options were added over time (e.g. 'Skeptical of SESO', 'Low Fat', 'Keto' first appear in Oct 2023, 'Vegan' in Jul 2023), so shares across 1 Jan 2024 are partly mechanical.
 Fair comparisons: (a) within the period when the options exist (Q4 2023 on), by quarter, among flaired comments; (b) OLD vs NEW authors (first comment before / from 2024, all authors) among flaired authors, by their commonest flair from 2024.
 Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/user_flair.py -> seedoils/data/processed/user_flair_by_quarter.csv, user_flair_by_cohort.csv"""
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import gzip
 import json
 from collections import Counter, defaultdict
@@ -20,7 +21,7 @@ for line in gzip.open(RAW / "StopEatingSeedOils_comments.jsonl.gz", "rt"):
     except ValueError:
         continue
     a, t = d.get("author"), int(d["created_utc"])
-    if a in (None, "[deleted]", "AutoModerator"):
+    if a in (None, "[deleted]") or is_bot(a):
         continue
     first[a] = min(first.get(a, t), t)
     f = d.get("author_flair_text")

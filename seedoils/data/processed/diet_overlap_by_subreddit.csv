@@ -1,0 +1,177 @@
+group,period,category,subreddit,n_people,share_pct
+SESO old,pre2024,low-carb / animal-based,keto,626,35.8
+SESO old,pre2024,low-carb / animal-based,ketoscience,626,21.4
+SESO old,pre2024,low-carb / animal-based,xxketo,626,4.5
+SESO old,pre2024,low-carb / animal-based,ketogains,626,10.1
+SESO old,pre2024,low-carb / animal-based,lowcarb,626,4.2
+SESO old,pre2024,low-carb / animal-based,carnivore,626,20.6
+SESO old,pre2024,low-carb / animal-based,carnivorediet,626,13.9
+SESO old,pre2024,low-carb / animal-based,zerocarb,626,16.8
+SESO old,pre2024,low-carb / animal-based,AnimalBased,626,12.3
+SESO old,pre2024,low-carb / animal-based,SaturatedFat,626,39.8
+SESO old,pre2024,low-carb / animal-based,raypeat,626,6.9
+SESO old,pre2024,low-carb / animal-based,Paleo,626,9.4
+SESO old,pre2024,low-carb / animal-based,rawprimal,626,1.1
+SESO old,pre2024,plant-based,vegan,626,11.5
+SESO old,pre2024,plant-based,vegetarian,626,1.1
+SESO old,pre2024,plant-based,PlantBasedDiet,626,4.6
+SESO old,pre2024,plant-based,WholeFoodsPlantBased,626,1.6
+SESO old,pre2024,plant-based,exvegans,626,16.5
+SESO old,pre2024,fasting,intermittentfasting,626,15.8
+SESO old,pre2024,fasting,fasting,626,17.6
+SESO old,pre2024,fasting,omad,626,3.7
+SESO old,pre2024,general nutrition,nutrition,626,19.8
+SESO old,from2024,low-carb / animal-based,keto,574,18.1
+SESO old,from2024,low-carb / animal-based,ketoscience,574,5.9
+SESO old,from2024,low-carb / animal-based,xxketo,574,0.5
+SESO old,from2024,low-carb / animal-based,ketogains,574,1.2
+SESO old,from2024,low-carb / animal-based,lowcarb,574,2.6
+SESO old,from2024,low-carb / animal-based,carnivore,574,9.2
+SESO old,from2024,low-carb / animal-based,carnivorediet,574,18.1
+SESO old,from2024,low-carb / animal-based,zerocarb,574,1.0
+SESO old,from2024,low-carb / animal-based,AnimalBased,574,21.4
+SESO old,from2024,low-carb / animal-based,SaturatedFat,574,31.7
+SESO old,from2024,low-carb / animal-based,raypeat,574,12.2
+SESO old,from2024,low-carb / animal-based,Paleo,574,4.0
+SESO old,from2024,low-carb / animal-based,rawprimal,574,1.9
+SESO old,from2024,plant-based,vegan,574,6.3
+SESO old,from2024,plant-based,vegetarian,574,0.5
+SESO old,from2024,plant-based,PlantBasedDiet,574,3.5
+SESO old,from2024,plant-based,WholeFoodsPlantBased,574,1.4
+SESO old,from2024,plant-based,exvegans,574,16.7
+SESO old,from2024,fasting,intermittentfasting,574,6.8
+SESO old,from2024,fasting,fasting,574,11.3
+SESO old,from2024,fasting,omad,574,2.6
+SESO old,from2024,general nutrition,nutrition,574,16.4
+SESO new,pre2024,low-carb / animal-based,keto,621,8.9
+SESO new,pre2024,low-carb / animal-based,ketoscience,621,1.9
+SESO new,pre2024,low-carb / animal-based,xxketo,621,0.6
+SESO new,pre2024,low-carb / animal-based,ketogains,621,0.8
+SESO new,pre2024,low-carb / animal-based,lowcarb,621,0.6
+SESO new,pre2024,low-carb / animal-based,carnivore,621,3.9
+SESO new,pre2024,low-carb / animal-based,carnivorediet,621,3.9
+SESO new,pre2024,low-carb / animal-based,zerocarb,621,1.8
+SESO new,pre2024,low-carb / animal-based,AnimalBased,621,1.3
+SESO new,pre2024,low-carb / animal-based,SaturatedFat,621,1.1
+SESO new,pre2024,low-carb / animal-based,raypeat,621,0.5
+SESO new,pre2024,low-carb / animal-based,Paleo,621,1.4
+SESO new,pre2024,low-carb / animal-based,rawprimal,621,0.3
+SESO new,pre2024,plant-based,vegan,621,5.2
+SESO new,pre2024,plant-based,vegetarian,621,1.3
+SESO new,pre2024,plant-based,PlantBasedDiet,621,1.4
+SESO new,pre2024,plant-based,WholeFoodsPlantBased,621,0.5
+SESO new,pre2024,plant-based,exvegans,621,1.9
+SESO new,pre2024,fasting,intermittentfasting,621,4.3
+SESO new,pre2024,fasting,fasting,621,3.4
+SESO new,pre2024,fasting,omad,621,1.0
+SESO new,pre2024,general nutrition,nutrition,621,5.2
+SESO new,from2024,low-carb / animal-based,keto,874,14.6
+SESO new,from2024,low-carb / animal-based,ketoscience,874,2.4
+SESO new,from2024,low-carb / animal-based,xxketo,874,0.2
+SESO new,from2024,low-carb / animal-based,ketogains,874,0.2
+SESO new,from2024,low-carb / animal-based,lowcarb,874,1.6
+SESO new,from2024,low-carb / animal-based,carnivore,874,8.4
+SESO new,from2024,low-carb / animal-based,carnivorediet,874,21.3
+SESO new,from2024,low-carb / animal-based,zerocarb,874,0.2
+SESO new,from2024,low-carb / animal-based,AnimalBased,874,18.3
+SESO new,from2024,low-carb / animal-based,SaturatedFat,874,14.0
+SESO new,from2024,low-carb / animal-based,raypeat,874,8.0
+SESO new,from2024,low-carb / animal-based,Paleo,874,2.1
+SESO new,from2024,low-carb / animal-based,rawprimal,874,4.6
+SESO new,from2024,plant-based,vegan,874,11.4
+SESO new,from2024,plant-based,vegetarian,874,0.6
+SESO new,from2024,plant-based,PlantBasedDiet,874,4.8
+SESO new,from2024,plant-based,WholeFoodsPlantBased,874,0.6
+SESO new,from2024,plant-based,exvegans,874,13.6
+SESO new,from2024,fasting,intermittentfasting,874,3.0
+SESO new,from2024,fasting,fasting,874,6.5
+SESO new,from2024,fasting,omad,874,2.7
+SESO new,from2024,general nutrition,nutrition,874,14.8
+SESO all,pre2024,low-carb / animal-based,keto,1247,22.4
+SESO all,pre2024,low-carb / animal-based,ketoscience,1247,11.7
+SESO all,pre2024,low-carb / animal-based,xxketo,1247,2.6
+SESO all,pre2024,low-carb / animal-based,ketogains,1247,5.5
+SESO all,pre2024,low-carb / animal-based,lowcarb,1247,2.4
+SESO all,pre2024,low-carb / animal-based,carnivore,1247,12.3
+SESO all,pre2024,low-carb / animal-based,carnivorediet,1247,8.9
+SESO all,pre2024,low-carb / animal-based,zerocarb,1247,9.3
+SESO all,pre2024,low-carb / animal-based,AnimalBased,1247,6.8
+SESO all,pre2024,low-carb / animal-based,SaturatedFat,1247,20.5
+SESO all,pre2024,low-carb / animal-based,raypeat,1247,3.7
+SESO all,pre2024,low-carb / animal-based,Paleo,1247,5.5
+SESO all,pre2024,low-carb / animal-based,rawprimal,1247,0.7
+SESO all,pre2024,plant-based,vegan,1247,8.3
+SESO all,pre2024,plant-based,vegetarian,1247,1.2
+SESO all,pre2024,plant-based,PlantBasedDiet,1247,3.0
+SESO all,pre2024,plant-based,WholeFoodsPlantBased,1247,1.0
+SESO all,pre2024,plant-based,exvegans,1247,9.2
+SESO all,pre2024,fasting,intermittentfasting,1247,10.1
+SESO all,pre2024,fasting,fasting,1247,10.5
+SESO all,pre2024,fasting,omad,1247,2.3
+SESO all,pre2024,general nutrition,nutrition,1247,12.5
+SESO all,from2024,low-carb / animal-based,keto,1448,16.0
+SESO all,from2024,low-carb / animal-based,ketoscience,1448,3.8
+SESO all,from2024,low-carb / animal-based,xxketo,1448,0.3
+SESO all,from2024,low-carb / animal-based,ketogains,1448,0.6
+SESO all,from2024,low-carb / animal-based,lowcarb,1448,2.0
+SESO all,from2024,low-carb / animal-based,carnivore,1448,8.7
+SESO all,from2024,low-carb / animal-based,carnivorediet,1448,20.0
+SESO all,from2024,low-carb / animal-based,zerocarb,1448,0.6
+SESO all,from2024,low-carb / animal-based,AnimalBased,1448,19.5
+SESO all,from2024,low-carb / animal-based,SaturatedFat,1448,21.0
+SESO all,from2024,low-carb / animal-based,raypeat,1448,9.7
+SESO all,from2024,low-carb / animal-based,Paleo,1448,2.8
+SESO all,from2024,low-carb / animal-based,rawprimal,1448,3.5
+SESO all,from2024,plant-based,vegan,1448,9.4
+SESO all,from2024,plant-based,vegetarian,1448,0.6
+SESO all,from2024,plant-based,PlantBasedDiet,1448,4.3
+SESO all,from2024,plant-based,WholeFoodsPlantBased,1448,0.9
+SESO all,from2024,plant-based,exvegans,1448,14.8
+SESO all,from2024,fasting,intermittentfasting,1448,4.5
+SESO all,from2024,fasting,fasting,1448,8.4
+SESO all,from2024,fasting,omad,1448,2.7
+SESO all,from2024,general nutrition,nutrition,1448,15.4
+SciNut,pre2024,low-carb / animal-based,keto,1374,21.5
+SciNut,pre2024,low-carb / animal-based,ketoscience,1374,22.0
+SciNut,pre2024,low-carb / animal-based,xxketo,1374,2.6
+SciNut,pre2024,low-carb / animal-based,ketogains,1374,7.9
+SciNut,pre2024,low-carb / animal-based,lowcarb,1374,3.1
+SciNut,pre2024,low-carb / animal-based,carnivore,1374,9.8
+SciNut,pre2024,low-carb / animal-based,carnivorediet,1374,4.8
+SciNut,pre2024,low-carb / animal-based,zerocarb,1374,11.4
+SciNut,pre2024,low-carb / animal-based,AnimalBased,1374,1.0
+SciNut,pre2024,low-carb / animal-based,SaturatedFat,1374,7.2
+SciNut,pre2024,low-carb / animal-based,raypeat,1374,1.5
+SciNut,pre2024,low-carb / animal-based,Paleo,1374,9.1
+SciNut,pre2024,low-carb / animal-based,rawprimal,1374,0.3
+SciNut,pre2024,plant-based,vegan,1374,22.0
+SciNut,pre2024,plant-based,vegetarian,1374,5.5
+SciNut,pre2024,plant-based,PlantBasedDiet,1374,16.4
+SciNut,pre2024,plant-based,WholeFoodsPlantBased,1374,3.9
+SciNut,pre2024,plant-based,exvegans,1374,9.8
+SciNut,pre2024,fasting,intermittentfasting,1374,13.4
+SciNut,pre2024,fasting,fasting,1374,15.9
+SciNut,pre2024,fasting,omad,1374,3.5
+SciNut,pre2024,general nutrition,nutrition,1374,50.1
+SciNut,from2024,low-carb / animal-based,keto,1233,8.6
+SciNut,from2024,low-carb / animal-based,ketoscience,1233,5.4
+SciNut,from2024,low-carb / animal-based,xxketo,1233,0.3
+SciNut,from2024,low-carb / animal-based,ketogains,1233,1.1
+SciNut,from2024,low-carb / animal-based,lowcarb,1233,1.5
+SciNut,from2024,low-carb / animal-based,carnivore,1233,3.6
+SciNut,from2024,low-carb / animal-based,carnivorediet,1233,9.8
+SciNut,from2024,low-carb / animal-based,zerocarb,1233,0.2
+SciNut,from2024,low-carb / animal-based,AnimalBased,1233,4.1
+SciNut,from2024,low-carb / animal-based,SaturatedFat,1233,7.8
+SciNut,from2024,low-carb / animal-based,raypeat,1233,3.5
+SciNut,from2024,low-carb / animal-based,Paleo,1233,1.5
+SciNut,from2024,low-carb / animal-based,rawprimal,1233,1.5
+SciNut,from2024,plant-based,vegan,1233,13.9
+SciNut,from2024,plant-based,vegetarian,1233,1.4
+SciNut,from2024,plant-based,PlantBasedDiet,1233,12.0
+SciNut,from2024,plant-based,WholeFoodsPlantBased,1233,4.2
+SciNut,from2024,plant-based,exvegans,1233,8.0
+SciNut,from2024,fasting,intermittentfasting,1233,4.7
+SciNut,from2024,fasting,fasting,1233,6.6
+SciNut,from2024,fasting,omad,1233,2.4
+SciNut,from2024,general nutrition,nutrition,1233,31.5

@@ -5,6 +5,7 @@ Why this filter: the network is complete (a plain threshold would keep mostly th
 Checks: topic-label permutation null (modularity of the backbone communities against chance), stability of communities across Louvain seeds and ALPHA values. Aggregates only; no text.
 Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/commenter_topic_network.py
 """
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import gzip, glob, json, sys
 from pathlib import Path
 import numpy as np, pandas as pd, networkx as nx
@@ -17,7 +18,7 @@ with gzip.open(glob.glob("seedoils/data/raw/*StopEatingSeedOils_comments.jsonl.g
     for l in f:
         x = json.loads(l); raw[x["id"]] = (x["author"], int(x["created_utc"]))
 first = pd.Series({}, dtype=float); allc = pd.DataFrame([(a, t) for a, t in raw.values()], columns=["a", "t"]); first = allc.groupby("a").t.min()
-D = pd.read_csv(P / "seso_k50_doc_topics.csv.gz"); D = D[D.kind == "comment"]; D["a"] = D.id.map(lambda i: raw.get(i, (None,))[0]); D = D[D.a.notna() & ~D.a.isin(["[deleted]", "AutoModerator"])]
+D = pd.read_csv(P / "seso_k50_doc_topics.csv.gz"); D = D[D.kind == "comment"]; D["a"] = D.id.map(lambda i: raw.get(i, (None,))[0]); D = D[D.a.notna() & (~D.a.isin(["[deleted]", "AutoModerator"]) & not_bot(D.a))]
 n_docs = D.groupby("a").size()
 for m in (5, 10, 20, 50): print(f"users with >= {m} topic docs: {(n_docs >= m).sum():,}")
 U = n_docs[n_docs >= MIN_DOCS].index; D = D[D.a.isin(U)]; users = np.array(sorted(U)); ui = {u: i for i, u in enumerate(users)}; K = 50

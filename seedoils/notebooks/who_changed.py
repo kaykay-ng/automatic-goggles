@@ -4,7 +4,7 @@ Run from final_project/:  ../.venv/bin/python seedoils/notebooks/who_changed.py 
 
 Finding 1: r/ScientificNutrition was split on seed oils before 2024 and moved towards 'not harmful' from 2024.
   Q1a turnover: how many of its from-2024 commenters already commented there before 2024?
-  Q1b crossover: what share of its commenters also comment in r/StopEatingSeedOils (or r/carnivore), per period?
+  Q1b crossover: what share of its commenters also comment in r/StopEatingSeedOils, per period?
   Q1c who wrote its 'harmful' vs 'not harmful' comments (opinion sample): are they also r/StopEatingSeedOils commenters?
 Finding 6: 'not harmful' rose inside r/StopEatingSeedOils from 2024 (3% -> 13%).
   Q6a who wrote those comments: newcomers (first SESO comment in 2024 or later)? also r/ScientificNutrition commenters?
@@ -20,7 +20,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW, PROC = ROOT / "data" / "raw", ROOT / "data" / "processed"
-SUBS = {"StopEatingSeedOils": "SESO", "ScientificNutrition": "SciNut", "carnivore": "carnivore"}
+SUBS = {"StopEatingSeedOils": "SESO", "ScientificNutrition": "SciNut"}  # r/carnivore dropped 22 Nov (comments no longer downloaded)
 SPLIT = 1704067200
 
 
@@ -43,13 +43,13 @@ def main():
     who = {s: {p: {a for (a, pp) in n_by[s] if pp == p} for p in ("pre2024", "from2024")} for s in SUBS}
     ever = {s: who[s]["pre2024"] | who[s]["from2024"] for s in SUBS}
     L = []
-    sn, se, ca = "ScientificNutrition", "StopEatingSeedOils", "carnivore"
+    sn, se = "ScientificNutrition", "StopEatingSeedOils"
     for s in (sn, se):
         pre, post = who[s]["pre2024"], who[s]["from2024"]
         L.append(f"{SUBS[s]}: commenters before 2024 {len(pre):,}, from 2024 {len(post):,}; from-2024 commenters already active before: "
                  f"{len(post & pre):,} ({len(post & pre) / len(post):.0%})")
     L.append("\nQ1b crossover, share of each period's commenters who EVER comment in the other subreddit:")
-    for s, others in ((sn, (se, ca)), (se, (sn, ca))):
+    for s, others in ((sn, (se,)), (se, (sn,))):
         for p in ("pre2024", "from2024"):
             A = who[s][p]
             L.append(f"  {SUBS[s]:7} {p:9} n={len(A):6,}: " + ", ".join(f"also {SUBS[o]} {len(A & ever[o]) / len(A):.1%}" for o in others))
@@ -78,7 +78,7 @@ def main():
                 also_o = sum(a in ever[o] for a in A)
                 newcomer = sum(first[(s, a)] >= SPLIT for a in A)
                 L.append(f"  {SUBS[s]:7} {p:9} {pos:2} n={len(A):3}: authors also commenting in {SUBS[o]} {also_o / len(A):.0%}; "
-                         f"also carnivore {sum(a in ever[ca] for a in A) / len(A):.0%}; first comment in {SUBS[s]} from 2024 on: {newcomer / len(A):.0%}")
+                         f"first comment in {SUBS[s]} from 2024 on: {newcomer / len(A):.0%}")
     text = "\n".join(L)
     (PROC / "who_changed.txt").write_text(text + "\n")
     print(text)

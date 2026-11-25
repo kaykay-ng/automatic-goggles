@@ -2,8 +2,9 @@
 
 Run from final_project/:  python seedoils/notebooks/vote_features.py   -> seedoils/data/processed/vote_features.txt
 Vote percentile as in seso_topics.py votes: rank of score within thread x level (top-level / reply), ties averaged,
-groups with >= 5 comments, comments < 3 days old dropped. Features are simple text markers, not stance labels.
+groups with >= 5 comments; bots dropped; comments of any age kept (scores of the last ~3 days were still settling). Features are simple text markers, not stance labels.
 """
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import gzip
 import json
 import re
@@ -33,11 +34,10 @@ def load(sub):
         for line in f:
             x = json.loads(line)
             b = x.get("body") or ""
-            if b.strip() in ("[removed]", "[deleted]") or (x.get("author") or "") in ("AutoModerator",):
+            if b.strip() in ("[removed]", "[deleted]") or is_bot(x.get("author")):
                 continue
             rows.append((x["link_id"], str(x.get("parent_id", "")).startswith("t3_"), int(x["created_utc"]), x.get("score"), b))
     C = pd.DataFrame(rows, columns=["link_id", "top_level", "created_utc", "score", "body"]).dropna(subset=["score"])
-    C = C[C.created_utc < C.created_utc.max() - 3 * 86400]
     g = C.groupby(["link_id", "top_level"]).score
     C = C[g.transform("size") >= 5].copy()
     C["pct"] = C.groupby(["link_id", "top_level"]).score.rank(method="average", pct=True)

@@ -4,6 +4,8 @@ The earlier null (shuffle topic labels, keep the disparity filter) is not usable
      Null: shuffle which comment has which topic among all comments (keeps each person's number of comments and each topic's total), recompute profiles, similarity and the same top-m network. 20 shuffles. Compare Louvain modularity, community count, and the share of links inside communities.
  (2) PER-COMMUNITY TEST on the page's own backbone: for each community, the number of links inside it against what random community labels of the same sizes would give (2,000 shuffles of the labels over people): z-score and empirical p.
 Run from final_project/ with the NLP env:  ./.venv-nlp/bin/python seedoils/notebooks/community_null.py   (aggregates only)"""
+from seedoil_common import community_labels  # community names from data/processed/community_names.json (hand-written)
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import glob
 import gzip
 import json
@@ -20,7 +22,7 @@ with gzip.open(glob.glob("seedoils/data/raw/*StopEatingSeedOils_comments.jsonl.g
     for l in f:
         x = json.loads(l); raw[x["id"]] = x["author"]
 D = pd.read_csv(P / "seso_doc_topics.csv.gz"); D = D[D.kind == "comment"].copy(); D["a"] = D.id.map(raw)
-D = D[D.a.notna() & ~D.a.isin(["[deleted]", "AutoModerator"])]; nd = D.groupby("a").size(); U = np.array(sorted(nd[nd >= 10].index)); ui = {u: i for i, u in enumerate(U)}
+D = D[D.a.notna() & (~D.a.isin(["[deleted]", "AutoModerator"]) & not_bot(D.a))]; nd = D.groupby("a").size(); U = np.array(sorted(nd[nd >= 10].index)); ui = {u: i for i, u in enumerate(U)}
 D = D[D.a.isin(set(U))]; a_idx = D.a.map(ui).values; t_idx = D.topic.values; K = int(t_idx.max()) + 1; n = len(U)
 nodes = pd.read_csv(P / "commenter_topic_network_130_nodes.csv"); comm = nodes.community.values; E = json.load(open(A / "cn_edges.json"))["rows"]; target = len(E)
 def profile(ti):
@@ -52,12 +54,12 @@ for r in range(20):
     Xp = profile(rng.permutation(t_idx)); Gp = topm_graph(Xp, m); q, k, i_ = summarise(Gp); Q.append(q); KK.append(k); II.append(i_)
 print(f"SHUFFLED  : modularity {np.mean(Q):.3f} (range {min(Q):.3f}-{max(Q):.3f}), communities {np.mean(KK):.1f} (range {min(KK)}-{max(KK)}), links inside {np.mean(II):.1%}  [20 shuffles; edge count at m={m}: {Gp.number_of_edges():,}]")
 # (2) per-community test on the page backbone
-names = ['Shopping, food', 'Politics, vaccines', 'Omega-6 science', 'Evidence, the sub', 'Keto, LDL', 'Olive oil', 'Vegan, soy', 'Weight, fasting', 'Mayo, sugar', 'Pork, canola', 'Sun, skin', 'Formula, kids']
 cn = json.load(open(A / "cn_nodes.json"))["rows"]; c = np.array([r["c"] for r in cn]); es = np.array([[e["s"], e["t"]] for e in E]); assert len(c) == n
-obs = np.array([np.sum((c[es[:, 0]] == k) & (c[es[:, 1]] == k)) for k in range(12)]); null = np.zeros((2000, 12))
+K = int(c.max()) + 1; names = community_labels(K)[1]
+obs = np.array([np.sum((c[es[:, 0]] == k) & (c[es[:, 1]] == k)) for k in range(K)]); null = np.zeros((2000, K))
 for r in range(2000):
-    cp = rng.permutation(c); same = cp[es[:, 0]] == cp[es[:, 1]]; null[r] = [np.sum(same & (cp[es[:, 0]] == k)) for k in range(12)]
+    cp = rng.permutation(c); same = cp[es[:, 0]] == cp[es[:, 1]]; null[r] = [np.sum(same & (cp[es[:, 0]] == k)) for k in range(K)]
 print("\n(2) links inside each community vs random labels of the same sizes (2,000 shuffles)")
-for k in range(12):
+for k in range(K):
     mu, sd = null[:, k].mean(), null[:, k].std(); p_ = (1 + np.sum(null[:, k] >= obs[k])) / 2001
     print(f"  {names[k]:<20} people {int(np.sum(c == k)):>4} | inside links {int(obs[k]):>6} vs expected {mu:>8.0f} (x{obs[k] / mu:.1f}) | z {(obs[k] - mu) / sd:7.1f} | p {p_:.4f}")
