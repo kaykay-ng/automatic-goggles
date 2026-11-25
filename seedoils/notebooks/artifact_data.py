@@ -312,8 +312,11 @@ def cocommenter():
     camps = defaultdict(set)
     for r in csv.DictReader(open(PROC / "seed_authors.csv")):
         camps[r["author"]].add(r["seed_subreddit"])
+    # 22 Nov: the selected authors came from three subreddits (top 1,500 each); this figure is about r/StopEatingSeedOils commenters, so keep only authors selected from it
+    n_selected_all = len(camps); seso_selected = {a for a, k in camps.items() if SESO in k}
+    recs = [r for r in recs if r["author"] in seso_selected]
     fetched = Counter(s for r in recs for s in camps[r["author"]])
-    print(f"co-commenter: {len(recs):,} authors fetched {dict(fetched)}")
+    print(f"co-commenter: {len(recs):,} r/StopEatingSeedOils commenters fetched of {len(seso_selected):,} selected (3 subreddits selected {n_selected_all:,} authors in all); also selected from: {dict(fetched)}")
     SEEDS_ = {SESO, SCINUT, "carnivore"}
     # an author is 'in' a subreddit with 3+ interactions (posts + comments) over the whole history; seed subreddits are left out
     subs_of = {}
@@ -376,16 +379,15 @@ def cocommenter():
     nrows = [{"subreddit": f"r/{s}", "x": f(x), "y": f(y), "community": comm_of[s], "n_authors": int(n_auth[s]), "degree": int(G.degree(s))} for s, (x, y) in zip(keep, P)]
     srows = [{"subreddit": f"r/{s}", "n_pre2024": share[s][0], "n_from2024": share[s][1], "share_pre2024_pct": f(share[s][2], 1), "share_from2024_pct": f(share[s][3], 1),
               "group": "riser" if s in rise else ("faller" if s in fall else "top by authors")} for s in keep]
-    note = (f"PRELIMINARY. {len(recs):,} of the 4,292 selected commenters have been fetched so far ({', '.join(f'{k}: {v}' for k, v in fetched.items())} selected from each "
-            "subreddit); the fetch runs from the most active r/StopEatingSeedOils commenters outward, so this is the neighbourhood of the heaviest seed-oil commenters. "
-            "The seed subreddits themselves are left out (every selected author is in them by construction).")
+    note = (f"{len(recs):,} of the {len(seso_selected):,} selected r/StopEatingSeedOils commenters (the most active, at least 5 comments each) have been fetched. "
+            "Commenters selected only from r/ScientificNutrition or r/carnivore are not included. The seed subreddits themselves are left out (every selected author is in r/StopEatingSeedOils by construction).")
     save("cocomment_nodes", nrows, ("Status", note), ("Subset", f"{len(keep)} of {len(cand):,} subreddits with at least 20 fetched commenters (3+ interactions each): the 30 with most commenters plus the 14 biggest "
                                                       f"risers and 14 biggest fallers in share from 2024 (at least 60 commenters). Lift = shared x all / (n_a x n_b). Layout: Kamada-Kawai on all pairs with lift > 1 (distance = 1 / lift); drawn links: each subreddit's 4 strongest (at least 4 shared). "
                                                       f" Groups = Louvain on all pairs with lift > 1 (seed 42, modularity {Q:.2f}: the groups overlap a lot, so read them as rough corners, not clean communities)."))
     save("cocomment_edges", erows, ("Status", note))
     save("cocomment_share", srows, ("Status", note), ("Share", f"Share of fetched commenters active in the period (3+ interactions) who also have 3+ interactions in the subreddit that period. "
                                                       f"Active before 2024: {act['pre2024']}; from 2024: {act['from2024']}."))
-    return {"cocomment_fetched": len(recs), "cocomment_total": len(camps)}
+    return {"cocomment_fetched": len(recs), "cocomment_total": len(seso_selected)}
 
 
 # ---------------------------------------------------------------- facts

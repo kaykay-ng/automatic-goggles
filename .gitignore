@@ -73,3 +73,13 @@ seedoils/data/processed/*.npz
 seedoils/data/processed/hostility_sample_to_label.csv
 seedoils/data/processed/artifact/_k50_backup/
 seedoils/data/processed/artifact/_layout_backup/
+
+# hostility hand-labelling page holds Reddit text: keep local
+seedoils/label_hostility.html
+seedoils/label_hostility_sampleA.html
+
+# paper build output
+paper/build/
+
+# third-party papers kept locally
+paper/refs/

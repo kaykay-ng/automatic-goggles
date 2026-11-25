@@ -1,0 +1,36 @@
+% PNAS research article for Overleaf. UNTESTED here: this computer does not have the PNAS class (pnas-new.cls); the Overleaf PNAS template project provides it.
+% Structure copied from the PNAS research-report example (Research_report.tex, template type pnasresearcharticle).
+% To use: in Overleaf create a project from that template (keep its pnas-new.cls, pnas-new.bst, frog.pdf etc.), add body.tex, meta.tex, references.bib and figures/ from this folder,
+% and replace the project's main.tex with this file.
+\documentclass[9pt,twocolumn,twoside]{pnas-new}
+% Use the lineno option to display guide line numbers if required.
+\input{meta}
+\articletype{\paperclass} % article topic/classification (PNAS asks for one; set in meta.tex)
+\templatetype{pnasresearcharticle} % two-column research article
+\begin{document}
+\title{\papertitle}
+\author[a,1]{Author One}
+\author[a]{Author Two}
+\affil[a]{Technical University of Denmark, Kongens Lyngby, Denmark}
+\leadauthor{One}
+\significancestatement{\significancetext}
+\authorcontributions{\contribtext}
+\authordeclaration{The authors declare no competing interest.}
+\correspondingauthor{\textsuperscript{1}To whom correspondence should be addressed. E-mail: author.one@example.org}
+\keywords{\paperkeywords}
+\begin{abstract}
+\abstracttext
+\end{abstract}
+\dates{This manuscript was compiled on \today}
+\maketitle
+\thispagestyle{firststyle}
+\ifthenelse{\boolean{shortarticle}}{\ifthenelse{\boolean{singlecolumn}}{\abscontentformatted}{\abscontent}}{}
+\Firstpage
+% \Firstpage sets the column size of the first page text; \Endparasplit (in body.tex, after the first paragraphs) restores it.
+\input{body}
+\dataavail{\dataavailtext}
+\acknow{We thank the course staff for feedback.}
+\showacknow{} % Display the acknowledgments section
+\bibsplit[3] % splits the references from the text; the number is how many references go in the left column; tune it after the text is final
+\bibliography{references}
+\end{document}

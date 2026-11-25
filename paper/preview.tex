@@ -1,0 +1,28 @@
+% Plain two-column preview of body.tex so the paper can be compiled and length-checked on this computer without the PNAS class.
+% The PNAS layout is a little different (9 pt, narrower columns): treat the page count as a rough guide and check the real count in Overleaf.
+\documentclass[9pt,twocolumn]{extarticle}
+\usepackage[a4paper,margin=1.7cm,columnsep=0.6cm]{geometry}
+\usepackage[T1]{fontenc}\usepackage{lmodern}\usepackage{graphicx}\usepackage{booktabs}\usepackage{amsmath}\usepackage{hyperref}\usepackage[numbers,sort&compress]{natbib}
+\usepackage{titlesec}\titleformat{\section}{\bfseries\large}{}{0pt}{}\titleformat{\subsection}{\itshape\bfseries}{}{0pt}{}
+\setlength{\parindent}{1em}\setlength{\parskip}{0pt}
+\input{meta}
+% stubs for the PNAS macros
+\newcommand{\dropcap}[1]{#1}
+\newcommand{\Firstpage}{}\newcommand{\Endparasplit}{}\newcommand{\Parasplit}{}\newcommand{\bibsplit}[1][]{}
+\newcommand{\significancestatement}[1]{\noindent\textbf{Significance Statement.} #1\par\medskip}
+\newcommand{\matmethods}[1]{\section*{Materials and Methods}#1}
+\newcommand{\showmatmethods}{}
+\newcommand{\acknow}[1]{\section*{Acknowledgments}#1}
+\newcommand{\showacknow}{}
+\title{\papertitle}
+\author{Author One, Author Two}
+\date{}
+\begin{document}
+\twocolumn[\maketitle
+\begin{abstract}\noindent \abstracttext\end{abstract}
+\significancestatement{\significancetext}\bigskip]
+\input{body}
+\section*{Data availability}\dataavailtext
+\section*{Author contributions}\contribtext
+\bibliographystyle{unsrtnat}
+\end{document}
