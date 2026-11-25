@@ -1,0 +1,28 @@
+baseline share of paper citations from 2024: SESO 61%, SciNut 34%
+
+== c2 omega-6 / linoleic acid: 200 cited papers with community membership
+  StopEatingSeedOils     423 citing docs,  155 users; from 2024 58% (side baseline 61%); vote pct 0.514 (n=256)
+      topics: [pufa, omega, acid, linoleic] 171; [canola, canola oil, rapeseed, oil] 20; [seed oils, seed, oils, weight] 13
+  ScientificNutrition    650 citing docs,  155 users; from 2024 28% (side baseline 34%); vote pct 0.585 (n=494)
+      topics: [saturated, saturated fat, fat, fats] 81; [la, acid, linoleic, linoleic acid] 71; [pufa, sfa, pufas, sfas] 49
+
+== c10 rodent fat carcinogenesis: 40 cited papers with community membership
+  StopEatingSeedOils      83 citing docs,   16 users; from 2024 36% (side baseline 61%); vote pct 0.727 (n=38)
+      topics: [pufa, omega, acid, linoleic] 44; [sun, sunscreen, skin, sunburn] 17; [canola, canola oil, rapeseed, oil] 3
+  ScientificNutrition    309 citing docs,   29 users; from 2024 4% (side baseline 34%); vote pct 0.781 (n=231)
+      topics: [la, acid, linoleic, linoleic acid] 202; [omega, omega6, ratio, omega3] 17; [cancer, cancers, risk, cancer risk] 8
+
+== c4 saturated fat & CVD: 135 cited papers with community membership
+  StopEatingSeedOils     247 citing docs,   95 users; from 2024 75% (side baseline 61%); vote pct 0.560 (n=174)
+      topics: [pufa, omega, acid, linoleic] 68; [saturated, saturated fat, fat, fats] 43; [ldl, hdl, cholesterol, high ldl] 9
+  ScientificNutrition    835 citing docs,  160 users; from 2024 33% (side baseline 34%); vote pct 0.617 (n=723)
+      topics: [saturated, saturated fat, fat, fats] 279; [pufa, sfa, pufas, sfas] 70; [cholesterol, dietary cholesterol, cholesterol levels, ldl] 28
+
+== c5 LDL / lipoproteins: 124 cited papers with community membership
+  StopEatingSeedOils      63 citing docs,   36 users; from 2024 73% (side baseline 61%); vote pct 0.540 (n=57)
+      topics: [ldl, hdl, cholesterol, high ldl] 23; [cholesterol, high cholesterol, heart, disease] 14; [pufa, omega, acid, linoleic] 11
+  ScientificNutrition    629 citing docs,  136 users; from 2024 26% (side baseline 34%); vote pct 0.571 (n=532)
+      topics: [ldl, ldlc, hdl, risk] 210; [statins, statin, ldl, ldlc] 73; [cholesterol, dietary cholesterol, cholesterol levels, ldl] 72
+
+stance sheet: 177 items -> stance_sheet.csv (blind; key in stance_key.csv). c2 Stop 24, c2 Scie 24, c10 Stop 19, c10 Scie 22, c4 Stop 24, c4 Scie 24, c5 Stop 18, c5 Scie 22
+citation windows (300 words around the link to the paper): link found in 168 of 177 items; otherwise the window is the first words of the text (e.g. a post whose link is the post URL)

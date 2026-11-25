@@ -1,0 +1,16 @@
+topic,label,seso_ratio_own_labels,seso_ratio_centroid,scinut_n_pre,scinut_n_from,scinut_share_pre,scinut_share_from,scinut_ratio
+46,"rfk, trump, rape, jr",28.66,41.05,1,31,0.001,0.061,43.0
+43,"trump, vote, hes, party",5.84,8.52,21,39,0.03,0.077,2.58
+20,"vaccines, covid, autism, virus",2.98,3.12,414,286,0.586,0.561,0.96
+68,"political, wing, seed, right",2.9,2.4,2,11,0.003,0.022,7.63
+107,"left, political, right, wing",2.85,2.43,39,49,0.055,0.096,1.74
+90,"organic, pesticides, citric, produce",2.56,2.33,107,81,0.151,0.159,1.05
+50,"money, capitalism, government, companies",2.28,2.18,104,123,0.147,0.241,1.64
+61,"ingredients, label, list, product",2.15,2.05,214,212,0.303,0.416,1.37
+92,"flavors, natural, vanilla, artificial",2.04,1.98,71,66,0.1,0.129,1.29
+60,"processed, foods, ultra, processing",1.96,1.87,355,500,0.502,0.981,1.95
+116,"conspiracy, media, news, propaganda",1.9,1.92,287,355,0.406,0.697,1.72
+88,"kids, parents, school, children",1.89,1.86,100,122,0.141,0.239,1.69
+85,"bars, granola, protein, dates",1.86,1.54,13,24,0.018,0.047,2.56
+11,"avocado, oil, olive, chosen",1.82,1.8,46,31,0.065,0.061,0.93
+10,"food, health, doctors, pharma",1.8,2.14,383,407,0.542,0.799,1.47

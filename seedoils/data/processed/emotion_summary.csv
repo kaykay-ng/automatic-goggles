@@ -1,0 +1,21 @@
+subreddit,theme,period,n,hostile_share,hostile_mean,positive_share,positive_mean,inquisitive_share,inquisitive_mean,fearful_share,fearful_mean,neutral_share,neutral_mean
+ScientificNutrition,all (random),from2024,3000,0.048,0.1066,0.1367,0.1987,0.1127,0.1373,0.0007,0.0041,0.5093,0.5007
+ScientificNutrition,all (random),pre2024,3000,0.048,0.1037,0.1383,0.2032,0.1357,0.1562,0.002,0.0045,0.4723,0.4774
+StopEatingSeedOils,all (random),from2024,3000,0.065,0.1132,0.2043,0.2536,0.0797,0.0974,0.002,0.0072,0.407,0.4282
+StopEatingSeedOils,all (random),pre2024,3000,0.049,0.0929,0.2113,0.2655,0.103,0.1196,0.0023,0.0072,0.4,0.4201
+StopEatingSeedOils,ingredient labels & processed food,from2024,1200,0.0833,0.1344,0.2008,0.2463,0.0958,0.1078,0.0033,0.0071,0.3658,0.4075
+StopEatingSeedOils,ingredient labels & processed food,pre2024,382,0.0445,0.1008,0.2251,0.2638,0.089,0.1056,0.0052,0.0071,0.4084,0.4293
+StopEatingSeedOils,"keto, carbs, fasting",from2024,1200,0.0475,0.0939,0.2008,0.2732,0.0633,0.0915,0.0025,0.0078,0.3867,0.4202
+StopEatingSeedOils,"keto, carbs, fasting",pre2024,1200,0.0433,0.082,0.2075,0.2858,0.085,0.1028,0.0017,0.0074,0.3808,0.4127
+StopEatingSeedOils,omega-6 / PUFA biochemistry,from2024,1200,0.0525,0.1029,0.1342,0.2045,0.1033,0.1144,0.0008,0.0044,0.52,0.5111
+StopEatingSeedOils,omega-6 / PUFA biochemistry,pre2024,1200,0.0408,0.0891,0.1508,0.2244,0.1242,0.1429,0.0,0.0053,0.4658,0.4753
+StopEatingSeedOils,"pharma, FDA, corporations",from2024,1200,0.0725,0.1419,0.1783,0.2235,0.0533,0.0796,0.0017,0.0062,0.3858,0.4123
+StopEatingSeedOils,"pharma, FDA, corporations",pre2024,1004,0.0777,0.1326,0.1843,0.2384,0.0707,0.0917,0.003,0.008,0.3396,0.3843
+StopEatingSeedOils,"politics (RFK, Trump, left/right)",from2024,1200,0.0942,0.1596,0.1942,0.2304,0.0625,0.0841,0.0033,0.0067,0.3575,0.3992
+StopEatingSeedOils,"politics (RFK, Trump, left/right)",pre2024,200,0.115,0.1512,0.195,0.2514,0.04,0.0691,0.0,0.0028,0.445,0.4124
+StopEatingSeedOils,"shopping (Costco, avocado oil, chips)",from2024,1200,0.0575,0.1,0.2708,0.297,0.0942,0.1071,0.0042,0.0056,0.3358,0.3715
+StopEatingSeedOils,"shopping (Costco, avocado oil, chips)",pre2024,938,0.032,0.0655,0.3006,0.3371,0.1087,0.1128,0.0,0.0039,0.3571,0.3808
+StopEatingSeedOils,studies & evidence,from2024,1200,0.095,0.1484,0.2008,0.237,0.0892,0.1072,0.0017,0.0043,0.3592,0.4002
+StopEatingSeedOils,studies & evidence,pre2024,1169,0.0556,0.1193,0.2301,0.2703,0.0975,0.1238,0.0026,0.0045,0.3362,0.3781
+StopEatingSeedOils,vaccines & COVID,from2024,1200,0.095,0.1501,0.16,0.2059,0.0742,0.1112,0.0042,0.0087,0.4017,0.4326
+StopEatingSeedOils,vaccines & COVID,pre2024,125,0.072,0.1333,0.144,0.2094,0.112,0.1192,0.008,0.0084,0.4,0.4018

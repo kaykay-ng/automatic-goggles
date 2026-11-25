@@ -1,0 +1,114 @@
+<title>Upvote Views</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
+<style>
+/* Layout: one column of three self-contained figures, each with a reading note and a caution. Test page, not the paper. */
+:root{--bg:#f6f7f9;--card:#ffffff;--fg:#1b1f24;--mut:#5a6470;--line:#dde1e7;--down:#c4521a;--on-down:#ffffff;
+--b1:#d3e3e6;--b2:#97c0c7;--b3:#4f96a3;--b4:#1d5967;--on-b1:#1b1f24;--on-b2:#1b1f24;--on-b3:#ffffff;--on-b4:#ffffff;--accent:#c4521a;--dot-before:#8a94a0;
+--head:"Space Grotesk","Inter",system-ui,sans-serif;--body:"Inter",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14171b;--card:#1b1f25;--fg:#e8ebef;--mut:#99a3af;--line:#2d333b;--down:#f08a4b;--on-down:#1b1f24;
+--b1:#2b474d;--b2:#3d727c;--b3:#5ea3b0;--b4:#a3d6df;--on-b1:#e8ebef;--on-b2:#ffffff;--on-b3:#14171b;--on-b4:#14171b;--accent:#f08a4b;--dot-before:#8f99a5;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#14171b;--card:#1b1f25;--fg:#e8ebef;--mut:#99a3af;--line:#2d333b;--down:#f08a4b;--on-down:#1b1f24;
+--b1:#2b474d;--b2:#3d727c;--b3:#5ea3b0;--b4:#a3d6df;--on-b1:#e8ebef;--on-b2:#ffffff;--on-b3:#14171b;--on-b4:#14171b;--accent:#f08a4b;--dot-before:#8f99a5;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.55;padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+h1{font:600 28px/1.15 var(--head);margin:0 0 6px;text-wrap:balance}
+h2{font:600 19px/1.3 var(--head);margin:0 0 4px;text-wrap:balance}
+p{margin:0}.lede{color:var(--mut);max-width:65ch}
+.fig{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:20px;display:flex;flex-direction:column;gap:14px}
+.sub{color:var(--mut);max-width:70ch}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--mut)}
+.legend span{display:inline-flex;align-items:center;gap:6px}.legend i{width:12px;height:12px;border-radius:2px;display:inline-block}
+.grp{font:600 13px var(--body);letter-spacing:.04em;text-transform:uppercase;color:var(--mut);margin-top:6px}
+.row{display:grid;grid-template-columns:190px 1fr;gap:4px 14px;align-items:center}
+.row .lab{font-size:14px;min-width:0}.row .n{display:block;color:var(--mut);font-size:12px;font-variant-numeric:tabular-nums}
+.bar{display:flex;gap:2px;height:34px;min-width:0}
+.seg{display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;font-variant-numeric:tabular-nums;overflow:hidden;white-space:nowrap;border-radius:3px;min-width:2px}
+.seg[data-b="0"]{background:var(--down);color:var(--on-down)}.seg[data-b="1"]{background:var(--b1);color:var(--on-b1)}.seg[data-b="2"]{background:var(--b2);color:var(--on-b2)}.seg[data-b="3"]{background:var(--b3);color:var(--on-b3)}.seg[data-b="4"]{background:var(--b4);color:var(--on-b4)}
+.note{font-size:13.5px;color:var(--mut);max-width:72ch}.note b{color:var(--fg);font-weight:600}
+.caution{font-size:13px;color:var(--mut);border-top:1px solid var(--line);padding-top:10px;max-width:72ch}
+.seg-ctl{display:inline-flex;border:1px solid var(--line);border-radius:6px;overflow:hidden;align-self:flex-start}
+.seg-ctl button{font:500 13px var(--body);padding:7px 14px;background:transparent;color:var(--fg);border:0;cursor:pointer}
+.seg-ctl button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.seg-ctl button:focus-visible,.seg:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.dumb{display:grid;grid-template-columns:200px 1fr 58px;gap:4px 14px;align-items:center}
+.dumb .lab{font-size:14px;min-width:0}.track{position:relative;height:26px}
+.track .axis{position:absolute;left:0;right:0;top:50%;height:1px;background:var(--line)}
+.track .tick{position:absolute;top:0;bottom:0;width:1px;background:var(--line);opacity:.5}
+.track .link{position:absolute;top:50%;height:2px;margin-top:-1px;background:var(--mut);opacity:.5}
+.track .dot{position:absolute;top:50%;width:13px;height:13px;margin:-6.5px 0 0 -6.5px;border-radius:50%;box-sizing:border-box}
+.dot.before{background:var(--card);border:2px solid var(--dot-before)}.dot.after{background:var(--accent);border:2px solid var(--accent)}
+.delta{font-variant-numeric:tabular-nums;font-size:13px;color:var(--mut);text-align:right}
+.scale{display:grid;grid-template-columns:200px 1fr 58px;gap:14px;font-size:12px;color:var(--mut)}
+.scale>:last-child{text-align:right}.scale .ticks{position:relative;height:14px;margin-right:12px}.scale .ticks span{position:absolute;transform:translateX(-50%);font-variant-numeric:tabular-nums}
+.tip{position:fixed;z-index:20;pointer-events:none;background:var(--fg);color:var(--bg);font-size:12.5px;padding:6px 9px;border-radius:5px;max-width:260px;line-height:1.4}
+.tip[hidden]{display:none}
+@media (max-width:620px){.row{grid-template-columns:1fr}.dumb,.scale{grid-template-columns:1fr 50px}.dumb .lab{grid-column:1/-1}.scale>:first-child{display:none}.fig{padding:16px}h1{font-size:24px}}
+</style>
+<div class="wrap">
+ <header><h1>Three ways to show the upvotes</h1>
+ <p class="lede">Test versions of three candidate figures, before any go into the paper. All use the same score bands, taken from the archived net score of each comment, and share the caveats at the end. Data: Reddit via Arctic Shift, r/StopEatingSeedOils and r/ScientificNutrition, "before" is up to 31 December 2023 and "from 2024" is 1 January 2024 onwards.</p></header>
+
+ <section class="fig" id="fig-a"><div><h2>View 1. How the scores are spread, before and from 2024</h2>
+ <p class="sub">Each bar is all the comments of a subreddit in one period. Longer orange segments mean more comments were downvoted.</p></div>
+ <div class="legend" id="leg-a"></div><div id="bars-a"></div>
+ <p class="note" id="note-a"></p>
+ <p class="caution">Reading it: in r/StopEatingSeedOils the 3 to 9 band shrinks while the downvoted and 10 or more bands grow, and r/ScientificNutrition barely moves. The median score is 2 in every bar, so the median hides this.</p></section>
+
+ <section class="fig" id="fig-b"><div><h2>View 2. Which themes got downvoted more, in r/StopEatingSeedOils</h2>
+ <p class="sub">Comments of 15 words or more, grouped into the themes of the topic model. Each row shows the share before 2024 (hollow dot) and from 2024 (filled dot).</p></div>
+ <div class="seg-ctl" role="group" aria-label="Measure"><button type="button" id="m-down" aria-pressed="true">Downvoted</button><button type="button" id="m-top" aria-pressed="false">10 or more upvotes</button></div>
+ <div id="dumb"></div>
+ <p class="note" id="note-b"></p>
+ <p class="caution">Reading it: downvoting went up in every theme, most in politics, studies and evidence, and vaccines. "Downvoted" means a score of 0 or lower. A downvoted comment can be disliked or just against the grain, so it is not a measure of quality or hostility.</p></section>
+
+ <section class="fig" id="fig-c"><div><h2>View 3. Newcomers against long-time commenters</h2>
+ <p class="sub">Newcomers are commenters whose first comment in the subreddit is from 2024. Long-time commenters first appeared before 2024.</p></div>
+ <div class="legend" id="leg-c"></div><div id="bars-c"></div>
+ <p class="note" id="note-c"></p>
+ <p class="caution">Reading it: in r/StopEatingSeedOils long-time commenters barely changed, and the extra downvoting is on newcomers' comments. This does not say why. Newcomers could hold different views, post in different threads, or be unknown to voters. Deleted accounts and the AutoModerator bot are left out.</p></section>
+
+ <section class="fig"><h2>Caveats for all three</h2>
+ <p class="note"><b>The score is the archived net vote count</b>, which may be a snapshot from when Arctic Shift collected the comment and not the final value, so comparing years could partly reflect when each period was collected. We have not checked this. The most recent three days are left out. Scores depend on audience size, which grew in r/StopEatingSeedOils from 2024. Orange means downvoted, and the blue steps get darker as scores rise.</p></section>
+</div>
+<div class="tip" id="tip" hidden></div>
+<script>
+const ROWS=__DATA__;
+const BANDS=["Downvoted (0 or less)","1 to 2","3 to 9","10 to 49","50 or more"];
+const tip=document.getElementById('tip');
+function showTip(e,t){tip.textContent=t;tip.hidden=false;const x=Math.min(e.clientX+12,innerWidth-270);tip.style.left=Math.max(8,x)+'px';tip.style.top=(e.clientY+14)+'px'}
+function hideTip(){tip.hidden=true}
+const get=(view,sub,group)=>{const r=ROWS.filter(x=>x.view===view&&x.subreddit===sub&&x.group===group);const v=BANDS.map(b=>{const m=r.find(x=>x.band===b);return m?m.pct:0});return{v,n:r.length?r[0].n:0}};
+const fmt=d3n=>d3n.toLocaleString('en-US');
+function legend(id){const el=document.getElementById(id);el.replaceChildren();BANDS.forEach((b,i)=>{const s=document.createElement('span'),k=document.createElement('i');k.style.background=i===0?'var(--down)':'var(--b'+i+')';s.append(k,b);el.appendChild(s)})}
+function bars(id,groups){const el=document.getElementById(id);el.replaceChildren();groups.forEach(g=>{const h=document.createElement('div');h.className='grp';h.textContent=g.title;el.appendChild(h);g.rows.forEach(r=>{const d=get(g.view,g.sub,r.key);const row=document.createElement('div');row.className='row';
+ const lab=document.createElement('div');lab.className='lab';lab.textContent=r.label;const n=document.createElement('span');n.className='n';n.textContent=fmt(d.n)+' comments';lab.appendChild(n);
+ const bar=document.createElement('div');bar.className='bar';bar.setAttribute('role','img');bar.setAttribute('aria-label',r.label+': '+BANDS.map((b,i)=>b+' '+d.v[i].toFixed(1)+'%').join(', '));
+ d.v.forEach((p,i)=>{const s=document.createElement('div');s.className='seg';s.dataset.b=i;s.style.flex=p+' 1 0';if(p>=5)s.textContent=p.toFixed(1)+'%';
+  const t=g.sub+', '+r.label+'\n'+BANDS[i]+': '+p.toFixed(1)+'% of '+fmt(d.n)+' comments';s.addEventListener('mousemove',e=>showTip(e,t));s.addEventListener('mouseleave',hideTip);bar.appendChild(s)});
+ row.append(lab,bar);el.appendChild(row)})})}
+const SUBS=['r/StopEatingSeedOils','r/ScientificNutrition'];
+legend('leg-a');legend('leg-c');
+bars('bars-a',SUBS.map(s=>({title:s,view:'bands',sub:s,rows:[{key:'Before 2024',label:'Before 2024'},{key:'From 2024',label:'From 2024'}]})));
+bars('bars-c',SUBS.map(s=>({title:s,view:'cohort',sub:s,rows:[{key:'Long-time commenters, before 2024',label:'Long-time, before 2024'},{key:'Long-time commenters, from 2024',label:'Long-time, from 2024'},{key:'Newcomers, from 2024',label:'Newcomers, from 2024'}]})));
+const top10=v=>v[3]+v[4],down=v=>v[0];
+(function(){const a=s=>[get('bands',s,'Before 2024').v,get('bands',s,'From 2024').v];const [sb,sa]=a(SUBS[0]),[nb,na]=a(SUBS[1]);
+ document.getElementById('note-a').innerHTML='<b>r/StopEatingSeedOils:</b> downvoted '+down(sb).toFixed(1)+'% to '+down(sa).toFixed(1)+'%, and 10 or more upvotes '+top10(sb).toFixed(1)+'% to '+top10(sa).toFixed(1)+'%. <b>r/ScientificNutrition:</b> downvoted '+down(nb).toFixed(1)+'% to '+down(na).toFixed(1)+'%, and 10 or more upvotes '+top10(nb).toFixed(1)+'% to '+top10(na).toFixed(1)+'%.';
+ const c=(s,g)=>get('cohort',s,g).v;const s0=SUBS[0],s1=SUBS[1];
+ document.getElementById('note-c').innerHTML='<b>r/StopEatingSeedOils:</b> downvoted '+down(c(s0,'Long-time commenters, before 2024')).toFixed(1)+'% for long-time commenters before 2024, '+down(c(s0,'Long-time commenters, from 2024')).toFixed(1)+'% from 2024, and '+down(c(s0,'Newcomers, from 2024')).toFixed(1)+'% for newcomers. <b>r/ScientificNutrition:</b> '+down(c(s1,'Long-time commenters, before 2024')).toFixed(1)+'%, '+down(c(s1,'Long-time commenters, from 2024')).toFixed(1)+'% and '+down(c(s1,'Newcomers, from 2024')).toFixed(1)+'%.'})();
+const THEMES=[...new Set(ROWS.filter(r=>r.view==='theme').map(r=>r.group.split('|')[0]))];let metric='down';
+function drawDumb(){const el=document.getElementById('dumb');el.replaceChildren();const f=metric==='down'?down:top10,max=metric==='down'?25:20;
+ const rows=THEMES.map(t=>{const a=get('theme',SUBS[0],t+'|Before 2024'),b=get('theme',SUBS[0],t+'|From 2024');return{t,a:f(a.v),b:f(b.v),na:a.n,nb:b.n}}).sort((x,y)=>(y.b-y.a)-(x.b-x.a));
+ const g=document.createElement('div');g.className='dumb';
+ rows.forEach(r=>{const lab=document.createElement('div');lab.className='lab';lab.textContent=r.t;const tr=document.createElement('div');tr.className='track';tr.setAttribute('role','img');tr.setAttribute('aria-label',r.t+': '+r.a.toFixed(1)+'% before 2024, '+r.b.toFixed(1)+'% from 2024');
+  [0,5,10,15,20,25].filter(v=>v<=max).forEach(v=>{const k=document.createElement('div');k.className='tick';k.style.left=(v/max*100)+'%';tr.appendChild(k)});
+  const lo=Math.min(r.a,r.b),hi=Math.max(r.a,r.b);const lk=document.createElement('div');lk.className='link';lk.style.left=(lo/max*100)+'%';lk.style.width=((hi-lo)/max*100)+'%';tr.appendChild(lk);
+  [['before',r.a,r.na,'Before 2024'],['after',r.b,r.nb,'From 2024']].forEach(([c,v,n,l])=>{const d=document.createElement('div');d.className='dot '+c;d.style.left=(v/max*100)+'%';
+   d.addEventListener('mousemove',e=>showTip(e,r.t+'\n'+l+': '+v.toFixed(1)+'% of '+fmt(n)+' comments'));d.addEventListener('mouseleave',hideTip);tr.appendChild(d)});
+  const dl=document.createElement('div');dl.className='delta';const ch=r.b-r.a;dl.textContent=(ch>=0?'+':'−')+Math.abs(ch).toFixed(1);g.append(lab,tr,dl)});
+ el.appendChild(g);const sc=document.createElement('div');sc.className='scale';const sp=document.createElement('div'),tk=document.createElement('div');tk.className='ticks';
+ [0,5,10,15,20,25].filter(v=>v<=max).forEach(v=>{const s=document.createElement('span');s.style.left=(v/max*100)+'%';s.textContent=v+'%';tk.appendChild(s)});const sp2=document.createElement('div');sp2.textContent='change';sc.append(sp,tk,sp2);el.appendChild(sc);
+ const best=rows[0],txt=metric==='down'?'downvoted':'with 10 or more upvotes';document.getElementById('note-b').innerHTML='Share of comments '+txt+', before 2024 to from 2024. Largest change: <b>'+best.t+'</b>, '+best.a.toFixed(1)+'% to '+best.b.toFixed(1)+'%. Dots show hollow for before and filled for from 2024; the right column is the change in percentage points.'}
+function setMetric(m){metric=m;document.getElementById('m-down').setAttribute('aria-pressed',m==='down');document.getElementById('m-top').setAttribute('aria-pressed',m==='top');drawDumb()}
+document.getElementById('m-down').addEventListener('click',()=>setMetric('down'));document.getElementById('m-top').addEventListener('click',()=>setMetric('top'));drawDumb();
+</script>

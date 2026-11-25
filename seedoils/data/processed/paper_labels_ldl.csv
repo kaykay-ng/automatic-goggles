@@ -1,0 +1,125 @@
+openalex_id,relevance,direction,outcome,population,design,main_claim,confidence
+https://openalex.org/W1816597323,no,NA,hard,humans,meta_trials,Statins reduce mortality and vascular events in primary prevention without excess harms,high
+https://openalex.org/W1957007052,no,NA,hard,humans,rct,Intensive weight-loss lifestyle intervention did not reduce cardiovascular events in type 2 diabetes,high
+https://openalex.org/W1963840048,no,NA,other,mixed,narrative_review,Lipid hypothesis of atherosclerosis rests on false premises and has no legitimate basis,high
+https://openalex.org/W1970049038,no,NA,hard,humans,cohort,Common LDLR variant lowers LDL-C and thereby reduces coronary artery disease risk,high
+https://openalex.org/W1974220088,no,NA,hard,humans,cohort,Low cholesterol linked to higher mortality; high cholesterol not a mortality risk factor,high
+https://openalex.org/W1975968199,no,NA,hard,humans,narrative_review,"Discussion of JUPITER rosuvastatin trial results, controversies and prevention implications",medium
+https://openalex.org/W1982729232,no,NA,hard,humans,cohort,ApoB:apoA-I ratio predicts CHD comparably but adds nothing over TC:HDL-C ratio,high
+https://openalex.org/W1986322454,no,NA,hard,humans,cohort,LDL apheresis plus drugs lowered coronary events versus drugs alone in heterozygous FH,high
+https://openalex.org/W1987967030,no,NA,intermediate,humans,rct,Very low LDL achieved with rosuvastatin showed no clear relation to adverse effects,high
+https://openalex.org/W2005595427,no,NA,mechanistic,mixed,narrative_review,Hypercholesterolemia impairs endothelial progenitor cell function and vascular repair,medium
+https://openalex.org/W2014109581,no,NA,mechanistic,humans,cohort,Two apoB truncating mutations identified as causes of very low LDL cholesterol,high
+https://openalex.org/W2015546021,no,NA,mechanistic,humans,other,Platelets from familial hypercholesterolemia patients bind more fibrinogen and aggregate more readily,high
+https://openalex.org/W2025596599,no,NA,mechanistic,humans,narrative_review,Dyslipidemia of inflammation is a conserved repair response; persistent stimulus is the problem,medium
+https://openalex.org/W2029644331,no,NA,mechanistic,humans,narrative_review,"Lipoproteins modulate thrombosis and rheology; LDL prothrombotic, HDL antithrombotic",medium
+https://openalex.org/W2048760408,no,NA,hard,humans,rct,CETP inhibitor torcetrapib raised HDL but increased mortality and cardiac events,high
+https://openalex.org/W2066719367,no,NA,intermediate,humans,cohort,Half of hospitalized CAD patients have admission LDL below 100 mg/dL,high
+https://openalex.org/W2067539811,no,NA,hard,humans,cohort,PCSK9 variants lowering LDL lifelong are associated with substantially reduced CHD,high
+https://openalex.org/W2075743049,no,NA,hard,humans,cohort,Oxidized LDL (4E6) does not predict CHD independently of apoB and lipid ratios,high
+https://openalex.org/W2083154566,no,NA,mechanistic,mixed,animal_experiment,Subendothelial retention of apoB lipoproteins by proteoglycans initiates atherogenesis,high
+https://openalex.org/W2110947798,no,NA,hard,humans,cohort,Cumulative hyperlipidemia exposure in early adulthood increases later CHD risk dose-dependently,high
+https://openalex.org/W2114338526,no,NA,hard,humans,cohort,"In people over 85, high total cholesterol associated with longevity",high
+https://openalex.org/W2118184073,no,NA,hard,humans,meta_trials,Statin LDL lowering reduces vascular events even in people at low risk,high
+https://openalex.org/W2118825330,no,NA,hard,humans,rct,Dalcetrapib raised HDL but did not reduce recurrent cardiovascular events after ACS,high
+https://openalex.org/W2119679507,no,NA,intermediate,humans,rct,Calorie restriction and exercise similarly improve CHD risk factors in nonobese adults,high
+https://openalex.org/W2123027967,no,NA,hard,humans,cohort,"When LDL-C is discordant with apoB or LDL-P, LDL-C misestimates coronary risk",high
+https://openalex.org/W2124742375,no,NA,hard,humans,meta_trials,Ezetimibe reduces MI and stroke without affecting mortality or cancer risk,high
+https://openalex.org/W2128606426,no,NA,mechanistic,humans,narrative_review,Altered myocardial fatty acid beta-oxidation contributes to heart disease; inhibition may help,medium
+https://openalex.org/W2131142573,no,NA,hard,humans,cohort,Persistently low cholesterol in elderly men associated with higher all-cause mortality,high
+https://openalex.org/W2136208974,no,NA,mechanistic,mixed,narrative_review,Statins may stimulate atherosclerosis and heart failure via mitochondrial and vitamin K2 effects,high
+https://openalex.org/W2137343899,no,NA,other,mixed,narrative_review,Optimal LDL is 50-70 mg/dl; current targets lead to undertreatment,high
+https://openalex.org/W2137977546,no,NA,hard,humans,rct,"On-statin CRP, not LDL-C, associated with atheroma regression and cardiovascular events",high
+https://openalex.org/W2137983259,no,NA,hard,humans,rct,"Rosuvastatin reduced cardiovascular events in healthy people with high CRP, normal LDL",high
+https://openalex.org/W2142527465,no,NA,hard,humans,cohort,Genetically lowered LDL does not raise cancer risk; low LDL per se not causal,high
+https://openalex.org/W2151722413,no,NA,hard,humans,cohort,Low HDL-C and HDL ratios are strongest lipid predictors of CHD in postmenopausal women,high
+https://openalex.org/W2152745230,no,NA,mechanistic,humans,other,"Early human atherosclerosis begins with extracellular lipid and proteoglycan deposition, then macrophages",high
+https://openalex.org/W2156490206,no,NA,hard,humans,cohort,"Higher LDL/HDL ratio, smoking and hypertension predict CHD events in familial hypercholesterolaemia",high
+https://openalex.org/W2157145517,no,NA,hard,humans,cohort,Falling cholesterol before death supports reverse causality: disease lowers cholesterol,high
+https://openalex.org/W2164824549,no,NA,hard,humans,cohort,Genetic predisposition to high LDL-C raises mortality even in the oldest old,high
+https://openalex.org/W2165605025,no,NA,hard,humans,rct,Adding niacin to statin gave no clinical benefit despite better HDL and triglycerides,high
+https://openalex.org/W2292719256,no,NA,hard,humans,cohort,Zero coronary calcium score is the strongest negative marker lowering estimated CVD risk,high
+https://openalex.org/W2296190881,no,NA,hard,mixed,cohort,Loss-of-function SR-BI variant raises HDL-C yet increases coronary heart disease risk,high
+https://openalex.org/W2304056429,no,NA,hard,humans,narrative_review,"Mendelian randomization shows LDL-C has causal, cumulative effect on CHD risk",high
+https://openalex.org/W2313998826,no,NA,hard,humans,rct,Rosuvastatin lowered cardiovascular events in intermediate-risk people without cardiovascular disease,high
+https://openalex.org/W2322095705,no,NA,hard,humans,rct,Pravastatin reduced coronary events after MI in patients with average cholesterol,high
+https://openalex.org/W2328529137,no,NA,hard,humans,rct,Gemfibrozil reduced major cardiovascular events in men with low HDL cholesterol,high
+https://openalex.org/W2412107371,partly,harm,hard,mixed,narrative_review,Statins and high-linoleic vegetable oils are hidden causes of cardiovascular disease and diabetes,high
+https://openalex.org/W2413045839,no,NA,mechanistic,humans,narrative_review,"Coronary atherosclerosis starts with intimal hyperplasia, not LDL retention; LDL target misguided",high
+https://openalex.org/W2418078838,no,NA,hard,humans,meta_observational,"In the elderly, LDL-C is unassociated or inversely associated with mortality",high
+https://openalex.org/W2465758073,no,NA,hard,humans,meta_trials,LDL lowering via LDL receptor upregulation reduces vascular events proportionally per mmol/L,high
+https://openalex.org/W2501649131,no,NA,mechanistic,mixed,narrative_review,Arterial retention of apoB lipoproteins causes atherosclerosis; LDL lowering reduces events,high
+https://openalex.org/W2553056070,no,NA,mechanistic,mixed,in_vitro,ALK1 mediates LDL uptake and transcytosis in endothelial cells,high
+https://openalex.org/W2570787279,no,NA,mechanistic,mixed,narrative_review,Statins may have LDL-independent pleiotropic cardiovascular effects of debated clinical relevance,medium
+https://openalex.org/W2579415520,no,NA,hard,humans,narrative_review,CETP inhibitor evacetrapib improved lipids but provided no clinical cardiovascular benefit,high
+https://openalex.org/W2596179513,no,NA,hard,humans,rct,Evolocumab lowered LDL to very low levels and reduced cardiovascular events,high
+https://openalex.org/W2609543937,no,NA,hard,humans,narrative_review,"Genetic, epidemiologic and trial evidence unequivocally establishes that LDL causes ASCVD",high
+https://openalex.org/W2616536890,no,NA,hard,humans,rct,Evacetrapib improved lipid biomarkers but did not reduce cardiovascular events,high
+https://openalex.org/W2762777606,no,NA,hard,humans,rct,Anacetrapib added to intensive statin modestly lowered major coronary events,high
+https://openalex.org/W2764023940,no,NA,hard,humans,narrative_review,Anacetrapib benefit after failed CETP inhibitors likely reflects non-HDL-C lowering,medium
+https://openalex.org/W2773226077,no,NA,intermediate,humans,cohort,Normal-range LDL-C associated with subclinical atherosclerosis in risk-factor-free adults,high
+https://openalex.org/W2785296722,no,NA,other,humans,narrative_review,Statin benefits exaggerated and harms underplayed; raw trial data should be released,high
+https://openalex.org/W2786334390,no,NA,hard,humans,cohort,Extremely high HDL-C associated with increased atherosclerotic CVD mortality in Japanese cohorts,high
+https://openalex.org/W2789520043,no,NA,other,none,other,Top-cited randomised controlled trials inevitably produce biased results,high
+https://openalex.org/W2792301467,partly,harm,hard,mixed,narrative_review,"EAS LDL-causality claim unjustified; statins, warfarin and some vegetable oils cause atherosclerosis",medium
+https://openalex.org/W2803072880,no,NA,other,humans,other,Horizontal pleiotropy is widespread in Mendelian randomization and biases causal estimates,high
+https://openalex.org/W2806741586,no,NA,mechanistic,animals,animal_experiment,Oxidized phospholipids are proinflammatory and proatherogenic; E06 antibody counteracts them in mice,high
+https://openalex.org/W2888687216,no,NA,hard,humans,cohort,"In low-risk adults, LDL-C at or above 160 mg/dL raises CVD mortality",high
+https://openalex.org/W2889580319,no,NA,hard,humans,narrative_review,LDL-C does not cause cardiovascular disease; cholesterol hypothesis fails Bradford Hill criteria,high
+https://openalex.org/W2890202245,no,NA,hard,humans,cohort,Genetically raised LDL-C and CETP-related HDL-C linked to higher breast cancer risk,high
+https://openalex.org/W2892213156,no,NA,hard,mixed,narrative_review,"In familial hypercholesterolemia, coagulation factors matter more than LDL-C for CVD",high
+https://openalex.org/W2894660847,no,NA,hard,mixed,narrative_review,Lowering apoB lipoproteins earlier in life could eradicate atherosclerotic cardiovascular disease,low
+https://openalex.org/W2899997727,no,NA,hard,humans,rct,Alirocumab after acute coronary syndrome lowered recurrent ischemic cardiovascular events,high
+https://openalex.org/W2911962097,no,NA,hard,humans,meta_trials,PCSK9 inhibitors lower LDL and major cardiovascular events but not mortality,high
+https://openalex.org/W2914782858,no,NA,hard,humans,cohort,Total cholesterol shows U-shaped association with mortality; lowest risk at 210-249 mg/dL,high
+https://openalex.org/W2915276679,no,NA,hard,humans,cohort,Genetically higher LDL-C raises CHD risk more strongly than ischemic stroke risk,high
+https://openalex.org/W2921012991,no,NA,hard,humans,narrative_review,Guideline: healthy lifestyle first; risk-based statin and blood pressure treatment,high
+https://openalex.org/W2947148115,no,NA,hard,humans,narrative_review,Editorial: cholesterol exposure and atherosclerotic disease are a lifelong problem,low
+https://openalex.org/W2949181149,no,NA,hard,humans,cohort,Nonfasting total and HDL cholesterol suffice for CVD prediction; apolipoproteins add nothing,high
+https://openalex.org/W2954290598,no,NA,intermediate,humans,rct,LDL apheresis after ACS was safe with trend toward early plaque regression,high
+https://openalex.org/W2971365948,no,NA,hard,humans,cohort,Lifelong genetically lower LDL-C plus lower blood pressure linked to lower CVD risk,high
+https://openalex.org/W2972028269,no,NA,hard,humans,meta_trials,"More-intensive lipid lowering reduces cardiovascular events, magnitude differs by therapy type",high
+https://openalex.org/W2974057056,no,NA,hard,humans,cohort,Lipoprotein apheresis for high Lp(a) associated with large reduction in CVD events,high
+https://openalex.org/W2978295466,no,NA,hard,humans,cohort,"Low LDL-C in non-statin users associated with higher cancer, CVD and total mortality",high
+https://openalex.org/W2980876689,no,NA,hard,humans,cohort,Childhood statin therapy in familial hypercholesterolemia reduced adult cardiovascular disease,high
+https://openalex.org/W2981767898,no,NA,hard,humans,narrative_review,ApoB measures atherogenic risk more accurately than LDL-C or non-HDL-C,high
+https://openalex.org/W2983136594,no,NA,mechanistic,humans,narrative_review,LDL-C and inflammation interact in atherosclerosis; anti-inflammatory therapies are emerging,medium
+https://openalex.org/W2988851086,no,NA,hard,humans,cohort,"Genetically lower HDL-C, not LDL-C, causally linked to infectious hospitalization risk",high
+https://openalex.org/W2989590116,no,NA,other,none,narrative_review,Mendelian randomization has major limitations and should be called genetic instrumental variable analysis,high
+https://openalex.org/W3006116566,no,NA,mechanistic,humans,narrative_review,"Consensus: LDL causes ASCVD, with pathophysiological, genetic and therapeutic support",medium
+https://openalex.org/W3012570809,no,NA,hard,humans,cohort,Apolipoprotein B is the predominant lipid trait causing coronary heart disease,high
+https://openalex.org/W3016245496,no,NA,hard,humans,meta_observational,"HDL-C has J-shaped association with all-cause, CVD and cancer mortality",high
+https://openalex.org/W3016476762,no,NA,intermediate,humans,narrative_review,"Athletes have more coronary calcification but more benign, calcified plaque composition",high
+https://openalex.org/W3033064244,no,NA,hard,humans,cohort,LDL-C and low HDL-C are causal CAD risk factors; triglycerides are not,high
+https://openalex.org/W3087016701,no,NA,hard,humans,cohort,"Cumulative LDL-C exposure, especially at younger age, increases cardiovascular event risk",high
+https://openalex.org/W3127371223,no,NA,intermediate,humans,rct,Weekly semaglutide plus lifestyle produced sustained clinically relevant weight loss,high
+https://openalex.org/W3133962571,no,NA,hard,humans,cohort,Total cholesterol has nonlinear association with mortality; both low and high adverse,high
+https://openalex.org/W3134551291,no,NA,hard,humans,cohort,Genetically higher LDL-C reduces lifespan and longevity in the general population,high
+https://openalex.org/W3171766261,no,NA,other,humans,narrative_review,Asks whether heart-healthy diet advice should extend beyond dietary cholesterol,low
+https://openalex.org/W3178872083,no,NA,hard,humans,cohort,LDL-C inversely associated with all-cause mortality in Japanese community-dwelling adults,high
+https://openalex.org/W3183857127,no,NA,hard,humans,narrative_review,ESC/EAS guideline: lower LDL-C to risk-based targets to reduce cardiovascular risk,medium
+https://openalex.org/W3195991822,no,NA,hard,humans,narrative_review,High HDL-C is not always protective and may be harmful at extreme levels,high
+https://openalex.org/W3198873620,partly,benefit,intermediate,humans,rct,Saturated fat overfeeding raised LDL aggregation; unsaturated fat reduced lipoprotein proteoglycan binding,medium
+https://openalex.org/W3213356570,no,NA,hard,humans,cohort,Low LDL-C associated with higher all-cause mortality; U-shaped relationship in NHANES,high
+https://openalex.org/W3216824991,no,NA,hard,humans,cohort,High apoB/apoA-1 ratio strongly predicts major cardiovascular events decades ahead,high
+https://openalex.org/W4205367203,no,NA,hard,humans,narrative_review,AHA statement: comprehensive risk factor control reduces cardiovascular events in type 2 diabetes,high
+https://openalex.org/W4220960642,no,NA,hard,humans,cohort,"In older Chinese adults, low LDL-C linked to higher mortality; HDL-C U-shaped",high
+https://openalex.org/W4220974542,no,NA,hard,humans,meta_trials,Statin absolute risk reductions are modest; LDL reduction not conclusively linked to outcomes,high
+https://openalex.org/W4246764494,no,NA,hard,humans,rct,Simvastatin cholesterol lowering improved survival in coronary heart disease patients,high
+https://openalex.org/W4283022970,no,NA,intermediate,humans,cohort,LDL/HDL ratio predicts coronary disease severity better than LDL-C or HDL-C alone,high
+https://openalex.org/W4322492205,no,NA,hard,mixed,cohort,Circulating erythritol associated with major cardiovascular events and enhances thrombosis,high
+https://openalex.org/W4361220710,no,NA,other,humans,cohort,"Regular glucosamine use associated with lower dementia risk, supported by Mendelian randomization",high
+https://openalex.org/W4386509714,yes,mixed,other,humans,cohort,Genetically higher omega-3 and lower omega-6:3 ratio linked to less chronic pain,medium
+https://openalex.org/W4386859467,no,NA,hard,humans,cohort,Future centenarians had more favorable common blood biomarker values decades earlier,high
+https://openalex.org/W4387966362,no,NA,hard,humans,cohort,Low-cholesterol paradox reflects reverse causality; lower cholesterol linked to lower CHD death,high
+https://openalex.org/W4388592674,no,NA,hard,humans,rct,Semaglutide reduced cardiovascular events in obese patients without diabetes,high
+https://openalex.org/W4388816929,no,NA,intermediate,humans,cohort,"Risk factors including LDL-C drive subclinical atherosclerosis progression, especially in younger adults",high
+https://openalex.org/W4391925517,no,NA,hard,mixed,cohort,Excess niacin metabolite 4PY linked to cardiovascular events and promotes vascular inflammation,high
+https://openalex.org/W4400974399,no,NA,intermediate,humans,cohort,"Genetically predicted caffeinated coffee raises coronary calcification risk, partly via BMI",high
+https://openalex.org/W4401429230,no,NA,intermediate,humans,rct,"Erythritol ingestion, unlike glucose, enhances platelet reactivity and thrombosis potential",high
+https://openalex.org/W4408845336,no,NA,mechanistic,animals,animal_experiment,Lifespan-extending interventions in mice strongly shift lipid metabolism across organs,high
+https://openalex.org/W4410167670,no,NA,intermediate,humans,cohort,"In keto dieters with high LDL, plaque progression not predicted by LDL-C",low
+https://openalex.org/W7142532888,no,NA,hard,humans,rct,Targeting LDL below 55 mg/dL lowered cardiovascular events versus below 70,high
+https://openalex.org/W7148627264,no,NA,intermediate,humans,cohort,High cholesterol absorption efficiency linked to more proatherogenic LDL particle properties,high
+https://openalex.org/W7164053726,no,NA,mechanistic,mixed,animal_experiment,Brain hyperglycosylation drives Alzheimer's disease; glucosamine supplementation worsens outcomes,high
+https://openalex.org/W72392028,no,NA,hard,humans,meta_observational,Lifelong genetically lower LDL-C gives threefold greater CHD reduction than later statins,high

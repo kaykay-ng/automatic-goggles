@@ -1,0 +1,30 @@
+labels file: stance_labels_claude.csv
+labelled 177 of 177 items; overall {'S': 142, 'N': 29, 'D': 6}
+
+omega-6 / linoleic acid:
+  StopEatingSeedOils   n= 24  S 18 (75%)  D  3 (12%)  N  3 (12%)  U  0 (0%)
+                       claims when S: matches 14, overstates 4
+  ScientificNutrition  n= 24  S 15 (62%)  D  0 (0%)  N  9 (38%)  U  0 (0%)
+                       claims when S: matches 9, overstates 3, unclear 2, misrepresents 1
+
+rodent fat carcinogenesis:
+  StopEatingSeedOils   n= 19  S 17 (89%)  D  0 (0%)  N  2 (11%)  U  0 (0%)
+                       claims when S: matches 14, overstates 2, unclear 1
+  ScientificNutrition  n= 22  S 17 (77%)  D  0 (0%)  N  5 (23%)  U  0 (0%)
+                       claims when S: matches 16, overstates 1
+
+saturated fat & CVD:
+  StopEatingSeedOils   n= 24  S 17 (71%)  D  0 (0%)  N  7 (29%)  U  0 (0%)
+                       claims when S: matches 12, overstates 3, unclear 1, misrepresents 1
+  ScientificNutrition  n= 24  S 23 (96%)  D  1 (4%)  N  0 (0%)  U  0 (0%)
+                       claims when S: matches 17, overstates 2, misrepresents 2, unclear 2
+
+LDL / lipoproteins:
+  StopEatingSeedOils   n= 18  S 15 (83%)  D  1 (6%)  N  2 (11%)  U  0 (0%)
+                       claims when S: matches 9, unclear 4, overstates 2
+  ScientificNutrition  n= 22  S 20 (91%)  D  1 (5%)  N  1 (5%)  U  0 (0%)
+                       claims when S: matches 16, overstates 2, unclear 2
+
+ALL communities, StopEatingSeedOils, claim accuracy when the paper is used as evidence (n=67): matches 49 (73%), overstates 11 (16%), unclear 6 (9%), misrepresents 1 (1%)
+
+ALL communities, ScientificNutrition, claim accuracy when the paper is used as evidence (n=75): matches 58 (77%), overstates 8 (11%), unclear 6 (8%), misrepresents 3 (4%)

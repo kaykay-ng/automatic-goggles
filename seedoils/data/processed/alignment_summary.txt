@@ -1,0 +1,39 @@
+SCIENCE: 499 labelled papers, 242 relevant to seed oils / LA / PUFA (yes 173, partly 69)
+  all relevant papers:          harm 104 (43%), no_effect 28 (12%), benefit 86 (36%), mixed 24 (10%)  [n=242]
+  human trials / meta of trials  harm 17 (21%), no_effect 16 (20%), benefit 37 (46%), mixed 10 (12%)  [n=80]
+  human observational            harm 21 (38%), no_effect 6 (11%), benefit 23 (42%), mixed 5 (9%)  [n=55]
+  animal / cell                  harm 46 (79%), no_effect 2 (3%), benefit 6 (10%), mixed 4 (7%)  [n=58]
+  review / statement             harm 19 (42%), no_effect 3 (7%), benefit 20 (44%), mixed 3 (7%)  [n=45]
+  other                          harm 1 (25%), no_effect 1 (25%), benefit 0 (0%), mixed 2 (50%)  [n=4]
+  human studies, hard outcomes: harm 19 (23%), no_effect 12 (15%), benefit 45 (55%), mixed 6 (7%)  [n=82]
+  outcome hard                      harm 23 (26%), no_effect 13 (15%), benefit 45 (52%), mixed 6 (7%)  [n=87]
+  outcome intermediate              harm 20 (26%), no_effect 10 (13%), benefit 35 (45%), mixed 13 (17%)  [n=78]
+  outcome mechanistic               harm 48 (81%), no_effect 2 (3%), benefit 6 (10%), mixed 3 (5%)  [n=59]
+  outcome other                     harm 13 (72%), no_effect 3 (17%), benefit 0 (0%), mixed 2 (11%)  [n=18]
+  sensitivity, without harm-by-intermediate-marker: harm 84 (38%), no_effect 28 (13%), benefit 86 (39%), mixed 24 (11%)  [n=222]
+
+ONLINE (opinion sample; 400 random seed-oil-relevant comments): H harmful, NH not harmful, M mixed, O no position
+  StopEatingSeedOils   pre2024   H 71 (71%), NH 3 (3%), M 3 (3%), O 23 (23%)  [n=100]
+                                 among positions: H 71 (92%), NH 3 (4%), M 3 (4%)  [n=77]
+  StopEatingSeedOils   from2024  H 65 (65%), NH 13 (13%), M 3 (3%), O 19 (19%)  [n=100]
+                                 among positions: H 65 (80%), NH 13 (16%), M 3 (4%)  [n=81]
+  ScientificNutrition  pre2024   H 35 (35%), NH 27 (27%), M 4 (4%), O 34 (34%)  [n=100]
+                                 among positions: H 35 (53%), NH 27 (41%), M 4 (6%)  [n=66]
+  ScientificNutrition  from2024  H 21 (21%), NH 29 (29%), M 9 (9%), O 41 (41%)  [n=100]
+                                 among positions: H 21 (36%), NH 29 (49%), M 9 (15%)  [n=59]
+
+MATCHING (citing sample): what the papers cited by each comment position conclude, and what evidence they are
+  StopEatingSeedOils   comments 'H' (n=68): cited papers conclude harm 86 (70%), no_effect 5 (4%), benefit 7 (6%), mixed 9 (7%), not about seed oils 15 (12%)  [n=122]
+                                        evidence type: human trials / meta of trials 29 (24%), human observational 33 (27%), animal / cell 39 (32%), review / statement 19 (16%), other 2 (2%)  [n=122]
+  StopEatingSeedOils   comments 'NH' (n=27): cited papers conclude harm 3 (5%), no_effect 6 (11%), benefit 35 (61%), mixed 2 (4%), not about seed oils 11 (19%)  [n=57]
+                                        evidence type: human trials / meta of trials 32 (56%), human observational 7 (12%), animal / cell 1 (2%), review / statement 15 (26%), other 2 (4%)  [n=57]
+  ScientificNutrition  comments 'H' (n=18): cited papers conclude harm 18 (58%), no_effect 5 (16%), benefit 2 (6%), mixed 1 (3%), not about seed oils 5 (16%)  [n=31]
+                                        evidence type: human trials / meta of trials 10 (32%), human observational 6 (19%), animal / cell 10 (32%), review / statement 5 (16%), other 0 (0%)  [n=31]
+  ScientificNutrition  comments 'NH' (n=24): cited papers conclude harm 2 (5%), no_effect 4 (10%), benefit 25 (62%), mixed 0 (0%), not about seed oils 9 (22%)  [n=40]
+                                        evidence type: human trials / meta of trials 20 (50%), human observational 4 (10%), animal / cell 1 (2%), review / statement 15 (38%), other 0 (0%)  [n=40]
+  both sides           comments 'H' (n=86): cited papers conclude harm 104 (68%), no_effect 10 (7%), benefit 9 (6%), mixed 10 (7%), not about seed oils 20 (13%)  [n=153]
+                                        evidence type: human trials / meta of trials 39 (25%), human observational 39 (25%), animal / cell 49 (32%), review / statement 24 (16%), other 2 (1%)  [n=153]
+  both sides           comments 'NH' (n=51): cited papers conclude harm 5 (5%), no_effect 10 (10%), benefit 60 (62%), mixed 2 (2%), not about seed oils 20 (21%)  [n=97]
+                                        evidence type: human trials / meta of trials 52 (54%), human observational 11 (11%), animal / cell 2 (2%), review / statement 30 (31%), other 2 (2%)  [n=97]
+
+label confidence: comments {'medium': 253, 'low': 163, 'high': 282}; papers {'medium': 95, 'high': 393, 'low': 11}

@@ -1,0 +1,65 @@
+<title>Newcomer Words</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
+<style>
+/* Test page: scattertext-style comparison of what newcomers and the old guard write about. Not the paper. */
+:root{--bg:#f6f7f9;--card:#ffffff;--fg:#1b1f24;--mut:#5a6470;--line:#dde1e7;--old:#3d5a73;--new:#c4521a;--mid:#e4e2dc;--head:"Space Grotesk","Inter",system-ui,sans-serif;--body:"Inter",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14171b;--card:#1b1f25;--fg:#e8ebef;--mut:#99a3af;--line:#2d333b;--old:#7fa4c4;--new:#f08a4b;--mid:#3b3f44;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#14171b;--card:#1b1f25;--fg:#e8ebef;--mut:#99a3af;--line:#2d333b;--old:#7fa4c4;--new:#f08a4b;--mid:#3b3f44;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.55;margin:0;padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:920px;margin:0 auto;display:flex;flex-direction:column;gap:22px}h1{font:600 28px/1.15 var(--head);margin:0 0 6px;text-wrap:balance}h2{font:600 19px/1.3 var(--head);margin:0 0 4px}p{margin:0}
+.lede,.sub,.note{color:var(--mut);max-width:72ch}.note{font-size:13.5px}.note b{color:var(--fg);font-weight:600}
+.fig{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:20px;display:flex;flex-direction:column;gap:14px}
+.ctl{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;font-size:13px;color:var(--mut)}.ctl label{display:inline-flex;align-items:center;gap:8px}
+input[type=search]{font:500 13px var(--body);padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--fg);width:200px}input:focus-visible{outline:2px solid var(--new);outline-offset:2px}
+.grad{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--mut)}.grad div{width:170px;height:10px;border-radius:5px;background:linear-gradient(90deg,var(--old),var(--mid),var(--new))}
+svg{width:100%;height:auto;display:block}.ax{font:500 11.5px var(--body);fill:var(--mut)}.tl{font:600 12px var(--body);fill:var(--fg);paint-order:stroke;stroke:var(--card);stroke-width:3.5px;stroke-linejoin:round;pointer-events:none}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}table{border-collapse:collapse;width:100%;font-size:13.5px}th,td{padding:5px 8px;text-align:left;border-bottom:1px solid var(--line)}th{font-size:12px;color:var(--mut);font-weight:600}td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}.hd{font:600 14px var(--head);margin-bottom:6px}
+.tip{position:fixed;z-index:20;pointer-events:none;background:var(--fg);color:var(--bg);font-size:12.5px;padding:7px 10px;border-radius:5px;max-width:280px;line-height:1.4}.tip[hidden]{display:none}
+@media (max-width:700px){.two{grid-template-columns:1fr}h1{font-size:24px}.fig{padding:16px}}
+</style>
+<div class="wrap">
+ <header><h1>How newcomers write differently from the old guard</h1>
+ <p class="lede">Test figure, not yet in the paper. Every comment of 15 words or more from 2024 on in r/StopEatingSeedOils, split by whether the author first commented before 2024 (old guard) or from 2024 on (newcomer). Each dot is a word or two-word phrase.</p></header>
+ <section class="fig"><div><h2>Figure A. Words and phrases by group</h2><p class="sub">Right and up means used more by newcomers, left and down means used more by the old guard; dots on the diagonal are used equally. Colour shows how far a term is from equal use.</p></div>
+ <div class="ctl"><label>Find a term <input type="search" id="q" placeholder="e.g. rfk, pufa" aria-label="Find a term"></label></div>
+ <div class="grad" id="grad"></div><svg id="map" viewBox="0 0 920 620" role="img" aria-label="Scatter plot of terms: use by old guard against use by newcomers"></svg><p class="note" id="note"></p></section>
+ <section class="fig"><div><h2>The terms that tell them apart</h2><p class="sub">The 15 terms with the strongest tilt in each direction. The score is a weighted log-odds ratio (Monroe and others, 2008) divided by its standard error; above 3 or below −3 is a strong tilt, and it is a way to rank terms, not a test.</p></div>
+ <div class="two"><div><div class="hd" style="color:var(--old)">More the old guard</div><table id="t0"><thead><tr><th>Term</th><th class="n">Old guard</th><th class="n">Newcomers</th><th class="n">Score</th></tr></thead><tbody></tbody></table></div><div><div class="hd" style="color:var(--new)">More newcomers</div><table id="t1"><thead><tr><th>Term</th><th class="n">Old guard</th><th class="n">Newcomers</th><th class="n">Score</th></tr></thead><tbody></tbody></table></div></div></section>
+ <section class="fig"><h2>What to be careful about</h2><p class="note">Counts are the number of comments that contain the term, per 10,000 counted terms in each group. Both groups are compared in the same period (2024 on), so differences are about who writes, not about time. The old guard is <b id="nold"></b> comments by 1,599 people and newcomers <b id="nnew"></b> by 14,013, so rare terms are noisier for the old guard. Only terms used by at least 15 different people are included, so one person's habit cannot make a term. Newcomer means a first comment from 2024 on, so a newcomer's early comments and later comments are all in the newcomer group. The scores say what differs, not why: newcomers may be a different crowd, or the same people at an earlier stage of learning the vocabulary.</p></section>
+</div><div class="tip" id="tip" hidden></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script>
+const D=__DATA__;const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const tip=document.getElementById('tip');const show=(e,t)=>{tip.textContent=t;tip.hidden=false;tip.style.left=Math.max(8,Math.min(e.clientX+12,innerWidth-300))+'px';tip.style.top=(e.clientY+14)+'px'};const hide=()=>{tip.hidden=true};
+const fmt=n=>n.toLocaleString('en-US');const to=D.tokens_old,tn=D.tokens_new;
+const rows=D.rows.map(r=>Object.assign({},r,{x:r.o/to*1e4,y:r.n/tn*1e4})).filter(r=>r.o+r.n>=60).sort((a,b)=>(b.o+b.n)-(a.o+a.n)).slice(0,3500);
+const Wd=920,Hh=620,m={l:62,r:18,t:14,b:50};
+const lo=Math.min(d3.min(rows,r=>r.x),d3.min(rows,r=>r.y))*.8,hi=Math.max(d3.max(rows,r=>r.x),d3.max(rows,r=>r.y))*1.3;
+const x=d3.scaleLog().domain([lo,hi]).range([m.l,Wd-m.r]),y=d3.scaleLog().domain([lo,hi]).range([Hh-m.b,m.t]);
+function mix(a,b,t){const A=d3.color(a),B=d3.color(b);return d3.rgb(A.r+(B.r-A.r)*t,A.g+(B.g-A.g)*t,A.b+(B.b-A.b)*t).formatRgb()}
+const col=z=>{const t=Math.max(-1,Math.min(1,z/9));return t<0?mix(css('--mid'),css('--old'),-t):mix(css('--mid'),css('--new'),t)};
+let q='';
+function draw(){const svg=d3.select('#map');svg.selectAll('*').remove();
+ const ticks=[0.5,1,2,5,10,20,50,100,200].filter(v=>v>=lo&&v<=hi);
+ ticks.forEach(v=>{svg.append('line').attr('x1',x(v)).attr('x2',x(v)).attr('y1',m.t).attr('y2',Hh-m.b).attr('stroke',css('--line')).attr('stroke-width',.7);svg.append('line').attr('x1',m.l).attr('x2',Wd-m.r).attr('y1',y(v)).attr('y2',y(v)).attr('stroke',css('--line')).attr('stroke-width',.7);
+  svg.append('text').attr('class','ax').attr('x',x(v)).attr('y',Hh-m.b+16).attr('text-anchor','middle').text(v);svg.append('text').attr('class','ax').attr('x',m.l-8).attr('y',y(v)+4).attr('text-anchor','end').text(v)});
+ svg.append('line').attr('x1',x(lo)).attr('y1',y(lo)).attr('x2',x(hi)).attr('y2',y(hi)).attr('stroke',css('--mut')).attr('stroke-dasharray','4 4').attr('opacity',.6);
+ svg.append('text').attr('class','ax').attr('x',(m.l+Wd-m.r)/2).attr('y',Hh-8).attr('text-anchor','middle').text('Used by the old guard (comments per 10,000 counted terms)');
+ svg.append('text').attr('class','ax').attr('transform','rotate(-90)').attr('x',-(m.t+Hh-m.b)/2).attr('y',14).attr('text-anchor','middle').text('Used by newcomers (per 10,000)');
+ const hit=r=>q&&r.t.toLowerCase().includes(q);
+ const g=svg.append('g');rows.slice().sort((a,b)=>Math.abs(a.z)-Math.abs(b.z)).forEach(r=>{const c=g.append('circle').attr('cx',x(r.x)).attr('cy',y(r.y)).attr('r',hit(r)?6:3.2).attr('fill',col(r.z)).attr('fill-opacity',q&&!hit(r)?.25:.85).attr('stroke',hit(r)?css('--fg'):'none').attr('stroke-width',1.5);
+  c.on('mousemove',e=>show(e,r.t+' — old guard '+fmt(r.o)+' comments ('+fmt(r.uo)+' people), newcomers '+fmt(r.n)+' ('+fmt(r.un)+' people); score '+r.z.toFixed(1)));c.on('mouseleave',hide)});
+ // labels: top by |z| on each side plus search hits, greedy placement
+ const cand=rows.filter(r=>Math.abs(r.z)>3).sort((a,b)=>Math.abs(b.z)-Math.abs(a.z)).slice(0,26).concat(q?rows.filter(hit).slice(0,8):[]);const placed=[];
+ cand.forEach(r=>{const w=r.t.length*6.4+6,px=x(r.x),py=y(r.y);const opts=[[8,-6],[-8-w,-6],[8,12],[-8-w,12],[-w/2,-12]];
+  for(const [dx,dy] of opts){const bx=px+dx,by=py+dy-11;if(bx<2||bx+w>Wd-2||by<2||by+14>Hh-2)continue;if(placed.some(p=>bx<p.x+p.w&&bx+w>p.x&&by<p.y+14&&by+14>p.y))continue;placed.push({x:bx,y:by,w});svg.append('text').attr('class','tl').attr('x',px+dx).attr('y',py+dy).text(r.t);break}})}
+const sorted=rows.slice().sort((a,b)=>a.z-b.z);
+function tbl(id,list){const tb=document.querySelector('#'+id+' tbody');list.forEach(r=>{const tr=tb.insertRow();[r.t,fmt(r.o),fmt(r.n),r.z.toFixed(1)].forEach((v,i)=>{const c=tr.insertCell();c.textContent=v;if(i)c.className='n'})})}
+const all=D.rows.filter(r=>r.uo+r.un>=15).sort((a,b)=>a.z-b.z);tbl('t0',all.slice(0,15));tbl('t1',all.slice(-15).reverse());
+document.getElementById('nold').textContent=fmt(D.docs_old);document.getElementById('nnew').textContent=fmt(D.docs_new);
+const nn=D.rows.filter(r=>r.z>3.1).length,no=D.rows.filter(r=>r.z<-3.1).length;
+document.getElementById('note').innerHTML='Of <b>'+fmt(D.rows.length)+'</b> terms, <b>'+fmt(nn)+'</b> tilt strongly to newcomers and <b>'+fmt(no)+'</b> to the old guard (score beyond ±3.1). Showing the <b>'+fmt(rows.length)+'</b> most used terms.';
+const g=document.getElementById('grad');g.innerHTML='<span>old guard</span><div></div><span>newcomers</span>';
+document.getElementById('q').addEventListener('input',e=>{q=e.target.value.trim().toLowerCase();draw()});matchMedia('(prefers-color-scheme: dark)').addEventListener('change',draw);draw();
+</script>

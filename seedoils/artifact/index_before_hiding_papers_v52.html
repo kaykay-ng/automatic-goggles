@@ -1,0 +1,975 @@
+<meta name="dash-one-writer">
+<style>
+/* Layout: one reading column, six figures in the order of the argument (structure, evidence vs opinion, topics, emotion, new crowd).
+   Palette: harm red / benefit blue in Figure 6; orange marks the seed-oil side everywhere else; greys recede. Tokens follow the reader's theme. */
+.sod { container-type: inline-size; max-width: 980px; margin: 0 auto; font-family: var(--font-anthropic-sans); color: var(--color-fg); }
+.sod h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: clamp(30px, 6cqi, 46px); line-height: 1.08; margin: 6px 0 14px; text-wrap: balance; }
+.sod h2 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: clamp(22px, 4cqi, 30px); line-height: 1.15; margin: 0 0 10px; text-wrap: balance; }
+.sod h3 { font-size: 15px; font-weight: 500; margin: 0 0 2px; }
+.sod p { line-height: 1.6; margin: 0 0 12px; max-width: 68ch; }
+.sod-kicker { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--color-fg-muted); margin: 0; }
+.sod-lede { font-size: 18px; line-height: 1.55; max-width: 62ch; }
+.sod-sec { margin-top: 54px; }
+.sod-fig { margin: 22px 0 0; }
+.sod-cap { color: var(--color-fg-muted); font-size: 13px; line-height: 1.5; max-width: 74ch; margin: 6px 0 0; }
+.sod-ctl { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin: 8px 0 6px; font-size: 13px; color: var(--color-fg-muted); }
+.sod-chart { position: relative; min-height: 120px; }
+.sod-legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 12px; color: var(--color-fg-muted); margin: 4px 0 8px; }
+.sod-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+.sod-legend i.dot { border-radius: 50%; }
+.sod-tip { position: absolute; display: block; pointer-events: none; z-index: 6; max-width: 280px; padding: 6px 9px; border-radius: 6px; font-size: 12px; line-height: 1.4;
+  background: var(--cds-surface-popover, var(--color-panel)); border: 1px solid var(--cds-border, var(--color-border-line)); box-shadow: var(--cds-shadow-popover, 0 2px 8px rgba(0,0,0,.15)); color: var(--cds-text-secondary, var(--color-fg-muted)); }
+.sod-tip[hidden] { display: none; }
+.sod-banner { border: 1px solid var(--color-border-line); background: var(--color-panel); border-radius: var(--cds-radius, 8px); padding: 9px 13px; font-size: 13px; line-height: 1.5; margin: 10px 0 4px; max-width: 74ch; }
+.sod-row { display: grid; grid-template-columns: minmax(130px, 240px) 1fr 62px; gap: 4px 10px; align-items: center; margin: 7px 0; }
+.sod-rl { font-size: 13px; line-height: 1.3; }
+.sod-rn { font-size: 12px; color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+.sod-bar { display: flex; height: 30px; }
+.sod-seg { display: flex; align-items: center; justify-content: center; min-width: 0; margin-right: 2px; font-size: 12px; font-variant-numeric: tabular-nums; cursor: default; }
+.sod-seg:last-child { margin-right: 0; }
+.sod-three > div + div { margin-top: 26px; }
+.sod-br { display: grid; grid-template-columns: 1fr; gap: 2px; margin: 9px 0; }
+.sod-br b { font-weight: 400; font-size: 13px; line-height: 1.3; }
+.sod-br small { font-size: 12px; color: var(--color-fg-muted); }
+.sod-bb { display: flex; align-items: center; gap: 8px; }
+.sod-bb span.fill { height: 10px; border-radius: 2px; min-width: 2px; }
+.sod-bb span.val { font-size: 12px; color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+.sod-two { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 30px; align-items: start; }
+.sod svg text { fill: var(--color-fg-muted); font-size: 12px; font-family: var(--font-anthropic-sans); }
+.sod svg text.strong { fill: var(--color-fg); font-weight: 500; }
+.sod canvas { display: block; max-width: 100%; }
+.sod select { font-size: 13px; }
+.sod details { margin-top: 48px; max-width: 74ch; font-size: 14px; line-height: 1.55; }
+.sod summary { cursor: pointer; font-weight: 500; }
+.sod li { margin: 5px 0; }
+.sod-foot { margin-top: 36px; font-size: 12px; color: var(--color-fg-muted); }
+@container (max-width: 640px) {
+  .sod-row { grid-template-columns: 1fr 52px; }
+  .sod-row .sod-rl { grid-column: 1 / -1; }
+  .sod-two { grid-template-columns: 1fr; }
+}
+@media print { .sod-ctl { display: none; } .sod-sec { break-before: auto; } }
+.sod-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; margin: 12px 0 4px; }
+.sod-card { border: 1px solid var(--color-border-line); border-left-width: 4px; border-radius: 8px; padding: 10px 12px; }
+.sod-card b { display: block; font-size: 15px; font-weight: 500; }
+.sod-card .role { font-size: 12px; color: var(--color-fg-muted); margin-bottom: 4px; }
+.sod-card p { font-size: 13px; line-height: 1.4; margin: 4px 0 6px; }
+.sod-card dl { margin: 0; font-size: 12px; display: grid; grid-template-columns: auto 1fr; gap: 1px 10px; font-variant-numeric: tabular-nums; }
+.sod-card dt { color: var(--color-fg-muted); } .sod-card dd { margin: 0; }
+.sod-how { margin: 14px 0 6px; border: 1px solid var(--color-border-line); border-radius: 8px; padding: 8px 14px; }
+.sod-how summary { cursor: pointer; font-weight: 500; }
+.sod-how p { font-size: 13px; line-height: 1.5; }
+.sod-kt { border-collapse: collapse; width: 100%; font-size: 13px; font-variant-numeric: tabular-nums; margin: 6px 0; }
+.sod-kt th, .sod-kt td { text-align: right; padding: 4px 8px; border-bottom: 1px solid var(--color-border-line); }
+.sod-kt th:first-child, .sod-kt td:first-child { text-align: left; }
+.sod-kt th { font-weight: 500; color: var(--color-fg-muted); }
+.sod-mg { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px 18px; }
+.sod-mg h4 { margin: 0 0 2px; font-size: 13px; font-weight: 500; }
+.sod-mg h4 small { font-weight: 400; color: var(--color-fg-muted); margin-left: 6px; }
+.sod svg text.cn-lab { fill: var(--color-fg); font-weight: 600; paint-order: stroke; stroke: var(--color-bg); stroke-width: 3.5px; stroke-linejoin: round; pointer-events: none; }
+.sod-btn { font: inherit; font-size: 13px; padding: 6px 12px; border: 1px solid var(--color-border-line); border-radius: 6px; background: var(--color-fg); color: var(--color-bg); cursor: pointer; }
+.sod-btn[hidden] { display: none; }
+.sod-ctl input[type=range] { flex: 1; min-width: 160px; }
+.sod-grad { display: inline-flex; align-items: center; gap: 8px; }
+.sod-grad .bar { width: 160px; height: 10px; border-radius: 5px; }
+.sod-rcs { display: grid; gap: 10px; }
+.sod-rc { border: 1px solid var(--color-border-line); border-radius: 8px; padding: 12px 14px; background: var(--color-panel, transparent); }
+.sod-rc p { margin: 0; }
+.sod-rc-topic { font-size: 12px; color: var(--color-fg-muted); margin-bottom: 8px !important; }
+.sod-rc-topic span { margin-left: 6px; }
+.sod-rc-head { font-size: 13px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.sod-rc-head span:not(.sod-rc-av) { color: var(--color-fg-muted); }
+.sod-rc-av { width: 22px; height: 22px; border-radius: 50%; background: var(--color-border-line); display: inline-block; }
+.sod-rc-body { font-size: 14.5px; line-height: 1.55; margin: 8px 0 8px !important; max-width: 70ch; }
+.sod-rc-foot { font-size: 12.5px; color: var(--color-fg-muted); }
+.sod-rc-foot span { margin-left: 2px; }
+</style>
+
+<div class="sod">
+  <header>
+    <p class="sod-kicker">Reddit and the research it cites, 2018 to 2026</p>
+    <h1>Same papers, new crowd, harsher tone</h1>
+    <p class="sod-lede">The claim that seed oils are harmful moved from a nutrition argument to a political one. We followed it through two subreddits and the
+      <b data-draw="fact" data-source="facts" data-field="value" data-where="key=n_papers_net">—</b> papers that people cite there. In 2024 the seed-oil subreddit went from
+      <b data-draw="fact" data-source="facts" data-field="value" data-where="key=seso_people_2023">—</b> commenters a year to <b data-draw="fact" data-source="facts" data-field="value" data-where="key=seso_people_2024">—</b>, and the conversation moved from omega-6 chemistry towards politics, vaccines and distrust of industry.</p>
+  </header>
+
+  <section class="sod-sec" id="s-where">
+    <h2>Where the comments come from</h2>
+    <p>We downloaded the full history of two subreddits through Arctic Shift, a public archive of Reddit.</p>
+    <div class="sod-cards" data-draw="subcards" data-source="subreddits"></div>
+    <div class="sod-fig">
+      <h3>Activity per month: posts and comments together</h3>
+      <div class="sod-legend" data-draw="actlegend" data-source="subreddits"></div>
+      <div class="sod-chart" data-draw="activity" data-source="activity events" id="chart-activity"></div>
+      <p class="sod-cap">Activity in the seed-oil subreddit jumped at the start of 2024 and climbed to a peak that autumn, while the research subreddit stayed flat.</p>
+    </div>
+    <p>The jump in r/StopEatingSeedOils starts in <b>January 2024</b>, months before the political events marked on the chart, so politics cannot be the whole explanation.</p>
+  </section>
+
+  <section class="sod-sec" id="s-topics">
+    <h2>The conversation changed in 2024</h2>
+    <p>A topic model of <b data-draw="fact" data-source="facts" data-field="value" data-where="key=n_docs_seso">—</b> comments and posts in r/StopEatingSeedOils shows what the argument became. Talk about politics, led by RFK Jr., grew
+      <b data-draw="fact" data-source="facts" data-field="value" data-where="key=politics_ratio">—</b> in share from 2024, while omega-6 biochemistry fell to
+      <b data-draw="fact" data-source="facts" data-field="value" data-where="key=biochem_ratio">—</b> of its earlier share.</p>
+    <div class="sod-fig" id="fig-slope">
+      <h3>Figure 1a. Where the conversation went: themes before and from 2024</h3>
+      <div class="sod-chart" data-draw="slope" data-source="topic_themes" id="chart-slope"></div>
+      <p class="sod-cap">Each line is a theme's share of all comments and posts in r/StopEatingSeedOils, on a log scale so that a steeper line means a bigger multiple. The two fastest-growing themes are in orange.</p>
+    </div>
+    <details class="sod-how" id="how-topics">
+      <summary>How we did this: from topics to themes</summary>
+      <p>We fitted BERTopic, which found about 130 topics by itself. We then grouped those topics by hand into the eight themes of Figure 1a, by reading each topic's top words. That grouping is our judgment, made after seeing the topics. Figure 1b uses no grouping.</p>
+      <p>We initially tried to let BERTopic do the grouping with `reduce_topics`, which repeatedly folds the smallest topic into the most similar one. It did not work as intended: it left one catch-all topic holding most of the comments, mixed unrelated subjects in the topics it made (palm oil with vaccines, for example), and gave different groups for different random seeds. It joins topics by how close their words are, and nearly every topic in this subreddit uses the same words (seed oils, fat, food). A theme such as politics or pharma is a matter of what the comments are about, which needs more understanding of context than closeness of words gives.</p>
+    </details>
+    <div class="sod-fig" id="fig-topics">
+      <h3>Figure 1b. Zooming in: the fastest-growing topics out of about 130</h3>
+      <div class="sod-chart" data-draw="topics" data-source="topic_growth" id="chart-topics"></div>
+      <p class="sod-cap">The chart shows the five BERTtopics whose share of comments and posts grew most from 1 January 2024, among topics with at least 300 comments in all. Share is on a log scale. A dashed circle means fewer than 300 comments before 2024, so the multiple rests on a small base.</p>
+    </div>
+    <div class="sod-fig" id="fig-quotes">
+      <h3>What these topics sound like</h3>
+      <p class="sod-cap" style="margin:0 0 10px">One comment for each of the five fastest-growing topics in Figure 1b, in the style of a Reddit comment.</p>
+      <div class="sod-rcs">
+      <article class="sod-rc">
+        <p class="sod-rc-topic">Topic: rfk, trump <span>×29 in share from 2024</span></p>
+        <p class="sod-rc-head"><span class="sod-rc-av" aria-hidden="true"></span><b>u/anonymous_1</b> <span>· 29 Oct 2024</span></p>
+        <p class="sod-rc-body">RFK is just being a pragmatist. He realized his best chance of enacting positive change is to cozy up to Trump. Doesn’t mean he agrees with everything Trump does to say.</p>
+        <p class="sod-rc-foot">▲ 15 <span>points</span></p>
+      </article>
+      <article class="sod-rc">
+        <p class="sod-rc-topic">Topic: trump, vote <span>×5.8 in share from 2024</span></p>
+        <p class="sod-rc-head"><span class="sod-rc-av" aria-hidden="true"></span><b>u/anonymous_2</b> <span>· 12 Nov 2024</span></p>
+        <p class="sod-rc-body">Yea because he didn’t fall in line with the democrat party’s bull shit agenda and we all know that’s a no no. Now that he is a part of the trump admin it’s just the cherry on top and any positive changes will be met with opposition.</p>
+        <p class="sod-rc-foot">▲ 2 <span>points</span></p>
+      </article>
+      <article class="sod-rc">
+        <p class="sod-rc-topic">Topic: vaccines, covid <span>×3.0 in share from 2024</span></p>
+        <p class="sod-rc-head"><span class="sod-rc-av" aria-hidden="true"></span><b>u/anonymous_3</b> <span>· 12 Feb 2024</span></p>
+        <p class="sod-rc-body">Whether it's about covid, the flu, measles, chicken pox, or whatever, the statement is still true. Being anti-covid vaccine (or any approved vaccine) is not a scientific stance. As I said in another comment, thinking that "health conscious" and being "pro-vaccine" (covid or otherwise) are competing ideas clarifies a while lot about this sub.</p>
+        <p class="sod-rc-foot">▲ -4 <span>points</span></p>
+      </article>
+      <article class="sod-rc">
+        <p class="sod-rc-topic">Topic: political, right wing <span>×2.9 in share from 2024</span></p>
+        <p class="sod-rc-head"><span class="sod-rc-av" aria-hidden="true"></span><b>u/anonymous_4</b> <span>· 24 Jan 2026</span></p>
+        <p class="sod-rc-body">I think it’s so weird that seed oils have become a political issue. I’m extremely liberal… Not a democrat or part of any party, but I have pretty liberal views and I don’t touch seed oils.</p>
+        <p class="sod-rc-foot">▲ 1 <span>points</span></p>
+      </article>
+      <article class="sod-rc">
+        <p class="sod-rc-topic">Topic: left, political <span>×2.9 in share from 2024</span></p>
+        <p class="sod-rc-head"><span class="sod-rc-av" aria-hidden="true"></span><b>u/anonymous_5</b> <span>· 26 Jun 2024</span></p>
+        <p class="sod-rc-body">Isn’t it funny how that’s flip-flopped? Organic/healthy eating used to be associated with your leftists (well I guess mostly your granola type or whatnot) and not its alt-right. Sucks that everything is political now. Can’t we all just rejoice in trying to better ourselves?</p>
+        <p class="sod-rc-foot">▲ 16 <span>points</span></p>
+      </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sod-sec" id="s-niches">
+    <h2>Communities of commenters</h2>
+    <p>To see where people cluster, we linked commenters whose mixes of topics are similar, measured by cosine similarity over the 129 topics. A disparity filter keeps each person's strongest links, and Louvain then finds the communities in the network below. People in a community share a tilt toward some topics, but most still comment across several, so the communities are better read as leanings than as specialists.</p>
+    <div class="sod-fig" id="fig-niches">
+      <h3>Figure 2. Louvain communities of commenters with similar topic mixes, and how they filled in</h3>
+      <div class="sod-ctl"><label for="cn-color">Colour by</label><select class="dash-select" id="cn-color" aria-label="Colour by"><option value="community">Community</option><option value="cohort">Newcomer or long-time</option></select><button class="sod-btn" id="nn-play" type="button">Play</button><button class="sod-btn" id="nn-pause" type="button" hidden="">Pause</button><label for="nn-slider">Month</label><input type="range" id="nn-slider" min="0" max="57" step="1" value="57" aria-label="Month"><b data-draw="nnmonth" data-source="nn_months">—</b></div>
+      <div class="sod-legend" data-draw="nnlegend" data-source="nn_nodes cn_comms nn_months"></div>
+      <div class="sod-chart" data-draw="nntime" data-source="nn_nodes cn_edges cn_comms nn_months" id="chart-nntime"></div>
+      <p class="sod-cap">Move the slider or press play: a dot appears the month the person first commented, so faint dots are people who have not appeared yet, and people who first commented before 2022 are there from the start. The communities are found by the Louvain method from how similar commenters' topic mixes are. We named them by hand, using the most over-represented topics per community.</p>
+    </div>
+    <div class="sod-fig" id="fig-nn-out">
+      <h3>Figure 3. Where hostility and downvotes sit</h3>
+      <div class="sod-ctl"><label for="nn-what">Colour by</label><select class="dash-select" id="nn-what" aria-label="Colour by"><option value="h">Share of hostile comments</option><option value="v">Share of downvoted comments</option></select><label for="nn-per">Period</label><select class="dash-select" id="nn-per" aria-label="Period"><option value="">All time</option><option value="0">Before 2024</option><option value="1">From 2024</option></select></div>
+      <div class="sod-legend" data-draw="nnscale" data-source="nn_nodes"></div>
+      <div class="sod-chart" data-draw="nnout" data-source="nn_nodes cn_edges cn_comms" id="chart-nnout"></div>
+      <p class="sod-cap" data-draw="nnnoteb" data-source="nn_comms"></p>
+      <p class="sod-cap">The same map, coloured by an outcome of each person's comments. Hostile means a GoEmotions score of 0.5 or more on anger, annoyance, disapproval or disgust, an unchecked classifier that mostly picks up disapproval. Downvoted means a score of 0 or lower. Each person has only 10 to 30 comments in the topic model, so a person's own share is shrunk toward the average (as if they had 15 extra average comments): one dot says little, so read the colour of a whole area.</p>
+    </div>
+    <details class="sod-how">
+      <summary>How we did this: the backbone filter and its limits</summary>
+      <p>Each commenter with at least 10 comments of 15 words or more is described by how their comments spread over the 129 topics BERTopic found, with common topics counted for less. Two commenters are as similar as the cosine of their topic mixes. The filter is the disparity filter at significance <b data-draw="fact" data-source="facts" data-field="value" data-where="key=cn_alpha">—</b>: it keeps a link only if it is unusually strong compared with the rest of that commenter's links, so light commenters keep their best ties and no single cut-off favours the heavy ones. Communities come from Louvain, and membership agrees across 20 runs (adjusted mutual information <b data-draw="fact" data-source="facts" data-field="value" data-where="key=cn_ami">—</b>). The filter keeps <b data-draw="fact" data-source="facts" data-field="value" data-where="key=cn_links_kept">—</b> links.</p>
+    </details>
+  </section>
+
+  <section class="sod-sec" id="s-papers">
+    <h2>Both camps argue over one body of research</h2>
+    <p>Reddit users link thousands of papers. We kept the <b data-draw="fact" data-source="facts" data-field="value" data-where="key=n_papers_net">—</b> that at least two people cited,
+      and joined two papers whenever one cites the other. Groups of papers that mostly cite each other form communities. Four of them carry the seed-oil argument: omega-6 and linoleic acid,
+      old rodent studies of fat and cancer, saturated fat and heart disease, and LDL cholesterol.</p>
+    <div class="sod-fig" id="fig-map">
+      <h3>Figure 4. A map of the cited research</h3>
+      <div class="sod-ctl"><label for="map-color">Colour papers by</label>
+        <select class="dash-select" id="map-color" aria-label="Colour papers by"><option value="community">Community</option><option value="side">Who cites the paper</option></select></div>
+      <div class="sod-chart" data-draw="papermap" data-source="paper_nodes paper_edges paper_communities community_links" id="chart-map"></div>
+      <p class="sod-cap">Each bubble is a community, placed near the communities it cites most; dots are papers. Hover a dot for the paper and its links. The bubbles carry the seed-oil argument; the grey ones are the rest of the nutrition literature that Reddit cites,
+        mostly in r/ScientificNutrition. Communities come from 20 runs of Louvain; the four named bubbles held together in <b data-draw="fact" data-source="facts" data-field="value" data-where="key=stab_min">—</b> to <b data-draw="fact" data-source="facts" data-field="value" data-where="key=stab_max">—</b> of the runs.</p>
+    </div>
+
+    <div class="sod-fig" id="fig-bridges">
+      <h3>Figure 5. The papers that hold it together, and a check against chance</h3>
+      <p>The structure is not an accident of how many links each paper has. The citation network has modularity <b data-draw="fact" data-source="facts" data-field="value" data-where="key=mod_sch">—</b>,
+        where random networks with the same links per paper reach <b data-draw="fact" data-source="facts" data-field="value" data-where="key=mod_sch_null">—</b>. Papers that one side cites far more than the other
+        sort into separate communities: side assortativity is <b data-draw="fact" data-source="facts" data-field="value" data-where="key=assort_sch">—</b> against 0 for random.</p>
+      <div class="sod-two">
+        <div>
+          <div class="sod-ctl"><label for="bridge-metric">Rank papers by</label>
+            <select class="dash-select" id="bridge-metric" aria-label="Rank papers by"><option value="betweenness">Betweenness: papers that link the camps</option><option value="pagerank">PageRank: most cited foundations</option></select></div>
+          <div class="sod-legend" data-draw="sidelegend" data-source="bridges"></div>
+          <div data-draw="bridges" data-source="bridges" class="sod-chart"></div>
+        </div>
+        <div class="sod-chart" data-draw="nullplot" data-source="null_summary null_runs" id="chart-null"></div>
+      </div>
+      <p class="sod-cap">Left: the ten papers with the highest score. Betweenness is measured on the network where two papers are linked when the same person cited both; it is highest for papers that both camps cite.
+        PageRank is measured on the citation network among these papers. Right: each grey dot is one of 50 random networks with the same links per paper; the orange dot is the real network.</p>
+    </div>
+  </section>
+
+  <section class="sod-sec" id="s-align">
+    <h2>What the research says, and what each community says</h2>
+    <p>We labelled each cited paper's conclusion about seed oils from its abstract, and each comment's position on whether seed oils are harmful. Among human trials and meta-analyses,
+      <b data-draw="fact" data-source="facts" data-field="value" data-where="key=trial_benefit">—</b> conclude benefit and <b data-draw="fact" data-source="facts" data-field="value" data-where="key=trial_harm">—</b> harm.
+      Among animal and cell studies, <b data-draw="fact" data-source="facts" data-field="value" data-where="key=animal_harm">—</b> conclude harm.</p>
+    <div class="sod-fig sod-three" id="fig-align">
+      <div>
+        <h3>Figure 6a. What the papers Reddit cites conclude, by kind of evidence</h3>
+        <div class="sod-chart" data-draw="science" data-source="science"></div>
+        <p class="sod-cap">Papers about seed oils, linoleic acid or polyunsaturated fat among the cited ones (<b data-draw="fact" data-source="facts" data-field="value" data-where="key=n_relevant">—</b>). These are the papers Reddit users bring up, not a sample of all research. Rows overlap: deaths and disease is a subset of the human studies.</p>
+      </div>
+      <div>
+        <h3>Figure 6b. What each community says: are seed oils harmful?</h3>
+        <div class="sod-chart" data-draw="online" data-source="online"></div>
+        <p class="sod-cap">Random comments that mention seed oils, vegetable oils, canola, soybean oil, linoleic acid, omega-6 or polyunsaturated fat, 100 per row. Among comments that take a position, r/StopEatingSeedOils was
+          <b data-draw="fact" data-source="facts" data-field="value" data-where="key=seso_harm_pre">—</b> harmful before 2024 and <b data-draw="fact" data-source="facts" data-field="value" data-where="key=seso_harm_from">—</b> from 2024. r/ScientificNutrition went from
+          <b data-draw="fact" data-source="facts" data-field="value" data-where="key=scinut_harm_pre">—</b> harmful to <b data-draw="fact" data-source="facts" data-field="value" data-where="key=scinut_harm_from">—</b>.</p>
+      </div>
+      <div>
+        <h3>Figure 6c. What kind of evidence each position cites</h3>
+        <div class="sod-chart" data-draw="matching" data-source="matching"></div>
+        <p class="sod-cap">Comments from both subreddits that link a paper of the four seed-oil communities. "Harmful" comments rest on animal or cell studies <b data-draw="fact" data-source="facts" data-field="value" data-where="key=harm_cites_animal">—</b> of the time;
+          "not harmful" comments cite human trials <b data-draw="fact" data-source="facts" data-field="value" data-where="key=notharm_cites_trials">—</b> of the time. Each paper counts once per comment.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sod-sec" id="s-emotion">
+    <h2>Harsher in the seed-oil subreddit, not in the research one</h2>
+    <p>Most comments are neutral or friendly in both communities. Hostile comments (anger, annoyance, disapproval, disgust) rose in r/StopEatingSeedOils from <b data-draw="fact" data-source="facts" data-field="value" data-where="key=host_seso_pre">—</b> to <b data-draw="fact" data-source="facts" data-field="value" data-where="key=host_seso_from">—</b> of comments, and stayed near <b data-draw="fact" data-source="facts" data-field="value" data-where="key=host_scinut_from">—</b> in r/ScientificNutrition. The sharpest rise is in arguments about studies and evidence: <b data-draw="fact" data-source="facts" data-field="value" data-where="key=host_evid_pre">—</b> to <b data-draw="fact" data-source="facts" data-field="value" data-where="key=host_evid_from">—</b>.</p>
+    <div class="sod-fig" id="fig-emotion">
+      <h3>Figure 7. Emotion in comments, before and from 2024</h3>
+      <div class="sod-ctl"><label for="emo-metric">Emotion</label>
+        <select class="dash-select" id="emo-metric" aria-label="Emotion"><option value="hostile_pct">Hostile (anger, annoyance, disapproval, disgust)</option><option value="positive_pct">Positive (approval, gratitude, joy, admiration and others)</option><option value="inquisitive_pct">Curious or confused</option><option value="neutral_pct">Neutral</option></select></div>
+      <div class="sod-chart" data-draw="emotion" data-source="emotion" id="chart-emotion"></div>
+      <p class="sod-cap">Share of comments with a score of at least 0.5 on the emotion group, from a GoEmotions classifier trained on Reddit comments. Hollow dots mark fewer than 300 comments. This classifier is provisional: it has not been checked by hand on this corpus.</p>
+    </div>
+      <div class="sod-fig" id="fig-moji">
+      <h3>Figure 7b. DeepMoji: how the tone profile of the comments changed, over time</h3>
+      <div class="sod-legend" data-draw="mojilegend" data-source="deepmoji"></div>
+      <div class="sod-chart" data-draw="deepmoji" data-source="deepmoji" id="chart-moji"></div>
+      <p class="sod-cap" data-draw="mojinote" data-source="deepmoji"></p>
+      <p class="sod-cap">DeepMoji is a model trained on 1.2 billion tweets to predict which emoji goes with a text; we ran torchMoji, its PyTorch port. We grouped its 64 emojis into six families (our grouping; emojis that fit none, such as the mask, are left out) and took each family's share of the model's predicted emoji mass, averaged over all comments and posts in that quarter, short ones included. Each family is divided by its own average in 2022 and 2023, so 100 is its earlier level and 110 means 10% more than before, and then smoothed with a rolling average over five quarters (the quarter and the two either side, weighted by number of comments) so that the line shows the trend and not the quarter-to-quarter noise. Smoothing blurs sudden changes and the last two quarters are averaged over fewer neighbours. This shows each family's trend only: the families differ in size and in how common their emojis are, so one line's height says nothing about another's. Hover for each quarter's unsmoothed value and raw share. The model reads only the first 30 tokens and was trained on tweets. Punctuation matters to this model: a first run with an ONNX port, whose simplified tokeniser split text only at spaces, lost "?", "!" and "..." and turned about 15% of words into unknowns, which took away part of the emotional signal, so those scores are not used. This figure uses torchMoji with the original tokeniser. The dashed line is 1 January 2024.</p>
+    </div>
+    <div class="sod-fig" id="fig-goemo">
+      <h3>Figure 7c. GoEmotions: how many comments sound hostile, positive or curious, over time</h3>
+      <div class="sod-legend" data-draw="goemolegend" data-source="goemo"></div>
+      <div class="sod-chart" data-draw="goemo" data-source="goemo" id="chart-goemo"></div>
+      <p class="sod-cap" data-draw="goemonote" data-source="goemo"></p>
+    </div>
+  </section>
+
+  <section class="sod-sec" id="s-crowd">
+    <h2>A much bigger crowd</h2>
+    <p>r/StopEatingSeedOils grew from <b data-draw="fact" data-source="facts" data-field="value" data-where="key=seso_people_2023">—</b> commenters in 2023 to <b data-draw="fact" data-source="facts" data-field="value" data-where="key=seso_people_2024">—</b> in 2024, and <b data-draw="fact" data-source="facts" data-field="value" data-where="key=seso_new_2024">—</b> of the 2024 commenters were commenting there for the first time. First-timers are always the majority there: <b data-draw="fact" data-source="facts" data-field="value" data-where="key=seso_new_2022">—</b> in 2022 and <b data-draw="fact" data-source="facts" data-field="value" data-where="key=seso_new_2023">—</b> in 2023, so what changed is the headcount. r/ScientificNutrition went from <b data-draw="fact" data-source="facts" data-field="value" data-where="key=scinut_people_2023">—</b> to <b data-draw="fact" data-source="facts" data-field="value" data-where="key=scinut_people_2024">—</b> commenters. The share of r/StopEatingSeedOils commenters who also comment in r/carnivore fell from
+      <b data-draw="fact" data-source="facts" data-field="value" data-where="key=seso_carn_pre">—</b> to <b data-draw="fact" data-source="facts" data-field="value" data-where="key=seso_carn_from">—</b>. The figure below shows where the heaviest seed-oil commenters post elsewhere.</p>
+    <div class="sod-banner">Preliminary: <b data-draw="fact" data-source="facts" data-field="value" data-where="key=cocomment_fetched">—</b> of <b data-draw="fact" data-source="facts" data-field="value" data-where="key=cocomment_total">—</b> selected commenters have been fetched so far, starting with the most active in r/StopEatingSeedOils. This figure will be rebuilt when the fetch is complete.</div>
+    <div class="sod-fig" id="fig-crowd">
+      <h3>Figure 8. Where seed-oil commenters also post</h3>
+      <div class="sod-two">
+        <div class="sod-chart" data-draw="cocnet" data-source="cocomment_nodes cocomment_edges cocomment_share" id="chart-cocnet"></div>
+        <div class="sod-chart" data-draw="cocshare" data-source="cocomment_share" id="chart-cocshare"></div>
+      </div>
+      <p class="sod-cap">Left: subreddits placed by how much their commenters overlap, with each subreddit's four strongest links drawn. Colours are rough groups, named in the legend by their biggest subreddits: roughly news, politics and science; advice and everyday life; and diet and biohacking. The groups overlap a lot. Right: the share of commenters active in each period who also post in the subreddit, for the biggest risers and fallers. The seed subreddits are left out because every selected commenter is in them.</p>
+    </div>
+  </section>
+
+
+
+  <details id="notes">
+    <summary>How this was made, and what to be careful about</summary>
+    <ul>
+      <li>Reddit text comes from the Arctic Shift archive: all posts and comments of r/StopEatingSeedOils, r/ScientificNutrition and r/carnivore. Papers are looked up in OpenAlex and PubMed through the links people post; links without an identifier in the address, such as many ScienceDirect and JAMA links, are not covered.</li>
+      <li>The paper conclusions and the comment positions were labelled blind by Claude subagents, with a stated reason and confidence for each. They have not been checked by a human yet. Comments were read in full after a first pass showed that stances often come late.</li>
+      <li>The papers are the ones Reddit users cite. They are not a sample of the literature on seed oils, so the share of harm findings says more about what gets cited than about the science.</li>
+      <li>Samples are small in places: 100 comments per row in Figure 6b, and fewer than 300 comments in some early cells of Figure 7.</li>
+      <li>Figure 8 uses the commenters fetched so far. It will be rebuilt when the fetch finishes, so treat its numbers as preliminary.</li>
+      <li>DeepMoji was first run through an ONNX port whose tokeniser splits only at spaces. Punctuation stayed glued to words, so "?", "!" and "..." were lost and 15.4% of tokens were unknown (3.6% with the original tokeniser), which removed part of the emotional signal. Fed the original tokens, that port agrees with torchMoji on the top emoji for 87% of comments, against 44% with its own tokeniser. Figure 7b uses torchMoji, the PyTorch port with the original tokeniser; the ONNX scores are discarded. The model still reads only 30 tokens and lowercases text.</li>
+      <li>In the activity chart the last month of data is left out because it is incomplete, and the shaded dates are public news events added by hand.</li>
+      <li>The emotion classifier is provisional and the course's choice of classifier is still open.</li>
+    </ul>
+  </details>
+  <p class="sod-foot">Data: Reddit via Arctic Shift, OpenAlex, PubMed. Every figure's data and the script that made it are in Sources.</p>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  const PAL = {
+    light: { red: '#e34948', blue: '#2a78d6', orange: '#eb6834', aqua: '#1baf7a', yellow: '#eda100', magenta: '#e87ba4', violet: '#6250d6', greyMid: '#bdbcb6', greyLight: '#e3e2dd', greyDot: '#a3a29b' },
+    dark: { red: '#e66767', blue: '#3987e5', orange: '#d95926', aqua: '#199e70', yellow: '#c98500', magenta: '#d55181', violet: '#9085e9', greyMid: '#6b6a66', greyLight: '#45443f', greyDot: '#7b7a74' }
+  };
+  const state = { mapColor: 'community', bridge: 'betweenness', topicSub: 'r/StopEatingSeedOils', topicMetric: 'share', emo: 'hostile_pct' };
+
+  function px(el, cssColor) {
+    const probe = document.createElement('span');
+    probe.style.color = cssColor; el.appendChild(probe);
+    const c = getComputedStyle(probe).color; probe.remove();
+    const cv = document.createElement('canvas'); cv.width = cv.height = 1;
+    const x = cv.getContext('2d', { willReadFrequently: true });
+    x.fillStyle = '#000000'; x.fillStyle = c; x.fillRect(0, 0, 1, 1);
+    const d = x.getImageData(0, 0, 1, 1).data; return [d[0], d[1], d[2]];
+  }
+  function theme(el) {
+    const bg = px(el, 'var(--color-bg)'), fg = px(el, 'var(--color-fg)'), mu = px(el, 'var(--color-fg-muted)');
+    const lum = (0.2126 * bg[0] + 0.7152 * bg[1] + 0.0722 * bg[2]) / 255;
+    const rgb = (a) => 'rgb(' + a.join(',') + ')';
+    return { dark: lum < 0.45, c: lum < 0.45 ? PAL.dark : PAL.light, bg: rgb(bg), fg: rgb(fg), mu: rgb(mu) };
+  }
+  function inkOn(hex) { const c = d3.color(hex); return (0.2126 * c.r + 0.7152 * c.g + 0.0722 * c.b) / 255 > 0.58 ? '#0b0b0b' : '#ffffff'; }
+  function guard(el, ids) {
+    const ds = ids.map((i) => dash.data(i));
+    const busy = ds.some((d) => d.status === 'loading' || d.status === 'connect');
+    el.classList.toggle('dash-skeleton', busy);
+    if (busy) return null;
+    if (ds.some((d) => d.status !== 'ok')) { el.textContent = 'Failed to load'; return null; }
+    return ds.map((d) => d.data);
+  }
+  function tipFor(wrap) {
+    const t = document.createElement('div'); t.className = 'sod-tip'; t.hidden = true; wrap.appendChild(t);
+    return {
+      show(lines, x, y) {
+        t.replaceChildren(...lines.map((l, i) => { const d = document.createElement('div'); d.textContent = l; if (i === 0) { d.style.fontWeight = '500'; d.style.color = 'var(--color-fg)'; } return d; }));
+        t.hidden = false;
+        const w = wrap.clientWidth, tw = t.offsetWidth, th = t.offsetHeight;
+        t.style.left = Math.min(Math.max(4, x + 12), Math.max(4, w - tw - 4)) + 'px';
+        t.style.top = Math.max(4, y - th - 10) + 'px';
+      },
+      hide() { t.hidden = true; }
+    };
+  }
+  function listen(id, key, redraw) {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('change', () => { state[key] = el.value; redraw.forEach((n) => dash.draw(n)); });
+  }
+  listen('map-color', 'mapColor', ['papermap']);
+  listen('bridge-metric', 'bridge', ['bridges']);
+  listen('topic-sub', 'topicSub', ['topics']);
+  listen('topic-metric', 'topicMetric', ['topics']);
+  listen('emo-metric', 'emo', ['emotion']);
+
+  // ------------------------------------------------------------------ facts
+  dash.draw('fact', (el) => {
+    const g = dash.data('facts');
+    if (g.status !== 'ok') { el.textContent = '—'; return; }
+    const key = (el.dataset.where || '').replace(/^key=/, '');
+    const row = g.data.find((r) => r.key === key);
+    if (!row) { el.textContent = '—'; return; }
+    const v = Number(row.value);
+    const s = Number.isInteger(v) ? d3.format(',')(v) : String(v);
+    el.textContent = row.unit === '%' ? s + '%' : row.unit === 'x' ? '×' + s : s;
+  });
+
+  // ------------------------------------------------------------------ Introduction: the subreddits and their activity
+  const SUBC = (P) => ({ 'r/StopEatingSeedOils': P.orange, 'r/ScientificNutrition': P.greyDot });
+  dash.draw('subcards', (el) => {
+    const g = guard(el, ['subreddits']); if (!g) return;
+    const P = theme(el).c, col = SUBC(P); el.replaceChildren();
+    g[0].forEach((r) => {
+      const c = document.createElement('div'); c.className = 'sod-card'; c.style.borderLeftColor = col[r.subreddit];
+      const b = document.createElement('b'); b.textContent = r.subreddit;
+      const ro = document.createElement('div'); ro.className = 'role'; ro.textContent = r.role;
+      const p = document.createElement('p'); p.textContent = r.about;
+      const dl = document.createElement('dl');
+      [['Years', r.first.slice(0, 4) + ' to ' + r.last.slice(0, 4)], ['Posts', d3.format(',')(r.posts)], ['Comments', d3.format(',')(r.comments)], ['People', d3.format(',')(r.people)]].forEach(([k, v]) => {
+        const dt = document.createElement('dt'), dd = document.createElement('dd'); dt.textContent = k; dd.textContent = v; dl.append(dt, dd); });
+      c.append(b, ro, p, dl); el.appendChild(c);
+    });
+  });
+  dash.draw('actlegend', (el) => {
+    const P = theme(el).c, col = SUBC(P); el.replaceChildren();
+    Object.keys(col).forEach((k) => { const s = document.createElement('span'), i = document.createElement('i'); i.style.background = col[k]; s.append(i, k); el.appendChild(s); });
+  });
+  dash.draw('activity', (el) => {
+    const g = guard(el, ['activity', 'events']); if (!g) return;
+    const [act, ev] = g; const T = theme(el), P = T.c, col = SUBC(P);
+    const W = Math.max(280, el.clientWidth), H = Math.round(Math.min(300, Math.max(220, W * 0.4))), m = { l: 44, r: 8, t: 50, b: 26 };
+    const pm = d3.timeParse('%Y-%m'), pd = d3.timeParse('%Y-%m-%d');
+    const subs = Object.keys(col), series = subs.map((s) => ({ s, v: act.filter((r) => r.subreddit === s).map((r) => ({ d: pm(r.month), n: r.items, m: r.month })) }));
+    const x = d3.scaleTime().domain([pm('2018-10'), d3.max(act, (r) => pm(r.month))]).range([m.l, W - m.r]);
+    const y = d3.scaleLinear().domain([0, d3.max(act, (r) => r.items) * 1.05]).nice().range([H - m.b, m.t]);
+    el.replaceChildren();
+    const svg = d3.select(el).append('svg').attr('width', W).attr('height', H).attr('role', 'img')
+      .attr('aria-label', 'Posts and comments per month in two subreddits; r/StopEatingSeedOils rises from January 2024 and peaks in autumn 2024');
+    y.ticks(4).forEach((t) => {
+      svg.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y(t)).attr('y2', y(t)).attr('stroke', 'var(--cds-chart-grid, var(--color-border-line))');
+      svg.append('text').attr('x', m.l - 6).attr('y', y(t) + 4).attr('text-anchor', 'end').attr('font-size', 11).attr('fill', T.mu).text(d3.format('~s')(t));
+    });
+    x.ticks(d3.timeYear.every(W < 520 ? 2 : 1)).forEach((t) => svg.append('text').attr('x', x(t)).attr('y', H - 8).attr('text-anchor', 'middle').attr('font-size', 11).attr('fill', T.mu).text(d3.timeFormat('%Y')(t)));
+    const d0 = pd(ev[0].date), d1 = pd(ev[ev.length - 1].date);
+    svg.append('rect').attr('x', x(d0)).attr('width', Math.max(2, x(d1) - x(d0))).attr('y', m.t).attr('height', H - m.b - m.t).attr('fill', P.greyLight).attr('opacity', 0.7);
+    const sx = x(pm('2024-01'));
+    svg.append('line').attr('x1', sx).attr('x2', sx).attr('y1', m.t - 4).attr('y2', H - m.b).attr('stroke', T.fg).attr('stroke-dasharray', '4 3');
+    svg.append('text').attr('x', sx - 5).attr('y', m.t - 30).attr('text-anchor', 'end').attr('font-size', 11).attr('fill', T.fg).text('before | from 2024 →');
+    const lbl = svg.append('text').attr('x', W - m.r).attr('y', m.t - 12).attr('text-anchor', 'end').attr('font-size', 11).attr('fill', T.mu);
+    lbl.text(W < 520 ? 'Shaded: Aug to Nov 2024, RFK Jr. events' : 'Shaded, 23 Aug to 14 Nov 2024: RFK Jr. endorses Trump, election, health secretary nomination');
+    const line = d3.line().x((d) => x(d.d)).y((d) => y(d.n)).curve(d3.curveMonotoneX);
+    series.forEach((s) => svg.append('path').datum(s.v).attr('d', line).attr('fill', 'none').attr('stroke', col[s.s]).attr('stroke-width', 2)
+      .attr('stroke-dasharray', s.s === 'r/carnivore' ? '5 3' : null).attr('stroke-linejoin', 'round'));
+    const tip = tipFor(el); el.style.position = 'relative';
+    const byM = new Map(); act.forEach((r) => { (byM.get(r.month) || byM.set(r.month, {}).get(r.month))[r.subreddit] = r.items; });
+    const months = Array.from(new Set(act.map((r) => r.month))).sort();
+    const cross = svg.append('line').attr('y1', m.t).attr('y2', H - m.b).attr('stroke', T.mu).attr('visibility', 'hidden');
+    svg.append('rect').attr('x', m.l).attr('y', m.t).attr('width', W - m.l - m.r).attr('height', H - m.t - m.b).attr('fill', 'transparent')
+      .on('mousemove', (e) => {
+        const [mx, my] = d3.pointer(e, svg.node()); const i = d3.bisectCenter(months.map((s) => pm(s)), x.invert(mx)); const k = months[i], r = byM.get(k) || {};
+        cross.attr('x1', x(pm(k))).attr('x2', x(pm(k))).attr('visibility', 'visible');
+        tip.show([d3.timeFormat('%B %Y')(pm(k))].concat(subs.map((s) => s + ': ' + d3.format(',')(r[s] || 0))), mx, my);
+      }).on('mouseleave', () => { cross.attr('visibility', 'hidden'); tip.hide(); });
+  });
+  // ------------------------------------------------------------------ How we did this: number of topics
+  dash.draw('ksweep', (el) => {
+    const g = guard(el, ['topic_k_sweep']); if (!g) return; el.replaceChildren();
+    const tb = document.createElement('table'); tb.className = 'sod-kt';
+    const cols = [['k', 'Topics (k)'], ['stability_ami', 'Stability'], ['coherence_npmi', 'Coherence'], ['largest_topic_pct', 'Largest topic, share of comments'], ['politics_ratio', 'Politics topic found separately (×)']];
+    const hr = tb.createTHead().insertRow(); cols.forEach(([, l]) => { const th = document.createElement('th'); th.textContent = l; hr.appendChild(th); });
+    const tbd = tb.createTBody();
+    g[0].forEach((r) => { const tr = tbd.insertRow(); cols.forEach(([k]) => { const td = tr.insertCell(); const v = r[k];
+      td.textContent = v == null ? '—' : k === 'largest_topic_pct' ? v + '%' : k === 'politics_ratio' ? '×' + v : k === 'k' ? v : v.toFixed(3); }); });
+    el.appendChild(tb);
+  });
+  dash.draw('ksnote', (el) => {
+    const g = guard(el, ['topic_k_sweep']); if (!g) return;
+    const hit = g[0].filter((r) => r.politics_ratio != null)[0];
+    el.textContent = hit ? 'With ' + hit.k + ' topics the merge keeps a politics topic (RFK Jr., Trump, left and right) that grew ×' + hit.politics_ratio + ' and a vaccines topic that grew ×' + hit.vaccines_ratio + ', the same multiples as our hand-made themes. With fewer topics they are absorbed into the largest one.' : '';
+  });
+
+  // ------------------------------------------------------------------ Figure 1a: slope chart of themes
+  dash.draw('slope', (el) => {
+    const g = guard(el, ['topic_themes']); if (!g) return; const T = theme(el), P = T.c;
+    const rows = g[0].filter((r) => r.subreddit === 'r/StopEatingSeedOils' && r.share_pre2024_pct > 0).map((r) => ({ t: r.theme, a: r.share_pre2024_pct, b: r.share_from2024_pct, k: r.ratio }));
+    const hot = new Set(rows.slice().sort((p, q) => q.k - p.k).slice(0, 2).map((r) => r.t));
+    const W = Math.max(300, el.clientWidth), narrow = W < 520, fs = narrow ? 11 : 12, H = narrow ? 380 : 400, pad = narrow ? 112 : 175, top = 34, bot = 14;
+    const y = d3.scaleLog().domain([0.3, 14]).range([H - bot, top]);
+    const xa = pad, xb = W - pad - (narrow ? 12 : 40);
+    const spread = (pos) => { const o = pos.map((v, i) => ({ v, i })).sort((p, q) => p.v - q.v); for (let n = 0; n < 60; n++) for (let i = 1; i < o.length; i++) if (o[i].v - o[i - 1].v < 15) { const m = (o[i].v + o[i - 1].v) / 2; o[i - 1].v = m - 7.5; o[i].v = m + 7.5; } const out = []; o.forEach((q) => { out[q.i] = q.v; }); return out; };
+    const la = spread(rows.map((r) => y(r.a))), lb = spread(rows.map((r) => y(r.b)));
+    el.replaceChildren(); el.style.position = 'relative'; const tip = tipFor(el);
+    const svg = d3.select(el).append('svg').attr('width', W).attr('height', H).attr('role', 'img')
+      .attr('aria-label', 'Share of discussion by theme before and from 2024 in r/StopEatingSeedOils: politics and vaccines grew most, omega-6 biochemistry fell');
+    svg.append('text').attr('class', 'strong').attr('x', xa).attr('y', 16).attr('text-anchor', 'middle').text('Before 2024');
+    svg.append('text').attr('class', 'strong').attr('x', xb).attr('y', 16).attr('text-anchor', 'middle').text('From 2024');
+    [xa, xb].forEach((x) => svg.append('line').attr('x1', x).attr('x2', x).attr('y1', top - 6).attr('y2', H - bot).attr('stroke', 'var(--cds-chart-grid, var(--color-border-line))'));
+    const f1 = (v) => (v >= 10 ? v.toFixed(0) : v.toFixed(1)) + '%', SH = { 'Omega-6 / PUFA biochemistry': 'Omega-6 biochemistry', 'Ingredient labels and processed food': 'Ingredient labels', 'Pharma, FDA, corporations': 'Pharma and FDA', 'Politics (RFK, Trump, left/right)': 'Politics', 'Shopping (Costco, avocado oil, chips)': 'Shopping', 'Keto, carbs, fasting': 'Keto and carbs', 'Studies and evidence': 'Studies, evidence' }, nm = (s) => SH[s] || s;
+    rows.slice().sort((p, q) => (hot.has(p.t) ? 1 : 0) - (hot.has(q.t) ? 1 : 0)).forEach((r) => {
+      const i = rows.indexOf(r), h = hot.has(r.t), col = h ? P.orange : P.greyDot;
+      svg.append('line').attr('x1', xa).attr('y1', y(r.a)).attr('x2', xb).attr('y2', y(r.b)).attr('stroke', col).attr('stroke-width', h ? 3 : 2).attr('stroke-linecap', 'round');
+      [[xa, y(r.a)], [xb, y(r.b)]].forEach(([cx, cy]) => svg.append('circle').attr('cx', cx).attr('cy', cy).attr('r', h ? 5 : 4).attr('fill', col).attr('stroke', T.bg).attr('stroke-width', 2));
+      svg.append('text').attr('x', xa - 10).attr('y', la[i] + 4).attr('text-anchor', 'end').attr('font-size', fs).attr('fill', T.fg).attr('font-weight', h ? 600 : 400).text(nm(r.t) + '  ' + f1(r.a));
+      svg.append('text').attr('x', xb + 10).attr('y', lb[i] + 4).attr('font-size', fs).attr('fill', T.fg).attr('font-weight', h ? 600 : 400).text(f1(r.b) + '  ' + nm(r.t) + (h ? '  ×' + r.k.toFixed(1) : ''));
+      svg.append('line').attr('x1', xa).attr('y1', y(r.a)).attr('x2', xb).attr('y2', y(r.b)).attr('stroke', 'transparent').attr('stroke-width', 12)
+        .on('mousemove', (e) => { const [mx, my] = d3.pointer(e, el); tip.show([r.t, 'Before 2024: ' + r.a + '% of comments', 'From 2024: ' + r.b + '% (×' + r.k + ')'], mx, my); }).on('mouseleave', () => tip.hide());
+    });
+  });
+
+  // ------------------------------------------------------------------ Figure 1: community map
+  dash.draw('papermap', (el) => {
+    const g = guard(el, ['paper_nodes', 'paper_edges', 'paper_communities', 'community_links']);
+    if (!g) return;
+    const [nodes, edges, comms, links] = g;
+    const T = theme(el), P = T.c;
+    const W = Math.max(280, el.clientWidth), narrow = W < 560, H = Math.round(narrow ? Math.max(420, W * 1.15) : Math.max(340, Math.min(700, W * 0.8)));
+    const bx0 = d3.min(comms, (c) => c.cx - c.r), bx1 = d3.max(comms, (c) => c.cx + c.r), by0 = d3.min(comms, (c) => c.cy - c.r), by1 = d3.max(comms, (c) => c.cy + c.r);
+    const padX = Math.min(70, W * 0.1), padY = 40;
+    const S = Math.min((W - 2 * padX) / (bx1 - bx0), (H - 2 * padY) / (by1 - by0));
+    const X = (v) => W / 2 + (v - (bx0 + bx1) / 2) * S, Y = (v) => H / 2 + (v - (by0 + by1) / 2) * S;
+    const commColor = { 2: P.orange, 10: P.aqua, 4: P.blue, 5: P.blue };
+    const sideColor = { SESO: P.orange, both: P.blue, SciNut: P.greyDot };
+    const byC = {}; comms.forEach((c) => { byC[c.c] = c; });
+    el.replaceChildren();
+    const legend = document.createElement('div'); legend.className = 'sod-legend';
+    const items = state.mapColor === 'community'
+      ? [['Omega-6 / linoleic acid', P.orange], ['Rodent fat and cancer studies', P.aqua], ['Saturated fat and LDL', P.blue], ['Other communities', P.greyDot]]
+      : [['Cited only in r/StopEatingSeedOils', P.orange], ['Cited in both', P.blue], ['Cited only in r/ScientificNutrition', P.greyDot]];
+    items.forEach(([t, c]) => { const s = document.createElement('span'); const i = document.createElement('i'); i.className = 'dot'; i.style.background = c; s.append(i, t); legend.appendChild(s); });
+    const wrap = document.createElement('div'); wrap.style.position = 'relative'; wrap.style.height = H + 'px';
+    const cv = document.createElement('canvas'); const dpr = window.devicePixelRatio || 1;
+    cv.width = W * dpr; cv.height = H * dpr; cv.style.width = W + 'px'; cv.style.height = H + 'px';
+    cv.setAttribute('role', 'img'); cv.setAttribute('aria-label', 'Map of ' + nodes.length + ' cited papers grouped into communities; the seed-oil communities are labelled');
+    wrap.appendChild(cv); el.append(legend, wrap);
+    const tip = tipFor(wrap);
+    const ctx = cv.getContext('2d'); ctx.scale(dpr, dpr);
+    const colorOf = (n) => state.mapColor === 'community' ? (commColor[n.c] || P.greyDot) : (sideColor[n.side] || P.greyDot);
+    const radius = (n) => 1.8 + 0.55 * Math.sqrt(n.users_seso + n.users_scinut);
+    const maxLink = d3.max(links, (l) => l.n_links) || 1;
+    const nodeAt = nodes;
+    let hover = null;
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+      ctx.font = '12px ' + getComputedStyle(el).fontFamily;
+      links.forEach((l) => {
+        const a = byC[l.a], b = byC[l.b]; if (!a || !b) return;
+        ctx.strokeStyle = T.mu; ctx.globalAlpha = 0.10 + 0.20 * (l.n_links / maxLink); ctx.lineWidth = 0.6 + 5 * Math.sqrt(l.n_links / maxLink);
+        ctx.beginPath(); ctx.moveTo(X(a.cx), Y(a.cy)); ctx.lineTo(X(b.cx), Y(b.cy)); ctx.stroke();
+      });
+      comms.forEach((c) => {
+        const seed = c.seed_oil_community;
+        ctx.globalAlpha = seed ? 0.10 : 0.05; ctx.fillStyle = seed ? (commColor[c.c] || T.mu) : T.mu;
+        ctx.beginPath(); ctx.arc(X(c.cx), Y(c.cy), c.r * S, 0, 6.2832); ctx.fill();
+        ctx.globalAlpha = seed ? 0.5 : 0.25; ctx.strokeStyle = seed ? (commColor[c.c] || T.mu) : T.mu; ctx.lineWidth = seed ? 1.5 : 1; ctx.stroke();
+      });
+      ctx.globalAlpha = 0.07; ctx.strokeStyle = T.mu; ctx.lineWidth = 0.5; ctx.beginPath();
+      edges.forEach((e) => { const a = nodes[e.s], b = nodes[e.t]; ctx.moveTo(X(a.x), Y(a.y)); ctx.lineTo(X(b.x), Y(b.y)); });
+      ctx.stroke();
+      if (hover) {
+        ctx.globalAlpha = 0.55; ctx.strokeStyle = T.fg; ctx.lineWidth = 0.8; ctx.beginPath();
+        edges.forEach((e) => { if (e.s === hover.i || e.t === hover.i) { const a = nodes[e.s], b = nodes[e.t]; ctx.moveTo(X(a.x), Y(a.y)); ctx.lineTo(X(b.x), Y(b.y)); } });
+        ctx.stroke();
+      }
+      ctx.globalAlpha = 0.9;
+      nodes.forEach((n) => { ctx.fillStyle = colorOf(n); ctx.beginPath(); ctx.arc(X(n.x), Y(n.y), radius(n), 0, 6.2832); ctx.fill(); });
+      ctx.globalAlpha = 1;
+      if (hover) { ctx.strokeStyle = T.fg; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(X(hover.x), Y(hover.y), radius(hover) + 3, 0, 6.2832); ctx.stroke(); }
+      const boxes = [];
+      const hit = (a, b) => !(a[2] < b[0] || a[0] > b[2] || a[3] < b[1] || a[1] > b[3]);
+      const order = comms.slice().sort((a, b) => (b.seed_oil_community ? 1 : 0) - (a.seed_oil_community ? 1 : 0));
+      order.forEach((c) => {
+        if (narrow && !c.seed_oil_community) return;
+        const seed = c.seed_oil_community, fam = getComputedStyle(el).fontFamily, lh = 14;
+        ctx.font = (seed ? '500 13px ' : '12px ') + fam; ctx.textAlign = 'center';
+        const words = c.name.split(' '), lines = []; let cur = '';
+        words.forEach((w) => { if ((cur + ' ' + w).trim().length > 18 && cur) { lines.push(cur); cur = w; } else cur = (cur + ' ' + w).trim(); }); lines.push(cur);
+        const w = d3.max(lines, (l) => ctx.measureText(l).width), h = lines.length * lh, rx = c.r * S, mx = X(c.cx), my = Y(c.cy);
+        const cands = [[my - rx - 6 - h + lh - 2, my - rx - 6 - h], [my + rx + 6 + lh - 2, my + rx + 6]];
+        const score = (top) => { const bx = [mx - w / 2 - 2, top - 1, mx + w / 2 + 2, top + h + 1]; let s = boxes.some((b) => hit(bx, b)) ? 100 : 0;
+          comms.forEach((o) => { if (o !== c) { const dx = Math.max(bx[0] - X(o.cx), 0, X(o.cx) - bx[2]), dy = Math.max(bx[1] - Y(o.cy), 0, Y(o.cy) - bx[3]); if (Math.hypot(dx, dy) < o.r * S) s += 10; } });
+          if (bx[1] < 2 || bx[3] > H - 2) s += 50; return s; };
+        const pick = score(cands[0][1]) <= score(cands[1][1]) ? cands[0] : cands[1];
+        boxes.push([mx - w / 2 - 2, pick[1] - 1, mx + w / 2 + 2, pick[1] + h + 1]);
+        lines.forEach((l, k) => {
+          ctx.lineWidth = 4; ctx.strokeStyle = T.bg; ctx.globalAlpha = 0.85; ctx.strokeText(l, mx, pick[0] + k * lh);
+          ctx.globalAlpha = 1; ctx.fillStyle = seed ? T.fg : T.mu; ctx.fillText(l, mx, pick[0] + k * lh);
+        });
+      });
+    }
+    draw();
+    const qt = d3.quadtree().x((n) => X(n.x)).y((n) => Y(n.y)).addAll(nodes);
+    cv.addEventListener('mousemove', (ev) => {
+      const r = cv.getBoundingClientRect(), mx = ev.clientX - r.left, my = ev.clientY - r.top;
+      const n = qt.find(mx, my, 9);
+      if (n !== hover) { hover = n || null; draw(); }
+      if (n) {
+        const cm = byC[n.c];
+        tip.show([n.title + (n.year ? ' (' + n.year + ')' : ''), 'Cited by ' + n.users_seso + ' people in r/StopEatingSeedOils and ' + n.users_scinut + ' in r/ScientificNutrition',
+          cm ? cm.name : '', n.design], mx, my);
+      } else tip.hide();
+    });
+    cv.addEventListener('mouseleave', () => { hover = null; tip.hide(); draw(); });
+  });
+
+  // ------------------------------------------------------------------ Figure 2: bridges and null model
+  function sideColors(P) { return { SESO: P.orange, both: P.blue, SciNut: P.greyDot }; }
+  dash.draw('sidelegend', (el) => {
+    const T = theme(el), P = T.c; el.replaceChildren();
+    [['Cited only in r/StopEatingSeedOils', P.orange], ['Cited in both', P.blue], ['Cited only in r/ScientificNutrition', P.greyDot]].forEach(([t, c]) => {
+      const s = document.createElement('span'), i = document.createElement('i'); i.style.background = c; s.append(i, t); el.appendChild(s); });
+  });
+  dash.draw('bridges', (el) => {
+    const g = guard(el, ['bridges']); if (!g) return;
+    const T = theme(el), P = T.c, sc = sideColors(P), key = state.bridge;
+    const rows = g[0].filter((r) => (key === 'betweenness' ? r.top_betweenness : r.top_pagerank)).sort((a, b) => b[key] - a[key]).slice(0, 10);
+    const max = d3.max(rows, (r) => r[key]) || 1;
+    el.replaceChildren();
+    rows.forEach((r) => {
+      const d = document.createElement('div'); d.className = 'sod-br';
+      const b = document.createElement('b'); b.textContent = r.title + (r.year ? ' (' + r.year + ')' : '');
+      const bb = document.createElement('div'); bb.className = 'sod-bb';
+      const f = document.createElement('span'); f.className = 'fill'; f.style.width = Math.max(2, 70 * r[key] / max) + '%'; f.style.background = sc[r.side] || P.greyDot;
+      const v = document.createElement('span'); v.className = 'val'; v.textContent = (key === 'betweenness' ? r.betweenness.toFixed(4) : r.pagerank.toFixed(4));
+      const sm = document.createElement('small'); sm.textContent = 'cited by ' + r.users_seso + ' people in r/StopEatingSeedOils, ' + r.users_scinut + ' in r/ScientificNutrition';
+      bb.append(f, v); d.append(b, bb, sm); el.appendChild(d);
+    });
+  });
+  dash.draw('nullplot', (el) => {
+    const g = guard(el, ['null_summary', 'null_runs']); if (!g) return;
+    const [summ, runs] = g; const T = theme(el), P = T.c;
+    const W = Math.max(260, el.clientWidth), rowH = 54, padL = 22, padR = 14;
+    const panels = [{ m: 'modularity', title: 'Modularity (how clustered)', dom: [0, 0.7], field: 'modularity', fmt: '.2f' },
+      { m: 'side assortativity', title: 'Side assortativity (do sides separate)', dom: [-0.04, 0.34], field: 'side_assortativity', fmt: '.2f' }];
+    const nets = [['scholarly', 'Citation network'], ['reddit', 'Reddit co-citation']];
+    const H = panels.length * (rowH * 2 + 82) + 34;
+    el.replaceChildren();
+    const svg = d3.select(el).append('svg').attr('width', W).attr('height', H).attr('role', 'img')
+      .attr('aria-label', 'Observed modularity and side assortativity compared with 50 random networks, for the citation network and the Reddit co-citation network');
+    let y0 = 8;
+    panels.forEach((p) => {
+      svg.append('text').attr('class', 'strong').attr('x', padL).attr('y', y0 + 12).text(p.title);
+      const sx = d3.scaleLinear().domain(p.dom).range([padL, W - padR]);
+      const ticks = sx.ticks(5);
+      const gy = y0 + 26;
+      ticks.forEach((t) => {
+        svg.append('line').attr('x1', sx(t)).attr('x2', sx(t)).attr('y1', gy).attr('y2', gy + rowH * 2 + 8).attr('stroke', 'var(--cds-chart-grid, var(--color-border-line))').attr('stroke-width', 1);
+        svg.append('text').attr('x', sx(t)).attr('y', gy + rowH * 2 + 22).attr('text-anchor', 'middle').text(d3.format(p.fmt)(t));
+      });
+      nets.forEach(([net, label], k) => {
+        const cy = gy + 26 + k * rowH;
+        const ob = summ.find((r) => r.network === net && r.measure === p.m);
+        runs.filter((r) => r.network === net).forEach((r, i) => {
+          svg.append('circle').attr('cx', sx(r[p.field])).attr('cy', cy + (((i * 37) % 11) - 5) * 1.3 + 8).attr('r', 3).attr('fill', P.greyDot).attr('fill-opacity', 0.55);
+        });
+        svg.append('text').attr('x', padL).attr('y', cy - 12).text(label);
+        svg.append('circle').attr('cx', sx(ob.observed)).attr('cy', cy + 8).attr('r', 7).attr('fill', P.orange).attr('stroke', T.bg).attr('stroke-width', 2);
+        svg.append('text').attr('class', 'strong').attr('x', sx(ob.observed) + (ob.observed > p.dom[1] * 0.7 ? -12 : 12)).attr('y', cy + 12).attr('text-anchor', ob.observed > p.dom[1] * 0.7 ? 'end' : 'start')
+          .text(d3.format(p.fmt)(ob.observed));
+      });
+      y0 += rowH * 2 + 82;
+    });
+    const lg = svg.append('g').attr('transform', 'translate(' + padL + ',' + (H - 8) + ')');
+    lg.append('circle').attr('cx', 4).attr('cy', -4).attr('r', 3).attr('fill', P.greyDot);
+    const t1 = lg.append('text').attr('x', 12).attr('y', 0).text('random network, same links per paper');
+    const w1 = t1.node().getComputedTextLength();
+    lg.append('circle').attr('cx', 12 + w1 + 22).attr('cy', -4).attr('r', 6).attr('fill', P.orange);
+    lg.append('text').attr('x', 12 + w1 + 32).attr('y', 0).text('observed');
+  });
+
+  // ------------------------------------------------------------------ Figure 3: stacked bars (science, online, matching)
+  function stacked(el, P, rows, cats) {
+    el.replaceChildren();
+    const lg = document.createElement('div'); lg.className = 'sod-legend';
+    cats.forEach((c) => { const s = document.createElement('span'), i = document.createElement('i'); i.style.background = c.color; s.append(i, c.label); lg.appendChild(s); });
+    el.appendChild(lg);
+    const tip = tipFor(el);
+    rows.forEach((r) => {
+      const row = document.createElement('div'); row.className = 'sod-row';
+      const l = document.createElement('div'); l.className = 'sod-rl'; l.textContent = r.label;
+      const bar = document.createElement('div'); bar.className = 'sod-bar';
+      const total = cats.reduce((a, c) => a + (r.counts[c.key] || 0), 0);
+      cats.forEach((c) => {
+        const v = r.counts[c.key] || 0; if (!v) return;
+        const pct = 100 * v / total;
+        const s = document.createElement('div'); s.className = 'sod-seg'; s.style.flex = v + ' 1 0'; s.style.background = c.color; s.style.color = inkOn(c.color);
+        if (pct >= 6) s.textContent = Math.round(pct) + '%';
+        s.addEventListener('mousemove', (ev) => { const b = el.getBoundingClientRect(); tip.show([r.label, c.label + ': ' + v + ' of ' + total + ' (' + pct.toFixed(0) + '%)'], ev.clientX - b.left, ev.clientY - b.top); });
+        s.addEventListener('mouseleave', () => tip.hide());
+        bar.appendChild(s);
+      });
+      const n = document.createElement('div'); n.className = 'sod-rn'; n.textContent = 'n = ' + total;
+      row.append(l, bar, n); el.appendChild(row);
+    });
+  }
+  dash.draw('science', (el) => {
+    const g = guard(el, ['science']); if (!g) return; const P = theme(el).c;
+    const order = ['Human trials & meta-analyses', 'Human studies of deaths & disease', 'Human observational studies', 'Reviews & statements', 'Animal & cell studies'];
+    const rows = order.map((n) => g[0].find((r) => r.evidence === n)).filter(Boolean).map((r) => ({ label: r.evidence, counts: { harm: r.harm, mixed: r.mixed, no_effect: r.no_effect, benefit: r.benefit } }));
+    stacked(el, P, rows, [{ key: 'harm', label: 'Harm', color: P.red }, { key: 'mixed', label: 'Mixed', color: P.greyMid }, { key: 'no_effect', label: 'No effect', color: P.greyLight }, { key: 'benefit', label: 'Benefit', color: P.blue }]);
+  });
+  dash.draw('online', (el) => {
+    const g = guard(el, ['online']); if (!g) return; const P = theme(el).c;
+    const rows = g[0].map((r) => ({ label: r.community + ', ' + r.period, counts: { harmful: r.harmful, mixed: r.mixed, no_position: r.no_position, not_harmful: r.not_harmful } }));
+    stacked(el, P, rows, [{ key: 'harmful', label: 'Harmful', color: P.red }, { key: 'mixed', label: 'Mixed', color: P.greyMid }, { key: 'no_position', label: 'No position', color: P.greyLight }, { key: 'not_harmful', label: 'Not harmful', color: P.blue }]);
+  });
+  dash.draw('matching', (el) => {
+    const g = guard(el, ['matching']); if (!g) return; const P = theme(el).c;
+    const rows = g[0].map((r) => ({ label: r.comments + ' (' + r.n_comments + ' comments)', counts: { human_trials: r.human_trials, human_observational: r.human_observational, animal_cell: r.animal_cell, review: r.review, other: r.other } }));
+    stacked(el, P, rows, [{ key: 'human_trials', label: 'Human trials', color: P.violet }, { key: 'human_observational', label: 'Human observational', color: P.aqua }, { key: 'animal_cell', label: 'Animal or cell', color: P.yellow },
+      { key: 'review', label: 'Review or statement', color: P.magenta }, { key: 'other', label: 'Other', color: P.greyLight }]);
+  });
+
+  // ------------------------------------------------------------------ dumbbell (Figures 4, 5, 6 right)
+  function dumbbell(el, P, T, rows, o) {
+    el.replaceChildren();
+    const W = Math.max(280, el.clientWidth);
+    const meas = d3.select(el).append('svg').style('position', 'absolute').style('visibility', 'hidden').attr('width', 10).attr('height', 10);
+    const mt = meas.append('text');
+    const wid = (s) => { mt.text(s); return mt.node().getComputedTextLength(); };
+    const maxLab = Math.min(Math.round(W * 0.42), 250);
+    const lab = (s) => { if (wid(s) <= maxLab) return [s]; const w = s.split(' '); let a = ''; let i = 0; while (i < w.length && wid((a + ' ' + w[i]).trim()) <= maxLab) { a = (a + ' ' + w[i]).trim(); i++; } return [a, w.slice(i).join(' ')]; };
+    const labels = rows.map((r) => lab(r.label));
+    const padL = Math.min(maxLab, Math.ceil(d3.max(labels.flat(), wid) || 80)) + 14, padR = W < 520 ? 46 : 64, rowH = o.rowH || 30, top = 34, bot = 26;
+    const H = top + rows.length * rowH + bot;
+    const wA = wid(o.aLabel);
+    meas.remove();
+    const svg = d3.select(el).append('svg').attr('width', W).attr('height', H).attr('role', 'img').attr('aria-label', o.aria);
+    const sx = (o.scale === 'log' ? d3.scaleLog() : d3.scaleLinear()).domain(o.domain).range([padL, W - padR]);
+    let tk = o.ticks || sx.ticks(5);
+    if (W - padL - padR < 260) tk = tk.filter((t, i) => i % 2 === 0);
+    tk.forEach((t) => {
+      svg.append('line').attr('x1', sx(t)).attr('x2', sx(t)).attr('y1', top - 6).attr('y2', H - bot + 4).attr('stroke', 'var(--cds-chart-grid, var(--color-border-line))').attr('stroke-width', 1);
+      svg.append('text').attr('x', sx(t)).attr('y', H - 6).attr('text-anchor', 'middle').text(o.fmt(t));
+    });
+    if (o.ref != null) {
+      svg.append('line').attr('x1', sx(o.ref)).attr('x2', sx(o.ref)).attr('y1', top - 6).attr('y2', H - bot + 4).attr('stroke', T.mu).attr('stroke-dasharray', '3 3');
+      svg.append('text').attr('x', sx(o.ref) + 4).attr('y', top - 12).text(o.refLabel);
+    }
+    const lg = svg.append('g').attr('transform', 'translate(' + padL + ',12)');
+    lg.append('circle').attr('cx', 5).attr('cy', 0).attr('r', 5).attr('fill', T.bg).attr('stroke', T.mu).attr('stroke-width', 2);
+    lg.append('text').attr('x', 14).attr('y', 4).text(o.aLabel);
+    lg.append('circle').attr('cx', 14 + wA + 22).attr('cy', 0).attr('r', 5).attr('fill', P.orange);
+    lg.append('text').attr('x', 14 + wA + 31).attr('y', 4).text(o.bLabel);
+    const tip = tipFor(el);
+    rows.forEach((r, i) => {
+      const cy = top + i * rowH + rowH / 2;
+      labels[i].forEach((ln, k) => svg.append('text').attr('class', 'strong').attr('x', padL - 10).attr('y', cy + 4 + (labels[i].length === 2 ? (k ? 6 : -6) : 0)).attr('text-anchor', 'end').text(ln));
+      svg.append('line').attr('x1', sx(r.a)).attr('x2', sx(r.b)).attr('y1', cy).attr('y2', cy).attr('stroke', T.mu).attr('stroke-opacity', 0.5).attr('stroke-width', 2);
+      svg.append('circle').attr('cx', sx(r.a)).attr('cy', cy).attr('r', 5).attr('fill', r.smallA ? T.bg : T.bg).attr('stroke', T.mu).attr('stroke-width', 2).attr('stroke-dasharray', r.smallA ? '2 2' : null);
+      svg.append('circle').attr('cx', sx(r.b)).attr('cy', cy).attr('r', 5.5).attr('fill', r.smallB ? T.bg : P.orange).attr('stroke', P.orange).attr('stroke-width', 2);
+      svg.append('text').attr('x', W - padR + 10).attr('y', cy + 4).text(o.delta(r));
+      svg.append('rect').attr('x', 0).attr('y', cy - rowH / 2).attr('width', W).attr('height', rowH).attr('fill', 'transparent')
+        .on('mousemove', (ev) => { const b = el.getBoundingClientRect(); tip.show(r.tip, ev.clientX - b.left, ev.clientY - b.top); }).on('mouseleave', () => tip.hide());
+    });
+  }
+
+  // ------------------------------------------------------------------ Figure 4: topics
+  dash.draw('topics', (el) => {
+    const g = guard(el, ['topic_growth']); if (!g) return; const T = theme(el), P = T.c;
+    const all = g[0].filter((r) => r.subreddit === 'r/StopEatingSeedOils' && r.ratio != null && r.share_pre2024_pct > 0);
+    const top = all.slice().sort((x, y) => y.ratio - x.ratio).slice(0, 5);
+    const rows = top.map((r) => ({ label: r.label, a: r.share_pre2024_pct, b: r.share_from2024_pct, ratio: r.ratio, smallA: r.n_pre2024 < 300,
+      tip: [r.words.split(', ').slice(0, 8).join(', '), 'Before 2024: ' + r.share_pre2024_pct + '% of comments (' + d3.format(',')(r.n_pre2024) + ' comments)',
+        'From 2024: ' + r.share_from2024_pct + '% (' + d3.format(',')(r.n_from2024) + ' comments)'] }));
+    const lo = d3.min(rows, (r) => Math.min(r.a, r.b)) / 1.5, hi = d3.max(rows, (r) => Math.max(r.a, r.b)) * 1.5;
+    const ticks = [0.003, 0.01, 0.03, 0.1, 0.3, 1, 3, 10].filter((v) => v >= lo && v <= hi);
+    dumbbell(el, P, T, rows, { scale: 'log', domain: [lo, hi], ticks, fmt: (v) => v + '%', aLabel: 'Before 2024', bLabel: 'From 2024', rowH: 38,
+      delta: (r) => '\u00d7' + (r.b / r.a).toFixed(r.b / r.a >= 10 ? 0 : 1), aria: 'The five topics whose share of comments grew most from 2024, before and from 2024' });
+  });
+
+  // ------------------------------------------------------------------ Figure 5: emotion
+  dash.draw('emotion', (el) => {
+    const g = guard(el, ['emotion']); if (!g) return; const T = theme(el), P = T.c, m = state.emo;
+    const get = (sub, theme_, per) => g[0].find((r) => r.subreddit === sub && r.theme === theme_ && r.period === per);
+    const themes = [...new Set(g[0].filter((r) => r.subreddit === 'r/StopEatingSeedOils' && r.theme !== 'all (random)').map((r) => r.theme))];
+    const mk = (sub, th, label) => { const a = get(sub, th, 'before 2024'), b = get(sub, th, 'from 2024'); if (!a || !b) return null;
+      return { label, a: a[m], b: b[m], smallA: a.n < 300, smallB: b.n < 300, tip: [label, 'Before 2024: ' + a[m] + '% (' + d3.format(',')(a.n) + ' comments)', 'From 2024: ' + b[m] + '% (' + d3.format(',')(b.n) + ' comments)'] }; };
+    const rows = [mk('r/StopEatingSeedOils', 'all (random)', 'r/StopEatingSeedOils, all comments'), mk('r/ScientificNutrition', 'all (random)', 'r/ScientificNutrition, all comments')]
+      .concat(themes.map((t) => mk('r/StopEatingSeedOils', t, t.charAt(0).toUpperCase() + t.slice(1)))).filter(Boolean);
+    const head = rows.slice(0, 2), rest = rows.slice(2).sort((x, y) => y.b - x.b);
+    const max = d3.max(rows, (r) => Math.max(r.a, r.b)) || 10;
+    dumbbell(el, P, T, head.concat(rest), { scale: 'linear', domain: [0, Math.ceil(max / 5) * 5 + 2], fmt: (t) => t + '%', aLabel: 'Before 2024', bLabel: 'From 2024',
+      delta: (r) => (r.b - r.a >= 0 ? '+' : '−') + Math.abs(r.b - r.a).toFixed(1), aria: 'Share of comments with the chosen emotion by theme, before and from 2024' });
+  });
+
+  // ------------------------------------------------------------------ Figure 5b: DeepMoji over time
+  const MOJI_COL = { Laughter: '#E69F00', Love: '#CC79A7', Approval: '#009E73', Anger: '#D55E00', Sadness: '#0072B2', Skepticism: '#8a8a8a' };
+  const mojiIndex = (rows) => {
+    const base = {}; rows.filter((r) => r.quarter >= '2022Q1' && r.quarter < '2024Q1').forEach((r) => { const k = r.subreddit + '|' + r.group; (base[k] = base[k] || { s: 0, n: 0 }); base[k].s += r.pct * r.n; base[k].n += r.n; });
+    const out = rows.map((r) => { const b = base[r.subreddit + '|' + r.group]; return Object.assign({}, r, { idx: b ? r.pct / (b.s / b.n) * 100 : null }); }).filter((r) => r.idx != null);
+    const by = {}; out.forEach((r) => { (by[r.subreddit + '|' + r.group] = by[r.subreddit + '|' + r.group] || []).push(r); });
+    Object.values(by).forEach((a) => { a.sort((p, q) => (p.quarter < q.quarter ? -1 : 1)); a.forEach((r, i) => { const w = a.slice(Math.max(0, i - 2), i + 3); r.sm = d3.sum(w, (z) => z.idx * z.n) / d3.sum(w, (z) => z.n); }); });
+    return out;
+  };
+  dash.draw('mojilegend', (el) => {
+    const g = guard(el, ['deepmoji']); if (!g) return; el.replaceChildren();
+    const seen = {}; g[0].forEach((r) => { seen[r.group] = r.emojis; });
+    Object.keys(MOJI_COL).filter((k) => seen[k]).forEach((k) => { const s = document.createElement('span'), i = document.createElement('i'); i.style.background = MOJI_COL[k]; s.append(i, k + ' ' + seen[k].slice(0, 6)); el.appendChild(s); });
+  });
+  dash.draw('deepmoji', (el) => {
+    const g = guard(el, ['deepmoji']); if (!g) return; const T = theme(el), rows = mojiIndex(g[0]);
+    const subs = ['r/StopEatingSeedOils', 'r/ScientificNutrition'], groups = Object.keys(MOJI_COL).filter((k) => rows.some((r) => r.group === k));
+    const quarters = [...new Set(rows.map((r) => r.quarter))].sort();
+    const qx = (q) => Number(q.slice(0, 4)) + (Number(q.slice(5)) - 1) / 4;
+    el.replaceChildren(); el.style.position = 'relative'; const tip = tipFor(el);
+    const grid = document.createElement('div'); grid.className = 'sod-mg'; el.appendChild(grid);
+    const W = 420, H = 260, m = { l: 44, r: 8, t: 8, b: 22 };
+    const lo = d3.min(rows, (r) => r.sm), hi = d3.max(rows, (r) => r.sm);
+    const x = d3.scaleLinear().domain([qx(quarters[0]), qx(quarters[quarters.length - 1])]).range([m.l, W - m.r]);
+    const y = d3.scaleLinear().domain([Math.min(lo, 100) - 2, Math.max(hi, 100) + 2]).nice().range([H - m.b, m.t]);
+    subs.forEach((s) => {
+      const rs = rows.filter((r) => r.subreddit === s), cell = document.createElement('div'); grid.appendChild(cell);
+      const h = document.createElement('h4'); h.textContent = s; cell.appendChild(h);
+      const svg = d3.select(cell).append('svg').attr('viewBox', '0 0 ' + W + ' ' + H).style('width', '100%').style('height', 'auto').attr('role', 'img').attr('aria-label', 'Six emoji families indexed to their 2022 and 2023 average, by quarter, in ' + s);
+      y.ticks(5).forEach((v) => { svg.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y(v)).attr('y2', y(v)).attr('stroke', v === 100 ? T.fg : 'var(--cds-chart-grid, var(--color-border-line))').attr('opacity', v === 100 ? 0.5 : 1);
+        svg.append('text').attr('x', m.l - 4).attr('y', y(v) + 4).attr('text-anchor', 'end').attr('font-size', 11).attr('fill', T.mu).text(v); });
+      [2021, 2023, 2025].forEach((yr) => svg.append('text').attr('x', x(yr)).attr('y', H - 5).attr('text-anchor', 'middle').attr('font-size', 11).attr('fill', T.mu).text(yr));
+      svg.append('line').attr('x1', x(2024)).attr('x2', x(2024)).attr('y1', m.t).attr('y2', H - m.b).attr('stroke', T.fg).attr('stroke-dasharray', '4 3').attr('opacity', 0.6);
+      groups.forEach((gr) => { const d = rs.filter((r) => r.group === gr).sort((a, b) => qx(a.quarter) - qx(b.quarter));
+        svg.append('path').datum(d).attr('d', d3.line().x((r) => x(qx(r.quarter))).y((r) => y(r.sm))).attr('fill', 'none').attr('stroke', MOJI_COL[gr]).attr('stroke-width', 2.5).attr('stroke-linejoin', 'round'); });
+      svg.append('rect').attr('x', m.l).attr('y', m.t).attr('width', W - m.l - m.r).attr('height', H - m.t - m.b).attr('fill', 'transparent')
+        .on('mousemove', (e) => { const [mx, my] = d3.pointer(e, el); const qv = x.invert(d3.pointer(e, svg.node())[0]); const q = quarters.reduce((a, b) => (Math.abs(qx(b) - qv) < Math.abs(qx(a) - qv) ? b : a));
+          tip.show([s + ', ' + q].concat(groups.map((gr) => { const r = rs.find((z) => z.group === gr && z.quarter === q); return r ? gr + ': trend ' + r.sm.toFixed(0) + ', that quarter ' + r.idx.toFixed(0) + ' (' + r.pct.toFixed(1) + '% of mass)' : gr + ': no data'; })), mx, my); })
+        .on('mouseleave', () => tip.hide());
+    });
+  });
+  dash.draw('mojinote', (el) => {
+    const g = guard(el, ['deepmoji']); if (!g) return; el.textContent = '';
+    const rows = mojiIndex(g[0]); const post = (q) => q >= '2024Q1', pre = (q) => q >= '2022Q1' && q < '2024Q1';
+    const sg = (v) => { const r = Math.round(v * 10) / 10; return (r > 0 ? '+' : r < 0 ? '\u2212' : '') + Math.abs(r).toFixed(1) + '%'; };
+    const chg = (s, gr) => { const f = (p) => { const r = rows.filter((x) => x.subreddit === s && x.group === gr && p(x.quarter)); return d3.sum(r, (x) => x.pct * x.n) / d3.sum(r, (x) => x.n); }; return (f(post) / f(pre) - 1) * 100; };
+    const S = 'r/StopEatingSeedOils', C = 'r/ScientificNutrition';
+    el.textContent = 'From 2024 against 2022 and 2023, in ' + S + ' anger moved ' + sg(chg(S, 'Anger')) + ' relative to its own earlier level, love ' + sg(chg(S, 'Love')) + ', laughter ' + sg(chg(S, 'Laughter')) + ' and skepticism ' + sg(chg(S, 'Skepticism'))
+      + '; in ' + C + ' anger moved ' + sg(chg(C, 'Anger')) + ', love ' + sg(chg(C, 'Love')) + ', laughter ' + sg(chg(C, 'Laughter')) + ' and skepticism ' + sg(chg(C, 'Skepticism')) + '.';
+  });
+  dash.draw('goemolegend', (el) => {
+    const P = theme(el).c; el.replaceChildren();
+    [['r/StopEatingSeedOils', P.orange], ['r/ScientificNutrition', P.greyDot]].forEach(([t, c]) => { const s = document.createElement('span'), i = document.createElement('i'); i.style.background = c; s.append(i, t); el.appendChild(s); });
+  });
+  dash.draw('goemo', (el) => {
+    const g = guard(el, ['goemo']); if (!g) return; const T = theme(el), P = T.c; let rows = g[0];
+    const col = { 'r/StopEatingSeedOils': P.orange, 'r/ScientificNutrition': P.greyDot };
+    rows = rows.filter((r) => r.group !== 'Fearful'); const groups = [...new Set(rows.map((r) => r.group))], quarters = [...new Set(rows.map((r) => r.quarter))].sort();
+    const qx = (q) => Number(q.slice(0, 4)) + (Number(q.slice(5)) - 1) / 4;
+    el.replaceChildren(); el.style.position = 'relative'; const tip = tipFor(el);
+    const grid = document.createElement('div'); grid.className = 'sod-mg'; el.appendChild(grid);
+    const W = 330, H = 160, m = { l: 40, r: 8, t: 8, b: 20 };
+    groups.forEach((gr) => {
+      const rs = rows.filter((r) => r.group === gr), cell = document.createElement('div'); grid.appendChild(cell);
+      const h = document.createElement('h4'); h.textContent = gr; const sm = document.createElement('small'); sm.textContent = rs[0].labels; h.appendChild(sm); cell.appendChild(h);
+      const lo = d3.min(rs, (r) => r.pct), hi = d3.max(rs, (r) => r.pct), pad = (hi - lo) * 0.15 || 0.5;
+      const x = d3.scaleLinear().domain([qx(quarters[0]), qx(quarters[quarters.length - 1])]).range([m.l, W - m.r]);
+      const y = d3.scaleLinear().domain([lo - pad, hi + pad]).nice().range([H - m.b, m.t]);
+      const svg = d3.select(cell).append('svg').attr('viewBox', '0 0 ' + W + ' ' + H).style('width', '100%').style('height', 'auto').attr('role', 'img').attr('aria-label', gr + ' share of comments by quarter in the two subreddits');
+      y.ticks(3).forEach((v) => { svg.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y(v)).attr('y2', y(v)).attr('stroke', 'var(--cds-chart-grid, var(--color-border-line))');
+        svg.append('text').attr('x', m.l - 4).attr('y', y(v) + 4).attr('text-anchor', 'end').attr('font-size', 11).attr('fill', T.mu).text(v.toFixed(1) + '%'); });
+      [2021, 2023, 2025].forEach((yr) => svg.append('text').attr('x', x(yr)).attr('y', H - 5).attr('text-anchor', 'middle').attr('font-size', 11).attr('fill', T.mu).text(yr));
+      svg.append('line').attr('x1', x(2024)).attr('x2', x(2024)).attr('y1', m.t).attr('y2', H - m.b).attr('stroke', T.fg).attr('stroke-dasharray', '4 3').attr('opacity', 0.6);
+      Object.keys(col).forEach((s) => { const d = rs.filter((r) => r.subreddit === s).sort((a, b) => qx(a.quarter) - qx(b.quarter));
+        svg.append('path').datum(d).attr('d', d3.line().x((r) => x(qx(r.quarter))).y((r) => y(r.pct))).attr('fill', 'none').attr('stroke', col[s]).attr('stroke-width', 2).attr('stroke-linejoin', 'round'); });
+      svg.append('rect').attr('x', m.l).attr('y', m.t).attr('width', W - m.l - m.r).attr('height', H - m.t - m.b).attr('fill', 'transparent')
+        .on('mousemove', (e) => { const [mx, my] = d3.pointer(e, el); const qv = x.invert(d3.pointer(e, svg.node())[0]); const q = quarters.reduce((a, b) => (Math.abs(qx(b) - qv) < Math.abs(qx(a) - qv) ? b : a));
+          const pick = (s) => rs.find((r) => r.subreddit === s && r.quarter === q);
+          tip.show([gr + ', ' + q].concat(Object.keys(col).map((s) => { const r = pick(s); return s + ': ' + (r ? r.pct.toFixed(1) + '% (' + d3.format(',')(r.n) + ' comments)' : 'no data'); })), mx, my); })
+        .on('mouseleave', () => tip.hide());
+    });
+  });
+  dash.draw('goemonote', (el) => {
+    const g = guard(el, ['goemo']); if (!g) return; el.textContent = '';
+    const avg = (s, gr, f) => { const r = g[0].filter((x) => x.subreddit === s && x.group === gr && f(x.quarter)); return d3.sum(r, (x) => x.pct * x.n) / d3.sum(r, (x) => x.n); };
+    const pre = (q) => q >= '2022Q1' && q < '2024Q1', post = (q) => q >= '2024Q1';
+    const S = 'r/StopEatingSeedOils', C = 'r/ScientificNutrition', sg = (v) => (v >= 0 ? '+' : '') + v.toFixed(1);
+    const d = (s, gr) => avg(s, gr, post) - avg(s, gr, pre);
+    el.textContent = 'From 2024 against 2022 and 2023, in ' + S + ' the hostile share moved ' + sg(d(S, 'Hostile')) + ' points, positive ' + sg(d(S, 'Positive')) + ' and inquisitive ' + sg(d(S, 'Inquisitive'))
+      + '; in ' + C + ' hostile moved ' + sg(d(C, 'Hostile')) + ', positive ' + sg(d(C, 'Positive')) + ' and inquisitive ' + sg(d(C, 'Inquisitive')) + '.';
+  });
+
+  // ------------------------------------------------------------------ Figure 6: where seed-oil commenters also post
+  dash.draw('cocnet', (el) => {
+    const g = guard(el, ['cocomment_nodes', 'cocomment_edges', 'cocomment_share']); if (!g) return;
+    const [nodes, edges, shares] = g; const T = theme(el), P = T.c;
+    const W = Math.max(280, el.clientWidth), H = Math.round(Math.min(560, W * 0.95)), pad = 24;
+    const sx = (v) => pad + (v + 1) / 2 * (W - 2 * pad), sy = (v) => pad + (v + 1) / 2 * (H - 2 * pad);
+    const cols = [P.blue, P.violet, P.aqua, P.magenta, P.yellow];
+    const colorOf = (n) => cols[n.community] || P.greyDot;
+    const sh = {}; shares.forEach((s) => { sh[s.subreddit] = s; });
+    const idx = {}; nodes.forEach((n) => { idx[n.subreddit] = n; });
+    const rad = (n) => 3 + 0.3 * Math.sqrt(n.n_authors);
+    const maxLift = d3.max(edges, (e) => e.lift) || 2;
+    el.replaceChildren();
+    const lgd = document.createElement('div'); lgd.className = 'sod-legend';
+    d3.groups(nodes, (n) => n.community).sort((a, b) => a[0] - b[0]).forEach(([c, ns]) => {
+      const s = document.createElement('span'), i = document.createElement('i'); i.className = 'dot'; i.style.background = cols[c] || P.greyDot;
+      s.append(i, ns.sort((a, b) => b.n_authors - a.n_authors).slice(0, 3).map((n) => n.subreddit).join(', ') + '…'); lgd.appendChild(s); });
+    el.appendChild(lgd);
+    const svg = d3.select(el).append('svg').attr('width', W).attr('height', H).attr('role', 'img').attr('aria-label', 'Network of ' + nodes.length + ' subreddits where the most active seed-oil commenters also post');
+    edges.forEach((e) => { const a = idx[e.source], b = idx[e.target]; if (!a || !b) return;
+      svg.append('line').attr('x1', sx(a.x)).attr('y1', sy(a.y)).attr('x2', sx(b.x)).attr('y2', sy(b.y)).attr('stroke', T.mu).attr('stroke-opacity', 0.22 + 0.5 * Math.min(1, (e.lift - 1) / (maxLift - 1))).attr('stroke-width', 1.2); });
+    const tip = tipFor(el);
+    const order = nodes.slice().sort((a, b) => b.n_authors - a.n_authors);
+    nodes.forEach((n) => {
+      svg.append('circle').attr('cx', sx(n.x)).attr('cy', sy(n.y)).attr('r', rad(n)).attr('fill', colorOf(n)).attr('fill-opacity', 0.85).attr('stroke', T.bg).attr('stroke-width', 1.5)
+        .on('mousemove', (ev) => { const s = sh[n.subreddit] || {}, b = el.getBoundingClientRect();
+          tip.show([n.subreddit, n.n_authors + ' of the fetched commenters post here', 'Share of commenters: ' + s.share_pre2024_pct + '% before 2024, ' + s.share_from2024_pct + '% from 2024'], ev.clientX - b.left, ev.clientY - b.top); })
+        .on('mouseleave', () => tip.hide());
+    });
+    const placed = [];
+    const measure = svg.append('text').style('visibility', 'hidden');
+    order.slice(0, 40).forEach((n) => {
+      const t = n.subreddit.replace('r/', ''); measure.text(t); const w = measure.node().getComputedTextLength();
+      const x = sx(n.x) + rad(n) + 3, y = sy(n.y) + 4;
+      const box = [x - 2, y - 11, x + w + 2, y + 3];
+      if (box[2] > W - 2 || placed.some((p) => !(box[2] < p[0] || box[0] > p[2] || box[3] < p[1] || box[1] > p[3]))) return;
+      placed.push(box); svg.append('text').attr('x', x).attr('y', y).text(t);
+    });
+    measure.remove();
+  });
+  dash.draw('cocshare', (el) => {
+    const g = guard(el, ['cocomment_share']); if (!g) return; const T = theme(el), P = T.c;
+    const rows = g[0].filter((r) => r.group === 'riser' || r.group === 'faller').map((r) => ({ label: r.subreddit, a: r.share_pre2024_pct, b: r.share_from2024_pct,
+      tip: [r.subreddit, 'Before 2024: ' + r.share_pre2024_pct + '% of active commenters', 'From 2024: ' + r.share_from2024_pct + '% of active commenters'] }));
+    rows.sort((x, y) => (y.b - y.a) - (x.b - x.a));
+    dumbbell(el, P, T, rows, { rowH: 22, scale: 'linear', domain: [0, 40], fmt: (t) => t + '%', aLabel: 'Before 2024', bLabel: 'From 2024',
+      delta: (r) => (r.b - r.a >= 0 ? '+' : '−') + Math.abs(r.b - r.a).toFixed(0), aria: 'Share of commenters who also post in each subreddit, before and from 2024' });
+  });
+
+  // ------------------------------------------------------------------ Figure 7: the backbone of topic similarity among commenters
+  const CNP = { light: ['#1baf7a', '#6250d6', '#e87ba4', '#eda100', '#2a8f9c', '#8c6d31', '#7a5195', '#4f7a28', '#c2548f', '#5b6c8f'], dark: ['#2fc9a0', '#9085e9', '#e59ac4', '#f0b429', '#5fd0c2', '#c9a45c', '#a98bd6', '#8fb85a', '#e060c8', '#8a9bc0'] };
+  const cnCol = (c, T) => (c < 10 ? CNP[T.dark ? 'dark' : 'light'][c] : T.c.greyDot);
+  const cnOld = (T) => (T.dark ? '#7fa4c4' : '#3d5a73');
+  listen('cn-color', 'cnColor', ['nntime', 'nnlegend']);
+
+  // ------------------------------------------------------------------ Figures 8 and 9: the niche timeline and the outcome overlay
+  state.nnMonth = 57; state.nnWhat = 'h'; state.nnPer = ''; state.cnColor = 'community';
+  const nnX = (v) => 30 + v * 940, nnY = (v) => 30 + v * 700, nnR = (n) => 1.6 + 0.42 * Math.sqrt(n.d);
+  const nnHex = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16)), nnMix = (a, b, t) => 'rgb(' + a.map((v, i) => Math.round(v + (b[i] - v) * t)).join(',') + ')';
+  const nnRamp = (T) => ({ lo: T.dark ? '#2a313a' : '#e6eaef', hi: T.c.orange });
+  const nnEdges = (E, N, keep) => E.reduce((s, e) => (keep(e.s, e.t) ? s + 'M' + nnX(N[e.s].x).toFixed(1) + ' ' + nnY(N[e.s].y).toFixed(1) + 'L' + nnX(N[e.t].x).toFixed(1) + ' ' + nnY(N[e.t].y).toFixed(1) : s), '');
+  function nnRedraw() { ['nntime', 'nnlegend', 'nnmonth'].forEach((n) => dash.draw(n)); }
+  dash.draw('nnmonth', (el) => {
+    const g = guard(el, ['nn_months']); if (!g) return; const m = Math.min(state.nnMonth, g[0].length - 1); el.textContent = g[0][m].m;
+  });
+  dash.draw('nntime', (el) => {
+    const g = guard(el, ['nn_nodes', 'cn_edges', 'cn_comms', 'nn_months']); if (!g) return; const [N, E, C, M] = g; const T = theme(el), m = Math.min(state.nnMonth, M.length - 1);
+    const lab = {}; C.forEach((r) => { lab[r.id] = r; }); const here = N.map((n) => n.fm <= m);
+    el.replaceChildren(); el.style.position = 'relative'; const tip = tipFor(el);
+    const svg = d3.select(el).append('svg').attr('viewBox', '0 0 1000 760').style('width', '100%').style('height', 'auto').attr('role', 'img')
+      .attr('aria-label', 'Network of commenters appearing month by month, coloured by ' + (state.cnColor === 'cohort' ? 'newcomer or long-time' : 'community') + '; ' + here.filter(Boolean).length + ' of ' + N.length + ' people have appeared by ' + M[m].m);
+    svg.append('path').attr('d', nnEdges(E, N, (s, t) => here[s] && here[t])).attr('fill', 'none').attr('stroke', 'var(--cds-chart-grid, var(--color-border-line))').attr('stroke-width', 0.6).attr('opacity', 0.6);
+    N.forEach((n, i) => {
+      svg.append('circle').attr('cx', nnX(n.x)).attr('cy', nnY(n.y)).attr('r', nnR(n)).attr('fill', state.cnColor === 'cohort' ? (n.o ? cnOld(T) : T.c.orange) : cnCol(n.c, T)).attr('fill-opacity', here[i] ? 0.92 : 0.07).attr('stroke', T.bg).attr('stroke-width', 0.5)
+        .on('mousemove', (ev) => { const b = el.getBoundingClientRect(); tip.show([lab[n.c].label, n.o ? 'Long-time commenter' : 'Newcomer', 'First commented: ' + (n.fm === 0 ? '2022 or earlier' : M[n.fm].m)], ev.clientX - b.left, ev.clientY - b.top); }).on('mouseleave', () => tip.hide());
+    });
+    const cnt = Array(16).fill(0), tot = Array(16).fill(0); N.forEach((n, i) => { tot[n.c]++; if (here[i]) cnt[n.c]++; });
+    for (let c = 0; c < 10; c++) { const mm = N.filter((n) => n.c === c); if (!mm.length || cnt[c] < tot[c] * 0.05) continue; svg.append('text').attr('class', 'cn-lab').attr('x', nnX(d3.mean(mm, (n) => n.x))).attr('y', nnY(d3.mean(mm, (n) => n.y))).attr('text-anchor', 'middle').text((c + 1) + ' ' + lab[c].short); }
+  });
+  dash.draw('nnlegend', (el) => {
+    const g = guard(el, ['nn_nodes', 'cn_comms', 'nn_months']); if (!g) return; const [N, C, M] = g; const T = theme(el), m = Math.min(state.nnMonth, M.length - 1); el.replaceChildren();
+    const add = (color, text) => { const s = document.createElement('span'), i = document.createElement('i'); i.className = 'dot'; i.style.background = color; s.append(i, text); el.appendChild(s); };
+    if (state.cnColor === 'cohort') {
+      const old = N.filter((n) => n.o && n.fm <= m).length, nw = N.filter((n) => !n.o && n.fm <= m).length;
+      add(cnOld(T), 'Long-time commenter (first comment before 2024): ' + old); add(T.c.orange, 'Newcomer (first comment from 2024): ' + nw); return;
+    }
+    const cnt = Array(16).fill(0), tot = Array(16).fill(0); N.forEach((n) => { tot[n.c]++; if (n.fm <= m) cnt[n.c]++; });
+    C.filter((r) => r.id < 10).forEach((r) => add(cnCol(r.id, T), (r.id + 1) + ' ' + r.short + ': ' + cnt[r.id] + ' of ' + tot[r.id])); if (C.length > 10) add(T.c.greyDot, '11 to ' + C.length + ': smaller communities');
+  });
+  dash.draw('nnscale', (el) => {
+    const g = guard(el, ['nn_nodes']); if (!g) return; const T = theme(el), R = nnRamp(T), max = state.nnWhat === 'h' ? 14 : 22; el.replaceChildren();
+    const w = document.createElement('span'); w.className = 'sod-grad'; const l = document.createElement('span'), bar = document.createElement('span'), r = document.createElement('span');
+    l.textContent = '0%'; bar.className = 'bar'; bar.style.background = 'linear-gradient(90deg,' + R.lo + ',' + R.hi + ')'; r.textContent = max + '% or more'; w.append(l, bar, r);
+    const q = document.createElement('span'); q.textContent = 'Grey: no comments in this period'; el.append(w, q);
+  });
+  dash.draw('nnout', (el) => {
+    const g = guard(el, ['nn_nodes', 'cn_edges', 'cn_comms']); if (!g) return; const [N, E, C] = g; const T = theme(el), R = nnRamp(T), lo = nnHex(R.lo), hi = nnHex(d3.color(R.hi).formatHex()), k = state.nnWhat, p = state.nnPer, max = k === 'h' ? 14 : 22, grey = T.dark ? '#444b55' : '#cfd5dc';
+    const lab = {}; C.forEach((r) => { lab[r.id] = r; }); el.replaceChildren(); el.style.position = 'relative'; const tip = tipFor(el);
+    const svg = d3.select(el).append('svg').attr('viewBox', '0 0 1000 760').style('width', '100%').style('height', 'auto').attr('role', 'img')
+      .attr('aria-label', 'Network of commenters coloured by their share of ' + (k === 'h' ? 'hostile' : 'downvoted') + ' comments; the communities are labelled on the map');
+    svg.append('path').attr('d', nnEdges(E, N, () => true)).attr('fill', 'none').attr('stroke', 'var(--cds-chart-grid, var(--color-border-line))').attr('stroke-width', 0.6).attr('opacity', 0.55);
+    N.forEach((n) => {
+      const v = n[k + p]; const fill = v === null || v === undefined ? grey : nnMix(lo, hi, Math.max(0, Math.min(1, v / max)));
+      svg.append('circle').attr('cx', nnX(n.x)).attr('cy', nnY(n.y)).attr('r', nnR(n)).attr('fill', fill).attr('fill-opacity', 0.95).attr('stroke', T.bg).attr('stroke-width', 0.5)
+        .on('mousemove', (ev) => { const b = el.getBoundingClientRect(); tip.show([lab[n.c].label, (k === 'h' ? 'Hostile' : 'Downvoted') + ' share (shrunk): ' + (v === null || v === undefined ? 'no comments in this period' : v + '%'), n.d + ' comments in the topic model'], ev.clientX - b.left, ev.clientY - b.top); }).on('mouseleave', () => tip.hide());
+    });
+    for (let c = 0; c < 10; c++) { const mm = N.filter((n) => n.c === c); svg.append('text').attr('class', 'cn-lab').attr('x', nnX(d3.mean(mm, (n) => n.x))).attr('y', nnY(d3.mean(mm, (n) => n.y))).attr('text-anchor', 'middle').text((c + 1) + ' ' + lab[c].short); }
+  });
+  dash.draw('nnnoteb', (el) => {
+    const g = guard(el, ['nn_comms']); if (!g) return; const R = g[0], ov = R.find((r) => r.c === -2), niches = R.filter((r) => r.c >= 0);
+    const rose = (lo) => niches.filter((r) => lo(r) !== null && lo(r) > 0).map((r) => r.label).join('; ');
+    const top = niches.filter((r) => r.h0 !== null).sort((x, y) => y.h0 - x.h0).slice(0, 2);
+    el.textContent = 'Overall the hostile share rose from ' + ov.h0 + '% to ' + ov.h1 + '% and the downvoted share from ' + ov.v0 + '% to ' + ov.v1 + '%. Hostility clearly rose (95% interval above zero) in: ' + rose((r) => r.h_lo) + '. In every other community the data cannot tell a change from no change. That includes ' + top[0].label + ' and ' + top[1].label + ', the most hostile communities before 2024 (' + top[0].h0 + '% and ' + top[1].h0 + '%): their estimates fell slightly, but with few comments before 2024 (' + top[0].n0 + ' and ' + top[1].n0 + ') the interval is wide. Downvotes clearly rose in: ' + rose((r) => r.v_lo) + '.';
+  });
+  (function () {
+    const slider = document.getElementById('nn-slider'), play = document.getElementById('nn-play'), pause = document.getElementById('nn-pause'); let timer = null;
+    const stop = () => { if (timer) { clearInterval(timer); timer = null; } if (play) play.hidden = false; if (pause) pause.hidden = true; };
+    if (slider) slider.addEventListener('input', () => { stop(); state.nnMonth = Number(slider.value); nnRedraw(); });
+    if (play) play.addEventListener('click', () => {
+      const last = Number(slider.max); if (state.nnMonth >= last) { state.nnMonth = 0; slider.value = 0; nnRedraw(); }
+      play.hidden = true; pause.hidden = false;
+      timer = setInterval(() => { if (state.nnMonth >= last) { stop(); return; } state.nnMonth += 1; slider.value = state.nnMonth; nnRedraw(); }, 280);
+    });
+    if (pause) pause.addEventListener('click', stop);
+  })();
+  listen('nn-what', 'nnWhat', ['nnout', 'nnscale']); listen('nn-per', 'nnPer', ['nnout']);
+})();
+</script>
