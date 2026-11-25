@@ -1,0 +1,74 @@
+# HAND-MERGED NAMES AND MULTI-WORD TERMS. Edit freely; lines starting with # are ignored (use # to switch an alias off).
+# canonical = the single token the name becomes (lowercase letters/digits joined by hyphens, e.g. rfk-jr).
+# alias     = a way people write it. Write it naturally: before matching, both the text and the alias are lowercased, possessive 's is
+#             removed (Knobbe's -> knobbe), apostrophes and full stops are deleted (RFK Jr. -> rfk jr) and other punctuation becomes a space.
+#             Matching is whole words only; the longest alias wins ("robert f kennedy jr" before "kennedy jr" before "rfk").
+# Used ONLY where words are counted (topic labels, newcomer terms, name counts). Embeddings and emotion models read the original text.
+# Check what each alias catches before trusting it:  python seedoils/notebooks/seedoil_common.py aliases
+# The rows below are SUGGESTIONS to review, not decisions. Ambiguous aliases are switched off with #.
+canonical,alias,note
+rfk-jr,rfk,
+rfk-jr,rfk jr,
+rfk-jr,rfkjr,
+rfk-jr,robert f kennedy,
+rfk-jr,robert f kennedy jr,
+rfk-jr,robert kennedy jr,
+rfk-jr,kennedy jr,
+rfk-jr,bobby kennedy,
+# rfk-jr,kennedy,ambiguous: JFK or other Kennedys
+# rfk-jr,bobby,ambiguous
+trump,donald trump,
+trump,president trump,
+maha,make america healthy again,
+ray-peat,ray peat,
+ray-peat,raypeat,
+# ray-peat,peat,mostly Ray Peat here but check (peat moss / gardening)
+chris-knobbe,knobbe,
+chris-knobbe,chris knobbe,
+chris-knobbe,christopher knobbe,
+chris-knobbe,dr knobbe,
+cate-shanahan,cate shanahan,
+cate-shanahan,catherine shanahan,
+cate-shanahan,dr cate,
+cate-shanahan,dr shanahan,
+cate-shanahan,shanahan,
+tucker-goodrich,tucker goodrich,
+tucker-goodrich,goodrich,
+# tucker-goodrich,tucker,ambiguous: Tucker Carlson
+tucker-carlson,tucker carlson,
+ancel-keys,ancel keys,
+ancel-keys,ancel,
+# ancel-keys,keys,ambiguous: ordinary word
+brad-marshall,brad marshall,
+# brad-marshall,marshall,check by reading
+# brad-marshall,brad,check by reading
+paul-saladino,paul saladino,
+paul-saladino,saladino,
+minnesota-coronary-experiment,minnesota coronary experiment,
+minnesota-coronary-experiment,minnesota coronary survey,
+# minnesota-coronary-experiment,mce,check by reading
+sydney-diet-heart-study,sydney diet heart study,
+sydney-diet-heart-study,sydney diet heart,
+fda,food and drug administration,
+american-heart-association,american heart association,
+# american-heart-association,aha,ambiguous: the interjection "aha"
+# ---- MULTI-WORD TERMS (decision 22 Nov): kept as one token, so a negation marks the whole term ("no seed oils" -> no_seed-oils).
+# Singular and plural stay separate (no lemmatization). Hyphenated spellings people type ("seed-oil", "peer-reviewed") are already one token.
+seed-oil,seed oil,
+seed-oils,seed oils,
+peer-review,peer review,
+peer-reviews,peer reviews,
+peer-reviewed,peer reviewed,
+# Candidates from the most frequent word pairs; switch on by removing the #:
+# olive-oil,olive oil,
+# avocado-oil,avocado oil,
+# coconut-oil,coconut oil,
+# vegetable-oil,vegetable oil,
+# vegetable-oils,vegetable oils,
+# linoleic-acid,linoleic acid,
+# saturated-fat,saturated fat,
+# processed-food,processed food,
+# processed-foods,processed foods,
+# heart-disease,heart disease,
+# red-meat,red meat,
+# weight-loss,weight loss,

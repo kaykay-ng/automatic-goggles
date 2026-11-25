@@ -17,6 +17,7 @@ up to PER_SIDE comments per side per paper, drawn at random (seed 7); order shuf
 Stance codes to use: S = supports the paper's conclusion / uses it as evidence for its point; D = disputes it (methods, relevance, conclusion);
 N = neutral mention / just a link; ? = cannot tell. Focus (optional, free text): which part of the paper the comment leans on.
 """
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import csv
 import gzip
 import json
@@ -45,9 +46,10 @@ def vote_pct(sub):
     with gzip.open(RAW / f"{sub}_comments.jsonl.gz", "rt", encoding="utf-8") as f:
         for line in f:
             x = json.loads(line)
+            if is_bot(x.get("author")):
+                continue
             rows.append((x["id"], x["link_id"], str(x.get("parent_id", "")).startswith("t3_"), int(x["created_utc"]), x.get("score")))
     C = pd.DataFrame(rows, columns=["id", "link_id", "top", "t", "score"]).dropna(subset=["score"])
-    C = C[C.t < C.t.max() - 3 * 86400]
     g = C.groupby(["link_id", "top"]).score
     C = C[g.transform("size") >= 5].copy()
     C["pct"] = C.groupby(["link_id", "top"]).score.rank(method="average", pct=True)
@@ -114,7 +116,7 @@ def main():
     with gzip.open(PROC / "citations.csv.gz", "rt", encoding="utf-8") as f:
         for r in csv.DictReader(f):
             w = works.get((r["id_type"], r["id_value"]))
-            if w and r["author"] not in ("", "[deleted]"):
+            if w and r["author"] not in ("", "[deleted]") and not is_bot(r["author"]):
                 cites.append({**r, "work": w, "comm": comm_of.get(w)})
     C = pd.DataFrame(cites).drop_duplicates(["subreddit", "doc_id", "work"])
     C["created_utc"] = C.created_utc.astype(int)

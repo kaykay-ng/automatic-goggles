@@ -14,6 +14,7 @@ NOT resolved (no identifier in the URL): ScienceDirect (PII), MDPI, Oxford Acade
 OpenAlex: api.openalex.org/works, batch filters of 50 ids; no API key or contact email is sent. Fields kept include MeSH terms
 (PubMed-indexed papers), used to tag 'Humans' vs animal/in-vitro research, and publication types such as Randomized Controlled Trial.
 """
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import csv
 import gzip
 import json
@@ -70,6 +71,8 @@ def extract():
             with gzip.open(RAW / f"{sub}_{kind}.jsonl.gz", "rt", encoding="utf-8") as f:
                 for line in f:
                     x = json.loads(line)
+                    if is_bot(x.get("author")):
+                        continue
                     found = set()
                     for fld in fields:
                         for url in URL.findall(x.get(fld) or ""):

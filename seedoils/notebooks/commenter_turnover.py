@@ -1,6 +1,7 @@
 """Commenters per calendar year and the share who commented there for the first time that year (excludes [deleted] and AutoModerator). Appends/replaces facts in data/processed/artifact/facts.json.
 Replaces the misleading '91% of commenters from 2024 had not commented before' framing (a three-year window against a small base) with per-year counts.
 Run from final_project/ after artifact_data.py:  ./.venv-nlp/bin/python seedoils/notebooks/commenter_turnover.py"""
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import glob, gzip, json
 from pathlib import Path
 import pandas as pd
@@ -10,7 +11,7 @@ def yearly(sub):
     with gzip.open(glob.glob(f"seedoils/data/raw/*{sub}_comments.jsonl.gz")[0], "rt", encoding="utf-8") as f:
         for l in f:
             x = json.loads(l); r.append((x["author"], int(x["created_utc"])))
-    C = pd.DataFrame(r, columns=["a", "t"]); C = C[~C.a.isin(["[deleted]", "AutoModerator"])]; C["y"] = pd.to_datetime(C.t, unit="s").dt.year
+    C = pd.DataFrame(r, columns=["a", "t"]); C = C[(~C.a.isin(["[deleted]", "AutoModerator"]) & not_bot(C.a))]; C["y"] = pd.to_datetime(C.t, unit="s").dt.year
     fy = C.groupby("a").y.min(); n = {y: C[C.y == y].a.nunique() for y in range(2021, 2027)}; new = {y: round(100 * (fy[C[C.y == y].a.unique()] == y).mean()) for y in n}
     return n, new
 def add(k, v, label, unit=""): rows[k] = {"key": k, "value": v, "label": label, "unit": unit}

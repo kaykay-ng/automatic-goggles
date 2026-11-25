@@ -60,7 +60,7 @@ def load_graph(kind):
 def ctfidf_labels(groups, nodes, k=8):
     ids = sorted(groups)
     docs = [" ".join(nodes[n]["title"] for n in groups[c]) for c in ids]
-    cv = CountVectorizer(stop_words=list(STOP), min_df=3, ngram_range=(1, 2), token_pattern=r"(?u)\b[a-zA-Z][a-zA-Z\-]{2,}\b")
+    cv = CountVectorizer(stop_words=list(STOP), min_df=3, ngram_range=(1, 2), token_pattern=r"(?u)\b[a-zA-Z]\w*(?:-\w+)+\b|\b[a-zA-Z][a-zA-Z]{2,}\b")
     X = cv.fit_transform(docs).toarray().astype(float)
     tf = X / np.maximum(X.sum(axis=1, keepdims=True), 1)
     avg = X.sum() / len(ids)

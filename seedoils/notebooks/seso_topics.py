@@ -5,19 +5,25 @@ Run from final_project/ with the NLP env (steps 2-3 are slow; run in the backgro
   ./.venv-nlp/bin/python seedoils/notebooks/seso_topics.py prep    # -> seso_docs.csv.gz (doc text, gitignored)
   ./.venv-nlp/bin/python seedoils/notebooks/seso_topics.py embed   # -> seso_vectors.npy (all-MiniLM-L6-v2, gitignored)
   ./.venv-nlp/bin/python seedoils/notebooks/seso_topics.py fit     # -> seso_doc_topics.csv.gz, seso_topics_info.csv, seso_topics_by_quarter.csv
+  ./.venv-nlp/bin/python seedoils/notebooks/seso_topics.py relabel # topic words again from the SAVED assignments, hyphens kept (no refit; ids unchanged)
   ./.venv-nlp/bin/python seedoils/notebooks/seso_topics.py votes   # -> seso_topic_votes.csv (relative upvotes per topic, before vs from 2024)
+
+Tokens (22 Nov): topic words keep hyphenated compounds whole ('omega-6', 'n-6', 'low-fat'); see seedoil_common.TOKEN_PATTERN and HyphenBERTopic.
+Earlier runs used BERTopic's default clean-up, which deleted hyphens ('omega-6' -> 'omega6').
+Note: BERTopic fits the vectorizer on ONE joined text per topic, so min_df=20 means a word must occur in at least 20 topics.
 
 Relative upvotes (votes step): raw scores are not comparable (the subreddit grew; mean score ~2 in 2018-19, ~4.2 in 2024-25;
 busy threads collect more votes). Each comment gets its PERCENTILE RANK of score WITHIN ITS THREAD AND LEVEL (top-level vs reply),
 ties averaged (38% of comments sit at score 1). 0.5 = typical for its thread, 1 = the thread's best-voted. Reference set = ALL comments
-in the thread, including those too short for the topic model. Threads with < MIN_THREAD comments at that level and comments younger
-than 3 days at download (scores settle after ~36 h, per the Arctic Shift docs) are left out. Self-posts are not scored this way.
+in the thread, including those too short for the topic model, bots excluded. Threads with < MIN_THREAD comments at that level are left out.
+Comments of every age are kept (decision 22 Nov), although the scores of comments from the last ~36 h before download were still settling. Self-posts are not scored this way.
 
 Documents: comments with >= MIN_WORDS words after cleaning, plus self-posts (title + body) with >= MIN_WORDS words.
 Cleaning: quoted lines ('> ...', usually the parent comment) and URLs removed; [removed]/[deleted], AutoModerator and *bot authors dropped.
 Recipe as notebooks/b_topics.py and ndc/notebooks/climate_topics.py (course week 7): UMAP(5 dims, cosine, seed 42) + HDBSCAN + c-TF-IDF,
 outliers then reassigned by embeddings. Unlike those scripts, proper nouns are KEPT: names (RFK, Knobbe, Ray Peat, Ancel Keys) are the point here.
 """
+from seedoil_common import is_bot, not_bot, TOKEN_PATTERN, bertopic_clean, hyphen_bertopic  # shared bot rule: AutoModerator + names ending in 'bot'
 import gzip
 import json
 import re
@@ -83,6 +89,7 @@ def embed():
 
 def fit():
     from bertopic import BERTopic
+    HyphenBERTopic = hyphen_bertopic()  # BERTopic, but hyphens survive its text clean-up
     from hdbscan import HDBSCAN
     from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, CountVectorizer
     from umap import UMAP
@@ -90,8 +97,8 @@ def fit():
     V = np.load(PROC / f"{PFX}_vectors.npy").astype(np.float32)
     docs = D.text.tolist()
     stop = list(ENGLISH_STOP_WORDS | REDDIT_FILLER)
-    vec = lambda: CountVectorizer(stop_words=stop, min_df=20, ngram_range=(1, 2))
-    tm = BERTopic(umap_model=UMAP(n_neighbors=15, n_components=5, min_dist=0.0, metric="cosine", random_state=42),
+    vec = lambda: CountVectorizer(stop_words=stop, token_pattern=TOKEN_PATTERN, min_df=20, ngram_range=(1, 2))
+    tm = HyphenBERTopic(umap_model=UMAP(n_neighbors=15, n_components=5, min_dist=0.0, metric="cosine", random_state=42),
                   hdbscan_model=HDBSCAN(min_cluster_size=150, min_samples=15, metric="euclidean", cluster_selection_method="eom", prediction_data=True),
                   vectorizer_model=vec(), calculate_probabilities=False, verbose=True)
     topics, _ = tm.fit_transform(docs, embeddings=V)
@@ -121,6 +128,38 @@ def fit():
     print(T.sort_values("n_docs", ascending=False).to_string(index=False))
 
 
+def relabel():
+    """Rewrite the topic words in {PFX}_topics_info.csv from the SAVED topic assignments ({PFX}_doc_topics.csv.gz) with the hyphen-keeping
+    tokenizer, without refitting: topic ids, sizes and shares stay exactly as they are. Reproduces BERTopic's own topic-word step:
+    one joined text per topic (after bertopic_clean), CountVectorizer fitted on those texts (so min_df=20 means 'in >= 20 TOPICS'),
+    c-TF-IDF = per-topic L1-normalised counts x log(1 + mean words per topic / total count of the word), top 10 words.
+    The previous words are kept in a column top_words_before_relabel (first run only)."""
+    import scipy.sparse as sp
+    from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, CountVectorizer
+    from sklearn.preprocessing import normalize
+    D = pd.read_csv(PROC / f"{PFX}_docs.csv.gz", usecols=["id", "text"], keep_default_na=False)
+    T = pd.read_csv(PROC / f"{PFX}_doc_topics.csv.gz", usecols=["id", "topic"])
+    D = D.merge(T, on="id", how="inner")
+    topics = sorted(D.topic.unique())
+    joined = D.groupby("topic").text.apply(lambda s: " ".join(bertopic_clean(t) for t in s)).reindex(topics).tolist()
+    cv = CountVectorizer(stop_words=list(ENGLISH_STOP_WORDS | REDDIT_FILLER), token_pattern=TOKEN_PATTERN, min_df=20, ngram_range=(1, 2))
+    C = sp.csr_matrix(cv.fit_transform(joined), dtype=np.float64); vocab = cv.get_feature_names_out()
+    idf = np.log(int(C.sum(axis=1).mean()) / np.maximum(np.asarray(C.sum(axis=0)).ravel(), 1) + 1)
+    W = normalize(C, axis=1, norm="l1").multiply(idf).toarray()
+    words = {t: ", ".join(vocab[j] for j in np.argsort(-W[i])[:10]) for i, t in enumerate(topics)}
+    I = pd.read_csv(PROC / f"{PFX}_topics_info.csv")
+    if "top_words_before_relabel" not in I.columns:
+        I["top_words_before_relabel"] = I.top_words
+    I["top_words"] = I.topic.map(words)
+    I.to_csv(PROC / f"{PFX}_topics_info.csv", index=False)
+    hy = sorted({w for w in vocab if "-" in w}, key=lambda w: -C[:, list(vocab).index(w)].sum())[:25]
+    print(f"relabelled {len(topics)} topics from {len(D):,} documents; vocabulary {len(vocab):,} terms, {sum('-' in w for w in vocab):,} hyphenated, most common: {hy}")
+    changed = I[I.top_words != I.top_words_before_relabel]
+    print(f"{len(changed)} topics have different top-10 words; examples:")
+    pd.set_option("display.width", 250, "display.max_colwidth", 110)
+    print(changed[["topic", "top_words_before_relabel", "top_words"]].head(15).to_string(index=False))
+
+
 MIN_THREAD = 5
 
 
@@ -129,9 +168,10 @@ def votes():
     with gzip.open(RAW / f"{SUB}_comments.jsonl.gz", "rt", encoding="utf-8") as f:
         for line in f:
             x = json.loads(line)
+            if is_bot(x.get("author")):
+                continue
             rows.append((x["id"], x["link_id"], str(x.get("parent_id", "")).startswith("t3_"), int(x["created_utc"]), x.get("score")))
     C = pd.DataFrame(rows, columns=["id", "link_id", "top_level", "created_utc", "score"]).dropna(subset=["score"])
-    C = C[C.created_utc < C.created_utc.max() - 3 * 86400]
     g = C.groupby(["link_id", "top_level"]).score
     C["n_in_group"] = g.transform("size")
     C = C[C.n_in_group >= MIN_THREAD].copy()
@@ -161,4 +201,4 @@ if __name__ == "__main__":
     if len(sys.argv) > 2:
         SUB = sys.argv[2]
         PFX = PREFIX[SUB]
-    {"prep": prep, "embed": embed, "fit": fit, "votes": votes}[sys.argv[1]]()
+    {"prep": prep, "embed": embed, "fit": fit, "relabel": relabel, "votes": votes}[sys.argv[1]]()

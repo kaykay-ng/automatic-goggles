@@ -1,5 +1,6 @@
 """What goes with downvotes in r/StopEatingSeedOils? Splits comments (>= 15 words) by GoEmotions hostile (>=0.5), by whether the text mentions seed oil / vegetable oil / omega-6 etc. (a crude on-topic proxy, NOT a sentiment word list), by period and theme.
 Downvoted = score <= 0. Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/downvote_why.py"""
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import gzip, json
 from pathlib import Path
 import numpy as np, pandas as pd
@@ -14,7 +15,7 @@ D = pd.read_csv(PROC / "seso_docs.csv.gz", usecols=["id", "kind", "created_utc",
 z = np.load(PROC / "goemo_seso.npz", allow_pickle=True); assert (z["id"].astype(str) == D.id.astype(str).values).all()
 L = pd.DataFrame(z["p"].astype(np.float32), columns=LAB); D["hostile"] = (L[H].max(axis=1) >= .5).values
 D = D[D.kind == "comment"].merge(pd.read_csv(PROC / "seso_doc_topics.csv.gz", usecols=["id", "topic"]), on="id"); D["score"] = D.id.map(sc); D = D.dropna(subset=["score"])
-D = D[D.created_utc < D.created_utc.max() - 3 * 86400].copy(); D["post"] = D.created_utc >= CUT; D["down"] = D.score <= 0
+D = D.copy(); D["post"] = D.created_utc >= CUT; D["down"] = D.score <= 0
 D["oil"] = D.text.astype(str).str.contains(r"seed[ -]?oil|vegetable oil|canola|soybean oil|linoleic|omega[ -]?6|pufa|industrial oil|rapeseed|sunflower oil", case=False)
 print("share of comments mentioning seed/vegetable oil terms (proxy for on-topic): pre %.1f%% post %.1f%%" % (D[~D.post].oil.mean() * 100, D[D.post].oil.mean() * 100))
 TH = {"Politics": [46, 117, 43, 68, 107], "Studies, evidence": [23, 52, 53], "Vaccines": [20], "Pharma": [10, 50, 80, 116], "Ingredient labels": [61, 92, 60], "Shopping": [17, 11, 9], "Omega-6": [0, 79, 96], "Keto": [1, 66]}

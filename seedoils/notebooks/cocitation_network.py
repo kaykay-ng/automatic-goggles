@@ -15,6 +15,7 @@ study design from MeSH (as in cited_papers.py), year, OpenAlex cited_by_count.
 Per network: Louvain (seed 42) communities with modularity, mean lean and design mix per community, assortativity of the side label,
 and the agreement (adjusted mutual information) between the two partitions.
 """
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import csv
 import gzip
 import json
@@ -46,7 +47,7 @@ def load():
     with gzip.open(PROC / "citations.csv.gz", "rt", encoding="utf-8") as f:
         for r in csv.DictReader(f):
             w = works.get((r["id_type"], r["id_value"]))
-            if not w or r["author"] in ("", "[deleted]"):
+            if not w or r["author"] in ("", "[deleted]") or is_bot(r["author"]):
                 continue
             cited_by[w["id"]][r["subreddit"]].add(r["author"])
             meta[w["id"]] = w

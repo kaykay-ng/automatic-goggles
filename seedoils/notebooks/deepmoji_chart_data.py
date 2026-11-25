@@ -8,7 +8,8 @@ from pathlib import Path
 import pandas as pd
 
 PROC = Path(__file__).resolve().parents[1] / "data" / "processed"
-CODES = json.load(open(next(Path.home().glob(".cache/**/emoji_codes.json"))))
+_VENDOR = Path(__file__).resolve().parents[2] / "vendor" / "torchMoji" / "data" / "emoji_codes.json"  # emoji id -> name, from the torchMoji repo
+CODES = json.load(open(_VENDOR if _VENDOR.exists() else next(Path.home().glob(".cache/**/emoji_codes.json"))))
 NAMES = [CODES[str(i)] for i in range(64)]
 CH = {":joy:": "😂", ":sweat_smile:": "😅", ":grin:": "😁", ":smile:": "😄", ":wink:": "😉", ":stuck_out_tongue_winking_eye:": "😜", ":skull:": "💀", ":heart_eyes:": "😍", ":heart:": "❤️", ":two_hearts:": "💕",
       ":kissing_heart:": "😘", ":hearts:": "♥️", ":blue_heart:": "💙", ":purple_heart:": "💜", ":sparkling_heart:": "💖", ":blush:": "😊", ":ok_hand:": "👌", ":thumbsup:": "👍", ":clap:": "👏", ":raised_hands:": "🙌",

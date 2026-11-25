@@ -1,6 +1,7 @@
 """Three candidate views of upvotes (test page): (1) score bands per subreddit and period; (2) downvoted / 10+ share by theme (r/StopEatingSeedOils, comments >= 15 words); (3) score bands by cohort (newcomers = first comment in the subreddit from 2024; long-time = before 2024).
-Score = net votes as archived by Arctic Shift (not final or possibly time-of-collection). Bands: <=0 downvoted, 1-2, 3-9, 10-49, 50+. Excludes last 3 days; excludes [deleted]/AutoModerator in cohort view.
+Score = net votes as archived by Arctic Shift (not final or possibly time-of-collection). Bands: <=0 downvoted, 1-2, 3-9, 10-49, 50+. Bots excluded; comments of every age kept; excludes [deleted]/AutoModerator in cohort view.
 Output: data/processed/artifact/upvote_views.json  (rows with view, subreddit, group, band, pct, n).  Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/upvote_views.py"""
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import gzip, json
 from pathlib import Path
 import numpy as np, pandas as pd
@@ -13,7 +14,7 @@ def load(pat):
         for l in f:
             x = json.loads(l); rows.append((x["id"], int(x["created_utc"]), x.get("score"), len((x.get("body") or "").split()), x.get("author")))
     C = pd.DataFrame(rows, columns=["id", "t", "score", "words", "author"]).dropna(subset=["score"]); C["score"] = C.score.astype(int)
-    first = C.groupby("author").t.min(); C = C[C.t < C.t.max() - 3 * 86400].copy()
+    C = C[not_bot(C.author)].copy(); first = C.groupby("author").t.min()
     C["post"] = C.t >= CUT; C["band"] = band(C.score); C["new"] = C.author.map(first) >= CUT
     return C
 out = []
@@ -26,7 +27,7 @@ TH = {"Politics": [46, 117, 43, 68, 107], "Vaccines and COVID": [20], "Pharma, F
 for sub, pat in (("r/StopEatingSeedOils", "*StopEatingSeedOils_comments.jsonl.gz"), ("r/ScientificNutrition", "*ScientificNutrition_comments.jsonl.gz")):
     C = load(pat)
     for per, X in (("Before 2024", C[~C.post]), ("From 2024", C[C.post])): add("bands", sub, per, X)
-    A = C[~C.author.isin(["[deleted]", "AutoModerator"])]
+    A = C[(~C.author.isin(["[deleted]", "AutoModerator"]) & not_bot(C.author))]
     add("cohort", sub, "Long-time commenters, before 2024", A[(~A.new) & (~A.post)]); add("cohort", sub, "Long-time commenters, from 2024", A[(~A.new) & A.post]); add("cohort", sub, "Newcomers, from 2024", A[A.new & A.post])
     if "Stop" in sub:
         M = C[C.words >= 15].merge(T[["id", "topic"]], on="id")

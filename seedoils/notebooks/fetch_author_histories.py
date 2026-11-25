@@ -37,7 +37,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW, PROC = ROOT / "data" / "raw", ROOT / "data" / "processed"
-SEEDS = ["StopEatingSeedOils", "ScientificNutrition", "carnivore"]
+SEEDS = ["StopEatingSeedOils", "ScientificNutrition"]  # r/carnivore dropped 22 Nov (its comments are no longer downloaded; diet overlap is measured over a set of diet subreddits instead)
 API = "https://arctic-shift.photon-reddit.com/api/users/interactions/subreddits"
 PERIOD_SPLIT = "2024-01-01"  # before vs during the RFK Jr./MAHA surge
 PAUSE = 0.8
@@ -149,7 +149,7 @@ if __name__ == "__main__":
     s.add_argument("--min-comments", type=int, default=5)
     s.add_argument("--top", type=int, default=1500, help="max authors per seed subreddit, most active first")
     s.add_argument("--subreddits", nargs="+", default=SEEDS,
-                   help="seed subreddits to read (default: all three); use while other downloads are still writing")
+                   help="seed subreddits to read (default: both); use while other downloads are still writing")
     f = sp.add_parser("fetch")
     f.add_argument("--authors", default=str(PROC / "seed_authors.csv"))
     f.add_argument("--out", default=None, help="default: author_subreddit_counts.jsonl.gz, or ..._shard<k>.jsonl.gz with --shard")

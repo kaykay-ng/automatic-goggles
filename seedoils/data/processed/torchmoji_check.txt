@@ -1,0 +1,4 @@
+DeepMoji tokens per comment (600 random documents of >= 15 words): median 39, 90th pct 109; longer than 30: 65%; longer than 256: 2%
+maxlen 30 vs 256, all 600: same top-1 0.57, top-5 overlap 0.70, mean corr 0.786, mean abs diff 0.0056
+maxlen 30 vs 256, only the 391 comments longer than 30 tokens: same top-1 0.34, top-5 overlap 0.54, mean corr 0.672, mean abs diff 0.0085
+  mean entropy of the emoji distribution (higher = blander), long comments: 30 -> 3.64, 256 -> 3.48

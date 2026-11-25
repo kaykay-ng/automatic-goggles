@@ -15,6 +15,7 @@ Sample (documents as in seso_topics.py: comments and self-posts >= 15 words):
   documents per period.  r/ScientificNutrition: a random baseline of BASE documents per period.  Seed 5.
 Topic ids are those of seedoils/data/processed/seso_doc_topics.csv.gz (BERTopic run of 18 Nov; see PLAN.md for what each topic is).
 """
+import json
 import sys
 from pathlib import Path
 
@@ -26,9 +27,7 @@ PROC = ROOT / "data" / "processed"
 SPLIT = 1704067200
 CAP, BASE = 1200, 3000
 MODEL = "SamLowe/roberta-base-go_emotions"
-THEMES = {"politics (RFK, Trump, left/right)": [46, 117, 43, 68, 107], "vaccines & COVID": [20], "pharma, FDA, corporations": [10, 50, 80, 116],
-          "omega-6 / PUFA biochemistry": [0, 79, 96], "keto, carbs, fasting": [1, 66], "studies & evidence": [23, 52, 53],
-          "shopping (Costco, avocado oil, chips)": [17, 11, 9], "ingredient labels & processed food": [61, 92, 60]}
+THEMES = json.loads((PROC / "themes_confirmed.json").read_text())  # hand-picked topic ids per theme (decision 22 Nov, seed-42 topic model)
 GROUPS = {"hostile": ["anger", "annoyance", "disapproval", "disgust"],
           "positive": ["admiration", "approval", "gratitude", "joy", "love", "optimism", "excitement", "amusement", "caring", "pride", "relief"],
           "inquisitive": ["curiosity", "confusion"], "fearful": ["fear", "nervousness"], "neutral": ["neutral"]}
@@ -74,7 +73,18 @@ def score():
 
 
 def summary():
-    R = pd.read_csv(PROC / "emotion_scores.csv.gz")
+    """Emotion by theme from the FULL GoEmotions scores of every document of 15+ words (goemo_<sub>.npz, emotions_full.py), not the sample:
+    theme = the confirmed topic ids (themes_confirmed.json / scinut_themes_confirmed.json); 'all' = every document of the subreddit."""
+    rows = []
+    for sub, pfx, tf in (("StopEatingSeedOils", "seso", "themes_confirmed.json"), ("ScientificNutrition", "scinut", "scinut_themes_confirmed.json")):
+        z = np.load(PROC / f"goemo_{pfx}.npz", allow_pickle=True); labs = list(pd.read_csv(PROC / "goemo_monthly.csv", nrows=1).columns[1:29])
+        S = pd.DataFrame(z["p"].astype(np.float32), columns=labs); S["id"] = z["id"].astype(str)
+        T = pd.read_csv(PROC / f"{pfx}_doc_topics.csv.gz", usecols=["id", "created_utc", "topic"]); T["id"] = T.id.astype(str); S = S.merge(T, on="id")
+        S["period"] = np.where(S.created_utc >= SPLIT, "from2024", "pre2024"); S["subreddit"] = sub
+        th = json.loads((PROC / tf).read_text()) if (PROC / tf).exists() else {}
+        rows.append(S.assign(theme="all"))
+        rows += [S[S.topic.isin(ids)].assign(theme=name) for name, ids in th.items()]
+    R = pd.concat(rows, ignore_index=True)
     for g, labs in GROUPS.items():
         R[g] = R[labs].max(axis=1)
     out = []

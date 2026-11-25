@@ -4,6 +4,7 @@
      Null: shuffle the cohort label among authors of similar activity (20 activity bins, number of old-guard authors per bin kept) and recompute the divergence and the number of 'strongly tilted' terms.
  (3) Compare only HEAVY commenters (>= 10 comments from 2024 on) in both groups.
 Same documents, terms and score as newcomer_terms.py. Run from final_project/ with the NLP env:  ./.venv-nlp/bin/python seedoils/notebooks/newcomer_terms_check.py   (aggregates only)"""
+from seedoil_common import is_bot, not_bot, TOKEN_PATTERN, bertopic_clean, hyphen_bertopic  # shared bot rule: AutoModerator + names ending in 'bot'
 import glob
 import gzip
 import json
@@ -24,8 +25,8 @@ with gzip.open(glob.glob("seedoils/data/raw/*StopEatingSeedOils_comments.jsonl.g
     for l in f:
         x = json.loads(l); a = x["author"]; t = int(x["created_utc"])
         if a not in first or t < first[a]: first[a] = t
-D = pd.read_csv(P / "seso_docs.csv.gz", keep_default_na=False); D = D[(D.kind == "comment") & (D.created_utc >= CUT) & ~D.author.isin(["[deleted]", "AutoModerator"])].copy()
-cv = CountVectorizer(stop_words=list(ENGLISH_STOP_WORDS | st.REDDIT_FILLER), ngram_range=(1, 2), min_df=30, binary=True)
+D = pd.read_csv(P / "seso_docs.csv.gz", keep_default_na=False); D = D[(D.kind == "comment") & (D.created_utc >= CUT) & (~D.author.isin(["[deleted]", "AutoModerator"]) & not_bot(D.author))].copy()
+cv = CountVectorizer(stop_words=list(ENGLISH_STOP_WORDS | st.REDDIT_FILLER), token_pattern=TOKEN_PATTERN, preprocessor=bertopic_clean, ngram_range=(1, 2), min_df=30, binary=True)
 X = cv.fit_transform(D.text.tolist()).tocsr(); V = cv.get_feature_names_out()
 au, uniq = pd.factorize(D.author); A = sp.csr_matrix((np.ones(len(D)), (au, np.arange(len(D)))), shape=(len(uniq), len(D)))
 AT = (A @ X).tocsr()                                    # authors x terms: comments with the term
@@ -62,5 +63,7 @@ print(f"    strongly tilted terms {h['strong']} of {h['terms']:,} ({h['strong'] 
 common = obs["ok"] & h["ok"]
 print(f"    correlation of the scores, all authors vs heavy only (terms in both): {np.corrcoef(obs['z'][common[obs['ok']]], h['z'][common[h['ok']]])[0, 1]:.2f}" if False else "")
 # person-level: share of authors using the key terms
-for t in ("pufa", "linoleic acid", "omega", "avocado oil", "organic", "rfk", "lol"):
+for t in ("pufa", "linoleic acid", "omega", "avocado oil", "organic", "rfk-jr", "lol"):  # rfk -> rfk-jr since the name list (22 Nov)
+    if t not in set(V):
+        print(f"    {t:<14} not in the vocabulary"); continue
     i = list(V).index(t); u = AT[:, i] > 0; print(f"    {t:<14} used by {u[is_old].mean() * 100:4.1f}% of old-guard people vs {u[~is_old].mean() * 100:4.1f}% of newcomers; among heavy commenters {u[is_old & heavy].mean() * 100:4.1f}% vs {u[~is_old & heavy].mean() * 100:4.1f}%")

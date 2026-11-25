@@ -2,6 +2,7 @@
 1 label composition; 2 mix shift (length bucket, post vs comment) vs within-group change; 3 old vs new commenters (same people before/after vs newcomers);
 4 bootstrap over commenters for the change. Cutoff 2024-01-01; threshold 0.5 as in emotions.py GROUPS. Output: data/processed/goemo_drivers.json + printed tables (no text).
 Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/goemo_drivers.py"""
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import json
 from pathlib import Path
 import numpy as np, pandas as pd
@@ -11,7 +12,7 @@ H = ["anger", "annoyance", "disapproval", "disgust"]; Q = ["curiosity", "confusi
 CUT = pd.Timestamp("2024-01-01").timestamp(); rng = np.random.default_rng(0); out = {}
 def load(pfx):
     Ds, Ps = [], []
-    for part in ("", "_short"):
+    for part in ("",):  # 15+ words only (decision 22 Nov)
         D = pd.read_csv(PROC / f"{pfx}{part}_docs.csv.gz", usecols=["id", "kind", "author", "created_utc", "text"], keep_default_na=False)
         z = np.load(PROC / f"goemo_{pfx}{part}.npz", allow_pickle=True); assert (z["id"].astype(str) == D.id.astype(str).values).all()
         Ds.append(D); Ps.append(z["p"].astype(np.float32))
@@ -33,7 +34,7 @@ for sub, pfx in (("r/StopEatingSeedOils", "seso"), ("r/ScientificNutrition", "sc
                          "bucket_share_pre": mixpre.round(3).to_dict(), "bucket_share_post": mixpost.round(3).to_dict(), "bucket_rate_pre": (rpre * 100).round(2).to_dict(), "bucket_rate_post": (rpost * 100).round(2).to_dict()}
         print("2", g, {k: v for k, v in o["mix_" + g].items() if "pts" in k}); print(r["mean"].mul(100).round(1).T.to_string())
     k = D.groupby("kind")[["hostile", "inq"]].mean().mul(100).round(1); print("kind rates", k.to_dict()); print("post share by period", D.groupby("post").kind.value_counts(normalize=True).round(3).to_dict())
-    A = D[~D.author.isin(["[deleted]", "AutoModerator"])]; first = A.groupby("author").created_utc.min(); A = A.assign(new=A.author.map(first) >= CUT)
+    A = D[(~D.author.isin(["[deleted]", "AutoModerator"]) & not_bot(D.author))]; first = A.groupby("author").created_utc.min(); A = A.assign(new=A.author.map(first) >= CUT)
     old_pre, old_post, new_post = A[(~A.new) & (~A.post)], A[(~A.new) & A.post], A[A.new & A.post]
     o["cohort"] = {g: {"old_before": round(old_pre[g].mean() * 100, 2), "old_from2024": round(old_post[g].mean() * 100, 2), "new_from2024": round(new_post[g].mean() * 100, 2)} for g in ("hostile", "inq")}
     o["cohort"]["n_docs"] = {"old_before": len(old_pre), "old_from2024": len(old_post), "new_from2024": len(new_post)}

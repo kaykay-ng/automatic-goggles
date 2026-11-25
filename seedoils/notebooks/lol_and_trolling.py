@@ -2,6 +2,7 @@
 For comments containing 'lol' (a): how many people, how concentrated in a few authors, hostile and downvoted shares vs comments without it, by cohort. (b) other casual or trolling-style words (lmao, shill, bot, sheep, idiot, stupid, ...):
 their rate in each cohort. (c) copy-pasted text: share of comments whose exact text appears 3+ times. Aggregates only.
 Run from final_project/ with the NLP env:  ./.venv-nlp/bin/python seedoils/notebooks/lol_and_trolling.py"""
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import glob
 import gzip
 import json
@@ -17,7 +18,7 @@ with gzip.open(glob.glob("seedoils/data/raw/*StopEatingSeedOils_comments.jsonl.g
     for l in f:
         x = json.loads(l); a = x["author"]; t = int(x["created_utc"]); score[x["id"]] = x.get("score")
         if a not in first or t < first[a]: first[a] = t
-D = pd.read_csv(P / "seso_docs.csv.gz", keep_default_na=False); D = D[(D.kind == "comment") & (D.created_utc >= CUT) & ~D.author.isin(["[deleted]", "AutoModerator"])].copy()
+D = pd.read_csv(P / "seso_docs.csv.gz", keep_default_na=False); D = D[(D.kind == "comment") & (D.created_utc >= CUT) & (~D.author.isin(["[deleted]", "AutoModerator"]) & not_bot(D.author))].copy()
 D["new"] = (D.author.map(first) >= CUT).astype(int); D["down"] = (D.id.map(score).astype(float) <= 0).astype(float)
 LABS = list(pd.read_csv(P / "goemo_monthly.csv", nrows=1).columns[1:29]); HI = [LABS.index(k) for k in ("anger", "annoyance", "disapproval", "disgust")]
 z = np.load(P / "goemo_seso.npz", allow_pickle=True); h = pd.Series(z["p"][:, HI].max(1) >= .5, index=z["id"].astype(str)); D["host"] = D.id.map(h).astype(float)

@@ -2,6 +2,7 @@
 Run from final_project/:  ../.venv/bin/python seedoils/notebooks/intro_data.py  -> seedoils/data/processed/artifact/{subreddits,activity,events}.json
 Reads seedoils/data/raw/<sub>_{posts,comments}.jsonl.gz (Arctic Shift). Aggregates only: no usernames, no text.
 Events are public news dates added by hand (NOT from our data); the Reddit counts are ours."""
+from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import collections
 import datetime as dt
 import gzip
@@ -23,8 +24,10 @@ for s, role, about in SUBS:
                 d = json.loads(line)
             except ValueError:
                 continue
+            if is_bot(d.get("author")):
+                continue
             t = int(d["created_utc"]); lo, hi = min(lo, t), max(hi, t); n[k] += 1
-            if d.get("author") not in (None, "[deleted]", "AutoModerator"):
+            if d.get("author") not in (None, "[deleted]"):
                 auth.add(d["author"])
             m = dt.datetime.fromtimestamp(t, dt.timezone.utc).strftime("%Y-%m")
             if m >= "2018-10":
