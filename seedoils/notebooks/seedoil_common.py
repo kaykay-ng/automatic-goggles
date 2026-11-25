@@ -257,6 +257,9 @@ def lemmatize_token(t):
         head, _, last = w.rpartition("-")
         last = last[:-1] if re.fullmatch(r"\d+s", last) else _lemma_word(last)  # omega-3s -> omega-3
         out = pre + head + "-" + last
+        canon = set(ALIASES.values())
+        if w in canon and (head + "-" + last) not in canon:  # a merged name stays whole (ancel-keys); merged plurals join their singular (seed-oils -> seed-oil)
+            out = t
     else:
         out = pre + _lemma_word(w)
     _LEMMA_CACHE[t] = out

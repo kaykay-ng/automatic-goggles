@@ -79,10 +79,11 @@ def status():
     S.append(("Topic stability (5 seeds)", "running" if running("seso_topics_seeds.py") else ("done" if (PROC / "seso_seed_stability.json").exists() else "todo"), "UMAP seeds 42, 1-4; AMI and NMI"))
     S.append(("BERTopic vs LDA", "running" if running("lda_compare.py") else ("done" if (PROC / "lda_comparison.json").exists() else "todo"), "LDA K=123 (3 seeds) and K=30"))
     S.append(("Hand-picked themes", "waiting" if not (PROC / "themes_confirmed.json").exists() else "done", "your picks of topic ids per theme"))
-    for step, note in (("Name list check", "seedoil_common.py aliases"),                        ("Dashboard datasets", "artifact_data.py, last")):
-        S.append((step, "todo", note))
+    S.append(("Name list check", "done" if list(PROC.glob("alias_decisions_*.csv")) else "todo", "aliases checked by reading (check_aliases.html); omega 6 / omega 3 spellings merged"))
+    facts = PROC / "artifact" / "facts.json"
+    S.append(("Dashboard datasets", "done" if mtime(facts) > mtime(PROC / "diet_overlap.csv") else "todo", "artifact_data.py and chart-data scripts on the re-downloaded data"))
     S.append(("Negation check", "done" if (PROC / "negation_labels_v2_HY.csv").exists() else "todo", "absence claims only (no / without + noun phrase), 25 Nov"))
-    S.append(("Hostility hand labels (150 comments)", "done" if (PROC / "hostility_eval.json").exists() else "todo", "2 labellers (HY, NP); kappa 0.72 on H vs not H"))
+    S.append(("Hostility hand labels (150 comments)", "done" if (PROC / "hostility_eval.json").exists() else "todo", "3 labellers (HY, NP, KK); Fleiss kappa 0.70 on H vs not H"))
     S.insert(4, ("Commenter network and communities", "done" if (PROC / "commenter_topic_network_130_stats.json").exists() else "todo", "backbone, Louvain, outcomes"))
     S.insert(5, ("Network measures and community methods", "running" if running("network_stats.py") else ("done" if (PROC / "network_stats.json").exists() else "todo"), "degree, CCDF, clustering, k-clique, link communities"))
     S.insert(6, ("Reply network (all accounts)", "done" if (PROC / "reply_network_stats.json").exists() else "todo", "A -> B when A replies to B's post or comment"))
@@ -308,6 +309,11 @@ def hostility_eval_section():
     for who, v in H["per_labeller"].items():
         sec += f"<h3>Labeller {e(who)}: " + ", ".join(f"{k} {n}" for k, n in v["counts"].items() if k and n) + "</h3>" + table(["Model score band", "Comments", "Hand label H", "H or C"],
             [(b["band"], str(b["n"]), f"{b['H_pct']}%" if b["H_pct"] is not None else "–", f"{b['H_or_C_pct']}%" if b["H_or_C_pct"] is not None else "–") for b in v["by_band"]], num=(1, 2, 3))
+    fk = H.get("fleiss_kappa")
+    if fk:
+        sec += (f"<h3>Agreement between the {len(H['labellers'])} labellers</h3><p>Fleiss&#8217; kappa over the {fk['items_all_labelled']} comments everyone labelled: "
+                f"<b>{fk['H_vs_rest']}</b> on hostile vs not, {fk['H_or_C_vs_N']} on hostile-or-critical vs neither, {fk['H_C_N']} on all three labels. "
+                "Pairwise Cohen&#8217;s kappa below.</p>")
     for a in H.get("agreement", []):
         sec += (f"<p>Agreement {e(a['pair'])}: {a['percent']}% of {a['n']} comments; Cohen&#8217;s kappa {a['kappa_HCN']} on H/C/N, {a['kappa_H_vs_rest']} on H vs not H, "
                 f"{a.get('kappa_HorC_vs_N', '–')} on H or C vs N. Most disagreements are C against N: the line between criticism and neutral is the fuzzy one, hostility is not.</p>")
@@ -326,9 +332,12 @@ def hostility_eval_section():
                 f"<b>{pe['H']['pct']}%</b> (95% CI {pe['H']['ci95'][0]}&#8211;{pe['H']['ci95'][1]}), hostile or critical (H or C) "
                 f"<b>{pe['H_or_C']['pct']}%</b> ({pe['H_or_C']['ci95'][0]}&#8211;{pe['H_or_C']['ci95'][1]}), against "
                 f"{pe['flagged_by_page_definition_pct']}% flagged by the page&#8217;s definition. Bootstrap within bands, 2,000 draws.</p>")
-    sec += ('<p><b>Reading.</b> The flag tracks criticism more than hostility: about nine in ten flagged comments are H or C, but only about one in five '
-            'is hostile toward people, and the top band (0.7+) is mostly civil criticism. Most hostile comments sit in the lowest band, so the flag misses '
-            'most of them (weighted recall about 0.17). The measure is better described as <i>disapproving or critical tone</i> than as hostility.</p>')
+    pg = {r["hostile_means"]: r for r in H["model_vs_hand"] if r["definition"].startswith("page")}
+    ps, pl = pg["strict: H"], pg["lenient: H or C"]
+    sec += (f"<p><b>Reading.</b> The flag tracks criticism more than hostility: {pl['sample']['precision'] * 100:.0f}% of flagged comments are H or C by the reference, "
+            f"but only {ps['sample']['precision'] * 100:.0f}% are hostile toward people ({ps['population_weighted']['precision'] * 100:.0f}% re-weighted). Most hostile comments sit in low "
+            f"score bands, so the flag misses most of them (weighted recall {ps['population_weighted']['recall']:.2f}). The measure is better described as "
+            "<i>disapproving or critical tone</i> than as hostility.</p>")
     return sec + "</section>"
 
 
@@ -381,6 +390,31 @@ def reply_section():
             "Only replies from 2024 are used, because before 2024 everyone is old guard (over the whole history old guard &#8594; old guard has lift "
             f"{R['cohort_mixing'][0]['lift']}, which is mostly this time effect).</p>" + mix(R["cohort_mixing_from2024"]) +
             "<p>From 2024 the two groups reply to each other almost exactly as often as activity alone predicts: no sign that newcomers and the old guard keep to themselves.</p>")
+    return sec + "</section>"
+
+
+def reply_findings_section():
+    f = PROC / "reply_findings.json"
+    if not f.exists():
+        return ""
+    F = json.loads(f.read_text()); fc = F["q1_first_contribution"]; q2 = F["q2_interest_similarity"]; q3 = F["q3_tone_by_similarity"]; wb = F["q1_tone_within_replier"]
+    sec = ('<section id="replyq"><h2>Who replies to whom, and how</h2><p>Replies from 2024 (both cohorts present), same reply rules as the network above; tone = disapproving tone '
+           '(GoEmotions, hand-checked). <code>reply_findings.py</code>.</p><h3>Old guard and newcomers</h3>')
+    sec += table(["From", "To", "Replies", "Lift vs activity", "Disapproving tone"], [(r["from"], r["to"], f"{r['replies']:,}", f"{r['lift']:.2f}", f"{r['disapproving_pct']:.1f}%") for r in F["q1_mixing_and_tone"]], num=(2, 3, 4))
+    o, n = wb["old guard repliers"], wb["newcomer repliers"]
+    sec += (f"<p>Within the same replier, replies to newcomers are {o['within_replier_diff_pts_to_newcomer_vs_old']:+.2f} points more often disapproving for old-guard repliers "
+            f"(95% CI {o['ci95_pts'][0]:+.2f} to {o['ci95_pts'][1]:+.2f}) and {n['within_replier_diff_pts_to_newcomer_vs_old']:+.2f} for newcomer repliers ({n['ci95_pts'][0]:+.2f} to {n['ci95_pts'][1]:+.2f}): at most half a point. "
+            f"Newcomers&#8217; first contributions ({fc['newcomers']:,} people): {fc['first_gets_reply_pct']}% get a reply ({fc['first_post_gets_reply_pct']}% of first posts, {fc['first_comment_gets_reply_pct']}% of first comments; "
+            f"any contribution from 2024: {fc['any_contribution_from_2024_gets_reply_pct']}%), median {fc['hours_to_first_reply_median']:.1f} hours to the first reply; the old guard writes {fc['first_reply_by_old_guard_pct']}% of those first replies, "
+            f"as expected from their share of replies that month ({fc['expected_old_guard_pct_from_reply_share_that_month']}%).</p>")
+    sec += (f"<h3>Shared interests</h3><p>{q2['replies']:,} replies between the 2,621 commenters with topic profiles (topic shares, leaving out the thread in question). "
+            f"Interest similarity to the person replied to: {q2['mean_similarity_to_replied']:.3f}; to the other such commenters in the same thread: {q2['mean_similarity_to_others_in_thread']:.3f} "
+            f"(difference {q2['mean_gap']:+.4f}, 95% CI {q2['gap_ci95'][0]:+.4f} to {q2['gap_ci95'][1]:+.4f}); {q2['share_replies_above_thread_mean_pct']}% of replies go to someone more similar than the thread average. "
+            "Within a thread, people do not pick partners by shared interests.</p>")
+    sec += table(["Interest similarity quintile", "Similarity", "Replies", "Disapproving tone"], [(str(r["quintile"]), f"{r['similarity_range'][0]:.2f}&#8211;{r['similarity_range'][1]:.2f}", f"{r['replies']:,}", f"{r['disapproving_pct']:.2f}%") for r in q3["quintiles"]], num=(2, 3))
+    sec += (f"<p>Tone does not depend on shared interests: per standard deviation of similarity, {q3['within_replier_pts_per_sd_similarity']:+.2f} points within replier "
+            f"({q3['within_replier_ci95'][0]:+.2f} to {q3['within_replier_ci95'][1]:+.2f}), {q3['within_thread_pts_per_sd_similarity']:+.2f} within thread ({q3['within_thread_ci95'][0]:+.2f} to {q3['within_thread_ci95'][1]:+.2f}). "
+            "Caveat: similar <i>interests</i> (what people write about) is not the same as similar <i>views</i>; two people can share the omega-6 topic and disagree.</p>")
     return sec + "</section>"
 
 
@@ -504,6 +538,7 @@ def main():
     sections.append(network_section())
     sections.append(netstats_section())
     sections.append(reply_section())
+    sections.append(reply_findings_section())
     sections.append(cocite_section())
     sections.append(stability_section())
     sections.append(lda_section())

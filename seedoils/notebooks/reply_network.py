@@ -59,7 +59,9 @@ users["n_comments"] = users.n - users.n_posts; users = users.sort_index(); users
 users["newcomer"] = users["first"] >= SPLIT
 idx = users.idx.to_dict()
 E = C[~C.a.map(bad) & ~C.b.map(bad) & (C.a != C.b)].copy()
-lost = {"replies_total": int(len(C)), "parent_missing_or_deleted": int(C.b.map(bad).sum()), "self_replies": int((C.a == C.b).sum())}
+ok_a, ok_b = ~C.a.map(bad), ~C.b.map(bad)
+lost = {"replies_total": int(len(C)), "by_deleted_or_bot_account": int((~ok_a).sum()), "parent_missing_deleted_or_bot": int((ok_a & ~ok_b).sum()),
+        "self_replies": int((ok_a & ok_b & (C.a == C.b)).sum()), "self_replies_to_own_post": int((ok_a & ok_b & (C.a == C.b) & (C.kind == "post")).sum())}
 E["u"], E["v"] = E.a.map(idx), E.b.map(idx)
 print(f"accounts {len(users):,}; reply links (comment -> its parent's author) {len(E):,} of {len(C):,} comments")
 

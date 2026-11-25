@@ -88,3 +88,5 @@ seedoils/data/processed/lda/
 seedoils/data/processed/seeds/
 seedoils/data/processed/*.log
 seedoils/artifact/preview_local.html
+seedoils/check_aliases.html
+alias_decisions*.csv
