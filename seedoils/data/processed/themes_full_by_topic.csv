@@ -1,0 +1,124 @@
+topic,docs,words,theme,tier,sim_own_theme,closest_other_theme,sim_other,closer_to_other
+0,14595,"seed-oil, food, health, oil, eating, bad","General talk and meta (generic seed-oil, subreddit, thanks, influencers)",assigned,0.43,Omega-6 / PUFA biochemistry,0.78,True
+1,10437,"pufa, omega-6, omega-3, acid, fatty, linoleic-acid",Omega-6 / PUFA biochemistry,original,0.89,Ingredient labels and processed food,0.74,False
+5,4230,"comment, reddit, post, sub, lol, evidence","General talk and meta (generic seed-oil, subreddit, thanks, influencers)",assigned,0.31,Studies and evidence,0.57,True
+4,3390,"fat, saturated-fat, trans, trans fat, polyunsaturated, polyunsaturated fat",Omega-6 / PUFA biochemistry,assigned,0.82,"Keto, carbs, fasting",0.77,False
+2,2910,"ldl, cholesterol, hdl, statin, high, triglyceride",Omega-6 / PUFA biochemistry,assigned,0.75,"Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",0.63,False
+14,2841,"calorie, weight, gain, lose, energy, body","Keto, carbs, fasting",assigned,0.76,Omega-6 / PUFA biochemistry,0.6,False
+17,2817,"science, study, scientific, evidence, research, data",Studies and evidence,original,0.63,"Distrust of industry, medicine and media",0.6,False
+3,2561,"olive-oil, olive, virgin, extra virgin, extra, virgin olive-oil","Shopping (stores, chips, avocado oil)",assigned,0.75,Ingredient labels and processed food,0.73,False
+11,2364,"grass, fed, beef, grass fed, cow, meat","Other diets (vegan, carnivore, ancestral, Mediterranean)",assigned,0.83,"Cooking and cooking fats (butter, tallow, frying)",0.64,False
+19,2345,"store, costco, price, grocery, brand, buy","Shopping (stores, chips, avocado oil)",original,0.6,"Cooking and cooking fats (butter, tallow, frying)",0.54,False
+24,2341,"oil, vegetable-oil, hexane, lubricant, engine, cooking oil",Ingredient labels and processed food,flagged,0.67,"General talk and meta (generic seed-oil, subreddit, thanks, influencers)",0.78,True
+33,2178,"nutrition, science, diet, study, health, nutritional",Studies and evidence,original,0.63,"Keto, carbs, fasting",0.8,True
+23,2140,"meal, cook, food, home, time, cooking","Cooking and cooking fats (butter, tallow, frying)",assigned,0.59,"Keto, carbs, fasting",0.68,True
+43,2110,"fruit, rice, beef, cheese, egg, eat","Keto, carbs, fasting",flagged,0.68,"Staple foods (milk, grains, nuts, soy, chocolate, coffee)",0.76,True
+9,2083,"butter, margarine, real butter, butter butter, kerrygold, real","Cooking and cooking fats (butter, tallow, frying)",assigned,0.7,"Shopping (stores, chips, avocado oil)",0.72,True
+6,2039,"chip, tortilla, potato chip, potato, siete, tortilla chip","Shopping (stores, chips, avocado oil)",original,0.83,"Cooking and cooking fats (butter, tallow, frying)",0.75,False
+12,2007,"pork, pig, lard, bacon, fed, fat","Other diets (vegan, carnivore, ancestral, Mediterranean)",assigned,0.81,"Cooking and cooking fats (butter, tallow, frying)",0.73,False
+73,1946,"food, company, industry, government, profit, money","Distrust of industry, medicine and media",original,0.8,"Other diets (vegan, carnivore, ancestral, Mediterranean)",0.73,False
+8,1934,"avocado-oil, avocado, olive-oil, oil, chosen, brand","Shopping (stores, chips, avocado oil)",original,0.75,Ingredient labels and processed food,0.71,False
+10,1903,"skin, hair, acne, soap, smell, face","Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",assigned,0.68,Ingredient labels and processed food,0.68,True
+78,1901,"eat, taste, eating, food, bad, stuff","General talk and meta (generic seed-oil, subreddit, thanks, influencers)",flagged,0.61,Ingredient labels and processed food,0.8,True
+37,1769,"doctor, medical, pharma, health, sick, fda","Distrust of industry, medicine and media",original,0.72,Studies and evidence,0.72,False
+7,1746,"mayo, mayonnaise, mustard, chosen, avocado-oil, taste","Shopping (stores, chips, avocado oil)",assigned,0.76,Ingredient labels and processed food,0.66,False
+16,1671,"milk, raw milk, raw, dairy, lactose, a2","Staple foods (milk, grains, nuts, soy, chocolate, coffee)",assigned,0.78,Ingredient labels and processed food,0.65,False
+15,1667,"bread, flour, wheat, gluten, sourdough, grain","Staple foods (milk, grains, nuts, soy, chocolate, coffee)",assigned,0.7,"Shopping (stores, chips, avocado oil)",0.7,True
+13,1628,"sun, sunscreen, skin, sunburn, burn, uv","Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",assigned,0.62,Omega-6 / PUFA biochemistry,0.53,False
+18,1566,"egg, chicken, pasture, feed, raised, pasture raised","Other diets (vegan, carnivore, ancestral, Mediterranean)",flagged,0.64,"Staple foods (milk, grains, nuts, soy, chocolate, coffee)",0.63,False
+46,1538,"money, capitalism, government, profit, company, corporation","Distrust of industry, medicine and media",original,0.66,"Politics (RFK, Trump, left/right)",0.61,False
+25,1521,"sugar, syrup, fructose, corn syrup, honey, hfcs","Keto, carbs, fasting",flagged,0.64,"Staple foods (milk, grains, nuts, soy, chocolate, coffee)",0.71,True
+34,1448,"tallow, beef tallow, beef, butcher, render, suet","Cooking and cooking fats (butter, tallow, frying)",assigned,0.69,"Other diets (vegan, carnivore, ancestral, Mediterranean)",0.69,True
+20,1392,"canola, canola oil, rapeseed, oil, rapeseed oil, soybean",Omega-6 / PUFA biochemistry,assigned,0.73,Ingredient labels and processed food,0.77,True
+27,1300,"keto, carb, ketosis, diet, carnivore, keto diet","Keto, carbs, fasting",original,0.76,Omega-6 / PUFA biochemistry,0.62,False
+57,1298,"ingredient, label, list, ingredient list, product, brand",Ingredient labels and processed food,original,0.81,"Distrust of industry, medicine and media",0.71,False
+50,1283,"guy, video, diet, eats, dude, look","General talk and meta (generic seed-oil, subreddit, thanks, influencers)",flagged,0.53,"Politics (RFK, Trump, left/right)",0.62,True
+30,1261,"vegan, veganism, vegan diet, vegetarian, animal, meat","Other diets (vegan, carnivore, ancestral, Mediterranean)",original,0.77,"General talk and meta (generic seed-oil, subreddit, thanks, influencers)",0.59,False
+58,1242,"insulin, glucose, diabetes, resistance, insulin resistance, carb","Keto, carbs, fasting",assigned,0.8,Omega-6 / PUFA biochemistry,0.61,False
+21,1223,"fry, potato, french fry, french, tallow, tallow fry","Shopping (stores, chips, avocado oil)",assigned,0.76,"Cooking and cooking fats (butter, tallow, frying)",0.78,True
+82,1218,"thank, thanks, link, appreciate, post, read","General talk and meta (generic seed-oil, subreddit, thanks, influencers)",assigned,0.32,Studies and evidence,0.45,True
+26,1184,"vaccine, covid, virus, shot, autism, infection",Vaccines and COVID,original,,"Distrust of industry, medicine and media",0.59,False
+31,1143,"nut, almond, seed, nut seed, walnut, eat nut","Staple foods (milk, grains, nuts, soy, chocolate, coffee)",assigned,0.65,Omega-6 / PUFA biochemistry,0.69,True
+76,1128,"frying, fried, deep, fryer, fry, fried food","Cooking and cooking fats (butter, tallow, frying)",assigned,0.81,"Shopping (stores, chips, avocado oil)",0.76,False
+35,1126,"coconut-oil, coconut, mct, oil, mct oil, refined",Omega-6 / PUFA biochemistry,assigned,0.7,Ingredient labels and processed food,0.71,True
+42,1119,"burger, patty, steak, grill, beef, mcdonald","Shopping (stores, chips, avocado oil)",assigned,0.78,"Cooking and cooking fats (butter, tallow, frying)",0.83,True
+60,1114,"carb, low carb, low, high carb, fat, diet","Keto, carbs, fasting",original,0.86,Omega-6 / PUFA biochemistry,0.66,False
+32,1109,"dressing, salad, ranch, salad dressing, vinegar, lemon","Shopping (stores, chips, avocado oil)",assigned,0.81,"Cooking and cooking fats (butter, tallow, frying)",0.72,False
+22,1090,"peanut, peanut butter, peanut oil, butter, pb, oil",Omega-6 / PUFA biochemistry,assigned,0.69,"Staple foods (milk, grains, nuts, soy, chocolate, coffee)",0.73,True
+109,1079,"conspiracy, media, news, propaganda, conspiracy theory, truth","Distrust of industry, medicine and media",original,0.54,"Politics (RFK, Trump, left/right)",0.71,True
+39,1028,"cancer, smoking, cigarette, tobacco, lung, smoke","Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",assigned,0.63,"Distrust of industry, medicine and media",0.68,True
+28,1017,"palm, palm oil, oil, kernel, palm kernel, kernel oil",Omega-6 / PUFA biochemistry,flagged,0.71,"General talk and meta (generic seed-oil, subreddit, thanks, influencers)",0.69,False
+51,1011,"fiber, gut, ibs, stomach, microbiome, constipation","Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",flagged,0.66,"Keto, carbs, fasting",0.71,True
+86,1006,"human, meat, ancestor, ate, animal, year","Other diets (vegan, carnivore, ancestral, Mediterranean)",original,0.75,"Keto, carbs, fasting",0.59,False
+29,976,"formula, baby, milk, infant, breast milk, breast","Staple foods (milk, grains, nuts, soy, chocolate, coffee)",assigned,0.66,Ingredient labels and processed food,0.58,False
+56,969,"processed-food, processed, ultra, ultra processed-food, food, processing",Ingredient labels and processed food,original,0.75,"Other diets (vegan, carnivore, ancestral, Mediterranean)",0.77,True
+36,951,"ghee, butter, tallow, indian, butter ghee, ghee butter","Cooking and cooking fats (butter, tallow, frying)",assigned,0.79,"Shopping (stores, chips, avocado oil)",0.73,False
+49,947,"vitamin, supplement, iron, b12, folic, liver",Omega-6 / PUFA biochemistry,flagged,0.71,"Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",0.73,True
+99,944,"poison, chemical, toxic, dose, toxin, dose poison","Distrust of industry, medicine and media",flagged,0.67,"Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",0.71,True
+38,918,"plastic, microplastic, glass, bottle, container, chemical","Distrust of industry, medicine and media",flagged,0.54,Ingredient labels and processed food,0.61,True
+122,906,"drug, serotonin, addiction, effect, brain, alcohol","Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",flagged,0.68,Studies and evidence,0.56,False
+98,902,"trump, vote, president, candidate, election, harris","Politics (RFK, Trump, left/right)",original,0.73,"Distrust of industry, medicine and media",0.39,False
+40,847,"protein, whey, powder, protein powder, whey protein, shake",Ingredient labels and processed food,flagged,0.63,"Staple foods (milk, grains, nuts, soy, chocolate, coffee)",0.76,True
+105,846,"anxiety, mental, feel, depression, mental health, issue","Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",assigned,0.75,"Keto, carbs, fasting",0.67,False
+47,836,"rfk-jr, trump, rape, vote, party, position","Politics (RFK, Trump, left/right)",original,0.69,"Distrust of industry, medicine and media",0.49,False
+41,834,"pan, cast iron, cast, iron, seasoning, steel","Cooking and cooking fats (butter, tallow, frying)",assigned,0.67,"Shopping (stores, chips, avocado oil)",0.6,False
+63,823,"sauce, chili, tomato, pepper, garlic, hot","Shopping (stores, chips, avocado oil)",assigned,0.82,"Cooking and cooking fats (butter, tallow, frying)",0.73,False
+62,784,"oxalate, vegetable, spinach, fruit, plant, veggie","Other diets (vegan, carnivore, ancestral, Mediterranean)",assigned,0.72,"Keto, carbs, fasting",0.73,True
+45,763,"sunflower, sunflower oil, sunflower seed, oil, oleic, high oleic",Omega-6 / PUFA biochemistry,assigned,0.75,"General talk and meta (generic seed-oil, subreddit, thanks, influencers)",0.73,False
+59,736,"fasting, fast, day, hour, intermittent, dry","Keto, carbs, fasting",original,0.74,"Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",0.61,False
+104,724,"podcast, tucker, video, layne, tucker-goodrich, brad","General talk and meta (generic seed-oil, subreddit, thanks, influencers)",flagged,0.36,"Politics (RFK, Trump, left/right)",0.51,True
+107,720,"chicken, breast, chicken breast, meat, fat, skinless","Other diets (vegan, carnivore, ancestral, Mediterranean)",assigned,0.77,"Cooking and cooking fats (butter, tallow, frying)",0.72,False
+97,715,"left, political, party, right, liberal, politics","Politics (RFK, Trump, left/right)",original,0.67,"Distrust of industry, medicine and media",0.48,False
+44,703,"coffee, creamer, cream, caffeine, tea, drink","Staple foods (milk, grains, nuts, soy, chocolate, coffee)",assigned,0.71,Ingredient labels and processed food,0.66,False
+55,683,"bread, bun, sourdough, bakery, no_seed-oil, flour","Shopping (stores, chips, avocado oil)",assigned,0.8,"Staple foods (milk, grains, nuts, soy, chocolate, coffee)",0.73,False
+90,683,"kid, parent, school, child, lunch, snack","Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",flagged,0.5,"Distrust of industry, medicine and media",0.59,True
+93,676,"seed-oil, trump, guy, video, rfk-jr, big","Politics (RFK, Trump, left/right)",flagged,0.58,"General talk and meta (generic seed-oil, subreddit, thanks, influencers)",0.86,True
+64,675,"cooky, cake, butter, recipe, cookie, baking","Shopping (stores, chips, avocado oil)",assigned,0.74,"Cooking and cooking fats (butter, tallow, frying)",0.75,True
+69,650,"red-meat, meat, cancer, processed meat, processed, study","Other diets (vegan, carnivore, ancestral, Mediterranean)",assigned,0.8,Omega-6 / PUFA biochemistry,0.62,False
+72,643,"carnivore, carnivore diet, diet, meat, plant, eat","Other diets (vegan, carnivore, ancestral, Mediterranean)",original,0.77,"Keto, carbs, fasting",0.7,False
+48,636,"soy, tofu, soy sauce, estrogen, soybean, fermented","Staple foods (milk, grains, nuts, soy, chocolate, coffee)",assigned,0.68,Ingredient labels and processed food,0.7,True
+52,631,"ice, ice cream, cream, vanilla, chocolate, flavor","Staple foods (milk, grains, nuts, soy, chocolate, coffee)",assigned,0.74,"Shopping (stores, chips, avocado oil)",0.7,False
+89,620,"political, left, right, liberal, health, politics","Politics (RFK, Trump, left/right)",original,0.75,"Distrust of industry, medicine and media",0.76,True
+70,595,"mom, wife, mother, mum, eat, food","Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",flagged,0.56,"General talk and meta (generic seed-oil, subreddit, thanks, influencers)",0.53,False
+75,584,"smoke, smoke point, point, olive-oil, heat, cooking","Cooking and cooking fats (butter, tallow, frying)",assigned,0.69,"Shopping (stores, chips, avocado oil)",0.68,False
+87,572,"allergy, allergic, symptom, reaction, histamine, food allergy","Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",assigned,0.75,Ingredient labels and processed food,0.59,False
+81,569,"flavor, natural flavor, natural, vanilla, taste, artificial",Ingredient labels and processed food,original,0.78,"Staple foods (milk, grains, nuts, soy, chocolate, coffee)",0.73,False
+53,558,"oat, milk, almond, oat milk, almond milk, water","Staple foods (milk, grains, nuts, soy, chocolate, coffee)",assigned,0.85,Ingredient labels and processed food,0.7,False
+108,537,"soybean, soybean oil, oil, soy, soy oil, edible",Omega-6 / PUFA biochemistry,assigned,0.72,Ingredient labels and processed food,0.78,True
+83,535,"app, email, subscription, free, charged, pay","General talk and meta (generic seed-oil, subreddit, thanks, influencers)",assigned,0.27,"Distrust of industry, medicine and media",0.29,True
+65,534,"cheese, cheddar, raw, milk, mac cheese, cream cheese","Staple foods (milk, grains, nuts, soy, chocolate, coffee)",assigned,0.73,"Shopping (stores, chips, avocado oil)",0.67,False
+67,531,"water, fluoride, tooth, toothpaste, filter, aluminum","Distrust of industry, medicine and media",flagged,0.53,"Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",0.61,True
+61,519,"evoo, olive-oil, polyphenol, virgin, bottle, oil","Shopping (stores, chips, avocado oil)",assigned,0.69,Ingredient labels and processed food,0.66,False
+74,507,"vegan, seed-oil, vegetarian, veganism, meat, animal","Other diets (vegan, carnivore, ancestral, Mediterranean)",original,0.75,"General talk and meta (generic seed-oil, subreddit, thanks, influencers)",0.8,True
+119,500,"sugar, seed-oil, diabetes, seed-oil sugar, fructose, insulin",Omega-6 / PUFA biochemistry,flagged,0.75,"General talk and meta (generic seed-oil, subreddit, thanks, influencers)",0.75,True
+54,468,"lecithin, soy lecithin, sunflower lecithin, emulsifier, sunflower, soy",Ingredient labels and processed food,assigned,0.74,"Staple foods (milk, grains, nuts, soy, chocolate, coffee)",0.69,False
+66,460,"salt, sodium, blood pressure, pressure, blood, potassium","Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",flagged,0.55,"Keto, carbs, fasting",0.54,False
+80,434,"sesame, sesame oil, oil, toasted, sesame seed, flavor",Omega-6 / PUFA biochemistry,flagged,0.69,Ingredient labels and processed food,0.72,True
+101,429,"testosterone, hormone, estrogen, endocrine, man, endocrine disruptor","Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",flagged,0.6,Omega-6 / PUFA biochemistry,0.56,False
+88,425,"organic, pesticide, farm, buy organic, chemical, herbicide","Distrust of industry, medicine and media",flagged,0.66,Ingredient labels and processed food,0.71,True
+68,424,"dog, cat, pet, raw, vet, food","Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",flagged,0.47,"Other diets (vegan, carnivore, ancestral, Mediterranean)",0.75,True
+118,422,"mediterranean, blue zone, zone, blue, mediterranean diet, country","Other diets (vegan, carnivore, ancestral, Mediterranean)",original,0.76,"Keto, carbs, fasting",0.64,False
+84,417,"stevia, sweetener, maltodextrin, aspartame, sugar, sucralose",Ingredient labels and processed food,assigned,0.72,"Staple foods (milk, grains, nuts, soy, chocolate, coffee)",0.7,False
+71,401,"pizza, crust, dough, frozen, cheese, sauce","Shopping (stores, chips, avocado oil)",assigned,0.74,"Cooking and cooking fats (butter, tallow, frying)",0.66,False
+77,397,"vitamin, tocopherol, antioxidant, pufa, supplement, vit",Omega-6 / PUFA biochemistry,original,0.78,"Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",0.7,False
+115,394,"seed, eat seed, chia, chia seed, plant, fruit","Other diets (vegan, carnivore, ancestral, Mediterranean)",flagged,0.66,"General talk and meta (generic seed-oil, subreddit, thanks, influencers)",0.73,True
+91,375,"wing, wild wing, buffalo wild, buffalo, tallow, wild","Shopping (stores, chips, avocado oil)",assigned,0.75,"Cooking and cooking fats (butter, tallow, frying)",0.75,True
+79,366,"vitamin, d3, k2, supplement, vit, vitamin d3",Omega-6 / PUFA biochemistry,flagged,0.65,"Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",0.64,False
+85,365,"chocolate, cocoa, dark chocolate, dark, cacao, metal","Staple foods (milk, grains, nuts, soy, chocolate, coffee)",assigned,0.7,Ingredient labels and processed food,0.64,False
+112,361,"egg, pufa, chicken, low pufa, feed, high pufa",Omega-6 / PUFA biochemistry,assigned,0.63,"Other diets (vegan, carnivore, ancestral, Mediterranean)",0.67,True
+102,353,"japan, japanese, asian, country, china, chinese","Other diets (vegan, carnivore, ancestral, Mediterranean)",flagged,0.59,Omega-6 / PUFA biochemistry,0.61,True
+95,311,"cracker, pretzel, snack, graham, free, seed-oil free","Shopping (stores, chips, avocado oil)",assigned,0.78,"Staple foods (milk, grains, nuts, soy, chocolate, coffee)",0.71,False
+110,309,"nut, macadamia, macadamia nut, pufa, nut butter, macademia",Omega-6 / PUFA biochemistry,assigned,0.74,"Staple foods (milk, grains, nuts, soy, chocolate, coffee)",0.76,True
+117,308,"pressed, cold pressed, cold, expeller, press, pressed oil",Omega-6 / PUFA biochemistry,flagged,0.6,Ingredient labels and processed food,0.72,True
+116,307,"cereal, granola, grain, breakfast, oat, rice","Staple foods (milk, grains, nuts, soy, chocolate, coffee)",assigned,0.81,Ingredient labels and processed food,0.68,False
+113,294,"bar, protein bar, protein, date, snack, granola","Shopping (stores, chips, avocado oil)",assigned,0.72,"Staple foods (milk, grains, nuts, soy, chocolate, coffee)",0.72,False
+96,288,"yogurt, greek, greek yogurt, yoghurt, milk, plain","Staple foods (milk, grains, nuts, soy, chocolate, coffee)",assigned,0.79,Ingredient labels and processed food,0.63,False
+120,286,"citric, citric acid, mold, acid, lemon, citrus",Ingredient labels and processed food,assigned,0.72,"Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",0.61,False
+111,284,"corn, corn oil, gmo corn, gmo, grain, corn soy","Staple foods (milk, grains, nuts, soy, chocolate, coffee)",assigned,0.67,"Shopping (stores, chips, avocado oil)",0.68,True
+100,268,"gmo, pesticide, crop, genetically, modified, monsanto","Distrust of industry, medicine and media",flagged,0.65,"Other diets (vegan, carnivore, ancestral, Mediterranean)",0.61,False
+103,256,"glyphosate, herbicide, crop, wheat, sprayed, organic","Distrust of industry, medicine and media",flagged,0.56,Ingredient labels and processed food,0.62,True
+121,250,"gum, carrageenan, xanthan, xanthan gum, guar, guar gum",Ingredient labels and processed food,assigned,0.71,"Staple foods (milk, grains, nuts, soy, chocolate, coffee)",0.67,False
+106,241,"popcorn, pop, microwave, coconut-oil, popped, movie","Shopping (stores, chips, avocado oil)",assigned,0.71,"Cooking and cooking fats (butter, tallow, frying)",0.68,False
+92,229,"cico, calorie, weight, gain, energy, weight-loss","Keto, carbs, fasting",assigned,0.67,Omega-6 / PUFA biochemistry,0.54,False
+94,226,"msg, chinese, salt, sodium, food, extract",Ingredient labels and processed food,assigned,0.61,"Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",0.59,False
+114,188,"hummus, tahini, chickpea, sesame, sesame seed, seed","Shopping (stores, chips, avocado oil)",assigned,0.71,"Staple foods (milk, grains, nuts, soy, chocolate, coffee)",0.7,False

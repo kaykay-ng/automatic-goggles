@@ -34,7 +34,11 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
-RAW, PROC = ROOT / "data" / "raw", ROOT / "data" / "processed"
+import os
+# Defaults: the 18-19 Nov download and data/processed. To rebuild on the rerun data WITHOUT overwriting those files (26 Nov):
+#   SEDOIL_RAW=seedoils/data/raw_haoyu SEDOIL_PROC=seedoils/data/processed_rebuild ./.venv-nlp/bin/python seedoils/notebooks/seso_topics.py prep|embed|fit
+RAW = Path(os.environ["SEDOIL_RAW"]).resolve() if os.environ.get("SEDOIL_RAW") else ROOT / "data" / "raw"
+PROC = Path(os.environ["SEDOIL_PROC"]).resolve() if os.environ.get("SEDOIL_PROC") else ROOT / "data" / "processed"
 PREFIX = {"StopEatingSeedOils": "seso", "ScientificNutrition": "scinut"}  # output file prefix per subreddit
 SUB = "StopEatingSeedOils"  # overridden by the optional 2nd command-line argument
 PFX = PREFIX[SUB]
@@ -100,9 +104,11 @@ def fit():
     vec = lambda: CountVectorizer(stop_words=stop, token_pattern=TOKEN_PATTERN, min_df=20, ngram_range=(1, 2))
     tm = HyphenBERTopic(umap_model=UMAP(n_neighbors=15, n_components=5, min_dist=0.0, metric="cosine", random_state=42),
                   hdbscan_model=HDBSCAN(min_cluster_size=150, min_samples=15, metric="euclidean", cluster_selection_method="eom", prediction_data=True),
-                  vectorizer_model=vec(), calculate_probabilities=False, verbose=True)
-    topics, _ = tm.fit_transform(docs, embeddings=V)
+                  vectorizer_model=vec(), calculate_probabilities=bool(os.environ.get("SEDOIL_PROBS")), verbose=True)  # SEDOIL_PROBS=1: also keep HDBSCAN's soft membership of every document in every topic
+    topics, probs = tm.fit_transform(docs, embeddings=V)
     topics = np.array(topics)
+    if probs is not None:  # documents x topics matrix (rows need not sum to 1); saved before outliers are reassigned
+        np.savez_compressed(PROC / f"{PFX}_probs.npz", id=D.id.values.astype(str), p=np.asarray(probs).astype(np.float16)); print(f"probabilities saved: {np.asarray(probs).shape}", flush=True)
     n_out = int((topics == -1).sum())
     print(f"topics: {len(set(topics)) - (1 if -1 in topics else 0)} | outliers: {n_out:,} of {len(topics):,} ({n_out / len(topics):.0%})", flush=True)
     new = np.array(tm.reduce_outliers(docs, topics.tolist(), strategy="embeddings", embeddings=V))

@@ -1,0 +1,14 @@
+theme,docs,share_before,share_from24,ratio,neg_before,neg_jan_jul,neg_from_aug,neg_change,ci_lo,ci_hi,flag_before,flag_from_aug,positive_from_aug,ambiguous_from_aug,neutral_from_aug,n_before,n_from_aug
+"Politics (RFK, Trump, left/right)",2797,0.65,3.21,4.9,14.4,12.2,11.5,-2.9,-8.8,1.9,12.5,8.5,19.8,6.8,46.9,160,2514
+Vaccines and COVID,1014,0.32,1.14,3.52,11.4,12.9,11.5,0.1,-7.6,7.4,7.6,9.4,16.2,8.0,50.8,79,679
+"Distrust of industry, medicine and media",5649,3.25,5.9,1.82,11.4,12.5,11.2,-0.2,-2.4,2.0,6.9,8.1,18.8,8.3,45.6,795,3450
+Omega-6 / PUFA biochemistry,21413,25.29,18.51,0.73,6.1,7.1,7.2,1.0,0.3,1.9,4.9,5.9,15.2,10.9,56.1,6188,10049
+"Keto, carbs, fasting",6182,7.67,5.23,0.68,6.4,7.0,6.6,0.1,-1.4,1.6,5.0,5.2,19.6,8.7,51.3,1878,2724
+"Other diets (vegan, carnivore, ancestral, Mediterranean)",9188,10.02,8.19,0.82,7.0,8.4,8.0,1.0,-0.2,2.2,5.0,6.1,19.4,9.7,50.4,2452,4524
+Studies and evidence,2760,2.37,2.65,1.12,8.5,11.3,12.9,4.5,1.8,7.3,6.6,10.3,19.2,10.9,43.7,579,1383
+"Shopping (stores, chips, avocado oil)",14482,11.9,14.07,1.18,6.1,6.8,7.8,1.6,0.7,2.7,4.5,5.5,26.1,10.7,43.8,2911,8736
+Ingredient labels and processed food,4432,3.26,4.42,1.36,7.6,8.0,10.1,2.5,0.3,4.7,6.1,8.1,18.2,11.2,48.2,798,2654
+"Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",6497,5.99,6.12,1.02,5.4,6.8,7.0,1.6,-0.0,3.0,3.2,4.6,21.7,10.4,46.0,1467,3431
+"Staple foods (milk, grains, nuts, soy, chocolate, coffee)",8098,8.24,7.4,0.9,7.1,7.8,7.7,0.6,-0.7,2.1,5.0,5.4,22.7,9.6,47.0,2016,4256
+"Cooking and cooking fats (butter, tallow, frying)",6194,6.07,5.72,0.94,4.8,7.2,7.8,3.1,1.6,4.6,3.6,5.7,21.7,10.3,49.4,1486,3480
+"General talk and meta (generic seed-oil, subreddit, thanks, influencers)",18009,14.97,17.44,1.17,8.3,9.6,10.1,1.8,0.6,2.9,5.7,7.7,23.0,10.9,40.6,3663,10330

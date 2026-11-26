@@ -1,0 +1,12 @@
+r/StopEatingSeedOils: 238,352 comments by 26,142 commenters (bots, [deleted] removed); 233,275 reply links with a known non-self author
+  2022: median monthly active commenters 274, median share new 38%
+  2023: median monthly active commenters 632, median share new 41%
+  2024: median monthly active commenters 2168, median share new 48%
+  2025: median monthly active commenters 1246, median share new 29%
+  quarterly LCC share (nodes): 2022Q1 100% (481); 2022Q2 98% (633); 2022Q3 96% (588); 2022Q4 98% (692); 2023Q1 98% (1124); 2023Q2 97% (1166); 2023Q3 98% (2059); 2023Q4 97% (1900); 2024Q1 97% (3459); 2024Q2 97% (5137); 2024Q3 97% (6731); 2024Q4 96% (5748); 2025Q1 93% (4088); 2025Q2 87% (2988); 2025Q3 88% (2874); 2025Q4 80% (1688); 2026Q1 83% (1691); 2026Q2 87% (2036); 2026Q3 91% (2784)
+r/ScientificNutrition: 155,716 comments by 12,914 commenters (bots, [deleted] removed); 137,327 reply links with a known non-self author
+  2022: median monthly active commenters 286, median share new 33%
+  2023: median monthly active commenters 262, median share new 38%
+  2024: median monthly active commenters 393, median share new 42%
+  2025: median monthly active commenters 320, median share new 39%
+  quarterly LCC share (nodes): 2022Q1 93% (661); 2022Q2 95% (725); 2022Q3 95% (779); 2022Q4 89% (614); 2023Q1 93% (706); 2023Q2 90% (645); 2023Q3 90% (714); 2023Q4 86% (659); 2024Q1 86% (833); 2024Q2 84% (983); 2024Q3 78% (1117); 2024Q4 80% (1212); 2025Q1 78% (1249); 2025Q2 76% (950); 2025Q3 74% (895); 2025Q4 78% (829); 2026Q1 80% (1034); 2026Q2 87% (1411); 2026Q3 92% (1886)
