@@ -1,4 +1,4 @@
-"""Figure 1 of the paper (replaces the theme figure fig1_themes.pdf; 27 Nov 2026). Topics only, no hand-grouped themes. Topic of a document = topic_final under the 0.05 outlier rule (processed_rebuild_prob/seso_doc_topics_prob005_v3.csv.gz); share = documents of the topic / ALL documents of the quarter (documents left without a topic stay in the denominator).
+"""Figure 1 of the paper (replaces the theme figure fig1_themes.pdf; 27 Nov 2026). Topics only, no hand-grouped themes. Topic of a document = the result of BERTopic's own reduce_outliers (strategy "probabilities", threshold 0.05; outliers_official.py writes processed_rebuild_prob/seso_doc_topics_official005.csv.gz, topic -1 = no topic); share = documents of the topic / ALL documents of the quarter (documents left without a topic stay in the denominator).
 (A) the 10 largest topics; (B) the 6 fastest-growing other topics (mean share 2024 Q1-2026 Q3 divided by mean share 2022-2023, denominator floored at 0.1 pp, >= 300 documents). Grey bars: documents per quarter. Quarters 2022 Q1 - 2026 Q3 (Q4 2026 unfinished).
 Labels: the top three c-TF-IDF words, except words that come from one repeated document (topic_word_concentration.py: 'rape' in topic 47, 'et al' in 103, 'capita' in 108) are skipped.
 Outputs: paper/figures/fig1_topics.pdf, seedoils/figures/fig1_topics.png, seedoils/data/processed/fig1_quarterly_topic_shares.csv (aggregates only). Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/figure1_topics_overview.py"""
@@ -6,7 +6,7 @@ import os, matplotlib; matplotlib.use("Agg")
 TEX = shutil_which = __import__("shutil").which("latex") is not None  # LaTeX text if a latex binary is on PATH, else matplotlib's Computer Modern (cmr10)
 import matplotlib.pyplot as plt, matplotlib.dates as md, pandas as pd
 R, M, P = "seedoils/data/processed_rebuild_prob/", "seedoils/data/processed_rebuild_model/", "seedoils/data/processed/"
-A = pd.read_csv(R + "seso_doc_topics_prob005_v3.csv.gz"); A["q"] = pd.to_datetime(A.created_utc, unit="s").dt.to_period("Q").dt.to_timestamp()
+A = pd.read_csv(R + "seso_doc_topics_official005.csv.gz").rename(columns={"topic": "topic_final"}); A["q"] = pd.to_datetime(A.created_utc, unit="s").dt.to_period("Q").dt.to_timestamp()
 A = A[(A.q >= "2022-01-01") & (A.q < "2026-10-01")]; tot = A.groupby("q").size(); K = A[A.topic_final.notna() & (A.topic_final >= 0)]
 C = K.groupby(["topic_final", "q"]).size().unstack(fill_value=0).reindex(columns=tot.index, fill_value=0); C.index = C.index.astype(int); S = C / tot * 100
 info = pd.read_csv(M + "seso_topics_info.csv").set_index("topic"); SKIP = {47: {"rape"}, 103: {"et al", "et", "al"}, 108: {"capita"}}

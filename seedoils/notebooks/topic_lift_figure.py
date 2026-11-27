@@ -9,7 +9,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 
-plt.rcParams.update({"text.usetex": True, "font.family": "serif", "font.size": 7.5, "axes.spines.top": False, "axes.spines.right": False,
+plt.rcParams.update({"text.usetex": __import__("shutil").which("latex") is not None, "font.family": "serif", "font.serif": ["cmr10", "DejaVu Serif"], "axes.formatter.use_mathtext": True, "font.size": 7.5, "axes.spines.top": False, "axes.spines.right": False,
                      "text.latex.preamble": r"\usepackage[T1]{fontenc}\usepackage{lmodern}"})
 L = json.loads(Path("seedoils/data/processed/topic_network_lift_periods.json").read_text())
 A, B = L["periods"]["before 2024"]["sets"], L["periods"]["from 2024"]["sets"]
@@ -17,7 +17,7 @@ ROWS = [("Politics - Politics", "Politics -- politics"), ("Politics - Vaccines a
         ("Politics - Distrust of industry, medicine and media", "Politics -- distrust"), ("Politics - Studies and evidence", "Politics -- studies and evidence"),
         ("Politics - food, diet and shopping themes", "Politics -- food, diet and shopping"),
         ("Omega-6 / PUFA - Omega-6 / PUFA", "Omega-6 -- omega-6"), ("Omega-6 / PUFA - Keto, carbs, fasting", "Omega-6 -- keto"),
-        ("Saturated-fat topic (4) - all other topics", "Saturated fat (hub) -- all topics"), ("the 299 all-years links", "All 299 links of the network")]
+        ("Saturated-fat topic (4) - all other topics", "Saturated-fat topic -- all topics"), ("the all-years links", f"All {len(json.loads(Path('seedoils/data/processed/topic_cooccurrence_network.json').read_text())['edges_all'])} links of the network")]
 BLUE, GREY = "#2a78d6", "#52514e"
 fig, ax = plt.subplots(figsize=(3.42, 2.6), constrained_layout=True)
 for i, (k, lab) in enumerate(ROWS):

@@ -22,7 +22,8 @@ from scipy.sparse import csr_matrix
 sys.path.insert(0, str(Path(__file__).parent))
 from seedoil_common import not_bot, SPLIT_TS, THEMES_FILE  # noqa: E402
 
-P, RAW = Path("seedoils/data/processed"), Path("seedoils/data/raw")
+P, RAW = Path("seedoils/data/processed"), Path("seedoils/data/raw_haoyu")  # 27 Nov: reference raw data (the rerun); outliers.py table below
+REB = Path("seedoils/data/processed_rebuild_prob")
 N_NULL, N_BOOT = 500, 400
 cauth, pauth, first = {}, {}, {}
 with gzip.open(glob.glob(str(RAW / "*StopEatingSeedOils_comments.jsonl.gz"))[0], "rt", encoding="utf-8") as f:
@@ -34,7 +35,9 @@ with gzip.open(glob.glob(str(RAW / "*StopEatingSeedOils_posts.jsonl.gz"))[0], "r
         x = json.loads(l); a = x.get("author") or ""; pauth[x["id"]] = a; t = int(x["created_utc"]); first_post[a] = min(first_post.get(a, t), t)
 for a, t in first_post.items():  # 27 Nov: first POST OR COMMENT, the same definition as the reply network
     first[a] = min(first.get(a, t), t)
-D = pd.read_csv(P / "seso_doc_topics.csv.gz", usecols=["id", "kind", "created_utc", "topic"]); D["id"] = D.id.astype(str)
+D = pd.read_csv(REB / "seso_doc_topics_official005.csv.gz", usecols=["id", "created_utc", "topic"]); D["id"] = D.id.astype(str)
+# 27 Nov: ONLY documents with a confident topic = BERTopic's reduce_outliers (probabilities strategy, threshold 0.05; outliers_official.py); outliers below it (topic -1, 28.8% of documents) are not used
+D = D[D.topic >= 0].copy(); _k = pd.read_csv(REB / "seso_doc_topics.csv.gz", usecols=["id", "kind"]); D["kind"] = D.id.map(dict(zip(_k.id.astype(str), _k.kind)))
 D["a"] = np.where(D.kind == "comment", D.id.map(cauth), D.id.map(pauth))
 D = D[D.a.notna() & (D.a != "") & ~D.a.isin(["[deleted]", "AutoModerator"]) & not_bot(D.a.fillna(""))].copy()
 D["new"] = D.a.map(first) >= SPLIT_TS; D["post"] = D.created_utc >= SPLIT_TS

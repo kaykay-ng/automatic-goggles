@@ -4,22 +4,37 @@
  "topics": 123,
  "themes_file": "themes_full_v3.json",
  "all_years": {
-  "people": 9912,
-  "edges": 299,
-  "density": 0.04,
-  "isolated_topics": 32,
-  "modularity_best": 0.428,
-  "modularity_mean": 0.422,
-  "communities": 40,
+  "people": 7965,
+  "edges": 181,
+  "density": 0.024,
+  "isolated_topics": 44,
+  "modularity_best": 0.507,
+  "modularity_mean": 0.501,
+  "communities": 55,
   "community_sizes": [
-   25,
-   18,
-   13,
-   12,
-   10,
-   7,
+   16,
+   15,
+   15,
+   9,
+   5,
    4,
+   4,
+   4,
+   3,
    2,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
    1,
    1,
    1,
@@ -53,37 +68,37 @@
    1,
    1
   ],
-  "stability_ami_across_seeds": 0.802,
-  "ami_vs_14_themes": 0.266,
-  "nmi_vs_14_themes": 0.548,
-  "ami_vs_shuffled_themes": 0.0,
-  "edges_inside_a_theme_pct": 31.4,
+  "stability_ami_across_seeds": 0.874,
+  "ami_vs_14_themes": 0.217,
+  "nmi_vs_14_themes": 0.582,
+  "ami_vs_shuffled_themes": 0.001,
+  "edges_inside_a_theme_pct": 34.3,
   "pairs_inside_a_theme_pct": 8.0,
   "community_contents": [
    {
     "community": 0,
-    "topics": 25,
+    "topics": 16,
     "themes": {
-     "Keto, carbs, fasting": 7,
-     "Other diets": 7,
-     "Lifestyle": 5,
-     "Omega-6 / PUFA biochemistry": 3
+     "Cooking and cooking fats": 4,
+     "Other diets": 4,
+     "Shopping": 3,
+     "Staple foods": 2
     },
     "example_topics": [
-     "fat, saturated-fat, trans, trans fat",
-     "ldl, cholesterol, hdl, statin",
-     "calorie, weight, gain, lose",
-     "fruit, rice, beef, cheese"
+     "grass, fed, beef, grass fed",
+     "fruit, rice, beef, cheese",
+     "butter, margarine, real butter, butter butter",
+     "pork, pig, lard, bacon"
     ]
    },
    {
     "community": 1,
-    "topics": 18,
+    "topics": 15,
     "themes": {
-     "Politics": 5,
-     "General talk and meta": 4,
      "Distrust of industry, medicine and media": 4,
-     "Studies and evidence": 2
+     "General talk and meta": 3,
+     "Studies and evidence": 2,
+     "Lifestyle": 2
     },
     "example_topics": [
      "seed-oil, food, health, oil",
@@ -94,94 +109,139 @@
    },
    {
     "community": 2,
-    "topics": 13,
+    "topics": 15,
     "themes": {
-     "Specific oils": 7,
-     "Cooking and cooking fats": 2,
-     "Ingredient labels and processed food": 2,
+     "Specific oils": 8,
+     "Omega-6 / PUFA biochemistry": 3,
+     "Lifestyle": 2,
      "Staple foods": 1
     },
     "example_topics": [
+     "pufa, omega-6, omega-3, acid",
      "olive-oil, olive, virgin, extra virgin",
      "oil, vegetable-oil, hexane, lubricant",
-     "butter, margarine, real butter, butter butter",
      "avocado-oil, avocado, olive-oil, oil"
     ]
    },
    {
     "community": 3,
-    "topics": 12,
+    "topics": 9,
     "themes": {
-     "Other diets": 4,
-     "Omega-6 / PUFA biochemistry": 3,
-     "Staple foods": 3,
-     "Specific oils": 2
+     "Keto, carbs, fasting": 6,
+     "Omega-6 / PUFA biochemistry": 2,
+     "Other diets": 1
     },
     "example_topics": [
-     "pufa, omega-6, omega-3, acid",
-     "grass, fed, beef, grass fed",
-     "pork, pig, lard, bacon",
-     "milk, raw milk, raw, dairy"
+     "fat, saturated-fat, trans, trans fat",
+     "ldl, cholesterol, hdl, statin",
+     "calorie, weight, gain, lose",
+     "keto, carb, ketosis, diet"
     ]
    },
    {
     "community": 4,
-    "topics": 10,
+    "topics": 5,
     "themes": {
-     "Cooking and cooking fats": 4,
-     "Shopping": 2,
-     "Keto, carbs, fasting": 2,
-     "General talk and meta": 1
+     "Politics": 4,
+     "Vaccines and COVID": 1
     },
     "example_topics": [
-     "meal, cook, food, home",
-     "eat, taste, eating, food",
-     "sugar, syrup, fructose, corn syrup",
-     "tallow, beef tallow, beef, butcher"
+     "vaccine, covid, virus, shot",
+     "trump, vote, president, candidate",
+     "rfk-jr, trump, rape, vote",
+     "left, political, party, right"
     ]
    },
    {
     "community": 5,
-    "topics": 7,
+    "topics": 4,
     "themes": {
-     "Shopping": 6,
-     "Staple foods": 1
+     "Shopping": 4
     },
     "example_topics": [
      "store, costco, price, grocery",
      "chip, tortilla, potato chip, potato",
-     "bread, flour, wheat, gluten",
-     "sauce, chili, tomato, pepper"
+     "mayo, mayonnaise, mustard, chosen",
+     "dressing, salad, ranch, salad dressing"
     ]
    },
    {
     "community": 6,
     "topics": 4,
     "themes": {
-     "Ingredient labels and processed food": 2,
-     "Lifestyle": 1,
-     "Staple foods": 1
+     "Other diets": 2,
+     "General talk and meta": 2
     },
     "example_topics": [
-     "skin, hair, acne, soap",
-     "ice, ice cream, cream, vanilla",
-     "lecithin, soy lecithin, sunflower lecithin, emulsifier",
-     "gum, carrageenan, xanthan, xanthan gum"
+     "guy, video, diet, eats",
+     "vegan, veganism, vegan diet, vegetarian",
+     "podcast, tucker, video, layne",
+     "vegan, seed-oil, vegetarian, veganism"
     ]
    },
    {
     "community": 7,
-    "topics": 2,
+    "topics": 4,
     "themes": {
-     "Shopping": 2
+     "Keto, carbs, fasting": 2,
+     "Ingredient labels and processed food": 1,
+     "Staple foods": 1
     },
     "example_topics": [
-     "mayo, mayonnaise, mustard, chosen",
-     "dressing, salad, ranch, salad dressing"
+     "sugar, syrup, fructose, corn syrup",
+     "sugar, seed-oil, diabetes, seed-oil sugar",
+     "stevia, sweetener, maltodextrin, aspartame",
+     "chocolate, cocoa, dark chocolate, dark"
     ]
    },
    {
     "community": 8,
+    "topics": 3,
+    "themes": {
+     "Lifestyle": 2,
+     "Other diets": 1
+    },
+    "example_topics": [
+     "fiber, gut, ibs, stomach",
+     "oxalate, vegetable, spinach, fruit",
+     "salt, sodium, blood pressure, pressure"
+    ]
+   },
+   {
+    "community": 9,
+    "topics": 2,
+    "themes": {
+     "Staple foods": 1,
+     "Shopping": 1
+    },
+    "example_topics": [
+     "bread, flour, wheat, gluten",
+     "bread, bun, sourdough, bakery"
+    ]
+   },
+   {
+    "community": 10,
+    "topics": 2,
+    "themes": {
+     "Distrust of industry, medicine and media": 2
+    },
+    "example_topics": [
+     "gmo, pesticide, crop, genetically",
+     "glyphosate, herbicide, crop, wheat"
+    ]
+   },
+   {
+    "community": 11,
+    "topics": 1,
+    "themes": {
+     "Lifestyle": 1
+    },
+    "example_topics": [
+     "skin, hair, acne, soap"
+    ]
+   },
+   {
+    "community": 12,
     "topics": 1,
     "themes": {
      "Lifestyle": 1
@@ -191,7 +251,7 @@
     ]
    },
    {
-    "community": 9,
+    "community": 13,
     "topics": 1,
     "themes": {
      "Specific oils": 1
@@ -201,7 +261,7 @@
     ]
    },
    {
-    "community": 10,
+    "community": 14,
     "topics": 1,
     "themes": {
      "Staple foods": 1
@@ -211,7 +271,7 @@
     ]
    },
    {
-    "community": 11,
+    "community": 15,
     "topics": 1,
     "themes": {
      "Distrust of industry, medicine and media": 1
@@ -221,7 +281,7 @@
     ]
    },
    {
-    "community": 12,
+    "community": 16,
     "topics": 1,
     "themes": {
      "Ingredient labels and processed food": 1
@@ -231,7 +291,17 @@
     ]
    },
    {
-    "community": 13,
+    "community": 17,
+    "topics": 1,
+    "themes": {
+     "Cooking and cooking fats": 1
+    },
+    "example_topics": [
+     "pan, cast iron, cast, iron"
+    ]
+   },
+   {
+    "community": 18,
     "topics": 1,
     "themes": {
      "Staple foods": 1
@@ -241,7 +311,17 @@
     ]
    },
    {
-    "community": 14,
+    "community": 19,
+    "topics": 1,
+    "themes": {
+     "Staple foods": 1
+    },
+    "example_topics": [
+     "ice, ice cream, cream, vanilla"
+    ]
+   },
+   {
+    "community": 20,
     "topics": 1,
     "themes": {
      "Staple foods": 1
@@ -251,17 +331,57 @@
     ]
    },
    {
-    "community": 15,
+    "community": 21,
     "topics": 1,
     "themes": {
-     "Lifestyle": 1
+     "Ingredient labels and processed food": 1
     },
     "example_topics": [
-     "salt, sodium, blood pressure, pressure"
+     "processed-food, processed, ultra, ultra processed-food"
     ]
    },
    {
-    "community": 16,
+    "community": 22,
+    "topics": 1,
+    "themes": {
+     "Shopping": 1
+    },
+    "example_topics": [
+     "sauce, chili, tomato, pepper"
+    ]
+   },
+   {
+    "community": 23,
+    "topics": 1,
+    "themes": {
+     "Shopping": 1
+    },
+    "example_topics": [
+     "cooky, cake, butter, recipe"
+    ]
+   },
+   {
+    "community": 24,
+    "topics": 1,
+    "themes": {
+     "Staple foods": 1
+    },
+    "example_topics": [
+     "cheese, cheddar, raw, milk"
+    ]
+   },
+   {
+    "community": 25,
+    "topics": 1,
+    "themes": {
+     "Distrust of industry, medicine and media": 1
+    },
+    "example_topics": [
+     "water, fluoride, tooth, toothpaste"
+    ]
+   },
+   {
+    "community": 26,
     "topics": 1,
     "themes": {
      "Lifestyle": 1
@@ -271,7 +391,7 @@
     ]
    },
    {
-    "community": 17,
+    "community": 27,
     "topics": 1,
     "themes": {
      "Lifestyle": 1
@@ -281,7 +401,7 @@
     ]
    },
    {
-    "community": 18,
+    "community": 28,
     "topics": 1,
     "themes": {
      "Shopping": 1
@@ -291,7 +411,17 @@
     ]
    },
    {
-    "community": 19,
+    "community": 29,
+    "topics": 1,
+    "themes": {
+     "Other diets": 1
+    },
+    "example_topics": [
+     "carnivore, carnivore diet, diet, meat"
+    ]
+   },
+   {
+    "community": 30,
     "topics": 1,
     "themes": {
      "Cooking and cooking fats": 1
@@ -301,7 +431,17 @@
     ]
    },
    {
-    "community": 20,
+    "community": 31,
+    "topics": 1,
+    "themes": {
+     "General talk and meta": 1
+    },
+    "example_topics": [
+     "eat, taste, eating, food"
+    ]
+   },
+   {
+    "community": 32,
     "topics": 1,
     "themes": {
      "Specific oils": 1
@@ -311,27 +451,27 @@
     ]
    },
    {
-    "community": 21,
-    "topics": 1,
-    "themes": {
-     "General talk and meta": 1
-    },
-    "example_topics": [
-     "thank, thanks, link, appreciate"
-    ]
-   },
-   {
-    "community": 22,
+    "community": 33,
     "topics": 1,
     "themes": {
      "Ingredient labels and processed food": 1
     },
     "example_topics": [
-     "stevia, sweetener, maltodextrin, aspartame"
+     "flavor, natural flavor, natural, vanilla"
     ]
    },
    {
-    "community": 23,
+    "community": 34,
+    "topics": 1,
+    "themes": {
+     "General talk and meta": 1
+    },
+    "example_topics": [
+     "app, email, subscription, free"
+    ]
+   },
+   {
+    "community": 35,
     "topics": 1,
     "themes": {
      "Lifestyle": 1
@@ -341,7 +481,7 @@
     ]
    },
    {
-    "community": 24,
+    "community": 36,
     "topics": 1,
     "themes": {
      "Distrust of industry, medicine and media": 1
@@ -351,27 +491,7 @@
     ]
    },
    {
-    "community": 25,
-    "topics": 1,
-    "themes": {
-     "Lifestyle": 1
-    },
-    "example_topics": [
-     "kid, parent, school, child"
-    ]
-   },
-   {
-    "community": 26,
-    "topics": 1,
-    "themes": {
-     "Shopping": 1
-    },
-    "example_topics": [
-     "wing, wild wing, buffalo wild, buffalo"
-    ]
-   },
-   {
-    "community": 27,
+    "community": 37,
     "topics": 1,
     "themes": {
      "Ingredient labels and processed food": 1
@@ -381,17 +501,37 @@
     ]
    },
    {
-    "community": 28,
+    "community": 38,
+    "topics": 1,
+    "themes": {
+     "Shopping": 1
+    },
+    "example_topics": [
+     "cracker, pretzel, snack, graham"
+    ]
+   },
+   {
+    "community": 39,
+    "topics": 1,
+    "themes": {
+     "Staple foods": 1
+    },
+    "example_topics": [
+     "yogurt, greek, greek yogurt, yoghurt"
+    ]
+   },
+   {
+    "community": 40,
     "topics": 1,
     "themes": {
      "Distrust of industry, medicine and media": 1
     },
     "example_topics": [
-     "gmo, pesticide, crop, genetically"
+     "poison, chemical, toxic, dose"
     ]
    },
    {
-    "community": 29,
+    "community": 41,
     "topics": 1,
     "themes": {
      "Lifestyle": 1
@@ -401,7 +541,7 @@
     ]
    },
    {
-    "community": 30,
+    "community": 42,
     "topics": 1,
     "themes": {
      "Other diets": 1
@@ -411,17 +551,17 @@
     ]
    },
    {
-    "community": 31,
+    "community": 43,
     "topics": 1,
     "themes": {
-     "Distrust of industry, medicine and media": 1
+     "Lifestyle": 1
     },
     "example_topics": [
-     "glyphosate, herbicide, crop, wheat"
+     "anxiety, mental, feel, depression"
     ]
    },
    {
-    "community": 32,
+    "community": 44,
     "topics": 1,
     "themes": {
      "Shopping": 1
@@ -431,7 +571,7 @@
     ]
    },
    {
-    "community": 33,
+    "community": 45,
     "topics": 1,
     "themes": {
      "Staple foods": 1
@@ -441,7 +581,7 @@
     ]
    },
    {
-    "community": 34,
+    "community": 46,
     "topics": 1,
     "themes": {
      "Shopping": 1
@@ -451,7 +591,7 @@
     ]
    },
    {
-    "community": 35,
+    "community": 47,
     "topics": 1,
     "themes": {
      "Shopping": 1
@@ -461,7 +601,17 @@
     ]
    },
    {
-    "community": 36,
+    "community": 48,
+    "topics": 1,
+    "themes": {
+     "Other diets": 1
+    },
+    "example_topics": [
+     "seed, eat seed, chia, chia seed"
+    ]
+   },
+   {
+    "community": 49,
     "topics": 1,
     "themes": {
      "Staple foods": 1
@@ -471,7 +621,7 @@
     ]
    },
    {
-    "community": 37,
+    "community": 50,
     "topics": 1,
     "themes": {
      "Specific oils": 1
@@ -481,7 +631,7 @@
     ]
    },
    {
-    "community": 38,
+    "community": 51,
     "topics": 1,
     "themes": {
      "Other diets": 1
@@ -491,7 +641,7 @@
     ]
    },
    {
-    "community": 39,
+    "community": 52,
     "topics": 1,
     "themes": {
      "Ingredient labels and processed food": 1
@@ -499,1250 +649,60 @@
     "example_topics": [
      "citric, citric acid, mold, acid"
     ]
+   },
+   {
+    "community": 53,
+    "topics": 1,
+    "themes": {
+     "Ingredient labels and processed food": 1
+    },
+    "example_topics": [
+     "gum, carrageenan, xanthan, xanthan gum"
+    ]
+   },
+   {
+    "community": 54,
+    "topics": 1,
+    "themes": {
+     "Lifestyle": 1
+    },
+    "example_topics": [
+     "drug, serotonin, addiction, effect"
+    ]
    }
   ]
  },
  "periods": {
-  "people_each": 2425,
+  "people_each": 1946,
   "people_available": {
-   "before": 2425,
-   "from": 8178
+   "before": 1946,
+   "from": 6546
   },
   "before": {
-   "edges": 24,
-   "density": 0.003,
-   "isolated_topics": 104,
-   "modularity_best": 0.49,
-   "modularity_mean": 0.488,
-   "communities": 108,
+   "edges": 6,
+   "density": 0.001,
+   "isolated_topics": 112,
+   "modularity_best": 0.787,
+   "modularity_mean": 0.787,
+   "communities": 117,
    "community_sizes": [
-    8,
-    6,
     3,
     2,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1
-   ],
-   "stability_ami_across_seeds": 0.946,
-   "ami_vs_14_themes": 0.062,
-   "nmi_vs_14_themes": 0.669,
-   "ami_vs_shuffled_themes": 0.001,
-   "edges_inside_a_theme_pct": 29.2,
-   "pairs_inside_a_theme_pct": 8.0,
-   "community_contents": [
-    {
-     "community": 0,
-     "topics": 8,
-     "themes": {
-      "General talk and meta": 3,
-      "Studies and evidence": 2,
-      "Distrust of industry, medicine and media": 2,
-      "Politics": 1
-     },
-     "example_topics": [
-      "comment, reddit, post, sub",
-      "science, study, scientific, evidence",
-      "nutrition, science, diet, study",
-      "money, capitalism, government, profit"
-     ]
-    },
-    {
-     "community": 1,
-     "topics": 6,
-     "themes": {
-      "Keto, carbs, fasting": 4,
-      "Omega-6 / PUFA biochemistry": 2
-     },
-     "example_topics": [
-      "fat, saturated-fat, trans, trans fat",
-      "ldl, cholesterol, hdl, statin",
-      "calorie, weight, gain, lose",
-      "keto, carb, ketosis, diet"
-     ]
-    },
-    {
-     "community": 2,
-     "topics": 3,
-     "themes": {
-      "Omega-6 / PUFA biochemistry": 1,
-      "Other diets": 1,
-      "Specific oils": 1
-     },
-     "example_topics": [
-      "pufa, omega-6, omega-3, acid",
-      "pork, pig, lard, bacon",
-      "coconut-oil, coconut, mct, oil"
-     ]
-    },
-    {
-     "community": 3,
-     "topics": 2,
-     "themes": {
-      "Other diets": 2
-     },
-     "example_topics": [
-      "vegan, veganism, vegan diet, vegetarian",
-      "vegan, seed-oil, vegetarian, veganism"
-     ]
-    },
-    {
-     "community": 4,
-     "topics": 1,
-     "themes": {
-      "General talk and meta": 1
-     },
-     "example_topics": [
-      "seed-oil, food, health, oil"
-     ]
-    },
-    {
-     "community": 5,
-     "topics": 1,
-     "themes": {
-      "Specific oils": 1
-     },
-     "example_topics": [
-      "olive-oil, olive, virgin, extra virgin"
-     ]
-    },
-    {
-     "community": 6,
-     "topics": 1,
-     "themes": {
-      "Shopping": 1
-     },
-     "example_topics": [
-      "chip, tortilla, potato chip, potato"
-     ]
-    },
-    {
-     "community": 7,
-     "topics": 1,
-     "themes": {
-      "Shopping": 1
-     },
-     "example_topics": [
-      "mayo, mayonnaise, mustard, chosen"
-     ]
-    },
-    {
-     "community": 8,
-     "topics": 1,
-     "themes": {
-      "Specific oils": 1
-     },
-     "example_topics": [
-      "avocado-oil, avocado, olive-oil, oil"
-     ]
-    },
-    {
-     "community": 9,
-     "topics": 1,
-     "themes": {
-      "Cooking and cooking fats": 1
-     },
-     "example_topics": [
-      "butter, margarine, real butter, butter butter"
-     ]
-    },
-    {
-     "community": 10,
-     "topics": 1,
-     "themes": {
-      "Lifestyle": 1
-     },
-     "example_topics": [
-      "skin, hair, acne, soap"
-     ]
-    },
-    {
-     "community": 11,
-     "topics": 1,
-     "themes": {
-      "Other diets": 1
-     },
-     "example_topics": [
-      "grass, fed, beef, grass fed"
-     ]
-    },
-    {
-     "community": 12,
-     "topics": 1,
-     "themes": {
-      "Lifestyle": 1
-     },
-     "example_topics": [
-      "sun, sunscreen, skin, sunburn"
-     ]
-    },
-    {
-     "community": 13,
-     "topics": 1,
-     "themes": {
-      "Staple foods": 1
-     },
-     "example_topics": [
-      "bread, flour, wheat, gluten"
-     ]
-    },
-    {
-     "community": 14,
-     "topics": 1,
-     "themes": {
-      "Staple foods": 1
-     },
-     "example_topics": [
-      "milk, raw milk, raw, dairy"
-     ]
-    },
-    {
-     "community": 15,
-     "topics": 1,
-     "themes": {
-      "Other diets": 1
-     },
-     "example_topics": [
-      "egg, chicken, pasture, feed"
-     ]
-    },
-    {
-     "community": 16,
-     "topics": 1,
-     "themes": {
-      "Shopping": 1
-     },
-     "example_topics": [
-      "store, costco, price, grocery"
-     ]
-    },
-    {
-     "community": 17,
-     "topics": 1,
-     "themes": {
-      "Specific oils": 1
-     },
-     "example_topics": [
-      "canola, canola oil, rapeseed, oil"
-     ]
-    },
-    {
-     "community": 18,
-     "topics": 1,
-     "themes": {
-      "Shopping": 1
-     },
-     "example_topics": [
-      "fry, potato, french fry, french"
-     ]
-    },
-    {
-     "community": 19,
-     "topics": 1,
-     "themes": {
-      "Specific oils": 1
-     },
-     "example_topics": [
-      "peanut, peanut butter, peanut oil, butter"
-     ]
-    },
-    {
-     "community": 20,
-     "topics": 1,
-     "themes": {
-      "Cooking and cooking fats": 1
-     },
-     "example_topics": [
-      "meal, cook, food, home"
-     ]
-    },
-    {
-     "community": 21,
-     "topics": 1,
-     "themes": {
-      "Specific oils": 1
-     },
-     "example_topics": [
-      "oil, vegetable-oil, hexane, lubricant"
-     ]
-    },
-    {
-     "community": 22,
-     "topics": 1,
-     "themes": {
-      "Keto, carbs, fasting": 1
-     },
-     "example_topics": [
-      "sugar, syrup, fructose, corn syrup"
-     ]
-    },
-    {
-     "community": 23,
-     "topics": 1,
-     "themes": {
-      "Vaccines and COVID": 1
-     },
-     "example_topics": [
-      "vaccine, covid, virus, shot"
-     ]
-    },
-    {
-     "community": 24,
-     "topics": 1,
-     "themes": {
-      "Specific oils": 1
-     },
-     "example_topics": [
-      "palm, palm oil, oil, kernel"
-     ]
-    },
-    {
-     "community": 25,
-     "topics": 1,
-     "themes": {
-      "Staple foods": 1
-     },
-     "example_topics": [
-      "formula, baby, milk, infant"
-     ]
-    },
-    {
-     "community": 26,
-     "topics": 1,
-     "themes": {
-      "Staple foods": 1
-     },
-     "example_topics": [
-      "nut, almond, seed, nut seed"
-     ]
-    },
-    {
-     "community": 27,
-     "topics": 1,
-     "themes": {
-      "Shopping": 1
-     },
-     "example_topics": [
-      "dressing, salad, ranch, salad dressing"
-     ]
-    },
-    {
-     "community": 28,
-     "topics": 1,
-     "themes": {
-      "Cooking and cooking fats": 1
-     },
-     "example_topics": [
-      "tallow, beef tallow, beef, butcher"
-     ]
-    },
-    {
-     "community": 29,
-     "topics": 1,
-     "themes": {
-      "Cooking and cooking fats": 1
-     },
-     "example_topics": [
-      "ghee, butter, tallow, indian"
-     ]
-    },
-    {
-     "community": 30,
-     "topics": 1,
-     "themes": {
-      "Distrust of industry, medicine and media": 1
-     },
-     "example_topics": [
-      "doctor, medical, pharma, health"
-     ]
-    },
-    {
-     "community": 31,
-     "topics": 1,
-     "themes": {
-      "Distrust of industry, medicine and media": 1
-     },
-     "example_topics": [
-      "plastic, microplastic, glass, bottle"
-     ]
-    },
-    {
-     "community": 32,
-     "topics": 1,
-     "themes": {
-      "Lifestyle": 1
-     },
-     "example_topics": [
-      "cancer, smoking, cigarette, tobacco"
-     ]
-    },
-    {
-     "community": 33,
-     "topics": 1,
-     "themes": {
-      "Ingredient labels and processed food": 1
-     },
-     "example_topics": [
-      "protein, whey, powder, protein powder"
-     ]
-    },
-    {
-     "community": 34,
-     "topics": 1,
-     "themes": {
-      "Cooking and cooking fats": 1
-     },
-     "example_topics": [
-      "pan, cast iron, cast, iron"
-     ]
-    },
-    {
-     "community": 35,
-     "topics": 1,
-     "themes": {
-      "Shopping": 1
-     },
-     "example_topics": [
-      "burger, patty, steak, grill"
-     ]
-    },
-    {
-     "community": 36,
-     "topics": 1,
-     "themes": {
-      "Keto, carbs, fasting": 1
-     },
-     "example_topics": [
-      "fruit, rice, beef, cheese"
-     ]
-    },
-    {
-     "community": 37,
-     "topics": 1,
-     "themes": {
-      "Staple foods": 1
-     },
-     "example_topics": [
-      "coffee, creamer, cream, caffeine"
-     ]
-    },
-    {
-     "community": 38,
-     "topics": 1,
-     "themes": {
-      "Specific oils": 1
-     },
-     "example_topics": [
-      "sunflower, sunflower oil, sunflower seed, oil"
-     ]
-    },
-    {
-     "community": 39,
-     "topics": 1,
-     "themes": {
-      "Politics": 1
-     },
-     "example_topics": [
-      "rfk-jr, trump, rape, vote"
-     ]
-    },
-    {
-     "community": 40,
-     "topics": 1,
-     "themes": {
-      "Staple foods": 1
-     },
-     "example_topics": [
-      "soy, tofu, soy sauce, estrogen"
-     ]
-    },
-    {
-     "community": 41,
-     "topics": 1,
-     "themes": {
-      "Lifestyle": 1
-     },
-     "example_topics": [
-      "vitamin, supplement, iron, b12"
-     ]
-    },
-    {
-     "community": 42,
-     "topics": 1,
-     "themes": {
-      "Lifestyle": 1
-     },
-     "example_topics": [
-      "fiber, gut, ibs, stomach"
-     ]
-    },
-    {
-     "community": 43,
-     "topics": 1,
-     "themes": {
-      "Staple foods": 1
-     },
-     "example_topics": [
-      "ice, ice cream, cream, vanilla"
-     ]
-    },
-    {
-     "community": 44,
-     "topics": 1,
-     "themes": {
-      "Staple foods": 1
-     },
-     "example_topics": [
-      "oat, milk, almond, oat milk"
-     ]
-    },
-    {
-     "community": 45,
-     "topics": 1,
-     "themes": {
-      "Ingredient labels and processed food": 1
-     },
-     "example_topics": [
-      "lecithin, soy lecithin, sunflower lecithin, emulsifier"
-     ]
-    },
-    {
-     "community": 46,
-     "topics": 1,
-     "themes": {
-      "Shopping": 1
-     },
-     "example_topics": [
-      "bread, bun, sourdough, bakery"
-     ]
-    },
-    {
-     "community": 47,
-     "topics": 1,
-     "themes": {
-      "Ingredient labels and processed food": 1
-     },
-     "example_topics": [
-      "processed-food, processed, ultra, ultra processed-food"
-     ]
-    },
-    {
-     "community": 48,
-     "topics": 1,
-     "themes": {
-      "Ingredient labels and processed food": 1
-     },
-     "example_topics": [
-      "ingredient, label, list, ingredient list"
-     ]
-    },
-    {
-     "community": 49,
-     "topics": 1,
-     "themes": {
-      "Keto, carbs, fasting": 1
-     },
-     "example_topics": [
-      "fasting, fast, day, hour"
-     ]
-    },
-    {
-     "community": 50,
-     "topics": 1,
-     "themes": {
-      "Specific oils": 1
-     },
-     "example_topics": [
-      "evoo, olive-oil, polyphenol, virgin"
-     ]
-    },
-    {
-     "community": 51,
-     "topics": 1,
-     "themes": {
-      "Other diets": 1
-     },
-     "example_topics": [
-      "oxalate, vegetable, spinach, fruit"
-     ]
-    },
-    {
-     "community": 52,
-     "topics": 1,
-     "themes": {
-      "Shopping": 1
-     },
-     "example_topics": [
-      "sauce, chili, tomato, pepper"
-     ]
-    },
-    {
-     "community": 53,
-     "topics": 1,
-     "themes": {
-      "Shopping": 1
-     },
-     "example_topics": [
-      "cooky, cake, butter, recipe"
-     ]
-    },
-    {
-     "community": 54,
-     "topics": 1,
-     "themes": {
-      "Staple foods": 1
-     },
-     "example_topics": [
-      "cheese, cheddar, raw, milk"
-     ]
-    },
-    {
-     "community": 55,
-     "topics": 1,
-     "themes": {
-      "Lifestyle": 1
-     },
-     "example_topics": [
-      "salt, sodium, blood pressure, pressure"
-     ]
-    },
-    {
-     "community": 56,
-     "topics": 1,
-     "themes": {
-      "Distrust of industry, medicine and media": 1
-     },
-     "example_topics": [
-      "water, fluoride, tooth, toothpaste"
-     ]
-    },
-    {
-     "community": 57,
-     "topics": 1,
-     "themes": {
-      "Lifestyle": 1
-     },
-     "example_topics": [
-      "dog, cat, pet, raw"
-     ]
-    },
-    {
-     "community": 58,
-     "topics": 1,
-     "themes": {
-      "Other diets": 1
-     },
-     "example_topics": [
-      "red-meat, meat, cancer, processed meat"
-     ]
-    },
-    {
-     "community": 59,
-     "topics": 1,
-     "themes": {
-      "Lifestyle": 1
-     },
-     "example_topics": [
-      "mom, wife, mother, mum"
-     ]
-    },
-    {
-     "community": 60,
-     "topics": 1,
-     "themes": {
-      "Shopping": 1
-     },
-     "example_topics": [
-      "pizza, crust, dough, frozen"
-     ]
-    },
-    {
-     "community": 61,
-     "topics": 1,
-     "themes": {
-      "Other diets": 1
-     },
-     "example_topics": [
-      "carnivore, carnivore diet, diet, meat"
-     ]
-    },
-    {
-     "community": 62,
-     "topics": 1,
-     "themes": {
-      "Distrust of industry, medicine and media": 1
-     },
-     "example_topics": [
-      "food, company, industry, government"
-     ]
-    },
-    {
-     "community": 63,
-     "topics": 1,
-     "themes": {
-      "Cooking and cooking fats": 1
-     },
-     "example_topics": [
-      "smoke, smoke point, point, olive-oil"
-     ]
-    },
-    {
-     "community": 64,
-     "topics": 1,
-     "themes": {
-      "Cooking and cooking fats": 1
-     },
-     "example_topics": [
-      "frying, fried, deep, fryer"
-     ]
-    },
-    {
-     "community": 65,
-     "topics": 1,
-     "themes": {
-      "Omega-6 / PUFA biochemistry": 1
-     },
-     "example_topics": [
-      "vitamin, tocopherol, antioxidant, pufa"
-     ]
-    },
-    {
-     "community": 66,
-     "topics": 1,
-     "themes": {
-      "General talk and meta": 1
-     },
-     "example_topics": [
-      "eat, taste, eating, food"
-     ]
-    },
-    {
-     "community": 67,
-     "topics": 1,
-     "themes": {
-      "Lifestyle": 1
-     },
-     "example_topics": [
-      "vitamin, d3, k2, supplement"
-     ]
-    },
-    {
-     "community": 68,
-     "topics": 1,
-     "themes": {
-      "Specific oils": 1
-     },
-     "example_topics": [
-      "sesame, sesame oil, oil, toasted"
-     ]
-    },
-    {
-     "community": 69,
-     "topics": 1,
-     "themes": {
-      "Ingredient labels and processed food": 1
-     },
-     "example_topics": [
-      "flavor, natural flavor, natural, vanilla"
-     ]
-    },
-    {
-     "community": 70,
-     "topics": 1,
-     "themes": {
-      "General talk and meta": 1
-     },
-     "example_topics": [
-      "thank, thanks, link, appreciate"
-     ]
-    },
-    {
-     "community": 71,
-     "topics": 1,
-     "themes": {
-      "General talk and meta": 1
-     },
-     "example_topics": [
-      "app, email, subscription, free"
-     ]
-    },
-    {
-     "community": 72,
-     "topics": 1,
-     "themes": {
-      "Ingredient labels and processed food": 1
-     },
-     "example_topics": [
-      "stevia, sweetener, maltodextrin, aspartame"
-     ]
-    },
-    {
-     "community": 73,
-     "topics": 1,
-     "themes": {
-      "Staple foods": 1
-     },
-     "example_topics": [
-      "chocolate, cocoa, dark chocolate, dark"
-     ]
-    },
-    {
-     "community": 74,
-     "topics": 1,
-     "themes": {
-      "Other diets": 1
-     },
-     "example_topics": [
-      "human, meat, ancestor, ate"
-     ]
-    },
-    {
-     "community": 75,
-     "topics": 1,
-     "themes": {
-      "Lifestyle": 1
-     },
-     "example_topics": [
-      "allergy, allergic, symptom, reaction"
-     ]
-    },
-    {
-     "community": 76,
-     "topics": 1,
-     "themes": {
-      "Distrust of industry, medicine and media": 1
-     },
-     "example_topics": [
-      "organic, pesticide, farm, buy organic"
-     ]
-    },
-    {
-     "community": 77,
-     "topics": 1,
-     "themes": {
-      "Politics": 1
-     },
-     "example_topics": [
-      "political, left, right, liberal"
-     ]
-    },
-    {
-     "community": 78,
-     "topics": 1,
-     "themes": {
-      "Lifestyle": 1
-     },
-     "example_topics": [
-      "kid, parent, school, child"
-     ]
-    },
-    {
-     "community": 79,
-     "topics": 1,
-     "themes": {
-      "Shopping": 1
-     },
-     "example_topics": [
-      "wing, wild wing, buffalo wild, buffalo"
-     ]
-    },
-    {
-     "community": 80,
-     "topics": 1,
-     "themes": {
-      "Keto, carbs, fasting": 1
-     },
-     "example_topics": [
-      "cico, calorie, weight, gain"
-     ]
-    },
-    {
-     "community": 81,
-     "topics": 1,
-     "themes": {
-      "Ingredient labels and processed food": 1
-     },
-     "example_topics": [
-      "msg, chinese, salt, sodium"
-     ]
-    },
-    {
-     "community": 82,
-     "topics": 1,
-     "themes": {
-      "Shopping": 1
-     },
-     "example_topics": [
-      "cracker, pretzel, snack, graham"
-     ]
-    },
-    {
-     "community": 83,
-     "topics": 1,
-     "themes": {
-      "Staple foods": 1
-     },
-     "example_topics": [
-      "yogurt, greek, greek yogurt, yoghurt"
-     ]
-    },
-    {
-     "community": 84,
-     "topics": 1,
-     "themes": {
-      "Politics": 1
-     },
-     "example_topics": [
-      "left, political, party, right"
-     ]
-    },
-    {
-     "community": 85,
-     "topics": 1,
-     "themes": {
-      "Politics": 1
-     },
-     "example_topics": [
-      "trump, vote, president, candidate"
-     ]
-    },
-    {
-     "community": 86,
-     "topics": 1,
-     "themes": {
-      "Distrust of industry, medicine and media": 1
-     },
-     "example_topics": [
-      "poison, chemical, toxic, dose"
-     ]
-    },
-    {
-     "community": 87,
-     "topics": 1,
-     "themes": {
-      "Distrust of industry, medicine and media": 1
-     },
-     "example_topics": [
-      "gmo, pesticide, crop, genetically"
-     ]
-    },
-    {
-     "community": 88,
-     "topics": 1,
-     "themes": {
-      "Lifestyle": 1
-     },
-     "example_topics": [
-      "testosterone, hormone, estrogen, endocrine"
-     ]
-    },
-    {
-     "community": 89,
-     "topics": 1,
-     "themes": {
-      "Other diets": 1
-     },
-     "example_topics": [
-      "japan, japanese, asian, country"
-     ]
-    },
-    {
-     "community": 90,
-     "topics": 1,
-     "themes": {
-      "Distrust of industry, medicine and media": 1
-     },
-     "example_topics": [
-      "glyphosate, herbicide, crop, wheat"
-     ]
-    },
-    {
-     "community": 91,
-     "topics": 1,
-     "themes": {
-      "Lifestyle": 1
-     },
-     "example_topics": [
-      "anxiety, mental, feel, depression"
-     ]
-    },
-    {
-     "community": 92,
-     "topics": 1,
-     "themes": {
-      "Shopping": 1
-     },
-     "example_topics": [
-      "popcorn, pop, microwave, coconut-oil"
-     ]
-    },
-    {
-     "community": 93,
-     "topics": 1,
-     "themes": {
-      "Other diets": 1
-     },
-     "example_topics": [
-      "chicken, breast, chicken breast, meat"
-     ]
-    },
-    {
-     "community": 94,
-     "topics": 1,
-     "themes": {
-      "Specific oils": 1
-     },
-     "example_topics": [
-      "soybean, soybean oil, oil, soy"
-     ]
-    },
-    {
-     "community": 95,
-     "topics": 1,
-     "themes": {
-      "Omega-6 / PUFA biochemistry": 1
-     },
-     "example_topics": [
-      "nut, macadamia, macadamia nut, pufa"
-     ]
-    },
-    {
-     "community": 96,
-     "topics": 1,
-     "themes": {
-      "Staple foods": 1
-     },
-     "example_topics": [
-      "corn, corn oil, gmo corn, gmo"
-     ]
-    },
-    {
-     "community": 97,
-     "topics": 1,
-     "themes": {
-      "Omega-6 / PUFA biochemistry": 1
-     },
-     "example_topics": [
-      "egg, pufa, chicken, low pufa"
-     ]
-    },
-    {
-     "community": 98,
-     "topics": 1,
-     "themes": {
-      "Shopping": 1
-     },
-     "example_topics": [
-      "bar, protein bar, protein, date"
-     ]
-    },
-    {
-     "community": 99,
-     "topics": 1,
-     "themes": {
-      "Shopping": 1
-     },
-     "example_topics": [
-      "hummus, tahini, chickpea, sesame"
-     ]
-    },
-    {
-     "community": 100,
-     "topics": 1,
-     "themes": {
-      "Other diets": 1
-     },
-     "example_topics": [
-      "seed, eat seed, chia, chia seed"
-     ]
-    },
-    {
-     "community": 101,
-     "topics": 1,
-     "themes": {
-      "Staple foods": 1
-     },
-     "example_topics": [
-      "cereal, granola, grain, breakfast"
-     ]
-    },
-    {
-     "community": 102,
-     "topics": 1,
-     "themes": {
-      "Specific oils": 1
-     },
-     "example_topics": [
-      "pressed, cold pressed, cold, expeller"
-     ]
-    },
-    {
-     "community": 103,
-     "topics": 1,
-     "themes": {
-      "Other diets": 1
-     },
-     "example_topics": [
-      "mediterranean, blue zone, zone, blue"
-     ]
-    },
-    {
-     "community": 104,
-     "topics": 1,
-     "themes": {
-      "Keto, carbs, fasting": 1
-     },
-     "example_topics": [
-      "sugar, seed-oil, diabetes, seed-oil sugar"
-     ]
-    },
-    {
-     "community": 105,
-     "topics": 1,
-     "themes": {
-      "Ingredient labels and processed food": 1
-     },
-     "example_topics": [
-      "citric, citric acid, mold, acid"
-     ]
-    },
-    {
-     "community": 106,
-     "topics": 1,
-     "themes": {
-      "Ingredient labels and processed food": 1
-     },
-     "example_topics": [
-      "gum, carrageenan, xanthan, xanthan gum"
-     ]
-    },
-    {
-     "community": 107,
-     "topics": 1,
-     "themes": {
-      "Lifestyle": 1
-     },
-     "example_topics": [
-      "drug, serotonin, addiction, effect"
-     ]
-    }
-   ]
-  },
-  "from": {
-   "edges": 23,
-   "density": 0.003,
-   "isolated_topics": 100,
-   "modularity_best": 0.692,
-   "modularity_mean": 0.692,
-   "communities": 106,
-   "community_sizes": [
-    6,
-    5,
-    4,
-    4,
     2,
     2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
     1,
     1,
     1,
@@ -1845,92 +805,78 @@
     1
    ],
    "stability_ami_across_seeds": 1.0,
-   "ami_vs_14_themes": 0.07,
-   "nmi_vs_14_themes": 0.669,
-   "ami_vs_shuffled_themes": -0.001,
-   "edges_inside_a_theme_pct": 52.2,
+   "ami_vs_14_themes": 0.033,
+   "nmi_vs_14_themes": 0.684,
+   "ami_vs_shuffled_themes": 0.001,
+   "edges_inside_a_theme_pct": 66.7,
    "pairs_inside_a_theme_pct": 8.0,
    "community_contents": [
     {
      "community": 0,
-     "topics": 6,
+     "topics": 3,
      "themes": {
-      "Omega-6 / PUFA biochemistry": 3,
-      "General talk and meta": 1,
-      "Other diets": 1,
-      "Specific oils": 1
+      "Other diets": 2,
+      "Omega-6 / PUFA biochemistry": 1
      },
      "example_topics": [
-      "seed-oil, food, health, oil",
       "pufa, omega-6, omega-3, acid",
-      "fat, saturated-fat, trans, trans fat",
-      "pork, pig, lard, bacon"
+      "pork, pig, lard, bacon",
+      "chicken, breast, chicken breast, meat"
      ]
     },
     {
      "community": 1,
-     "topics": 5,
+     "topics": 2,
      "themes": {
-      "Studies and evidence": 2,
-      "Omega-6 / PUFA biochemistry": 1,
-      "General talk and meta": 1,
-      "Distrust of industry, medicine and media": 1
+      "General talk and meta": 2
      },
      "example_topics": [
       "comment, reddit, post, sub",
-      "ldl, cholesterol, hdl, statin",
-      "science, study, scientific, evidence",
-      "nutrition, science, diet, study"
+      "thank, thanks, link, appreciate"
      ]
     },
     {
      "community": 2,
-     "topics": 4,
+     "topics": 2,
      "themes": {
-      "Keto, carbs, fasting": 3,
-      "Other diets": 1
+      "Omega-6 / PUFA biochemistry": 1,
+      "Keto, carbs, fasting": 1
      },
      "example_topics": [
-      "calorie, weight, gain, lose",
-      "insulin, glucose, diabetes, resistance",
-      "carb, low carb, low, high carb",
-      "oxalate, vegetable, spinach, fruit"
+      "ldl, cholesterol, hdl, statin",
+      "insulin, glucose, diabetes, resistance"
      ]
     },
     {
      "community": 3,
-     "topics": 4,
+     "topics": 2,
      "themes": {
-      "Politics": 4
+      "Other diets": 2
      },
      "example_topics": [
-      "trump, vote, president, candidate",
-      "rfk-jr, trump, rape, vote",
-      "left, political, party, right",
-      "political, left, right, liberal"
+      "vegan, veganism, vegan diet, vegetarian",
+      "vegan, seed-oil, vegetarian, veganism"
      ]
     },
     {
      "community": 4,
      "topics": 2,
      "themes": {
-      "Shopping": 2
+      "General talk and meta": 2
      },
      "example_topics": [
-      "store, costco, price, grocery",
-      "chip, tortilla, potato chip, potato"
+      "guy, video, diet, eats",
+      "podcast, tucker, video, layne"
      ]
     },
     {
      "community": 5,
-     "topics": 2,
+     "topics": 1,
      "themes": {
-      "Shopping": 1,
-      "Specific oils": 1
+      "General talk and meta": 1
      },
      "example_topics": [
-      "oil, vegetable-oil, hexane, lubricant",
-      "fry, potato, french fry, french"
+      "seed-oil, food, health, oil"
      ]
     },
     {
@@ -1947,6 +893,26 @@
      "community": 7,
      "topics": 1,
      "themes": {
+      "Omega-6 / PUFA biochemistry": 1
+     },
+     "example_topics": [
+      "fat, saturated-fat, trans, trans fat"
+     ]
+    },
+    {
+     "community": 8,
+     "topics": 1,
+     "themes": {
+      "Shopping": 1
+     },
+     "example_topics": [
+      "chip, tortilla, potato chip, potato"
+     ]
+    },
+    {
+     "community": 9,
+     "topics": 1,
+     "themes": {
       "Shopping": 1
      },
      "example_topics": [
@@ -1954,7 +920,7 @@
      ]
     },
     {
-     "community": 8,
+     "community": 10,
      "topics": 1,
      "themes": {
       "Specific oils": 1
@@ -1964,7 +930,7 @@
      ]
     },
     {
-     "community": 9,
+     "community": 11,
      "topics": 1,
      "themes": {
       "Cooking and cooking fats": 1
@@ -1974,7 +940,7 @@
      ]
     },
     {
-     "community": 10,
+     "community": 12,
      "topics": 1,
      "themes": {
       "Lifestyle": 1
@@ -1984,7 +950,7 @@
      ]
     },
     {
-     "community": 11,
+     "community": 13,
      "topics": 1,
      "themes": {
       "Other diets": 1
@@ -1994,7 +960,7 @@
      ]
     },
     {
-     "community": 12,
+     "community": 14,
      "topics": 1,
      "themes": {
       "Lifestyle": 1
@@ -2004,7 +970,17 @@
      ]
     },
     {
-     "community": 13,
+     "community": 15,
+     "topics": 1,
+     "themes": {
+      "Keto, carbs, fasting": 1
+     },
+     "example_topics": [
+      "calorie, weight, gain, lose"
+     ]
+    },
+    {
+     "community": 16,
      "topics": 1,
      "themes": {
       "Staple foods": 1
@@ -2014,7 +990,7 @@
      ]
     },
     {
-     "community": 14,
+     "community": 17,
      "topics": 1,
      "themes": {
       "Staple foods": 1
@@ -2024,7 +1000,17 @@
      ]
     },
     {
-     "community": 15,
+     "community": 18,
+     "topics": 1,
+     "themes": {
+      "Studies and evidence": 1
+     },
+     "example_topics": [
+      "science, study, scientific, evidence"
+     ]
+    },
+    {
+     "community": 19,
      "topics": 1,
      "themes": {
       "Other diets": 1
@@ -2034,7 +1020,17 @@
      ]
     },
     {
-     "community": 16,
+     "community": 20,
+     "topics": 1,
+     "themes": {
+      "Shopping": 1
+     },
+     "example_topics": [
+      "store, costco, price, grocery"
+     ]
+    },
+    {
+     "community": 21,
      "topics": 1,
      "themes": {
       "Specific oils": 1
@@ -2044,7 +1040,17 @@
      ]
     },
     {
-     "community": 17,
+     "community": 22,
+     "topics": 1,
+     "themes": {
+      "Shopping": 1
+     },
+     "example_topics": [
+      "fry, potato, french fry, french"
+     ]
+    },
+    {
+     "community": 23,
      "topics": 1,
      "themes": {
       "Specific oils": 1
@@ -2054,7 +1060,7 @@
      ]
     },
     {
-     "community": 18,
+     "community": 24,
      "topics": 1,
      "themes": {
       "Cooking and cooking fats": 1
@@ -2064,7 +1070,17 @@
      ]
     },
     {
-     "community": 19,
+     "community": 25,
+     "topics": 1,
+     "themes": {
+      "Specific oils": 1
+     },
+     "example_topics": [
+      "oil, vegetable-oil, hexane, lubricant"
+     ]
+    },
+    {
+     "community": 26,
      "topics": 1,
      "themes": {
       "Keto, carbs, fasting": 1
@@ -2074,7 +1090,7 @@
      ]
     },
     {
-     "community": 20,
+     "community": 27,
      "topics": 1,
      "themes": {
       "Vaccines and COVID": 1
@@ -2084,7 +1100,7 @@
      ]
     },
     {
-     "community": 21,
+     "community": 28,
      "topics": 1,
      "themes": {
       "Keto, carbs, fasting": 1
@@ -2094,7 +1110,7 @@
      ]
     },
     {
-     "community": 22,
+     "community": 29,
      "topics": 1,
      "themes": {
       "Specific oils": 1
@@ -2104,7 +1120,7 @@
      ]
     },
     {
-     "community": 23,
+     "community": 30,
      "topics": 1,
      "themes": {
       "Staple foods": 1
@@ -2114,17 +1130,7 @@
      ]
     },
     {
-     "community": 24,
-     "topics": 1,
-     "themes": {
-      "Other diets": 1
-     },
-     "example_topics": [
-      "vegan, veganism, vegan diet, vegetarian"
-     ]
-    },
-    {
-     "community": 25,
+     "community": 31,
      "topics": 1,
      "themes": {
       "Staple foods": 1
@@ -2134,7 +1140,7 @@
      ]
     },
     {
-     "community": 26,
+     "community": 32,
      "topics": 1,
      "themes": {
       "Shopping": 1
@@ -2144,7 +1150,17 @@
      ]
     },
     {
-     "community": 27,
+     "community": 33,
+     "topics": 1,
+     "themes": {
+      "Studies and evidence": 1
+     },
+     "example_topics": [
+      "nutrition, science, diet, study"
+     ]
+    },
+    {
+     "community": 34,
      "topics": 1,
      "themes": {
       "Cooking and cooking fats": 1
@@ -2154,7 +1170,17 @@
      ]
     },
     {
-     "community": 28,
+     "community": 35,
+     "topics": 1,
+     "themes": {
+      "Specific oils": 1
+     },
+     "example_topics": [
+      "coconut-oil, coconut, mct, oil"
+     ]
+    },
+    {
+     "community": 36,
      "topics": 1,
      "themes": {
       "Cooking and cooking fats": 1
@@ -2164,7 +1190,7 @@
      ]
     },
     {
-     "community": 29,
+     "community": 37,
      "topics": 1,
      "themes": {
       "Distrust of industry, medicine and media": 1
@@ -2174,7 +1200,7 @@
      ]
     },
     {
-     "community": 30,
+     "community": 38,
      "topics": 1,
      "themes": {
       "Distrust of industry, medicine and media": 1
@@ -2184,7 +1210,7 @@
      ]
     },
     {
-     "community": 31,
+     "community": 39,
      "topics": 1,
      "themes": {
       "Lifestyle": 1
@@ -2194,7 +1220,7 @@
      ]
     },
     {
-     "community": 32,
+     "community": 40,
      "topics": 1,
      "themes": {
       "Ingredient labels and processed food": 1
@@ -2204,7 +1230,7 @@
      ]
     },
     {
-     "community": 33,
+     "community": 41,
      "topics": 1,
      "themes": {
       "Cooking and cooking fats": 1
@@ -2214,7 +1240,7 @@
      ]
     },
     {
-     "community": 34,
+     "community": 42,
      "topics": 1,
      "themes": {
       "Shopping": 1
@@ -2224,7 +1250,7 @@
      ]
     },
     {
-     "community": 35,
+     "community": 43,
      "topics": 1,
      "themes": {
       "Keto, carbs, fasting": 1
@@ -2234,7 +1260,7 @@
      ]
     },
     {
-     "community": 36,
+     "community": 44,
      "topics": 1,
      "themes": {
       "Staple foods": 1
@@ -2244,7 +1270,7 @@
      ]
     },
     {
-     "community": 37,
+     "community": 45,
      "topics": 1,
      "themes": {
       "Specific oils": 1
@@ -2254,7 +1280,27 @@
      ]
     },
     {
-     "community": 38,
+     "community": 46,
+     "topics": 1,
+     "themes": {
+      "Distrust of industry, medicine and media": 1
+     },
+     "example_topics": [
+      "money, capitalism, government, profit"
+     ]
+    },
+    {
+     "community": 47,
+     "topics": 1,
+     "themes": {
+      "Politics": 1
+     },
+     "example_topics": [
+      "rfk-jr, trump, rape, vote"
+     ]
+    },
+    {
+     "community": 48,
      "topics": 1,
      "themes": {
       "Staple foods": 1
@@ -2264,7 +1310,7 @@
      ]
     },
     {
-     "community": 39,
+     "community": 49,
      "topics": 1,
      "themes": {
       "Lifestyle": 1
@@ -2274,17 +1320,7 @@
      ]
     },
     {
-     "community": 40,
-     "topics": 1,
-     "themes": {
-      "General talk and meta": 1
-     },
-     "example_topics": [
-      "guy, video, diet, eats"
-     ]
-    },
-    {
-     "community": 41,
+     "community": 50,
      "topics": 1,
      "themes": {
       "Lifestyle": 1
@@ -2294,7 +1330,7 @@
      ]
     },
     {
-     "community": 42,
+     "community": 51,
      "topics": 1,
      "themes": {
       "Staple foods": 1
@@ -2304,7 +1340,7 @@
      ]
     },
     {
-     "community": 43,
+     "community": 52,
      "topics": 1,
      "themes": {
       "Staple foods": 1
@@ -2314,7 +1350,7 @@
      ]
     },
     {
-     "community": 44,
+     "community": 53,
      "topics": 1,
      "themes": {
       "Ingredient labels and processed food": 1
@@ -2324,7 +1360,7 @@
      ]
     },
     {
-     "community": 45,
+     "community": 54,
      "topics": 1,
      "themes": {
       "Shopping": 1
@@ -2334,7 +1370,7 @@
      ]
     },
     {
-     "community": 46,
+     "community": 55,
      "topics": 1,
      "themes": {
       "Ingredient labels and processed food": 1
@@ -2344,7 +1380,7 @@
      ]
     },
     {
-     "community": 47,
+     "community": 56,
      "topics": 1,
      "themes": {
       "Ingredient labels and processed food": 1
@@ -2354,7 +1390,7 @@
      ]
     },
     {
-     "community": 48,
+     "community": 57,
      "topics": 1,
      "themes": {
       "Keto, carbs, fasting": 1
@@ -2364,7 +1400,17 @@
      ]
     },
     {
-     "community": 49,
+     "community": 58,
+     "topics": 1,
+     "themes": {
+      "Keto, carbs, fasting": 1
+     },
+     "example_topics": [
+      "carb, low carb, low, high carb"
+     ]
+    },
+    {
+     "community": 59,
      "topics": 1,
      "themes": {
       "Specific oils": 1
@@ -2374,7 +1420,17 @@
      ]
     },
     {
-     "community": 50,
+     "community": 60,
+     "topics": 1,
+     "themes": {
+      "Other diets": 1
+     },
+     "example_topics": [
+      "oxalate, vegetable, spinach, fruit"
+     ]
+    },
+    {
+     "community": 61,
      "topics": 1,
      "themes": {
       "Shopping": 1
@@ -2384,7 +1440,7 @@
      ]
     },
     {
-     "community": 51,
+     "community": 62,
      "topics": 1,
      "themes": {
       "Shopping": 1
@@ -2394,7 +1450,7 @@
      ]
     },
     {
-     "community": 52,
+     "community": 63,
      "topics": 1,
      "themes": {
       "Staple foods": 1
@@ -2404,7 +1460,7 @@
      ]
     },
     {
-     "community": 53,
+     "community": 64,
      "topics": 1,
      "themes": {
       "Lifestyle": 1
@@ -2414,7 +1470,7 @@
      ]
     },
     {
-     "community": 54,
+     "community": 65,
      "topics": 1,
      "themes": {
       "Distrust of industry, medicine and media": 1
@@ -2424,7 +1480,7 @@
      ]
     },
     {
-     "community": 55,
+     "community": 66,
      "topics": 1,
      "themes": {
       "Lifestyle": 1
@@ -2434,7 +1490,7 @@
      ]
     },
     {
-     "community": 56,
+     "community": 67,
      "topics": 1,
      "themes": {
       "Other diets": 1
@@ -2444,7 +1500,7 @@
      ]
     },
     {
-     "community": 57,
+     "community": 68,
      "topics": 1,
      "themes": {
       "Lifestyle": 1
@@ -2454,7 +1510,7 @@
      ]
     },
     {
-     "community": 58,
+     "community": 69,
      "topics": 1,
      "themes": {
       "Shopping": 1
@@ -2464,7 +1520,7 @@
      ]
     },
     {
-     "community": 59,
+     "community": 70,
      "topics": 1,
      "themes": {
       "Other diets": 1
@@ -2474,7 +1530,7 @@
      ]
     },
     {
-     "community": 60,
+     "community": 71,
      "topics": 1,
      "themes": {
       "Distrust of industry, medicine and media": 1
@@ -2484,17 +1540,7 @@
      ]
     },
     {
-     "community": 61,
-     "topics": 1,
-     "themes": {
-      "Other diets": 1
-     },
-     "example_topics": [
-      "vegan, seed-oil, vegetarian, veganism"
-     ]
-    },
-    {
-     "community": 62,
+     "community": 72,
      "topics": 1,
      "themes": {
       "Cooking and cooking fats": 1
@@ -2504,7 +1550,7 @@
      ]
     },
     {
-     "community": 63,
+     "community": 73,
      "topics": 1,
      "themes": {
       "Cooking and cooking fats": 1
@@ -2514,7 +1560,7 @@
      ]
     },
     {
-     "community": 64,
+     "community": 74,
      "topics": 1,
      "themes": {
       "Omega-6 / PUFA biochemistry": 1
@@ -2524,7 +1570,7 @@
      ]
     },
     {
-     "community": 65,
+     "community": 75,
      "topics": 1,
      "themes": {
       "General talk and meta": 1
@@ -2534,7 +1580,7 @@
      ]
     },
     {
-     "community": 66,
+     "community": 76,
      "topics": 1,
      "themes": {
       "Lifestyle": 1
@@ -2544,7 +1590,7 @@
      ]
     },
     {
-     "community": 67,
+     "community": 77,
      "topics": 1,
      "themes": {
       "Specific oils": 1
@@ -2554,7 +1600,7 @@
      ]
     },
     {
-     "community": 68,
+     "community": 78,
      "topics": 1,
      "themes": {
       "Ingredient labels and processed food": 1
@@ -2564,17 +1610,7 @@
      ]
     },
     {
-     "community": 69,
-     "topics": 1,
-     "themes": {
-      "General talk and meta": 1
-     },
-     "example_topics": [
-      "thank, thanks, link, appreciate"
-     ]
-    },
-    {
-     "community": 70,
+     "community": 79,
      "topics": 1,
      "themes": {
       "General talk and meta": 1
@@ -2584,7 +1620,7 @@
      ]
     },
     {
-     "community": 71,
+     "community": 80,
      "topics": 1,
      "themes": {
       "Ingredient labels and processed food": 1
@@ -2594,7 +1630,7 @@
      ]
     },
     {
-     "community": 72,
+     "community": 81,
      "topics": 1,
      "themes": {
       "Staple foods": 1
@@ -2604,7 +1640,7 @@
      ]
     },
     {
-     "community": 73,
+     "community": 82,
      "topics": 1,
      "themes": {
       "Other diets": 1
@@ -2614,7 +1650,7 @@
      ]
     },
     {
-     "community": 74,
+     "community": 83,
      "topics": 1,
      "themes": {
       "Lifestyle": 1
@@ -2624,7 +1660,7 @@
      ]
     },
     {
-     "community": 75,
+     "community": 84,
      "topics": 1,
      "themes": {
       "Distrust of industry, medicine and media": 1
@@ -2634,7 +1670,17 @@
      ]
     },
     {
-     "community": 76,
+     "community": 85,
+     "topics": 1,
+     "themes": {
+      "Politics": 1
+     },
+     "example_topics": [
+      "political, left, right, liberal"
+     ]
+    },
+    {
+     "community": 86,
      "topics": 1,
      "themes": {
       "Lifestyle": 1
@@ -2644,7 +1690,7 @@
      ]
     },
     {
-     "community": 77,
+     "community": 87,
      "topics": 1,
      "themes": {
       "Shopping": 1
@@ -2654,7 +1700,7 @@
      ]
     },
     {
-     "community": 78,
+     "community": 88,
      "topics": 1,
      "themes": {
       "Keto, carbs, fasting": 1
@@ -2664,7 +1710,7 @@
      ]
     },
     {
-     "community": 79,
+     "community": 89,
      "topics": 1,
      "themes": {
       "Politics": 1
@@ -2674,7 +1720,7 @@
      ]
     },
     {
-     "community": 80,
+     "community": 90,
      "topics": 1,
      "themes": {
       "Ingredient labels and processed food": 1
@@ -2684,7 +1730,7 @@
      ]
     },
     {
-     "community": 81,
+     "community": 91,
      "topics": 1,
      "themes": {
       "Shopping": 1
@@ -2694,7 +1740,7 @@
      ]
     },
     {
-     "community": 82,
+     "community": 92,
      "topics": 1,
      "themes": {
       "Staple foods": 1
@@ -2704,7 +1750,27 @@
      ]
     },
     {
-     "community": 83,
+     "community": 93,
+     "topics": 1,
+     "themes": {
+      "Politics": 1
+     },
+     "example_topics": [
+      "left, political, party, right"
+     ]
+    },
+    {
+     "community": 94,
+     "topics": 1,
+     "themes": {
+      "Politics": 1
+     },
+     "example_topics": [
+      "trump, vote, president, candidate"
+     ]
+    },
+    {
+     "community": 95,
      "topics": 1,
      "themes": {
       "Distrust of industry, medicine and media": 1
@@ -2714,7 +1780,7 @@
      ]
     },
     {
-     "community": 84,
+     "community": 96,
      "topics": 1,
      "themes": {
       "Distrust of industry, medicine and media": 1
@@ -2724,7 +1790,7 @@
      ]
     },
     {
-     "community": 85,
+     "community": 97,
      "topics": 1,
      "themes": {
       "Lifestyle": 1
@@ -2734,7 +1800,7 @@
      ]
     },
     {
-     "community": 86,
+     "community": 98,
      "topics": 1,
      "themes": {
       "Other diets": 1
@@ -2744,7 +1810,7 @@
      ]
     },
     {
-     "community": 87,
+     "community": 99,
      "topics": 1,
      "themes": {
       "Distrust of industry, medicine and media": 1
@@ -2754,17 +1820,7 @@
      ]
     },
     {
-     "community": 88,
-     "topics": 1,
-     "themes": {
-      "General talk and meta": 1
-     },
-     "example_topics": [
-      "podcast, tucker, video, layne"
-     ]
-    },
-    {
-     "community": 89,
+     "community": 100,
      "topics": 1,
      "themes": {
       "Lifestyle": 1
@@ -2774,7 +1830,7 @@
      ]
     },
     {
-     "community": 90,
+     "community": 101,
      "topics": 1,
      "themes": {
       "Shopping": 1
@@ -2784,17 +1840,7 @@
      ]
     },
     {
-     "community": 91,
-     "topics": 1,
-     "themes": {
-      "Other diets": 1
-     },
-     "example_topics": [
-      "chicken, breast, chicken breast, meat"
-     ]
-    },
-    {
-     "community": 92,
+     "community": 102,
      "topics": 1,
      "themes": {
       "Specific oils": 1
@@ -2804,7 +1850,7 @@
      ]
     },
     {
-     "community": 93,
+     "community": 103,
      "topics": 1,
      "themes": {
       "Distrust of industry, medicine and media": 1
@@ -2814,7 +1860,17 @@
      ]
     },
     {
-     "community": 94,
+     "community": 104,
+     "topics": 1,
+     "themes": {
+      "Omega-6 / PUFA biochemistry": 1
+     },
+     "example_topics": [
+      "nut, macadamia, macadamia nut, pufa"
+     ]
+    },
+    {
+     "community": 105,
      "topics": 1,
      "themes": {
       "Staple foods": 1
@@ -2824,7 +1880,7 @@
      ]
     },
     {
-     "community": 95,
+     "community": 106,
      "topics": 1,
      "themes": {
       "Omega-6 / PUFA biochemistry": 1
@@ -2834,7 +1890,7 @@
      ]
     },
     {
-     "community": 96,
+     "community": 107,
      "topics": 1,
      "themes": {
       "Shopping": 1
@@ -2844,7 +1900,7 @@
      ]
     },
     {
-     "community": 97,
+     "community": 108,
      "topics": 1,
      "themes": {
       "Shopping": 1
@@ -2854,7 +1910,7 @@
      ]
     },
     {
-     "community": 98,
+     "community": 109,
      "topics": 1,
      "themes": {
       "Other diets": 1
@@ -2864,7 +1920,7 @@
      ]
     },
     {
-     "community": 99,
+     "community": 110,
      "topics": 1,
      "themes": {
       "Staple foods": 1
@@ -2874,7 +1930,7 @@
      ]
     },
     {
-     "community": 100,
+     "community": 111,
      "topics": 1,
      "themes": {
       "Specific oils": 1
@@ -2884,7 +1940,7 @@
      ]
     },
     {
-     "community": 101,
+     "community": 112,
      "topics": 1,
      "themes": {
       "Other diets": 1
@@ -2894,7 +1950,7 @@
      ]
     },
     {
-     "community": 102,
+     "community": 113,
      "topics": 1,
      "themes": {
       "Keto, carbs, fasting": 1
@@ -2904,7 +1960,7 @@
      ]
     },
     {
-     "community": 103,
+     "community": 114,
      "topics": 1,
      "themes": {
       "Ingredient labels and processed food": 1
@@ -2914,7 +1970,7 @@
      ]
     },
     {
-     "community": 104,
+     "community": 115,
      "topics": 1,
      "themes": {
       "Ingredient labels and processed food": 1
@@ -2924,7 +1980,7 @@
      ]
     },
     {
-     "community": 105,
+     "community": 116,
      "topics": 1,
      "themes": {
       "Lifestyle": 1
@@ -2935,35 +1991,1307 @@
     }
    ]
   },
-  "edges_in_both": 9,
-  "jaccard_edges": 0.237,
-  "ami_communities_before_vs_from": 0.369,
+  "from": {
+   "edges": 10,
+   "density": 0.001,
+   "isolated_topics": 108,
+   "modularity_best": 0.785,
+   "modularity_mean": 0.785,
+   "communities": 114,
+   "community_sizes": [
+    3,
+    3,
+    3,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "stability_ami_across_seeds": 1.0,
+   "ami_vs_14_themes": 0.032,
+   "nmi_vs_14_themes": 0.677,
+   "ami_vs_shuffled_themes": 0.0,
+   "edges_inside_a_theme_pct": 50.0,
+   "pairs_inside_a_theme_pct": 8.0,
+   "community_contents": [
+    {
+     "community": 0,
+     "topics": 3,
+     "themes": {
+      "General talk and meta": 1,
+      "Studies and evidence": 1,
+      "Distrust of industry, medicine and media": 1
+     },
+     "example_topics": [
+      "comment, reddit, post, sub",
+      "science, study, scientific, evidence",
+      "conspiracy, media, news, propaganda"
+     ]
+    },
+    {
+     "community": 1,
+     "topics": 3,
+     "themes": {
+      "Other diets": 2,
+      "Staple foods": 1
+     },
+     "example_topics": [
+      "grass, fed, beef, grass fed",
+      "milk, raw milk, raw, dairy",
+      "egg, chicken, pasture, feed"
+     ]
+    },
+    {
+     "community": 2,
+     "topics": 3,
+     "themes": {
+      "Politics": 3
+     },
+     "example_topics": [
+      "trump, vote, president, candidate",
+      "rfk-jr, trump, rape, vote",
+      "left, political, party, right"
+     ]
+    },
+    {
+     "community": 3,
+     "topics": 2,
+     "themes": {
+      "Omega-6 / PUFA biochemistry": 2
+     },
+     "example_topics": [
+      "pufa, omega-6, omega-3, acid",
+      "fat, saturated-fat, trans, trans fat"
+     ]
+    },
+    {
+     "community": 4,
+     "topics": 2,
+     "themes": {
+      "Staple foods": 1,
+      "Shopping": 1
+     },
+     "example_topics": [
+      "bread, flour, wheat, gluten",
+      "bread, bun, sourdough, bakery"
+     ]
+    },
+    {
+     "community": 5,
+     "topics": 2,
+     "themes": {
+      "Omega-6 / PUFA biochemistry": 1,
+      "Keto, carbs, fasting": 1
+     },
+     "example_topics": [
+      "ldl, cholesterol, hdl, statin",
+      "insulin, glucose, diabetes, resistance"
+     ]
+    },
+    {
+     "community": 6,
+     "topics": 1,
+     "themes": {
+      "General talk and meta": 1
+     },
+     "example_topics": [
+      "seed-oil, food, health, oil"
+     ]
+    },
+    {
+     "community": 7,
+     "topics": 1,
+     "themes": {
+      "Specific oils": 1
+     },
+     "example_topics": [
+      "olive-oil, olive, virgin, extra virgin"
+     ]
+    },
+    {
+     "community": 8,
+     "topics": 1,
+     "themes": {
+      "Shopping": 1
+     },
+     "example_topics": [
+      "chip, tortilla, potato chip, potato"
+     ]
+    },
+    {
+     "community": 9,
+     "topics": 1,
+     "themes": {
+      "Shopping": 1
+     },
+     "example_topics": [
+      "mayo, mayonnaise, mustard, chosen"
+     ]
+    },
+    {
+     "community": 10,
+     "topics": 1,
+     "themes": {
+      "Specific oils": 1
+     },
+     "example_topics": [
+      "avocado-oil, avocado, olive-oil, oil"
+     ]
+    },
+    {
+     "community": 11,
+     "topics": 1,
+     "themes": {
+      "Cooking and cooking fats": 1
+     },
+     "example_topics": [
+      "butter, margarine, real butter, butter butter"
+     ]
+    },
+    {
+     "community": 12,
+     "topics": 1,
+     "themes": {
+      "Lifestyle": 1
+     },
+     "example_topics": [
+      "skin, hair, acne, soap"
+     ]
+    },
+    {
+     "community": 13,
+     "topics": 1,
+     "themes": {
+      "Other diets": 1
+     },
+     "example_topics": [
+      "pork, pig, lard, bacon"
+     ]
+    },
+    {
+     "community": 14,
+     "topics": 1,
+     "themes": {
+      "Lifestyle": 1
+     },
+     "example_topics": [
+      "sun, sunscreen, skin, sunburn"
+     ]
+    },
+    {
+     "community": 15,
+     "topics": 1,
+     "themes": {
+      "Keto, carbs, fasting": 1
+     },
+     "example_topics": [
+      "calorie, weight, gain, lose"
+     ]
+    },
+    {
+     "community": 16,
+     "topics": 1,
+     "themes": {
+      "Shopping": 1
+     },
+     "example_topics": [
+      "store, costco, price, grocery"
+     ]
+    },
+    {
+     "community": 17,
+     "topics": 1,
+     "themes": {
+      "Specific oils": 1
+     },
+     "example_topics": [
+      "canola, canola oil, rapeseed, oil"
+     ]
+    },
+    {
+     "community": 18,
+     "topics": 1,
+     "themes": {
+      "Shopping": 1
+     },
+     "example_topics": [
+      "fry, potato, french fry, french"
+     ]
+    },
+    {
+     "community": 19,
+     "topics": 1,
+     "themes": {
+      "Specific oils": 1
+     },
+     "example_topics": [
+      "peanut, peanut butter, peanut oil, butter"
+     ]
+    },
+    {
+     "community": 20,
+     "topics": 1,
+     "themes": {
+      "Cooking and cooking fats": 1
+     },
+     "example_topics": [
+      "meal, cook, food, home"
+     ]
+    },
+    {
+     "community": 21,
+     "topics": 1,
+     "themes": {
+      "Specific oils": 1
+     },
+     "example_topics": [
+      "oil, vegetable-oil, hexane, lubricant"
+     ]
+    },
+    {
+     "community": 22,
+     "topics": 1,
+     "themes": {
+      "Keto, carbs, fasting": 1
+     },
+     "example_topics": [
+      "sugar, syrup, fructose, corn syrup"
+     ]
+    },
+    {
+     "community": 23,
+     "topics": 1,
+     "themes": {
+      "Vaccines and COVID": 1
+     },
+     "example_topics": [
+      "vaccine, covid, virus, shot"
+     ]
+    },
+    {
+     "community": 24,
+     "topics": 1,
+     "themes": {
+      "Keto, carbs, fasting": 1
+     },
+     "example_topics": [
+      "keto, carb, ketosis, diet"
+     ]
+    },
+    {
+     "community": 25,
+     "topics": 1,
+     "themes": {
+      "Specific oils": 1
+     },
+     "example_topics": [
+      "palm, palm oil, oil, kernel"
+     ]
+    },
+    {
+     "community": 26,
+     "topics": 1,
+     "themes": {
+      "Staple foods": 1
+     },
+     "example_topics": [
+      "formula, baby, milk, infant"
+     ]
+    },
+    {
+     "community": 27,
+     "topics": 1,
+     "themes": {
+      "Other diets": 1
+     },
+     "example_topics": [
+      "vegan, veganism, vegan diet, vegetarian"
+     ]
+    },
+    {
+     "community": 28,
+     "topics": 1,
+     "themes": {
+      "Staple foods": 1
+     },
+     "example_topics": [
+      "nut, almond, seed, nut seed"
+     ]
+    },
+    {
+     "community": 29,
+     "topics": 1,
+     "themes": {
+      "Shopping": 1
+     },
+     "example_topics": [
+      "dressing, salad, ranch, salad dressing"
+     ]
+    },
+    {
+     "community": 30,
+     "topics": 1,
+     "themes": {
+      "Studies and evidence": 1
+     },
+     "example_topics": [
+      "nutrition, science, diet, study"
+     ]
+    },
+    {
+     "community": 31,
+     "topics": 1,
+     "themes": {
+      "Cooking and cooking fats": 1
+     },
+     "example_topics": [
+      "tallow, beef tallow, beef, butcher"
+     ]
+    },
+    {
+     "community": 32,
+     "topics": 1,
+     "themes": {
+      "Specific oils": 1
+     },
+     "example_topics": [
+      "coconut-oil, coconut, mct, oil"
+     ]
+    },
+    {
+     "community": 33,
+     "topics": 1,
+     "themes": {
+      "Cooking and cooking fats": 1
+     },
+     "example_topics": [
+      "ghee, butter, tallow, indian"
+     ]
+    },
+    {
+     "community": 34,
+     "topics": 1,
+     "themes": {
+      "Distrust of industry, medicine and media": 1
+     },
+     "example_topics": [
+      "doctor, medical, pharma, health"
+     ]
+    },
+    {
+     "community": 35,
+     "topics": 1,
+     "themes": {
+      "Distrust of industry, medicine and media": 1
+     },
+     "example_topics": [
+      "plastic, microplastic, glass, bottle"
+     ]
+    },
+    {
+     "community": 36,
+     "topics": 1,
+     "themes": {
+      "Lifestyle": 1
+     },
+     "example_topics": [
+      "cancer, smoking, cigarette, tobacco"
+     ]
+    },
+    {
+     "community": 37,
+     "topics": 1,
+     "themes": {
+      "Ingredient labels and processed food": 1
+     },
+     "example_topics": [
+      "protein, whey, powder, protein powder"
+     ]
+    },
+    {
+     "community": 38,
+     "topics": 1,
+     "themes": {
+      "Cooking and cooking fats": 1
+     },
+     "example_topics": [
+      "pan, cast iron, cast, iron"
+     ]
+    },
+    {
+     "community": 39,
+     "topics": 1,
+     "themes": {
+      "Shopping": 1
+     },
+     "example_topics": [
+      "burger, patty, steak, grill"
+     ]
+    },
+    {
+     "community": 40,
+     "topics": 1,
+     "themes": {
+      "Keto, carbs, fasting": 1
+     },
+     "example_topics": [
+      "fruit, rice, beef, cheese"
+     ]
+    },
+    {
+     "community": 41,
+     "topics": 1,
+     "themes": {
+      "Staple foods": 1
+     },
+     "example_topics": [
+      "coffee, creamer, cream, caffeine"
+     ]
+    },
+    {
+     "community": 42,
+     "topics": 1,
+     "themes": {
+      "Specific oils": 1
+     },
+     "example_topics": [
+      "sunflower, sunflower oil, sunflower seed, oil"
+     ]
+    },
+    {
+     "community": 43,
+     "topics": 1,
+     "themes": {
+      "Distrust of industry, medicine and media": 1
+     },
+     "example_topics": [
+      "money, capitalism, government, profit"
+     ]
+    },
+    {
+     "community": 44,
+     "topics": 1,
+     "themes": {
+      "Staple foods": 1
+     },
+     "example_topics": [
+      "soy, tofu, soy sauce, estrogen"
+     ]
+    },
+    {
+     "community": 45,
+     "topics": 1,
+     "themes": {
+      "Lifestyle": 1
+     },
+     "example_topics": [
+      "vitamin, supplement, iron, b12"
+     ]
+    },
+    {
+     "community": 46,
+     "topics": 1,
+     "themes": {
+      "General talk and meta": 1
+     },
+     "example_topics": [
+      "guy, video, diet, eats"
+     ]
+    },
+    {
+     "community": 47,
+     "topics": 1,
+     "themes": {
+      "Lifestyle": 1
+     },
+     "example_topics": [
+      "fiber, gut, ibs, stomach"
+     ]
+    },
+    {
+     "community": 48,
+     "topics": 1,
+     "themes": {
+      "Staple foods": 1
+     },
+     "example_topics": [
+      "ice, ice cream, cream, vanilla"
+     ]
+    },
+    {
+     "community": 49,
+     "topics": 1,
+     "themes": {
+      "Staple foods": 1
+     },
+     "example_topics": [
+      "oat, milk, almond, oat milk"
+     ]
+    },
+    {
+     "community": 50,
+     "topics": 1,
+     "themes": {
+      "Ingredient labels and processed food": 1
+     },
+     "example_topics": [
+      "lecithin, soy lecithin, sunflower lecithin, emulsifier"
+     ]
+    },
+    {
+     "community": 51,
+     "topics": 1,
+     "themes": {
+      "Ingredient labels and processed food": 1
+     },
+     "example_topics": [
+      "processed-food, processed, ultra, ultra processed-food"
+     ]
+    },
+    {
+     "community": 52,
+     "topics": 1,
+     "themes": {
+      "Ingredient labels and processed food": 1
+     },
+     "example_topics": [
+      "ingredient, label, list, ingredient list"
+     ]
+    },
+    {
+     "community": 53,
+     "topics": 1,
+     "themes": {
+      "Keto, carbs, fasting": 1
+     },
+     "example_topics": [
+      "fasting, fast, day, hour"
+     ]
+    },
+    {
+     "community": 54,
+     "topics": 1,
+     "themes": {
+      "Keto, carbs, fasting": 1
+     },
+     "example_topics": [
+      "carb, low carb, low, high carb"
+     ]
+    },
+    {
+     "community": 55,
+     "topics": 1,
+     "themes": {
+      "Specific oils": 1
+     },
+     "example_topics": [
+      "evoo, olive-oil, polyphenol, virgin"
+     ]
+    },
+    {
+     "community": 56,
+     "topics": 1,
+     "themes": {
+      "Other diets": 1
+     },
+     "example_topics": [
+      "oxalate, vegetable, spinach, fruit"
+     ]
+    },
+    {
+     "community": 57,
+     "topics": 1,
+     "themes": {
+      "Shopping": 1
+     },
+     "example_topics": [
+      "sauce, chili, tomato, pepper"
+     ]
+    },
+    {
+     "community": 58,
+     "topics": 1,
+     "themes": {
+      "Shopping": 1
+     },
+     "example_topics": [
+      "cooky, cake, butter, recipe"
+     ]
+    },
+    {
+     "community": 59,
+     "topics": 1,
+     "themes": {
+      "Staple foods": 1
+     },
+     "example_topics": [
+      "cheese, cheddar, raw, milk"
+     ]
+    },
+    {
+     "community": 60,
+     "topics": 1,
+     "themes": {
+      "Lifestyle": 1
+     },
+     "example_topics": [
+      "salt, sodium, blood pressure, pressure"
+     ]
+    },
+    {
+     "community": 61,
+     "topics": 1,
+     "themes": {
+      "Distrust of industry, medicine and media": 1
+     },
+     "example_topics": [
+      "water, fluoride, tooth, toothpaste"
+     ]
+    },
+    {
+     "community": 62,
+     "topics": 1,
+     "themes": {
+      "Lifestyle": 1
+     },
+     "example_topics": [
+      "dog, cat, pet, raw"
+     ]
+    },
+    {
+     "community": 63,
+     "topics": 1,
+     "themes": {
+      "Other diets": 1
+     },
+     "example_topics": [
+      "red-meat, meat, cancer, processed meat"
+     ]
+    },
+    {
+     "community": 64,
+     "topics": 1,
+     "themes": {
+      "Lifestyle": 1
+     },
+     "example_topics": [
+      "mom, wife, mother, mum"
+     ]
+    },
+    {
+     "community": 65,
+     "topics": 1,
+     "themes": {
+      "Shopping": 1
+     },
+     "example_topics": [
+      "pizza, crust, dough, frozen"
+     ]
+    },
+    {
+     "community": 66,
+     "topics": 1,
+     "themes": {
+      "Other diets": 1
+     },
+     "example_topics": [
+      "carnivore, carnivore diet, diet, meat"
+     ]
+    },
+    {
+     "community": 67,
+     "topics": 1,
+     "themes": {
+      "Distrust of industry, medicine and media": 1
+     },
+     "example_topics": [
+      "food, company, industry, government"
+     ]
+    },
+    {
+     "community": 68,
+     "topics": 1,
+     "themes": {
+      "Other diets": 1
+     },
+     "example_topics": [
+      "vegan, seed-oil, vegetarian, veganism"
+     ]
+    },
+    {
+     "community": 69,
+     "topics": 1,
+     "themes": {
+      "Cooking and cooking fats": 1
+     },
+     "example_topics": [
+      "smoke, smoke point, point, olive-oil"
+     ]
+    },
+    {
+     "community": 70,
+     "topics": 1,
+     "themes": {
+      "Cooking and cooking fats": 1
+     },
+     "example_topics": [
+      "frying, fried, deep, fryer"
+     ]
+    },
+    {
+     "community": 71,
+     "topics": 1,
+     "themes": {
+      "Omega-6 / PUFA biochemistry": 1
+     },
+     "example_topics": [
+      "vitamin, tocopherol, antioxidant, pufa"
+     ]
+    },
+    {
+     "community": 72,
+     "topics": 1,
+     "themes": {
+      "General talk and meta": 1
+     },
+     "example_topics": [
+      "eat, taste, eating, food"
+     ]
+    },
+    {
+     "community": 73,
+     "topics": 1,
+     "themes": {
+      "Lifestyle": 1
+     },
+     "example_topics": [
+      "vitamin, d3, k2, supplement"
+     ]
+    },
+    {
+     "community": 74,
+     "topics": 1,
+     "themes": {
+      "Specific oils": 1
+     },
+     "example_topics": [
+      "sesame, sesame oil, oil, toasted"
+     ]
+    },
+    {
+     "community": 75,
+     "topics": 1,
+     "themes": {
+      "Ingredient labels and processed food": 1
+     },
+     "example_topics": [
+      "flavor, natural flavor, natural, vanilla"
+     ]
+    },
+    {
+     "community": 76,
+     "topics": 1,
+     "themes": {
+      "General talk and meta": 1
+     },
+     "example_topics": [
+      "thank, thanks, link, appreciate"
+     ]
+    },
+    {
+     "community": 77,
+     "topics": 1,
+     "themes": {
+      "General talk and meta": 1
+     },
+     "example_topics": [
+      "app, email, subscription, free"
+     ]
+    },
+    {
+     "community": 78,
+     "topics": 1,
+     "themes": {
+      "Ingredient labels and processed food": 1
+     },
+     "example_topics": [
+      "stevia, sweetener, maltodextrin, aspartame"
+     ]
+    },
+    {
+     "community": 79,
+     "topics": 1,
+     "themes": {
+      "Staple foods": 1
+     },
+     "example_topics": [
+      "chocolate, cocoa, dark chocolate, dark"
+     ]
+    },
+    {
+     "community": 80,
+     "topics": 1,
+     "themes": {
+      "Other diets": 1
+     },
+     "example_topics": [
+      "human, meat, ancestor, ate"
+     ]
+    },
+    {
+     "community": 81,
+     "topics": 1,
+     "themes": {
+      "Lifestyle": 1
+     },
+     "example_topics": [
+      "allergy, allergic, symptom, reaction"
+     ]
+    },
+    {
+     "community": 82,
+     "topics": 1,
+     "themes": {
+      "Distrust of industry, medicine and media": 1
+     },
+     "example_topics": [
+      "organic, pesticide, farm, buy organic"
+     ]
+    },
+    {
+     "community": 83,
+     "topics": 1,
+     "themes": {
+      "Politics": 1
+     },
+     "example_topics": [
+      "political, left, right, liberal"
+     ]
+    },
+    {
+     "community": 84,
+     "topics": 1,
+     "themes": {
+      "Lifestyle": 1
+     },
+     "example_topics": [
+      "kid, parent, school, child"
+     ]
+    },
+    {
+     "community": 85,
+     "topics": 1,
+     "themes": {
+      "Shopping": 1
+     },
+     "example_topics": [
+      "wing, wild wing, buffalo wild, buffalo"
+     ]
+    },
+    {
+     "community": 86,
+     "topics": 1,
+     "themes": {
+      "Keto, carbs, fasting": 1
+     },
+     "example_topics": [
+      "cico, calorie, weight, gain"
+     ]
+    },
+    {
+     "community": 87,
+     "topics": 1,
+     "themes": {
+      "Politics": 1
+     },
+     "example_topics": [
+      "seed-oil, trump, guy, video"
+     ]
+    },
+    {
+     "community": 88,
+     "topics": 1,
+     "themes": {
+      "Ingredient labels and processed food": 1
+     },
+     "example_topics": [
+      "msg, chinese, salt, sodium"
+     ]
+    },
+    {
+     "community": 89,
+     "topics": 1,
+     "themes": {
+      "Shopping": 1
+     },
+     "example_topics": [
+      "cracker, pretzel, snack, graham"
+     ]
+    },
+    {
+     "community": 90,
+     "topics": 1,
+     "themes": {
+      "Staple foods": 1
+     },
+     "example_topics": [
+      "yogurt, greek, greek yogurt, yoghurt"
+     ]
+    },
+    {
+     "community": 91,
+     "topics": 1,
+     "themes": {
+      "Distrust of industry, medicine and media": 1
+     },
+     "example_topics": [
+      "poison, chemical, toxic, dose"
+     ]
+    },
+    {
+     "community": 92,
+     "topics": 1,
+     "themes": {
+      "Distrust of industry, medicine and media": 1
+     },
+     "example_topics": [
+      "gmo, pesticide, crop, genetically"
+     ]
+    },
+    {
+     "community": 93,
+     "topics": 1,
+     "themes": {
+      "Lifestyle": 1
+     },
+     "example_topics": [
+      "testosterone, hormone, estrogen, endocrine"
+     ]
+    },
+    {
+     "community": 94,
+     "topics": 1,
+     "themes": {
+      "Other diets": 1
+     },
+     "example_topics": [
+      "japan, japanese, asian, country"
+     ]
+    },
+    {
+     "community": 95,
+     "topics": 1,
+     "themes": {
+      "Distrust of industry, medicine and media": 1
+     },
+     "example_topics": [
+      "glyphosate, herbicide, crop, wheat"
+     ]
+    },
+    {
+     "community": 96,
+     "topics": 1,
+     "themes": {
+      "General talk and meta": 1
+     },
+     "example_topics": [
+      "podcast, tucker, video, layne"
+     ]
+    },
+    {
+     "community": 97,
+     "topics": 1,
+     "themes": {
+      "Lifestyle": 1
+     },
+     "example_topics": [
+      "anxiety, mental, feel, depression"
+     ]
+    },
+    {
+     "community": 98,
+     "topics": 1,
+     "themes": {
+      "Shopping": 1
+     },
+     "example_topics": [
+      "popcorn, pop, microwave, coconut-oil"
+     ]
+    },
+    {
+     "community": 99,
+     "topics": 1,
+     "themes": {
+      "Other diets": 1
+     },
+     "example_topics": [
+      "chicken, breast, chicken breast, meat"
+     ]
+    },
+    {
+     "community": 100,
+     "topics": 1,
+     "themes": {
+      "Specific oils": 1
+     },
+     "example_topics": [
+      "soybean, soybean oil, oil, soy"
+     ]
+    },
+    {
+     "community": 101,
+     "topics": 1,
+     "themes": {
+      "Omega-6 / PUFA biochemistry": 1
+     },
+     "example_topics": [
+      "nut, macadamia, macadamia nut, pufa"
+     ]
+    },
+    {
+     "community": 102,
+     "topics": 1,
+     "themes": {
+      "Staple foods": 1
+     },
+     "example_topics": [
+      "corn, corn oil, gmo corn, gmo"
+     ]
+    },
+    {
+     "community": 103,
+     "topics": 1,
+     "themes": {
+      "Omega-6 / PUFA biochemistry": 1
+     },
+     "example_topics": [
+      "egg, pufa, chicken, low pufa"
+     ]
+    },
+    {
+     "community": 104,
+     "topics": 1,
+     "themes": {
+      "Shopping": 1
+     },
+     "example_topics": [
+      "bar, protein bar, protein, date"
+     ]
+    },
+    {
+     "community": 105,
+     "topics": 1,
+     "themes": {
+      "Shopping": 1
+     },
+     "example_topics": [
+      "hummus, tahini, chickpea, sesame"
+     ]
+    },
+    {
+     "community": 106,
+     "topics": 1,
+     "themes": {
+      "Other diets": 1
+     },
+     "example_topics": [
+      "seed, eat seed, chia, chia seed"
+     ]
+    },
+    {
+     "community": 107,
+     "topics": 1,
+     "themes": {
+      "Staple foods": 1
+     },
+     "example_topics": [
+      "cereal, granola, grain, breakfast"
+     ]
+    },
+    {
+     "community": 108,
+     "topics": 1,
+     "themes": {
+      "Specific oils": 1
+     },
+     "example_topics": [
+      "pressed, cold pressed, cold, expeller"
+     ]
+    },
+    {
+     "community": 109,
+     "topics": 1,
+     "themes": {
+      "Other diets": 1
+     },
+     "example_topics": [
+      "mediterranean, blue zone, zone, blue"
+     ]
+    },
+    {
+     "community": 110,
+     "topics": 1,
+     "themes": {
+      "Keto, carbs, fasting": 1
+     },
+     "example_topics": [
+      "sugar, seed-oil, diabetes, seed-oil sugar"
+     ]
+    },
+    {
+     "community": 111,
+     "topics": 1,
+     "themes": {
+      "Ingredient labels and processed food": 1
+     },
+     "example_topics": [
+      "citric, citric acid, mold, acid"
+     ]
+    },
+    {
+     "community": 112,
+     "topics": 1,
+     "themes": {
+      "Ingredient labels and processed food": 1
+     },
+     "example_topics": [
+      "gum, carrageenan, xanthan, xanthan gum"
+     ]
+    },
+    {
+     "community": 113,
+     "topics": 1,
+     "themes": {
+      "Lifestyle": 1
+     },
+     "example_topics": [
+      "drug, serotonin, addiction, effect"
+     ]
+    }
+   ]
+  },
+  "edges_in_both": 1,
+  "jaccard_edges": 0.067,
+  "ami_communities_before_vs_from": 0.12,
   "topics_gaining_links": [
    {
     "topic": 47,
     "words": "rfk-jr, trump, rape, vote",
     "theme": "Politics",
     "before": 0,
-    "from": 3
-   },
-   {
-    "topic": 0,
-    "words": "seed-oil, food, health, oil",
-    "theme": "General talk and meta",
-    "before": 0,
     "from": 2
    },
    {
-    "topic": 2,
-    "words": "ldl, cholesterol, hdl, statin",
-    "theme": "Omega-6 / PUFA biochemistry",
-    "before": 2,
-    "from": 4
-   },
-   {
-    "topic": 97,
-    "words": "left, political, party, right",
-    "theme": "Politics",
+    "topic": 11,
+    "words": "grass, fed, beef, grass fed",
+    "theme": "Other diets",
     "before": 0,
     "from": 2
    },
@@ -2975,37 +3303,37 @@
     "from": 2
    },
    {
-    "topic": 89,
-    "words": "political, left, right, liberal",
+    "topic": 97,
+    "words": "left, political, party, right",
     "theme": "Politics",
     "before": 0,
-    "from": 1
-   },
-   {
-    "topic": 33,
-    "words": "nutrition, science, diet, study",
-    "theme": "Studies and evidence",
-    "before": 1,
     "from": 2
    },
    {
-    "topic": 24,
-    "words": "oil, vegetable-oil, hexane, lubricant",
-    "theme": "Specific oils",
+    "topic": 18,
+    "words": "egg, chicken, pasture, feed",
+    "theme": "Other diets",
     "before": 0,
     "from": 1
    },
    {
-    "topic": 21,
-    "words": "fry, potato, french fry, french",
-    "theme": "Shopping",
+    "topic": 16,
+    "words": "milk, raw milk, raw, dairy",
+    "theme": "Staple foods",
     "before": 0,
     "from": 1
    },
    {
-    "topic": 19,
-    "words": "store, costco, price, grocery",
-    "theme": "Shopping",
+    "topic": 15,
+    "words": "bread, flour, wheat, gluten",
+    "theme": "Staple foods",
+    "before": 0,
+    "from": 1
+   },
+   {
+    "topic": 109,
+    "words": "conspiracy, media, news, propaganda",
+    "theme": "Distrust of industry, medicine and media",
     "before": 0,
     "from": 1
    },
@@ -3013,66 +3341,38 @@
     "topic": 17,
     "words": "science, study, scientific, evidence",
     "theme": "Studies and evidence",
-    "before": 2,
-    "from": 3
+    "before": 0,
+    "from": 1
    },
    {
-    "topic": 110,
-    "words": "nut, macadamia, macadamia nut, pufa",
+    "topic": 5,
+    "words": "comment, reddit, post, sub",
+    "theme": "General talk and meta",
+    "before": 1,
+    "from": 2
+   },
+   {
+    "topic": 4,
+    "words": "fat, saturated-fat, trans, trans fat",
     "theme": "Omega-6 / PUFA biochemistry",
+    "before": 0,
+    "from": 1
+   },
+   {
+    "topic": 55,
+    "words": "bread, bun, sourdough, bakery",
+    "theme": "Shopping",
     "before": 0,
     "from": 1
    }
   ],
   "topics_losing_links": [
    {
-    "topic": 50,
-    "words": "guy, video, diet, eats",
-    "theme": "General talk and meta",
-    "before": 4,
-    "from": 0
-   },
-   {
-    "topic": 58,
-    "words": "insulin, glucose, diabetes, resistance",
-    "theme": "Keto, carbs, fasting",
-    "before": 4,
-    "from": 1
-   },
-   {
-    "topic": 104,
-    "words": "podcast, tucker, video, layne",
-    "theme": "General talk and meta",
-    "before": 3,
-    "from": 0
-   },
-   {
-    "topic": 93,
-    "words": "seed-oil, trump, guy, video",
-    "theme": "Politics",
+    "topic": 12,
+    "words": "pork, pig, lard, bacon",
+    "theme": "Other diets",
     "before": 2,
     "from": 0
-   },
-   {
-    "topic": 27,
-    "words": "keto, carb, ketosis, diet",
-    "theme": "Keto, carbs, fasting",
-    "before": 2,
-    "from": 0
-   },
-   {
-    "topic": 5,
-    "words": "comment, reddit, post, sub",
-    "theme": "General talk and meta",
-    "before": 4,
-    "from": 2
-   },
-   {
-    "topic": 14,
-    "words": "calorie, weight, gain, lose",
-    "theme": "Keto, carbs, fasting",
-    "before": 3,
-    "from": 1
    },
    {
     "topic": 30,
@@ -3082,9 +3382,30 @@
     "from": 0
    },
    {
-    "topic": 109,
-    "words": "conspiracy, media, news, propaganda",
-    "theme": "Distrust of industry, medicine and media",
+    "topic": 82,
+    "words": "thank, thanks, link, appreciate",
+    "theme": "General talk and meta",
+    "before": 1,
+    "from": 0
+   },
+   {
+    "topic": 104,
+    "words": "podcast, tucker, video, layne",
+    "theme": "General talk and meta",
+    "before": 1,
+    "from": 0
+   },
+   {
+    "topic": 107,
+    "words": "chicken, breast, chicken breast, meat",
+    "theme": "Other diets",
+    "before": 1,
+    "from": 0
+   },
+   {
+    "topic": 50,
+    "words": "guy, video, diet, eats",
+    "theme": "General talk and meta",
     "before": 1,
     "from": 0
    },
@@ -3096,84 +3417,89 @@
     "from": 0
    },
    {
-    "topic": 4,
-    "words": "fat, saturated-fat, trans, trans fat",
-    "theme": "Omega-6 / PUFA biochemistry",
-    "before": 4,
-    "from": 3
+    "topic": 69,
+    "words": "red-meat, meat, cancer, processed meat",
+    "theme": "Other diets",
+    "before": 0,
+    "from": 0
    },
    {
-    "topic": 71,
-    "words": "pizza, crust, dough, frozen",
-    "theme": "Shopping",
+    "topic": 86,
+    "words": "human, meat, ancestor, ate",
+    "theme": "Other diets",
+    "before": 0,
+    "from": 0
+   },
+   {
+    "topic": 85,
+    "words": "chocolate, cocoa, dark chocolate, dark",
+    "theme": "Staple foods",
+    "before": 0,
+    "from": 0
+   },
+   {
+    "topic": 84,
+    "words": "stevia, sweetener, maltodextrin, aspartame",
+    "theme": "Ingredient labels and processed food",
+    "before": 0,
+    "from": 0
+   },
+   {
+    "topic": 83,
+    "words": "app, email, subscription, free",
+    "theme": "General talk and meta",
     "before": 0,
     "from": 0
    }
   ],
   "theme_pairs_density_change": [
    {
-    "themes": "Studies and evidence - Studies and evidence",
-    "edges_before": 0,
-    "edges_from": 1,
-    "possible": 1,
-    "density_before": 0.0,
-    "density_from": 1.0
-   },
-   {
     "themes": "Politics - Politics",
     "edges_before": 0,
-    "edges_from": 4,
+    "edges_from": 3,
     "possible": 10,
     "density_before": 0.0,
-    "density_from": 0.4
+    "density_from": 0.3
    },
    {
-    "themes": "Omega-6 / PUFA biochemistry - Studies and evidence",
+    "themes": "Studies and evidence - General talk and meta",
     "edges_before": 0,
-    "edges_from": 2,
-    "possible": 12,
+    "edges_from": 1,
+    "possible": 14,
     "density_before": 0.0,
-    "density_from": 0.167
+    "density_from": 0.071
    },
    {
     "themes": "Omega-6 / PUFA biochemistry - Omega-6 / PUFA biochemistry",
-    "edges_before": 2,
-    "edges_from": 4,
+    "edges_before": 0,
+    "edges_from": 1,
     "possible": 15,
-    "density_before": 0.133,
-    "density_from": 0.267
-   },
-   {
-    "themes": "Omega-6 / PUFA biochemistry - General talk and meta",
-    "edges_before": 1,
-    "edges_from": 2,
-    "possible": 42,
-    "density_before": 0.024,
-    "density_from": 0.048
-   },
-   {
-    "themes": "Shopping - Shopping",
-    "edges_before": 0,
-    "edges_from": 1,
-    "possible": 105,
     "density_before": 0.0,
-    "density_from": 0.01
+    "density_from": 0.067
    },
    {
-    "themes": "Keto, carbs, fasting - Other diets",
+    "themes": "Distrust of industry, medicine and media - General talk and meta",
     "edges_before": 0,
     "edges_from": 1,
-    "possible": 117,
+    "possible": 70,
     "density_before": 0.0,
-    "density_from": 0.009
+    "density_from": 0.014
    },
    {
-    "themes": "Specific oils - Shopping",
+    "themes": "Other diets - Staple foods",
     "edges_before": 0,
     "edges_from": 1,
-    "possible": 180,
+    "possible": 169,
     "density_before": 0.0,
     "density_from": 0.006
+   },
+   {
+    "themes": "Shopping - Staple foods",
+    "edges_before": 0,
+    "edges_from": 1,
+    "possible": 195,
+    "density_before": 0.0,
+    "density_from": 0.005
    },
    {
     "themes": "Politics - Vaccines and COVID",
@@ -3232,6 +3558,62 @@
     "density_from": 0.0
    },
    {
+    "themes": "Politics - Shopping",
+    "edges_before": 0,
+    "edges_from": 0,
+    "possible": 75,
+    "density_before": 0.0,
+    "density_from": 0.0
+   },
+   {
+    "themes": "Politics - Ingredient labels and processed food",
+    "edges_before": 0,
+    "edges_from": 0,
+    "possible": 45,
+    "density_before": 0.0,
+    "density_from": 0.0
+   },
+   {
+    "themes": "Lifestyle - Cooking and cooking fats",
+    "edges_before": 0,
+    "edges_from": 0,
+    "possible": 98,
+    "density_before": 0.0,
+    "density_from": 0.0
+   },
+   {
+    "themes": "Lifestyle - General talk and meta",
+    "edges_before": 0,
+    "edges_from": 0,
+    "possible": 98,
+    "density_before": 0.0,
+    "density_from": 0.0
+   },
+   {
+    "themes": "Staple foods - Staple foods",
+    "edges_before": 0,
+    "edges_from": 0,
+    "possible": 78,
+    "density_before": 0.0,
+    "density_from": 0.0
+   },
+   {
+    "themes": "Staple foods - Cooking and cooking fats",
+    "edges_before": 0,
+    "edges_from": 0,
+    "possible": 91,
+    "density_before": 0.0,
+    "density_from": 0.0
+   },
+   {
+    "themes": "Staple foods - General talk and meta",
+    "edges_before": 0,
+    "edges_from": 0,
+    "possible": 91,
+    "density_before": 0.0,
+    "density_from": 0.0
+   },
+   {
     "themes": "Cooking and cooking fats - Cooking and cooking fats",
     "edges_before": 0,
     "edges_from": 0,
@@ -3248,7 +3630,7 @@
     "density_from": 0.0
    },
    {
-    "themes": "Other diets - Other diets",
+    "themes": "Omega-6 / PUFA biochemistry - Other diets",
     "edges_before": 1,
     "edges_from": 0,
     "possible": 78,
@@ -3256,83 +3638,43 @@
     "density_from": 0.0
    },
    {
-    "themes": "Distrust of industry, medicine and media - General talk and meta",
+    "themes": "Other diets - Other diets",
     "edges_before": 2,
     "edges_from": 1,
-    "possible": 70,
-    "density_before": 0.029,
-    "density_from": 0.014
-   },
-   {
-    "themes": "Keto, carbs, fasting - General talk and meta",
-    "edges_before": 1,
-    "edges_from": 0,
-    "possible": 63,
-    "density_before": 0.016,
-    "density_from": 0.0
-   },
-   {
-    "themes": "Keto, carbs, fasting - Keto, carbs, fasting",
-    "edges_before": 3,
-    "edges_from": 2,
-    "possible": 36,
-    "density_before": 0.083,
-    "density_from": 0.056
+    "possible": 78,
+    "density_before": 0.026,
+    "density_from": 0.013
    },
    {
     "themes": "General talk and meta - General talk and meta",
-    "edges_before": 1,
-    "edges_from": 0,
-    "possible": 21,
-    "density_before": 0.048,
-    "density_from": 0.0
-   },
-   {
-    "themes": "Politics - General talk and meta",
     "edges_before": 2,
     "edges_from": 0,
-    "possible": 35,
-    "density_before": 0.057,
+    "possible": 21,
+    "density_before": 0.095,
     "density_from": 0.0
-   },
-   {
-    "themes": "Omega-6 / PUFA biochemistry - Keto, carbs, fasting",
-    "edges_before": 5,
-    "edges_from": 0,
-    "possible": 54,
-    "density_before": 0.093,
-    "density_from": 0.0
-   },
-   {
-    "themes": "Studies and evidence - General talk and meta",
-    "edges_before": 3,
-    "edges_from": 1,
-    "possible": 14,
-    "density_before": 0.214,
-    "density_from": 0.071
    }
   ],
   "resampled_from": {
    "reps": 10,
    "edges_range": [
-    17,
-    47
+    16,
+    30
    ],
    "inside_theme_pct_range": [
     33.3,
-    60.0
+    57.1
    ],
    "isolated_range": [
-    86,
-    106
+    91,
+    104
    ],
    "key_theme_pairs": {
     "Politics - Politics": {
      "possible": 10,
      "before": 0,
      "from_range": [
-      1,
-      6
+      2,
+      5
      ]
     },
     "Politics - Vaccines and COVID": {
@@ -3348,12 +3690,12 @@
      "before": 0,
      "from_range": [
       0,
-      2
+      1
      ]
     },
     "Omega-6 / PUFA biochemistry - Keto": {
      "possible": 54,
-     "before": 5,
+     "before": 1,
      "from_range": [
       0,
       3
@@ -3361,18 +3703,18 @@
     },
     "Omega-6 / PUFA biochemistry - Omega-6 / PUFA biochemistry": {
      "possible": 15,
-     "before": 2,
+     "before": 0,
      "from_range": [
       2,
-      6
+      3
      ]
     },
     "Omega-6 / PUFA biochemistry - Studies and evidence": {
      "possible": 12,
      "before": 0,
      "from_range": [
-      0,
-      4
+      1,
+      3
      ]
     }
    }
@@ -3385,29 +3727,29 @@
    "theme": "General talk and meta",
    "community": 1,
    "docs": 14595,
-   "degree_all": 19,
+   "degree_all": 13,
    "degree_before": 0,
-   "degree_from": 2
+   "degree_from": 0
   },
   {
    "topic": 1,
    "words": "pufa, omega-6, omega-3, acid",
    "theme": "Omega-6 / PUFA biochemistry",
-   "community": 3,
+   "community": 2,
    "docs": 10437,
    "degree_all": 24,
-   "degree_before": 6,
-   "degree_from": 6
+   "degree_before": 1,
+   "degree_from": 1
   },
   {
    "topic": 2,
    "words": "ldl, cholesterol, hdl, statin",
    "theme": "Omega-6 / PUFA biochemistry",
-   "community": 0,
+   "community": 3,
    "docs": 2910,
-   "degree_all": 12,
-   "degree_before": 2,
-   "degree_from": 4
+   "degree_all": 10,
+   "degree_before": 1,
+   "degree_from": 1
   },
   {
    "topic": 3,
@@ -3423,11 +3765,11 @@
    "topic": 4,
    "words": "fat, saturated-fat, trans, trans fat",
    "theme": "Omega-6 / PUFA biochemistry",
-   "community": 0,
+   "community": 3,
    "docs": 3390,
-   "degree_all": 34,
-   "degree_before": 4,
-   "degree_from": 3
+   "degree_all": 20,
+   "degree_before": 0,
+   "degree_from": 1
   },
   {
    "topic": 5,
@@ -3435,8 +3777,8 @@
    "theme": "General talk and meta",
    "community": 1,
    "docs": 4230,
-   "degree_all": 11,
-   "degree_before": 4,
+   "degree_all": 10,
+   "degree_before": 1,
    "degree_from": 2
   },
   {
@@ -3445,15 +3787,15 @@
    "theme": "Shopping",
    "community": 5,
    "docs": 2039,
-   "degree_all": 4,
+   "degree_all": 3,
    "degree_before": 0,
-   "degree_from": 1
+   "degree_from": 0
   },
   {
    "topic": 7,
    "words": "mayo, mayonnaise, mustard, chosen",
    "theme": "Shopping",
-   "community": 7,
+   "community": 5,
    "docs": 1746,
    "degree_all": 1,
    "degree_before": 0,
@@ -3465,7 +3807,7 @@
    "theme": "Specific oils",
    "community": 2,
    "docs": 1934,
-   "degree_all": 4,
+   "degree_all": 2,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3473,9 +3815,9 @@
    "topic": 9,
    "words": "butter, margarine, real butter, butter butter",
    "theme": "Cooking and cooking fats",
-   "community": 2,
+   "community": 0,
    "docs": 2083,
-   "degree_all": 13,
+   "degree_all": 5,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3483,9 +3825,9 @@
    "topic": 10,
    "words": "skin, hair, acne, soap",
    "theme": "Lifestyle",
-   "community": 6,
+   "community": 11,
    "docs": 1903,
-   "degree_all": 2,
+   "degree_all": 0,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3493,27 +3835,27 @@
    "topic": 11,
    "words": "grass, fed, beef, grass fed",
    "theme": "Other diets",
-   "community": 3,
+   "community": 0,
    "docs": 2364,
-   "degree_all": 12,
+   "degree_all": 9,
    "degree_before": 0,
-   "degree_from": 0
+   "degree_from": 2
   },
   {
    "topic": 12,
    "words": "pork, pig, lard, bacon",
    "theme": "Other diets",
-   "community": 3,
+   "community": 0,
    "docs": 2007,
-   "degree_all": 18,
+   "degree_all": 16,
    "degree_before": 2,
-   "degree_from": 2
+   "degree_from": 0
   },
   {
    "topic": 13,
    "words": "sun, sunscreen, skin, sunburn",
    "theme": "Lifestyle",
-   "community": 8,
+   "community": 12,
    "docs": 1628,
    "degree_all": 0,
    "degree_before": 0,
@@ -3523,31 +3865,31 @@
    "topic": 14,
    "words": "calorie, weight, gain, lose",
    "theme": "Keto, carbs, fasting",
-   "community": 0,
+   "community": 3,
    "docs": 2841,
-   "degree_all": 20,
-   "degree_before": 3,
-   "degree_from": 1
+   "degree_all": 8,
+   "degree_before": 0,
+   "degree_from": 0
   },
   {
    "topic": 15,
    "words": "bread, flour, wheat, gluten",
    "theme": "Staple foods",
-   "community": 5,
+   "community": 9,
    "docs": 1667,
-   "degree_all": 2,
+   "degree_all": 1,
    "degree_before": 0,
-   "degree_from": 0
+   "degree_from": 1
   },
   {
    "topic": 16,
    "words": "milk, raw milk, raw, dairy",
    "theme": "Staple foods",
-   "community": 3,
+   "community": 0,
    "docs": 1671,
-   "degree_all": 7,
+   "degree_all": 2,
    "degree_before": 0,
-   "degree_from": 0
+   "degree_from": 1
   },
   {
    "topic": 17,
@@ -3555,19 +3897,19 @@
    "theme": "Studies and evidence",
    "community": 1,
    "docs": 2817,
-   "degree_all": 13,
-   "degree_before": 2,
-   "degree_from": 3
+   "degree_all": 12,
+   "degree_before": 0,
+   "degree_from": 1
   },
   {
    "topic": 18,
    "words": "egg, chicken, pasture, feed",
    "theme": "Other diets",
-   "community": 3,
+   "community": 0,
    "docs": 1566,
-   "degree_all": 4,
+   "degree_all": 6,
    "degree_before": 0,
-   "degree_from": 0
+   "degree_from": 1
   },
   {
    "topic": 19,
@@ -3575,9 +3917,9 @@
    "theme": "Shopping",
    "community": 5,
    "docs": 2345,
-   "degree_all": 3,
+   "degree_all": 1,
    "degree_before": 0,
-   "degree_from": 1
+   "degree_from": 0
   },
   {
    "topic": 20,
@@ -3585,7 +3927,7 @@
    "theme": "Specific oils",
    "community": 2,
    "docs": 1392,
-   "degree_all": 6,
+   "degree_all": 2,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3593,17 +3935,17 @@
    "topic": 21,
    "words": "fry, potato, french fry, french",
    "theme": "Shopping",
-   "community": 4,
+   "community": 0,
    "docs": 1223,
-   "degree_all": 7,
+   "degree_all": 6,
    "degree_before": 0,
-   "degree_from": 1
+   "degree_from": 0
   },
   {
    "topic": 22,
    "words": "peanut, peanut butter, peanut oil, butter",
    "theme": "Specific oils",
-   "community": 9,
+   "community": 13,
    "docs": 1090,
    "degree_all": 0,
    "degree_before": 0,
@@ -3613,9 +3955,9 @@
    "topic": 23,
    "words": "meal, cook, food, home",
    "theme": "Cooking and cooking fats",
-   "community": 4,
+   "community": 1,
    "docs": 2140,
-   "degree_all": 7,
+   "degree_all": 2,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3625,17 +3967,17 @@
    "theme": "Specific oils",
    "community": 2,
    "docs": 2341,
-   "degree_all": 16,
+   "degree_all": 5,
    "degree_before": 0,
-   "degree_from": 1
+   "degree_from": 0
   },
   {
    "topic": 25,
    "words": "sugar, syrup, fructose, corn syrup",
    "theme": "Keto, carbs, fasting",
-   "community": 4,
+   "community": 7,
    "docs": 1521,
-   "degree_all": 7,
+   "degree_all": 4,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3643,9 +3985,9 @@
    "topic": 26,
    "words": "vaccine, covid, virus, shot",
    "theme": "Vaccines and COVID",
-   "community": 1,
+   "community": 4,
    "docs": 1184,
-   "degree_all": 3,
+   "degree_all": 2,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3653,19 +3995,19 @@
    "topic": 27,
    "words": "keto, carb, ketosis, diet",
    "theme": "Keto, carbs, fasting",
-   "community": 0,
+   "community": 3,
    "docs": 1300,
-   "degree_all": 9,
-   "degree_before": 2,
+   "degree_all": 12,
+   "degree_before": 0,
    "degree_from": 0
   },
   {
    "topic": 28,
    "words": "palm, palm oil, oil, kernel",
    "theme": "Specific oils",
-   "community": 3,
+   "community": 2,
    "docs": 1017,
-   "degree_all": 5,
+   "degree_all": 8,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3673,7 +4015,7 @@
    "topic": 29,
    "words": "formula, baby, milk, infant",
    "theme": "Staple foods",
-   "community": 10,
+   "community": 14,
    "docs": 976,
    "degree_all": 0,
    "degree_before": 0,
@@ -3683,7 +4025,7 @@
    "topic": 30,
    "words": "vegan, veganism, vegan diet, vegetarian",
    "theme": "Other diets",
-   "community": 0,
+   "community": 6,
    "docs": 1261,
    "degree_all": 4,
    "degree_before": 1,
@@ -3693,9 +4035,9 @@
    "topic": 31,
    "words": "nut, almond, seed, nut seed",
    "theme": "Staple foods",
-   "community": 0,
+   "community": 2,
    "docs": 1143,
-   "degree_all": 4,
+   "degree_all": 3,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3703,9 +4045,9 @@
    "topic": 32,
    "words": "dressing, salad, ranch, salad dressing",
    "theme": "Shopping",
-   "community": 7,
+   "community": 5,
    "docs": 1109,
-   "degree_all": 1,
+   "degree_all": 2,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3715,17 +4057,17 @@
    "theme": "Studies and evidence",
    "community": 1,
    "docs": 2178,
-   "degree_all": 15,
-   "degree_before": 1,
-   "degree_from": 2
+   "degree_all": 5,
+   "degree_before": 0,
+   "degree_from": 0
   },
   {
    "topic": 34,
    "words": "tallow, beef tallow, beef, butcher",
    "theme": "Cooking and cooking fats",
-   "community": 4,
+   "community": 0,
    "docs": 1448,
-   "degree_all": 5,
+   "degree_all": 3,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3733,19 +4075,19 @@
    "topic": 35,
    "words": "coconut-oil, coconut, mct, oil",
    "theme": "Specific oils",
-   "community": 3,
+   "community": 2,
    "docs": 1126,
-   "degree_all": 12,
-   "degree_before": 2,
-   "degree_from": 2
+   "degree_all": 6,
+   "degree_before": 0,
+   "degree_from": 0
   },
   {
    "topic": 36,
    "words": "ghee, butter, tallow, indian",
    "theme": "Cooking and cooking fats",
-   "community": 2,
+   "community": 0,
    "docs": 951,
-   "degree_all": 7,
+   "degree_all": 3,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3755,7 +4097,7 @@
    "theme": "Distrust of industry, medicine and media",
    "community": 1,
    "docs": 1769,
-   "degree_all": 13,
+   "degree_all": 6,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3763,7 +4105,7 @@
    "topic": 38,
    "words": "plastic, microplastic, glass, bottle",
    "theme": "Distrust of industry, medicine and media",
-   "community": 11,
+   "community": 15,
    "docs": 918,
    "degree_all": 0,
    "degree_before": 0,
@@ -3775,7 +4117,7 @@
    "theme": "Lifestyle",
    "community": 1,
    "docs": 1028,
-   "degree_all": 6,
+   "degree_all": 1,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3783,7 +4125,7 @@
    "topic": 40,
    "words": "protein, whey, powder, protein powder",
    "theme": "Ingredient labels and processed food",
-   "community": 12,
+   "community": 16,
    "docs": 847,
    "degree_all": 0,
    "degree_before": 0,
@@ -3793,9 +4135,9 @@
    "topic": 41,
    "words": "pan, cast iron, cast, iron",
    "theme": "Cooking and cooking fats",
-   "community": 4,
+   "community": 17,
    "docs": 834,
-   "degree_all": 1,
+   "degree_all": 0,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3803,9 +4145,9 @@
    "topic": 42,
    "words": "burger, patty, steak, grill",
    "theme": "Shopping",
-   "community": 4,
+   "community": 0,
    "docs": 1119,
-   "degree_all": 13,
+   "degree_all": 2,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3815,7 +4157,7 @@
    "theme": "Keto, carbs, fasting",
    "community": 0,
    "docs": 2110,
-   "degree_all": 13,
+   "degree_all": 3,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3823,7 +4165,7 @@
    "topic": 44,
    "words": "coffee, creamer, cream, caffeine",
    "theme": "Staple foods",
-   "community": 13,
+   "community": 18,
    "docs": 703,
    "degree_all": 0,
    "degree_before": 0,
@@ -3835,7 +4177,7 @@
    "theme": "Specific oils",
    "community": 2,
    "docs": 763,
-   "degree_all": 5,
+   "degree_all": 4,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3845,27 +4187,27 @@
    "theme": "Distrust of industry, medicine and media",
    "community": 1,
    "docs": 1538,
-   "degree_all": 6,
-   "degree_before": 1,
-   "degree_from": 1
+   "degree_all": 4,
+   "degree_before": 0,
+   "degree_from": 0
   },
   {
    "topic": 47,
    "words": "rfk-jr, trump, rape, vote",
    "theme": "Politics",
-   "community": 1,
+   "community": 4,
    "docs": 836,
-   "degree_all": 5,
+   "degree_all": 3,
    "degree_before": 0,
-   "degree_from": 3
+   "degree_from": 2
   },
   {
    "topic": 48,
    "words": "soy, tofu, soy sauce, estrogen",
    "theme": "Staple foods",
-   "community": 2,
+   "community": 0,
    "docs": 636,
-   "degree_all": 1,
+   "degree_all": 2,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3873,9 +4215,9 @@
    "topic": 49,
    "words": "vitamin, supplement, iron, b12",
    "theme": "Lifestyle",
-   "community": 0,
+   "community": 2,
    "docs": 947,
-   "degree_all": 7,
+   "degree_all": 4,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3883,19 +4225,19 @@
    "topic": 50,
    "words": "guy, video, diet, eats",
    "theme": "General talk and meta",
-   "community": 1,
+   "community": 6,
    "docs": 1283,
-   "degree_all": 3,
-   "degree_before": 4,
+   "degree_all": 6,
+   "degree_before": 1,
    "degree_from": 0
   },
   {
    "topic": 51,
    "words": "fiber, gut, ibs, stomach",
    "theme": "Lifestyle",
-   "community": 0,
+   "community": 8,
    "docs": 1011,
-   "degree_all": 4,
+   "degree_all": 2,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3903,9 +4245,9 @@
    "topic": 52,
    "words": "ice, ice cream, cream, vanilla",
    "theme": "Staple foods",
-   "community": 6,
+   "community": 19,
    "docs": 631,
-   "degree_all": 1,
+   "degree_all": 0,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3913,7 +4255,7 @@
    "topic": 53,
    "words": "oat, milk, almond, oat milk",
    "theme": "Staple foods",
-   "community": 14,
+   "community": 20,
    "docs": 558,
    "degree_all": 0,
    "degree_before": 0,
@@ -3923,7 +4265,7 @@
    "topic": 54,
    "words": "lecithin, soy lecithin, sunflower lecithin, emulsifier",
    "theme": "Ingredient labels and processed food",
-   "community": 6,
+   "community": 2,
    "docs": 468,
    "degree_all": 1,
    "degree_before": 0,
@@ -3933,19 +4275,19 @@
    "topic": 55,
    "words": "bread, bun, sourdough, bakery",
    "theme": "Shopping",
-   "community": 5,
+   "community": 9,
    "docs": 683,
-   "degree_all": 2,
+   "degree_all": 1,
    "degree_before": 0,
-   "degree_from": 0
+   "degree_from": 1
   },
   {
    "topic": 56,
    "words": "processed-food, processed, ultra, ultra processed-food",
    "theme": "Ingredient labels and processed food",
-   "community": 1,
+   "community": 21,
    "docs": 969,
-   "degree_all": 1,
+   "degree_all": 0,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3953,9 +4295,9 @@
    "topic": 57,
    "words": "ingredient, label, list, ingredient list",
    "theme": "Ingredient labels and processed food",
-   "community": 2,
+   "community": 1,
    "docs": 1298,
-   "degree_all": 4,
+   "degree_all": 3,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3963,19 +4305,19 @@
    "topic": 58,
    "words": "insulin, glucose, diabetes, resistance",
    "theme": "Keto, carbs, fasting",
-   "community": 0,
+   "community": 3,
    "docs": 1242,
    "degree_all": 11,
-   "degree_before": 4,
+   "degree_before": 1,
    "degree_from": 1
   },
   {
    "topic": 59,
    "words": "fasting, fast, day, hour",
    "theme": "Keto, carbs, fasting",
-   "community": 0,
+   "community": 3,
    "docs": 736,
-   "degree_all": 2,
+   "degree_all": 1,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -3983,11 +4325,11 @@
    "topic": 60,
    "words": "carb, low carb, low, high carb",
    "theme": "Keto, carbs, fasting",
-   "community": 0,
+   "community": 3,
    "docs": 1114,
-   "degree_all": 13,
-   "degree_before": 3,
-   "degree_from": 3
+   "degree_all": 7,
+   "degree_before": 0,
+   "degree_from": 0
   },
   {
    "topic": 61,
@@ -4003,19 +4345,19 @@
    "topic": 62,
    "words": "oxalate, vegetable, spinach, fruit",
    "theme": "Other diets",
-   "community": 0,
+   "community": 8,
    "docs": 784,
-   "degree_all": 10,
+   "degree_all": 4,
    "degree_before": 0,
-   "degree_from": 1
+   "degree_from": 0
   },
   {
    "topic": 63,
    "words": "sauce, chili, tomato, pepper",
    "theme": "Shopping",
-   "community": 5,
+   "community": 22,
    "docs": 823,
-   "degree_all": 1,
+   "degree_all": 0,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4023,9 +4365,9 @@
    "topic": 64,
    "words": "cooky, cake, butter, recipe",
    "theme": "Shopping",
-   "community": 5,
+   "community": 23,
    "docs": 675,
-   "degree_all": 5,
+   "degree_all": 0,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4033,9 +4375,9 @@
    "topic": 65,
    "words": "cheese, cheddar, raw, milk",
    "theme": "Staple foods",
-   "community": 3,
+   "community": 24,
    "docs": 534,
-   "degree_all": 1,
+   "degree_all": 0,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4043,9 +4385,9 @@
    "topic": 66,
    "words": "salt, sodium, blood pressure, pressure",
    "theme": "Lifestyle",
-   "community": 15,
+   "community": 8,
    "docs": 460,
-   "degree_all": 0,
+   "degree_all": 1,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4053,9 +4395,9 @@
    "topic": 67,
    "words": "water, fluoride, tooth, toothpaste",
    "theme": "Distrust of industry, medicine and media",
-   "community": 0,
+   "community": 25,
    "docs": 531,
-   "degree_all": 1,
+   "degree_all": 0,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4063,7 +4405,7 @@
    "topic": 68,
    "words": "dog, cat, pet, raw",
    "theme": "Lifestyle",
-   "community": 16,
+   "community": 26,
    "docs": 424,
    "degree_all": 0,
    "degree_before": 0,
@@ -4073,9 +4415,9 @@
    "topic": 69,
    "words": "red-meat, meat, cancer, processed meat",
    "theme": "Other diets",
-   "community": 0,
+   "community": 1,
    "docs": 650,
-   "degree_all": 4,
+   "degree_all": 1,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4083,7 +4425,7 @@
    "topic": 70,
    "words": "mom, wife, mother, mum",
    "theme": "Lifestyle",
-   "community": 17,
+   "community": 27,
    "docs": 595,
    "degree_all": 0,
    "degree_before": 0,
@@ -4093,7 +4435,7 @@
    "topic": 71,
    "words": "pizza, crust, dough, frozen",
    "theme": "Shopping",
-   "community": 18,
+   "community": 28,
    "docs": 401,
    "degree_all": 0,
    "degree_before": 0,
@@ -4103,9 +4445,9 @@
    "topic": 72,
    "words": "carnivore, carnivore diet, diet, meat",
    "theme": "Other diets",
-   "community": 0,
+   "community": 29,
    "docs": 643,
-   "degree_all": 3,
+   "degree_all": 0,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4115,7 +4457,7 @@
    "theme": "Distrust of industry, medicine and media",
    "community": 1,
    "docs": 1946,
-   "degree_all": 10,
+   "degree_all": 4,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4123,7 +4465,7 @@
    "topic": 74,
    "words": "vegan, seed-oil, vegetarian, veganism",
    "theme": "Other diets",
-   "community": 0,
+   "community": 6,
    "docs": 507,
    "degree_all": 1,
    "degree_before": 1,
@@ -4133,7 +4475,7 @@
    "topic": 75,
    "words": "smoke, smoke point, point, olive-oil",
    "theme": "Cooking and cooking fats",
-   "community": 19,
+   "community": 30,
    "docs": 584,
    "degree_all": 0,
    "degree_before": 0,
@@ -4143,9 +4485,9 @@
    "topic": 76,
    "words": "frying, fried, deep, fryer",
    "theme": "Cooking and cooking fats",
-   "community": 4,
+   "community": 0,
    "docs": 1128,
-   "degree_all": 5,
+   "degree_all": 1,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4153,9 +4495,9 @@
    "topic": 77,
    "words": "vitamin, tocopherol, antioxidant, pufa",
    "theme": "Omega-6 / PUFA biochemistry",
-   "community": 3,
+   "community": 2,
    "docs": 397,
-   "degree_all": 5,
+   "degree_all": 6,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4163,9 +4505,9 @@
    "topic": 78,
    "words": "eat, taste, eating, food",
    "theme": "General talk and meta",
-   "community": 4,
+   "community": 31,
    "docs": 1901,
-   "degree_all": 9,
+   "degree_all": 0,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4173,7 +4515,7 @@
    "topic": 79,
    "words": "vitamin, d3, k2, supplement",
    "theme": "Lifestyle",
-   "community": 0,
+   "community": 2,
    "docs": 366,
    "degree_all": 1,
    "degree_before": 0,
@@ -4183,7 +4525,7 @@
    "topic": 80,
    "words": "sesame, sesame oil, oil, toasted",
    "theme": "Specific oils",
-   "community": 20,
+   "community": 32,
    "docs": 434,
    "degree_all": 0,
    "degree_before": 0,
@@ -4193,9 +4535,9 @@
    "topic": 81,
    "words": "flavor, natural flavor, natural, vanilla",
    "theme": "Ingredient labels and processed food",
-   "community": 2,
+   "community": 33,
    "docs": 569,
-   "degree_all": 1,
+   "degree_all": 0,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4203,19 +4545,19 @@
    "topic": 82,
    "words": "thank, thanks, link, appreciate",
    "theme": "General talk and meta",
-   "community": 21,
+   "community": 1,
    "docs": 1218,
-   "degree_all": 0,
-   "degree_before": 0,
+   "degree_all": 4,
+   "degree_before": 1,
    "degree_from": 0
   },
   {
    "topic": 83,
    "words": "app, email, subscription, free",
    "theme": "General talk and meta",
-   "community": 2,
+   "community": 34,
    "docs": 535,
-   "degree_all": 1,
+   "degree_all": 0,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4223,9 +4565,9 @@
    "topic": 84,
    "words": "stevia, sweetener, maltodextrin, aspartame",
    "theme": "Ingredient labels and processed food",
-   "community": 22,
+   "community": 7,
    "docs": 417,
-   "degree_all": 0,
+   "degree_all": 1,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4233,9 +4575,9 @@
    "topic": 85,
    "words": "chocolate, cocoa, dark chocolate, dark",
    "theme": "Staple foods",
-   "community": 3,
+   "community": 7,
    "docs": 365,
-   "degree_all": 2,
+   "degree_all": 1,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4243,9 +4585,9 @@
    "topic": 86,
    "words": "human, meat, ancestor, ate",
    "theme": "Other diets",
-   "community": 0,
+   "community": 3,
    "docs": 1006,
-   "degree_all": 10,
+   "degree_all": 2,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4253,7 +4595,7 @@
    "topic": 87,
    "words": "allergy, allergic, symptom, reaction",
    "theme": "Lifestyle",
-   "community": 23,
+   "community": 35,
    "docs": 572,
    "degree_all": 0,
    "degree_before": 0,
@@ -4263,7 +4605,7 @@
    "topic": 88,
    "words": "organic, pesticide, farm, buy organic",
    "theme": "Distrust of industry, medicine and media",
-   "community": 24,
+   "community": 36,
    "docs": 425,
    "degree_all": 0,
    "degree_before": 0,
@@ -4273,19 +4615,19 @@
    "topic": 89,
    "words": "political, left, right, liberal",
    "theme": "Politics",
-   "community": 1,
+   "community": 4,
    "docs": 620,
-   "degree_all": 6,
+   "degree_all": 4,
    "degree_before": 0,
-   "degree_from": 1
+   "degree_from": 0
   },
   {
    "topic": 90,
    "words": "kid, parent, school, child",
    "theme": "Lifestyle",
-   "community": 25,
+   "community": 1,
    "docs": 683,
-   "degree_all": 0,
+   "degree_all": 1,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4293,9 +4635,9 @@
    "topic": 91,
    "words": "wing, wild wing, buffalo wild, buffalo",
    "theme": "Shopping",
-   "community": 26,
+   "community": 0,
    "docs": 375,
-   "degree_all": 0,
+   "degree_all": 4,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4303,9 +4645,9 @@
    "topic": 92,
    "words": "cico, calorie, weight, gain",
    "theme": "Keto, carbs, fasting",
-   "community": 0,
+   "community": 3,
    "docs": 229,
-   "degree_all": 5,
+   "degree_all": 4,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4315,15 +4657,15 @@
    "theme": "Politics",
    "community": 1,
    "docs": 676,
-   "degree_all": 7,
-   "degree_before": 2,
+   "degree_all": 1,
+   "degree_before": 0,
    "degree_from": 0
   },
   {
    "topic": 94,
    "words": "msg, chinese, salt, sodium",
    "theme": "Ingredient labels and processed food",
-   "community": 27,
+   "community": 37,
    "docs": 226,
    "degree_all": 0,
    "degree_before": 0,
@@ -4333,9 +4675,9 @@
    "topic": 95,
    "words": "cracker, pretzel, snack, graham",
    "theme": "Shopping",
-   "community": 5,
+   "community": 38,
    "docs": 311,
-   "degree_all": 1,
+   "degree_all": 0,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4343,9 +4685,9 @@
    "topic": 96,
    "words": "yogurt, greek, greek yogurt, yoghurt",
    "theme": "Staple foods",
-   "community": 0,
+   "community": 39,
    "docs": 288,
-   "degree_all": 1,
+   "degree_all": 0,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4353,9 +4695,9 @@
    "topic": 97,
    "words": "left, political, party, right",
    "theme": "Politics",
-   "community": 1,
+   "community": 4,
    "docs": 715,
-   "degree_all": 6,
+   "degree_all": 5,
    "degree_before": 0,
    "degree_from": 2
   },
@@ -4363,9 +4705,9 @@
    "topic": 98,
    "words": "trump, vote, president, candidate",
    "theme": "Politics",
-   "community": 1,
+   "community": 4,
    "docs": 902,
-   "degree_all": 6,
+   "degree_all": 4,
    "degree_before": 0,
    "degree_from": 2
   },
@@ -4373,9 +4715,9 @@
    "topic": 99,
    "words": "poison, chemical, toxic, dose",
    "theme": "Distrust of industry, medicine and media",
-   "community": 4,
+   "community": 40,
    "docs": 944,
-   "degree_all": 6,
+   "degree_all": 0,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4383,9 +4725,9 @@
    "topic": 100,
    "words": "gmo, pesticide, crop, genetically",
    "theme": "Distrust of industry, medicine and media",
-   "community": 28,
+   "community": 10,
    "docs": 268,
-   "degree_all": 0,
+   "degree_all": 1,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4393,7 +4735,7 @@
    "topic": 101,
    "words": "testosterone, hormone, estrogen, endocrine",
    "theme": "Lifestyle",
-   "community": 29,
+   "community": 41,
    "docs": 429,
    "degree_all": 0,
    "degree_before": 0,
@@ -4403,7 +4745,7 @@
    "topic": 102,
    "words": "japan, japanese, asian, country",
    "theme": "Other diets",
-   "community": 30,
+   "community": 42,
    "docs": 353,
    "degree_all": 0,
    "degree_before": 0,
@@ -4413,9 +4755,9 @@
    "topic": 103,
    "words": "glyphosate, herbicide, crop, wheat",
    "theme": "Distrust of industry, medicine and media",
-   "community": 31,
+   "community": 10,
    "docs": 256,
-   "degree_all": 0,
+   "degree_all": 1,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4423,19 +4765,19 @@
    "topic": 104,
    "words": "podcast, tucker, video, layne",
    "theme": "General talk and meta",
-   "community": 1,
+   "community": 6,
    "docs": 724,
-   "degree_all": 7,
-   "degree_before": 3,
+   "degree_all": 2,
+   "degree_before": 1,
    "degree_from": 0
   },
   {
    "topic": 105,
    "words": "anxiety, mental, feel, depression",
    "theme": "Lifestyle",
-   "community": 0,
+   "community": 43,
    "docs": 846,
-   "degree_all": 2,
+   "degree_all": 0,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4443,7 +4785,7 @@
    "topic": 106,
    "words": "popcorn, pop, microwave, coconut-oil",
    "theme": "Shopping",
-   "community": 32,
+   "community": 44,
    "docs": 241,
    "degree_all": 0,
    "degree_before": 0,
@@ -4453,19 +4795,19 @@
    "topic": 107,
    "words": "chicken, breast, chicken breast, meat",
    "theme": "Other diets",
-   "community": 3,
+   "community": 0,
    "docs": 720,
-   "degree_all": 9,
-   "degree_before": 0,
+   "degree_all": 12,
+   "degree_before": 1,
    "degree_from": 0
   },
   {
    "topic": 108,
    "words": "soybean, soybean oil, oil, soy",
    "theme": "Specific oils",
-   "community": 2,
+   "community": 0,
    "docs": 537,
-   "degree_all": 2,
+   "degree_all": 1,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4475,25 +4817,25 @@
    "theme": "Distrust of industry, medicine and media",
    "community": 1,
    "docs": 1079,
-   "degree_all": 10,
-   "degree_before": 1,
-   "degree_from": 0
+   "degree_all": 8,
+   "degree_before": 0,
+   "degree_from": 1
   },
   {
    "topic": 110,
    "words": "nut, macadamia, macadamia nut, pufa",
    "theme": "Omega-6 / PUFA biochemistry",
-   "community": 0,
+   "community": 2,
    "docs": 309,
-   "degree_all": 6,
+   "degree_all": 2,
    "degree_before": 0,
-   "degree_from": 1
+   "degree_from": 0
   },
   {
    "topic": 111,
    "words": "corn, corn oil, gmo corn, gmo",
    "theme": "Staple foods",
-   "community": 33,
+   "community": 45,
    "docs": 284,
    "degree_all": 0,
    "degree_before": 0,
@@ -4503,7 +4845,7 @@
    "topic": 112,
    "words": "egg, pufa, chicken, low pufa",
    "theme": "Omega-6 / PUFA biochemistry",
-   "community": 3,
+   "community": 0,
    "docs": 361,
    "degree_all": 7,
    "degree_before": 0,
@@ -4513,7 +4855,7 @@
    "topic": 113,
    "words": "bar, protein bar, protein, date",
    "theme": "Shopping",
-   "community": 34,
+   "community": 46,
    "docs": 294,
    "degree_all": 0,
    "degree_before": 0,
@@ -4523,7 +4865,7 @@
    "topic": 114,
    "words": "hummus, tahini, chickpea, sesame",
    "theme": "Shopping",
-   "community": 35,
+   "community": 47,
    "docs": 188,
    "degree_all": 0,
    "degree_before": 0,
@@ -4533,9 +4875,9 @@
    "topic": 115,
    "words": "seed, eat seed, chia, chia seed",
    "theme": "Other diets",
-   "community": 0,
+   "community": 48,
    "docs": 394,
-   "degree_all": 2,
+   "degree_all": 0,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4543,7 +4885,7 @@
    "topic": 116,
    "words": "cereal, granola, grain, breakfast",
    "theme": "Staple foods",
-   "community": 36,
+   "community": 49,
    "docs": 307,
    "degree_all": 0,
    "degree_before": 0,
@@ -4553,7 +4895,7 @@
    "topic": 117,
    "words": "pressed, cold pressed, cold, expeller",
    "theme": "Specific oils",
-   "community": 37,
+   "community": 50,
    "docs": 308,
    "degree_all": 0,
    "degree_before": 0,
@@ -4563,7 +4905,7 @@
    "topic": 118,
    "words": "mediterranean, blue zone, zone, blue",
    "theme": "Other diets",
-   "community": 38,
+   "community": 51,
    "docs": 422,
    "degree_all": 0,
    "degree_before": 0,
@@ -4573,9 +4915,9 @@
    "topic": 119,
    "words": "sugar, seed-oil, diabetes, seed-oil sugar",
    "theme": "Keto, carbs, fasting",
-   "community": 4,
+   "community": 7,
    "docs": 500,
-   "degree_all": 7,
+   "degree_all": 1,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4583,7 +4925,7 @@
    "topic": 120,
    "words": "citric, citric acid, mold, acid",
    "theme": "Ingredient labels and processed food",
-   "community": 39,
+   "community": 52,
    "docs": 286,
    "degree_all": 0,
    "degree_before": 0,
@@ -4593,9 +4935,9 @@
    "topic": 121,
    "words": "gum, carrageenan, xanthan, xanthan gum",
    "theme": "Ingredient labels and processed food",
-   "community": 6,
+   "community": 53,
    "docs": 250,
-   "degree_all": 2,
+   "degree_all": 0,
    "degree_before": 0,
    "degree_from": 0
   },
@@ -4603,9 +4945,9 @@
    "topic": 122,
    "words": "drug, serotonin, addiction, effect",
    "theme": "Lifestyle",
-   "community": 0,
+   "community": 54,
    "docs": 906,
-   "degree_all": 7,
+   "degree_all": 0,
    "degree_before": 0,
    "degree_from": 0
   }
@@ -4614,2334 +4956,1353 @@
   {
    "a": 0,
    "b": 1,
-   "lift": 1.12,
-   "z": 7.9,
-   "people": 1400
-  },
-  {
-   "a": 0,
-   "b": 2,
-   "lift": 1.088,
-   "z": 4.0,
-   "people": 683
+   "lift": 1.106,
+   "z": 6.4,
+   "people": 1225
   },
   {
    "a": 0,
    "b": 4,
-   "lift": 1.161,
-   "z": 8.1,
-   "people": 993
+   "lift": 1.174,
+   "z": 6.9,
+   "people": 643
   },
   {
    "a": 0,
    "b": 5,
-   "lift": 1.1,
-   "z": 5.9,
-   "people": 1177
+   "lift": 1.143,
+   "z": 7.3,
+   "people": 928
   },
   {
    "a": 0,
    "b": 14,
-   "lift": 1.081,
-   "z": 4.2,
-   "people": 862
+   "lift": 1.104,
+   "z": 4.0,
+   "people": 512
   },
   {
    "a": 0,
    "b": 17,
-   "lift": 1.132,
+   "lift": 1.158,
    "z": 6.7,
-   "people": 860
-  },
-  {
-   "a": 0,
-   "b": 20,
-   "lift": 1.082,
-   "z": 3.5,
-   "people": 568
+   "people": 615
   },
   {
    "a": 0,
    "b": 21,
-   "lift": 1.093,
-   "z": 3.7,
-   "people": 482
+   "lift": 1.116,
+   "z": 3.8,
+   "people": 409
   },
   {
    "a": 0,
    "b": 23,
-   "lift": 1.098,
+   "lift": 1.128,
    "z": 4.7,
-   "people": 840
+   "people": 487
   },
   {
    "a": 0,
    "b": 24,
-   "lift": 1.122,
-   "z": 5.8,
-   "people": 885
+   "lift": 1.097,
+   "z": 3.5,
+   "people": 470
   },
   {
    "a": 0,
    "b": 33,
-   "lift": 1.107,
-   "z": 5.2,
-   "people": 812
+   "lift": 1.111,
+   "z": 3.9,
+   "people": 393
   },
   {
    "a": 0,
-   "b": 37,
-   "lift": 1.088,
-   "z": 4.0,
-   "people": 703
-  },
-  {
-   "a": 0,
-   "b": 56,
-   "lift": 1.091,
-   "z": 3.4,
-   "people": 459
+   "b": 57,
+   "lift": 1.127,
+   "z": 3.8,
+   "people": 320
   },
   {
    "a": 0,
    "b": 73,
-   "lift": 1.114,
-   "z": 5.7,
-   "people": 775
+   "lift": 1.122,
+   "z": 4.1,
+   "people": 387
   },
   {
    "a": 0,
-   "b": 78,
-   "lift": 1.11,
-   "z": 5.4,
-   "people": 817
+   "b": 82,
+   "lift": 1.101,
+   "z": 3.8,
+   "people": 503
   },
   {
    "a": 0,
    "b": 93,
-   "lift": 1.12,
-   "z": 4.1,
-   "people": 339
-  },
-  {
-   "a": 0,
-   "b": 104,
-   "lift": 1.105,
-   "z": 3.5,
-   "people": 345
-  },
-  {
-   "a": 0,
-   "b": 110,
-   "lift": 1.191,
-   "z": 4.4,
-   "people": 172
-  },
-  {
-   "a": 0,
-   "b": 119,
-   "lift": 1.182,
-   "z": 4.9,
-   "people": 280
+   "lift": 1.163,
+   "z": 3.6,
+   "people": 162
   },
   {
    "a": 1,
    "b": 2,
-   "lift": 1.282,
-   "z": 8.5,
-   "people": 534
+   "lift": 1.272,
+   "z": 8.1,
+   "people": 464
   },
   {
    "a": 1,
    "b": 4,
-   "lift": 1.394,
-   "z": 13.9,
-   "people": 767
+   "lift": 1.428,
+   "z": 12.6,
+   "people": 544
+  },
+  {
+   "a": 1,
+   "b": 5,
+   "lift": 1.108,
+   "z": 3.6,
+   "people": 605
   },
   {
    "a": 1,
    "b": 11,
-   "lift": 1.109,
-   "z": 3.7,
-   "people": 541
+   "lift": 1.168,
+   "z": 4.9,
+   "people": 464
   },
   {
    "a": 1,
    "b": 12,
-   "lift": 1.319,
-   "z": 9.2,
-   "people": 495
+   "lift": 1.339,
+   "z": 9.6,
+   "people": 447
   },
   {
    "a": 1,
    "b": 14,
-   "lift": 1.174,
-   "z": 6.0,
-   "people": 608
+   "lift": 1.167,
+   "z": 4.7,
+   "people": 382
   },
   {
    "a": 1,
    "b": 17,
-   "lift": 1.158,
-   "z": 5.3,
-   "people": 574
+   "lift": 1.199,
+   "z": 6.0,
+   "people": 444
   },
   {
    "a": 1,
    "b": 24,
-   "lift": 1.153,
-   "z": 5.3,
-   "people": 592
+   "lift": 1.168,
+   "z": 4.2,
+   "people": 354
   },
   {
    "a": 1,
    "b": 27,
-   "lift": 1.206,
-   "z": 5.3,
-   "people": 334
+   "lift": 1.249,
+   "z": 5.4,
+   "people": 263
   },
   {
    "a": 1,
    "b": 28,
-   "lift": 1.176,
-   "z": 4.5,
-   "people": 293
+   "lift": 1.183,
+   "z": 3.7,
+   "people": 249
   },
   {
    "a": 1,
    "b": 31,
-   "lift": 1.226,
-   "z": 5.9,
-   "people": 358
-  },
-  {
-   "a": 1,
-   "b": 33,
-   "lift": 1.152,
-   "z": 5.3,
-   "people": 552
+   "lift": 1.216,
+   "z": 4.9,
+   "people": 296
   },
   {
    "a": 1,
    "b": 35,
-   "lift": 1.297,
-   "z": 7.7,
-   "people": 356
+   "lift": 1.311,
+   "z": 6.5,
+   "people": 267
   },
   {
    "a": 1,
    "b": 36,
-   "lift": 1.164,
-   "z": 4.0,
-   "people": 304
+   "lift": 1.169,
+   "z": 3.5,
+   "people": 238
   },
   {
    "a": 1,
    "b": 45,
-   "lift": 1.199,
-   "z": 4.5,
-   "people": 265
+   "lift": 1.258,
+   "z": 4.9,
+   "people": 209
   },
   {
    "a": 1,
    "b": 49,
-   "lift": 1.195,
-   "z": 4.8,
-   "people": 319
+   "lift": 1.218,
+   "z": 4.6,
+   "people": 223
+  },
+  {
+   "a": 1,
+   "b": 50,
+   "lift": 1.171,
+   "z": 3.8,
+   "people": 287
   },
   {
    "a": 1,
    "b": 58,
-   "lift": 1.276,
-   "z": 6.5,
-   "people": 301
+   "lift": 1.266,
+   "z": 4.9,
+   "people": 195
   },
   {
    "a": 1,
    "b": 60,
-   "lift": 1.223,
-   "z": 5.8,
-   "people": 335
+   "lift": 1.2,
+   "z": 4.1,
+   "people": 220
   },
   {
    "a": 1,
    "b": 77,
-   "lift": 1.338,
-   "z": 5.3,
-   "people": 144
+   "lift": 1.412,
+   "z": 5.4,
+   "people": 109
   },
   {
    "a": 1,
    "b": 104,
-   "lift": 1.163,
+   "lift": 1.186,
    "z": 3.5,
-   "people": 255
+   "people": 193
   },
   {
    "a": 1,
    "b": 107,
-   "lift": 1.233,
-   "z": 5.2,
-   "people": 260
+   "lift": 1.258,
+   "z": 4.9,
+   "people": 206
   },
   {
    "a": 1,
    "b": 110,
-   "lift": 1.486,
-   "z": 7.2,
-   "people": 156
+   "lift": 1.406,
+   "z": 5.9,
+   "people": 128
   },
   {
    "a": 1,
    "b": 112,
-   "lift": 1.498,
-   "z": 7.5,
-   "people": 156
-  },
-  {
-   "a": 1,
-   "b": 119,
-   "lift": 1.177,
-   "z": 3.7,
-   "people": 197
+   "lift": 1.48,
+   "z": 6.6,
+   "people": 140
   },
   {
    "a": 2,
    "b": 4,
-   "lift": 1.479,
-   "z": 11.8,
-   "people": 460
+   "lift": 1.593,
+   "z": 11.3,
+   "people": 332
   },
   {
    "a": 2,
    "b": 12,
-   "lift": 1.209,
-   "z": 4.5,
-   "people": 267
+   "lift": 1.273,
+   "z": 5.1,
+   "people": 237
   },
   {
    "a": 2,
    "b": 14,
-   "lift": 1.234,
-   "z": 5.8,
-   "people": 364
+   "lift": 1.207,
+   "z": 3.7,
+   "people": 222
   },
   {
    "a": 2,
    "b": 17,
-   "lift": 1.309,
-   "z": 7.5,
-   "people": 372
+   "lift": 1.342,
+   "z": 6.9,
+   "people": 274
   },
   {
    "a": 2,
-   "b": 33,
-   "lift": 1.248,
-   "z": 5.6,
-   "people": 344
-  },
-  {
-   "a": 2,
-   "b": 39,
-   "lift": 1.214,
+   "b": 27,
+   "lift": 1.278,
    "z": 3.9,
-   "people": 207
+   "people": 156
   },
   {
    "a": 2,
-   "b": 49,
-   "lift": 1.229,
-   "z": 3.8,
-   "people": 200
+   "b": 30,
+   "lift": 1.23,
+   "z": 3.7,
+   "people": 168
   },
   {
    "a": 2,
-   "b": 51,
-   "lift": 1.216,
-   "z": 3.9,
-   "people": 211
+   "b": 50,
+   "lift": 1.266,
+   "z": 4.2,
+   "people": 177
   },
   {
    "a": 2,
    "b": 58,
-   "lift": 1.497,
-   "z": 8.0,
-   "people": 217
+   "lift": 1.7,
+   "z": 8.5,
+   "people": 155
   },
   {
    "a": 2,
    "b": 60,
-   "lift": 1.233,
-   "z": 4.0,
-   "people": 206
+   "lift": 1.262,
+   "z": 3.5,
+   "people": 136
+  },
+  {
+   "a": 3,
+   "b": 4,
+   "lift": 1.17,
+   "z": 3.6,
+   "people": 291
   },
   {
    "a": 3,
    "b": 8,
-   "lift": 1.191,
-   "z": 4.5,
-   "people": 363
-  },
-  {
-   "a": 3,
-   "b": 20,
-   "lift": 1.159,
-   "z": 3.5,
-   "people": 295
-  },
-  {
-   "a": 3,
-   "b": 24,
-   "lift": 1.177,
+   "lift": 1.213,
    "z": 4.7,
-   "people": 422
+   "people": 293
   },
   {
    "a": 3,
-   "b": 45,
-   "lift": 1.185,
+   "b": 28,
+   "lift": 1.233,
+   "z": 3.8,
+   "people": 177
+  },
+  {
+   "a": 3,
+   "b": 54,
+   "lift": 1.277,
    "z": 3.5,
-   "people": 194
+   "people": 113
   },
   {
    "a": 3,
    "b": 61,
-   "lift": 1.405,
-   "z": 6.1,
-   "people": 165
+   "lift": 1.475,
+   "z": 6.5,
+   "people": 146
   },
   {
    "a": 4,
    "b": 5,
-   "lift": 1.113,
-   "z": 3.7,
-   "people": 542
-  },
-  {
-   "a": 4,
-   "b": 9,
-   "lift": 1.154,
-   "z": 4.1,
-   "people": 391
-  },
-  {
-   "a": 4,
-   "b": 11,
-   "lift": 1.127,
-   "z": 3.5,
-   "people": 409
+   "lift": 1.24,
+   "z": 5.9,
+   "people": 370
   },
   {
    "a": 4,
    "b": 12,
-   "lift": 1.323,
-   "z": 7.5,
-   "people": 374
+   "lift": 1.299,
+   "z": 5.5,
+   "people": 252
   },
   {
    "a": 4,
    "b": 14,
-   "lift": 1.287,
-   "z": 8.1,
-   "people": 490
+   "lift": 1.297,
+   "z": 5.6,
+   "people": 246
   },
   {
    "a": 4,
    "b": 17,
-   "lift": 1.296,
+   "lift": 1.382,
    "z": 7.8,
-   "people": 475
-  },
-  {
-   "a": 4,
-   "b": 20,
-   "lift": 1.183,
-   "z": 4.1,
-   "people": 316
-  },
-  {
-   "a": 4,
-   "b": 24,
-   "lift": 1.203,
-   "z": 6.0,
-   "people": 456
-  },
-  {
-   "a": 4,
-   "b": 25,
-   "lift": 1.195,
-   "z": 4.4,
-   "people": 315
+   "people": 292
   },
   {
    "a": 4,
    "b": 27,
-   "lift": 1.371,
-   "z": 7.6,
-   "people": 291
+   "lift": 1.403,
+   "z": 6.0,
+   "people": 179
   },
   {
    "a": 4,
    "b": 28,
-   "lift": 1.229,
-   "z": 4.4,
-   "people": 234
+   "lift": 1.34,
+   "z": 4.7,
+   "people": 170
   },
   {
    "a": 4,
    "b": 33,
-   "lift": 1.314,
-   "z": 8.3,
-   "people": 467
+   "lift": 1.275,
+   "z": 4.5,
+   "people": 192
   },
   {
    "a": 4,
    "b": 35,
-   "lift": 1.269,
-   "z": 5.6,
-   "people": 266
+   "lift": 1.299,
+   "z": 4.1,
+   "people": 160
   },
   {
    "a": 4,
-   "b": 36,
-   "lift": 1.216,
-   "z": 4.3,
-   "people": 243
-  },
-  {
-   "a": 4,
-   "b": 37,
-   "lift": 1.131,
-   "z": 3.5,
-   "people": 362
-  },
-  {
-   "a": 4,
-   "b": 39,
-   "lift": 1.183,
+   "b": 45,
+   "lift": 1.283,
    "z": 3.7,
-   "people": 254
+   "people": 131
   },
   {
    "a": 4,
-   "b": 43,
-   "lift": 1.135,
-   "z": 3.8,
-   "people": 411
-  },
-  {
-   "a": 4,
-   "b": 49,
-   "lift": 1.243,
-   "z": 5.0,
-   "people": 254
-  },
-  {
-   "a": 4,
-   "b": 58,
-   "lift": 1.463,
-   "z": 8.9,
-   "people": 265
-  },
-  {
-   "a": 4,
-   "b": 60,
-   "lift": 1.296,
-   "z": 5.6,
-   "people": 274
-  },
-  {
-   "a": 4,
-   "b": 62,
-   "lift": 1.189,
-   "z": 3.6,
-   "people": 217
-  },
-  {
-   "a": 4,
-   "b": 69,
-   "lift": 1.21,
-   "z": 3.7,
+   "b": 50,
+   "lift": 1.288,
+   "z": 4.9,
    "people": 187
   },
   {
    "a": 4,
-   "b": 76,
-   "lift": 1.185,
-   "z": 3.8,
-   "people": 270
+   "b": 58,
+   "lift": 1.502,
+   "z": 6.4,
+   "people": 142
+  },
+  {
+   "a": 4,
+   "b": 60,
+   "lift": 1.388,
+   "z": 5.6,
+   "people": 156
+  },
+  {
+   "a": 4,
+   "b": 82,
+   "lift": 1.201,
+   "z": 3.6,
+   "people": 224
   },
   {
    "a": 4,
    "b": 86,
-   "lift": 1.336,
-   "z": 6.7,
-   "people": 275
-  },
-  {
-   "a": 4,
-   "b": 92,
-   "lift": 1.292,
-   "z": 3.4,
-   "people": 73
-  },
-  {
-   "a": 4,
-   "b": 99,
-   "lift": 1.179,
-   "z": 3.9,
-   "people": 260
+   "lift": 1.457,
+   "z": 5.2,
+   "people": 119
   },
   {
    "a": 4,
    "b": 107,
-   "lift": 1.214,
-   "z": 3.6,
-   "people": 199
-  },
-  {
-   "a": 4,
-   "b": 110,
-   "lift": 1.377,
-   "z": 5.0,
-   "people": 115
+   "lift": 1.276,
+   "z": 3.8,
+   "people": 128
   },
   {
    "a": 4,
    "b": 112,
-   "lift": 1.308,
-   "z": 3.8,
-   "people": 109
-  },
-  {
-   "a": 4,
-   "b": 119,
-   "lift": 1.262,
-   "z": 4.2,
-   "people": 167
-  },
-  {
-   "a": 4,
-   "b": 122,
-   "lift": 1.19,
-   "z": 4.0,
-   "people": 258
+   "lift": 1.437,
+   "z": 4.3,
+   "people": 86
   },
   {
    "a": 5,
    "b": 17,
-   "lift": 1.382,
-   "z": 11.6,
-   "people": 605
+   "lift": 1.449,
+   "z": 11.1,
+   "people": 421
+  },
+  {
+   "a": 5,
+   "b": 30,
+   "lift": 1.2,
+   "z": 3.8,
+   "people": 229
   },
   {
    "a": 5,
    "b": 33,
-   "lift": 1.174,
-   "z": 5.2,
-   "people": 500
+   "lift": 1.3,
+   "z": 5.8,
+   "people": 263
   },
   {
    "a": 5,
    "b": 37,
-   "lift": 1.195,
-   "z": 5.6,
-   "people": 455
-  },
-  {
-   "a": 5,
-   "b": 39,
-   "lift": 1.164,
-   "z": 3.9,
-   "people": 293
+   "lift": 1.22,
+   "z": 4.9,
+   "people": 319
   },
   {
    "a": 5,
    "b": 46,
-   "lift": 1.207,
-   "z": 5.5,
-   "people": 415
-  },
-  {
-   "a": 5,
-   "b": 93,
-   "lift": 1.162,
-   "z": 3.5,
-   "people": 222
-  },
-  {
-   "a": 5,
-   "b": 97,
    "lift": 1.264,
-   "z": 5.4,
-   "people": 243
+   "z": 5.0,
+   "people": 216
+  },
+  {
+   "a": 5,
+   "b": 82,
+   "lift": 1.212,
+   "z": 4.8,
+   "people": 308
   },
   {
    "a": 5,
    "b": 109,
-   "lift": 1.313,
-   "z": 7.5,
-   "people": 360
-  },
-  {
-   "a": 5,
-   "b": 122,
-   "lift": 1.168,
-   "z": 4.0,
-   "people": 296
-  },
-  {
-   "a": 6,
-   "b": 8,
-   "lift": 1.148,
-   "z": 3.5,
-   "people": 310
+   "lift": 1.442,
+   "z": 8.5,
+   "people": 289
   },
   {
    "a": 6,
    "b": 19,
-   "lift": 1.176,
-   "z": 4.4,
-   "people": 381
+   "lift": 1.188,
+   "z": 3.6,
+   "people": 259
   },
   {
    "a": 6,
    "b": 21,
-   "lift": 1.184,
-   "z": 3.5,
-   "people": 233
+   "lift": 1.205,
+   "z": 3.6,
+   "people": 190
   },
   {
    "a": 6,
-   "b": 64,
-   "lift": 1.216,
+   "b": 32,
+   "lift": 1.239,
    "z": 3.8,
-   "people": 172
+   "people": 173
   },
   {
    "a": 7,
    "b": 32,
-   "lift": 1.216,
-   "z": 3.7,
-   "people": 215
+   "lift": 1.296,
+   "z": 4.5,
+   "people": 168
   },
   {
    "a": 8,
    "b": 24,
-   "lift": 1.153,
-   "z": 4.0,
-   "people": 349
-  },
-  {
-   "a": 8,
-   "b": 36,
-   "lift": 1.226,
-   "z": 4.1,
-   "people": 201
+   "lift": 1.221,
+   "z": 3.9,
+   "people": 210
   },
   {
    "a": 9,
    "b": 11,
-   "lift": 1.153,
-   "z": 3.7,
-   "people": 351
+   "lift": 1.234,
+   "z": 4.9,
+   "people": 272
   },
   {
    "a": 9,
    "b": 12,
-   "lift": 1.206,
-   "z": 4.6,
-   "people": 289
-  },
-  {
-   "a": 9,
-   "b": 16,
-   "lift": 1.188,
-   "z": 4.0,
-   "people": 288
-  },
-  {
-   "a": 9,
-   "b": 20,
    "lift": 1.199,
+   "z": 3.9,
+   "people": 225
+  },
+  {
+   "a": 9,
+   "b": 18,
+   "lift": 1.237,
    "z": 4.1,
-   "people": 273
-  },
-  {
-   "a": 9,
-   "b": 21,
-   "lift": 1.185,
-   "z": 3.8,
-   "people": 232
-  },
-  {
-   "a": 9,
-   "b": 23,
-   "lift": 1.152,
-   "z": 3.8,
-   "people": 357
-  },
-  {
-   "a": 9,
-   "b": 24,
-   "lift": 1.136,
-   "z": 3.4,
-   "people": 362
+   "people": 223
   },
   {
    "a": 9,
    "b": 35,
-   "lift": 1.198,
-   "z": 3.5,
-   "people": 216
-  },
-  {
-   "a": 9,
-   "b": 36,
-   "lift": 1.213,
-   "z": 4.0,
-   "people": 209
-  },
-  {
-   "a": 9,
-   "b": 42,
-   "lift": 1.232,
-   "z": 4.3,
-   "people": 240
+   "lift": 1.25,
+   "z": 3.7,
+   "people": 150
   },
   {
    "a": 9,
    "b": 57,
-   "lift": 1.184,
-   "z": 3.9,
-   "people": 278
-  },
-  {
-   "a": 9,
-   "b": 64,
-   "lift": 1.216,
+   "lift": 1.24,
    "z": 3.6,
-   "people": 172
-  },
-  {
-   "a": 10,
-   "b": 54,
-   "lift": 1.265,
-   "z": 3.5,
-   "people": 111
-  },
-  {
-   "a": 10,
-   "b": 121,
-   "lift": 1.325,
-   "z": 3.6,
-   "people": 87
+   "people": 150
   },
   {
    "a": 11,
    "b": 12,
-   "lift": 1.262,
-   "z": 5.7,
-   "people": 323
+   "lift": 1.277,
+   "z": 5.1,
+   "people": 256
   },
   {
    "a": 11,
    "b": 16,
-   "lift": 1.199,
-   "z": 4.6,
-   "people": 307
+   "lift": 1.238,
+   "z": 4.5,
+   "people": 263
   },
   {
    "a": 11,
    "b": 18,
-   "lift": 1.237,
-   "z": 4.9,
-   "people": 284
+   "lift": 1.319,
+   "z": 6.1,
+   "people": 253
+  },
+  {
+   "a": 11,
+   "b": 27,
+   "lift": 1.253,
+   "z": 3.8,
+   "people": 166
   },
   {
    "a": 11,
    "b": 34,
-   "lift": 1.211,
-   "z": 4.4,
-   "people": 287
+   "lift": 1.225,
+   "z": 3.9,
+   "people": 213
   },
   {
    "a": 11,
    "b": 36,
-   "lift": 1.175,
-   "z": 3.4,
-   "people": 214
-  },
-  {
-   "a": 11,
-   "b": 69,
-   "lift": 1.209,
-   "z": 3.6,
-   "people": 171
-  },
-  {
-   "a": 11,
-   "b": 73,
-   "lift": 1.178,
-   "z": 4.5,
-   "people": 362
-  },
-  {
-   "a": 11,
-   "b": 86,
-   "lift": 1.217,
-   "z": 4.2,
-   "people": 227
+   "lift": 1.224,
+   "z": 3.5,
+   "people": 156
   },
   {
    "a": 11,
    "b": 107,
-   "lift": 1.224,
+   "lift": 1.298,
+   "z": 3.9,
+   "people": 136
+  },
+  {
+   "a": 12,
+   "b": 18,
+   "lift": 1.236,
    "z": 3.8,
-   "people": 183
-  },
-  {
-   "a": 12,
-   "b": 16,
-   "lift": 1.2,
-   "z": 4.1,
-   "people": 246
-  },
-  {
-   "a": 12,
-   "b": 21,
-   "lift": 1.2,
-   "z": 3.4,
-   "people": 201
-  },
-  {
-   "a": 12,
-   "b": 24,
-   "lift": 1.201,
-   "z": 4.7,
-   "people": 319
+   "people": 202
   },
   {
    "a": 12,
    "b": 27,
-   "lift": 1.252,
-   "z": 4.1,
-   "people": 193
+   "lift": 1.381,
+   "z": 5.4,
+   "people": 158
+  },
+  {
+   "a": 12,
+   "b": 28,
+   "lift": 1.281,
+   "z": 3.8,
+   "people": 147
   },
   {
    "a": 12,
    "b": 34,
-   "lift": 1.263,
-   "z": 4.9,
-   "people": 239
+   "lift": 1.269,
+   "z": 4.3,
+   "people": 191
   },
   {
    "a": 12,
    "b": 35,
-   "lift": 1.369,
-   "z": 6.1,
-   "people": 209
-  },
-  {
-   "a": 12,
-   "b": 42,
-   "lift": 1.2,
-   "z": 3.4,
-   "people": 198
+   "lift": 1.368,
+   "z": 5.3,
+   "people": 151
   },
   {
    "a": 12,
    "b": 43,
-   "lift": 1.194,
-   "z": 4.4,
-   "people": 304
-  },
-  {
-   "a": 12,
-   "b": 60,
-   "lift": 1.271,
-   "z": 4.3,
-   "people": 196
-  },
-  {
-   "a": 12,
-   "b": 62,
-   "lift": 1.223,
-   "z": 3.4,
+   "lift": 1.275,
+   "z": 3.9,
    "people": 163
   },
   {
    "a": 12,
-   "b": 86,
-   "lift": 1.246,
+   "b": 58,
+   "lift": 1.436,
+   "z": 5.0,
+   "people": 122
+  },
+  {
+   "a": 12,
+   "b": 77,
+   "lift": 1.467,
    "z": 3.9,
-   "people": 186
+   "people": 66
+  },
+  {
+   "a": 12,
+   "b": 92,
+   "lift": 1.559,
+   "z": 4.4,
+   "people": 54
   },
   {
    "a": 12,
    "b": 107,
-   "lift": 1.42,
-   "z": 6.7,
-   "people": 171
+   "lift": 1.597,
+   "z": 8.1,
+   "people": 145
   },
   {
    "a": 12,
    "b": 112,
-   "lift": 1.712,
-   "z": 7.5,
-   "people": 108
-  },
-  {
-   "a": 14,
-   "b": 25,
-   "lift": 1.191,
-   "z": 4.2,
-   "people": 297
+   "lift": 1.654,
+   "z": 6.3,
+   "people": 91
   },
   {
    "a": 14,
    "b": 27,
-   "lift": 1.22,
-   "z": 4.5,
-   "people": 246
-  },
-  {
-   "a": 14,
-   "b": 33,
-   "lift": 1.234,
-   "z": 6.2,
-   "people": 415
-  },
-  {
-   "a": 14,
-   "b": 42,
-   "lift": 1.189,
-   "z": 3.9,
-   "people": 256
-  },
-  {
-   "a": 14,
-   "b": 43,
-   "lift": 1.179,
-   "z": 4.7,
-   "people": 403
-  },
-  {
-   "a": 14,
-   "b": 49,
-   "lift": 1.191,
-   "z": 3.9,
-   "people": 232
+   "lift": 1.365,
+   "z": 4.9,
+   "people": 154
   },
   {
    "a": 14,
    "b": 58,
-   "lift": 1.405,
-   "z": 7.2,
-   "people": 244
-  },
-  {
-   "a": 14,
-   "b": 59,
-   "lift": 1.292,
-   "z": 4.8,
-   "people": 194
+   "lift": 1.478,
+   "z": 5.9,
+   "people": 124
   },
   {
    "a": 14,
    "b": 60,
-   "lift": 1.428,
-   "z": 7.9,
-   "people": 287
-  },
-  {
-   "a": 14,
-   "b": 78,
-   "lift": 1.129,
-   "z": 3.4,
-   "people": 382
-  },
-  {
-   "a": 14,
-   "b": 86,
-   "lift": 1.208,
-   "z": 4.1,
-   "people": 235
+   "lift": 1.387,
+   "z": 5.2,
+   "people": 139
   },
   {
    "a": 14,
    "b": 92,
-   "lift": 1.534,
-   "z": 5.4,
-   "people": 82
-  },
-  {
-   "a": 14,
-   "b": 105,
-   "lift": 1.198,
-   "z": 3.7,
-   "people": 215
-  },
-  {
-   "a": 14,
-   "b": 107,
-   "lift": 1.219,
-   "z": 3.6,
-   "people": 191
-  },
-  {
-   "a": 14,
-   "b": 119,
-   "lift": 1.283,
-   "z": 4.5,
-   "people": 162
-  },
-  {
-   "a": 14,
-   "b": 122,
-   "lift": 1.25,
-   "z": 4.8,
-   "people": 257
+   "lift": 1.797,
+   "z": 6.0,
+   "people": 62
   },
   {
    "a": 15,
    "b": 55,
-   "lift": 1.42,
-   "z": 6.3,
-   "people": 182
-  },
-  {
-   "a": 15,
-   "b": 64,
-   "lift": 1.386,
-   "z": 5.9,
-   "people": 173
+   "lift": 1.496,
+   "z": 5.6,
+   "people": 122
   },
   {
    "a": 16,
-   "b": 51,
-   "lift": 1.204,
-   "z": 3.5,
-   "people": 194
-  },
-  {
-   "a": 16,
-   "b": 65,
-   "lift": 1.269,
-   "z": 3.5,
-   "people": 126
-  },
-  {
-   "a": 16,
-   "b": 78,
-   "lift": 1.194,
-   "z": 4.5,
-   "people": 304
-  },
-  {
-   "a": 16,
-   "b": 85,
-   "lift": 1.295,
-   "z": 3.4,
-   "people": 100
-  },
-  {
-   "a": 17,
-   "b": 24,
-   "lift": 1.151,
-   "z": 4.1,
-   "people": 396
+   "b": 112,
+   "lift": 1.404,
+   "z": 3.8,
+   "people": 80
   },
   {
    "a": 17,
    "b": 33,
-   "lift": 1.331,
-   "z": 8.2,
-   "people": 430
+   "lift": 1.413,
+   "z": 6.7,
+   "people": 208
   },
   {
    "a": 17,
    "b": 37,
-   "lift": 1.285,
-   "z": 7.4,
-   "people": 374
+   "lift": 1.352,
+   "z": 6.2,
+   "people": 252
   },
   {
    "a": 17,
    "b": 39,
-   "lift": 1.312,
-   "z": 5.9,
-   "people": 258
-  },
-  {
-   "a": 17,
-   "b": 86,
-   "lift": 1.309,
-   "z": 5.4,
-   "people": 245
-  },
-  {
-   "a": 17,
-   "b": 93,
-   "lift": 1.212,
-   "z": 3.5,
-   "people": 184
-  },
-  {
-   "a": 17,
-   "b": 104,
-   "lift": 1.232,
+   "lift": 1.28,
    "z": 4.0,
-   "people": 193
+   "people": 148
+  },
+  {
+   "a": 17,
+   "b": 50,
+   "lift": 1.234,
+   "z": 3.6,
+   "people": 176
+  },
+  {
+   "a": 17,
+   "b": 69,
+   "lift": 1.304,
+   "z": 3.6,
+   "people": 97
+  },
+  {
+   "a": 17,
+   "b": 82,
+   "lift": 1.214,
+   "z": 3.9,
+   "people": 221
   },
   {
    "a": 17,
    "b": 109,
-   "lift": 1.279,
-   "z": 5.6,
-   "people": 274
+   "lift": 1.293,
+   "z": 4.8,
+   "people": 188
   },
   {
    "a": 18,
-   "b": 78,
-   "lift": 1.225,
-   "z": 4.6,
-   "people": 277
+   "b": 48,
+   "lift": 1.325,
+   "z": 4.0,
+   "people": 115
   },
   {
    "a": 18,
    "b": 107,
-   "lift": 1.333,
-   "z": 4.5,
-   "people": 147
-  },
-  {
-   "a": 18,
-   "b": 112,
-   "lift": 1.617,
-   "z": 6.1,
-   "people": 94
-  },
-  {
-   "a": 19,
-   "b": 23,
-   "lift": 1.16,
-   "z": 3.8,
-   "people": 409
-  },
-  {
-   "a": 19,
-   "b": 63,
-   "lift": 1.243,
-   "z": 4.5,
-   "people": 229
-  },
-  {
-   "a": 20,
-   "b": 24,
-   "lift": 1.236,
-   "z": 5.3,
-   "people": 311
-  },
-  {
-   "a": 20,
-   "b": 45,
-   "lift": 1.274,
-   "z": 4.0,
-   "people": 153
-  },
-  {
-   "a": 21,
-   "b": 34,
-   "lift": 1.245,
-   "z": 4.1,
-   "people": 194
-  },
-  {
-   "a": 21,
-   "b": 42,
-   "lift": 1.388,
-   "z": 6.1,
-   "people": 190
-  },
-  {
-   "a": 21,
-   "b": 76,
-   "lift": 1.302,
-   "z": 4.4,
-   "people": 178
-  },
-  {
-   "a": 23,
-   "b": 42,
-   "lift": 1.26,
-   "z": 5.0,
-   "people": 264
-  },
-  {
-   "a": 23,
-   "b": 43,
-   "lift": 1.204,
-   "z": 4.8,
-   "people": 396
-  },
-  {
-   "a": 23,
-   "b": 73,
-   "lift": 1.153,
-   "z": 3.7,
-   "people": 359
-  },
-  {
-   "a": 23,
-   "b": 78,
-   "lift": 1.219,
-   "z": 5.6,
-   "people": 398
-  },
-  {
-   "a": 24,
-   "b": 35,
-   "lift": 1.186,
-   "z": 3.6,
-   "people": 235
-  },
-  {
-   "a": 24,
-   "b": 36,
-   "lift": 1.185,
-   "z": 3.7,
-   "people": 224
-  },
-  {
-   "a": 24,
-   "b": 45,
-   "lift": 1.223,
-   "z": 4.1,
-   "people": 198
-  },
-  {
-   "a": 24,
-   "b": 73,
-   "lift": 1.167,
-   "z": 4.2,
-   "people": 374
-  },
-  {
-   "a": 24,
-   "b": 76,
-   "lift": 1.245,
-   "z": 4.9,
-   "people": 267
-  },
-  {
-   "a": 24,
-   "b": 99,
-   "lift": 1.171,
-   "z": 3.4,
-   "people": 243
-  },
-  {
-   "a": 24,
-   "b": 108,
-   "lift": 1.262,
-   "z": 4.0,
-   "people": 158
-  },
-  {
-   "a": 25,
-   "b": 42,
-   "lift": 1.294,
-   "z": 5.0,
-   "people": 200
-  },
-  {
-   "a": 25,
-   "b": 60,
-   "lift": 1.253,
-   "z": 4.1,
-   "people": 182
-  },
-  {
-   "a": 25,
-   "b": 78,
-   "lift": 1.224,
-   "z": 4.7,
-   "people": 288
-  },
-  {
-   "a": 25,
-   "b": 99,
-   "lift": 1.241,
-   "z": 4.0,
-   "people": 186
-  },
-  {
-   "a": 25,
-   "b": 119,
-   "lift": 1.492,
-   "z": 6.1,
-   "people": 138
-  },
-  {
-   "a": 26,
-   "b": 37,
-   "lift": 1.215,
-   "z": 3.6,
-   "people": 195
-  },
-  {
-   "a": 26,
-   "b": 98,
-   "lift": 1.339,
-   "z": 4.1,
-   "people": 124
-  },
-  {
-   "a": 26,
-   "b": 109,
-   "lift": 1.307,
-   "z": 4.5,
-   "people": 160
-  },
-  {
-   "a": 27,
-   "b": 35,
-   "lift": 1.326,
-   "z": 4.6,
-   "people": 156
-  },
-  {
-   "a": 27,
-   "b": 58,
-   "lift": 1.485,
-   "z": 6.3,
-   "people": 155
-  },
-  {
-   "a": 27,
-   "b": 60,
-   "lift": 1.605,
-   "z": 8.1,
-   "people": 190
-  },
-  {
-   "a": 27,
-   "b": 72,
-   "lift": 1.445,
+   "lift": 1.476,
    "z": 5.5,
    "people": 128
   },
   {
+   "a": 18,
+   "b": 112,
+   "lift": 1.85,
+   "z": 7.9,
+   "people": 97
+  },
+  {
+   "a": 20,
+   "b": 24,
+   "lift": 1.387,
+   "z": 5.5,
+   "people": 195
+  },
+  {
+   "a": 20,
+   "b": 45,
+   "lift": 1.411,
+   "z": 4.7,
+   "people": 117
+  },
+  {
+   "a": 21,
+   "b": 42,
+   "lift": 1.417,
+   "z": 4.9,
+   "people": 124
+  },
+  {
+   "a": 21,
+   "b": 76,
+   "lift": 1.297,
+   "z": 3.6,
+   "people": 116
+  },
+  {
+   "a": 21,
+   "b": 91,
+   "lift": 1.503,
+   "z": 5.1,
+   "people": 98
+  },
+  {
+   "a": 21,
+   "b": 107,
+   "lift": 1.393,
+   "z": 4.3,
+   "people": 103
+  },
+  {
+   "a": 23,
+   "b": 90,
+   "lift": 1.362,
+   "z": 3.5,
+   "people": 77
+  },
+  {
+   "a": 24,
+   "b": 28,
+   "lift": 1.298,
+   "z": 3.7,
+   "people": 137
+  },
+  {
+   "a": 25,
+   "b": 27,
+   "lift": 1.3,
+   "z": 3.7,
+   "people": 121
+  },
+  {
+   "a": 25,
+   "b": 84,
+   "lift": 1.38,
+   "z": 3.6,
+   "people": 72
+  },
+  {
+   "a": 25,
+   "b": 85,
+   "lift": 1.545,
+   "z": 4.2,
+   "people": 67
+  },
+  {
+   "a": 25,
+   "b": 119,
+   "lift": 1.713,
+   "z": 6.1,
+   "people": 80
+  },
+  {
+   "a": 26,
+   "b": 98,
+   "lift": 1.403,
+   "z": 4.2,
+   "people": 95
+  },
+  {
+   "a": 26,
+   "b": 109,
+   "lift": 1.288,
+   "z": 3.5,
+   "people": 116
+  },
+  {
+   "a": 27,
+   "b": 58,
+   "lift": 1.671,
+   "z": 6.3,
+   "people": 99
+  },
+  {
+   "a": 27,
+   "b": 60,
+   "lift": 1.652,
+   "z": 6.3,
+   "people": 114
+  },
+  {
+   "a": 27,
+   "b": 86,
+   "lift": 1.419,
+   "z": 3.7,
+   "people": 73
+  },
+  {
    "a": 27,
    "b": 92,
-   "lift": 1.6,
-   "z": 5.1,
-   "people": 57
+   "lift": 1.826,
+   "z": 5.0,
+   "people": 46
+  },
+  {
+   "a": 27,
+   "b": 107,
+   "lift": 1.388,
+   "z": 3.9,
+   "people": 86
   },
   {
    "a": 28,
    "b": 35,
-   "lift": 1.456,
-   "z": 6.1,
-   "people": 157
+   "lift": 1.435,
+   "z": 5.0,
+   "people": 108
   },
   {
    "a": 28,
    "b": 45,
-   "lift": 1.354,
-   "z": 4.4,
-   "people": 122
+   "lift": 1.498,
+   "z": 5.0,
+   "people": 95
   },
   {
    "a": 28,
    "b": 77,
-   "lift": 1.407,
+   "lift": 1.518,
    "z": 3.6,
-   "people": 67
+   "people": 48
   },
   {
    "a": 30,
-   "b": 33,
-   "lift": 1.193,
-   "z": 3.7,
-   "people": 248
-  },
-  {
-   "a": 30,
-   "b": 72,
-   "lift": 1.287,
+   "b": 50,
+   "lift": 1.281,
    "z": 3.6,
-   "people": 124
+   "people": 125
   },
   {
    "a": 30,
    "b": 74,
-   "lift": 1.549,
+   "lift": 1.741,
    "z": 6.7,
-   "people": 131
-  },
-  {
-   "a": 30,
-   "b": 86,
-   "lift": 1.321,
-   "z": 4.7,
-   "people": 167
+   "people": 85
   },
   {
    "a": 31,
    "b": 62,
-   "lift": 1.29,
+   "lift": 1.38,
    "z": 3.9,
-   "people": 140
+   "people": 85
   },
   {
    "a": 31,
    "b": 110,
-   "lift": 1.821,
-   "z": 7.6,
-   "people": 97
-  },
-  {
-   "a": 31,
-   "b": 115,
-   "lift": 1.397,
-   "z": 4.5,
-   "people": 94
+   "lift": 1.773,
+   "z": 6.4,
+   "people": 74
   },
   {
    "a": 33,
    "b": 37,
-   "lift": 1.195,
-   "z": 4.4,
-   "people": 337
-  },
-  {
-   "a": 33,
-   "b": 39,
-   "lift": 1.207,
-   "z": 4.2,
-   "people": 232
-  },
-  {
-   "a": 33,
-   "b": 58,
-   "lift": 1.259,
-   "z": 4.5,
-   "people": 205
-  },
-  {
-   "a": 33,
-   "b": 86,
    "lift": 1.257,
-   "z": 4.5,
-   "people": 229
-  },
-  {
-   "a": 33,
-   "b": 92,
-   "lift": 1.366,
-   "z": 3.7,
-   "people": 70
-  },
-  {
-   "a": 33,
-   "b": 93,
-   "lift": 1.204,
-   "z": 3.4,
-   "people": 178
-  },
-  {
-   "a": 33,
-   "b": 104,
-   "lift": 1.236,
-   "z": 4.0,
-   "people": 189
+   "z": 3.9,
+   "people": 169
   },
   {
    "a": 34,
-   "b": 42,
-   "lift": 1.224,
-   "z": 3.7,
-   "people": 188
-  },
-  {
-   "a": 34,
-   "b": 76,
-   "lift": 1.282,
-   "z": 4.8,
-   "people": 197
+   "b": 91,
+   "lift": 1.485,
+   "z": 5.2,
+   "people": 104
   },
   {
    "a": 35,
    "b": 77,
-   "lift": 1.435,
-   "z": 4.0,
-   "people": 73
-  },
-  {
-   "a": 35,
-   "b": 85,
-   "lift": 1.356,
-   "z": 3.6,
-   "people": 82
-  },
-  {
-   "a": 35,
-   "b": 104,
-   "lift": 1.253,
-   "z": 3.4,
-   "people": 121
-  },
-  {
-   "a": 35,
-   "b": 110,
-   "lift": 1.463,
-   "z": 3.9,
-   "people": 73
-  },
-  {
-   "a": 35,
-   "b": 112,
-   "lift": 1.476,
-   "z": 4.3,
-   "people": 74
+   "lift": 1.659,
+   "z": 4.5,
+   "people": 51
   },
   {
    "a": 36,
    "b": 43,
-   "lift": 1.198,
+   "lift": 1.311,
    "z": 3.8,
-   "people": 217
-  },
-  {
-   "a": 37,
-   "b": 39,
-   "lift": 1.237,
-   "z": 4.2,
-   "people": 218
+   "people": 108
   },
   {
    "a": 37,
    "b": 46,
-   "lift": 1.316,
-   "z": 6.4,
-   "people": 306
-  },
-  {
-   "a": 37,
-   "b": 50,
-   "lift": 1.19,
-   "z": 3.8,
-   "people": 249
-  },
-  {
-   "a": 37,
-   "b": 73,
-   "lift": 1.263,
-   "z": 6.2,
-   "people": 344
-  },
-  {
-   "a": 37,
-   "b": 89,
-   "lift": 1.263,
-   "z": 4.1,
-   "people": 167
-  },
-  {
-   "a": 37,
-   "b": 99,
-   "lift": 1.251,
-   "z": 4.5,
-   "people": 224
-  },
-  {
-   "a": 37,
-   "b": 109,
-   "lift": 1.372,
-   "z": 6.8,
-   "people": 259
-  },
-  {
-   "a": 41,
-   "b": 42,
-   "lift": 1.325,
+   "lift": 1.311,
    "z": 4.4,
-   "people": 141
+   "people": 150
   },
   {
-   "a": 42,
-   "b": 43,
-   "lift": 1.199,
-   "z": 4.0,
-   "people": 247
-  },
-  {
-   "a": 42,
-   "b": 76,
-   "lift": 1.25,
-   "z": 3.7,
-   "people": 170
-  },
-  {
-   "a": 42,
-   "b": 78,
-   "lift": 1.227,
-   "z": 4.5,
-   "people": 249
-  },
-  {
-   "a": 42,
-   "b": 107,
-   "lift": 1.292,
-   "z": 3.5,
-   "people": 130
-  },
-  {
-   "a": 42,
-   "b": 119,
-   "lift": 1.294,
-   "z": 3.5,
-   "people": 106
-  },
-  {
-   "a": 43,
-   "b": 58,
-   "lift": 1.183,
-   "z": 3.4,
-   "people": 196
-  },
-  {
-   "a": 43,
-   "b": 60,
-   "lift": 1.265,
-   "z": 5.1,
-   "people": 242
-  },
-  {
-   "a": 43,
-   "b": 62,
-   "lift": 1.187,
-   "z": 3.3,
-   "people": 197
-  },
-  {
-   "a": 43,
-   "b": 78,
-   "lift": 1.193,
-   "z": 4.8,
-   "people": 382
-  },
-  {
-   "a": 43,
-   "b": 96,
-   "lift": 1.277,
-   "z": 3.6,
-   "people": 107
-  },
-  {
-   "a": 43,
-   "b": 107,
-   "lift": 1.256,
-   "z": 3.9,
-   "people": 187
-  },
-  {
-   "a": 43,
-   "b": 110,
-   "lift": 1.364,
-   "z": 4.3,
-   "people": 105
-  },
-  {
-   "a": 46,
+   "a": 37,
    "b": 73,
-   "lift": 1.223,
-   "z": 4.5,
-   "people": 303
+   "lift": 1.31,
+   "z": 4.7,
+   "people": 171
+  },
+  {
+   "a": 37,
+   "b": 109,
+   "lift": 1.409,
+   "z": 6.2,
+   "people": 188
+  },
+  {
+   "a": 42,
+   "b": 91,
+   "lift": 1.464,
+   "z": 4.3,
+   "people": 76
+  },
+  {
+   "a": 43,
+   "b": 107,
+   "lift": 1.363,
+   "z": 4.0,
+   "people": 94
   },
   {
    "a": 46,
    "b": 97,
-   "lift": 1.317,
+   "lift": 1.45,
    "z": 4.5,
-   "people": 164
-  },
-  {
-   "a": 46,
-   "b": 98,
-   "lift": 1.257,
-   "z": 4.2,
-   "people": 163
+   "people": 94
   },
   {
    "a": 46,
    "b": 109,
-   "lift": 1.308,
-   "z": 5.4,
-   "people": 227
+   "lift": 1.306,
+   "z": 3.5,
+   "people": 118
   },
   {
    "a": 47,
    "b": 89,
-   "lift": 1.708,
-   "z": 8.1,
-   "people": 131
-  },
-  {
-   "a": 47,
-   "b": 93,
-   "lift": 1.412,
-   "z": 4.7,
-   "people": 112
+   "lift": 1.735,
+   "z": 6.6,
+   "people": 95
   },
   {
    "a": 47,
    "b": 97,
-   "lift": 1.749,
-   "z": 8.0,
-   "people": 138
+   "lift": 1.727,
+   "z": 7.4,
+   "people": 111
   },
   {
    "a": 47,
    "b": 98,
-   "lift": 2.025,
-   "z": 11.8,
-   "people": 164
-  },
-  {
-   "a": 47,
-   "b": 109,
-   "lift": 1.368,
-   "z": 4.7,
-   "people": 146
+   "lift": 2.223,
+   "z": 12.7,
+   "people": 151
   },
   {
    "a": 48,
    "b": 108,
-   "lift": 1.422,
-   "z": 4.1,
-   "people": 83
+   "lift": 1.593,
+   "z": 3.9,
+   "people": 46
   },
   {
    "a": 49,
-   "b": 62,
-   "lift": 1.42,
-   "z": 5.8,
-   "people": 143
+   "b": 58,
+   "lift": 1.424,
+   "z": 3.8,
+   "people": 75
   },
   {
    "a": 49,
    "b": 77,
-   "lift": 1.514,
-   "z": 4.5,
-   "people": 76
+   "lift": 1.746,
+   "z": 4.8,
+   "people": 50
   },
   {
    "a": 49,
    "b": 79,
-   "lift": 1.347,
-   "z": 3.6,
-   "people": 80
-  },
-  {
-   "a": 50,
-   "b": 93,
-   "lift": 1.395,
-   "z": 5.3,
-   "people": 157
+   "lift": 1.515,
+   "z": 4.3,
+   "people": 58
   },
   {
    "a": 50,
    "b": 104,
-   "lift": 1.383,
-   "z": 5.4,
-   "people": 161
+   "lift": 1.578,
+   "z": 6.3,
+   "people": 111
+  },
+  {
+   "a": 51,
+   "b": 58,
+   "lift": 1.463,
+   "z": 3.9,
+   "people": 66
   },
   {
    "a": 51,
    "b": 62,
-   "lift": 1.292,
-   "z": 4.0,
-   "people": 138
-  },
-  {
-   "a": 51,
-   "b": 122,
-   "lift": 1.238,
-   "z": 3.3,
-   "people": 156
-  },
-  {
-   "a": 52,
-   "b": 121,
-   "lift": 1.564,
-   "z": 4.2,
-   "people": 58
-  },
-  {
-   "a": 55,
-   "b": 64,
-   "lift": 1.367,
-   "z": 4.3,
-   "people": 107
+   "lift": 1.493,
+   "z": 3.8,
+   "people": 62
   },
   {
    "a": 57,
    "b": 73,
-   "lift": 1.258,
-   "z": 5.7,
-   "people": 298
-  },
-  {
-   "a": 57,
-   "b": 81,
-   "lift": 1.31,
-   "z": 4.2,
-   "people": 141
-  },
-  {
-   "a": 57,
-   "b": 83,
-   "lift": 1.296,
-   "z": 3.9,
-   "people": 127
-  },
-  {
-   "a": 58,
-   "b": 59,
-   "lift": 1.367,
+   "lift": 1.323,
    "z": 4.1,
-   "people": 108
+   "people": 115
   },
   {
    "a": 58,
    "b": 60,
-   "lift": 1.785,
-   "z": 11.0,
-   "people": 185
+   "lift": 1.849,
+   "z": 7.3,
+   "people": 98
   },
   {
    "a": 58,
    "b": 92,
-   "lift": 1.749,
-   "z": 5.2,
-   "people": 55
+   "lift": 1.93,
+   "z": 5.1,
+   "people": 38
   },
   {
    "a": 58,
-   "b": 119,
-   "lift": 1.553,
-   "z": 5.8,
-   "people": 106
+   "b": 107,
+   "lift": 1.56,
+   "z": 4.7,
+   "people": 74
   },
   {
-   "a": 60,
-   "b": 62,
-   "lift": 1.322,
-   "z": 4.5,
-   "people": 138
-  },
-  {
-   "a": 60,
-   "b": 72,
-   "lift": 1.429,
-   "z": 5.4,
-   "people": 127
-  },
-  {
-   "a": 60,
-   "b": 86,
-   "lift": 1.277,
-   "z": 3.9,
-   "people": 147
-  },
-  {
-   "a": 60,
-   "b": 122,
-   "lift": 1.223,
-   "z": 3.4,
-   "people": 149
+   "a": 59,
+   "b": 60,
+   "lift": 1.487,
+   "z": 3.7,
+   "people": 57
   },
   {
    "a": 62,
-   "b": 69,
-   "lift": 1.287,
+   "b": 66,
+   "lift": 1.47,
    "z": 3.6,
-   "people": 101
+   "people": 48
   },
   {
    "a": 62,
-   "b": 86,
-   "lift": 1.356,
-   "z": 4.8,
-   "people": 137
-  },
-  {
-   "a": 62,
-   "b": 115,
-   "lift": 1.408,
-   "z": 3.9,
-   "people": 81
-  },
-  {
-   "a": 64,
-   "b": 95,
-   "lift": 1.599,
-   "z": 4.8,
-   "people": 66
-  },
-  {
-   "a": 67,
-   "b": 122,
-   "lift": 1.3,
-   "z": 3.6,
-   "people": 107
-  },
-  {
-   "a": 69,
-   "b": 86,
-   "lift": 1.288,
+   "b": 107,
+   "lift": 1.448,
    "z": 3.5,
-   "people": 112
-  },
-  {
-   "a": 73,
-   "b": 89,
-   "lift": 1.32,
-   "z": 5.1,
-   "people": 185
-  },
-  {
-   "a": 73,
-   "b": 99,
-   "lift": 1.207,
-   "z": 3.9,
-   "people": 229
+   "people": 65
   },
   {
    "a": 73,
    "b": 109,
-   "lift": 1.266,
-   "z": 4.9,
-   "people": 254
+   "lift": 1.27,
+   "z": 3.5,
+   "people": 131
   },
   {
    "a": 77,
    "b": 112,
-   "lift": 1.737,
-   "z": 4.6,
-   "people": 43
-  },
-  {
-   "a": 78,
-   "b": 99,
-   "lift": 1.239,
-   "z": 4.7,
-   "people": 243
+   "lift": 1.938,
+   "z": 4.4,
+   "people": 33
   },
   {
    "a": 89,
    "b": 97,
-   "lift": 1.627,
-   "z": 7.6,
-   "people": 120
+   "lift": 1.668,
+   "z": 5.5,
+   "people": 75
   },
   {
    "a": 89,
    "b": 98,
-   "lift": 1.519,
-   "z": 5.8,
+   "lift": 1.608,
+   "z": 5.3,
+   "people": 76
+  },
+  {
+   "a": 89,
+   "b": 109,
+   "lift": 1.45,
+   "z": 4.5,
+   "people": 89
+  },
+  {
+   "a": 91,
+   "b": 107,
+   "lift": 1.5,
+   "z": 4.2,
+   "people": 66
+  },
+  {
+   "a": 97,
+   "b": 98,
+   "lift": 2.097,
+   "z": 10.3,
+   "people": 118
+  },
+  {
+   "a": 97,
+   "b": 109,
+   "lift": 1.568,
+   "z": 6.3,
    "people": 117
   },
   {
-   "a": 89,
-   "b": 109,
-   "lift": 1.391,
-   "z": 5.1,
-   "people": 140
-  },
-  {
-   "a": 93,
-   "b": 104,
-   "lift": 1.601,
-   "z": 6.6,
-   "people": 125
-  },
-  {
-   "a": 97,
-   "b": 98,
-   "lift": 1.792,
-   "z": 9.2,
-   "people": 141
-  },
-  {
-   "a": 97,
-   "b": 109,
-   "lift": 1.472,
-   "z": 5.9,
-   "people": 151
-  },
-  {
-   "a": 98,
-   "b": 109,
-   "lift": 1.39,
-   "z": 5.2,
-   "people": 148
-  },
-  {
-   "a": 105,
-   "b": 122,
-   "lift": 1.343,
-   "z": 4.5,
-   "people": 147
+   "a": 100,
+   "b": 103,
+   "lift": 1.991,
+   "z": 4.0,
+   "people": 23
   },
   {
    "a": 107,
    "b": 112,
-   "lift": 1.714,
-   "z": 5.7,
-   "people": 71
+   "lift": 1.984,
+   "z": 6.3,
+   "people": 62
   }
  ],
  "edges_before": [
   {
    "a": 1,
-   "b": 4,
-   "lift": 1.278
-  },
-  {
-   "a": 1,
    "b": 12,
-   "lift": 1.269
-  },
-  {
-   "a": 1,
-   "b": 14,
-   "lift": 1.194
-  },
-  {
-   "a": 1,
-   "b": 35,
-   "lift": 1.311
-  },
-  {
-   "a": 1,
-   "b": 50,
-   "lift": 1.25
-  },
-  {
-   "a": 1,
-   "b": 58,
-   "lift": 1.265
-  },
-  {
-   "a": 2,
-   "b": 4,
-   "lift": 1.315
+   "lift": 1.31
   },
   {
    "a": 2,
    "b": 58,
-   "lift": 1.504
-  },
-  {
-   "a": 4,
-   "b": 14,
-   "lift": 1.342
-  },
-  {
-   "a": 4,
-   "b": 58,
-   "lift": 1.406
+   "lift": 1.67
   },
   {
    "a": 5,
-   "b": 17,
-   "lift": 1.435
-  },
-  {
-   "a": 5,
-   "b": 33,
-   "lift": 1.305
-  },
-  {
-   "a": 5,
-   "b": 46,
-   "lift": 1.411
-  },
-  {
-   "a": 5,
-   "b": 50,
-   "lift": 1.392
+   "b": 82,
+   "lift": 1.479
   },
   {
    "a": 12,
-   "b": 35,
-   "lift": 1.439
-  },
-  {
-   "a": 14,
-   "b": 60,
-   "lift": 1.375
-  },
-  {
-   "a": 17,
-   "b": 104,
-   "lift": 1.547
-  },
-  {
-   "a": 27,
-   "b": 50,
-   "lift": 1.485
-  },
-  {
-   "a": 27,
-   "b": 60,
-   "lift": 1.604
+   "b": 107,
+   "lift": 1.6
   },
   {
    "a": 30,
    "b": 74,
-   "lift": 1.985
+   "lift": 2.169
   },
   {
    "a": 50,
-   "b": 93,
-   "lift": 1.682
-  },
-  {
-   "a": 58,
-   "b": 60,
-   "lift": 1.635
-  },
-  {
-   "a": 93,
    "b": 104,
-   "lift": 1.748
-  },
-  {
-   "a": 104,
-   "b": 109,
-   "lift": 1.641
+   "lift": 1.815
   }
  ],
  "edges_from": [
   {
-   "a": 0,
-   "b": 1,
-   "lift": 1.152
-  },
-  {
-   "a": 0,
-   "b": 4,
-   "lift": 1.174
-  },
-  {
-   "a": 1,
-   "b": 2,
-   "lift": 1.38
-  },
-  {
    "a": 1,
    "b": 4,
-   "lift": 1.46
-  },
-  {
-   "a": 1,
-   "b": 12,
-   "lift": 1.355
-  },
-  {
-   "a": 1,
-   "b": 35,
-   "lift": 1.389
-  },
-  {
-   "a": 1,
-   "b": 110,
-   "lift": 1.631
+   "lift": 1.592
   },
   {
    "a": 2,
-   "b": 4,
-   "lift": 1.504
-  },
-  {
-   "a": 2,
-   "b": 17,
-   "lift": 1.494
-  },
-  {
-   "a": 2,
-   "b": 33,
-   "lift": 1.395
+   "b": 58,
+   "lift": 1.904
   },
   {
    "a": 5,
    "b": 17,
-   "lift": 1.381
+   "lift": 1.44
   },
   {
    "a": 5,
-   "b": 46,
-   "lift": 1.318
+   "b": 109,
+   "lift": 1.613
   },
   {
-   "a": 6,
-   "b": 19,
-   "lift": 1.356
+   "a": 11,
+   "b": 16,
+   "lift": 1.506
   },
   {
-   "a": 12,
-   "b": 35,
-   "lift": 1.636
+   "a": 11,
+   "b": 18,
+   "lift": 1.516
   },
   {
-   "a": 14,
-   "b": 60,
-   "lift": 1.529
-  },
-  {
-   "a": 17,
-   "b": 33,
-   "lift": 1.349
-  },
-  {
-   "a": 21,
-   "b": 24,
-   "lift": 1.452
-  },
-  {
-   "a": 47,
-   "b": 89,
-   "lift": 1.852
+   "a": 15,
+   "b": 55,
+   "lift": 1.786
   },
   {
    "a": 47,
    "b": 97,
-   "lift": 1.961
+   "lift": 1.779
   },
   {
    "a": 47,
    "b": 98,
-   "lift": 2.332
-  },
-  {
-   "a": 58,
-   "b": 60,
-   "lift": 2.095
-  },
-  {
-   "a": 60,
-   "b": 62,
-   "lift": 1.875
+   "lift": 2.258
   },
   {
    "a": 97,
    "b": 98,
-   "lift": 1.955
+   "lift": 2.188
   }
  ]
 }

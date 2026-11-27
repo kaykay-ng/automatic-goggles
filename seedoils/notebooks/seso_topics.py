@@ -111,7 +111,10 @@ def fit():
         np.savez_compressed(PROC / f"{PFX}_probs.npz", id=D.id.values.astype(str), p=np.asarray(probs).astype(np.float16)); print(f"probabilities saved: {np.asarray(probs).shape}", flush=True)
     n_out = int((topics == -1).sum())
     print(f"topics: {len(set(topics)) - (1 if -1 in topics else 0)} | outliers: {n_out:,} of {len(topics):,} ({n_out / len(topics):.0%})", flush=True)
-    new = np.array(tm.reduce_outliers(docs, topics.tolist(), strategy="embeddings", embeddings=V))
+    if probs is not None:  # one rule everywhere (27 Nov 2026): BERTopic's own reduce_outliers, probabilities strategy, threshold 0.05; outliers below it keep -1
+        new = np.array(tm.reduce_outliers(docs, topics.tolist(), strategy="probabilities", probabilities=np.asarray(probs), threshold=float(os.environ.get("SEDOIL_OUTLIER_THRESHOLD", "0.05"))))
+    else:  # older runs without probabilities: every outlier moved to the nearest topic by embedding
+        new = np.array(tm.reduce_outliers(docs, topics.tolist(), strategy="embeddings", embeddings=V))
     tm.update_topics(docs, topics=new.tolist(), vectorizer_model=vec())
 
     if os.environ.get("SEDOIL_SAVE_MODEL"):  # keep the fitted model (safetensors: topic embeddings, c-TF-IDF, topic words; the model holds representative documents = Reddit text, so keep it LOCAL)

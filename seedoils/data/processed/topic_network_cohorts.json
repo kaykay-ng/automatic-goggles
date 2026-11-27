@@ -1,1269 +1,1269 @@
 {
  "n_null": 500,
  "n_boot": 400,
- "newcomer_share_of_writers_from_2024": 89.9,
+ "newcomer_share_of_writers_from_2024": 89.1,
  "topic_newcomer_share": {
   "0": {
    "words": "seed-oil, food, health, oil",
    "theme": "General talk and meta",
-   "writers": 4494,
-   "newcomer_pct": 84.4
+   "writers": 3932,
+   "newcomer_pct": 84.2
   },
   "1": {
    "words": "pufa, omega-6, omega-3, acid",
    "theme": "Omega-6 / PUFA biochemistry",
-   "writers": 1753,
-   "newcomer_pct": 78.1
+   "writers": 1675,
+   "newcomer_pct": 77.6
   },
   "2": {
    "words": "ldl, cholesterol, hdl, statin",
    "theme": "Omega-6 / PUFA biochemistry",
-   "writers": 871,
-   "newcomer_pct": 75.9
+   "writers": 787,
+   "newcomer_pct": 75.3
   },
   "3": {
    "words": "olive-oil, olive, virgin, extra virgin",
    "theme": "Specific oils",
-   "writers": 1193,
-   "newcomer_pct": 80.3
+   "writers": 1039,
+   "newcomer_pct": 79.7
   },
   "4": {
    "words": "fat, saturated-fat, trans, trans fat",
    "theme": "Omega-6 / PUFA biochemistry",
-   "writers": 1158,
-   "newcomer_pct": 75.6
+   "writers": 782,
+   "newcomer_pct": 74.8
   },
   "5": {
    "words": "comment, reddit, post, sub",
    "theme": "General talk and meta",
-   "writers": 1725,
-   "newcomer_pct": 82.6
+   "writers": 1371,
+   "newcomer_pct": 82.1
   },
   "6": {
    "words": "chip, tortilla, potato chip, potato",
    "theme": "Shopping",
-   "writers": 1115,
+   "writers": 969,
    "newcomer_pct": 82.4
   },
   "7": {
    "words": "mayo, mayonnaise, mustard, chosen",
    "theme": "Shopping",
-   "writers": 827,
-   "newcomer_pct": 81.1
+   "writers": 804,
+   "newcomer_pct": 81.3
   },
   "8": {
    "words": "avocado-oil, avocado, olive-oil, oil",
    "theme": "Specific oils",
-   "writers": 1002,
+   "writers": 887,
    "newcomer_pct": 83.3
   },
   "9": {
    "words": "butter, margarine, real butter, butter butter",
    "theme": "Cooking and cooking fats",
-   "writers": 1066,
-   "newcomer_pct": 79.2
+   "writers": 883,
+   "newcomer_pct": 79.6
   },
   "10": {
    "words": "skin, hair, acne, soap",
    "theme": "Lifestyle",
-   "writers": 859,
-   "newcomer_pct": 79.4
+   "writers": 727,
+   "newcomer_pct": 79.2
   },
   "11": {
    "words": "grass, fed, beef, grass fed",
    "theme": "Other diets",
-   "writers": 1073,
-   "newcomer_pct": 79.0
+   "writers": 882,
+   "newcomer_pct": 79.4
   },
   "12": {
    "words": "pork, pig, lard, bacon",
    "theme": "Other diets",
-   "writers": 667,
-   "newcomer_pct": 74.2
+   "writers": 600,
+   "newcomer_pct": 73.7
   },
   "13": {
    "words": "sun, sunscreen, skin, sunburn",
    "theme": "Lifestyle",
-   "writers": 674,
+   "writers": 631,
    "newcomer_pct": 75.4
   },
   "14": {
    "words": "calorie, weight, gain, lose",
    "theme": "Keto, carbs, fasting",
-   "writers": 1134,
-   "newcomer_pct": 77.7
+   "writers": 673,
+   "newcomer_pct": 77.1
   },
   "15": {
    "words": "bread, flour, wheat, gluten",
    "theme": "Staple foods",
-   "writers": 823,
-   "newcomer_pct": 76.9
+   "writers": 747,
+   "newcomer_pct": 77.0
   },
   "16": {
    "words": "milk, raw milk, raw, dairy",
    "theme": "Staple foods",
-   "writers": 797,
-   "newcomer_pct": 78.8
+   "writers": 758,
+   "newcomer_pct": 78.2
   },
   "17": {
    "words": "science, study, scientific, evidence",
    "theme": "Studies and evidence",
-   "writers": 1106,
-   "newcomer_pct": 80.1
+   "writers": 786,
+   "newcomer_pct": 79.6
   },
   "18": {
    "words": "egg, chicken, pasture, feed",
    "theme": "Other diets",
-   "writers": 660,
-   "newcomer_pct": 80.6
+   "writers": 658,
+   "newcomer_pct": 80.9
   },
   "19": {
    "words": "store, costco, price, grocery",
    "theme": "Shopping",
-   "writers": 1314,
-   "newcomer_pct": 82.9
+   "writers": 915,
+   "newcomer_pct": 82.6
   },
   "20": {
    "words": "canola, canola oil, rapeseed, oil",
    "theme": "Specific oils",
-   "writers": 748,
-   "newcomer_pct": 79.3
+   "writers": 636,
+   "newcomer_pct": 78.5
   },
   "21": {
    "words": "fry, potato, french fry, french",
    "theme": "Shopping",
-   "writers": 617,
-   "newcomer_pct": 76.8
+   "writers": 564,
+   "newcomer_pct": 76.4
   },
   "22": {
    "words": "peanut, peanut butter, peanut oil, butter",
    "theme": "Specific oils",
-   "writers": 517,
+   "writers": 465,
    "newcomer_pct": 78.1
   },
   "23": {
    "words": "meal, cook, food, home",
    "theme": "Cooking and cooking fats",
-   "writers": 1108,
-   "newcomer_pct": 80.8
+   "writers": 612,
+   "newcomer_pct": 79.1
   },
   "24": {
    "words": "oil, vegetable-oil, hexane, lubricant",
    "theme": "Specific oils",
-   "writers": 1131,
-   "newcomer_pct": 80.1
+   "writers": 611,
+   "newcomer_pct": 76.9
   },
   "25": {
    "words": "sugar, syrup, fructose, corn syrup",
    "theme": "Keto, carbs, fasting",
-   "writers": 714,
-   "newcomer_pct": 76.9
+   "writers": 519,
+   "newcomer_pct": 74.6
   },
   "26": {
    "words": "vaccine, covid, virus, shot",
    "theme": "Vaccines and COVID",
-   "writers": 589,
-   "newcomer_pct": 80.0
+   "writers": 498,
+   "newcomer_pct": 79.5
   },
   "27": {
    "words": "keto, carb, ketosis, diet",
    "theme": "Keto, carbs, fasting",
-   "writers": 443,
-   "newcomer_pct": 73.4
+   "writers": 327,
+   "newcomer_pct": 72.2
   },
   "28": {
    "words": "palm, palm oil, oil, kernel",
    "theme": "Specific oils",
-   "writers": 453,
-   "newcomer_pct": 77.5
+   "writers": 407,
+   "newcomer_pct": 77.4
   },
   "29": {
    "words": "formula, baby, milk, infant",
    "theme": "Staple foods",
-   "writers": 460,
-   "newcomer_pct": 78.9
+   "writers": 416,
+   "newcomer_pct": 79.8
   },
   "30": {
    "words": "vegan, veganism, vegan diet, vegetarian",
    "theme": "Other diets",
-   "writers": 618,
-   "newcomer_pct": 77.7
+   "writers": 496,
+   "newcomer_pct": 77.2
   },
   "31": {
    "words": "nut, almond, seed, nut seed",
    "theme": "Staple foods",
-   "writers": 493,
-   "newcomer_pct": 74.6
+   "writers": 410,
+   "newcomer_pct": 76.1
   },
   "32": {
    "words": "dressing, salad, ranch, salad dressing",
    "theme": "Shopping",
-   "writers": 621,
-   "newcomer_pct": 78.7
+   "writers": 460,
+   "newcomer_pct": 75.9
   },
   "33": {
    "words": "nutrition, science, diet, study",
    "theme": "Studies and evidence",
-   "writers": 1029,
-   "newcomer_pct": 77.5
+   "writers": 473,
+   "newcomer_pct": 77.0
   },
   "34": {
    "words": "tallow, beef tallow, beef, butcher",
    "theme": "Cooking and cooking fats",
-   "writers": 716,
-   "newcomer_pct": 79.6
+   "writers": 576,
+   "newcomer_pct": 77.4
   },
   "35": {
    "words": "coconut-oil, coconut, mct, oil",
    "theme": "Specific oils",
-   "writers": 494,
-   "newcomer_pct": 77.9
+   "writers": 358,
+   "newcomer_pct": 76.0
   },
   "36": {
    "words": "ghee, butter, tallow, indian",
    "theme": "Cooking and cooking fats",
-   "writers": 463,
-   "newcomer_pct": 79.5
+   "writers": 366,
+   "newcomer_pct": 78.7
   },
   "37": {
    "words": "doctor, medical, pharma, health",
    "theme": "Distrust of industry, medicine and media",
-   "writers": 964,
-   "newcomer_pct": 79.5
+   "writers": 732,
+   "newcomer_pct": 80.7
   },
   "38": {
    "words": "plastic, microplastic, glass, bottle",
    "theme": "Distrust of industry, medicine and media",
-   "writers": 556,
-   "newcomer_pct": 77.9
+   "writers": 399,
+   "newcomer_pct": 75.7
   },
   "39": {
    "words": "cancer, smoking, cigarette, tobacco",
    "theme": "Lifestyle",
-   "writers": 594,
-   "newcomer_pct": 76.1
+   "writers": 417,
+   "newcomer_pct": 75.5
   },
   "40": {
    "words": "protein, whey, powder, protein powder",
    "theme": "Ingredient labels and processed food",
-   "writers": 486,
-   "newcomer_pct": 79.0
+   "writers": 386,
+   "newcomer_pct": 80.3
   },
   "41": {
    "words": "pan, cast iron, cast, iron",
    "theme": "Cooking and cooking fats",
-   "writers": 405,
-   "newcomer_pct": 75.6
+   "writers": 291,
+   "newcomer_pct": 75.9
   },
   "42": {
    "words": "burger, patty, steak, grill",
    "theme": "Shopping",
-   "writers": 567,
-   "newcomer_pct": 79.2
+   "writers": 354,
+   "newcomer_pct": 79.7
   },
   "43": {
    "words": "fruit, rice, beef, cheese",
    "theme": "Keto, carbs, fasting",
-   "writers": 884,
-   "newcomer_pct": 76.6
+   "writers": 374,
+   "newcomer_pct": 74.6
   },
   "44": {
    "words": "coffee, creamer, cream, caffeine",
    "theme": "Staple foods",
-   "writers": 375,
-   "newcomer_pct": 73.3
+   "writers": 310,
+   "newcomer_pct": 73.5
   },
   "45": {
    "words": "sunflower, sunflower oil, sunflower seed, oil",
    "theme": "Specific oils",
-   "writers": 426,
-   "newcomer_pct": 81.9
+   "writers": 337,
+   "newcomer_pct": 80.1
   },
   "46": {
    "words": "money, capitalism, government, profit",
    "theme": "Distrust of industry, medicine and media",
-   "writers": 905,
-   "newcomer_pct": 79.9
+   "writers": 475,
+   "newcomer_pct": 78.5
   },
   "47": {
    "words": "rfk-jr, trump, rape, vote",
    "theme": "Politics",
-   "writers": 532,
-   "newcomer_pct": 81.2
+   "writers": 537,
+   "newcomer_pct": 80.8
   },
   "48": {
    "words": "soy, tofu, soy sauce, estrogen",
    "theme": "Staple foods",
-   "writers": 323,
+   "writers": 273,
    "newcomer_pct": 78.0
   },
   "49": {
    "words": "vitamin, supplement, iron, b12",
    "theme": "Lifestyle",
-   "writers": 465,
-   "newcomer_pct": 75.5
+   "writers": 312,
+   "newcomer_pct": 73.1
   },
   "50": {
    "words": "guy, video, diet, eats",
    "theme": "General talk and meta",
-   "writers": 733,
-   "newcomer_pct": 77.2
+   "writers": 479,
+   "newcomer_pct": 75.6
   },
   "51": {
    "words": "fiber, gut, ibs, stomach",
    "theme": "Lifestyle",
-   "writers": 547,
-   "newcomer_pct": 76.4
+   "writers": 280,
+   "newcomer_pct": 73.9
   },
   "52": {
    "words": "ice, ice cream, cream, vanilla",
    "theme": "Staple foods",
-   "writers": 363,
-   "newcomer_pct": 78.5
+   "writers": 279,
+   "newcomer_pct": 78.1
   },
   "53": {
    "words": "oat, milk, almond, oat milk",
    "theme": "Staple foods",
-   "writers": 304,
-   "newcomer_pct": 81.2
+   "writers": 285,
+   "newcomer_pct": 81.1
   },
   "54": {
    "words": "lecithin, soy lecithin, sunflower lecithin, emulsifier",
    "theme": "Ingredient labels and processed food",
-   "writers": 227,
+   "writers": 214,
    "newcomer_pct": 67.8
   },
   "55": {
    "words": "bread, bun, sourdough, bakery",
    "theme": "Shopping",
-   "writers": 389,
-   "newcomer_pct": 78.7
+   "writers": 249,
+   "newcomer_pct": 76.7
   },
   "56": {
    "words": "processed-food, processed, ultra, ultra processed-food",
    "theme": "Ingredient labels and processed food",
-   "writers": 599,
-   "newcomer_pct": 77.3
+   "writers": 401,
+   "newcomer_pct": 76.3
   },
   "57": {
    "words": "ingredient, label, list, ingredient list",
    "theme": "Ingredient labels and processed food",
-   "writers": 809,
-   "newcomer_pct": 79.0
+   "writers": 414,
+   "newcomer_pct": 79.7
   },
   "58": {
    "words": "insulin, glucose, diabetes, resistance",
    "theme": "Keto, carbs, fasting",
-   "writers": 395,
-   "newcomer_pct": 69.4
+   "writers": 248,
+   "newcomer_pct": 71.0
   },
   "59": {
    "words": "fasting, fast, day, hour",
    "theme": "Keto, carbs, fasting",
-   "writers": 300,
-   "newcomer_pct": 74.7
+   "writers": 154,
+   "newcomer_pct": 74.0
   },
   "60": {
    "words": "carb, low carb, low, high carb",
    "theme": "Keto, carbs, fasting",
-   "writers": 455,
-   "newcomer_pct": 72.5
+   "writers": 299,
+   "newcomer_pct": 70.6
   },
   "61": {
    "words": "evoo, olive-oil, polyphenol, virgin",
    "theme": "Specific oils",
-   "writers": 293,
-   "newcomer_pct": 77.5
+   "writers": 269,
+   "newcomer_pct": 75.8
   },
   "62": {
    "words": "oxalate, vegetable, spinach, fruit",
    "theme": "Other diets",
-   "writers": 406,
-   "newcomer_pct": 75.1
+   "writers": 241,
+   "newcomer_pct": 74.3
   },
   "63": {
    "words": "sauce, chili, tomato, pepper",
    "theme": "Shopping",
-   "writers": 507,
-   "newcomer_pct": 79.3
+   "writers": 266,
+   "newcomer_pct": 76.3
   },
   "64": {
    "words": "cooky, cake, butter, recipe",
    "theme": "Shopping",
-   "writers": 392,
-   "newcomer_pct": 76.0
+   "writers": 227,
+   "newcomer_pct": 78.0
   },
   "65": {
    "words": "cheese, cheddar, raw, milk",
    "theme": "Staple foods",
-   "writers": 268,
-   "newcomer_pct": 74.6
+   "writers": 185,
+   "newcomer_pct": 75.1
   },
   "66": {
    "words": "salt, sodium, blood pressure, pressure",
    "theme": "Lifestyle",
-   "writers": 259,
-   "newcomer_pct": 72.6
+   "writers": 204,
+   "newcomer_pct": 73.0
   },
   "67": {
    "words": "water, fluoride, tooth, toothpaste",
    "theme": "Distrust of industry, medicine and media",
-   "writers": 320,
-   "newcomer_pct": 78.8
+   "writers": 192,
+   "newcomer_pct": 75.5
   },
   "68": {
    "words": "dog, cat, pet, raw",
    "theme": "Lifestyle",
-   "writers": 228,
-   "newcomer_pct": 75.0
+   "writers": 177,
+   "newcomer_pct": 74.6
   },
   "69": {
    "words": "red-meat, meat, cancer, processed meat",
    "theme": "Other diets",
-   "writers": 356,
-   "newcomer_pct": 75.3
+   "writers": 208,
+   "newcomer_pct": 75.0
   },
   "70": {
    "words": "mom, wife, mother, mum",
    "theme": "Lifestyle",
-   "writers": 386,
-   "newcomer_pct": 72.5
+   "writers": 265,
+   "newcomer_pct": 70.2
   },
   "71": {
    "words": "pizza, crust, dough, frozen",
    "theme": "Shopping",
-   "writers": 226,
-   "newcomer_pct": 79.2
+   "writers": 180,
+   "newcomer_pct": 77.8
   },
   "72": {
    "words": "carnivore, carnivore diet, diet, meat",
    "theme": "Other diets",
-   "writers": 326,
-   "newcomer_pct": 75.8
+   "writers": 213,
+   "newcomer_pct": 73.7
   },
   "73": {
    "words": "food, company, industry, government",
    "theme": "Distrust of industry, medicine and media",
-   "writers": 1116,
-   "newcomer_pct": 81.5
+   "writers": 540,
+   "newcomer_pct": 78.5
   },
   "74": {
    "words": "vegan, seed-oil, vegetarian, veganism",
    "theme": "Other diets",
-   "writers": 294,
-   "newcomer_pct": 82.3
+   "writers": 195,
+   "newcomer_pct": 80.0
   },
   "75": {
    "words": "smoke, smoke point, point, olive-oil",
    "theme": "Cooking and cooking fats",
-   "writers": 332,
-   "newcomer_pct": 77.1
+   "writers": 206,
+   "newcomer_pct": 78.6
   },
   "76": {
    "words": "frying, fried, deep, fryer",
    "theme": "Cooking and cooking fats",
-   "writers": 580,
-   "newcomer_pct": 76.9
+   "writers": 382,
+   "newcomer_pct": 77.0
   },
   "77": {
    "words": "vitamin, tocopherol, antioxidant, pufa",
    "theme": "Omega-6 / PUFA biochemistry",
-   "writers": 161,
-   "newcomer_pct": 72.0
+   "writers": 118,
+   "newcomer_pct": 68.6
   },
   "78": {
    "words": "eat, taste, eating, food",
    "theme": "General talk and meta",
-   "writers": 1062,
-   "newcomer_pct": 79.4
+   "writers": 309,
+   "newcomer_pct": 76.1
   },
   "79": {
    "words": "vitamin, d3, k2, supplement",
    "theme": "Lifestyle",
-   "writers": 216,
-   "newcomer_pct": 70.8
+   "writers": 183,
+   "newcomer_pct": 72.7
   },
   "80": {
    "words": "sesame, sesame oil, oil, toasted",
    "theme": "Specific oils",
-   "writers": 244,
-   "newcomer_pct": 75.8
+   "writers": 157,
+   "newcomer_pct": 76.4
   },
   "81": {
    "words": "flavor, natural flavor, natural, vanilla",
    "theme": "Ingredient labels and processed food",
-   "writers": 388,
-   "newcomer_pct": 78.4
+   "writers": 191,
+   "newcomer_pct": 80.1
   },
   "82": {
    "words": "thank, thanks, link, appreciate",
    "theme": "General talk and meta",
-   "writers": 669,
-   "newcomer_pct": 80.4
+   "writers": 634,
+   "newcomer_pct": 79.7
   },
   "83": {
    "words": "app, email, subscription, free",
    "theme": "General talk and meta",
-   "writers": 343,
-   "newcomer_pct": 84.0
+   "writers": 166,
+   "newcomer_pct": 87.3
   },
   "84": {
    "words": "stevia, sweetener, maltodextrin, aspartame",
    "theme": "Ingredient labels and processed food",
-   "writers": 250,
-   "newcomer_pct": 76.4
+   "writers": 194,
+   "newcomer_pct": 79.9
   },
   "85": {
    "words": "chocolate, cocoa, dark chocolate, dark",
    "theme": "Staple foods",
-   "writers": 194,
-   "newcomer_pct": 74.2
+   "writers": 139,
+   "newcomer_pct": 72.7
   },
   "86": {
    "words": "human, meat, ancestor, ate",
    "theme": "Other diets",
-   "writers": 487,
-   "newcomer_pct": 77.4
+   "writers": 219,
+   "newcomer_pct": 76.3
   },
   "87": {
    "words": "allergy, allergic, symptom, reaction",
    "theme": "Lifestyle",
-   "writers": 313,
-   "newcomer_pct": 76.0
+   "writers": 152,
+   "newcomer_pct": 75.0
   },
   "88": {
    "words": "organic, pesticide, farm, buy organic",
    "theme": "Distrust of industry, medicine and media",
-   "writers": 290,
-   "newcomer_pct": 80.0
+   "writers": 171,
+   "newcomer_pct": 80.7
   },
   "89": {
    "words": "political, left, right, liberal",
    "theme": "Politics",
-   "writers": 427,
-   "newcomer_pct": 76.6
+   "writers": 277,
+   "newcomer_pct": 74.4
   },
   "90": {
    "words": "kid, parent, school, child",
    "theme": "Lifestyle",
-   "writers": 456,
-   "newcomer_pct": 79.6
+   "writers": 216,
+   "newcomer_pct": 78.2
   },
   "91": {
    "words": "wing, wild wing, buffalo wild, buffalo",
    "theme": "Shopping",
-   "writers": 201,
-   "newcomer_pct": 74.6
+   "writers": 265,
+   "newcomer_pct": 75.1
   },
   "92": {
    "words": "cico, calorie, weight, gain",
    "theme": "Keto, carbs, fasting",
-   "writers": 105,
-   "newcomer_pct": 67.6
+   "writers": 95,
+   "newcomer_pct": 67.4
   },
   "93": {
    "words": "seed-oil, trump, guy, video",
    "theme": "Politics",
-   "writers": 392,
-   "newcomer_pct": 75.0
+   "writers": 175,
+   "newcomer_pct": 72.6
   },
   "94": {
    "words": "msg, chinese, salt, sodium",
    "theme": "Ingredient labels and processed food",
-   "writers": 140,
-   "newcomer_pct": 72.9
+   "writers": 122,
+   "newcomer_pct": 73.0
   },
   "95": {
    "words": "cracker, pretzel, snack, graham",
    "theme": "Shopping",
-   "writers": 200,
-   "newcomer_pct": 79.0
+   "writers": 124,
+   "newcomer_pct": 76.6
   },
   "96": {
    "words": "yogurt, greek, greek yogurt, yoghurt",
    "theme": "Staple foods",
-   "writers": 191,
-   "newcomer_pct": 73.3
+   "writers": 143,
+   "newcomer_pct": 74.1
   },
   "97": {
    "words": "left, political, party, right",
    "theme": "Politics",
-   "writers": 455,
-   "newcomer_pct": 80.7
+   "writers": 361,
+   "newcomer_pct": 78.9
   },
   "98": {
    "words": "trump, vote, president, candidate",
    "theme": "Politics",
-   "writers": 507,
-   "newcomer_pct": 81.1
+   "writers": 433,
+   "newcomer_pct": 82.7
   },
   "99": {
    "words": "poison, chemical, toxic, dose",
    "theme": "Distrust of industry, medicine and media",
-   "writers": 581,
-   "newcomer_pct": 77.6
+   "writers": 272,
+   "newcomer_pct": 76.1
   },
   "100": {
    "words": "gmo, pesticide, crop, genetically",
    "theme": "Distrust of industry, medicine and media",
-   "writers": 142,
-   "newcomer_pct": 78.9
+   "writers": 102,
+   "newcomer_pct": 76.5
   },
   "101": {
    "words": "testosterone, hormone, estrogen, endocrine",
    "theme": "Lifestyle",
-   "writers": 235,
-   "newcomer_pct": 77.0
+   "writers": 112,
+   "newcomer_pct": 77.7
   },
   "102": {
    "words": "japan, japanese, asian, country",
    "theme": "Other diets",
-   "writers": 209,
-   "newcomer_pct": 71.8
+   "writers": 113,
+   "newcomer_pct": 71.7
   },
   "103": {
    "words": "glyphosate, herbicide, crop, wheat",
    "theme": "Distrust of industry, medicine and media",
-   "writers": 165,
-   "newcomer_pct": 71.5
+   "writers": 129,
+   "newcomer_pct": 71.3
   },
   "104": {
    "words": "podcast, tucker, video, layne",
    "theme": "General talk and meta",
-   "writers": 368,
-   "newcomer_pct": 73.9
+   "writers": 263,
+   "newcomer_pct": 71.5
   },
   "105": {
    "words": "anxiety, mental, feel, depression",
    "theme": "Lifestyle",
-   "writers": 433,
-   "newcomer_pct": 76.4
+   "writers": 124,
+   "newcomer_pct": 75.0
   },
   "106": {
    "words": "popcorn, pop, microwave, coconut-oil",
    "theme": "Shopping",
-   "writers": 171,
-   "newcomer_pct": 74.3
+   "writers": 134,
+   "newcomer_pct": 77.6
   },
   "107": {
    "words": "chicken, breast, chicken breast, meat",
    "theme": "Other diets",
-   "writers": 331,
-   "newcomer_pct": 77.6
+   "writers": 239,
+   "newcomer_pct": 71.5
   },
   "108": {
    "words": "soybean, soybean oil, oil, soy",
    "theme": "Specific oils",
-   "writers": 294,
-   "newcomer_pct": 76.2
+   "writers": 143,
+   "newcomer_pct": 72.0
   },
   "109": {
    "words": "conspiracy, media, news, propaganda",
    "theme": "Distrust of industry, medicine and media",
-   "writers": 661,
-   "newcomer_pct": 81.4
+   "writers": 554,
+   "newcomer_pct": 81.8
   },
   "110": {
    "words": "nut, macadamia, macadamia nut, pufa",
    "theme": "Omega-6 / PUFA biochemistry",
-   "writers": 146,
-   "newcomer_pct": 70.5
+   "writers": 134,
+   "newcomer_pct": 74.6
   },
   "111": {
    "words": "corn, corn oil, gmo corn, gmo",
    "theme": "Staple foods",
-   "writers": 162,
-   "newcomer_pct": 79.6
+   "writers": 103,
+   "newcomer_pct": 77.7
   },
   "112": {
    "words": "egg, pufa, chicken, low pufa",
    "theme": "Omega-6 / PUFA biochemistry",
-   "writers": 140,
-   "newcomer_pct": 65.7
+   "writers": 138,
+   "newcomer_pct": 66.7
   },
   "113": {
    "words": "bar, protein bar, protein, date",
    "theme": "Shopping",
-   "writers": 203,
-   "newcomer_pct": 82.8
+   "writers": 157,
+   "newcomer_pct": 86.6
   },
   "114": {
    "words": "hummus, tahini, chickpea, sesame",
    "theme": "Shopping",
-   "writers": 105,
-   "newcomer_pct": 81.0
+   "writers": 96,
+   "newcomer_pct": 82.3
   },
   "115": {
    "words": "seed, eat seed, chia, chia seed",
    "theme": "Other diets",
-   "writers": 198,
-   "newcomer_pct": 72.2
+   "writers": 97,
+   "newcomer_pct": 70.1
   },
   "116": {
    "words": "cereal, granola, grain, breakfast",
    "theme": "Staple foods",
-   "writers": 212,
-   "newcomer_pct": 82.1
+   "writers": 133,
+   "newcomer_pct": 78.9
   },
   "117": {
    "words": "pressed, cold pressed, cold, expeller",
    "theme": "Specific oils",
-   "writers": 223,
-   "newcomer_pct": 77.1
+   "writers": 152,
+   "newcomer_pct": 73.7
   },
   "118": {
    "words": "mediterranean, blue zone, zone, blue",
    "theme": "Other diets",
-   "writers": 220,
-   "newcomer_pct": 76.8
+   "writers": 81,
+   "newcomer_pct": 80.2
   },
   "119": {
    "words": "sugar, seed-oil, diabetes, seed-oil sugar",
    "theme": "Keto, carbs, fasting",
-   "writers": 299,
-   "newcomer_pct": 72.6
+   "writers": 160,
+   "newcomer_pct": 66.9
   },
   "120": {
    "words": "citric, citric acid, mold, acid",
    "theme": "Ingredient labels and processed food",
-   "writers": 198,
-   "newcomer_pct": 73.7
+   "writers": 105,
+   "newcomer_pct": 77.1
   },
   "121": {
    "words": "gum, carrageenan, xanthan, xanthan gum",
    "theme": "Ingredient labels and processed food",
-   "writers": 172,
-   "newcomer_pct": 77.3
+   "writers": 104,
+   "newcomer_pct": 76.9
   },
   "122": {
    "words": "drug, serotonin, addiction, effect",
    "theme": "Lifestyle",
-   "writers": 541,
-   "newcomer_pct": 75.8
+   "writers": 125,
+   "newcomer_pct": 72.0
   }
  },
  "theme_newcomer_share": {
-  "Vaccines and COVID": 80.0,
-  "Studies and evidence": 78.8,
-  "Politics": 79.2,
-  "Ingredient labels and processed food": 77.0,
-  "Omega-6 / PUFA biochemistry": 76.1,
-  "Keto, carbs, fasting": 75.0,
-  "Cooking and cooking fats": 78.9,
+  "Vaccines and COVID": 79.5,
+  "Studies and evidence": 78.6,
+  "Politics": 79.1,
+  "Ingredient labels and processed food": 77.4,
+  "Keto, carbs, fasting": 73.5,
+  "Cooking and cooking fats": 78.3,
+  "Omega-6 / PUFA biochemistry": 75.7,
+  "Distrust of industry, medicine and media": 78.6,
+  "Lifestyle": 75.3,
   "Staple foods": 77.3,
-  "Other diets": 77.2,
-  "Distrust of industry, medicine and media": 79.6,
-  "Lifestyle": 76.2,
-  "Specific oils": 79.6,
-  "Shopping": 80.0,
-  "General talk and meta": 82.2
+  "Other diets": 76.8,
+  "Specific oils": 78.6,
+  "Shopping": 79.7,
+  "General talk and meta": 82.1
  },
  "from_2024_newcomers": {
-  "people": 6962,
+  "people": 5490,
   "sets": {
    "within the same theme": {
-    "observed": 34137,
-    "lift": 1.16,
+    "observed": 19276,
+    "lift": 1.17,
     "ci95": [
-     1.06,
-     1.26
+     1.07,
+     1.3
     ]
    },
    "Politics - Politics": {
-    "observed": 772,
-    "lift": 1.67,
+    "observed": 532,
+    "lift": 1.89,
     "ci95": [
-     1.45,
-     1.91
+     1.59,
+     2.27
     ]
    },
    "Politics - Distrust of industry, medicine and media": {
-    "observed": 2880,
-    "lift": 1.1,
+    "observed": 1481,
+    "lift": 1.05,
     "ci95": [
-     0.98,
-     1.22
+     0.9,
+     1.19
     ]
    },
    "Politics - Vaccines and COVID": {
-    "observed": 343,
-    "lift": 1.3,
+    "observed": 232,
+    "lift": 1.28,
     "ci95": [
-     1.11,
-     1.53
+     1.03,
+     1.54
     ]
    },
    "Politics - food, diet and shopping themes": {
-    "observed": 14420,
-    "lift": 0.81,
+    "observed": 8137,
+    "lift": 0.77,
     "ci95": [
-     0.73,
-     0.91
+     0.65,
+     0.88
     ]
    },
    "Omega-6 / PUFA - Omega-6 / PUFA": {
-    "observed": 1341,
-    "lift": 1.47,
+    "observed": 1039,
+    "lift": 1.52,
     "ci95": [
-     1.3,
-     1.64
+     1.36,
+     1.71
     ]
    },
    "Omega-6 / PUFA - Keto, carbs, fasting": {
-    "observed": 3817,
-    "lift": 1.21,
+    "observed": 2177,
+    "lift": 1.22,
     "ci95": [
      1.08,
-     1.35
+     1.38
     ]
    },
    "Omega-6 / PUFA - Studies and evidence": {
-    "observed": 1624,
-    "lift": 1.25,
+    "observed": 976,
+    "lift": 1.29,
     "ci95": [
-     1.13,
-     1.39
+     1.14,
+     1.46
     ]
    },
    "Saturated-fat topic (4) - all other topics": {
-    "observed": 13353,
-    "lift": 1.12,
+    "observed": 7731,
+    "lift": 1.19,
     "ci95": [
-     1.02,
-     1.23
+     1.05,
+     1.32
     ]
    },
    "the 299 all-years links": {
-    "observed": 41605,
-    "lift": 1.26,
+    "observed": 17998,
+    "lift": 1.32,
     "ci95": [
-     1.18,
-     1.35
+     1.24,
+     1.42
     ]
    }
   }
  },
  "from_2024_old_guard": {
-  "people": 1216,
+  "people": 1056,
   "sets": {
    "within the same theme": {
-    "observed": 17254,
-    "lift": 1.09,
+    "observed": 10614,
+    "lift": 1.1,
     "ci95": [
-     0.92,
-     1.3
+     0.91,
+     1.33
     ]
    },
    "Politics - Politics": {
-    "observed": 339,
-    "lift": 1.44,
+    "observed": 212,
+    "lift": 1.39,
     "ci95": [
-     1.12,
-     1.84
+     1.03,
+     1.82
     ]
    },
    "Politics - Distrust of industry, medicine and media": {
-    "observed": 1412,
-    "lift": 1.1,
+    "observed": 809,
+    "lift": 1.06,
     "ci95": [
-     0.88,
-     1.38
+     0.83,
+     1.34
     ]
    },
    "Politics - Vaccines and COVID": {
-    "observed": 158,
-    "lift": 1.18,
+    "observed": 116,
+    "lift": 1.23,
     "ci95": [
-     0.87,
-     1.55
+     0.9,
+     1.62
     ]
    },
    "Politics - food, diet and shopping themes": {
-    "observed": 8190,
-    "lift": 0.87,
+    "observed": 5020,
+    "lift": 0.83,
     "ci95": [
-     0.68,
-     1.11
+     0.64,
+     1.06
     ]
    },
    "Omega-6 / PUFA - Omega-6 / PUFA": {
-    "observed": 725,
-    "lift": 1.26,
+    "observed": 579,
+    "lift": 1.27,
     "ci95": [
-     1.07,
-     1.49
+     1.05,
+     1.53
     ]
    },
    "Omega-6 / PUFA - Keto, carbs, fasting": {
-    "observed": 2241,
-    "lift": 1.11,
+    "observed": 1478,
+    "lift": 1.16,
     "ci95": [
-     0.94,
-     1.32
+     0.95,
+     1.44
     ]
    },
    "Omega-6 / PUFA - Studies and evidence": {
-    "observed": 801,
+    "observed": 490,
     "lift": 1.15,
     "ci95": [
-     0.98,
-     1.32
+     0.95,
+     1.38
     ]
    },
    "Saturated-fat topic (4) - all other topics": {
-    "observed": 6789,
-    "lift": 1.05,
+    "observed": 4224,
+    "lift": 1.08,
     "ci95": [
      0.89,
-     1.22
+     1.3
     ]
    },
    "the 299 all-years links": {
-    "observed": 18743,
-    "lift": 1.17,
+    "observed": 8360,
+    "lift": 1.2,
     "ci95": [
-     1.02,
-     1.34
+     1.04,
+     1.4
     ]
    }
   }
  },
  "old_guard_before_2024": {
-  "people": 2425,
+  "people": 1946,
   "sets": {
    "within the same theme": {
-    "observed": 16169,
-    "lift": 1.1,
+    "observed": 9510,
+    "lift": 1.12,
     "ci95": [
-     0.94,
-     1.29
+     0.92,
+     1.34
     ]
    },
    "Politics - Politics": {
-    "observed": 36,
-    "lift": 0.92,
+    "observed": 16,
+    "lift": 0.9,
     "ci95": [
-     0.54,
-     1.41
+     0.39,
+     1.63
     ]
    },
    "Politics - Distrust of industry, medicine and media": {
-    "observed": 404,
-    "lift": 1.0,
+    "observed": 169,
+    "lift": 0.98,
     "ci95": [
-     0.74,
-     1.28
+     0.63,
+     1.36
     ]
    },
    "Politics - Vaccines and COVID": {
-    "observed": 31,
-    "lift": 0.96,
+    "observed": 13,
+    "lift": 0.77,
     "ci95": [
-     0.59,
-     1.46
+     0.3,
+     1.36
     ]
    },
    "Politics - food, diet and shopping themes": {
-    "observed": 3483,
-    "lift": 0.92,
+    "observed": 1619,
+    "lift": 0.86,
     "ci95": [
-     0.69,
-     1.16
+     0.58,
+     1.21
     ]
    },
    "Omega-6 / PUFA - Omega-6 / PUFA": {
-    "observed": 910,
-    "lift": 1.23,
+    "observed": 626,
+    "lift": 1.21,
     "ci95": [
-     1.07,
-     1.41
+     1.02,
+     1.42
     ]
    },
    "Omega-6 / PUFA - Keto, carbs, fasting": {
-    "observed": 2946,
-    "lift": 1.17,
+    "observed": 1745,
+    "lift": 1.18,
     "ci95": [
-     1.02,
-     1.33
+     0.99,
+     1.4
     ]
    },
    "Omega-6 / PUFA - Studies and evidence": {
-    "observed": 899,
+    "observed": 513,
     "lift": 1.14,
     "ci95": [
-     0.99,
-     1.31
+     0.93,
+     1.33
     ]
    },
    "Saturated-fat topic (4) - all other topics": {
-    "observed": 7289,
-    "lift": 1.09,
+    "observed": 3551,
+    "lift": 1.03,
     "ci95": [
-     0.96,
-     1.24
+     0.86,
+     1.22
     ]
    },
    "the 299 all-years links": {
-    "observed": 19461,
-    "lift": 1.18,
+    "observed": 8789,
+    "lift": 1.22,
     "ci95": [
-     1.06,
-     1.34
+     1.07,
+     1.38
     ]
    }
   }
  },
  "old_guard_from_2024": {
-  "people": 1216,
+  "people": 1056,
   "sets": {
    "within the same theme": {
-    "observed": 17254,
-    "lift": 1.09,
+    "observed": 10614,
+    "lift": 1.1,
     "ci95": [
-     0.92,
-     1.3
+     0.91,
+     1.33
     ]
    },
    "Politics - Politics": {
-    "observed": 339,
-    "lift": 1.44,
+    "observed": 212,
+    "lift": 1.39,
     "ci95": [
-     1.12,
-     1.84
+     1.03,
+     1.82
     ]
    },
    "Politics - Distrust of industry, medicine and media": {
-    "observed": 1412,
-    "lift": 1.1,
+    "observed": 809,
+    "lift": 1.06,
     "ci95": [
-     0.88,
-     1.38
+     0.83,
+     1.34
     ]
    },
    "Politics - Vaccines and COVID": {
-    "observed": 158,
-    "lift": 1.18,
+    "observed": 116,
+    "lift": 1.23,
     "ci95": [
-     0.87,
-     1.55
+     0.9,
+     1.62
     ]
    },
    "Politics - food, diet and shopping themes": {
-    "observed": 8190,
-    "lift": 0.87,
+    "observed": 5020,
+    "lift": 0.83,
     "ci95": [
-     0.68,
-     1.11
+     0.64,
+     1.06
     ]
    },
    "Omega-6 / PUFA - Omega-6 / PUFA": {
-    "observed": 725,
-    "lift": 1.26,
+    "observed": 579,
+    "lift": 1.27,
     "ci95": [
-     1.07,
-     1.49
+     1.05,
+     1.53
     ]
    },
    "Omega-6 / PUFA - Keto, carbs, fasting": {
-    "observed": 2241,
-    "lift": 1.11,
+    "observed": 1478,
+    "lift": 1.16,
     "ci95": [
-     0.94,
-     1.32
+     0.95,
+     1.44
     ]
    },
    "Omega-6 / PUFA - Studies and evidence": {
-    "observed": 801,
+    "observed": 490,
     "lift": 1.15,
     "ci95": [
-     0.98,
-     1.32
+     0.95,
+     1.38
     ]
    },
    "Saturated-fat topic (4) - all other topics": {
-    "observed": 6789,
-    "lift": 1.05,
+    "observed": 4224,
+    "lift": 1.08,
     "ci95": [
      0.89,
-     1.22
+     1.3
     ]
    },
    "the 299 all-years links": {
-    "observed": 18743,
-    "lift": 1.17,
+    "observed": 8360,
+    "lift": 1.2,
     "ci95": [
-     1.02,
-     1.34
+     1.04,
+     1.4
     ]
    }
   }
  },
  "panel_old_guard_before_2024": {
-  "people": 815,
+  "people": 660,
   "sets": {
    "within the same theme": {
-    "observed": 11277,
-    "lift": 1.08,
+    "observed": 6770,
+    "lift": 1.1,
     "ci95": [
-     0.87,
-     1.29
+     0.86,
+     1.36
     ]
    },
    "Politics - Politics": {
-    "observed": 30,
-    "lift": 0.89,
+    "observed": 14,
+    "lift": 1.02,
     "ci95": [
-     0.47,
-     1.42
+     0.29,
+     1.89
     ]
    },
    "Politics - Distrust of industry, medicine and media": {
-    "observed": 323,
-    "lift": 1.01,
+    "observed": 138,
+    "lift": 1.03,
     "ci95": [
-     0.69,
-     1.35
+     0.59,
+     1.49
     ]
    },
    "Politics - Vaccines and COVID": {
-    "observed": 26,
-    "lift": 1.0,
+    "observed": 10,
+    "lift": 0.83,
     "ci95": [
-     0.54,
+     0.17,
      1.58
     ]
    },
    "Politics - food, diet and shopping themes": {
-    "observed": 2719,
-    "lift": 0.91,
+    "observed": 1244,
+    "lift": 0.85,
     "ci95": [
-     0.65,
+     0.51,
      1.2
     ]
    },
    "Omega-6 / PUFA - Omega-6 / PUFA": {
-    "observed": 603,
-    "lift": 1.17,
+    "observed": 410,
+    "lift": 1.18,
     "ci95": [
-     0.98,
-     1.39
+     0.93,
+     1.42
     ]
    },
    "Omega-6 / PUFA - Keto, carbs, fasting": {
-    "observed": 1897,
-    "lift": 1.12,
+    "observed": 1148,
+    "lift": 1.15,
     "ci95": [
-     0.93,
-     1.32
+     0.89,
+     1.41
     ]
    },
    "Omega-6 / PUFA - Studies and evidence": {
-    "observed": 596,
-    "lift": 1.1,
+    "observed": 356,
+    "lift": 1.13,
     "ci95": [
-     0.93,
-     1.28
+     0.91,
+     1.36
     ]
    },
    "Saturated-fat topic (4) - all other topics": {
-    "observed": 4740,
-    "lift": 1.07,
+    "observed": 2518,
+    "lift": 1.02,
     "ci95": [
-     0.91,
-     1.27
+     0.79,
+     1.22
     ]
    },
    "the 299 all-years links": {
-    "observed": 12633,
-    "lift": 1.14,
+    "observed": 5755,
+    "lift": 1.18,
     "ci95": [
-     0.97,
-     1.31
+     0.99,
+     1.37
     ]
    }
   }
  },
  "panel_old_guard_from_2024": {
-  "people": 815,
+  "people": 660,
   "sets": {
    "within the same theme": {
-    "observed": 14915,
-    "lift": 1.08,
+    "observed": 8865,
+    "lift": 1.1,
     "ci95": [
-     0.91,
-     1.31
+     0.88,
+     1.33
     ]
    },
    "Politics - Politics": {
-    "observed": 287,
-    "lift": 1.51,
+    "observed": 170,
+    "lift": 1.45,
     "ci95": [
-     1.11,
+     0.99,
      1.92
     ]
    },
    "Politics - Distrust of industry, medicine and media": {
-    "observed": 1197,
-    "lift": 1.13,
+    "observed": 639,
+    "lift": 1.06,
     "ci95": [
-     0.9,
-     1.43
+     0.78,
+     1.34
     ]
    },
    "Politics - Vaccines and COVID": {
-    "observed": 127,
-    "lift": 1.19,
+    "observed": 91,
+    "lift": 1.32,
     "ci95": [
-     0.85,
-     1.56
+     0.89,
+     1.72
     ]
    },
    "Politics - food, diet and shopping themes": {
-    "observed": 6974,
-    "lift": 0.89,
+    "observed": 4048,
+    "lift": 0.84,
     "ci95": [
-     0.7,
-     1.14
+     0.61,
+     1.08
     ]
    },
    "Omega-6 / PUFA - Omega-6 / PUFA": {
-    "observed": 658,
-    "lift": 1.23,
+    "observed": 482,
+    "lift": 1.2,
     "ci95": [
-     1.03,
-     1.45
+     0.98,
+     1.41
     ]
    },
    "Omega-6 / PUFA - Keto, carbs, fasting": {
-    "observed": 1986,
-    "lift": 1.09,
+    "observed": 1245,
+    "lift": 1.15,
     "ci95": [
      0.91,
-     1.3
+     1.44
     ]
    },
    "Omega-6 / PUFA - Studies and evidence": {
-    "observed": 704,
-    "lift": 1.12,
+    "observed": 419,
+    "lift": 1.11,
     "ci95": [
-     0.96,
-     1.32
+     0.87,
+     1.34
     ]
    },
    "Saturated-fat topic (4) - all other topics": {
-    "observed": 6010,
-    "lift": 1.03,
+    "observed": 3526,
+    "lift": 1.04,
     "ci95": [
-     0.89,
-     1.23
+     0.84,
+     1.26
     ]
    },
    "the 299 all-years links": {
-    "observed": 16229,
-    "lift": 1.15,
+    "observed": 6901,
+    "lift": 1.17,
     "ci95": [
-     1.0,
-     1.32
+     0.98,
+     1.35
     ]
    }
   }

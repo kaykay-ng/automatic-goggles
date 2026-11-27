@@ -1,9 +1,9 @@
 """Before vs from 2024 on the topic network, by LIFT instead of link counts (user request 27 Nov). The all-years network
-(topic_cooccurrence_network.py: 299 links, 9,912 people) stays the structure; this script measures, separately in each period and with ALL
+(topic_cooccurrence_network.py: all-years links) stays the structure; this script measures, separately in each period and with ALL
 people active in that period (documents in 2+ topics in that period), how much more often than chance topic pairs are written by the same people.
 Per period: observed O = people who wrote in both topics; expected E = mean over curveball randomisations of that period's person x topic
 matrix (every person's number of topics and every topic's number of people kept; N_NULL samples). Lift = sum O / sum E over a set of topic
-pairs (a theme pair, or the 299 all-years links). 95% intervals: 400 bootstrap resamples of the period's people (O recomputed, E kept fixed:
+pairs (a theme pair, or the all-years links). 95% intervals: 400 bootstrap resamples of the period's people (O recomputed, E kept fixed:
 the null mean is a property of the margins and changes little under resampling). No significance threshold, so weak co-writing is not thrown away.
 Output: data/processed/topic_network_lift_periods.json (aggregates only).
 Run from the repo root:  ./.venv-nlp/bin/python seedoils/notebooks/topic_network_lift_periods.py [n_null]"""
@@ -20,7 +20,8 @@ from scipy.sparse import csr_matrix
 sys.path.insert(0, str(Path(__file__).parent))
 from seedoil_common import not_bot, SPLIT_TS, THEMES_FILE  # noqa: E402
 
-P, RAW = Path("seedoils/data/processed"), Path("seedoils/data/raw")
+P, RAW = Path("seedoils/data/processed"), Path("seedoils/data/raw_haoyu")  # 27 Nov: reference raw data (the rerun); outliers.py table below
+REB = Path("seedoils/data/processed_rebuild_prob")
 N_NULL = int(sys.argv[1]) if len(sys.argv) > 1 else 200
 N_BOOT = 400
 cauth, pauth = {}, {}
@@ -30,7 +31,9 @@ with gzip.open(glob.glob(str(RAW / "*StopEatingSeedOils_comments.jsonl.gz"))[0],
 with gzip.open(glob.glob(str(RAW / "*StopEatingSeedOils_posts.jsonl.gz"))[0], "rt", encoding="utf-8") as f:
     for l in f:
         x = json.loads(l); pauth[x["id"]] = x.get("author") or ""
-D = pd.read_csv(P / "seso_doc_topics.csv.gz", usecols=["id", "kind", "created_utc", "topic"]); D["id"] = D.id.astype(str)
+D = pd.read_csv(REB / "seso_doc_topics_official005.csv.gz", usecols=["id", "created_utc", "topic"]); D["id"] = D.id.astype(str)
+# 27 Nov: ONLY documents with a confident topic = BERTopic's reduce_outliers (probabilities strategy, threshold 0.05; outliers_official.py); outliers below it (topic -1, 28.8% of documents) are not used
+D = D[D.topic >= 0].copy(); _k = pd.read_csv(REB / "seso_doc_topics.csv.gz", usecols=["id", "kind"]); D["kind"] = D.id.map(dict(zip(_k.id.astype(str), _k.kind)))
 D["a"] = np.where(D.kind == "comment", D.id.map(cauth), D.id.map(pauth))
 D = D[D.a.notna() & (D.a != "") & ~D.a.isin(["[deleted]", "AutoModerator"]) & not_bot(D.a.fillna(""))]
 K = int(D.topic.max()) + 1; IU = np.triu_indices(K, 1)
@@ -90,7 +93,7 @@ SETS = {
     "Omega-6 / PUFA - Keto, carbs, fasting": sel(lambda a, b: {a, b} == {"Omega-6 / PUFA biochemistry", "Keto, carbs, fasting"}),
     "Omega-6 / PUFA - Studies and evidence": sel(lambda a, b: {a, b} == {"Omega-6 / PUFA biochemistry", "Studies and evidence"}),
     "Saturated-fat topic (4) - all other topics": np.array([4 in (int(i), int(j)) for i, j in zip(*IU)]),
-    "the 299 all-years links": np.array([(int(i), int(j)) in ALL_LINKS for i, j in zip(*IU)]),
+    "the all-years links": np.array([(int(i), int(j)) in ALL_LINKS for i, j in zip(*IU)]),
 }
 # theme names in the selections above use the short theme name (text before " (")
 for k in list(SETS):
@@ -112,7 +115,7 @@ for label, docs, seed in (("before 2024", D[D.created_utc < SPLIT_TS], 1), ("fro
     per_link[label] = {(int(i), int(j)): (float(O[k]), float(E[k])) for k, (i, j) in enumerate(zip(*IU)) if (int(i), int(j)) in ALL_LINKS}
     print(label, "people", len(rows), flush=True)
 
-# the 299 all-years links: change in lift per link (pairs with at least 3 expected co-writers in both periods)
+# the all-years links: change in lift per link (pairs with at least 3 expected co-writers in both periods)
 rows = []
 for (i, j) in ALL_LINKS:
     (o1, e1), (o2, e2) = per_link["before 2024"][(i, j)], per_link["from 2024"][(i, j)]
