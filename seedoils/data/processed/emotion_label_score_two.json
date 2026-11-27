@@ -1,0 +1,295 @@
+{
+ "n": 130.0,
+ "between_labellers": {
+  "neg": {
+   "agree_pct": 71.538,
+   "kappa": 0.405,
+   "agree_pct_weighted": 72.703,
+   "kappa_weighted": 0.394,
+   "zwn_pct_weighted": 26.196,
+   "hyc_pct_weighted": 39.629,
+   "kappa_ci": [
+    0.271,
+    0.551
+   ],
+   "kappa_weighted_ci": [
+    0.163,
+    0.604
+   ]
+  },
+  "pos": {
+   "agree_pct": 83.846,
+   "kappa": 0.456,
+   "agree_pct_weighted": 86.049,
+   "kappa_weighted": 0.48,
+   "zwn_pct_weighted": 15.814,
+   "hyc_pct_weighted": 16.112,
+   "kappa_ci": [
+    0.239,
+    0.651
+   ],
+   "kappa_weighted_ci": [
+    0.222,
+    0.709
+   ]
+  },
+  "amb": {
+   "agree_pct": 77.692,
+   "kappa": 0.465,
+   "agree_pct_weighted": 88.196,
+   "kappa_weighted": 0.655,
+   "zwn_pct_weighted": 22.891,
+   "hyc_pct_weighted": 20.809,
+   "kappa_ci": [
+    0.317,
+    0.604
+   ],
+   "kappa_weighted_ci": [
+    0.428,
+    0.815
+   ]
+  },
+  "neutral_or_none": {
+   "agree_pct": 75.385,
+   "kappa": 0.315
+  }
+ },
+ "model_vs": {
+  "Z.W.N.": {
+   "neg": {
+    "model_pct": 8.017,
+    "human_pct": 26.196,
+    "precision": 0.637,
+    "recall": 0.195,
+    "kappa": 0.201,
+    "precision_ci": [
+     0.458,
+     0.797
+    ],
+    "recall_ci": [
+     0.124,
+     0.338
+    ],
+    "kappa_ci": [
+     0.08,
+     0.392
+    ]
+   },
+   "pos": {
+    "model_pct": 21.162,
+    "human_pct": 15.814,
+    "precision": 0.466,
+    "recall": 0.624,
+    "kappa": 0.43,
+    "precision_ci": [
+     0.267,
+     0.659
+    ],
+    "recall_ci": [
+     0.389,
+     0.953
+    ],
+    "kappa_ci": [
+     0.197,
+     0.652
+    ]
+   },
+   "amb": {
+    "model_pct": 10.472,
+    "human_pct": 22.891,
+    "precision": 0.536,
+    "recall": 0.245,
+    "kappa": 0.225,
+    "precision_ci": [
+     0.361,
+     0.715
+    ],
+    "recall_ci": [
+     0.149,
+     0.423
+    ],
+    "kappa_ci": [
+     0.078,
+     0.441
+    ]
+   }
+  },
+  "H.-Y.C.": {
+   "neg": {
+    "model_pct": 8.017,
+    "human_pct": 39.629,
+    "precision": 0.808,
+    "recall": 0.163,
+    "kappa": 0.16,
+    "precision_ci": [
+     0.642,
+     0.927
+    ],
+    "recall_ci": [
+     0.119,
+     0.233
+    ],
+    "kappa_ci": [
+     0.078,
+     0.278
+    ]
+   },
+   "pos": {
+    "model_pct": 21.162,
+    "human_pct": 16.112,
+    "precision": 0.514,
+    "recall": 0.675,
+    "kappa": 0.49,
+    "precision_ci": [
+     0.329,
+     0.686
+    ],
+    "recall_ci": [
+     0.489,
+     0.901
+    ],
+    "kappa_ci": [
+     0.286,
+     0.674
+    ]
+   },
+   "amb": {
+    "model_pct": 10.472,
+    "human_pct": 20.809,
+    "precision": 0.755,
+    "recall": 0.38,
+    "kappa": 0.426,
+    "precision_ci": [
+     0.586,
+     0.897
+    ],
+    "recall_ci": [
+     0.25,
+     0.658
+    ],
+    "kappa_ci": [
+     0.25,
+     0.664
+    ]
+   }
+  },
+  "consensus (both ticked)": {
+   "neg": {
+    "model_pct": 8.017,
+    "human_pct": 19.264,
+    "precision": 0.621,
+    "recall": 0.258,
+    "kappa": 0.284,
+    "precision_ci": [
+     0.439,
+     0.783
+    ],
+    "recall_ci": [
+     0.153,
+     0.468
+    ],
+    "kappa_ci": [
+     0.13,
+     0.505
+    ]
+   },
+   "pos": {
+    "model_pct": 21.162,
+    "human_pct": 8.988,
+    "precision": 0.309,
+    "recall": 0.728,
+    "kappa": 0.352,
+    "precision_ci": [
+     0.131,
+     0.485
+    ],
+    "recall_ci": [
+     0.433,
+     1.0
+    ],
+    "kappa_ci": [
+     0.136,
+     0.548
+    ]
+   },
+   "amb": {
+    "model_pct": 10.472,
+    "human_pct": 15.948,
+    "precision": 0.447,
+    "recall": 0.293,
+    "kappa": 0.261,
+    "precision_ci": [
+     0.27,
+     0.621
+    ],
+    "recall_ci": [
+     0.162,
+     0.61
+    ],
+    "kappa_ci": [
+     0.09,
+     0.516
+    ]
+   }
+  },
+  "either ticked": {
+   "neg": {
+    "model_pct": 8.017,
+    "human_pct": 46.561,
+    "precision": 0.824,
+    "recall": 0.142,
+    "kappa": 0.122,
+    "precision_ci": [
+     0.657,
+     0.939
+    ],
+    "recall_ci": [
+     0.107,
+     0.201
+    ],
+    "kappa_ci": [
+     0.054,
+     0.224
+    ]
+   },
+   "pos": {
+    "model_pct": 21.162,
+    "human_pct": 22.938,
+    "precision": 0.671,
+    "recall": 0.619,
+    "kappa": 0.543,
+    "precision_ci": [
+     0.494,
+     0.832
+    ],
+    "recall_ci": [
+     0.443,
+     0.846
+    ],
+    "kappa_ci": [
+     0.33,
+     0.735
+    ]
+   },
+   "amb": {
+    "model_pct": 10.472,
+    "human_pct": 27.752,
+    "precision": 0.844,
+    "recall": 0.319,
+    "kappa": 0.366,
+    "precision_ci": [
+     0.702,
+     0.958
+    ],
+    "recall_ci": [
+     0.22,
+     0.491
+    ],
+    "kappa_ci": [
+     0.217,
+     0.572
+    ]
+   }
+  }
+ }
+}

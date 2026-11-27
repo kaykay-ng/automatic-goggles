@@ -40,6 +40,7 @@ seedoils/data/raw/
 seedoils/data/processed/*_docs.csv.gz
 seedoils/data/processed/*_vectors.npy
 seedoils/data/processed/*_doc_topics.csv.gz
+seedoils/data/processed/*_doc_topics_official*.csv.gz
 seedoils/data/processed/seed_authors*.csv
 seedoils/data/processed/citations.csv.gz
 seedoils/data/processed/stance_sheet*.csv
@@ -120,3 +121,6 @@ seedoils/data/processed_rebuild_prob/
 !seedoils/figures/*.pdf
 !paper/pnas_template/PNAS_Logo.pdf
 seedoils/data/processed_rebuild_model/
+
+# seed-oil emotion hand-check pages hold Reddit text: keep local
+seedoils/label_emotions*.html

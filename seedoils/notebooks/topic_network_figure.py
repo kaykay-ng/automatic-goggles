@@ -23,8 +23,20 @@ plt.rcParams.update({"text.usetex": __import__("shutil").which("latex") is not N
 P = Path("seedoils/data/processed")
 T = json.loads((P / "topic_cooccurrence_network.json").read_text()); C = json.loads((P / "topic_network_centrality.json").read_text())
 nodes = {n["topic"]: n for n in T["nodes"]}; lay = {int(k): np.array(v, float) for k, v in C["layout"].items()}
-COL = dict(zip(C["coloured_communities"], ["#2a78d6", "#eb6834", "#1baf7a"])); GREY, EDGE = "#b9b8b0", "#cfcec7"
+# 27 Nov (after the 0.05 rerun): colour the four large Louvain communities and the politics community, named as in the paper's Results
+# (the saved names/colours in topic_network_centrality.json predate the rerun). Palette checked with the dataviz validator (CVD-safe).
+_cnt = {}
+for _v in C["layout"]:
+    _c = nodes[int(_v)]["community"]; _cnt[_c] = _cnt.get(_c, 0) + 1
+_big = sorted(_cnt, key=lambda c: -_cnt[c])[:4]
+_pol = max(_cnt, key=lambda c: sum(1 for _v in C["layout"] if nodes[int(_v)]["community"] == c and nodes[int(_v)]["theme"] == "Politics"))
+COLOURED = _big + ([_pol] if _pol not in _big else [])
+COL = dict(zip(COLOURED, ["#2a78d6", "#eb6834", "#1baf7a", "#8e5bd0", "#c9334f"])); GREY, EDGE = "#b9b8b0", "#cfcec7"
+NAMES = {}  # filled from each community's topics below (matches the Results text)
+SPREAD = 0.3  # after the relayout, each community also moved outward a little as a block: position + SPREAD * (community centre - network centre)
+INTER = 0.25  # relayout: a link between two communities pulls with this weight, a link inside a community with 1 (spring layout started from the saved layout)
 FS = 6.8  # label size (pt)
+LINKS_OK = "--no-isolates" in sys.argv and "--reply" not in sys.argv  # paper figure: a label may sit over links (white background, penalised) so central topics get short leaders
 NO_ISO = "--no-isolates" in sys.argv  # second version: without the 32 isolated topics (the two small linked groups kept)
 OUT = "topic_network_main" if NO_ISO else "topic_network_all_years"
 REPLY = "--reply" in sys.argv  # 27 Nov: the topic REPLY network (topic_reply_network.py) drawn the same way; colours stay the co-writing communities
@@ -53,7 +65,14 @@ def chain(g):  # order a small group along its links (start at an end)
     return order
 
 
-ASPECT = 1.9
+ASPECT = 2.3
+if not REPLY:  # community-aware relayout: same links, communities drawn as visible groups that stay connected
+    import networkx as nx
+    Gm = nx.Graph(); Gm.add_nodes_from(lay)
+    for e in T["edges_all"]:
+        if e["a"] in lay and e["b"] in lay:
+            Gm.add_edge(e["a"], e["b"], w=1.0 if nodes[e["a"]]["community"] == nodes[e["b"]]["community"] else INTER)
+    lay = {int(k): np.array(v, float) for k, v in nx.spring_layout(Gm, pos={v: lay[v] for v in lay}, weight="w", iterations=300, seed=1, k=1.6 / np.sqrt(len(lay))).items()}
 mvs = sorted(lay); M = np.array([lay[v] for v in mvs]); X = M - M.mean(0)
 evec = np.linalg.eigh(np.cov(X.T))[1][:, ::-1]; Y = X @ evec
 if np.mean([Y[i, 0] for i, v in enumerate(mvs) if nodes[v]["theme"] == "Politics"]) < 0:
@@ -65,6 +84,15 @@ if w0 / h0 < ASPECT:
     Y[:, 0] *= ASPECT * h0 / w0
 Y /= np.ptp(Y[:, 1])  # height 1
 pos = {v: Y[i].copy() for i, v in enumerate(mvs)}
+if SPREAD and not REPLY:  # spread the communities apart without breaking them up: each keeps its own shape and all links are kept
+    g0 = np.mean([pos[v] for v in mvs], axis=0); cc = {}
+    for v in mvs:
+        cc.setdefault(nodes[v]["community"], []).append(v)
+    for c_, vs in cc.items():
+        d_ = np.mean([pos[v] for v in vs], axis=0) - g0
+        for v in vs:
+            pos[v] = pos[v] + SPREAD * d_
+    Y = np.array([pos[v] for v in mvs]); Y -= Y.mean(0); sc_ = np.ptp(Y[:, 1]); Y /= sc_; pos = {v: Y[i].copy() for i, v in enumerate(mvs)}
 xmin, ymin = Y.min(0); xmax, ymax = Y.max(0); cen = np.array([(xmin + xmax) / 2, (ymin + ymax) / 2]); WD, HT = xmax - xmin, ymax - ymin
 groups = sorted(C["small_components"], key=len)
 iso = [n["topic"] for n in T["nodes"] if n["degree_all"] == 0]
@@ -216,7 +244,10 @@ def place(v, max_dist, outward=False, relax=False):
             bx = (x0 - PAD, y0 - PAD, x0 + w + PAD, y0 + h + PAD)
             if bx[0] < fx0 or bx[1] < fy0 or bx[2] > fx1 or bx[3] > fy1:
                 continue
-            if any(box_hits_circle(bx, px[u], rad[u]) for u in pos) or any(seg_hits_box(p, q, bx) for p, q in seg):
+            if any(box_hits_circle(bx, px[u], rad[u]) for u in pos):
+                continue
+            over = sum(seg_hits_box(p, q, bx) for p, q in seg) if LINKS_OK else 0
+            if over and not LINKS_OK:
                 continue
             if any(not (bx[2] < o[0] or bx[0] > o[2] or bx[3] < o[1] or bx[1] > o[3]) for o in placed) or any(seg_hits_box(a_, b_, bx) for a_, b_ in leaders):
                 continue
@@ -226,7 +257,9 @@ def place(v, max_dist, outward=False, relax=False):
             if any(seg_cross(start, anchor, a_, b_) for a_, b_ in leaders) or any(seg_hits_box(start, anchor, o) for o in placed):
                 continue
             cross = sum(seg_cross(start, anchor, p, q) for p, q in seg if not (np.allclose(p, c) or np.allclose(q, c)))
-            score = (cross * 25 + dist, cross)
+            if not LINKS_OK and any(seg_hits_box(p, q, bx) for p, q in seg):
+                continue
+            score = (cross * 25 + over * 12 + dist, cross + over)
             if best is None or score < best[0]:
                 best = (score, bx, start, anchor, dist)
         if best is not None and best[0][1] == 0:
@@ -237,7 +270,7 @@ def place(v, max_dist, outward=False, relax=False):
         missing.append(v); return
     _, bx, start, anchor, dist = best; placed.append(bx)
     inv = tr.inverted(); tx, ty = inv.transform((bx[0] + PAD, bx[1] + PAD))
-    ax.text(tx, ty, txt, fontsize=FS, ha="left", va="bottom", zorder=4, color="#0b0b0b")
+    ax.text(tx, ty, txt, fontsize=FS, ha="left", va="bottom", zorder=4, color="#0b0b0b", bbox=dict(facecolor="white", edgecolor="none", pad=0.4, alpha=0.9) if LINKS_OK else None)
     if dist > rad[v] + 7:
         leaders.append((start, anchor)); (sx_, sy_), (ex_, ey_) = inv.transform(start), inv.transform(anchor)
         ax.plot([sx_, ex_], [sy_, ey_], color="#7a7974", lw=0.45, zorder=1.5)  # above the links, below the circles
@@ -246,15 +279,23 @@ def place(v, max_dist, outward=False, relax=False):
 for v in ring_labels:  # ring first, close to their circles and outward, so the inside stays free for the network labels
     place(v, rad[v] + (60 if NO_ISO else 16), outward=not NO_ISO)
 for v in main_labels:
-    place(v, 420 if NO_ISO else 170)  # full version: shorter leaders, so no label ends up far from its circle
+    place(v, 110 if NO_ISO else 170)  # full version: shorter leaders, so no label ends up far from its circle
 print("small groups along their links:", [chain(g) for g in groups], "| non-neighbour links:", sum(1 for g in groups for x in g for y in gadj[x] & set(g) if abs(chain(g).index(x) - chain(g).index(y)) > 1) // 2)
 print(f"labels placed: {len(placed)} of {len(ring_labels) + len(main_labels)}; leaders {len(leaders)}; no spot for: "
       + ", ".join(f"[{v}] {nodes[v]['words'].split(', ')[0]}" for v in missing))
 
-names = {int(k): v for k, v in C["community_names"].items()}
-hand = [Line2D([], [], marker="o", ls="", ms=5, color=COL[c], label=names[c]) for c in C["coloured_communities"]] + \
+def cname(c):  # name from the community's topics, as in the Results text
+    w = {nodes[v]["words"].split(", ")[0] for v in lay if nodes[v]["community"] == c}
+    if "rfk-jr" in w or "trump" in w: return "Politics and vaccines"
+    if "pufa" in w and "olive-oil" in w: return "Specific oils and omega-6"
+    if "ldl" in w and "keto" in w: return "Keto, saturated fat, cholesterol and calories"
+    if "seed-oil" in w and "science" in w: return "Seed-oil talk, science, doctors and money"
+    if "butter" in w and "tallow" in w: return "Cooking fats, other diets and shopping"
+    return f"community {c}"
+names = {c: cname(c) for c in COLOURED}
+hand = [Line2D([], [], marker="o", ls="", ms=5, color=COL[c], label=names[c]) for c in COLOURED] + \
        [Line2D([], [], marker="o", ls="", ms=5, color=GREY, label="other topic communities" + ("" if NO_ISO else " (at the sides: topics with no significant link)"))]
-fig.legend(handles=hand, loc="lower center", ncol=2, frameon=False, fontsize=8, bbox_to_anchor=(0.5, 0.0), handletextpad=0.3, columnspacing=2.0)
+fig.legend(handles=hand, loc="lower center", ncol=3, frameon=False, fontsize=8, bbox_to_anchor=(0.5, 0.0), handletextpad=0.3, columnspacing=2.0)
 for ext in ("pdf", "png"):
     fig.savefig(f"seedoils/figures/{OUT}.{ext}", dpi=300)
 print(f"wrote seedoils/figures/{OUT}.pdf / .png")
