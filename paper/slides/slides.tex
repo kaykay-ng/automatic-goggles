@@ -1,0 +1,72 @@
+% 3 slides for the 2 Dec presentation (3 minutes + questions). One slide per page, no animations. Build: ./paper/slides/compile_slides.sh
+\documentclass[aspectratio=169,10pt]{beamer}
+\usepackage{lmodern}\usepackage[T1]{fontenc}
+\graphicspath{{./}{../figures/}}  % slide figures here; the network figure from the paper
+\definecolor{ink}{HTML}{1F2933}\definecolor{accent}{HTML}{2A6FDB}\definecolor{warm}{HTML}{B5482A}\definecolor{soft}{HTML}{5B6770}
+\setbeamercolor{normal text}{fg=ink}\setbeamercolor{frametitle}{fg=ink}\setbeamercolor{structure}{fg=accent}
+\setbeamertemplate{navigation symbols}{}\setbeamertemplate{footline}{}
+\setbeamerfont{frametitle}{series=\bfseries,size=\Large}
+\setbeamertemplate{frametitle}{\vspace{4pt}\insertframetitle\par\vspace{-2pt}{\color{accent}\rule{\textwidth}{1.2pt}}}
+\setbeamertemplate{itemize item}{\color{accent}\textbullet}
+\setlength{\leftmargini}{1em}
+\newcommand{\key}[1]{{\color{warm}\textbf{#1}}}
+\begin{document}
+
+% ---------------------------------------------------------------- slide 1
+\begin{frame}{When a seed-oil community tripled, what did it talk about?}
+\begin{columns}[T]
+\begin{column}{0.55\textwidth}
+\textbf{Question.} r/StopEatingSeedOils grew \key{3$\times$} from 2023 to 2024. Did its conversation change: which topics grew or shrank, and when? (Not: what caused it.)\\[5pt]
+\textbf{Data.} \key{149\,815} comments and posts, 19\,356 accounts, 2018--2026.\\[5pt]
+\textbf{Course tools: text and networks}
+\begin{itemize}\setlength{\itemsep}{1pt}
+\item \textbf{Topic model} (BERTopic): 123 topics, followed \key{by quarter}
+\item \textbf{Co-writing network}: topics linked when the same people write in both
+\item \textbf{Emotions}: a model trained on Reddit comments
+\end{itemize}
+\end{column}
+\begin{column}{0.41\textwidth}
+\colorbox{accent!8}{\parbox{0.94\linewidth}{\small\textbf{Can we trust the topics?}\\[3pt]
+\key{71\%} of documents get a topic; 29\% stay untagged.\\[3pt]
+We read \key{150} comments: \key{80\%} fit their topic, the same for documents the clustering placed itself and for those rescued with confidence $\geq$ 0.02.}}
+\end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------- slide 2
+\begin{frame}{Core held; politics spiked; negative emotion stepped up}
+\begin{columns}[T]
+\begin{column}{0.53\textwidth}
+\includegraphics[width=\linewidth]{slides_fig1.pdf}
+\end{column}
+\begin{column}{0.44\textwidth}
+\footnotesize
+\begin{itemize}\setlength{\itemsep}{3pt}
+\item Activity grew $\sim$\key{10$\times$}, yet most large topics kept their share; the omega-6 core fell from 12--14\% to \key{3.9\%} and recovered
+\item \textbf{Politics, vaccines, food industry} spiked in Q3--Q4 2024 and faded within \key{two quarters}
+\item \textbf{Negative emotion} was flat in 2022--23, then \textbf{stepped up in 2024} (6.3\% $\to$ 8.2\% of documents by mid-year) and crept up to $\sim$9.5\%; mostly \textbf{within} topics, not tied to the political spike
+\end{itemize}
+\vspace{1pt}
+\includegraphics[width=0.88\linewidth]{slides_fig_emotion.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------- slide 3
+\begin{frame}{Politics became its own cluster, old and new alike}
+\begin{columns}[T]
+\begin{column}{0.60\textwidth}
+\includegraphics[width=\linewidth]{topic_network_main.pdf}\\[-1pt]
+{\scriptsize Topics linked when the same people write in both (more than in 500 random shuffles); circle size = documents; colours = topic communities (Louvain). \textcolor{red}{Red: politics and vaccines}, a separate cluster: 7 of its 11 links stay inside.}
+\end{column}
+\begin{column}{0.37\textwidth}
+\small
+\begin{itemize}\setlength{\itemsep}{5pt}
+\item Before 2024 the political topics shared no audience (lift 0.87); from 2024 they did (\key{1.67})
+\item Written by \textbf{newcomers (1.89) and long-time members (1.39) alike}, and kept apart from the food and fat topics
+\item \textbf{Limits.} We describe, not explain; readers agree only moderately on emotion; a conservative emotion model
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+\end{document}
