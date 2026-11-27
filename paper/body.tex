@@ -30,15 +30,9 @@ A second method, LDA with 123 topics, agrees only in part: its topics are less c
 The clustering step places 61.2\% of all documents in a topic on its own and leaves the rest as outliers. We rescue some outliers by giving each one the topic it matches best, but only if the model's confidence in that topic reaches 0.05; the others stay untagged. A rescued document is only useful if it really belongs to its new topic, so we checked this by reading. Z.W.N.\ read 150 comments, 30 from each of five groups, shuffled and with the group hidden: documents the clustering placed in a topic itself (the baseline), and rescued outliers in four bands of model confidence (at least 0.10, 0.05 to 0.10, 0.02 to 0.05 and 0.01 to 0.02), drawn across all 123 topics. For each comment the reader saw the topic's top words and judged whether the comment fits the topic. The reader did not choose any topics; the topics come from the model, and the question is how often a person agrees with them.
 
 \begin{table}[t]\centering
-\caption{\textbf{Do documents fit the topic they were given?} Z.W.N.\ judged 30 comments per group (Wilson 95\% intervals); ``partly'' counts comments judged partly fitting. Confidence is the model's highest topic probability for a rescued outlier.}\label{tab:fit}
-\small\begin{tabular}{@{}lrcc@{}}\hline
-Group & Documents & Fit (95\% interval) & Fit or partly\\\hline
-Placed by the clustering & 91{,}629 & 80\% (63--90) & 100\%\\
-Rescued, confidence $\geq$ 0.10 & 4{,}069 & 80\% (63--90) & 93\%\\
-Rescued, 0.05 to 0.10 & 11{,}017 & 80\% (63--90) & 97\%\\
-Rescued, 0.02 to 0.05 & 18{,}261 & 80\% (63--90) & 93\%\\
-Rescued, 0.01 to 0.02 & 10{,}101 & 67\% (49--81) & 87\%\\\hline
-\end{tabular}\end{table}
+\caption{\textbf{Do documents fit the topic they were given?} Z.W.N.\ judged 30 comments per group (CI: Wilson 95\% interval); ``partly'' counts comments judged partly fitting. ``Rescued'' bands give the model's highest topic probability for an outlier.}\label{tab:fit}
+\includegraphics[width=\columnwidth]{figures/table1_fit.pdf}
+\end{table}
 
 Rescued documents fit their topic as often as those the clustering placed itself in every confidence band from 0.02 upward (Table~\ref{tab:fit}); only the band from 0.01 to 0.02 is lower. Weighted by band size, the 15{,}086 outliers rescued at 0.05 or above (71.2\% of documents with a topic) and the 33{,}347 rescued at 0.02 or above (83.4\%) both fit 80\% of the time (intervals 68--90\% and 70--88\%). With 30 comments per group the check cannot see differences under about 13 points, so it supports 0.05 as a safe choice without showing it to be the only good one.
 
