@@ -1,0 +1,172 @@
+{
+ "original": {
+  "Politics (RFK, Trump, left/right)": [
+   98,
+   47,
+   97,
+   89
+  ],
+  "Vaccines and COVID": [
+   26
+  ],
+  "Distrust of industry, medicine and media": [
+   73,
+   37,
+   46,
+   109
+  ],
+  "Omega-6 / PUFA biochemistry": [
+   1,
+   77
+  ],
+  "Keto, carbs, fasting": [
+   27,
+   60,
+   59
+  ],
+  "Other diets (vegan, carnivore, ancestral, Mediterranean)": [
+   30,
+   74,
+   72,
+   86,
+   118
+  ],
+  "Studies and evidence": [
+   17,
+   33
+  ],
+  "Shopping (stores, chips, avocado oil)": [
+   19,
+   6,
+   8
+  ],
+  "Ingredient labels and processed food": [
+   57,
+   56,
+   81
+  ],
+  "Lifestyle (smoking, skin and sun, mental health, allergies, pets)": []
+ },
+ "clear_additions": {
+  "Politics (RFK, Trump, left/right)": [],
+  "Vaccines and COVID": [],
+  "Distrust of industry, medicine and media": [],
+  "Omega-6 / PUFA biochemistry": [
+   4,
+   2,
+   112,
+   110
+  ],
+  "Keto, carbs, fasting": [
+   58,
+   14,
+   92
+  ],
+  "Other diets (vegan, carnivore, ancestral, Mediterranean)": [
+   11,
+   12,
+   69,
+   107,
+   62
+  ],
+  "Studies and evidence": [],
+  "Shopping (stores, chips, avocado oil)": [
+   95,
+   55,
+   113,
+   7,
+   61,
+   3,
+   32,
+   63,
+   64,
+   71,
+   106,
+   114,
+   91,
+   21,
+   42
+  ],
+  "Ingredient labels and processed food": [
+   121,
+   84,
+   54,
+   94,
+   120
+  ],
+  "Lifestyle (smoking, skin and sun, mental health, allergies, pets)": [
+   39,
+   10,
+   13,
+   105,
+   122,
+   87,
+   68
+  ]
+ },
+ "borderline_additions": {
+  "Politics (RFK, Trump, left/right)": [
+   93
+  ],
+  "Vaccines and COVID": [],
+  "Distrust of industry, medicine and media": [
+   99,
+   38,
+   67,
+   88,
+   100,
+   103
+  ],
+  "Omega-6 / PUFA biochemistry": [
+   20,
+   45,
+   108,
+   22,
+   35,
+   28,
+   80,
+   117,
+   49,
+   79,
+   119
+  ],
+  "Keto, carbs, fasting": [
+   25,
+   43,
+   51
+  ],
+  "Other diets (vegan, carnivore, ancestral, Mediterranean)": [
+   102,
+   18,
+   115
+  ],
+  "Studies and evidence": [
+   5
+  ],
+  "Shopping (stores, chips, avocado oil)": [
+   116,
+   52,
+   85,
+   53,
+   96,
+   65,
+   44
+  ],
+  "Ingredient labels and processed food": [
+   40
+  ],
+  "Lifestyle (smoking, skin and sun, mental health, allergies, pets)": [
+   101,
+   90,
+   70,
+   51,
+   66
+  ]
+ },
+ "note": "PROPOSAL 26 Nov for KK to confirm; picked by meaning (top words + embedding similarity to the theme), not by growth. themes_confirmed.json is unchanged.",
+ "border_removed": {
+  "Studies and evidence": [
+   39
+  ]
+ }
+}

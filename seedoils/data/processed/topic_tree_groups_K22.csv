@@ -1,0 +1,23 @@
+group,topics,docs,share_pre2024,share_from2024,ratio,largest_topics,theme_topics_inside
+22,6,18447,16.24,11.13,0.69,"1: pufa, omega-6, omega-3 | 4: fat, saturated-fat, trans | 2: ldl, cholesterol, hdl","{'(no theme)': 4, 'Omega-6 / PUFA biochemistry': 2}"
+8,13,16413,10.48,11.1,1.06,"3: olive-oil, olive, virgin | 24: oil, vegetable-oil, hexane | 9: butter, margarine, real butter","{'(no theme)': 12, 'Shopping': 1}"
+9,4,16165,9.5,11.18,1.18,"0: seed-oil, food, health | 93: seed-oil, trump, guy | 119: sugar, seed-oil, diabetes",{'(no theme)': 4}
+16,8,10193,7.13,6.7,0.94,"23: meal, cook, food | 43: fruit, rice, beef | 78: eat, taste, eating","{'(no theme)': 7, 'Ingredient labels and processed food': 1}"
+7,11,9979,6.3,6.77,1.07,"6: chip, tortilla, potato chip | 7: mayo, mayonnaise, mustard | 15: bread, flour, wheat","{'(no theme)': 10, 'Shopping': 1}"
+14,11,9240,4.86,6.56,1.35,"19: store, costco, price | 25: sugar, syrup, fructose | 57: ingredient, label, list","{'(no theme)': 8, 'Ingredient labels and processed food': 2, 'Shopping': 1}"
+18,8,8576,6.64,5.45,0.82,"11: grass, fed, beef | 12: pork, pig, lard | 30: vegan, veganism, vegan diet","{'(no theme)': 5, 'Other diets': 3}"
+4,3,8126,3.99,5.85,1.47,"5: comment, reddit, post | 17: science, study, scientific | 109: conspiracy, media, news","{'(no theme)': 1, 'Studies and evidence': 1, 'Distrust of industry': 1}"
+19,6,7462,6.99,4.38,0.63,"14: calorie, weight, gain | 27: keto, carb, ketosis | 58: insulin, glucose, diabetes","{'(no theme)': 3, 'Keto': 3}"
+15,5,5905,3.58,4.05,1.13,"33: nutrition, science, diet | 73: food, company, industry | 86: human, meat, ancestor","{'Other diets': 2, 'Studies and evidence': 1, 'Distrust of industry': 1, '(no theme)': 1}"
+6,5,5293,3.78,3.46,0.92,"34: tallow, beef tallow, beef | 21: fry, potato, french fry | 76: frying, fried, deep",{'(no theme)': 5}
+10,8,4805,4.11,2.94,0.71,"31: nut, almond, seed | 22: peanut, peanut butter, peanut oil | 48: soy, tofu, soy sauce",{'(no theme)': 8}
+5,5,4611,0.95,3.72,3.9,"46: money, capitalism, government | 98: trump, vote, president | 47: rfk-jr, trump, rape","{'Politics': 4, 'Distrust of industry': 1}"
+13,6,4334,2.85,2.91,1.02,"16: milk, raw milk, raw | 29: formula, baby, milk | 53: oat, milk, almond",{'(no theme)': 6}
+2,3,3981,1.53,3.0,1.96,"37: doctor, medical, pharma | 26: vaccine, covid, virus | 39: cancer, smoking, cigarette","{'Distrust of industry': 1, 'Vaccines and COVID': 1, '(no theme)': 1}"
+21,3,3960,3.02,2.53,0.84,"10: skin, hair, acne | 13: sun, sunscreen, skin | 101: testosterone, hormone, estrogen",{'(no theme)': 3}
+20,5,3010,2.06,1.99,0.97,"122: drug, serotonin, addiction | 105: anxiety, mental, feel | 87: allergy, allergic, symptom",{'(no theme)': 5}
+12,4,2679,1.25,1.95,1.56,"99: poison, chemical, toxic | 38: plastic, microplastic, glass | 67: water, fluoride, tooth",{'(no theme)': 4}
+3,2,2007,1.52,1.28,0.84,"50: guy, video, diet | 104: podcast, tucker, video",{'(no theme)': 2}
+17,2,1927,1.42,1.25,0.87,"18: egg, chicken, pasture | 112: egg, pufa, chicken",{'(no theme)': 2}
+1,2,1753,1.27,1.14,0.9,"82: thank, thanks, link | 83: app, email, subscription",{'(no theme)': 2}
+11,3,949,0.53,0.67,1.26,"88: organic, pesticide, farm | 100: gmo, pesticide, crop | 103: glyphosate, herbicide, crop",{'(no theme)': 3}

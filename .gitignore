@@ -107,3 +107,9 @@ conclusion_checks*.csv
 seedoils/label_positions.html
 position_labels*.csv
 seedoils/data/processed/position_sample_key.csv
+
+# Reddit text, usernames and soft-membership arrays from the 26 Nov rebuild and the teammate raw data: keep local, never commit
+seedoils/data/raw_haoyu/
+seedoils/data/raw_crosspost/
+seedoils/data/processed_rebuild/
+seedoils/data/processed_rebuild_prob/

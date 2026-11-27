@@ -1,0 +1,76 @@
+r/StopEatingSeedOils: 243,223 comments, 3,807 bot/deleted leaves pruned, 1,065 bot/deleted kept as connectors
+
+===== r/StopEatingSeedOils: 3,784 threads with >= 20 comments (923 before 2024, 2,861 from 2024); share of comments with a missing parent: 0.0%
+size bin  period        threads max depth mean depth top-level  deep>=4 virality (random) authors/cmt top3 share reciprocal
+20-49     before 2024       724         6       2.40      0.35     0.21     4.07     4.45        0.60       0.40       0.37
+20-49     from 2024        1838         6       2.21      0.40     0.17     3.84     4.45        0.65       0.35       0.35
+50-99     before 2024       163         9       2.86      0.29     0.29     5.09     5.75        0.53       0.31       0.41
+50-99     from 2024         749         8       2.56      0.34     0.24     4.67     5.75        0.60       0.27       0.37
+100-199   before 2024        31        11       3.36      0.23     0.39     6.36     6.98        0.43       0.25       0.45
+100-199   from 2024         224        11       3.23      0.29     0.35     5.99     6.98        0.53       0.22       0.41
+200+      before 2024         5        19       4.62      0.18     0.53     8.83     8.17        0.30       0.21       0.53
+200+      from 2024          50        14       3.57      0.26     0.39     6.61     8.17        0.50       0.17       0.42
+difference in median structural virality (from 2024 minus before 2024), 95% interval:
+  n 20-49: -0.23 [-0.39, -0.08]
+  n 50-99: -0.41 [-0.74, -0.20]
+  n 100-199: -0.37 [-1.14, +0.59]
+  n 200-+: -2.22 [-25.82, +1.76]
+
+--- r/StopEatingSeedOils: by post type (thread counts; medians within size bins 20-99 and 100+; virality difference from 2024 minus before, 95% interval)
+type        size bin period        threads mean depth top-level  deep>=4 virality authors/cmt
+text        20-99    before 2024       655       2.48      0.34     0.23     4.27        0.58
+text        20-99    from 2024        1347       2.33      0.39     0.19     4.09        0.62
+                     virality difference: -0.18 [-0.32, -0.01]
+text        100+     before 2024        27       3.34      0.20     0.39     6.19        0.43
+text        100+     from 2024         123       3.24      0.28     0.33     5.99        0.50
+                     virality difference: -0.19 [-1.60, +0.56]
+image/video 20-99    before 2024       131       2.41      0.35     0.20     4.10        0.62
+image/video 20-99    from 2024        1027       2.25      0.39     0.17     4.03        0.67
+                     virality difference: -0.07 [-0.46, +0.23]
+image/video 100+     before 2024         7       3.62      0.21     0.41     6.72        0.43
+image/video 100+     from 2024         130       3.17      0.31     0.35     5.98        0.57
+                     virality difference: -0.74 [-2.44, +0.77]
+link        20-99    before 2024       101       2.82      0.29     0.30     4.61        0.57
+link        20-99    from 2024         213       2.79      0.27     0.30     4.70        0.58
+                     virality difference: +0.09 [-0.23, +0.46]
+link        100+     before 2024         2   (< 5 threads)
+link        100+     from 2024          21       4.57      0.16     0.50     8.02        0.43
+post-type mix of the threads (share of threads with >= 20 comments): {('before 2024', 'text'): 0.74, ('before 2024', 'image/video'): 0.15, ('before 2024', 'link'): 0.11, ('from 2024', 'text'): 0.51, ('from 2024', 'image/video'): 0.4, ('from 2024', 'link'): 0.08}
+r/ScientificNutrition: 177,989 comments, 16,547 bot/deleted leaves pruned, 5,726 bot/deleted kept as connectors
+
+===== r/ScientificNutrition: 2,250 threads with >= 20 comments (1,455 before 2024, 795 from 2024); share of comments with a missing parent: 0.1%
+size bin  period        threads max depth mean depth top-level  deep>=4 virality (random) authors/cmt top3 share reciprocal
+20-49     before 2024      1026         9       3.71      0.17     0.45     5.44     4.37        0.40       0.57       0.53
+20-49     from 2024         503         8       3.27      0.22     0.39     4.95     4.37        0.47       0.50       0.50
+50-99     before 2024       335        15       5.50      0.10     0.63     8.59     5.77        0.26       0.54       0.63
+50-99     from 2024         197        14       5.02      0.12     0.59     8.28     5.77        0.29       0.50       0.62
+100-199   before 2024        86        20       6.85      0.07     0.71    11.40     6.97        0.22       0.49       0.67
+100-199   from 2024          79        23       7.66      0.08     0.73    12.53     6.97        0.19       0.51       0.72
+200+      before 2024         8        24       6.39      0.06     0.77    10.84     8.16        0.17       0.45       0.66
+200+      from 2024          16        42       7.87      0.07     0.73    14.02     8.16        0.18       0.44       0.69
+difference in median structural virality (from 2024 minus before 2024), 95% interval:
+  n 20-49: -0.48 [-0.68, -0.30]
+  n 50-99: -0.31 [-0.98, +0.14]
+  n 100-199: +1.13 [-0.42, +2.64]
+  n 200-+: +3.18 [-4.93, +19.25]
+
+--- r/ScientificNutrition: by post type (thread counts; medians within size bins 20-99 and 100+; virality difference from 2024 minus before, 95% interval)
+type        size bin period        threads mean depth top-level  deep>=4 virality authors/cmt
+text        20-99    before 2024       743       3.81      0.17     0.47     5.81        0.38
+text        20-99    from 2024         371       3.29      0.22     0.38     5.29        0.43
+                     virality difference: -0.52 [-0.77, -0.21]
+text        100+     before 2024        57       5.83      0.10     0.65    10.37        0.23
+text        100+     from 2024          46       7.17      0.09     0.65    12.38        0.20
+                     virality difference: +2.00 [-0.16, +3.29]
+image/video 20-99    before 2024         7       2.91      0.26     0.33     4.73        0.48
+image/video 20-99    from 2024          12       3.11      0.22     0.32     5.50        0.55
+                     virality difference: +0.78 [-1.49, +1.59]
+image/video 100+     before 2024         2   (< 5 threads)
+image/video 100+     from 2024           0   (< 5 threads)
+link        20-99    before 2024       611       4.27      0.13     0.55     5.99        0.35
+link        20-99    from 2024         317       4.15      0.16     0.51     6.01        0.39
+                     virality difference: +0.02 [-0.43, +0.37]
+link        100+     before 2024        35       8.20      0.05     0.81    13.84        0.18
+link        100+     from 2024          49       9.00      0.06     0.77    13.98        0.17
+                     virality difference: +0.14 [-2.00, +4.16]
+post-type mix of the threads (share of threads with >= 20 comments): {('before 2024', 'text'): 0.55, ('before 2024', 'link'): 0.44, ('before 2024', 'image/video'): 0.01, ('from 2024', 'text'): 0.52, ('from 2024', 'link'): 0.46, ('from 2024', 'image/video'): 0.02}

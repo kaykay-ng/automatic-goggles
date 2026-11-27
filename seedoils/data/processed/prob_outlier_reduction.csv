@@ -1,0 +1,40 @@
+threshold,theme,docs,share_before,share_from24,ratio,negative_%
+0.02,"Politics (RFK, Trump, left/right)",3416,0.63,3.36,5.38,11.5
+0.02,Vaccines and COVID,1038,0.28,1.0,3.61,11.85
+0.02,"Distrust of industry, medicine and media",7815,3.85,6.97,1.81,11.57
+0.02,Omega-6 / PUFA biochemistry,23129,23.43,17.04,0.73,6.87
+0.02,"Keto, carbs, fasting",8063,8.92,5.72,0.64,6.33
+0.02,"Other diets (vegan, carnivore, ancestral, Mediterranean)",11072,10.39,8.4,0.81,7.66
+0.02,Studies and evidence,3534,2.57,2.9,1.13,11.35
+0.02,"Shopping (stores, chips, avocado oil)",16023,11.24,13.29,1.18,7.16
+0.02,Ingredient labels and processed food,5752,3.64,4.89,1.34,9.16
+0.02,"Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",7476,5.85,6.02,1.03,7.12
+0.02,"Staple foods (milk, grains, nuts, soy, chocolate, coffee)",8559,7.43,6.68,0.9,7.57
+0.02,"Cooking and cooking fats (butter, tallow, frying)",7383,6.16,5.83,0.95,6.77
+0.02,"General talk and meta (generic seed-oil, subreddit, thanks, influencers)",21716,15.63,17.9,1.15,9.53
+0.05,"Politics (RFK, Trump, left/right)",2797,0.65,3.21,4.9,11.69
+0.05,Vaccines and COVID,1014,0.32,1.14,3.52,11.83
+0.05,"Distrust of industry, medicine and media",5649,3.25,5.9,1.82,11.59
+0.05,Omega-6 / PUFA biochemistry,21413,25.29,18.51,0.73,6.85
+0.05,"Keto, carbs, fasting",6182,7.67,5.23,0.68,6.63
+0.05,"Other diets (vegan, carnivore, ancestral, Mediterranean)",9188,10.02,8.19,0.82,7.83
+0.05,Studies and evidence,2760,2.37,2.65,1.12,11.52
+0.05,"Shopping (stores, chips, avocado oil)",14482,11.9,14.07,1.18,7.24
+0.05,Ingredient labels and processed food,4432,3.26,4.42,1.36,9.21
+0.05,"Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",6497,5.99,6.12,1.02,6.59
+0.05,"Staple foods (milk, grains, nuts, soy, chocolate, coffee)",8098,8.24,7.4,0.9,7.59
+0.05,"Cooking and cooking fats (butter, tallow, frying)",6194,6.07,5.72,0.94,6.97
+0.05,"General talk and meta (generic seed-oil, subreddit, thanks, influencers)",18009,14.97,17.44,1.17,9.62
+0.1,"Politics (RFK, Trump, left/right)",2052,0.6,2.61,4.36,11.45
+0.1,Vaccines and COVID,897,0.33,1.12,3.41,11.37
+0.1,"Distrust of industry, medicine and media",3987,2.61,4.64,1.78,11.09
+0.1,Omega-6 / PUFA biochemistry,20794,27.04,20.12,0.74,6.89
+0.1,"Keto, carbs, fasting",5491,7.51,5.2,0.69,6.79
+0.1,"Other diets (vegan, carnivore, ancestral, Mediterranean)",7897,9.41,7.9,0.84,8.02
+0.1,Studies and evidence,2253,2.1,2.43,1.16,11.5
+0.1,"Shopping (stores, chips, avocado oil)",13643,12.35,14.83,1.2,7.26
+0.1,Ingredient labels and processed food,3892,3.21,4.33,1.35,8.99
+0.1,"Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",6298,6.43,6.63,1.03,6.41
+0.1,"Staple foods (milk, grains, nuts, soy, chocolate, coffee)",7871,8.8,8.05,0.91,7.47
+0.1,"Cooking and cooking fats (butter, tallow, frying)",5515,5.93,5.71,0.96,7.02
+0.1,"General talk and meta (generic seed-oil, subreddit, thanks, influencers)",15108,13.7,16.42,1.2,9.64
