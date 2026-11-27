@@ -6,7 +6,7 @@ Outcomes per comment: hostile (GoEmotions anger/annoyance/disapproval/disgust ma
     (standardising on the other group's topic mix).
 (3) Same people over time: long-time commenters with >= 5 comments in both periods, paired change in their own share.
 Intervals: bootstrap over people (300 resamples). Run from final_project/ with the NLP env:  ./.venv-nlp/bin/python seedoils/notebooks/people_vs_topic.py   (aggregates only)"""
-from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
+from seedoil_common import is_bot, not_bot, SPLIT_TS# shared bot rule: AutoModerator + names ending in 'bot'
 import glob
 import gzip
 import json
@@ -17,7 +17,7 @@ import pandas as pd
 import scipy.sparse as sp
 from scipy.sparse.linalg import lsqr
 
-P = Path("seedoils/data/processed"); CUT = 1704067200; rng = np.random.default_rng(0)
+P = Path("seedoils/data/processed"); CUT = SPLIT_TS; rng = np.random.default_rng(0)
 raw = {}
 with gzip.open(glob.glob("seedoils/data/raw/*StopEatingSeedOils_comments.jsonl.gz")[0], "rt", encoding="utf-8") as f:
     for l in f:

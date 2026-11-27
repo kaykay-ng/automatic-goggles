@@ -5,19 +5,19 @@
 
 \dropcap{I}n 2024 the Reddit community built around the claim that seed oils are toxic grew about threefold, and its conversation turned towards politics. What did that community talk about before and after the surge, and which topics gave way?
 
-\section*{Introduction}
+% PNAS: no 'Introduction' heading; the introduction follows the opening paragraph directly
 Online health communities are where contested claims about food are argued out, yet we rarely see how the conversation of such a community changes when it suddenly grows. r/StopEatingSeedOils, a subreddit devoted to the claim that seed oils (soybean, canola, sunflower and similar) harm health, is a clean case: posts and comments per year rose from 39{,}454 in 2023 to 118{,}433 in 2024. We ask a descriptive question: what was discussed before and after the surge, which topics grew, which shrank, and when? We do not ask what caused the surge.
 
 We answer it with a topic model of 149{,}815 comments and self-posts, grouped by hand into 14 themes. Topic modelling of text with BERTopic \cite{grootendorst2022bertopic} and LDA \cite{blei2003lda} is standard; the step of turning topics into categories by reading them, and setting cut-offs by reading samples, is adapted from Kardos \cite{kardos2023unsupervised}, and the design of setting online opinion against what is known comes from an analysis of sleep-training claims by The Pudding (TODO: cite). The theme scheme, the outlier rule and the hand checks are ours, and we report them as design choices with checks next to each claim.
 
 In short: politics, vaccines and distrust of industry grew, fatty-acid biochemistry shrank, and the political wave faded within a year.
 
-% \Endparasplit ends the first-page column setting from main.tex: move it to the end of the paragraphs that fill the first page.
-\Endparasplit
 
 \section*{Results}
 \subsection*{The conversation moved from fatty-acid chemistry towards politics, vaccines and distrust}
 Of the 149{,}815 documents, 106{,}715 (71.2\%) sit in a theme under our outlier rule (Methods); the same share is kept before and after 2024. Politics grew from 0.65\% of themed documents before 2024 to 3.21\% from 2024 ($\times$4.9), vaccines and COVID from 0.32\% to 1.14\% ($\times$3.5), distrust of industry, medicine and media from 3.25\% to 5.90\% ($\times$1.8) and ingredient labels from 2.37\% to 3.39\% ($\times$1.4) (Fig.~\ref{fig:themes}B). Fatty-acid biochemistry (omega-6 and PUFA) fell from 19.1\% to 12.8\% ($\times$0.67) and keto, carbs and fasting from 7.9\% to 5.5\% ($\times$0.69). Eight other themes moved by less than 20\%, including shopping ($\times$1.13), specific oils ($\times$1.09) and lifestyle ($\times$1.01).
+% \Endparasplit ends the first-page column setting from main.tex: move it to the end of the paragraphs that fill the first page.
+\Endparasplit
 
 The timing differs by theme (Fig.~\ref{fig:themes}A). Politics averaged 0.7\% of themed documents in 2023, 7.2\% from August to December 2024 (peak 14.1\% in November 2024), 2.3\% in 2025 and 1.1\% in January to October 2026. Vaccines followed the same shape (0.3\%, 1.8\%, 0.9\%, 0.4\%). Distrust rose and stayed above its starting level (3.5\%, 6.9\%, 5.1\%, 4.9\%). Biochemistry fell to 10.0\% in late 2024 and recovered to 14.4\% in 2026, so the loss is partly temporary.
 
@@ -55,4 +55,4 @@ The limitations we found ourselves are three. First, the 14 themes are hand-made
 \showmatmethods{}
 
 
-\bibliography{references}
+% (the bibliography is set in main.tex and preview.tex)

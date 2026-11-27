@@ -1,0 +1,483 @@
+{
+ "n_null": 500,
+ "n_boot": 400,
+ "periods": {
+  "before 2024": {
+   "people": 2425,
+   "sets": {
+    "within the same theme": {
+     "pairs": 603,
+     "observed": 16169,
+     "expected": 14742.5,
+     "lift": 1.1,
+     "ci95": [
+      0.92,
+      1.28
+     ]
+    },
+    "between different themes": {
+     "pairs": 6900,
+     "observed": 170861,
+     "expected": 172287.5,
+     "lift": 0.99,
+     "ci95": [
+      0.83,
+      1.17
+     ]
+    },
+    "Politics - Politics": {
+     "pairs": 10,
+     "observed": 36,
+     "expected": 38.7,
+     "lift": 0.93,
+     "ci95": [
+      0.52,
+      1.37
+     ]
+    },
+    "Politics - Distrust of industry, medicine and media": {
+     "pairs": 50,
+     "observed": 404,
+     "expected": 403.2,
+     "lift": 1.0,
+     "ci95": [
+      0.73,
+      1.28
+     ]
+    },
+    "Politics - Vaccines and COVID": {
+     "pairs": 5,
+     "observed": 31,
+     "expected": 30.8,
+     "lift": 1.01,
+     "ci95": [
+      0.58,
+      1.46
+     ]
+    },
+    "Politics - Studies and evidence": {
+     "pairs": 10,
+     "observed": 185,
+     "expected": 161.4,
+     "lift": 1.15,
+     "ci95": [
+      0.9,
+      1.41
+     ]
+    },
+    "Politics - food, diet and shopping themes": {
+     "pairs": 390,
+     "observed": 3483,
+     "expected": 3784.7,
+     "lift": 0.92,
+     "ci95": [
+      0.67,
+      1.17
+     ]
+    },
+    "Omega-6 / PUFA - Omega-6 / PUFA": {
+     "pairs": 15,
+     "observed": 910,
+     "expected": 742.6,
+     "lift": 1.23,
+     "ci95": [
+      1.05,
+      1.4
+     ]
+    },
+    "Omega-6 / PUFA - Keto, carbs, fasting": {
+     "pairs": 54,
+     "observed": 2946,
+     "expected": 2525.4,
+     "lift": 1.17,
+     "ci95": [
+      1.01,
+      1.34
+     ]
+    },
+    "Omega-6 / PUFA - Studies and evidence": {
+     "pairs": 12,
+     "observed": 899,
+     "expected": 784.8,
+     "lift": 1.15,
+     "ci95": [
+      1.0,
+      1.31
+     ]
+    },
+    "Saturated-fat topic (4) - all other topics": {
+     "pairs": 122,
+     "observed": 7289,
+     "expected": 6702.9,
+     "lift": 1.09,
+     "ci95": [
+      0.95,
+      1.24
+     ]
+    },
+    "the 299 all-years links": {
+     "pairs": 299,
+     "observed": 19461,
+     "expected": 16455.6,
+     "lift": 1.18,
+     "ci95": [
+      1.04,
+      1.33
+     ]
+    }
+   }
+  },
+  "from 2024": {
+   "people": 8178,
+   "sets": {
+    "within the same theme": {
+     "pairs": 603,
+     "observed": 51391,
+     "expected": 45432.3,
+     "lift": 1.13,
+     "ci95": [
+      1.04,
+      1.23
+     ]
+    },
+    "between different themes": {
+     "pairs": 6900,
+     "observed": 556709,
+     "expected": 562667.7,
+     "lift": 0.99,
+     "ci95": [
+      0.9,
+      1.08
+     ]
+    },
+    "Politics - Politics": {
+     "pairs": 10,
+     "observed": 1111,
+     "expected": 708.7,
+     "lift": 1.57,
+     "ci95": [
+      1.39,
+      1.76
+     ]
+    },
+    "Politics - Distrust of industry, medicine and media": {
+     "pairs": 50,
+     "observed": 4292,
+     "expected": 3954.7,
+     "lift": 1.09,
+     "ci95": [
+      0.97,
+      1.21
+     ]
+    },
+    "Politics - Vaccines and COVID": {
+     "pairs": 5,
+     "observed": 501,
+     "expected": 407.7,
+     "lift": 1.23,
+     "ci95": [
+      1.05,
+      1.41
+     ]
+    },
+    "Politics - Studies and evidence": {
+     "pairs": 10,
+     "observed": 1261,
+     "expected": 1284.7,
+     "lift": 0.98,
+     "ci95": [
+      0.87,
+      1.09
+     ]
+    },
+    "Politics - food, diet and shopping themes": {
+     "pairs": 390,
+     "observed": 22610,
+     "expected": 27355.4,
+     "lift": 0.83,
+     "ci95": [
+      0.73,
+      0.93
+     ]
+    },
+    "Omega-6 / PUFA - Omega-6 / PUFA": {
+     "pairs": 15,
+     "observed": 2066,
+     "expected": 1449.0,
+     "lift": 1.43,
+     "ci95": [
+      1.3,
+      1.56
+     ]
+    },
+    "Omega-6 / PUFA - Keto, carbs, fasting": {
+     "pairs": 54,
+     "observed": 6058,
+     "expected": 5066.5,
+     "lift": 1.2,
+     "ci95": [
+      1.08,
+      1.31
+     ]
+    },
+    "Omega-6 / PUFA - Studies and evidence": {
+     "pairs": 12,
+     "observed": 2425,
+     "expected": 1971.5,
+     "lift": 1.23,
+     "ci95": [
+      1.12,
+      1.33
+     ]
+    },
+    "Saturated-fat topic (4) - all other topics": {
+     "pairs": 122,
+     "observed": 20142,
+     "expected": 18239.1,
+     "lift": 1.1,
+     "ci95": [
+      1.01,
+      1.2
+     ]
+    },
+    "the 299 all-years links": {
+     "pairs": 299,
+     "observed": 60348,
+     "expected": 48865.5,
+     "lift": 1.23,
+     "ci95": [
+      1.15,
+      1.31
+     ]
+    }
+   }
+  }
+ },
+ "links_compared": 293,
+ "links_stronger_pct": 68.6,
+ "median_log2_change": 0.08,
+ "strengthened_most": [
+  {
+   "a": 89,
+   "b": 97,
+   "words_a": "political, left, right, liberal",
+   "words_b": "left, political, party, right",
+   "theme_a": "Politics",
+   "theme_b": "Politics",
+   "lift_before": 0.39,
+   "lift_from": 1.69,
+   "log2_change": 2.11
+  },
+  {
+   "a": 97,
+   "b": 109,
+   "words_a": "left, political, party, right",
+   "words_b": "conspiracy, media, news, propaganda",
+   "theme_a": "Politics",
+   "theme_b": "Distrust of industry, medicine and media",
+   "lift_before": 0.9,
+   "lift_from": 1.53,
+   "log2_change": 0.76
+  },
+  {
+   "a": 26,
+   "b": 37,
+   "words_a": "vaccine, covid, virus, shot",
+   "words_b": "doctor, medical, pharma, health",
+   "theme_a": "Vaccines and COVID",
+   "theme_b": "Distrust of industry, medicine and media",
+   "lift_before": 0.77,
+   "lift_from": 1.28,
+   "log2_change": 0.73
+  },
+  {
+   "a": 60,
+   "b": 86,
+   "words_a": "carb, low carb, low, high carb",
+   "words_b": "human, meat, ancestor, ate",
+   "theme_a": "Keto, carbs, fasting",
+   "theme_b": "Other diets",
+   "lift_before": 0.93,
+   "lift_from": 1.41,
+   "log2_change": 0.6
+  },
+  {
+   "a": 57,
+   "b": 83,
+   "words_a": "ingredient, label, list, ingredient list",
+   "words_b": "app, email, subscription, free",
+   "theme_a": "Ingredient labels and processed food",
+   "theme_b": "General talk and meta",
+   "lift_before": 0.92,
+   "lift_from": 1.39,
+   "log2_change": 0.59
+  },
+  {
+   "a": 24,
+   "b": 45,
+   "words_a": "oil, vegetable-oil, hexane, lubricant",
+   "words_b": "sunflower, sunflower oil, sunflower seed, oil",
+   "theme_a": "Specific oils",
+   "theme_b": "Specific oils",
+   "lift_before": 0.87,
+   "lift_from": 1.3,
+   "log2_change": 0.58
+  },
+  {
+   "a": 69,
+   "b": 86,
+   "words_a": "red-meat, meat, cancer, processed meat",
+   "words_b": "human, meat, ancestor, ate",
+   "theme_a": "Other diets",
+   "theme_b": "Other diets",
+   "lift_before": 0.94,
+   "lift_from": 1.39,
+   "log2_change": 0.56
+  },
+  {
+   "a": 62,
+   "b": 86,
+   "words_a": "oxalate, vegetable, spinach, fruit",
+   "words_b": "human, meat, ancestor, ate",
+   "theme_a": "Other diets",
+   "theme_b": "Other diets",
+   "lift_before": 1.0,
+   "lift_from": 1.46,
+   "log2_change": 0.55
+  },
+  {
+   "a": 41,
+   "b": 42,
+   "words_a": "pan, cast iron, cast, iron",
+   "words_b": "burger, patty, steak, grill",
+   "theme_a": "Cooking and cooking fats",
+   "theme_b": "Shopping",
+   "lift_before": 0.96,
+   "lift_from": 1.38,
+   "log2_change": 0.52
+  },
+  {
+   "a": 9,
+   "b": 36,
+   "words_a": "butter, margarine, real butter, butter butter",
+   "words_b": "ghee, butter, tallow, indian",
+   "theme_a": "Cooking and cooking fats",
+   "theme_b": "Cooking and cooking fats",
+   "lift_before": 0.92,
+   "lift_from": 1.31,
+   "log2_change": 0.51
+  }
+ ],
+ "weakened_most": [
+  {
+   "a": 26,
+   "b": 98,
+   "words_a": "vaccine, covid, virus, shot",
+   "words_b": "trump, vote, president, candidate",
+   "theme_a": "Vaccines and COVID",
+   "theme_b": "Politics",
+   "lift_before": 1.72,
+   "lift_from": 1.33,
+   "log2_change": -0.38
+  },
+  {
+   "a": 30,
+   "b": 74,
+   "words_a": "vegan, veganism, vegan diet, vegetarian",
+   "words_b": "vegan, seed-oil, vegetarian, veganism",
+   "theme_a": "Other diets",
+   "theme_b": "Other diets",
+   "lift_before": 1.98,
+   "lift_from": 1.54,
+   "log2_change": -0.36
+  },
+  {
+   "a": 17,
+   "b": 104,
+   "words_a": "science, study, scientific, evidence",
+   "words_b": "podcast, tucker, video, layne",
+   "theme_a": "Studies and evidence",
+   "theme_b": "General talk and meta",
+   "lift_before": 1.52,
+   "lift_from": 1.2,
+   "log2_change": -0.35
+  },
+  {
+   "a": 17,
+   "b": 93,
+   "words_a": "science, study, scientific, evidence",
+   "words_b": "seed-oil, trump, guy, video",
+   "theme_a": "Studies and evidence",
+   "theme_b": "Politics",
+   "lift_before": 1.43,
+   "lift_from": 1.14,
+   "log2_change": -0.33
+  },
+  {
+   "a": 46,
+   "b": 109,
+   "words_a": "money, capitalism, government, profit",
+   "words_b": "conspiracy, media, news, propaganda",
+   "theme_a": "Distrust of industry, medicine and media",
+   "theme_b": "Distrust of industry, medicine and media",
+   "lift_before": 1.56,
+   "lift_from": 1.28,
+   "log2_change": -0.29
+  },
+  {
+   "a": 50,
+   "b": 93,
+   "words_a": "guy, video, diet, eats",
+   "words_b": "seed-oil, trump, guy, video",
+   "theme_a": "General talk and meta",
+   "theme_b": "Politics",
+   "lift_before": 1.68,
+   "lift_from": 1.37,
+   "log2_change": -0.29
+  },
+  {
+   "a": 5,
+   "b": 46,
+   "words_a": "comment, reddit, post, sub",
+   "words_b": "money, capitalism, government, profit",
+   "theme_a": "General talk and meta",
+   "theme_b": "Distrust of industry, medicine and media",
+   "lift_before": 1.41,
+   "lift_from": 1.18,
+   "log2_change": -0.26
+  },
+  {
+   "a": 31,
+   "b": 62,
+   "words_a": "nut, almond, seed, nut seed",
+   "words_b": "oxalate, vegetable, spinach, fruit",
+   "theme_a": "Staple foods",
+   "theme_b": "Other diets",
+   "lift_before": 1.45,
+   "lift_from": 1.21,
+   "log2_change": -0.26
+  },
+  {
+   "a": 60,
+   "b": 122,
+   "words_a": "carb, low carb, low, high carb",
+   "words_b": "drug, serotonin, addiction, effect",
+   "theme_a": "Keto, carbs, fasting",
+   "theme_b": "Lifestyle",
+   "lift_before": 1.4,
+   "lift_from": 1.19,
+   "log2_change": -0.24
+  },
+  {
+   "a": 5,
+   "b": 93,
+   "words_a": "comment, reddit, post, sub",
+   "words_b": "seed-oil, trump, guy, video",
+   "theme_a": "General talk and meta",
+   "theme_b": "Politics",
+   "lift_before": 1.28,
+   "lift_from": 1.09,
+   "log2_change": -0.23
+  }
+ ]
+}

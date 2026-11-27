@@ -6,7 +6,7 @@ Checks (comments of the 2,618 network members, as in Figure 3):
      overall change pre-2024 -> from 2024, and whether the community ranking by hostility and by change stays the same (Spearman rank correlation with the page's definition).
  (3) Writes a blinded sample (150 comments, stratified by the page's score band) for hand labelling, data/processed/hostility_sample_to_label.csv (text, so gitignored; ids only in the key file).
 Run from final_project/ with the NLP env:  ./.venv-nlp/bin/python seedoils/notebooks/hostility_robustness.py"""
-from seedoil_common import community_labels  # community names from data/processed/community_names.json (hand-written)
+from seedoil_common import community_labels, SPLIT_TS# community names from data/processed/community_names.json (hand-written)
 from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import glob
 import gzip
@@ -17,7 +17,7 @@ import numpy as np
 import pandas as pd
 from scipy.stats import spearmanr
 
-P = Path("seedoils/data/processed"); CUT = 1704067200; rng = np.random.default_rng(7)
+P = Path("seedoils/data/processed"); CUT = SPLIT_TS; rng = np.random.default_rng(7)
 raw = {}
 with gzip.open(glob.glob("seedoils/data/raw/*StopEatingSeedOils_comments.jsonl.gz")[0], "rt", encoding="utf-8") as f:
     for l in f:

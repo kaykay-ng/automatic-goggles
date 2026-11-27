@@ -2,7 +2,7 @@
 % The PNAS layout is a little different (9 pt, narrower columns): treat the page count as a rough guide and check the real count in Overleaf.
 \documentclass[9pt,twocolumn]{extarticle}
 \usepackage[a4paper,margin=1.7cm,columnsep=0.6cm]{geometry}
-\usepackage[T1]{fontenc}\usepackage{lmodern}\usepackage{graphicx}\usepackage{booktabs}\usepackage{amsmath}\usepackage{hyperref}\usepackage[numbers,sort&compress]{natbib}
+\usepackage[T1]{fontenc}\usepackage{lmodern}\usepackage{graphicx}\usepackage{booktabs}\usepackage{amsmath}\usepackage{hyperref}\usepackage{xurl}\usepackage[numbers,round,sort&compress]{natbib}\renewcommand{\bibnumfmt}[1]{#1.}\renewcommand{\bibfont}{\footnotesize}% PNAS: (1), (2-4) in the text; '1.' in the list
 \usepackage{titlesec}\titleformat{\section}{\bfseries\large}{}{0pt}{}\titleformat{\subsection}{\itshape\bfseries}{}{0pt}{}
 \setlength{\parindent}{1em}\setlength{\parskip}{0pt}
 \input{meta}
@@ -24,5 +24,6 @@
 \input{body}
 \section*{Data availability}\dataavailtext
 \section*{Author contributions}\contribtext
-\bibliographystyle{unsrtnat}
+\bibliographystyle{pnas-preview}% imitates PNAS (the real pnas-new.bst comes with the Overleaf template and is used by main.tex)
+\bibliography{references}
 \end{document}

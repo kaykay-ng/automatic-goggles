@@ -19,12 +19,12 @@ import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).parent))
 import seso_topics as st  # noqa: E402
-from seedoil_common import TOKEN_PATTERN, hyphen_bertopic  # noqa: E402
+from seedoil_common import TOKEN_PATTERN, hyphen_bertopic, SPLIT_TS, THEMES_FILE# noqa: E402
 
 PROC = st.PROC
 SEEDS_DIR = PROC / "seeds"
 REF = 42
-SPLIT = 1704067200
+SPLIT = SPLIT_TS
 
 
 def fit(seeds):
@@ -71,7 +71,7 @@ def summary():
     P = pd.DataFrame(pairs)
     q = lambda c: {"mean": round(float(P[c].mean()), 3), "min": round(float(P[c].min()), 3), "max": round(float(P[c].max()), 3)}
     out = {"n_runs": len(seeds), "seeds": seeds, "per_run": per_run, "pairs": len(P), "ami": q("ami"), "nmi": q("nmi"), "ami_confident": q("ami_confident")}
-    tf = PROC / "themes_confirmed.json"
+    tf = PROC / THEMES_FILE
     if tf.exists():
         themes = json.loads(tf.read_text())  # {theme: [reference topic ids]}
         ref_theme = pd.Series("other", index=range(len(ids)))

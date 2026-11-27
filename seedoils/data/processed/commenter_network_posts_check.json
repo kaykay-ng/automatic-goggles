@@ -1,0 +1,67 @@
+{
+ "A_comments_only_reproduction": {
+  "people": 2621,
+  "documents": 106854,
+  "self_posts_used": 0,
+  "backbone_links": 54246,
+  "modularity_mean": 0.553,
+  "communities": 12,
+  "people_in_both": 2621,
+  "ami_vs_saved_communities": 1.0,
+  "share_kept_with_main_group_pct": 100.0,
+  "Politics_group": {
+   "size": 291,
+   "long_time_pct": 26.1,
+   "share_of_saved_members_in_it_pct": 100.0
+  },
+  "Omega-6_group": {
+   "size": 248,
+   "long_time_pct": 61.7,
+   "share_of_saved_members_in_it_pct": 100.0
+  }
+ },
+ "B_same_people_plus_self_posts": {
+  "people": 2621,
+  "documents": 110603,
+  "self_posts_used": 3749,
+  "backbone_links": 53838,
+  "modularity_mean": 0.558,
+  "communities": 12,
+  "people_in_both": 2621,
+  "ami_vs_saved_communities": 0.701,
+  "share_kept_with_main_group_pct": 81.2,
+  "Politics_group": {
+   "size": 279,
+   "long_time_pct": 26.5,
+   "share_of_saved_members_in_it_pct": 94.8
+  },
+  "Omega-6_group": {
+   "size": 224,
+   "long_time_pct": 60.7,
+   "share_of_saved_members_in_it_pct": 84.7
+  }
+ },
+ "C_node_rule_counts_self_posts": {
+  "people": 2739,
+  "documents": 111949,
+  "self_posts_used": 4174,
+  "backbone_links": 62081,
+  "modularity_mean": 0.548,
+  "communities": 12,
+  "people_in_both": 2621,
+  "ami_vs_saved_communities": 0.672,
+  "share_kept_with_main_group_pct": 78.7,
+  "Politics_group": {
+   "size": 272,
+   "long_time_pct": 27.2,
+   "share_of_saved_members_in_it_pct": 91.1
+  },
+  "Omega-6_group": {
+   "size": 259,
+   "long_time_pct": 62.2,
+   "share_of_saved_members_in_it_pct": 92.7
+  }
+ },
+ "self_posts_in_topic_model": 6921,
+ "documents_in_topic_model": 149815
+}

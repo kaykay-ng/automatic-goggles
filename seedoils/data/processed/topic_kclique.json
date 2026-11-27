@@ -1,0 +1,188 @@
+{
+ "linked_topics": 91,
+ "louvain_communities_2plus": 8,
+ "k=3": {
+  "communities": 3,
+  "topics_covered": 66,
+  "covered_pct_of_linked": 72.5,
+  "topics_in_2plus": 2,
+  "ami_vs_louvain_on_covered": 0.155,
+  "politics_topics_covered": 5,
+  "politics_in_one_community": true,
+  "politics_communities_also_hold": [
+   "anxiety, mental",
+   "avocado-oil, avocado",
+   "burger, patty",
+   "butter, margarine",
+   "calorie, weight",
+   "cancer, smoking",
+   "canola, canola oil",
+   "carb, low carb",
+   "carnivore, carnivore diet",
+   "chicken, breast",
+   "cico, calorie",
+   "coconut-oil, coconut"
+  ],
+  "hub_topic4_in_communities": 1,
+  "communities_list": [
+   {
+    "size": 62,
+    "main_louvain": "Diet, weight and saturated fat",
+    "share_in_it_pct": 31,
+    "politics_topics": 5,
+    "examples": [
+     "seed-oil, food",
+     "pufa, omega-6",
+     "comment, reddit",
+     "fat, saturated-fat"
+    ]
+   },
+   {
+    "size": 3,
+    "main_louvain": "Shopping",
+    "share_in_it_pct": 100,
+    "politics_topics": 0,
+    "examples": [
+     "bread, flour",
+     "bread, bun",
+     "cooky, cake"
+    ]
+   },
+   {
+    "size": 3,
+    "main_louvain": "Diet, weight and saturated fat",
+    "share_in_it_pct": 100,
+    "politics_topics": 0,
+    "examples": [
+     "nut, almond",
+     "oxalate, vegetable",
+     "seed, eat seed"
+    ]
+   }
+  ]
+ },
+ "k=4": {
+  "communities": 3,
+  "topics_covered": 52,
+  "covered_pct_of_linked": 57.1,
+  "topics_in_2plus": 5,
+  "ami_vs_louvain_on_covered": 0.138,
+  "politics_topics_covered": 5,
+  "politics_in_one_community": true,
+  "politics_communities_also_hold": [
+   "burger, patty",
+   "butter, margarine",
+   "calorie, weight",
+   "cancer, smoking",
+   "canola, canola oil",
+   "carb, low carb",
+   "chicken, breast",
+   "cico, calorie",
+   "coconut-oil, coconut",
+   "comment, reddit",
+   "conspiracy, media",
+   "doctor, medical"
+  ],
+  "hub_topic4_in_communities": 1,
+  "communities_list": [
+   {
+    "size": 47,
+    "main_louvain": "Politics, distrust and evidence",
+    "share_in_it_pct": 32,
+    "politics_topics": 5,
+    "examples": [
+     "seed-oil, food",
+     "pufa, omega-6",
+     "comment, reddit",
+     "fat, saturated-fat"
+    ]
+   },
+   {
+    "size": 6,
+    "main_louvain": "Home cooking and sugar",
+    "share_in_it_pct": 67,
+    "politics_topics": 0,
+    "examples": [
+     "butter, margarine",
+     "pork, pig",
+     "tallow, beef tallow",
+     "fry, potato"
+    ]
+   },
+   {
+    "size": 4,
+    "main_louvain": "Oils and cooking fats",
+    "share_in_it_pct": 100,
+    "politics_topics": 0,
+    "examples": [
+     "olive-oil, olive",
+     "oil, vegetable-oil",
+     "canola, canola oil",
+     "sunflower, sunflower oil"
+    ]
+   }
+  ]
+ },
+ "k=5": {
+  "communities": 3,
+  "topics_covered": 33,
+  "covered_pct_of_linked": 36.3,
+  "topics_in_2plus": 4,
+  "ami_vs_louvain_on_covered": 0.118,
+  "politics_topics_covered": 5,
+  "politics_in_one_community": false,
+  "politics_communities_also_hold": [
+   "butter, margarine",
+   "calorie, weight",
+   "cancer, smoking",
+   "carb, low carb",
+   "chicken, breast",
+   "cico, calorie",
+   "coconut-oil, coconut",
+   "comment, reddit",
+   "conspiracy, media",
+   "doctor, medical",
+   "egg, pufa",
+   "fat, saturated-fat"
+  ],
+  "hub_topic4_in_communities": 2,
+  "communities_list": [
+   {
+    "size": 26,
+    "main_louvain": "Diet, weight and saturated fat",
+    "share_in_it_pct": 35,
+    "politics_topics": 1,
+    "examples": [
+     "seed-oil, food",
+     "pufa, omega-6",
+     "comment, reddit",
+     "fat, saturated-fat"
+    ]
+   },
+   {
+    "size": 6,
+    "main_louvain": "Diet, weight and saturated fat",
+    "share_in_it_pct": 83,
+    "politics_topics": 0,
+    "examples": [
+     "fat, saturated-fat",
+     "fruit, rice",
+     "pork, pig",
+     "carb, low carb"
+    ]
+   },
+   {
+    "size": 5,
+    "main_louvain": "Politics, distrust and evidence",
+    "share_in_it_pct": 100,
+    "politics_topics": 4,
+    "examples": [
+     "conspiracy, media",
+     "trump, vote",
+     "rfk-jr, trump",
+     "left, political"
+    ]
+   }
+  ]
+ }
+}

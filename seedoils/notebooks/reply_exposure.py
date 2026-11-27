@@ -7,7 +7,7 @@ Linear probability models with two-way fixed effects (replier and thread, by alt
  C. Old guard's hostile share ~ newcomers' share of the thread's commenters | replier, month  (do old-guard people get harsher in threads with more newcomers?)
  D. Downvoted ~ replier is a newcomer + reply is hostile + parent is hostile | thread  (is the newcomer gap in downvotes about content or reception?)
 Run from final_project/ with the NLP env:  ./.venv-nlp/bin/python seedoils/notebooks/reply_exposure.py   (aggregates only)"""
-from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
+from seedoil_common import is_bot, not_bot, SPLIT_TS# shared bot rule: AutoModerator + names ending in 'bot'
 import glob
 import gzip
 import json
@@ -16,7 +16,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-P = Path("seedoils/data/processed"); CUT = 1704067200
+P = Path("seedoils/data/processed"); CUT = SPLIT_TS
 rows = []
 with gzip.open(glob.glob("seedoils/data/raw/*StopEatingSeedOils_comments.jsonl.gz")[0], "rt", encoding="utf-8") as f:
     for l in f:

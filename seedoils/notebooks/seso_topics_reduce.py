@@ -8,7 +8,7 @@ Per UMAP seed: fit as in seso_topics.py, reassign outliers, update_topics, then 
 and coherence (mean NPMI of top-10 words, same function as the hand merge), so the two methods are directly comparable.
 Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/seso_topics_reduce.py
  -> data/processed/seso_red_k_sweep.csv, seso_red_k<k>_topics_info.csv, seso_red_k<k>_doc_topics.csv.gz (first seed). No text written."""
-from seedoil_common import TOKEN_PATTERN, bertopic_clean, hyphen_bertopic  # hyphen-keeping tokenizer (omega-6 stays whole)
+from seedoil_common import TOKEN_PATTERN, bertopic_clean, hyphen_bertopic, SPLIT_TS# hyphen-keeping tokenizer (omega-6 stays whole)
 import itertools
 import sys
 from pathlib import Path
@@ -41,7 +41,7 @@ def main():
     Xb = (X > 0).astype(np.float64).tocsc(); N = X.shape[0]; df = np.asarray(Xb.sum(axis=0)).ravel()
     orig = lambda: CountVectorizer(stop_words=stop, token_pattern=TOKEN_PATTERN, min_df=20, ngram_range=(1, 2))  # exactly the vectorizer of seso_topics.py fit()
     fixed = lambda v: CountVectorizer(stop_words=stop, token_pattern=TOKEN_PATTERN, ngram_range=(1, 2), vocabulary=list(v))
-    pre, post = (D.created_utc < 1704067200).values, (D.created_utc >= 1704067200).values
+    pre, post = (D.created_utc < SPLIT_TS).values, (D.created_utc >= SPLIT_TS).values
     labels, coh = {}, {}
     for seed in SEEDS:
         tm = HyphenBERTopic(umap_model=UMAP(n_neighbors=15, n_components=5, min_dist=0.0, metric="cosine", random_state=seed),

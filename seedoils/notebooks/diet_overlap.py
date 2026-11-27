@@ -19,11 +19,11 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from seedoil_common import DIET_BORDERLINE, DIET_CORE
+from seedoil_common import DIET_BORDERLINE, DIET_CORE, SPLIT_TS, HISTORY_GLOB
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW, PROC = ROOT / "data" / "raw", ROOT / "data" / "processed"
-SPLIT, MIN, REPS = 1704067200, 3, 1000
+SPLIT, MIN, REPS = SPLIT_TS, 3, 1000
 rng = np.random.default_rng(0)
 
 flat = lambda groups: {s.lower() for subs in groups.values() for s in subs}
@@ -41,7 +41,7 @@ for r in A.itertuples():
     elif r.seed_subreddit == "ScientificNutrition":
         groups.setdefault(r.author, set()).add("SciNut")
 counts = {}
-for f in sorted(glob.glob(str(RAW / "author_subreddit_counts*.jsonl.gz"))):
+for f in sorted(glob.glob(str(RAW / HISTORY_GLOB))):
     for line in gzip.open(f, "rt"):
         try:
             d = json.loads(line)

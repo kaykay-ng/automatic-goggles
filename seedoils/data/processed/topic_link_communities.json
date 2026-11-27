@@ -1,0 +1,795 @@
+{
+ "unweighted": {
+  "partition_density": 0.16,
+  "cut_similarity": 0.412,
+  "links": 299,
+  "link_communities": 160,
+  "link_communities_3plus": 19,
+  "links_in_3plus_pct": 46.5,
+  "topics": 91,
+  "topics_in_2plus_communities_3plus": 22,
+  "ami_main_link_community_vs_louvain": 0.34,
+  "ami_main_link_community_vs_themes": 0.222,
+  "ami_louvain_vs_themes_same_topics": 0.372,
+  "most_overlapping_topics": [
+   {
+    "topic": 4,
+    "words": "fat, saturated-fat, trans, trans fat",
+    "theme": "Omega-6 / PUFA biochemistry",
+    "link_communities_3plus": 10,
+    "links": 34
+   },
+   {
+    "topic": 14,
+    "words": "calorie, weight, gain, lose",
+    "theme": "Keto, carbs, fasting",
+    "link_communities_3plus": 8,
+    "links": 20
+   },
+   {
+    "topic": 1,
+    "words": "pufa, omega-6, omega-3, acid",
+    "theme": "Omega-6 / PUFA biochemistry",
+    "link_communities_3plus": 7,
+    "links": 24
+   },
+   {
+    "topic": 60,
+    "words": "carb, low carb, low, high carb",
+    "theme": "Keto, carbs, fasting",
+    "link_communities_3plus": 6,
+    "links": 13
+   },
+   {
+    "topic": 0,
+    "words": "seed-oil, food, health, oil",
+    "theme": "General talk and meta",
+    "link_communities_3plus": 4,
+    "links": 19
+   },
+   {
+    "topic": 17,
+    "words": "science, study, scientific, evidence",
+    "theme": "Studies and evidence",
+    "link_communities_3plus": 4,
+    "links": 13
+   },
+   {
+    "topic": 37,
+    "words": "doctor, medical, pharma, health",
+    "theme": "Distrust of industry, medicine and media",
+    "link_communities_3plus": 4,
+    "links": 13
+   },
+   {
+    "topic": 58,
+    "words": "insulin, glucose, diabetes, resistance",
+    "theme": "Keto, carbs, fasting",
+    "link_communities_3plus": 4,
+    "links": 11
+   },
+   {
+    "topic": 24,
+    "words": "oil, vegetable-oil, hexane, lubricant",
+    "theme": "Specific oils",
+    "link_communities_3plus": 3,
+    "links": 16
+   },
+   {
+    "topic": 33,
+    "words": "nutrition, science, diet, study",
+    "theme": "Studies and evidence",
+    "link_communities_3plus": 3,
+    "links": 15
+   },
+   {
+    "topic": 5,
+    "words": "comment, reddit, post, sub",
+    "theme": "General talk and meta",
+    "link_communities_3plus": 3,
+    "links": 11
+   },
+   {
+    "topic": 109,
+    "words": "conspiracy, media, news, propaganda",
+    "theme": "Distrust of industry, medicine and media",
+    "link_communities_3plus": 3,
+    "links": 10
+   }
+  ],
+  "largest": [
+   {
+    "links": 38,
+    "topics": 13,
+    "themes": {
+     "Politics": 4,
+     "Distrust of industry, medicine and media": 3,
+     "General talk and meta": 2,
+     "Studies and evidence": 2
+    },
+    "topic_words": [
+     "seed-oil, food",
+     "comment, reddit",
+     "ldl, cholesterol",
+     "science, study",
+     "nutrition, science",
+     "doctor, medical"
+    ],
+    "topic_ids": [
+     0,
+     5,
+     2,
+     17,
+     33,
+     37,
+     46,
+     109,
+     39,
+     98,
+     47,
+     97,
+     89
+    ]
+   },
+   {
+    "links": 19,
+    "topics": 7,
+    "themes": {
+     "Keto, carbs, fasting": 5,
+     "Omega-6 / PUFA biochemistry": 2
+    },
+    "topic_words": [
+     "pufa, omega-6",
+     "fat, saturated-fat",
+     "calorie, weight",
+     "keto, carb",
+     "insulin, glucose",
+     "carb, low carb"
+    ],
+    "topic_ids": [
+     1,
+     4,
+     14,
+     27,
+     58,
+     60,
+     92
+    ]
+   },
+   {
+    "links": 18,
+    "topics": 13,
+    "themes": {
+     "Keto, carbs, fasting": 4,
+     "Omega-6 / PUFA biochemistry": 3,
+     "General talk and meta": 2,
+     "Studies and evidence": 2
+    },
+    "topic_words": [
+     "seed-oil, food",
+     "pufa, omega-6",
+     "comment, reddit",
+     "fat, saturated-fat",
+     "ldl, cholesterol",
+     "calorie, weight"
+    ],
+    "topic_ids": [
+     0,
+     1,
+     5,
+     4,
+     2,
+     14,
+     17,
+     33,
+     37,
+     58,
+     60,
+     39,
+     92
+    ]
+   },
+   {
+    "links": 7,
+    "topics": 6,
+    "themes": {
+     "General talk and meta": 3,
+     "Studies and evidence": 2,
+     "Politics": 1
+    },
+    "topic_words": [
+     "seed-oil, food",
+     "comment, reddit",
+     "science, study",
+     "nutrition, science",
+     "podcast, tucker",
+     "seed-oil, trump"
+    ],
+    "topic_ids": [
+     0,
+     5,
+     17,
+     33,
+     104,
+     93
+    ]
+   },
+   {
+    "links": 7,
+    "topics": 7,
+    "themes": {
+     "Keto, carbs, fasting": 5,
+     "Omega-6 / PUFA biochemistry": 2
+    },
+    "topic_words": [
+     "pufa, omega-6",
+     "fat, saturated-fat",
+     "calorie, weight",
+     "sugar, syrup",
+     "insulin, glucose",
+     "carb, low carb"
+    ],
+    "topic_ids": [
+     1,
+     4,
+     14,
+     25,
+     58,
+     60,
+     119
+    ]
+   },
+   {
+    "links": 6,
+    "topics": 4,
+    "themes": {
+     "Specific oils": 4
+    },
+    "topic_words": [
+     "olive-oil, olive",
+     "oil, vegetable-oil",
+     "canola, canola oil",
+     "sunflower, sunflower oil"
+    ],
+    "topic_ids": [
+     3,
+     24,
+     20,
+     45
+    ]
+   },
+   {
+    "links": 5,
+    "topics": 5,
+    "themes": {
+     "Omega-6 / PUFA biochemistry": 3,
+     "Keto, carbs, fasting": 1,
+     "Other diets": 1
+    },
+    "topic_words": [
+     "pufa, omega-6",
+     "fat, saturated-fat",
+     "calorie, weight",
+     "chicken, breast",
+     "egg, pufa"
+    ],
+    "topic_ids": [
+     1,
+     4,
+     14,
+     107,
+     112
+    ]
+   },
+   {
+    "links": 4,
+    "topics": 5,
+    "themes": {
+     "Keto, carbs, fasting": 4,
+     "Omega-6 / PUFA biochemistry": 1
+    },
+    "topic_words": [
+     "fat, saturated-fat",
+     "calorie, weight",
+     "fruit, rice",
+     "insulin, glucose",
+     "carb, low carb"
+    ],
+    "topic_ids": [
+     4,
+     14,
+     43,
+     58,
+     60
+    ]
+   },
+   {
+    "links": 4,
+    "topics": 5,
+    "themes": {
+     "Keto, carbs, fasting": 2,
+     "Other diets": 2,
+     "Omega-6 / PUFA biochemistry": 1
+    },
+    "topic_words": [
+     "fat, saturated-fat",
+     "calorie, weight",
+     "carb, low carb",
+     "human, meat",
+     "red-meat, meat"
+    ],
+    "topic_ids": [
+     4,
+     14,
+     60,
+     86,
+     69
+    ]
+   },
+   {
+    "links": 4,
+    "topics": 5,
+    "themes": {
+     "Distrust of industry, medicine and media": 4,
+     "Politics": 1
+    },
+    "topic_words": [
+     "food, company",
+     "doctor, medical",
+     "money, capitalism",
+     "conspiracy, media",
+     "political, left"
+    ],
+    "topic_ids": [
+     73,
+     37,
+     46,
+     109,
+     89
+    ]
+   },
+   {
+    "links": 3,
+    "topics": 4,
+    "themes": {
+     "Specific oils": 2,
+     "General talk and meta": 1,
+     "Studies and evidence": 1
+    },
+    "topic_words": [
+     "seed-oil, food",
+     "science, study",
+     "oil, vegetable-oil",
+     "canola, canola oil"
+    ],
+    "topic_ids": [
+     0,
+     17,
+     24,
+     20
+    ]
+   },
+   {
+    "links": 3,
+    "topics": 4,
+    "themes": {
+     "Omega-6 / PUFA biochemistry": 2,
+     "Specific oils": 2
+    },
+    "topic_words": [
+     "pufa, omega-6",
+     "fat, saturated-fat",
+     "oil, vegetable-oil",
+     "canola, canola oil"
+    ],
+    "topic_ids": [
+     1,
+     4,
+     24,
+     20
+    ]
+   }
+  ]
+ },
+ "weighted": {
+  "partition_density": 0.163,
+  "cut_similarity": 0.416,
+  "links": 299,
+  "link_communities": 151,
+  "link_communities_3plus": 21,
+  "links_in_3plus_pct": 50.5,
+  "topics": 91,
+  "topics_in_2plus_communities_3plus": 28,
+  "ami_main_link_community_vs_louvain": 0.344,
+  "ami_main_link_community_vs_themes": 0.204,
+  "ami_louvain_vs_themes_same_topics": 0.372,
+  "most_overlapping_topics": [
+   {
+    "topic": 4,
+    "words": "fat, saturated-fat, trans, trans fat",
+    "theme": "Omega-6 / PUFA biochemistry",
+    "link_communities_3plus": 11,
+    "links": 34
+   },
+   {
+    "topic": 1,
+    "words": "pufa, omega-6, omega-3, acid",
+    "theme": "Omega-6 / PUFA biochemistry",
+    "link_communities_3plus": 8,
+    "links": 24
+   },
+   {
+    "topic": 14,
+    "words": "calorie, weight, gain, lose",
+    "theme": "Keto, carbs, fasting",
+    "link_communities_3plus": 8,
+    "links": 20
+   },
+   {
+    "topic": 60,
+    "words": "carb, low carb, low, high carb",
+    "theme": "Keto, carbs, fasting",
+    "link_communities_3plus": 6,
+    "links": 13
+   },
+   {
+    "topic": 35,
+    "words": "coconut-oil, coconut, mct, oil",
+    "theme": "Specific oils",
+    "link_communities_3plus": 5,
+    "links": 12
+   },
+   {
+    "topic": 37,
+    "words": "doctor, medical, pharma, health",
+    "theme": "Distrust of industry, medicine and media",
+    "link_communities_3plus": 4,
+    "links": 13
+   },
+   {
+    "topic": 58,
+    "words": "insulin, glucose, diabetes, resistance",
+    "theme": "Keto, carbs, fasting",
+    "link_communities_3plus": 4,
+    "links": 11
+   },
+   {
+    "topic": 0,
+    "words": "seed-oil, food, health, oil",
+    "theme": "General talk and meta",
+    "link_communities_3plus": 3,
+    "links": 19
+   },
+   {
+    "topic": 33,
+    "words": "nutrition, science, diet, study",
+    "theme": "Studies and evidence",
+    "link_communities_3plus": 3,
+    "links": 15
+   },
+   {
+    "topic": 17,
+    "words": "science, study, scientific, evidence",
+    "theme": "Studies and evidence",
+    "link_communities_3plus": 3,
+    "links": 13
+   },
+   {
+    "topic": 5,
+    "words": "comment, reddit, post, sub",
+    "theme": "General talk and meta",
+    "link_communities_3plus": 3,
+    "links": 11
+   },
+   {
+    "topic": 109,
+    "words": "conspiracy, media, news, propaganda",
+    "theme": "Distrust of industry, medicine and media",
+    "link_communities_3plus": 3,
+    "links": 10
+   }
+  ],
+  "largest": [
+   {
+    "links": 38,
+    "topics": 13,
+    "themes": {
+     "Politics": 4,
+     "Distrust of industry, medicine and media": 3,
+     "General talk and meta": 2,
+     "Studies and evidence": 2
+    },
+    "topic_words": [
+     "seed-oil, food",
+     "comment, reddit",
+     "ldl, cholesterol",
+     "science, study",
+     "nutrition, science",
+     "doctor, medical"
+    ],
+    "topic_ids": [
+     0,
+     5,
+     2,
+     17,
+     33,
+     37,
+     46,
+     109,
+     39,
+     98,
+     47,
+     97,
+     89
+    ]
+   },
+   {
+    "links": 22,
+    "topics": 8,
+    "themes": {
+     "Keto, carbs, fasting": 5,
+     "Omega-6 / PUFA biochemistry": 2,
+     "Specific oils": 1
+    },
+    "topic_words": [
+     "pufa, omega-6",
+     "fat, saturated-fat",
+     "calorie, weight",
+     "keto, carb",
+     "insulin, glucose",
+     "coconut-oil, coconut"
+    ],
+    "topic_ids": [
+     1,
+     4,
+     14,
+     27,
+     58,
+     35,
+     60,
+     92
+    ]
+   },
+   {
+    "links": 18,
+    "topics": 13,
+    "themes": {
+     "Keto, carbs, fasting": 4,
+     "Omega-6 / PUFA biochemistry": 3,
+     "General talk and meta": 2,
+     "Studies and evidence": 2
+    },
+    "topic_words": [
+     "seed-oil, food",
+     "pufa, omega-6",
+     "comment, reddit",
+     "fat, saturated-fat",
+     "ldl, cholesterol",
+     "calorie, weight"
+    ],
+    "topic_ids": [
+     0,
+     1,
+     5,
+     4,
+     2,
+     14,
+     17,
+     33,
+     37,
+     58,
+     60,
+     39,
+     92
+    ]
+   },
+   {
+    "links": 9,
+    "topics": 7,
+    "themes": {
+     "Omega-6 / PUFA biochemistry": 3,
+     "Other diets": 2,
+     "Keto, carbs, fasting": 1,
+     "Specific oils": 1
+    },
+    "topic_words": [
+     "pufa, omega-6",
+     "fat, saturated-fat",
+     "calorie, weight",
+     "pork, pig",
+     "coconut-oil, coconut",
+     "chicken, breast"
+    ],
+    "topic_ids": [
+     1,
+     4,
+     14,
+     12,
+     35,
+     107,
+     112
+    ]
+   },
+   {
+    "links": 7,
+    "topics": 6,
+    "themes": {
+     "General talk and meta": 3,
+     "Studies and evidence": 2,
+     "Politics": 1
+    },
+    "topic_words": [
+     "seed-oil, food",
+     "comment, reddit",
+     "science, study",
+     "nutrition, science",
+     "podcast, tucker",
+     "seed-oil, trump"
+    ],
+    "topic_ids": [
+     0,
+     5,
+     17,
+     33,
+     104,
+     93
+    ]
+   },
+   {
+    "links": 7,
+    "topics": 7,
+    "themes": {
+     "Keto, carbs, fasting": 5,
+     "Omega-6 / PUFA biochemistry": 2
+    },
+    "topic_words": [
+     "pufa, omega-6",
+     "fat, saturated-fat",
+     "calorie, weight",
+     "sugar, syrup",
+     "insulin, glucose",
+     "carb, low carb"
+    ],
+    "topic_ids": [
+     1,
+     4,
+     14,
+     25,
+     58,
+     60,
+     119
+    ]
+   },
+   {
+    "links": 5,
+    "topics": 5,
+    "themes": {
+     "Omega-6 / PUFA biochemistry": 3,
+     "Specific oils": 2
+    },
+    "topic_words": [
+     "pufa, omega-6",
+     "fat, saturated-fat",
+     "coconut-oil, coconut",
+     "palm, palm oil",
+     "vitamin, tocopherol"
+    ],
+    "topic_ids": [
+     1,
+     4,
+     35,
+     28,
+     77
+    ]
+   },
+   {
+    "links": 4,
+    "topics": 5,
+    "themes": {
+     "Keto, carbs, fasting": 4,
+     "Omega-6 / PUFA biochemistry": 1
+    },
+    "topic_words": [
+     "fat, saturated-fat",
+     "calorie, weight",
+     "fruit, rice",
+     "insulin, glucose",
+     "carb, low carb"
+    ],
+    "topic_ids": [
+     4,
+     14,
+     43,
+     58,
+     60
+    ]
+   },
+   {
+    "links": 4,
+    "topics": 5,
+    "themes": {
+     "Keto, carbs, fasting": 2,
+     "Other diets": 2,
+     "Omega-6 / PUFA biochemistry": 1
+    },
+    "topic_words": [
+     "fat, saturated-fat",
+     "calorie, weight",
+     "carb, low carb",
+     "human, meat",
+     "red-meat, meat"
+    ],
+    "topic_ids": [
+     4,
+     14,
+     60,
+     86,
+     69
+    ]
+   },
+   {
+    "links": 4,
+    "topics": 5,
+    "themes": {
+     "Distrust of industry, medicine and media": 4,
+     "Politics": 1
+    },
+    "topic_words": [
+     "food, company",
+     "doctor, medical",
+     "money, capitalism",
+     "conspiracy, media",
+     "political, left"
+    ],
+    "topic_ids": [
+     73,
+     37,
+     46,
+     109,
+     89
+    ]
+   },
+   {
+    "links": 3,
+    "topics": 4,
+    "themes": {
+     "Omega-6 / PUFA biochemistry": 2,
+     "Specific oils": 2
+    },
+    "topic_words": [
+     "pufa, omega-6",
+     "fat, saturated-fat",
+     "oil, vegetable-oil",
+     "coconut-oil, coconut"
+    ],
+    "topic_ids": [
+     1,
+     4,
+     24,
+     35
+    ]
+   },
+   {
+    "links": 3,
+    "topics": 4,
+    "themes": {
+     "Omega-6 / PUFA biochemistry": 2,
+     "Keto, carbs, fasting": 1,
+     "Lifestyle": 1
+    },
+    "topic_words": [
+     "pufa, omega-6",
+     "fat, saturated-fat",
+     "calorie, weight",
+     "vitamin, supplement"
+    ],
+    "topic_ids": [
+     1,
+     4,
+     14,
+     49
+    ]
+   }
+  ]
+ }
+}

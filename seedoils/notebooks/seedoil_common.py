@@ -33,6 +33,32 @@ _POSS = re.compile(r"'s\b")                                         # possessive
 _ABBR = re.compile(r"\b(\w|dr|mr|mrs|ms|jr|sr|st|vs|prof|etc|approx)\.")  # periods of initials and titles are not sentence ends: "u.s.", "dr.", "f."
 _TOK = re.compile(r"[^\W_]+(?:-[^\W_]+)*|[.,;:!?()\[\]]")            # words (any alphabet, accents kept; hyphen compounds whole) + boundary punctuation;
 #                                                                     everything else (emoji, quotes, slashes, underscores, symbols) acts as a space
+# ANALYSIS SPLIT (decision 26 Nov 2026, back to 1 Jan 2024 to match the paper draft; the 1 Aug 2024 split of 25 Nov is kept as a marker and
+# robustness column). Politics stayed ~0.5% of r/StopEatingSeedOils documents until July 2024 and jumped in August (RFK Jr. endorsed Trump on
+# 23 Aug 2024), but activity was already growing from 2023. Column names pre2024 / from2024 mean before / from SPLIT_DATE. Newcomer = first comment from SPLIT_DATE.
+SPLIT_DATE = "2024-01-01"
+SPLIT_TS = 1704067200  # 2024-01-01 00:00 UTC
+SPLIT_TS_JAN2024 = SPLIT_TS  # old name, same value
+SPLIT_TS_AUG2024 = 1722470400  # 2024-08-01 00:00 UTC: RFK Jr. / politics marker, robustness rows only
+PERIOD_LABELS = ("before 2024", "from 2024")
+# author histories (fetch_author_histories.py) are stored split at one date; this glob picks the files that match SPLIT_DATE
+HISTORY_GLOB = "author_subreddit_counts_shard*.jsonl.gz"
+HISTORY_GLOB_AUG2024 = "author_subreddit_counts_aug2024_shard*.jsonl.gz"
+# THEMES (decision 26 Nov): the 14 hand-assigned themes of the paper draft (themes_full_v3.json, all 123 topics); the 9 earlier themes stay in themes_confirmed.json
+THEMES_FILE = "themes_full_v3.json"
+
+
+def history_complete(min_authors=2900):
+    """True once the author histories matching SPLIT_DATE (HISTORY_GLOB) hold at least min_authors people."""
+    import glob as _g, gzip as _gz
+    raw = Path(__file__).resolve().parents[1] / "data" / "raw"; n = 0
+    for f in _g.glob(str(raw / HISTORY_GLOB)):
+        try:
+            with _gz.open(f, "rt", encoding="utf-8") as fh:
+                n += sum(1 for _ in fh)
+        except (EOFError, OSError):
+            pass
+    return n >= min_authors
 _PUNCT = set(".,;:!?()[]")
 # NEGATION (decision 22 Nov; revised twice on 25 Nov after hand checks). Version 1 (VADER-style, next 3 content words after any negator):
 # fully right in 35% of 150 stretches. Version 2 (first content word after any negator): 56% of 100 fresh stretches (80% inside the negated
