@@ -50,7 +50,7 @@ for per in ("before", "from"):
     print(per, [(r["words"][:25], r[f"degree_{per}"]) for r in out[f"top_degree_{per}"][:6]])
 
 # ---- layout and names for drawing (27 Nov): one layout for the all-years network, reused for the period panels and the paper figure
-KEY_TOPICS = [(17, "Politics, distrust and evidence"), (4, "Diet, weight and saturated fat"), (1, "Omega-6 and animal foods"),
+KEY_TOPICS = [(17, "General talk, distrust and evidence"), (4, "Diet, weight and saturated fat"), (1, "Omega-6 and specific oils"),
               (24, "Oils and cooking fats"), (23, "Home cooking and sugar"), (19, "Shopping")]  # named by a defining topic; the first three are coloured in the figures
 cname = {}
 for t, nm in KEY_TOPICS:

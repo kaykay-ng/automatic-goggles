@@ -23,7 +23,9 @@ plt.rcParams.update({"text.usetex": __import__("shutil").which("latex") is not N
 P = Path("seedoils/data/processed")
 T = json.loads((P / "topic_cooccurrence_network.json").read_text()); C = json.loads((P / "topic_network_centrality.json").read_text())
 nodes = {n["topic"]: n for n in T["nodes"]}; lay = {int(k): np.array(v, float) for k, v in C["layout"].items()}
-COL = dict(zip(C["coloured_communities"], ["#2a78d6", "#eb6834", "#1baf7a"])); GREY, EDGE = "#b9b8b0", "#cfcec7"
+POL = nodes[98]["community"]  # 27 Nov: the politics and vaccines community (topics 47, 89, 97, 98 + vaccine 26) is coloured in red to show it as its own cluster; the communities of the three key topics are drawn in pale colours
+C = dict(C); C["coloured_communities"] = [c for c in C["coloured_communities"] if c != POL] + [POL]; C["community_names"] = {**C["community_names"], str(POL): "Politics and vaccines (own cluster)"}
+COL = dict(zip(C["coloured_communities"], ["#8fb4e8", "#f3b49b", "#8fd3b9", "#d4202f"])); GREY, EDGE = "#b9b8b0", "#cfcec7"
 FS = 6.8  # label size (pt)
 NO_ISO = "--no-isolates" in sys.argv  # second version: without the 32 isolated topics (the two small linked groups kept)
 OUT = "topic_network_main" if NO_ISO else "topic_network_all_years"
