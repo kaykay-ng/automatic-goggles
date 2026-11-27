@@ -2,14 +2,14 @@
 1 label composition; 2 mix shift (length bucket, post vs comment) vs within-group change; 3 old vs new commenters (same people before/after vs newcomers);
 4 bootstrap over commenters for the change. Cutoff 2024-01-01; threshold 0.5 as in emotions.py GROUPS. Output: data/processed/goemo_drivers.json + printed tables (no text).
 Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/goemo_drivers.py"""
-from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
+from seedoil_common import is_bot, not_bot, SPLIT_TS# shared bot rule: AutoModerator + names ending in 'bot'
 import json
 from pathlib import Path
 import numpy as np, pandas as pd
 PROC = Path(__file__).resolve().parents[1] / "data" / "processed"
 LAB = [c for c in pd.read_csv(PROC / "goemo_monthly.csv", nrows=1).columns[1:29]]
 H = ["anger", "annoyance", "disapproval", "disgust"]; Q = ["curiosity", "confusion"]
-CUT = pd.Timestamp("2024-01-01").timestamp(); rng = np.random.default_rng(0); out = {}
+CUT = SPLIT_TS; rng = np.random.default_rng(0); out = {}
 def load(pfx):
     Ds, Ps = [], []
     for part in ("",):  # 15+ words only (decision 22 Nov)

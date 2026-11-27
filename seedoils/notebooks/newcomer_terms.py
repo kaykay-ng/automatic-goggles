@@ -4,7 +4,7 @@ Groups: old guard = the author's first comment in the subreddit is before 2024; 
 Terms: unigrams and bigrams counted once per comment (so a word repeated inside one comment counts once), (as in the topic model: English stop words + Reddit filler removed), used by at least MIN_AUTHORS different authors in each of the two groups combined (so one person's habit cannot make a term).
 Score: weighted log-odds with an informative Dirichlet prior (Monroe, Colaresi and Quinn 2008): the prior is the term's overall frequency, so rare terms are not over-read; z > 0 = newcomers, z < 0 = old guard.
 Run from final_project/ with the NLP env:  ./.venv-nlp/bin/python seedoils/notebooks/newcomer_terms.py  -> data/processed/artifact/newcomer_terms.json ({rows, meta}). Aggregates only: terms and counts, no text, no usernames."""
-from seedoil_common import is_bot, not_bot, TOKEN_PATTERN, bertopic_clean, hyphen_bertopic  # shared bot rule: AutoModerator + names ending in 'bot'
+from seedoil_common import is_bot, not_bot, TOKEN_PATTERN, bertopic_clean, hyphen_bertopic, SPLIT_TS# shared bot rule: AutoModerator + names ending in 'bot'
 import glob
 import gzip
 import json
@@ -18,7 +18,7 @@ import scipy.sparse as sp
 sys.path.insert(0, str(Path(__file__).parent))
 import seso_topics as st  # noqa: E402
 
-P = Path("seedoils/data/processed"); CUT = 1704067200; MIN_AUTHORS = 15; ALPHA0 = 500
+P = Path("seedoils/data/processed"); CUT = SPLIT_TS; MIN_AUTHORS = 15; ALPHA0 = 500
 raw_first = {}
 with gzip.open(glob.glob("seedoils/data/raw/*StopEatingSeedOils_comments.jsonl.gz")[0], "rt", encoding="utf-8") as f:
     for l in f:

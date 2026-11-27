@@ -3,10 +3,11 @@ Quality signals (all proxies; none says a paper is right or wrong): (1) relevanc
 (3) scholarly citations (OpenAlex cited_by_count), (4) venue tier from OpenAlex source lists (core journal, MEDLINE, level 2-3 national lists), (5) retraction, (6) age.
 A citation = one author citing one paper at least once in the subreddit and period. Output: data/processed/paper_quality.csv (aggregates only).
 Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/paper_quality.py"""
+from seedoil_common import SPLIT_TS  # analysis split: 1 Jan 2024 (decision 26 Nov)
 import glob, gzip, json
 from pathlib import Path
 import numpy as np, pandas as pd
-P = Path("seedoils/data/processed"); CUT = pd.Timestamp("2024-01-01").timestamp()
+P = Path("seedoils/data/processed"); CUT = SPLIT_TS
 meta, idmap = {}, {}
 with gzip.open("seedoils/data/raw/openalex_works.jsonl.gz", "rt") as fh:
     for l in fh:

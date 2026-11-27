@@ -2,12 +2,12 @@
 Original: Data for the niche timeline and outcome overlay: the Figure 7 backbone with (1) each person's first-comment month (people appear as the slider moves) and (2) outcomes per person: share of hostile comments (GoEmotions hostile group >= 0.5) and share downvoted (score <= 0),
 before 2024 / from 2024 / all time. Per-person shares are shrunk toward the average (m = 15 pseudo-comments) because people have 10-30 comments; per-niche numbers are plain shares.
 Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/niche_overlay_data.py  -> data/processed/artifact/niche_network.json"""
-from seedoil_common import community_labels  # community names from data/processed/community_names.json (hand-written)
+from seedoil_common import community_labels, SPLIT_TS# community names from data/processed/community_names.json (hand-written)
 from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
 import gzip, glob, json
 from pathlib import Path
 import numpy as np, pandas as pd
-P = Path("seedoils/data/processed"); CUT = pd.Timestamp("2024-01-01").timestamp(); M_SHRINK = 15
+P = Path("seedoils/data/processed"); CUT = SPLIT_TS; M_SHRINK = 15
 J = json.load(open(P / "artifact" / "commenter_network.json")); nodes = J["nodes"]
 raw = {}
 with gzip.open(glob.glob("seedoils/data/raw/*StopEatingSeedOils_comments.jsonl.gz")[0], "rt", encoding="utf-8") as f:

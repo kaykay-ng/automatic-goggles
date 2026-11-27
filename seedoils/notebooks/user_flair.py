@@ -2,7 +2,7 @@
 CAUTION: flair options were added over time (e.g. 'Skeptical of SESO', 'Low Fat', 'Keto' first appear in Oct 2023, 'Vegan' in Jul 2023), so shares across 1 Jan 2024 are partly mechanical.
 Fair comparisons: (a) within the period when the options exist (Q4 2023 on), by quarter, among flaired comments; (b) OLD vs NEW authors (first comment before / from 2024, all authors) among flaired authors, by their commonest flair from 2024.
 Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/user_flair.py -> seedoils/data/processed/user_flair_by_quarter.csv, user_flair_by_cohort.csv"""
-from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
+from seedoil_common import is_bot, not_bot, SPLIT_TS# shared bot rule: AutoModerator + names ending in 'bot'
 import gzip
 import json
 from collections import Counter, defaultdict
@@ -12,7 +12,7 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW, PROC = ROOT / "data" / "raw", ROOT / "data" / "processed"
-SPLIT = 1704067200
+SPLIT = SPLIT_TS
 MAIN = ["🍤Seed Oil Avoider", "🌾 🥓 Omnivore", "🥩 Carnivore", "🥩 Carnivore - Moderator", "🤿Ray Peat", "Skeptical of SESO", "🥬Low Fat", "🧀 Keto", "🌱 Vegan", "🍓Low Carb"]
 rows, first = [], {}
 for line in gzip.open(RAW / "StopEatingSeedOils_comments.jsonl.gz", "rt"):

@@ -4,7 +4,7 @@
      Null: shuffle the cohort label among authors of similar activity (20 activity bins, number of old-guard authors per bin kept) and recompute the divergence and the number of 'strongly tilted' terms.
  (3) Compare only HEAVY commenters (>= 10 comments from 2024 on) in both groups.
 Same documents, terms and score as newcomer_terms.py. Run from final_project/ with the NLP env:  ./.venv-nlp/bin/python seedoils/notebooks/newcomer_terms_check.py   (aggregates only)"""
-from seedoil_common import is_bot, not_bot, TOKEN_PATTERN, bertopic_clean, hyphen_bertopic  # shared bot rule: AutoModerator + names ending in 'bot'
+from seedoil_common import is_bot, not_bot, TOKEN_PATTERN, bertopic_clean, hyphen_bertopic, SPLIT_TS# shared bot rule: AutoModerator + names ending in 'bot'
 import glob
 import gzip
 import json
@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 import seso_topics as st  # noqa: E402
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, CountVectorizer  # noqa: E402
 
-P = Path("seedoils/data/processed"); CUT = 1704067200; MIN_AUTHORS = 15; ALPHA0 = 500; rng = np.random.default_rng(0)
+P = Path("seedoils/data/processed"); CUT = SPLIT_TS; MIN_AUTHORS = 15; ALPHA0 = 500; rng = np.random.default_rng(0)
 first = {}
 with gzip.open(glob.glob("seedoils/data/raw/*StopEatingSeedOils_comments.jsonl.gz")[0], "rt", encoding="utf-8") as f:
     for l in f:

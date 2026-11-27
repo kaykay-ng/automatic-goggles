@@ -1,0 +1,1164 @@
+{
+ "largest_component": 85,
+ "spearman_with_topic_size": {
+  "degree": 0.66,
+  "strength": 0.63,
+  "betweenness": 0.61,
+  "eigenvector": 0.57,
+  "pagerank": 0.66,
+  "participation": 0.61
+ },
+ "spearman_between": {
+  "degree-strength": 0.99,
+  "degree-betweenness": 0.88,
+  "degree-eigenvector": 0.95,
+  "degree-pagerank": 0.95,
+  "degree-participation": 0.81,
+  "strength-betweenness": 0.88,
+  "strength-eigenvector": 0.95,
+  "strength-pagerank": 0.95,
+  "strength-participation": 0.78,
+  "betweenness-eigenvector": 0.81,
+  "betweenness-pagerank": 0.88,
+  "betweenness-participation": 0.79,
+  "eigenvector-pagerank": 0.84,
+  "eigenvector-participation": 0.82,
+  "pagerank-participation": 0.73
+ },
+ "top_by_degree": [
+  {
+   "topic": 4,
+   "words": "fat, saturated-fat, trans, trans fat",
+   "theme": "Omega-6 / PUFA biochemistry",
+   "community": 0,
+   "docs": 3390,
+   "degree": 34,
+   "strength": 42.507,
+   "betweenness": 0.114,
+   "eigenvector": 0.392,
+   "pagerank": 0.04,
+   "participation": 0.753,
+   "communities_reached": 5
+  },
+  {
+   "topic": 1,
+   "words": "pufa, omega-6, omega-3, acid",
+   "theme": "Omega-6 / PUFA biochemistry",
+   "community": 3,
+   "docs": 10437,
+   "degree": 24,
+   "strength": 29.718,
+   "betweenness": 0.018,
+   "eigenvector": 0.299,
+   "pagerank": 0.028,
+   "participation": 0.729,
+   "communities_reached": 5
+  },
+  {
+   "topic": 14,
+   "words": "calorie, weight, gain, lose",
+   "theme": "Keto, carbs, fasting",
+   "community": 0,
+   "docs": 2841,
+   "degree": 20,
+   "strength": 24.926,
+   "betweenness": 0.018,
+   "eigenvector": 0.25,
+   "pagerank": 0.025,
+   "participation": 0.58,
+   "communities_reached": 4
+  },
+  {
+   "topic": 0,
+   "words": "seed-oil, food, health, oil",
+   "theme": "General talk and meta",
+   "community": 1,
+   "docs": 14595,
+   "degree": 19,
+   "strength": 21.185,
+   "betweenness": 0.025,
+   "eigenvector": 0.189,
+   "pagerank": 0.022,
+   "participation": 0.72,
+   "communities_reached": 5
+  },
+  {
+   "topic": 12,
+   "words": "pork, pig, lard, bacon",
+   "theme": "Other diets",
+   "community": 3,
+   "docs": 2007,
+   "degree": 18,
+   "strength": 23.07,
+   "betweenness": 0.038,
+   "eigenvector": 0.233,
+   "pagerank": 0.023,
+   "participation": 0.698,
+   "communities_reached": 4
+  },
+  {
+   "topic": 24,
+   "words": "oil, vegetable-oil, hexane, lubricant",
+   "theme": "Specific oils",
+   "community": 2,
+   "docs": 2341,
+   "degree": 16,
+   "strength": 18.971,
+   "betweenness": 0.048,
+   "eigenvector": 0.154,
+   "pagerank": 0.022,
+   "participation": 0.719,
+   "communities_reached": 5
+  },
+  {
+   "topic": 33,
+   "words": "nutrition, science, diet, study",
+   "theme": "Studies and evidence",
+   "community": 1,
+   "docs": 2178,
+   "degree": 15,
+   "strength": 18.477,
+   "betweenness": 0.013,
+   "eigenvector": 0.196,
+   "pagerank": 0.018,
+   "participation": 0.56,
+   "communities_reached": 3
+  },
+  {
+   "topic": 37,
+   "words": "doctor, medical, pharma, health",
+   "theme": "Distrust of industry, medicine and media",
+   "community": 1,
+   "docs": 1769,
+   "degree": 13,
+   "strength": 16.001,
+   "betweenness": 0.022,
+   "eigenvector": 0.109,
+   "pagerank": 0.016,
+   "participation": 0.272,
+   "communities_reached": 3
+  },
+  {
+   "topic": 42,
+   "words": "burger, patty, steak, grill",
+   "theme": "Shopping",
+   "community": 4,
+   "docs": 1119,
+   "degree": 13,
+   "strength": 16.374,
+   "betweenness": 0.027,
+   "eigenvector": 0.116,
+   "pagerank": 0.018,
+   "participation": 0.568,
+   "communities_reached": 4
+  },
+  {
+   "topic": 43,
+   "words": "fruit, rice, beef, cheese",
+   "theme": "Keto, carbs, fasting",
+   "community": 0,
+   "docs": 2110,
+   "degree": 13,
+   "strength": 15.834,
+   "betweenness": 0.02,
+   "eigenvector": 0.157,
+   "pagerank": 0.017,
+   "participation": 0.627,
+   "communities_reached": 4
+  }
+ ],
+ "top_by_betweenness": [
+  {
+   "topic": 4,
+   "words": "fat, saturated-fat, trans, trans fat",
+   "theme": "Omega-6 / PUFA biochemistry",
+   "community": 0,
+   "docs": 3390,
+   "degree": 34,
+   "strength": 42.507,
+   "betweenness": 0.114,
+   "eigenvector": 0.392,
+   "pagerank": 0.04,
+   "participation": 0.753,
+   "communities_reached": 5
+  },
+  {
+   "topic": 9,
+   "words": "butter, margarine, real butter, butter butter",
+   "theme": "Cooking and cooking fats",
+   "community": 2,
+   "docs": 2083,
+   "degree": 13,
+   "strength": 15.416,
+   "betweenness": 0.064,
+   "eigenvector": 0.117,
+   "pagerank": 0.019,
+   "participation": 0.746,
+   "communities_reached": 5
+  },
+  {
+   "topic": 24,
+   "words": "oil, vegetable-oil, hexane, lubricant",
+   "theme": "Specific oils",
+   "community": 2,
+   "docs": 2341,
+   "degree": 16,
+   "strength": 18.971,
+   "betweenness": 0.048,
+   "eigenvector": 0.154,
+   "pagerank": 0.022,
+   "participation": 0.719,
+   "communities_reached": 5
+  },
+  {
+   "topic": 73,
+   "words": "food, company, industry, government",
+   "theme": "Distrust of industry, medicine and media",
+   "community": 1,
+   "docs": 1946,
+   "degree": 10,
+   "strength": 12.149,
+   "betweenness": 0.038,
+   "eigenvector": 0.063,
+   "pagerank": 0.014,
+   "participation": 0.66,
+   "communities_reached": 4
+  },
+  {
+   "topic": 12,
+   "words": "pork, pig, lard, bacon",
+   "theme": "Other diets",
+   "community": 3,
+   "docs": 2007,
+   "degree": 18,
+   "strength": 23.07,
+   "betweenness": 0.038,
+   "eigenvector": 0.233,
+   "pagerank": 0.023,
+   "participation": 0.698,
+   "communities_reached": 4
+  },
+  {
+   "topic": 64,
+   "words": "cooky, cake, butter, recipe",
+   "theme": "Shopping",
+   "community": 5,
+   "docs": 675,
+   "degree": 5,
+   "strength": 6.784,
+   "betweenness": 0.034,
+   "eigenvector": 0.01,
+   "pagerank": 0.015,
+   "participation": 0.32,
+   "communities_reached": 2
+  },
+  {
+   "topic": 35,
+   "words": "coconut-oil, coconut, mct, oil",
+   "theme": "Specific oils",
+   "community": 3,
+   "docs": 1126,
+   "degree": 12,
+   "strength": 16.084,
+   "betweenness": 0.032,
+   "eigenvector": 0.159,
+   "pagerank": 0.017,
+   "participation": 0.653,
+   "communities_reached": 4
+  },
+  {
+   "topic": 42,
+   "words": "burger, patty, steak, grill",
+   "theme": "Shopping",
+   "community": 4,
+   "docs": 1119,
+   "degree": 13,
+   "strength": 16.374,
+   "betweenness": 0.027,
+   "eigenvector": 0.116,
+   "pagerank": 0.018,
+   "participation": 0.568,
+   "communities_reached": 4
+  },
+  {
+   "topic": 57,
+   "words": "ingredient, label, list, ingredient list",
+   "theme": "Ingredient labels and processed food",
+   "community": 2,
+   "docs": 1298,
+   "degree": 4,
+   "strength": 5.048,
+   "betweenness": 0.025,
+   "eigenvector": 0.014,
+   "pagerank": 0.011,
+   "participation": 0.375,
+   "communities_reached": 2
+  },
+  {
+   "topic": 0,
+   "words": "seed-oil, food, health, oil",
+   "theme": "General talk and meta",
+   "community": 1,
+   "docs": 14595,
+   "degree": 19,
+   "strength": 21.185,
+   "betweenness": 0.025,
+   "eigenvector": 0.189,
+   "pagerank": 0.022,
+   "participation": 0.72,
+   "communities_reached": 5
+  }
+ ],
+ "top_by_eigenvector": [
+  {
+   "topic": 4,
+   "words": "fat, saturated-fat, trans, trans fat",
+   "theme": "Omega-6 / PUFA biochemistry",
+   "community": 0,
+   "docs": 3390,
+   "degree": 34,
+   "strength": 42.507,
+   "betweenness": 0.114,
+   "eigenvector": 0.392,
+   "pagerank": 0.04,
+   "participation": 0.753,
+   "communities_reached": 5
+  },
+  {
+   "topic": 1,
+   "words": "pufa, omega-6, omega-3, acid",
+   "theme": "Omega-6 / PUFA biochemistry",
+   "community": 3,
+   "docs": 10437,
+   "degree": 24,
+   "strength": 29.718,
+   "betweenness": 0.018,
+   "eigenvector": 0.299,
+   "pagerank": 0.028,
+   "participation": 0.729,
+   "communities_reached": 5
+  },
+  {
+   "topic": 14,
+   "words": "calorie, weight, gain, lose",
+   "theme": "Keto, carbs, fasting",
+   "community": 0,
+   "docs": 2841,
+   "degree": 20,
+   "strength": 24.926,
+   "betweenness": 0.018,
+   "eigenvector": 0.25,
+   "pagerank": 0.025,
+   "participation": 0.58,
+   "communities_reached": 4
+  },
+  {
+   "topic": 12,
+   "words": "pork, pig, lard, bacon",
+   "theme": "Other diets",
+   "community": 3,
+   "docs": 2007,
+   "degree": 18,
+   "strength": 23.07,
+   "betweenness": 0.038,
+   "eigenvector": 0.233,
+   "pagerank": 0.023,
+   "participation": 0.698,
+   "communities_reached": 4
+  },
+  {
+   "topic": 60,
+   "words": "carb, low carb, low, high carb",
+   "theme": "Keto, carbs, fasting",
+   "community": 0,
+   "docs": 1114,
+   "degree": 13,
+   "strength": 17.61,
+   "betweenness": 0.013,
+   "eigenvector": 0.208,
+   "pagerank": 0.017,
+   "participation": 0.379,
+   "communities_reached": 3
+  },
+  {
+   "topic": 58,
+   "words": "insulin, glucose, diabetes, resistance",
+   "theme": "Keto, carbs, fasting",
+   "community": 0,
+   "docs": 1242,
+   "degree": 11,
+   "strength": 16.022,
+   "betweenness": 0.012,
+   "eigenvector": 0.201,
+   "pagerank": 0.016,
+   "participation": 0.446,
+   "communities_reached": 4
+  },
+  {
+   "topic": 2,
+   "words": "ldl, cholesterol, hdl, statin",
+   "theme": "Omega-6 / PUFA biochemistry",
+   "community": 0,
+   "docs": 2910,
+   "degree": 12,
+   "strength": 15.238,
+   "betweenness": 0.005,
+   "eigenvector": 0.198,
+   "pagerank": 0.015,
+   "participation": 0.611,
+   "communities_reached": 3
+  },
+  {
+   "topic": 33,
+   "words": "nutrition, science, diet, study",
+   "theme": "Studies and evidence",
+   "community": 1,
+   "docs": 2178,
+   "degree": 15,
+   "strength": 18.477,
+   "betweenness": 0.013,
+   "eigenvector": 0.196,
+   "pagerank": 0.018,
+   "participation": 0.56,
+   "communities_reached": 3
+  },
+  {
+   "topic": 0,
+   "words": "seed-oil, food, health, oil",
+   "theme": "General talk and meta",
+   "community": 1,
+   "docs": 14595,
+   "degree": 19,
+   "strength": 21.185,
+   "betweenness": 0.025,
+   "eigenvector": 0.189,
+   "pagerank": 0.022,
+   "participation": 0.72,
+   "communities_reached": 5
+  },
+  {
+   "topic": 17,
+   "words": "science, study, scientific, evidence",
+   "theme": "Studies and evidence",
+   "community": 1,
+   "docs": 2817,
+   "degree": 13,
+   "strength": 16.388,
+   "betweenness": 0.015,
+   "eigenvector": 0.169,
+   "pagerank": 0.016,
+   "participation": 0.556,
+   "communities_reached": 4
+  }
+ ],
+ "top_by_participation": [
+  {
+   "topic": 23,
+   "words": "meal, cook, food, home",
+   "theme": "Cooking and cooking fats",
+   "community": 4,
+   "docs": 2140,
+   "degree": 7,
+   "strength": 8.246,
+   "betweenness": 0.024,
+   "eigenvector": 0.055,
+   "pagerank": 0.011,
+   "participation": 0.776,
+   "communities_reached": 5
+  },
+  {
+   "topic": 4,
+   "words": "fat, saturated-fat, trans, trans fat",
+   "theme": "Omega-6 / PUFA biochemistry",
+   "community": 0,
+   "docs": 3390,
+   "degree": 34,
+   "strength": 42.507,
+   "betweenness": 0.114,
+   "eigenvector": 0.392,
+   "pagerank": 0.04,
+   "participation": 0.753,
+   "communities_reached": 5
+  },
+  {
+   "topic": 9,
+   "words": "butter, margarine, real butter, butter butter",
+   "theme": "Cooking and cooking fats",
+   "community": 2,
+   "docs": 2083,
+   "degree": 13,
+   "strength": 15.416,
+   "betweenness": 0.064,
+   "eigenvector": 0.117,
+   "pagerank": 0.019,
+   "participation": 0.746,
+   "communities_reached": 5
+  },
+  {
+   "topic": 21,
+   "words": "fry, potato, french fry, french",
+   "theme": "Shopping",
+   "community": 4,
+   "docs": 1223,
+   "degree": 7,
+   "strength": 8.597,
+   "betweenness": 0.008,
+   "eigenvector": 0.06,
+   "pagerank": 0.011,
+   "participation": 0.735,
+   "communities_reached": 5
+  },
+  {
+   "topic": 1,
+   "words": "pufa, omega-6, omega-3, acid",
+   "theme": "Omega-6 / PUFA biochemistry",
+   "community": 3,
+   "docs": 10437,
+   "degree": 24,
+   "strength": 29.718,
+   "betweenness": 0.018,
+   "eigenvector": 0.299,
+   "pagerank": 0.028,
+   "participation": 0.729,
+   "communities_reached": 5
+  },
+  {
+   "topic": 11,
+   "words": "grass, fed, beef, grass fed",
+   "theme": "Other diets",
+   "community": 3,
+   "docs": 2364,
+   "degree": 12,
+   "strength": 14.301,
+   "betweenness": 0.01,
+   "eigenvector": 0.129,
+   "pagerank": 0.015,
+   "participation": 0.722,
+   "communities_reached": 5
+  },
+  {
+   "topic": 99,
+   "words": "poison, chemical, toxic, dose",
+   "theme": "Distrust of industry, medicine and media",
+   "community": 4,
+   "docs": 944,
+   "degree": 6,
+   "strength": 7.288,
+   "betweenness": 0.005,
+   "eigenvector": 0.07,
+   "pagerank": 0.008,
+   "participation": 0.722,
+   "communities_reached": 4
+  },
+  {
+   "topic": 0,
+   "words": "seed-oil, food, health, oil",
+   "theme": "General talk and meta",
+   "community": 1,
+   "docs": 14595,
+   "degree": 19,
+   "strength": 21.185,
+   "betweenness": 0.025,
+   "eigenvector": 0.189,
+   "pagerank": 0.022,
+   "participation": 0.72,
+   "communities_reached": 5
+  },
+  {
+   "topic": 24,
+   "words": "oil, vegetable-oil, hexane, lubricant",
+   "theme": "Specific oils",
+   "community": 2,
+   "docs": 2341,
+   "degree": 16,
+   "strength": 18.971,
+   "betweenness": 0.048,
+   "eigenvector": 0.154,
+   "pagerank": 0.022,
+   "participation": 0.719,
+   "communities_reached": 5
+  },
+  {
+   "topic": 12,
+   "words": "pork, pig, lard, bacon",
+   "theme": "Other diets",
+   "community": 3,
+   "docs": 2007,
+   "degree": 18,
+   "strength": 23.07,
+   "betweenness": 0.038,
+   "eigenvector": 0.233,
+   "pagerank": 0.023,
+   "participation": 0.698,
+   "communities_reached": 4
+  }
+ ],
+ "by_theme": [
+  {
+   "theme": "Omega-6 / PUFA biochemistry",
+   "topics": 6,
+   "mean_degree": 14.667,
+   "mean_betweenness": 0.026,
+   "mean_participation": 0.545
+  },
+  {
+   "theme": "Studies and evidence",
+   "topics": 2,
+   "mean_degree": 14.0,
+   "mean_betweenness": 0.014,
+   "mean_participation": 0.558
+  },
+  {
+   "theme": "Keto, carbs, fasting",
+   "topics": 9,
+   "mean_degree": 9.667,
+   "mean_betweenness": 0.008,
+   "mean_participation": 0.442
+  },
+  {
+   "theme": "General talk and meta",
+   "topics": 7,
+   "mean_degree": 7.143,
+   "mean_betweenness": 0.008,
+   "mean_participation": 0.302
+  },
+  {
+   "theme": "Politics",
+   "topics": 5,
+   "mean_degree": 6.0,
+   "mean_betweenness": 0.006,
+   "mean_participation": 0.0
+  },
+  {
+   "theme": "Other diets",
+   "topics": 13,
+   "mean_degree": 5.923,
+   "mean_betweenness": 0.008,
+   "mean_participation": 0.296
+  },
+  {
+   "theme": "Cooking and cooking fats",
+   "topics": 7,
+   "mean_degree": 5.429,
+   "mean_betweenness": 0.014,
+   "mean_participation": 0.459
+  },
+  {
+   "theme": "Specific oils",
+   "topics": 12,
+   "mean_degree": 4.667,
+   "mean_betweenness": 0.009,
+   "mean_participation": 0.274
+  },
+  {
+   "theme": "Distrust of industry, medicine and media",
+   "topics": 10,
+   "mean_degree": 4.6,
+   "mean_betweenness": 0.007,
+   "mean_participation": 0.165
+  },
+  {
+   "theme": "Vaccines and COVID",
+   "topics": 1,
+   "mean_degree": 3.0,
+   "mean_betweenness": 0.0,
+   "mean_participation": 0.0
+  },
+  {
+   "theme": "Shopping",
+   "topics": 15,
+   "mean_degree": 2.533,
+   "mean_betweenness": 0.006,
+   "mean_participation": 0.179
+  },
+  {
+   "theme": "Lifestyle",
+   "topics": 14,
+   "mean_degree": 2.071,
+   "mean_betweenness": 0.002,
+   "mean_participation": 0.105
+  },
+  {
+   "theme": "Staple foods",
+   "topics": 13,
+   "mean_degree": 1.462,
+   "mean_betweenness": 0.001,
+   "mean_participation": 0.076
+  },
+  {
+   "theme": "Ingredient labels and processed food",
+   "topics": 9,
+   "mean_degree": 1.0,
+   "mean_betweenness": 0.003,
+   "mean_participation": 0.042
+  }
+ ],
+ "top_degree_before": [
+  {
+   "topic": 1,
+   "words": "pufa, omega-6, omega-3, acid",
+   "theme": "Omega-6 / PUFA biochemistry",
+   "degree_before": 6
+  },
+  {
+   "topic": 58,
+   "words": "insulin, glucose, diabetes, resistance",
+   "theme": "Keto, carbs, fasting",
+   "degree_before": 4
+  },
+  {
+   "topic": 4,
+   "words": "fat, saturated-fat, trans, trans fat",
+   "theme": "Omega-6 / PUFA biochemistry",
+   "degree_before": 4
+  },
+  {
+   "topic": 5,
+   "words": "comment, reddit, post, sub",
+   "theme": "General talk and meta",
+   "degree_before": 4
+  },
+  {
+   "topic": 50,
+   "words": "guy, video, diet, eats",
+   "theme": "General talk and meta",
+   "degree_before": 4
+  },
+  {
+   "topic": 104,
+   "words": "podcast, tucker, video, layne",
+   "theme": "General talk and meta",
+   "degree_before": 3
+  },
+  {
+   "topic": 14,
+   "words": "calorie, weight, gain, lose",
+   "theme": "Keto, carbs, fasting",
+   "degree_before": 3
+  },
+  {
+   "topic": 60,
+   "words": "carb, low carb, low, high carb",
+   "theme": "Keto, carbs, fasting",
+   "degree_before": 3
+  }
+ ],
+ "top_degree_from": [
+  {
+   "topic": 1,
+   "words": "pufa, omega-6, omega-3, acid",
+   "theme": "Omega-6 / PUFA biochemistry",
+   "degree_from": 6
+  },
+  {
+   "topic": 2,
+   "words": "ldl, cholesterol, hdl, statin",
+   "theme": "Omega-6 / PUFA biochemistry",
+   "degree_from": 4
+  },
+  {
+   "topic": 4,
+   "words": "fat, saturated-fat, trans, trans fat",
+   "theme": "Omega-6 / PUFA biochemistry",
+   "degree_from": 3
+  },
+  {
+   "topic": 60,
+   "words": "carb, low carb, low, high carb",
+   "theme": "Keto, carbs, fasting",
+   "degree_from": 3
+  },
+  {
+   "topic": 47,
+   "words": "rfk-jr, trump, rape, vote",
+   "theme": "Politics",
+   "degree_from": 3
+  },
+  {
+   "topic": 17,
+   "words": "science, study, scientific, evidence",
+   "theme": "Studies and evidence",
+   "degree_from": 3
+  },
+  {
+   "topic": 0,
+   "words": "seed-oil, food, health, oil",
+   "theme": "General talk and meta",
+   "degree_from": 2
+  },
+  {
+   "topic": 12,
+   "words": "pork, pig, lard, bacon",
+   "theme": "Other diets",
+   "degree_from": 2
+  }
+ ],
+ "layout": {
+  "0": [
+   0.5036,
+   0.3746
+  ],
+  "1": [
+   0.4206,
+   0.3844
+  ],
+  "2": [
+   0.3725,
+   0.3161
+  ],
+  "3": [
+   0.7865,
+   0.5622
+  ],
+  "4": [
+   0.4036,
+   0.396
+  ],
+  "5": [
+   0.513,
+   0.2157
+  ],
+  "6": [
+   0.5764,
+   0.7922
+  ],
+  "8": [
+   0.6946,
+   0.6394
+  ],
+  "9": [
+   0.5557,
+   0.5792
+  ],
+  "11": [
+   0.4454,
+   0.5181
+  ],
+  "12": [
+   0.3966,
+   0.4957
+  ],
+  "14": [
+   0.2703,
+   0.3885
+  ],
+  "15": [
+   0.8075,
+   0.8329
+  ],
+  "16": [
+   0.3099,
+   0.6576
+  ],
+  "17": [
+   0.51,
+   0.2928
+  ],
+  "18": [
+   0.236,
+   0.6172
+  ],
+  "19": [
+   0.4576,
+   0.8324
+  ],
+  "20": [
+   0.6189,
+   0.501
+  ],
+  "21": [
+   0.4847,
+   0.6423
+  ],
+  "23": [
+   0.5143,
+   0.6059
+  ],
+  "24": [
+   0.601,
+   0.4601
+  ],
+  "25": [
+   0.2586,
+   0.5058
+  ],
+  "26": [
+   0.8156,
+   0.2012
+  ],
+  "27": [
+   0.3279,
+   0.3354
+  ],
+  "28": [
+   0.5514,
+   0.3697
+  ],
+  "30": [
+   0.2693,
+   0.1276
+  ],
+  "31": [
+   0.1384,
+   0.3835
+  ],
+  "33": [
+   0.4176,
+   0.2514
+  ],
+  "34": [
+   0.3777,
+   0.6816
+  ],
+  "35": [
+   0.4695,
+   0.4545
+  ],
+  "36": [
+   0.5303,
+   0.5196
+  ],
+  "37": [
+   0.6011,
+   0.2783
+  ],
+  "39": [
+   0.4366,
+   0.1904
+  ],
+  "41": [
+   0.1938,
+   0.7461
+  ],
+  "42": [
+   0.3451,
+   0.6155
+  ],
+  "43": [
+   0.2422,
+   0.5321
+  ],
+  "45": [
+   0.682,
+   0.4297
+  ],
+  "46": [
+   0.7444,
+   0.2603
+  ],
+  "47": [
+   0.7193,
+   0.0931
+  ],
+  "48": [
+   1.0,
+   0.3824
+  ],
+  "49": [
+   0.2138,
+   0.3105
+  ],
+  "50": [
+   0.5609,
+   0.0778
+  ],
+  "51": [
+   0.1076,
+   0.4602
+  ],
+  "55": [
+   0.7287,
+   0.8935
+  ],
+  "56": [
+   0.4399,
+   0.0823
+  ],
+  "57": [
+   0.7922,
+   0.5119
+  ],
+  "58": [
+   0.2719,
+   0.3297
+  ],
+  "59": [
+   0.0635,
+   0.3529
+  ],
+  "60": [
+   0.2287,
+   0.3734
+  ],
+  "61": [
+   0.9417,
+   0.6409
+  ],
+  "62": [
+   0.1797,
+   0.4273
+  ],
+  "63": [
+   0.4178,
+   1.0
+  ],
+  "64": [
+   0.6548,
+   0.7568
+  ],
+  "65": [
+   0.1962,
+   0.8077
+  ],
+  "67": [
+   0.1595,
+   0.0886
+  ],
+  "69": [
+   0.199,
+   0.4782
+  ],
+  "72": [
+   0.1479,
+   0.2281
+  ],
+  "73": [
+   0.6749,
+   0.3863
+  ],
+  "74": [
+   0.211,
+   0.0
+  ],
+  "76": [
+   0.4941,
+   0.5663
+  ],
+  "77": [
+   0.3427,
+   0.4076
+  ],
+  "78": [
+   0.3752,
+   0.5601
+  ],
+  "79": [
+   0.0075,
+   0.2569
+  ],
+  "81": [
+   0.9898,
+   0.4919
+  ],
+  "83": [
+   0.9679,
+   0.5849
+  ],
+  "85": [
+   0.4324,
+   0.6853
+  ],
+  "86": [
+   0.327,
+   0.3087
+  ],
+  "89": [
+   0.7467,
+   0.2162
+  ],
+  "92": [
+   0.318,
+   0.2523
+  ],
+  "93": [
+   0.5555,
+   0.1592
+  ],
+  "95": [
+   0.6176,
+   0.9
+  ],
+  "96": [
+   0.0531,
+   0.6201
+  ],
+  "97": [
+   0.6704,
+   0.1164
+  ],
+  "98": [
+   0.7926,
+   0.1107
+  ],
+  "99": [
+   0.5524,
+   0.4169
+  ],
+  "104": [
+   0.5437,
+   0.2483
+  ],
+  "105": [
+   0.0927,
+   0.2378
+  ],
+  "107": [
+   0.2998,
+   0.5416
+  ],
+  "108": [
+   0.8254,
+   0.4234
+  ],
+  "109": [
+   0.669,
+   0.2101
+  ],
+  "110": [
+   0.2916,
+   0.4282
+  ],
+  "112": [
+   0.3448,
+   0.5033
+  ],
+  "115": [
+   0.0,
+   0.4473
+  ],
+  "119": [
+   0.3251,
+   0.4571
+  ],
+  "122": [
+   0.2652,
+   0.2388
+  ]
+ },
+ "community_names": {
+  "1": "Politics, distrust and evidence",
+  "0": "Diet, weight and saturated fat",
+  "3": "Omega-6 and animal foods",
+  "2": "Oils and cooking fats",
+  "4": "Home cooking and sugar",
+  "5": "Shopping"
+ },
+ "coloured_communities": [
+  1,
+  0,
+  3
+ ],
+ "unlinked_topics": 32,
+ "small_components": [
+  [
+   7,
+   32
+  ],
+  [
+   10,
+   52,
+   54,
+   121
+  ]
+ ]
+}

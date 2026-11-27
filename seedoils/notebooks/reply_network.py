@@ -21,10 +21,10 @@ import pandas as pd
 from sklearn.metrics import adjusted_mutual_info_score
 
 sys.path.insert(0, str(Path(__file__).parent))
-from seedoil_common import is_bot  # noqa: E402
+from seedoil_common import is_bot, SPLIT_TS# noqa: E402
 
 P, RAW = Path("seedoils/data/processed"), Path("seedoils/data/raw")
-SPLIT = int(pd.Timestamp("2024-01-01", tz="UTC").timestamp())
+SPLIT = SPLIT_TS
 rng = np.random.default_rng(0)
 
 
@@ -59,6 +59,10 @@ users["n_comments"] = users.n - users.n_posts; users = users.sort_index(); users
 users["newcomer"] = users["first"] >= SPLIT
 idx = users.idx.to_dict()
 E = C[~C.a.map(bad) & ~C.b.map(bad) & (C.a != C.b)].copy()
+COMMENTS_ONLY = "--comments-only" in sys.argv  # robustness (27 Nov): only replies to comments (drop top-level comments on posts); writes reply_network_stats_comments_only.json, no csv
+if COMMENTS_ONLY:
+    print(f"COMMENTS ONLY: keeping {int((E.kind == 'comment').sum()):,} of {len(E):,} replies (replies to posts dropped)")
+    E = E[E.kind == "comment"].copy()
 ok_a, ok_b = ~C.a.map(bad), ~C.b.map(bad)
 lost = {"replies_total": int(len(C)), "by_deleted_or_bot_account": int((~ok_a).sum()), "parent_missing_deleted_or_bot": int((ok_a & ~ok_b).sum()),
         "self_replies": int((ok_a & ok_b & (C.a == C.b)).sum()), "self_replies_to_own_post": int((ok_a & ok_b & (C.a == C.b) & (C.kind == "post")).sum())}
@@ -172,6 +176,54 @@ try:
         stats["louvain"]["vs_topic_communities"] = {"people_in_both": len(both), "ami": round(adjusted_mutual_info_score([tc[a] for a in both], [lab[0][idx[a]] for a in both]), 3)}
 except FileNotFoundError:
     pass
+
+
+def same_people_as_topic_network():
+    """27 Nov (user question): the reply network restricted to EXACTLY the 2,621 people of the topic-similarity network (commenter_topic_network_130),
+    so both networks have the same nodes. Cohort = the topic network's own flag (old = first comment before SPLIT). Reported: size; reciprocity vs the
+    target-shuffle null; old guard / newcomer reply mixing from SPLIT (lift = observed share of replies / (sender group's share of sent x receiver
+    group's share of received)); replies inside the same topic community vs expected from activity, and vs 200 shuffles of the community labels;
+    the 12 x 12 community lift matrix; Louvain on the restricted reply network vs the topic communities (AMI) and vs shuffled labels."""
+    if len(H) != len(heavy):
+        return {"error": f"topic-network people do not match ({len(H)} vs {len(heavy)})"}
+    rid = np.array([idx.get(a, -1) for a in H]); comm = heavy.community.values; old = heavy.old.values.astype(bool)
+    pos = {int(r): i for i, r in enumerate(rid) if r >= 0}
+    S = E[E.u.isin(pos) & E.v.isin(pos)].copy(); S["i"], S["j"] = S.u.map(pos), S.v.map(pos)
+    out = {"people": int(len(H)), "replies_between_them": int(len(S)), "share_of_all_replies_pct": round(100 * len(S) / len(E), 1)}
+    g = S.groupby(["i", "j"]).size().rename("w").reset_index()
+    G = nx.DiGraph(); G.add_nodes_from(range(len(H))); G.add_weighted_edges_from(g[["i", "j", "w"]].itertuples(index=False, name=None))
+    out.update({"linked_pairs": int(G.number_of_edges()), "people_with_a_reply_link": int(sum(1 for n in G if G.degree(n) > 0)),
+                "reciprocity": round(nx.reciprocity(G), 3), "reciprocity_null": [round(x, 3) for x in reciprocity_null(G)]})
+
+    def lift_table(df, key):
+        a, b = key[df.i.values], key[df.j.values]; t = pd.crosstab(a, b); n = t.values.sum()
+        exp = np.outer(t.sum(1), t.sum(0)) / n
+        return t, exp, n
+    F = S[S.t >= SPLIT]; t, exp, n = lift_table(F, np.where(old, "old guard", "newcomer"))
+    out["cohort_mixing_from_split"] = [{"from": r, "to": c, "replies": int(t.loc[r, c]), "lift": round(float(t.loc[r, c] / exp[i, j]), 2)}
+                                       for i, r in enumerate(t.index) for j, c in enumerate(t.columns)]
+    t, exp, n = lift_table(S, comm); within = float(np.trace(t.values) / n); within_exp = float(np.trace(exp) / n)
+    sh = []
+    for r in range(200):
+        p = rng.permutation(comm); sh.append(float((p[S.i.values] == p[S.j.values]).mean()))
+    out["community_mixing"] = {"within_community_share_pct": round(100 * within, 1), "expected_from_activity_pct": round(100 * within_exp, 1),
+                               "ratio": round(within / within_exp, 2), "shuffled_labels_pct_mean": round(100 * float(np.mean(sh)), 1),
+                               "shuffled_labels_pct_max": round(100 * float(np.max(sh)), 1),
+                               "lift_matrix": {int(r): {int(c): round(float(t.loc[r, c] / exp[i, j]), 2) for j, c in enumerate(t.columns)} for i, r in enumerate(t.index)}}
+    U = nx.Graph((a, b, {"weight": d["weight"] + (G[b][a]["weight"] if G.has_edge(b, a) else 0)}) for a, b, d in G.edges(data=True))
+    core = U.subgraph(max(nx.connected_components(U), key=len)).copy(); nodes = sorted(core)
+    best = max((nx.community.louvain_communities(core, weight="weight", seed=s) for s in range(5)), key=lambda c: nx.community.modularity(core, c, weight="weight"))
+    lab = {v: k for k, c in enumerate(best) for v in c}; tc = comm[nodes]
+    out["louvain"] = {"largest_component": len(nodes), "communities": len(best), "modularity": round(nx.community.modularity(core, best, weight="weight"), 3),
+                      "ami_vs_topic_communities": round(adjusted_mutual_info_score(tc, [lab[v] for v in nodes]), 3),
+                      "ami_vs_shuffled_topic_labels": round(float(np.mean([adjusted_mutual_info_score(rng.permutation(tc), [lab[v] for v in nodes]) for _ in range(20)])), 3),
+                      "ami_vs_cohort": round(adjusted_mutual_info_score(old[nodes], [lab[v] for v in nodes]), 3)}
+    return out
+
+
+stats["same_people_as_topic_network"] = same_people_as_topic_network()
+print("same people as the topic network:", json.dumps({k: v for k, v in stats["same_people_as_topic_network"].items() if k != "community_mixing"}),
+      {k: v for k, v in stats["same_people_as_topic_network"].get("community_mixing", {}).items() if k != "lift_matrix"})
 stats["cohort_mixing"] = cohort_mixing(g_all)  # confounded by time: before 2024 everyone is old guard
 stats["cohort_mixing_from2024"] = cohort_mixing(edges_of(E[E.t >= SPLIT]))  # both cohorts present: the fair comparison
 stats["periods"] = [describe(edges_of(E[E.t < SPLIT]), "before 2024", full=False)[0], describe(edges_of(E[E.t >= SPLIT]), "from 2024", full=False)[0]]
@@ -182,7 +234,11 @@ print("louvain:", stats["louvain"]); print("cohort mixing:", stats["cohort_mixin
 users["louvain"] = users.idx.map(lab[0]).astype("Int64")
 users["in_replies"] = users.idx.map(g_all.groupby("v").w.sum()).fillna(0).astype(int); users["out_replies"] = users.idx.map(g_all.groupby("u").w.sum()).fillna(0).astype(int)
 users["first_month"] = pd.to_datetime(users["first"], unit="s").dt.strftime("%Y-%m")
-users[["idx", "n_posts", "n_comments", "first_month", "newcomer", "in_replies", "out_replies", "louvain"]].to_csv(P / "reply_network_nodes.csv", index=False)
-g_all.rename(columns={"u": "source", "v": "target", "w": "replies"}).to_csv(P / "reply_network_edges.csv", index=False)
-(P / "reply_network_stats.json").write_text(json.dumps(stats, indent=1))
-print("wrote reply_network_nodes.csv, reply_network_edges.csv, reply_network_stats.json")
+if COMMENTS_ONLY:
+    stats["variant"] = "replies to comments only (replies to posts dropped)"
+    (P / "reply_network_stats_comments_only.json").write_text(json.dumps(stats, indent=1)); print("wrote reply_network_stats_comments_only.json")
+else:
+    users[["idx", "n_posts", "n_comments", "first_month", "newcomer", "in_replies", "out_replies", "louvain"]].to_csv(P / "reply_network_nodes.csv", index=False)
+    g_all.rename(columns={"u": "source", "v": "target", "w": "replies"}).to_csv(P / "reply_network_edges.csv", index=False)
+    (P / "reply_network_stats.json").write_text(json.dumps(stats, indent=1))
+    print("wrote reply_network_nodes.csv, reply_network_edges.csv, reply_network_stats.json")

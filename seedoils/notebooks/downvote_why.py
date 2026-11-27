@@ -1,10 +1,10 @@
 """What goes with downvotes in r/StopEatingSeedOils? Splits comments (>= 15 words) by GoEmotions hostile (>=0.5), by whether the text mentions seed oil / vegetable oil / omega-6 etc. (a crude on-topic proxy, NOT a sentiment word list), by period and theme.
 Downvoted = score <= 0. Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/downvote_why.py"""
-from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
+from seedoil_common import is_bot, not_bot, SPLIT_TS# shared bot rule: AutoModerator + names ending in 'bot'
 import gzip, json
 from pathlib import Path
 import numpy as np, pandas as pd
-PROC = Path("seedoils/data/processed"); RAW = next(Path("seedoils/data/raw").glob("*StopEatingSeedOils_comments.jsonl.gz")); CUT = pd.Timestamp("2024-01-01").timestamp()
+PROC = Path("seedoils/data/processed"); RAW = next(Path("seedoils/data/raw").glob("*StopEatingSeedOils_comments.jsonl.gz")); CUT = SPLIT_TS
 LAB = list(pd.read_csv(PROC / "goemo_monthly.csv", nrows=1).columns[1:29]); H = ["anger", "annoyance", "disapproval", "disgust"]
 sc = {}
 with gzip.open(RAW, "rt", encoding="utf-8") as f:

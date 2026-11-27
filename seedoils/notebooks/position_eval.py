@@ -17,6 +17,18 @@ from sklearn.metrics import cohen_kappa_score
 
 P = Path("seedoils/data/processed"); A = P / "artifact"
 key = pd.read_csv(P / "position_sample_key.csv").set_index("item")
+# the sample was drawn 40 per subreddit x period at 1 Jan 2024; periods are re-assigned at the analysis split (seedoil_common.SPLIT_TS, 1 Jan 2024)
+import gzip, sys  # noqa: E401
+sys.path.insert(0, str(Path(__file__).parent)); from seedoil_common import SPLIT_TS  # noqa: E402
+_t = {}
+for _s in key.side.unique():
+    with gzip.open(next(Path("seedoils/data/raw").glob(f"*{_s}_comments.jsonl.gz")), "rt", encoding="utf-8") as _f:
+        _ids = set(key.comment_id[key.side == _s])
+        for _l in _f:
+            _x = json.loads(_l)
+            if _x["id"] in _ids:
+                _t[_x["id"]] = int(_x["created_utc"])
+key["period"] = np.where(key.comment_id.map(_t) >= SPLIT_TS, "from2024", "pre2024")
 files = sorted(glob.glob(str(P / "position_labels_*.csv")))
 if not files:
     raise SystemExit("no position_labels_*.csv in data/processed/: export it from seedoils/label_positions.html first")

@@ -8,7 +8,7 @@ Per variant and k: stability (mean pairwise AMI between seeds) and coherence (me
 plus the share of comments in the largest topic. Topic tables for seed 42 are saved.
 Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/seso_topics_reduce2.py
  -> data/processed/seso_red2_sweep.csv, seso_red2_<A|B>_k<k>_topics_info.csv. No text written."""
-from seedoil_common import TOKEN_PATTERN, bertopic_clean, hyphen_bertopic  # hyphen-keeping tokenizer (omega-6 stays whole)
+from seedoil_common import TOKEN_PATTERN, bertopic_clean, hyphen_bertopic, SPLIT_TS# hyphen-keeping tokenizer (omega-6 stays whole)
 import copy
 import itertools
 import sys
@@ -44,7 +44,7 @@ def main():
     shared = set(vocab[df / N > SHARED_DF])
     print(f"shared words (in >{SHARED_DF:.0%} of comments): {len(shared)}: {sorted(shared)}", flush=True)
     keep_col = np.array([w not in shared for w in vocab])
-    pre, post = (D.created_utc < 1704067200).values, (D.created_utc >= 1704067200).values
+    pre, post = (D.created_utc < SPLIT_TS).values, (D.created_utc >= SPLIT_TS).values
     orig = lambda: CountVectorizer(stop_words=stop, token_pattern=TOKEN_PATTERN, min_df=20, ngram_range=(1, 2))
     fixed = lambda v: CountVectorizer(stop_words=stop, token_pattern=TOKEN_PATTERN, ngram_range=(1, 2), vocabulary=list(v))
     labels, coh, big = {}, {}, {}

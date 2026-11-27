@@ -22,6 +22,7 @@ are in every author's list by construction; they are kept as labelled anchors bu
 with --drop-seeds.
 """
 
+from seedoil_common import HISTORY_GLOB  # author-history files for the analysis split
 import argparse
 import csv
 import gzip
@@ -158,7 +159,7 @@ def build(args):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--seeds", default=str(PROC / "seed_authors.csv"))
-    ap.add_argument("--counts", default=str(RAW / "author_subreddit_counts*.jsonl.gz"), help="file or glob (main file + shard files)")
+    ap.add_argument("--counts", default=str(RAW / HISTORY_GLOB), help="file or glob (main file + shard files)")
     ap.add_argument("--period", choices=["all", "pre2024", "from2024"], default="all")
     ap.add_argument("--min-comments", type=int, default=3)
     ap.add_argument("--min-authors", type=int, default=25)

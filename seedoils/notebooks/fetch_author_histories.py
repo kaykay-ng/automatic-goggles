@@ -98,7 +98,7 @@ def select(min_comments, top, subreddits):
     print(f"{len(rows):,} rows, {len({r[0] for r in rows}):,} distinct authors -> {out}")
 
 
-def fetch(authors_file, out, shard=None):
+def fetch(authors_file, out, shard=None, split=PERIOD_SPLIT, prefix="author_subreddit_counts"):
     authors = []
     with open(authors_file) as f:
         for r in csv.DictReader(f):
@@ -107,7 +107,10 @@ def fetch(authors_file, out, shard=None):
     out = Path(out)
     out.parent.mkdir(parents=True, exist_ok=True)
     done = set()  # authors already fetched in ANY output file (main file or shard files), so shards never repeat work
-    for p in out.parent.glob("author_subreddit_counts*.jsonl.gz"):
+    files = set(out.parent.glob(f"{prefix}*.jsonl.gz"))
+    if prefix == "author_subreddit_counts":  # the default (1 Jan 2024) run must not count authors fetched for another split
+        files -= set(out.parent.glob("author_subreddit_counts_aug2024*.jsonl.gz"))
+    for p in sorted(files):
         try:
             with gzip.open(p, "rt", encoding="utf-8") as f:
                 for line in f:
@@ -122,7 +125,7 @@ def fetch(authors_file, out, shard=None):
         k, n_shards = (int(x) for x in shard.split("/"))
         todo = [a for j, a in enumerate(todo) if j % n_shards == k]
     print(f"{len(authors):,} authors, {len(done):,} done, {len(todo):,} to fetch" + (f" (shard {shard})" if shard else ""), flush=True)
-    windows = {"pre2024": {"before": PERIOD_SPLIT}, "from2024": {"after": PERIOD_SPLIT}}
+    windows = {"pre2024": {"before": split}, "from2024": {"after": split}}  # keys kept as pre2024/from2024; with --split they mean before/from that date
     for i, a in enumerate(todo, 1):
         counts = {}
         try:
@@ -153,6 +156,8 @@ if __name__ == "__main__":
     f = sp.add_parser("fetch")
     f.add_argument("--authors", default=str(PROC / "seed_authors.csv"))
     f.add_argument("--out", default=None, help="default: author_subreddit_counts.jsonl.gz, or ..._shard<k>.jsonl.gz with --shard")
+    f.add_argument("--split", default=PERIOD_SPLIT, help="date that separates the two count windows (default 2024-01-01)")
+    f.add_argument("--prefix", default="author_subreddit_counts", help="output file prefix, e.g. author_subreddit_counts_aug2024 for --split 2024-08-01")
     f.add_argument("--shard", default=None, help="k/n: fetch only every n-th remaining author starting at k (run n processes in parallel; "
                                                  "each writes its own file; all files are read when skipping done authors and when building)")
     args = ap.parse_args()
@@ -160,5 +165,5 @@ if __name__ == "__main__":
         select(args.min_comments, args.top, args.subreddits)
     else:
         k = args.shard.split("/")[0] if args.shard else None
-        out = args.out or str(RAW / (f"author_subreddit_counts_shard{k}.jsonl.gz" if k is not None else "author_subreddit_counts.jsonl.gz"))
-        fetch(args.authors, out, args.shard)
+        out = args.out or str(RAW / (f"{args.prefix}_shard{k}.jsonl.gz" if k is not None else f"{args.prefix}.jsonl.gz"))
+        fetch(args.authors, out, args.shard, args.split, args.prefix)

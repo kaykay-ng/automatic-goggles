@@ -1,11 +1,11 @@
 """Three candidate views of upvotes (test page): (1) score bands per subreddit and period; (2) downvoted / 10+ share by theme (r/StopEatingSeedOils, comments >= 15 words); (3) score bands by cohort (newcomers = first comment in the subreddit from 2024; long-time = before 2024).
 Score = net votes as archived by Arctic Shift (not final or possibly time-of-collection). Bands: <=0 downvoted, 1-2, 3-9, 10-49, 50+. Bots excluded; comments of every age kept; excludes [deleted]/AutoModerator in cohort view.
 Output: data/processed/artifact/upvote_views.json  (rows with view, subreddit, group, band, pct, n).  Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/upvote_views.py"""
-from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
+from seedoil_common import is_bot, not_bot, SPLIT_TS# shared bot rule: AutoModerator + names ending in 'bot'
 import gzip, json
 from pathlib import Path
 import numpy as np, pandas as pd
-RAW = Path("seedoils/data/raw"); PROC = Path("seedoils/data/processed"); CUT = pd.Timestamp("2024-01-01").timestamp()
+RAW = Path("seedoils/data/raw"); PROC = Path("seedoils/data/processed"); CUT = SPLIT_TS
 BANDS = ["Downvoted (0 or less)", "1 to 2", "3 to 9", "10 to 49", "50 or more"]
 def band(s): return pd.cut(s, [-10**9, 0, 2, 9, 49, 10**9], labels=BANDS)
 def load(pat):

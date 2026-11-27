@@ -80,6 +80,7 @@ seedoils/label_hostility_sampleA.html
 
 # paper build output
 paper/build/
+paper/build_pnas/
 
 # third-party papers kept locally
 paper/refs/
@@ -113,3 +114,8 @@ seedoils/data/raw_haoyu/
 seedoils/data/raw_crosspost/
 seedoils/data/processed_rebuild/
 seedoils/data/processed_rebuild_prob/
+
+# figures for the paper are needed by co-authors and Overleaf: keep their PDFs despite the global *.pdf rule
+!paper/figures/*.pdf
+!seedoils/figures/*.pdf
+!paper/pnas_template/PNAS_Logo.pdf

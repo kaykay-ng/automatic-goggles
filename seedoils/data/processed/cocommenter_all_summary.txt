@@ -1,20 +1,23 @@
-period=all authors=1,087 camp sizes (single-camp) {'StopEatingSeedOils': 1021}
-subreddits kept=1,369 edges=329,584 density=0.3520
-Louvain communities=5 modularity=0.152
+period=all authors=2,919 camp sizes (single-camp) {'StopEatingSeedOils': 1421, 'ScientificNutrition': 1419}
+subreddits kept=2,874 edges=1,010,538 density=0.2448
+Louvain communities=6 modularity=0.202
 
-community 0: 351 subreddits, mean lean +1.00
-  top by PageRank: Justfuckmyshitup (1.0), KitchenConfidential (1.0), Weird (1.0), interesting (1.0), Wellthatsucks (1.0), landscaping (1.0), Funnymemes (1.0), mildyinteresting (1.0), AskTheWorld (1.0), FuckImOld (1.0), CleaningTips (1.0), jobs (1.0)
+community 0: 769 subreddits, mean lean -0.13
+  top by PageRank: OutOfTheLoop (-0.245), entertainment (-0.112), BuyItForLife (-0.013), MadeMeSmile (-0.144), gifs (-0.311), Music (-0.131), gadgets (-0.278), OldSchoolCool (-0.111), AdviceAnimals (-0.122), MapPorn (-0.098), WhitePeopleTwitter (-0.102), UpliftingNews (-0.356)
 
-community 1: 302 subreddits, mean lean +1.00
-  top by PageRank: gifs (1.0), nottheonion (1.0), OutOfTheLoop (1.0), WhitePeopleTwitter (1.0), LifeProTips (1.0), AdviceAnimals (1.0), PublicFreakout (1.0), gadgets (1.0), dataisbeautiful (1.0), UpliftingNews (1.0), OldSchoolCool (1.0), Music (1.0)
+community 1: 750 subreddits, mean lean +0.26
+  top by PageRank: Weird (0.185), answers (-0.014), KitchenConfidential (0.053), theydidthemath (-0.137), AbsoluteUnits (-0.033), SeriousConversation (0.209), Wellthatsucks (0.087), Funnymemes (0.261), Satisfyingasfuck (0.179), interesting (0.072), law (-0.164), meirl (0.029)
 
-community 2: 259 subreddits, mean lean +1.00
-  top by PageRank: TikTokCringe (1.0), Anticonsumption (1.0), EverythingScience (1.0), shittyfoodporn (1.0), antiwork (1.0), CasualConversation (1.0), unpopularopinion (1.0), facepalm (1.0), TrueOffMyChest (1.0), relationship_advice (1.0), AskMen (1.0), HubermanLab (1.0)
+community 2: 695 subreddits, mean lean -0.05
+  top by PageRank: CasualConversation (-0.164), BeAmazed (-0.061), Anticonsumption (-0.075), Frugal (-0.054), povertyfinance (0.129), RedditForGrownups (-0.16), EverythingScience (-0.557), UnethicalLifeProTips (0.115), psychology (-0.481), AMA (0.121), Advice (0.186), AskAnAmerican (0.005)
 
-community 3: 230 subreddits, mean lean +1.00
-  top by PageRank: whoathatsinteresting (1.0), clevercomebacks (1.0), Amazing (1.0), StrangeEarth (1.0), inthenews (1.0), SeriousConversation (1.0), CringeTikToks (1.0), europe (1.0), skeptic (1.0), PeterExplainsTheJoke (1.0), economicCollapse (1.0), NoShitSherlock (1.0)
+community 3: 621 subreddits, mean lean -0.21
+  top by PageRank: WatchPeopleDieInside (-0.136), BrandNewSentence (-0.26), blackmagicfuckery (-0.185), Whatcouldgowrong (-0.138), nostalgia (0.19), technicallythetruth (-0.276), ThatsInsane (-0.24), woahdude (-0.402), YouShouldKnow (-0.331), Unexpected (-0.143), KidsAreFuckingStupid (-0.052), oddlysatisfying (-0.272)
 
-community 4: 227 subreddits, mean lean +1.00
-  top by PageRank: blackmagicfuckery (1.0), technicallythetruth (1.0), oddlysatisfying (1.0), WatchPeopleDieInside (1.0), Whatcouldgowrong (1.0), BeAmazed (1.0), theydidthemath (1.0), AbsoluteUnits (1.0), Satisfyingasfuck (1.0), Unexpected (1.0), therewasanattempt (1.0), shitposting (1.0)
+community 4: 24 subreddits, mean lean +0.04
+  top by PageRank: BuyCanadian (0.124), PersonalFinanceCanada (-0.039), onguardforthee (-0.462), vancouver (-0.292), ontario (-0.123), alberta (0.083), britishcolumbia (-0.107), AskACanadian (0.241), toronto (-0.067), ottawa (-0.42), CanadaPolitics (-0.676), hockey (0.155)
 
-bridges (betweenness): STEW_ScTecEngWorld c3, NetflixBestOf c1, Pareidolia c4, blursedimages c4, nope c4, RandomQuestion c0, youseeingthisshit c4, AmITheJerk c0, holdmycosmo c4, blunderyears c4
+community 5: 15 subreddits, mean lean -0.08
+  top by PageRank: AskBrits (-0.092), uknews (-0.095), UK_Food (0.187), GreatBritishMemes (-0.024), LegalAdviceUK (-0.245), RateMyPlate (0.166), UKJobs (0.03), LowStakesConspiracies (-0.001), UKfood (0.039), AskABrit (-0.131), UKPersonalFinance (-0.415), HousingUK (-0.001)
+
+bridges (betweenness): WorkAdvice c1, LegalNews c1, OldSchoolRidiculous c1, InBitcoinWeTrust c1, rage c3, Mid_Century c2, firstworldanarchists c3, forwardsfromgrandma c3, StartledCats c3, The1980s c1

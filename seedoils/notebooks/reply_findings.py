@@ -20,10 +20,10 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).parent))
-from seedoil_common import is_bot  # noqa: E402
+from seedoil_common import is_bot, SPLIT_TS# noqa: E402
 
 P, RAW = Path("seedoils/data/processed"), Path("seedoils/data/raw")
-SPLIT = int(pd.Timestamp("2024-01-01", tz="UTC").timestamp())
+SPLIT = SPLIT_TS
 H4 = ["anger", "annoyance", "disapproval", "disgust"]
 bad = lambda a: (not isinstance(a, str)) or (not a) or a == "[deleted]" or is_bot(a)  # noqa: E731
 out = {}

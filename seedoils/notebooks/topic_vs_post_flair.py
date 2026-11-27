@@ -1,10 +1,10 @@
 """Validity check of the BERTopic topics against the post flair of the thread each comment sits in (from 2024, when 84% of posts are flaired).
 NMI(topic, thread flair) against a null that shuffles flairs across threads; plus the topics most over-represented under each common flair (lift = share of the flair vs share overall).
 Run from final_project/ with the NLP env: ./.venv-nlp/bin/python seedoils/notebooks/topic_vs_post_flair.py (paths below are relative to final_project/). Aggregates only."""
-from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
+from seedoil_common import is_bot, not_bot, SPLIT_TS# shared bot rule: AutoModerator + names ending in 'bot'
 import gzip,json,collections,pandas as pd,numpy as np,datetime as dt
 from sklearn.metrics import normalized_mutual_info_score as nmi
-SPLIT=1704067200; R='seedoils/data/raw/'; PR='seedoils/data/processed/'
+SPLIT=SPLIT_TS; R='seedoils/data/raw/'; PR='seedoils/data/processed/'
 pf={}
 for l in gzip.open(R+'StopEatingSeedOils_posts.jsonl.gz','rt'):
     try:d=json.loads(l)

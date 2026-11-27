@@ -1,0 +1,888 @@
+{
+ "pairs": [
+  "disapproving vs Anger",
+  "disapproving vs Anger+Skepticism",
+  "positive vs Love+Approval",
+  "amusement vs Laughter",
+  "sad vs Sadness"
+ ],
+ "seso_documents": {
+  "n": 149815,
+  "pairs": [
+   {
+    "pair": "disapproving vs Anger",
+    "spearman": 0.37,
+    "flagged_by_goemotions": 8731,
+    "share_of_flagged_in_torchmoji_top10pct": 18.9
+   },
+   {
+    "pair": "disapproving vs Anger+Skepticism",
+    "spearman": 0.413,
+    "flagged_by_goemotions": 8731,
+    "share_of_flagged_in_torchmoji_top10pct": 21.6
+   },
+   {
+    "pair": "positive vs Love+Approval",
+    "spearman": 0.495,
+    "flagged_by_goemotions": 25696,
+    "share_of_flagged_in_torchmoji_top10pct": 29.0
+   },
+   {
+    "pair": "amusement vs Laughter",
+    "spearman": 0.112,
+    "flagged_by_goemotions": 5767,
+    "share_of_flagged_in_torchmoji_top10pct": 35.6
+   },
+   {
+    "pair": "sad vs Sadness",
+    "spearman": 0.446,
+    "flagged_by_goemotions": 2789,
+    "share_of_flagged_in_torchmoji_top10pct": 53.4
+   }
+  ]
+ },
+ "scinut_documents": {
+  "n": 121833,
+  "pairs": [
+   {
+    "pair": "disapproving vs Anger",
+    "spearman": 0.322,
+    "flagged_by_goemotions": 5756,
+    "share_of_flagged_in_torchmoji_top10pct": 13.9
+   },
+   {
+    "pair": "disapproving vs Anger+Skepticism",
+    "spearman": 0.367,
+    "flagged_by_goemotions": 5756,
+    "share_of_flagged_in_torchmoji_top10pct": 16.5
+   },
+   {
+    "pair": "positive vs Love+Approval",
+    "spearman": 0.415,
+    "flagged_by_goemotions": 14472,
+    "share_of_flagged_in_torchmoji_top10pct": 29.3
+   },
+   {
+    "pair": "amusement vs Laughter",
+    "spearman": 0.177,
+    "flagged_by_goemotions": 2622,
+    "share_of_flagged_in_torchmoji_top10pct": 40.5
+   },
+   {
+    "pair": "sad vs Sadness",
+    "spearman": 0.295,
+    "flagged_by_goemotions": 1446,
+    "share_of_flagged_in_torchmoji_top10pct": 45.2
+   }
+  ]
+ },
+ "seso_themes": [
+  {
+   "pair": "disapproving vs Anger",
+   "spearman_across_theme_period_cells": 0.654,
+   "themes_with_same_direction_of_change": "12 of 14",
+   "change_by_theme": {
+    "Cooking and cooking fats (butter, tallow, frying)": {
+     "goemotions_pts": 1.51,
+     "torchmoji_pts": 0.76
+    },
+    "Distrust of industry, medicine and media": {
+     "goemotions_pts": 0.8,
+     "torchmoji_pts": 0.81
+    },
+    "General talk and meta (generic seed-oil, subreddit, thanks, influencers)": {
+     "goemotions_pts": 1.67,
+     "torchmoji_pts": 0.95
+    },
+    "Ingredient labels and processed food": {
+     "goemotions_pts": 2.64,
+     "torchmoji_pts": 0.94
+    },
+    "Keto, carbs, fasting": {
+     "goemotions_pts": 0.52,
+     "torchmoji_pts": -0.34
+    },
+    "Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)": {
+     "goemotions_pts": 1.45,
+     "torchmoji_pts": 1.49
+    },
+    "Omega-6 / PUFA biochemistry": {
+     "goemotions_pts": 0.98,
+     "torchmoji_pts": 1.25
+    },
+    "Other diets (vegan, carnivore, ancestral, Mediterranean)": {
+     "goemotions_pts": 1.6,
+     "torchmoji_pts": 0.62
+    },
+    "Politics (RFK, Trump, left/right)": {
+     "goemotions_pts": -0.7,
+     "torchmoji_pts": 2.32
+    },
+    "Shopping (stores, chips, avocado oil)": {
+     "goemotions_pts": 0.94,
+     "torchmoji_pts": 0.47
+    },
+    "Specific oils (canola, olive, coconut, palm, sunflower, soybean...)": {
+     "goemotions_pts": 0.05,
+     "torchmoji_pts": 0.62
+    },
+    "Staple foods (milk, grains, nuts, soy, chocolate, coffee)": {
+     "goemotions_pts": 0.54,
+     "torchmoji_pts": 0.7
+    },
+    "Studies and evidence": {
+     "goemotions_pts": 2.86,
+     "torchmoji_pts": 0.34
+    },
+    "Vaccines and COVID": {
+     "goemotions_pts": 2.01,
+     "torchmoji_pts": 3.01
+    }
+   }
+  },
+  {
+   "pair": "disapproving vs Anger+Skepticism",
+   "spearman_across_theme_period_cells": 0.827,
+   "themes_with_same_direction_of_change": "13 of 14",
+   "change_by_theme": {
+    "Cooking and cooking fats (butter, tallow, frying)": {
+     "goemotions_pts": 1.51,
+     "torchmoji_pts": 1.51
+    },
+    "Distrust of industry, medicine and media": {
+     "goemotions_pts": 0.8,
+     "torchmoji_pts": 0.94
+    },
+    "General talk and meta (generic seed-oil, subreddit, thanks, influencers)": {
+     "goemotions_pts": 1.67,
+     "torchmoji_pts": 1.29
+    },
+    "Ingredient labels and processed food": {
+     "goemotions_pts": 2.64,
+     "torchmoji_pts": 1.74
+    },
+    "Keto, carbs, fasting": {
+     "goemotions_pts": 0.52,
+     "torchmoji_pts": 0.57
+    },
+    "Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)": {
+     "goemotions_pts": 1.45,
+     "torchmoji_pts": 1.53
+    },
+    "Omega-6 / PUFA biochemistry": {
+     "goemotions_pts": 0.98,
+     "torchmoji_pts": 1.06
+    },
+    "Other diets (vegan, carnivore, ancestral, Mediterranean)": {
+     "goemotions_pts": 1.6,
+     "torchmoji_pts": 0.71
+    },
+    "Politics (RFK, Trump, left/right)": {
+     "goemotions_pts": -0.7,
+     "torchmoji_pts": 2.0
+    },
+    "Shopping (stores, chips, avocado oil)": {
+     "goemotions_pts": 0.94,
+     "torchmoji_pts": 0.54
+    },
+    "Specific oils (canola, olive, coconut, palm, sunflower, soybean...)": {
+     "goemotions_pts": 0.05,
+     "torchmoji_pts": 0.96
+    },
+    "Staple foods (milk, grains, nuts, soy, chocolate, coffee)": {
+     "goemotions_pts": 0.54,
+     "torchmoji_pts": 0.51
+    },
+    "Studies and evidence": {
+     "goemotions_pts": 2.86,
+     "torchmoji_pts": 1.1
+    },
+    "Vaccines and COVID": {
+     "goemotions_pts": 2.01,
+     "torchmoji_pts": 2.98
+    }
+   }
+  },
+  {
+   "pair": "positive vs Love+Approval",
+   "spearman_across_theme_period_cells": 0.754,
+   "themes_with_same_direction_of_change": "10 of 14",
+   "change_by_theme": {
+    "Cooking and cooking fats (butter, tallow, frying)": {
+     "goemotions_pts": -3.17,
+     "torchmoji_pts": -1.31
+    },
+    "Distrust of industry, medicine and media": {
+     "goemotions_pts": -0.06,
+     "torchmoji_pts": -0.1
+    },
+    "General talk and meta (generic seed-oil, subreddit, thanks, influencers)": {
+     "goemotions_pts": -3.49,
+     "torchmoji_pts": -1.0
+    },
+    "Ingredient labels and processed food": {
+     "goemotions_pts": -1.97,
+     "torchmoji_pts": -1.59
+    },
+    "Keto, carbs, fasting": {
+     "goemotions_pts": -2.15,
+     "torchmoji_pts": -0.69
+    },
+    "Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)": {
+     "goemotions_pts": -1.29,
+     "torchmoji_pts": -0.67
+    },
+    "Omega-6 / PUFA biochemistry": {
+     "goemotions_pts": -1.41,
+     "torchmoji_pts": 0.05
+    },
+    "Other diets (vegan, carnivore, ancestral, Mediterranean)": {
+     "goemotions_pts": -1.08,
+     "torchmoji_pts": -0.25
+    },
+    "Politics (RFK, Trump, left/right)": {
+     "goemotions_pts": -0.2,
+     "torchmoji_pts": -0.36
+    },
+    "Shopping (stores, chips, avocado oil)": {
+     "goemotions_pts": 2.24,
+     "torchmoji_pts": -0.29
+    },
+    "Specific oils (canola, olive, coconut, palm, sunflower, soybean...)": {
+     "goemotions_pts": 0.03,
+     "torchmoji_pts": -0.19
+    },
+    "Staple foods (milk, grains, nuts, soy, chocolate, coffee)": {
+     "goemotions_pts": -0.75,
+     "torchmoji_pts": 0.1
+    },
+    "Studies and evidence": {
+     "goemotions_pts": -2.69,
+     "torchmoji_pts": -0.7
+    },
+    "Vaccines and COVID": {
+     "goemotions_pts": -2.25,
+     "torchmoji_pts": -0.79
+    }
+   }
+  },
+  {
+   "pair": "amusement vs Laughter",
+   "spearman_across_theme_period_cells": -0.42,
+   "themes_with_same_direction_of_change": "2 of 14",
+   "change_by_theme": {
+    "Cooking and cooking fats (butter, tallow, frying)": {
+     "goemotions_pts": 1.1,
+     "torchmoji_pts": -1.26
+    },
+    "Distrust of industry, medicine and media": {
+     "goemotions_pts": 0.58,
+     "torchmoji_pts": -0.34
+    },
+    "General talk and meta (generic seed-oil, subreddit, thanks, influencers)": {
+     "goemotions_pts": 1.75,
+     "torchmoji_pts": -0.55
+    },
+    "Ingredient labels and processed food": {
+     "goemotions_pts": 0.55,
+     "torchmoji_pts": -0.86
+    },
+    "Keto, carbs, fasting": {
+     "goemotions_pts": 0.91,
+     "torchmoji_pts": -0.64
+    },
+    "Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)": {
+     "goemotions_pts": 0.67,
+     "torchmoji_pts": -0.62
+    },
+    "Omega-6 / PUFA biochemistry": {
+     "goemotions_pts": 0.85,
+     "torchmoji_pts": -0.66
+    },
+    "Other diets (vegan, carnivore, ancestral, Mediterranean)": {
+     "goemotions_pts": 0.47,
+     "torchmoji_pts": -0.79
+    },
+    "Politics (RFK, Trump, left/right)": {
+     "goemotions_pts": 0.24,
+     "torchmoji_pts": -0.92
+    },
+    "Shopping (stores, chips, avocado oil)": {
+     "goemotions_pts": 0.37,
+     "torchmoji_pts": -1.09
+    },
+    "Specific oils (canola, olive, coconut, palm, sunflower, soybean...)": {
+     "goemotions_pts": 1.02,
+     "torchmoji_pts": -0.58
+    },
+    "Staple foods (milk, grains, nuts, soy, chocolate, coffee)": {
+     "goemotions_pts": -0.71,
+     "torchmoji_pts": -0.83
+    },
+    "Studies and evidence": {
+     "goemotions_pts": 1.62,
+     "torchmoji_pts": -0.11
+    },
+    "Vaccines and COVID": {
+     "goemotions_pts": -1.13,
+     "torchmoji_pts": -0.72
+    }
+   }
+  },
+  {
+   "pair": "sad vs Sadness",
+   "spearman_across_theme_period_cells": -0.019,
+   "themes_with_same_direction_of_change": "8 of 14",
+   "change_by_theme": {
+    "Cooking and cooking fats (butter, tallow, frying)": {
+     "goemotions_pts": 0.51,
+     "torchmoji_pts": 0.41
+    },
+    "Distrust of industry, medicine and media": {
+     "goemotions_pts": -0.62,
+     "torchmoji_pts": -0.89
+    },
+    "General talk and meta (generic seed-oil, subreddit, thanks, influencers)": {
+     "goemotions_pts": 0.04,
+     "torchmoji_pts": -0.31
+    },
+    "Ingredient labels and processed food": {
+     "goemotions_pts": 0.67,
+     "torchmoji_pts": 0.07
+    },
+    "Keto, carbs, fasting": {
+     "goemotions_pts": -0.21,
+     "torchmoji_pts": -0.53
+    },
+    "Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)": {
+     "goemotions_pts": 0.45,
+     "torchmoji_pts": -0.71
+    },
+    "Omega-6 / PUFA biochemistry": {
+     "goemotions_pts": -0.03,
+     "torchmoji_pts": -0.47
+    },
+    "Other diets (vegan, carnivore, ancestral, Mediterranean)": {
+     "goemotions_pts": -0.26,
+     "torchmoji_pts": -0.01
+    },
+    "Politics (RFK, Trump, left/right)": {
+     "goemotions_pts": 0.99,
+     "torchmoji_pts": -0.12
+    },
+    "Shopping (stores, chips, avocado oil)": {
+     "goemotions_pts": 0.39,
+     "torchmoji_pts": 0.45
+    },
+    "Specific oils (canola, olive, coconut, palm, sunflower, soybean...)": {
+     "goemotions_pts": 0.03,
+     "torchmoji_pts": -0.33
+    },
+    "Staple foods (milk, grains, nuts, soy, chocolate, coffee)": {
+     "goemotions_pts": 0.27,
+     "torchmoji_pts": -0.14
+    },
+    "Studies and evidence": {
+     "goemotions_pts": -0.22,
+     "torchmoji_pts": -0.97
+    },
+    "Vaccines and COVID": {
+     "goemotions_pts": -1.73,
+     "torchmoji_pts": 0.61
+    }
+   }
+  }
+ ],
+ "years": [
+  {
+   "pair": "disapproving vs Anger",
+   "seso_spearman_across_years": 0.75,
+   "seso_year_changes_same_direction": "5 of 6",
+   "seso_by_year": {
+    "2019": {
+     "goemotions_pct": 4.76,
+     "torchmoji_pct": 11.77
+    },
+    "2020": {
+     "goemotions_pct": 5.24,
+     "torchmoji_pct": 18.46
+    },
+    "2021": {
+     "goemotions_pct": 5.24,
+     "torchmoji_pct": 15.26
+    },
+    "2022": {
+     "goemotions_pct": 4.57,
+     "torchmoji_pct": 15.16
+    },
+    "2023": {
+     "goemotions_pct": 4.76,
+     "torchmoji_pct": 14.87
+    },
+    "2024": {
+     "goemotions_pct": 6.08,
+     "torchmoji_pct": 15.74
+    },
+    "2025": {
+     "goemotions_pct": 5.89,
+     "torchmoji_pct": 15.4
+    }
+   },
+   "scinut_spearman_across_years": -0.071,
+   "scinut_year_changes_same_direction": "5 of 6",
+   "scinut_by_year": {
+    "2019": {
+     "goemotions_pct": 4.65,
+     "torchmoji_pct": 22.8
+    },
+    "2020": {
+     "goemotions_pct": 5.28,
+     "torchmoji_pct": 22.95
+    },
+    "2021": {
+     "goemotions_pct": 5.22,
+     "torchmoji_pct": 22.34
+    },
+    "2022": {
+     "goemotions_pct": 4.6,
+     "torchmoji_pct": 21.57
+    },
+    "2023": {
+     "goemotions_pct": 4.71,
+     "torchmoji_pct": 22.75
+    },
+    "2024": {
+     "goemotions_pct": 4.37,
+     "torchmoji_pct": 22.72
+    },
+    "2025": {
+     "goemotions_pct": 4.18,
+     "torchmoji_pct": 23.1
+    }
+   },
+   "subreddit_gap_same_sign_years": "2 of 7",
+   "gap_by_year": {
+    "2019": {
+     "goemotions_seso_minus_scinut": 0.12,
+     "torchmoji_seso_minus_scinut": -11.03
+    },
+    "2020": {
+     "goemotions_seso_minus_scinut": -0.04,
+     "torchmoji_seso_minus_scinut": -4.49
+    },
+    "2021": {
+     "goemotions_seso_minus_scinut": 0.02,
+     "torchmoji_seso_minus_scinut": -7.07
+    },
+    "2022": {
+     "goemotions_seso_minus_scinut": -0.03,
+     "torchmoji_seso_minus_scinut": -6.41
+    },
+    "2023": {
+     "goemotions_seso_minus_scinut": 0.05,
+     "torchmoji_seso_minus_scinut": -7.88
+    },
+    "2024": {
+     "goemotions_seso_minus_scinut": 1.71,
+     "torchmoji_seso_minus_scinut": -6.98
+    },
+    "2025": {
+     "goemotions_seso_minus_scinut": 1.72,
+     "torchmoji_seso_minus_scinut": -7.7
+    }
+   }
+  },
+  {
+   "pair": "disapproving vs Anger+Skepticism",
+   "seso_spearman_across_years": 0.75,
+   "seso_year_changes_same_direction": "5 of 6",
+   "seso_by_year": {
+    "2019": {
+     "goemotions_pct": 4.76,
+     "torchmoji_pct": 31.61
+    },
+    "2020": {
+     "goemotions_pct": 5.24,
+     "torchmoji_pct": 40.78
+    },
+    "2021": {
+     "goemotions_pct": 5.24,
+     "torchmoji_pct": 36.9
+    },
+    "2022": {
+     "goemotions_pct": 4.57,
+     "torchmoji_pct": 36.63
+    },
+    "2023": {
+     "goemotions_pct": 4.76,
+     "torchmoji_pct": 36.43
+    },
+    "2024": {
+     "goemotions_pct": 6.08,
+     "torchmoji_pct": 37.77
+    },
+    "2025": {
+     "goemotions_pct": 5.89,
+     "torchmoji_pct": 37.24
+    }
+   },
+   "scinut_spearman_across_years": -0.071,
+   "scinut_year_changes_same_direction": "5 of 6",
+   "scinut_by_year": {
+    "2019": {
+     "goemotions_pct": 4.65,
+     "torchmoji_pct": 43.78
+    },
+    "2020": {
+     "goemotions_pct": 5.28,
+     "torchmoji_pct": 44.16
+    },
+    "2021": {
+     "goemotions_pct": 5.22,
+     "torchmoji_pct": 43.6
+    },
+    "2022": {
+     "goemotions_pct": 4.6,
+     "torchmoji_pct": 43.01
+    },
+    "2023": {
+     "goemotions_pct": 4.71,
+     "torchmoji_pct": 43.77
+    },
+    "2024": {
+     "goemotions_pct": 4.37,
+     "torchmoji_pct": 43.76
+    },
+    "2025": {
+     "goemotions_pct": 4.18,
+     "torchmoji_pct": 44.18
+    }
+   },
+   "subreddit_gap_same_sign_years": "2 of 7",
+   "gap_by_year": {
+    "2019": {
+     "goemotions_seso_minus_scinut": 0.12,
+     "torchmoji_seso_minus_scinut": -12.17
+    },
+    "2020": {
+     "goemotions_seso_minus_scinut": -0.04,
+     "torchmoji_seso_minus_scinut": -3.38
+    },
+    "2021": {
+     "goemotions_seso_minus_scinut": 0.02,
+     "torchmoji_seso_minus_scinut": -6.7
+    },
+    "2022": {
+     "goemotions_seso_minus_scinut": -0.03,
+     "torchmoji_seso_minus_scinut": -6.38
+    },
+    "2023": {
+     "goemotions_seso_minus_scinut": 0.05,
+     "torchmoji_seso_minus_scinut": -7.35
+    },
+    "2024": {
+     "goemotions_seso_minus_scinut": 1.71,
+     "torchmoji_seso_minus_scinut": -5.99
+    },
+    "2025": {
+     "goemotions_seso_minus_scinut": 1.72,
+     "torchmoji_seso_minus_scinut": -6.94
+    }
+   }
+  },
+  {
+   "pair": "positive vs Love+Approval",
+   "seso_spearman_across_years": -0.286,
+   "seso_year_changes_same_direction": "2 of 6",
+   "seso_by_year": {
+    "2019": {
+     "goemotions_pct": 9.52,
+     "torchmoji_pct": 24.6
+    },
+    "2020": {
+     "goemotions_pct": 18.35,
+     "torchmoji_pct": 18.69
+    },
+    "2021": {
+     "goemotions_pct": 17.86,
+     "torchmoji_pct": 20.3
+    },
+    "2022": {
+     "goemotions_pct": 18.77,
+     "torchmoji_pct": 19.77
+    },
+    "2023": {
+     "goemotions_pct": 17.9,
+     "torchmoji_pct": 19.72
+    },
+    "2024": {
+     "goemotions_pct": 16.6,
+     "torchmoji_pct": 19.2
+    },
+    "2025": {
+     "goemotions_pct": 17.73,
+     "torchmoji_pct": 19.17
+    }
+   },
+   "scinut_spearman_across_years": -0.75,
+   "scinut_year_changes_same_direction": "2 of 6",
+   "scinut_by_year": {
+    "2019": {
+     "goemotions_pct": 14.32,
+     "torchmoji_pct": 19.4
+    },
+    "2020": {
+     "goemotions_pct": 12.44,
+     "torchmoji_pct": 19.03
+    },
+    "2021": {
+     "goemotions_pct": 11.29,
+     "torchmoji_pct": 19.62
+    },
+    "2022": {
+     "goemotions_pct": 11.96,
+     "torchmoji_pct": 19.44
+    },
+    "2023": {
+     "goemotions_pct": 11.11,
+     "torchmoji_pct": 19.67
+    },
+    "2024": {
+     "goemotions_pct": 11.33,
+     "torchmoji_pct": 19.6
+    },
+    "2025": {
+     "goemotions_pct": 11.26,
+     "torchmoji_pct": 19.41
+    }
+   },
+   "subreddit_gap_same_sign_years": "3 of 7",
+   "gap_by_year": {
+    "2019": {
+     "goemotions_seso_minus_scinut": -4.79,
+     "torchmoji_seso_minus_scinut": 5.2
+    },
+    "2020": {
+     "goemotions_seso_minus_scinut": 5.91,
+     "torchmoji_seso_minus_scinut": -0.34
+    },
+    "2021": {
+     "goemotions_seso_minus_scinut": 6.56,
+     "torchmoji_seso_minus_scinut": 0.68
+    },
+    "2022": {
+     "goemotions_seso_minus_scinut": 6.81,
+     "torchmoji_seso_minus_scinut": 0.33
+    },
+    "2023": {
+     "goemotions_seso_minus_scinut": 6.79,
+     "torchmoji_seso_minus_scinut": 0.06
+    },
+    "2024": {
+     "goemotions_seso_minus_scinut": 5.27,
+     "torchmoji_seso_minus_scinut": -0.39
+    },
+    "2025": {
+     "goemotions_seso_minus_scinut": 6.47,
+     "torchmoji_seso_minus_scinut": -0.24
+    }
+   }
+  },
+  {
+   "pair": "amusement vs Laughter",
+   "seso_spearman_across_years": 0.393,
+   "seso_year_changes_same_direction": "3 of 6",
+   "seso_by_year": {
+    "2019": {
+     "goemotions_pct": 4.76,
+     "torchmoji_pct": 15.01
+    },
+    "2020": {
+     "goemotions_pct": 1.5,
+     "torchmoji_pct": 13.02
+    },
+    "2021": {
+     "goemotions_pct": 2.03,
+     "torchmoji_pct": 14.36
+    },
+    "2022": {
+     "goemotions_pct": 2.83,
+     "torchmoji_pct": 14.48
+    },
+    "2023": {
+     "goemotions_pct": 3.31,
+     "torchmoji_pct": 14.46
+    },
+    "2024": {
+     "goemotions_pct": 4.14,
+     "torchmoji_pct": 13.6
+    },
+    "2025": {
+     "goemotions_pct": 3.95,
+     "torchmoji_pct": 13.9
+    }
+   },
+   "scinut_spearman_across_years": 0.0,
+   "scinut_year_changes_same_direction": "4 of 6",
+   "scinut_by_year": {
+    "2019": {
+     "goemotions_pct": 1.36,
+     "torchmoji_pct": 12.05
+    },
+    "2020": {
+     "goemotions_pct": 2.0,
+     "torchmoji_pct": 11.94
+    },
+    "2021": {
+     "goemotions_pct": 2.0,
+     "torchmoji_pct": 12.12
+    },
+    "2022": {
+     "goemotions_pct": 2.23,
+     "torchmoji_pct": 12.33
+    },
+    "2023": {
+     "goemotions_pct": 1.75,
+     "torchmoji_pct": 11.84
+    },
+    "2024": {
+     "goemotions_pct": 1.99,
+     "torchmoji_pct": 11.96
+    },
+    "2025": {
+     "goemotions_pct": 2.53,
+     "torchmoji_pct": 11.82
+    }
+   },
+   "subreddit_gap_same_sign_years": "6 of 7",
+   "gap_by_year": {
+    "2019": {
+     "goemotions_seso_minus_scinut": 3.4,
+     "torchmoji_seso_minus_scinut": 2.96
+    },
+    "2020": {
+     "goemotions_seso_minus_scinut": -0.5,
+     "torchmoji_seso_minus_scinut": 1.07
+    },
+    "2021": {
+     "goemotions_seso_minus_scinut": 0.03,
+     "torchmoji_seso_minus_scinut": 2.24
+    },
+    "2022": {
+     "goemotions_seso_minus_scinut": 0.59,
+     "torchmoji_seso_minus_scinut": 2.15
+    },
+    "2023": {
+     "goemotions_seso_minus_scinut": 1.56,
+     "torchmoji_seso_minus_scinut": 2.62
+    },
+    "2024": {
+     "goemotions_seso_minus_scinut": 2.15,
+     "torchmoji_seso_minus_scinut": 1.64
+    },
+    "2025": {
+     "goemotions_seso_minus_scinut": 1.42,
+     "torchmoji_seso_minus_scinut": 2.08
+    }
+   }
+  },
+  {
+   "pair": "sad vs Sadness",
+   "seso_spearman_across_years": 0.464,
+   "seso_year_changes_same_direction": "4 of 6",
+   "seso_by_year": {
+    "2019": {
+     "goemotions_pct": 0.0,
+     "torchmoji_pct": 14.45
+    },
+    "2020": {
+     "goemotions_pct": 1.5,
+     "torchmoji_pct": 15.19
+    },
+    "2021": {
+     "goemotions_pct": 2.23,
+     "torchmoji_pct": 15.41
+    },
+    "2022": {
+     "goemotions_pct": 1.56,
+     "torchmoji_pct": 15.58
+    },
+    "2023": {
+     "goemotions_pct": 1.72,
+     "torchmoji_pct": 15.62
+    },
+    "2024": {
+     "goemotions_pct": 1.8,
+     "torchmoji_pct": 15.23
+    },
+    "2025": {
+     "goemotions_pct": 2.08,
+     "torchmoji_pct": 15.37
+    }
+   },
+   "scinut_spearman_across_years": 0.75,
+   "scinut_year_changes_same_direction": "4 of 6",
+   "scinut_by_year": {
+    "2019": {
+     "goemotions_pct": 1.2,
+     "torchmoji_pct": 14.57
+    },
+    "2020": {
+     "goemotions_pct": 1.42,
+     "torchmoji_pct": 14.28
+    },
+    "2021": {
+     "goemotions_pct": 1.2,
+     "torchmoji_pct": 14.05
+    },
+    "2022": {
+     "goemotions_pct": 1.35,
+     "torchmoji_pct": 14.19
+    },
+    "2023": {
+     "goemotions_pct": 1.12,
+     "torchmoji_pct": 14.02
+    },
+    "2024": {
+     "goemotions_pct": 1.14,
+     "torchmoji_pct": 13.93
+    },
+    "2025": {
+     "goemotions_pct": 0.93,
+     "torchmoji_pct": 13.91
+    }
+   },
+   "subreddit_gap_same_sign_years": "7 of 7",
+   "gap_by_year": {
+    "2019": {
+     "goemotions_seso_minus_scinut": -1.2,
+     "torchmoji_seso_minus_scinut": -0.12
+    },
+    "2020": {
+     "goemotions_seso_minus_scinut": 0.08,
+     "torchmoji_seso_minus_scinut": 0.9
+    },
+    "2021": {
+     "goemotions_seso_minus_scinut": 1.04,
+     "torchmoji_seso_minus_scinut": 1.36
+    },
+    "2022": {
+     "goemotions_seso_minus_scinut": 0.21,
+     "torchmoji_seso_minus_scinut": 1.39
+    },
+    "2023": {
+     "goemotions_seso_minus_scinut": 0.6,
+     "torchmoji_seso_minus_scinut": 1.61
+    },
+    "2024": {
+     "goemotions_seso_minus_scinut": 0.65,
+     "torchmoji_seso_minus_scinut": 1.31
+    },
+    "2025": {
+     "goemotions_seso_minus_scinut": 1.15,
+     "torchmoji_seso_minus_scinut": 1.46
+    }
+   }
+  }
+ ]
+}

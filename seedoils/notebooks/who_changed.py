@@ -12,6 +12,7 @@ Finding 6: 'not harmful' rose inside r/StopEatingSeedOils from 2024 (3% -> 13%).
 'Also comments in X' = at least one comment in X at any time in the downloaded histories ([deleted], AutoModerator, *bot excluded).
 Positions are the blind LLM labels of the opinion sample (comments_key.csv + comment_labels_part1-3.csv).
 """
+from seedoil_common import SPLIT_TS  # analysis split: 1 Jan 2024 (decision 26 Nov)
 import csv
 import gzip
 import json
@@ -21,7 +22,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RAW, PROC = ROOT / "data" / "raw", ROOT / "data" / "processed"
 SUBS = {"StopEatingSeedOils": "SESO", "ScientificNutrition": "SciNut"}  # r/carnivore dropped 22 Nov (comments no longer downloaded)
-SPLIT = 1704067200
+SPLIT = SPLIT_TS
 
 
 def main():

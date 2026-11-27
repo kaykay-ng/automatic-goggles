@@ -2119,7 +2119,7 @@
    "share_in_exactly_one": 0.917,
    "ami_vs_louvain_single": -0.0,
    "nmi_vs_louvain_single": 0.007,
-   "seconds": 43
+   "seconds": 41
   },
   {
    "method": "k-clique percolation, k=6",
@@ -2140,7 +2140,7 @@
    "share_in_exactly_one": 0.615,
    "ami_vs_louvain_single": 0.25,
    "nmi_vs_louvain_single": 0.312,
-   "seconds": 39
+   "seconds": 36
   },
   {
    "method": "k-clique percolation, k=8",
@@ -2161,7 +2161,7 @@
    "share_in_exactly_one": 0.535,
    "ami_vs_louvain_single": 0.569,
    "nmi_vs_louvain_single": 0.606,
-   "seconds": 35
+   "seconds": 32
   },
   {
    "method": "k-clique percolation, k=10",
@@ -2182,7 +2182,7 @@
    "share_in_exactly_one": 0.454,
    "ami_vs_louvain_single": 0.724,
    "nmi_vs_louvain_single": 0.742,
-   "seconds": 31
+   "seconds": 28
   },
   {
    "method": "k-clique percolation, k=12",
@@ -2203,7 +2203,7 @@
    "share_in_exactly_one": 0.368,
    "ami_vs_louvain_single": 0.804,
    "nmi_vs_louvain_single": 0.813,
-   "seconds": 26
+   "seconds": 24
   },
   {
    "method": "Link communities (max partition density)",
@@ -2391,7 +2391,7 @@
      0.001
     ]
    ],
-   "seconds": 20
+   "seconds": 19
   }
  ]
 }
