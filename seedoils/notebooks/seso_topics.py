@@ -114,6 +114,8 @@ def fit():
     new = np.array(tm.reduce_outliers(docs, topics.tolist(), strategy="embeddings", embeddings=V))
     tm.update_topics(docs, topics=new.tolist(), vectorizer_model=vec())
 
+    if os.environ.get("SEDOIL_SAVE_MODEL"):  # keep the fitted model (safetensors: topic embeddings, c-TF-IDF, topic words; the model holds representative documents = Reddit text, so keep it LOCAL)
+        tm.save(str(PROC / f"{PFX}_bertopic_model"), serialization="safetensors", save_ctfidf=True, save_embedding_model=False); print("model saved", flush=True)
     D["topic"], D["topic_before_outlier_fix"] = new, topics
     D[["id", "kind", "created_utc", "topic", "topic_before_outlier_fix"]].to_csv(PROC / f"{PFX}_doc_topics.csv.gz", index=False)
     D["year"] = pd.to_datetime(D.created_utc, unit="s").dt.year
