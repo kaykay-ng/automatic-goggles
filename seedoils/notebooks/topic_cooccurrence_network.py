@@ -30,7 +30,8 @@ from sklearn.metrics import adjusted_mutual_info_score as ami, normalized_mutual
 sys.path.insert(0, str(Path(__file__).parent))
 from seedoil_common import not_bot, SPLIT_TS, THEMES_FILE  # noqa: E402
 
-P, RAW = Path("seedoils/data/processed"), Path("seedoils/data/raw")
+P, RAW = Path("seedoils/data/processed"), Path("seedoils/data/raw_haoyu")  # 27 Nov: reference raw data (the rerun); outliers.py table below
+REB = Path("seedoils/data/processed_rebuild_prob")
 N_SAMPLES = int(sys.argv[1]) if len(sys.argv) > 1 else 300
 Q = 0.01
 cauth, pauth = {}, {}
@@ -40,13 +41,15 @@ with gzip.open(glob.glob(str(RAW / "*StopEatingSeedOils_comments.jsonl.gz"))[0],
 with gzip.open(glob.glob(str(RAW / "*StopEatingSeedOils_posts.jsonl.gz"))[0], "rt", encoding="utf-8") as f:
     for l in f:
         x = json.loads(l); pauth[x["id"]] = x.get("author") or ""
-D = pd.read_csv(P / "seso_doc_topics.csv.gz", usecols=["id", "kind", "created_utc", "topic"]); D["id"] = D.id.astype(str)
+D = pd.read_csv(REB / "seso_doc_topics_official005.csv.gz", usecols=["id", "created_utc", "topic"]); D["id"] = D.id.astype(str)
+# 27 Nov: ONLY documents with a confident topic = BERTopic's reduce_outliers (probabilities strategy, threshold 0.05; outliers_official.py); outliers below it (topic -1, 28.8% of documents) are not used
+D = D[D.topic >= 0].copy(); _k = pd.read_csv(REB / "seso_doc_topics.csv.gz", usecols=["id", "kind"]); D["kind"] = D.id.map(dict(zip(_k.id.astype(str), _k.kind)))
 D["a"] = np.where(D.kind == "comment", D.id.map(cauth), D.id.map(pauth))
 D = D[D.a.notna() & (D.a != "") & ~D.a.isin(["[deleted]", "AutoModerator"]) & not_bot(D.a.fillna(""))]
 K = int(D.topic.max()) + 1
 TH = json.loads((P / THEMES_FILE).read_text()); theme_of = {int(t): name for name, ids in TH.items() for t in ids}
 short = {name: name.split(" (")[0] for name in TH}
-info = pd.read_csv(P / "seso_topics_info.csv").set_index("topic")
+info = pd.read_csv(REB / "seso_topics_info.csv").set_index("topic")
 words = {int(t): ", ".join(w.strip() for w in str(info.loc[t, "top_words"]).split(",")[:4]) for t in range(K)}
 IU = np.triu_indices(K, 1)
 

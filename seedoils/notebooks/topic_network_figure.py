@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
 from matplotlib.lines import Line2D  # noqa: E402
 
-plt.rcParams.update({"text.usetex": True, "font.family": "serif", "font.size": 8,
+plt.rcParams.update({"text.usetex": __import__("shutil").which("latex") is not None, "font.family": "serif", "font.serif": ["cmr10", "DejaVu Serif"], "axes.formatter.use_mathtext": True, "font.size": 8,
                      "text.latex.preamble": r"\usepackage[T1]{fontenc}\usepackage{lmodern}"})
 P = Path("seedoils/data/processed")
 T = json.loads((P / "topic_cooccurrence_network.json").read_text()); C = json.loads((P / "topic_network_centrality.json").read_text())
@@ -196,7 +196,7 @@ def seg_cross(p1, p2, p3, p4):
 
 
 placed, leaders, PAD, missing = [], [], 1.5, []
-tex = lambda w: w.replace("&", r"\&").replace("_", r"\_")  # noqa: E731
+tex = (lambda w: w.replace("&", r"\&").replace("_", r"\_")) if plt.rcParams["text.usetex"] else (lambda w: w)  # noqa: E731
 
 
 def place(v, max_dist, outward=False, relax=False):

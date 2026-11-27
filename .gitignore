@@ -119,3 +119,4 @@ seedoils/data/processed_rebuild_prob/
 !paper/figures/*.pdf
 !seedoils/figures/*.pdf
 !paper/pnas_template/PNAS_Logo.pdf
+seedoils/data/processed_rebuild_model/
