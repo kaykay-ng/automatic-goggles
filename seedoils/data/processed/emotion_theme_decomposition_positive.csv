@@ -1,0 +1,16 @@
+theme,share_docs_before_%,share_docs_from_Aug24_%,rate_before_%,rate_from_Aug24_%,within,within_lo,within_hi,mix,total,total_lo,total_hi
+"Cooking and cooking fats (butter, tallow, frying)",4.3,4.3,25.6,21.7,-0.17,-0.29,-0.05,0.0,-0.17,-0.29,-0.04
+"Distrust of industry, medicine and media",2.3,4.3,17.4,18.8,0.05,-0.05,0.14,-0.06,-0.02,-0.1,0.07
+"General talk and meta (generic seed-oil, subreddit, thanks, influencers)",10.6,12.8,25.1,23.0,-0.24,-0.45,-0.01,0.06,-0.18,-0.37,0.04
+Ingredient labels and processed food,1.7,2.5,21.2,19.2,-0.04,-0.13,0.05,-0.01,-0.05,-0.13,0.03
+"Keto, carbs, fasting",5.6,3.5,21.7,19.4,-0.11,-0.22,0.01,0.01,-0.09,-0.21,0.03
+"Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",4.9,4.8,20.9,21.4,0.02,-0.09,0.14,0.0,0.02,-0.09,0.15
+Omega-6 / PUFA biochemistry,13.5,8.4,15.7,14.1,-0.17,-0.33,-0.02,0.32,0.15,-0.03,0.33
+"Other diets (vegan, carnivore, ancestral, Mediterranean)",7.1,5.6,19.8,19.4,-0.03,-0.17,0.11,0.02,-0.01,-0.16,0.14
+"Politics (RFK, Trump, left/right)",0.5,3.1,18.8,19.8,0.02,-0.1,0.13,-0.05,-0.03,-0.09,0.03
+"Shopping (stores, chips, avocado oil)",6.1,7.6,26.3,28.9,0.18,0.01,0.34,0.09,0.27,0.1,0.43
+"Specific oils (canola, olive, coconut, palm, sunflower, soybean...)",6.4,7.3,17.3,17.9,0.04,-0.1,0.18,-0.03,0.01,-0.13,0.15
+"Staple foods (milk, grains, nuts, soy, chocolate, coffee)",5.8,5.3,24.5,22.7,-0.1,-0.24,0.03,-0.01,-0.12,-0.26,0.02
+Studies and evidence,1.7,1.7,22.8,19.2,-0.06,-0.14,0.02,-0.0,-0.06,-0.14,0.02
+Unassigned (no confident topic),29.3,28.0,21.8,21.9,0.03,-0.29,0.32,-0.01,0.02,-0.3,0.31
+Vaccines and COVID,0.2,0.8,16.5,16.2,-0.0,-0.06,0.05,-0.03,-0.03,-0.07,0.01
