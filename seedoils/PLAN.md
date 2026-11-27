@@ -464,3 +464,6 @@ Changes from v2: topic 119 (sugar, seed-oil, diabetes, fructose, insulin) Omega-
 
 ## PROVENANCE CORRECTION (26 Nov 2026, KK)
 The original nine themes (themes_confirmed.json) were started by Claude Code in earlier AI-assisted sessions and confirmed by KK; they are not the teammate's. The teammate's contribution is the BERTopic rerun (123 topics) that the rebuild reproduces exactly. The rerun_results.html wording 'your picks of topic ids per theme' addressed KK. Statements in the 26 Nov entries above that attribute the nine themes to 'her' are wrong.
+
+## RETIRED TERM (26 Nov 2026, KK decision)
+The word "hostile" / "hostility" as a name for GoEmotions measures (anger, annoyance, disapproval, disgust) is retired: it was a working label from notebooks/emotions.py (19 Nov) and overclaimed. Earlier entries in this file that report a "hostile share", "hostility rose" or "harsher tone" are SUPERSEDED and must not be quoted; use GoEmotions' own names (groups and 28 emotions). See paper/REPORT_PLAN.md (TONE line).

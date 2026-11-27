@@ -1,6 +1,7 @@
 """Group-level political-lean proxy: share of the heaviest commenters of r/StopEatingSeedOils (4,287 with fetched histories) who ALSO comment (>= MIN comments in a period) in partisan-coded subreddits.
 The lists are hand-picked (ours, approximate); presence in a subreddit is not endorsement. Aggregates only; no individual is labelled or reported. Periods: pre2024 / from2024 as in author_subreddit_counts*.jsonl.gz.
 Run from final_project/:  python3 seedoils/notebooks/political_overlap.py   (writes data/processed/political_overlap.csv)"""
+from seedoil_common import HISTORY_GLOB  # author-history files for the analysis split
 import glob, gzip, json
 from pathlib import Path
 import pandas as pd
@@ -10,7 +11,7 @@ LEFT = ["democrats", "Liberal", "socialism", "LateStageCapitalism", "WhitePeople
 GENERAL = ["politics", "worldnews", "news", "PoliticalDiscussion", "moderatepolitics", "centrist", "Ask_Politics"]
 OTHER = {"Libertarian": ["Libertarian", "Anarcho_Capitalism", "LibertarianUncensored"], "PoliticalCompassMemes": ["PoliticalCompassMemes"]}
 auth = {}
-for f in sorted(glob.glob(str(RAW / "author_subreddit_counts*.jsonl.gz"))):
+for f in sorted(glob.glob(str(RAW / HISTORY_GLOB))):
     with gzip.open(f, "rt") as fh:
         for l in fh:
             x = json.loads(l); auth[x["author"]] = x["counts"]

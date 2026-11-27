@@ -23,7 +23,7 @@ Cleaning: quoted lines ('> ...', usually the parent comment) and URLs removed; [
 Recipe as notebooks/b_topics.py and ndc/notebooks/climate_topics.py (course week 7): UMAP(5 dims, cosine, seed 42) + HDBSCAN + c-TF-IDF,
 outliers then reassigned by embeddings. Unlike those scripts, proper nouns are KEPT: names (RFK, Knobbe, Ray Peat, Ancel Keys) are the point here.
 """
-from seedoil_common import is_bot, not_bot, TOKEN_PATTERN, bertopic_clean, hyphen_bertopic  # shared bot rule: AutoModerator + names ending in 'bot'
+from seedoil_common import is_bot, not_bot, TOKEN_PATTERN, bertopic_clean, hyphen_bertopic, SPLIT_TS# shared bot rule: AutoModerator + names ending in 'bot'
 import gzip
 import json
 import re
@@ -117,7 +117,7 @@ def fit():
     D["topic"], D["topic_before_outlier_fix"] = new, topics
     D[["id", "kind", "created_utc", "topic", "topic_before_outlier_fix"]].to_csv(PROC / f"{PFX}_doc_topics.csv.gz", index=False)
     D["year"] = pd.to_datetime(D.created_utc, unit="s").dt.year
-    pre, post = D[D.year < 2024], D[D.year >= 2024]
+    pre, post = D[D.created_utc < SPLIT_TS], D[D.created_utc >= SPLIT_TS]
     rows = []
     for t in sorted(set(new)):
         sel = D.topic == t
@@ -166,6 +166,18 @@ def relabel():
     print(changed[["topic", "top_words_before_relabel", "top_words"]].head(15).to_string(index=False))
 
 
+def shares():
+    """Recompute the before / from shares and their ratio in {PFX}_topics_info.csv from the saved assignments at the current SPLIT_TS
+    (seedoil_common; 1 Jan 2024, decision 26 Nov), without refitting. Columns keep their names (share_pre2024 = before the split)."""
+    D = pd.read_csv(PROC / f"{PFX}_doc_topics.csv.gz", usecols=["created_utc", "topic"])
+    pre, post = D[D.created_utc < SPLIT_TS], D[D.created_utc >= SPLIT_TS]
+    I = pd.read_csv(PROC / f"{PFX}_topics_info.csv")
+    I["share_pre2024"] = I.topic.map(pre.topic.value_counts(normalize=True)).fillna(0).round(4)
+    I["share_from2024"] = I.topic.map(post.topic.value_counts(normalize=True)).fillna(0).round(4)
+    I["ratio_from2024_vs_pre"] = (I.share_from2024 / I.share_pre2024.replace(0, np.nan)).round(2)
+    I.to_csv(PROC / f"{PFX}_topics_info.csv", index=False)
+    print(f"{PFX}: shares recomputed at split {SPLIT_TS} ({len(pre):,} documents before, {len(post):,} from)")
+
 MIN_THREAD = 5
 
 
@@ -185,7 +197,7 @@ def votes():
     C["top10"] = C.vote_pct >= 0.9
     T = pd.read_csv(PROC / f"{PFX}_doc_topics.csv.gz")
     T = T[T.kind == "comment"].merge(C[["id", "top_level", "vote_pct", "top10"]], on="id")
-    T["period"] = np.where(pd.to_datetime(T.created_utc, unit="s").dt.year >= 2024, "from2024", "pre2024")
+    T["period"] = np.where(T.created_utc >= SPLIT_TS, "from2024", "pre2024")
     out = (T.groupby(["topic", "period"]).agg(n=("vote_pct", "size"), mean_pct=("vote_pct", "mean"), share_top10=("top10", "mean"))
              .unstack("period"))
     out.columns = [f"{a}_{b}" for a, b in out.columns]
@@ -207,4 +219,4 @@ if __name__ == "__main__":
     if len(sys.argv) > 2:
         SUB = sys.argv[2]
         PFX = PREFIX[SUB]
-    {"prep": prep, "embed": embed, "fit": fit, "relabel": relabel, "votes": votes}[sys.argv[1]]()
+    {"prep": prep, "embed": embed, "fit": fit, "relabel": relabel, "votes": votes, "shares": shares}[sys.argv[1]]()

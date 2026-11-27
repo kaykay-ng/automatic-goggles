@@ -23,9 +23,9 @@ import scipy.sparse as sp
 
 sys.path.insert(0, str(Path(__file__).parent))
 import seso_topics as st  # noqa: E402
-from seedoil_common import TOKEN_PATTERN, bertopic_clean  # noqa: E402
+from seedoil_common import TOKEN_PATTERN, bertopic_clean, SPLIT_TS, THEMES_FILE# noqa: E402
 
-PROC = st.PROC; OUT = PROC / "lda"; SPLIT = 1704067200; DTM = OUT / "lda_dtm.npz"; MAP_MIN = 0.2
+PROC = st.PROC; OUT = PROC / "lda"; SPLIT = SPLIT_TS; DTM = OUT / "lda_dtm.npz"; MAP_MIN = 0.2
 
 
 def dtm():
@@ -100,7 +100,7 @@ def compare():
     stab = [{"K": K, "a": a, "b": b, "ami": round(float(ami(runs[(K, a)].topic.values, runs[(K, b)].topic.values)), 3)}
             for K in {k for k, _ in runs} for a, b in itertools.combinations(sorted(s for k, s in runs if k == K), 2)]
     out["lda_stability"] = stab
-    tf = PROC / "themes_confirmed.json"
+    tf = PROC / THEMES_FILE
     if tf.exists():
         themes = json.loads(tf.read_text()); bt = pd.Series("other", index=range(N))
         for th, tids in themes.items():

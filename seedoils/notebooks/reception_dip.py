@@ -1,11 +1,11 @@
 """Is the small fall in 'reception' (mean within-thread percentile of a comment's score) after 2024 specific to some themes, or general? Same percentile as seso_topics.votes(); thread-cluster bootstrap (300) for intervals.
 Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/reception_dip.py"""
-from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
+from seedoil_common import is_bot, not_bot, SPLIT_TS# shared bot rule: AutoModerator + names ending in 'bot'
 import gzip, json
 from pathlib import Path
 import numpy as np, pandas as pd
 ROOT = Path(__file__).resolve().parents[2]; PROC = ROOT / "seedoils" / "data" / "processed"; RAW = next((ROOT / "seedoils" / "data" / "raw").glob("*StopEatingSeedOils_comments.jsonl.gz"))
-CUT = pd.Timestamp("2024-01-01").timestamp(); rng = np.random.default_rng(0)
+CUT = SPLIT_TS; rng = np.random.default_rng(0)
 rows = []
 with gzip.open(RAW, "rt", encoding="utf-8") as f:
     for line in f:

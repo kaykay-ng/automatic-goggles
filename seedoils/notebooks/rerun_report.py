@@ -11,14 +11,15 @@ import subprocess
 from collections import Counter
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 
-from seedoil_common import is_bot
+from seedoil_common import is_bot, SPLIT_TS, SPLIT_TS_AUG2024, HISTORY_GLOB, THEMES_FILE
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW, PROC, OUT = ROOT / "data" / "raw", ROOT / "data" / "processed", ROOT / "artifact" / "rerun_results.html"
 A_DIR = PROC / "artifact"
-SPLIT = 1704067200
+SPLIT = SPLIT_TS
 OLD = {"StopEatingSeedOils_comments": 243097, "ScientificNutrition_comments": 177788, "StopEatingSeedOils_posts": 11642,
        "ScientificNutrition_posts": 14273, "carnivore_posts": 33266}
 OLD_DOCS = {"seso": 149732, "scinut": 121672}
@@ -52,7 +53,7 @@ def raw_summary():
 
 def author_progress():
     n = 0
-    for f in glob.glob(str(RAW / "author_subreddit_counts*.jsonl.gz")):
+    for f in glob.glob(str(RAW / HISTORY_GLOB)):
         try:
             with gzip.open(f, "rt") as fh:
                 for _ in fh:
@@ -78,7 +79,7 @@ def status():
     S.append(("Corpus statistics", "done" if (PROC / "corpus_stats.json").exists() else "todo", "lengths, Zipf, Heaps, TF-IDF, PMI, concordance"))
     S.append(("Topic stability (5 seeds)", "running" if running("seso_topics_seeds.py") else ("done" if (PROC / "seso_seed_stability.json").exists() else "todo"), "UMAP seeds 42, 1-4; AMI and NMI"))
     S.append(("BERTopic vs LDA", "running" if running("lda_compare.py") else ("done" if (PROC / "lda_comparison.json").exists() else "todo"), "LDA K=123 (3 seeds) and K=30"))
-    S.append(("Hand-picked themes", "waiting" if not (PROC / "themes_confirmed.json").exists() else "done", "your picks of topic ids per theme"))
+    S.append(("Hand-picked themes", "waiting" if not (PROC / THEMES_FILE).exists() else "done", "your picks of topic ids per theme"))
     S.append(("Name list check", "done" if list(PROC.glob("alias_decisions_*.csv")) else "todo", "aliases checked by reading (check_aliases.html); omega 6 / omega 3 spellings merged"))
     facts = PROC / "artifact" / "facts.json"
     S.append(("Dashboard datasets", "done" if mtime(facts) > mtime(PROC / "diet_overlap.csv") else "todo", "artifact_data.py and chart-data scripts on the re-downloaded data"))
@@ -418,6 +419,185 @@ def reply_findings_section():
     return sec + "</section>"
 
 
+def same_people_section():
+    """27 Nov: the reply network on exactly the topic network's people, and the self-posts check of the topic network."""
+    sec = ""
+    f = PROC / "reply_network_stats.json"
+    if f.exists() and "same_people_as_topic_network" in (R := json.loads(f.read_text())) and "error" not in R["same_people_as_topic_network"]:
+        S = R["same_people_as_topic_network"]; cm = S["community_mixing"]; lv = S["louvain"]
+        sec += ('<h3>Reply network on the same 2,621 people as the commenter network</h3><p>Only replies between the commenters of the topic-similarity network, '
+                f"so both networks have the same nodes (<code>reply_network.py</code>). {S['replies_between_them']:,} replies ({S['share_of_all_replies_pct']}% of all), "
+                f"{S['linked_pairs']:,} linked pairs, every one of the {S['people']:,} people has a reply link. Reciprocity {S['reciprocity']:.2f} against "
+                f"{min(S['reciprocity_null']):.2f}&#8211;{max(S['reciprocity_null']):.2f} in the target-shuffle null.</p>")
+        sec += table(["From", "To", "Replies from 2024", "Lift vs activity"], [(r["from"], r["to"], f"{r['replies']:,}", f"{r['lift']:.2f}") for r in S["cohort_mixing_from_split"]], num=(2, 3))
+        names = json.loads((PROC / "community_names.json").read_text()); labs = [x["short"] for x in names] if isinstance(names, list) else [names[str(i)]["short"] for i in range(len(names))]
+        sec += ('<figure><figcaption>Replies between the 12 commenter communities (rows reply to columns): lift against activity alone; red = more than expected, blue = fewer, '
+                'grey = as expected (colour capped at &#215;3 and &#215;1/3; the diagonal shows the value). Hover a cell for its lift.</figcaption><div class="chart">'
+                + heatmap_svg(cm["lift_matrix"], labs[:len(cm["lift_matrix"])], "Reply lift between commenter communities") + "</div></figure>")
+        sec += (f"<p>Replies inside the replier&#8217;s own topic community: {cm['within_community_share_pct']}% against {cm['expected_from_activity_pct']}% expected from activity "
+                f"(&#215;{cm['ratio']}); with shuffled community labels {cm['shuffled_labels_pct_mean']}% (maximum {cm['shuffled_labels_pct_max']}%). Part of this is people meeting in the "
+                f"same threads. Louvain on this reply network: {lv['communities']} communities, modularity {lv['modularity']:.2f}; agreement with the topic communities AMI "
+                f"{lv['ami_vs_topic_communities']:.3f} (shuffled {lv['ami_vs_shuffled_topic_labels']:.3f}), with the cohort (old guard / newcomer) AMI {lv['ami_vs_cohort']:.3f}: "
+                "who replies to whom follows when people were active more than what they write about.</p>")
+    f = PROC / "commenter_network_posts_check.json"
+    if f.exists():
+        C = json.loads(f.read_text()); rows = []
+        for k, lab in (("A_comments_only_reproduction", "A. Comments only (as used)"), ("B_same_people_plus_self_posts", "B. Same people, plus their self-posts"),
+                       ("C_node_rule_counts_self_posts", "C. Self-posts also count toward the 10-document rule")):
+            r = C[k]
+            rows.append((lab, f"{r['people']:,}", f"{r['self_posts_used']:,}", str(r["communities"]), f"{r['modularity_mean']:.3f}", f"{r['ami_vs_saved_communities']:.2f}",
+                         f"{r['Politics_group']['long_time_pct']:.0f}% ({r['Politics_group']['share_of_saved_members_in_it_pct']:.0f}%)",
+                         f"{r['Omega-6_group']['long_time_pct']:.0f}% ({r['Omega-6_group']['share_of_saved_members_in_it_pct']:.0f}%)"))
+        sec += ('<h3>Does leaving out self-posts matter?</h3><p>The commenter network builds profiles from comments only. Rebuilt with the same rules '
+                '(<code>commenter_network_posts_check.py</code>); long-time share of the Politics and Omega-6 groups, in brackets the share of the original members still together.</p>')
+        sec += table(["Version", "People", "Self-posts", "Communities", "Modularity", "AMI vs used", "Politics: long-time", "Omega-6: long-time"], rows, num=(1, 2, 3, 4, 5))
+        sec += "<p>Same 12 communities and the same contrast (Politics about three quarters newcomers, Omega-6 about 60% long-time); AMI 0.70 is a little below the 0.79 between Louvain seeds.</p>"
+    return f'<section id="samepeople"><h2>Checks of the commenter network (27 Nov)</h2>{sec}</section>' if sec else ""
+
+
+def network_svg(layout, nodes, edges, title, coloured, names, label_ids=(), highlight=None, size=1.0, W=760, H=560):
+    """Inline SVG drawing of the topic network: precomputed layout (0..1), node area ~ documents, colour = topic community (three coloured,
+    rest grey), native hover tooltip per node. highlight(a, b) -> True draws that edge in the first series colour."""
+    tok = {c: f"--k{i + 1}" for i, c in enumerate(coloured)}; pad = 28
+    X = lambda v: pad + layout[str(v)][0] * (W - 2 * pad); Y = lambda v: pad + (1 - layout[str(v)][1]) * (H - 2 * pad)  # noqa: E731
+    p = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="{e(title)}">']
+    for ed in edges:
+        a, b = str(ed["a"]), str(ed["b"])
+        if a in layout and b in layout:
+            hi = highlight is not None and highlight(ed["a"], ed["b"])
+            p.append(f'<line x1="{X(a):.1f}" y1="{Y(a):.1f}" x2="{X(b):.1f}" y2="{Y(b):.1f}" stroke="var({"--k1" if hi else "--edge"})" stroke-width="{2.5 if hi else 0.8}" stroke-opacity="{1 if hi else 0.7}"/>')
+    for t, n in sorted(nodes.items(), key=lambda kv: -kv[1]["docs"]):
+        if str(t) not in layout:
+            continue
+        r = max(2.5, (n["docs"] ** 0.5) * 0.16 * size); col = tok.get(n["community"], "--kg")
+        p.append(f'<circle cx="{X(t):.1f}" cy="{Y(t):.1f}" r="{r:.1f}" fill="var({col})" stroke="var(--surface)" stroke-width="1.5">'
+                 f'<title>[{t}] {e(n["words"])}\nTheme: {e(n["theme"])}\nCommunity: {e(names.get(str(n["community"]), "other"))}\n{n["docs"]:,} documents, {n["degree_all"]} linked topics</title></circle>')
+    for t, dx, dy in label_ids:  # (topic, offset x, offset y) in px; a short leader line joins label and circle
+        if str(t) in layout:
+            txt = ", ".join(nodes[t]["words"].split(", ")[:2]); x2, y2 = X(t) + dx, Y(t) + dy
+            p.append(f'<line x1="{X(t):.1f}" y1="{Y(t):.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="var(--muted)" stroke-width="0.8"/>'
+                     f'<text x="{x2 + (-3 if dx < 0 else 3):.1f}" y="{y2 + 4:.1f}" text-anchor="{"end" if dx < 0 else "start"}" class="nl">{e(txt)}</text>')
+    p.append("</svg>")
+    return "".join(p)
+
+
+def hbar_svg(rows, title, fmt, W=760, row_h=24, left=300, hi=None):
+    """Horizontal bars, one series; rows = [(label, value)]. hi = set of labels drawn in the first series colour, others in the second."""
+    vmax = max(v for _, v in rows) or 1; H = 18 + row_h * len(rows)
+    p = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="{e(title)}">']
+    for i, (lab, v) in enumerate(rows):
+        y = 8 + i * row_h; w = (W - left - 60) * v / vmax; col = "--k1" if hi and lab in hi else "--c2"
+        p.append(f'<text x="{left - 8}" y="{y + 14}" text-anchor="end" class="ax">{e(lab)}</text>'
+                 f'<rect x="{left}" y="{y + 3}" width="{max(w, 1):.1f}" height="{row_h - 8}" rx="3" fill="var({col})"><title>{e(lab)}: {e(fmt(v))}</title></rect>'
+                 f'<text x="{left + w + 6:.1f}" y="{y + 14}" class="ax">{e(fmt(v))}</text>')
+    return "".join(p) + "</svg>"
+
+
+def heatmap_svg(M, labels, title, W=760, cell=None):
+    """Lift matrix (dict of dicts, 1 = expected): diverging blue (below 1) - grey - red (above 1), log scale capped at x3 / x1/3; hover shows the value."""
+    n = len(labels); left, top = 150, 150; cell = cell or min(42, (W - left - 10) / n); H = top + cell * n + 10
+    p = [f'<svg viewBox="0 0 {left + cell * n + 10:.0f} {H:.0f}" role="img" aria-label="{e(title)}">']
+    for j, lab in enumerate(labels):
+        p.append(f'<text transform="translate({left + j * cell + cell / 2 + 4:.1f},{top - 6}) rotate(-55)" class="ax">{e(lab)}</text>')
+    for i, li in enumerate(labels):
+        p.append(f'<text x="{left - 6}" y="{top + i * cell + cell / 2 + 4:.1f}" text-anchor="end" class="ax">{e(li)}</text>')
+        for j, lj in enumerate(labels):
+            v = M.get(str(i), M.get(i, {})).get(str(j), M.get(str(i), M.get(i, {})).get(j))
+            if v is None:
+                continue
+            s = max(-1, min(1, np.log(v) / np.log(3))); pct = abs(s) * 100; pole = "--dpos" if s > 0 else "--dneg"
+            p.append(f'<rect x="{left + j * cell + 1:.1f}" y="{top + i * cell + 1:.1f}" width="{cell - 2:.1f}" height="{cell - 2:.1f}" rx="2" '
+                     f'style="fill:color-mix(in oklab, var({pole}) {pct:.0f}%, var(--dmid))"><title>{e(li)} &#8594; {e(lj)}: lift {v:.2f}</title></rect>')
+            if i == j:
+                p.append(f'<text x="{left + j * cell + cell / 2:.1f}" y="{top + i * cell + cell / 2 + 4:.1f}" text-anchor="middle" class="cv">{v:.1f}</text>')
+    return "".join(p) + "</svg>"
+
+
+def topic_cooc_section():
+    f = PROC / "topic_cooccurrence_network.json"
+    if not f.exists():
+        return ""
+    T = json.loads(f.read_text()); A = T["all_years"]; per = T["periods"]
+    sec = ('<section id="topicnet"><h2>Topic network: which topics the same people write about</h2>'
+           f"<p>Nodes = the {T['topics']} BERTopic topics; {A['people']:,} people who wrote in 2+ topics (comments and self-posts). Edge = more people wrote in both topics than in all "
+           f"{T['n_samples']} curveball randomisations of the person &#215; topic matrix (each person&#8217;s number of topics and each topic&#8217;s number of people kept exactly) "
+           f"and Benjamini&#8211;Hochberg q {T['q']}; weight = lift. <code>topic_cooccurrence_network.py</code>.</p>"
+           f"<p>{A['edges']} edges ({A['density']*100:.1f}% of pairs), {A['isolated_topics']} topics without an edge; Louvain modularity {A['modularity_best']:.2f} (stable across seeds, AMI "
+           f"{A['stability_ami_across_seeds']:.2f}); agreement with the 14 themes AMI {A['ami_vs_14_themes']:.2f} (shuffled {A['ami_vs_shuffled_themes']:.2f}); "
+           f"{A['edges_inside_a_theme_pct']}% of edges inside a theme against {A['pairs_inside_a_theme_pct']}% of all pairs.</p>")
+    f2 = PROC / "topic_network_centrality.json"; Cn = json.loads(f2.read_text()) if f2.exists() else None
+    nodes = {n["topic"]: n for n in T["nodes"]}
+    if Cn and "layout" in Cn:
+        lay, col, nm = Cn["layout"], Cn["coloured_communities"], Cn["community_names"]
+        pol = lambda a, b: nodes[a]["theme"] == "Politics" and nodes[b]["theme"] == "Politics"  # noqa: E731
+        legend = "".join(f'<span><i class="dot" style="background:var(--k{i + 1})"></i>{e(nm[str(c)])}</span>' for i, c in enumerate(col)) + '<span><i class="dot" style="background:var(--kg)"></i>other topic communities</span>'
+        sec += (f'<figure><figcaption>The topic network, all years: {len(lay)} topics in the main connected network (circle area = documents; hover a circle for the topic). '
+                f'{Cn["unlinked_topics"]} topics have no significant link and {sum(len(c) for c in Cn["small_components"])} sit in two small separate groups (mayo and dressing; skin and additives); they are not drawn.</figcaption>'
+                f'<div class="legend">{legend}</div><div class="chart">{network_svg(lay, nodes, T["edges_all"], "Topic network, all years", col, nm, label_ids=[(4, -40, -44), (1, -70, 40), (14, -60, -30), (0, 60, -30), (24, 40, -16), (9, 40, -14), (47, 10, 30), (17, 50, 14)])}</div></figure>')
+        sec += ('<div class="pair">' + "".join(f'<figure><figcaption>{lab} ({len(T[k])} links; same positions; politics&#8211;politics links in blue)</figcaption><div class="chart">'
+                f'{network_svg(lay, nodes, T[k], lab, col, nm, highlight=pol, size=0.75, W=500, H=380)}</div></figure>' for k, lab in (("edges_before", "Before 2024"), ("edges_from", "From 2024 (one equal-size sample)"))) + "</div>")
+    rows = [(str(c["community"]), str(c["topics"]), e(", ".join(f"{k} {v}" for k, v in c["themes"].items())), e(" | ".join(c["example_topics"][:3]))) for c in A["community_contents"] if c["topics"] >= 2]
+    sec += "<h3>Topic communities (2+ topics)</h3>" + table(["#", "Topics", "Themes", "Biggest topics"], rows, num=(1,))
+    if Cn:
+        rows = [(f"[{r['topic']}] {e(r['words'])}", e(r["theme"]), str(r["degree"]), f"{r['betweenness']:.3f}", f"{r['eigenvector']:.2f}", f"{r['participation']:.2f}", str(r["communities_reached"]), f"{r['docs']:,}")
+                for r in Cn["top_by_degree"][:8]]
+        sec += ("<h3>Hubs</h3><p>Degree = significant partner topics; betweenness with distance 1 / lift; participation = how evenly a topic&#8217;s links spread over communities "
+                f"(0 = only its own). Centrality correlates with topic size (Spearman {min(Cn['spearman_with_topic_size'].values()):.2f}&#8211;{max(Cn['spearman_with_topic_size'].values()):.2f}). "
+                "<code>topic_network_centrality.py</code>.</p>")
+        sec += ('<figure><figcaption>Most connected topics: number of significant partner topics (degree)</figcaption><div class="chart">'
+                + hbar_svg([(f"[{r['topic']}] " + ", ".join(r["words"].split(", ")[:2]), r["degree"]) for r in Cn["top_by_degree"]], "Degree of the top topics", lambda v: f"{v:.0f}") + "</div></figure>")
+        sec += ('<figure><figcaption>Bridging between communities: betweenness (shortest paths, distance 1 / lift)</figcaption><div class="chart">'
+                + hbar_svg([(f"[{r['topic']}] " + ", ".join(r["words"].split(", ")[:2]), r["betweenness"]) for r in Cn["top_by_betweenness"]], "Betweenness of the top topics", lambda v: f"{v:.3f}") + "</div></figure>")
+        sec += table(["Topic", "Theme", "Degree", "Betweenness", "Eigenvector", "Participation", "Communities reached", "Documents"], rows, num=(2, 3, 4, 5, 6, 7))
+        rows = [(e(r["theme"]), str(r["topics"]), f"{r['mean_degree']:.1f}", f"{r['mean_participation']:.2f}") for r in Cn["by_theme"]]
+        sec += ('<h3>By theme</h3><figure><figcaption>Mean participation by theme (0 = a theme&#8217;s topics link only inside their own community; Politics in blue)</figcaption><div class="chart">'
+                + hbar_svg([(r["theme"].split(" (")[0], r["mean_participation"]) for r in sorted(Cn["by_theme"], key=lambda r: -r["mean_participation"])], "Participation by theme", lambda v: f"{v:.2f}", left=260, hi={"Politics"}) + "</div></figure>")
+        sec += table(["Theme", "Topics", "Mean degree", "Mean participation"], rows, num=(1, 2, 3))
+        sec += ("<p>The saturated-fat topic is the hub on every measure and links five of six communities; Politics has no links outside its own community "
+                "(participation 0.00).</p>")
+    f3 = PROC / "topic_link_communities.json"
+    if f3.exists():
+        L = json.loads(f3.read_text())["unweighted"]; Lw = json.loads(f3.read_text())["weighted"]
+        sec += ("<h3>Link communities (second community method)</h3><p>Communities of <i>links</i> (Ahn, Bagrow and Lehmann 2010), so a topic can belong to several: "
+                "links that share a topic are similar when the other two topics have similar neighbours (Jaccard), merged by single linkage and cut at the maximum "
+                f"partition density ({L['partition_density']:.2f}). <code>topic_link_communities.py</code>. {L['link_communities']} link communities, but only "
+                f"{L['link_communities_3plus']} with 3+ links, holding {L['links_in_3plus_pct']}% of the links: the method splits the sparse edge of the network into "
+                f"single links. {L['topics_in_2plus_communities_3plus']} topics belong to two or more of the 3+-link communities. Each topic&#8217;s main link community "
+                f"agrees with Louvain at AMI {L['ami_main_link_community_vs_louvain']:.2f} and with the 14 themes at {L['ami_main_link_community_vs_themes']:.2f} "
+                f"(weighted version: {Lw['ami_main_link_community_vs_louvain']:.2f} and {Lw['ami_main_link_community_vs_themes']:.2f}).</p>")
+        sec += ('<figure><figcaption>Overlap: number of link communities (3+ links) each topic belongs to</figcaption><div class="chart">'
+                + hbar_svg([(f"[{r['topic']}] " + ", ".join(r["words"].split(", ")[:2]), r["link_communities_3plus"]) for r in L["most_overlapping_topics"][:10]],
+                           "Link-community overlap per topic", lambda v: f"{v:.0f}") + "</div></figure>")
+        pol = {47, 89, 93, 97, 98}
+        rows = [(str(c["links"]), str(c["topics"]), e(", ".join(f"{k} {v}" for k, v in c["themes"].items())), e(" | ".join(c["topic_words"][:5])),
+                 str(len(pol & set(c["topic_ids"])))) for c in L["largest"][:8]]
+        sec += table(["Links", "Topics", "Themes", "Biggest topics", "Politics topics"], rows, num=(0, 1, 4))
+        sec += ("<p>The saturated-fat topic sits in the most link communities (10), then calories and weight (8) and omega-6 (7): the same hubs as Louvain and centrality, "
+                "now seen as topics shared by several conversations. Four of the five politics topics sit in one link community, the largest (with distrust, "
+                "the subreddit itself, studies and cholesterol), and none reaches the diet or fat communities.</p>")
+    R = per.get("resampled_from") or per.get("resampled_before")
+    sec += (f"<h3>Before and from 2024</h3><p>Same number of people in each period ({per['people_each']:,}; the larger period resampled {R['reps'] if R else 1} times). "
+            f"Edges: {per['before']['edges']} before, {R['edges_range'][0]}&#8211;{R['edges_range'][1] if R else per['from']['edges']} from 2024 (low power: most topics have no edge in either period).</p>")
+    if R:
+        rows = [(e(k), str(v["possible"]), str(v.get("before", "")), f"{v['from_range'][0]}&#8211;{v['from_range'][1]}") for k, v in R["key_theme_pairs"].items()]
+        sec += table(["Theme pair", "Topic pairs possible", "Linked before", "Linked from 2024 (range over samples)"], rows, num=(1, 2, 3))
+        sec += ("<p>Link counts per period are low-power (2,425 people before 2024), so a missing link is not evidence of no co-writing. "
+                "The lift comparison below replaces them: it uses everyone in each period and no threshold.</p>")
+    f4 = PROC / "topic_network_lift_periods.json"
+    if f4.exists():
+        LP = json.loads(f4.read_text()); a_, b_ = LP["periods"]["before 2024"], LP["periods"]["from 2024"]
+        rows = [(e(k), f"{a_['sets'][k]['lift']:.2f} [{a_['sets'][k]['ci95'][0]:.2f}&#8211;{a_['sets'][k]['ci95'][1]:.2f}]", f"{b_['sets'][k]['lift']:.2f} [{b_['sets'][k]['ci95'][0]:.2f}&#8211;{b_['sets'][k]['ci95'][1]:.2f}]")
+                for k in a_["sets"]]
+        sec += (f"<h3>Lift before and from 2024 (everyone in each period)</h3><p>Lift = people who wrote in both topics, summed over the pairs, divided by the number expected from that "
+                f"period&#8217;s own curveball null ({LP['n_null']} samples); 95% intervals from {LP['n_boot']} bootstrap resamples of people; {a_['people']:,} people before 2024, "
+                f"{b_['people']:,} from 2024. <code>topic_network_lift_periods.py</code>.</p>")
+        sec += table(["Topic pairs", "Before 2024", "From 2024"], rows, num=(1, 2))
+        sec += ("<p>Politics topics go from chance (0.93) to 1.57 times chance, and politics writers become less likely than chance to write about food, diet and shopping "
+                "(0.83). Omega-6 with keto (1.17 &#8594; 1.20), the saturated-fat hub and within-theme co-writing do not change: the earlier link-count reading "
+                "(omega-6 losing keto, more links inside themes) came from the small sample before 2024.</p>")
+    return sec + "</section>"
+
+
 def paper_check_section():
     fm, fc = PROC / "paper_mesh_check.json", PROC / "conclusion_eval.json"
     if not (fm.exists() or fc.exists()):
@@ -448,7 +628,7 @@ def paper_check_section():
 
 def themes_section():
     out = []
-    for pfx, name, f in (("seso", "r/StopEatingSeedOils", "themes_confirmed.json"), ("scinut", "r/ScientificNutrition", "scinut_themes_confirmed.json")):
+    for pfx, name, f in (("seso", "r/StopEatingSeedOils", THEMES_FILE), ("scinut", "r/ScientificNutrition", "scinut_themes_confirmed.json")):
         tf, df = PROC / f, PROC / f"{pfx}_doc_topics.csv.gz"
         if not (tf.exists() and df.exists()):
             continue
@@ -456,11 +636,12 @@ def themes_section():
         rows = []
         for t, ids in th.items():
             m = D.topic.isin(ids); a, b = m[~post].mean() * 100, m[post].mean() * 100
-            rows.append((e(t), e(", ".join(map(str, ids))), f"{int(m.sum()):,}", f"{a:.2f}%", f"{b:.2f}%", f"×{b / a:.2f}" if a else "–"))
-        out.append(f"<h3>{e(name)}</h3>" + table(["Theme", "Topics", "Documents", "Before 2024", "From 2024", "Change"], rows, num=(2, 3, 4, 5)))
+            pj = D.created_utc >= SPLIT_TS_AUG2024; aj, bj = m[~pj].mean() * 100, m[pj].mean() * 100
+            rows.append((e(t), e(", ".join(map(str, ids))), f"{int(m.sum()):,}", f"{a:.2f}%", f"{b:.2f}%", f"×{b / a:.2f}" if a else "–", f"×{bj / aj:.2f}" if aj else "–"))
+        out.append(f"<h3>{e(name)}</h3>" + table(["Theme", "Topics", "Documents", "Before 2024", "From 2024", "Change", "Change, split at 1 Aug 2024"], rows, num=(2, 3, 4, 5, 6)))
     if not out:
         return ""
-    return ('<section id="themes"><h2>Themes</h2><p>Hand-picked groups of topics (decisions of 22 Nov, saved in <code>themes_confirmed.json</code> and '
+    return ('<section id="themes"><h2>Themes</h2><p>r/StopEatingSeedOils: the 14 hand-assigned themes of the paper draft, covering all 123 topics (<code>themes_full_v3.json</code>, decision 26 Nov); r/ScientificNutrition: the hand-picked themes of 22 Nov ('
             '<code>scinut_themes_confirmed.json</code>). Share = documents in the theme&#8217;s topics among all documents of the period. '
             'The original r/ScientificNutrition themes were chosen because they grew, so their growth is descriptive; seed oils / PUFA tests whether the '
             'seed-oil surge spilled over.</p>' + "".join(out) + "</section>")
@@ -567,6 +748,8 @@ def main():
     sections.append(netstats_section())
     sections.append(reply_section())
     sections.append(reply_findings_section())
+    sections.append(same_people_section())
+    sections.append(topic_cooc_section())
     sections.append(cocite_section())
     sections.append(stability_section())
     sections.append(lda_section())
@@ -627,12 +810,12 @@ PAGE = """<meta charset="utf-8">
 <style>
 /* Layout: one reading column; a status board first, then each result section with its table and chart. */
 :root { --bg:#f7f8f6; --surface:#ffffff; --fg:#1d2220; --muted:#5f6a65; --line:#dde2df; --grid:#e8ece9; --shade:#eef2ec;
-  --c1:#c2571a; --c2:#3f6f8f; --done:#2f7d4f; --run:#2b6cb0; --wait:#b7791f; --todo:#8a948f;
+  --c1:#c2571a; --c2:#3f6f8f; --k1:#2a78d6; --k2:#eb6834; --k3:#1baf7a; --kg:#b9b8b0; --edge:#c9c8c0; --dpos:#e34948; --dneg:#2a78d6; --dmid:#f0efec; --done:#2f7d4f; --run:#2b6cb0; --wait:#b7791f; --todo:#8a948f;
   --display:"Space Grotesk", "Helvetica Neue", Arial, sans-serif; --body:Inter, system-ui, -apple-system, "Segoe UI", sans-serif; --mono:"JetBrains Mono", ui-monospace, Menlo, monospace; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#141816; --surface:#1b201e; --fg:#e7ece9; --muted:#9aa59f; --line:#2c3330; --grid:#252b28; --shade:#1f2622;
-  --c1:#e07a3f; --c2:#79a8c9; --done:#5cbf85; --run:#6ea8e6; --wait:#e0a84a; --todo:#7d8883; color-scheme: dark; } }
+  --c1:#e07a3f; --c2:#79a8c9; --k1:#3987e5; --k2:#d95926; --k3:#199e70; --kg:#5d5c57; --edge:#5a5954; --dpos:#e66767; --dneg:#3987e5; --dmid:#383835; --done:#5cbf85; --run:#6ea8e6; --wait:#e0a84a; --todo:#7d8883; color-scheme: dark; } }
 :root[data-theme="dark"] { --bg:#141816; --surface:#1b201e; --fg:#e7ece9; --muted:#9aa59f; --line:#2c3330; --grid:#252b28; --shade:#1f2622;
-  --c1:#e07a3f; --c2:#79a8c9; --done:#5cbf85; --run:#6ea8e6; --wait:#e0a84a; --todo:#7d8883; color-scheme: dark; }
+  --c1:#e07a3f; --c2:#79a8c9; --k1:#3987e5; --k2:#d95926; --k3:#199e70; --kg:#5d5c57; --edge:#5a5954; --dpos:#e66767; --dneg:#3987e5; --dmid:#383835; --done:#5cbf85; --run:#6ea8e6; --wait:#e0a84a; --todo:#7d8883; color-scheme: dark; }
 body { background:var(--bg); color:var(--fg); font:15px/1.55 var(--body); }
 main { max-width:900px; margin:0 auto; padding-block:28px 64px; padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); display:grid; gap:40px; }
 main > * { min-width:0; }
@@ -654,7 +837,7 @@ table { border-collapse:collapse; width:100%; font-size:13.5px; } th, td { paddi
 th { font-weight:600; color:var(--muted); font-size:12px; } tr:last-child td { border-bottom:0; } .n { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
 figure { margin:16px 0 0; } figcaption { font-weight:600; font-size:14px; }
 .legend { display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12.5px; color:var(--muted); margin:4px 0; } .legend i { display:inline-block; width:12px; height:3px; margin-right:6px; vertical-align:middle; }
-.chart { overflow-x:auto; } .chart svg { width:100%; min-width:520px; height:auto; display:block; } .ax { font:11px var(--body); fill:var(--muted); }
+.chart { overflow-x:auto; } .chart svg { width:100%; min-width:520px; height:auto; display:block; } .ax { font:11px var(--body); fill:var(--muted); } .nl { font:11.5px var(--body); fill:var(--fg); paint-order:stroke; stroke:var(--surface); stroke-width:3px; } .cv { font:10px var(--body); fill:var(--fg); } .legend i.dot { width:10px; height:10px; border-radius:50%; } .pair { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:12px; } .pair .chart svg { min-width:0; }
 details { margin-top:16px; } summary { cursor:pointer; font-weight:500; } summary:focus-visible { outline:2px solid var(--run); outline-offset:2px; }
 .dec { margin:0; padding-left:20px; display:grid; gap:4px; max-width:70ch; }
 .two { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:16px; } .two > div { min-width:0; }

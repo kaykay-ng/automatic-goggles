@@ -4,13 +4,13 @@ Decomposition of the change in theme share (all documents from 2024 minus all be
   change = (OLD from 2024 - OLD before)  [what long-time commenters changed]  +  w_new * (NEW from 2024 - OLD from 2024)  [what newcomers add, w_new = newcomers' share of documents from 2024].
 Also 'returners': the same people before and after (OLD authors with a topic-model document in both periods). Cluster bootstrap over commenters (300) for the intervals. Output: data/processed/topic_by_cohort.csv.
 Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/topic_by_cohort.py"""
-from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
+from seedoil_common import is_bot, not_bot, SPLIT_TS# shared bot rule: AutoModerator + names ending in 'bot'
 import sys
 from pathlib import Path
 import numpy as np, pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 PROC = Path(__file__).resolve().parents[1] / "data" / "processed"
-CUT = pd.Timestamp("2024-01-01").timestamp(); rng = np.random.default_rng(0)
+CUT = SPLIT_TS; rng = np.random.default_rng(0)
 TH = {"Politics": [46, 117, 43, 68, 107], "Vaccines and COVID": [20], "Pharma, FDA, corporations": [10, 50, 80, 116], "Ingredient labels and processed food": [61, 92, 60],
       "Shopping": [17, 11, 9], "Studies and evidence": [23, 52, 53], "Keto, carbs, fasting": [1, 66], "Omega-6 / PUFA biochemistry": [0, 79, 96]}
 cols = ["id", "author", "created_utc"]

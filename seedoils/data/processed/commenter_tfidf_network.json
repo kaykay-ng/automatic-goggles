@@ -1,0 +1,307 @@
+{
+ "people": 2621,
+ "vocabulary": 7679,
+ "backbone_links": 1451,
+ "largest_component": 633,
+ "communities": 17,
+ "communities_30plus": 8,
+ "sizes": [
+  98,
+  94,
+  86,
+  83,
+  52,
+  47,
+  45,
+  35,
+  28,
+  22,
+  11,
+  10,
+  8,
+  6,
+  4
+ ],
+ "modularity_mean": 0.698,
+ "stability_ami_across_20_seeds": 0.925,
+ "ami_vs_topic_communities": 0.303,
+ "nmi_vs_topic_communities": 0.344,
+ "ami_vs_topic_null_rewired": [
+  0.001,
+  0.014,
+  0.008,
+  -0.003,
+  0.006
+ ],
+ "ami_vs_first_comment_quarter": 0.054,
+ "topic_communities_vs_first_comment_quarter": 0.047,
+ "word_community_top_words": {
+  "0": [
+   "trump",
+   "rfk-jr",
+   "vote",
+   "party",
+   "democrat",
+   "candidate",
+   "voting",
+   "kamala",
+   "political",
+   "republican"
+  ],
+  "1": [
+   "evidence",
+   "study",
+   "outcome",
+   "rct",
+   "trial",
+   "data",
+   "ldl",
+   "saturated-fat",
+   "risk",
+   "randomized"
+  ],
+  "2": [
+   "flour",
+   "cracker",
+   "bread",
+   "organic",
+   "salt",
+   "cheese",
+   "brand",
+   "wheat",
+   "tortilla",
+   "mayo"
+  ],
+  "3": [
+   "acid",
+   "dietary",
+   "glucose",
+   "crop",
+   "et",
+   "al",
+   "increased",
+   "sfa",
+   "fatty",
+   "cell"
+  ],
+  "4": [
+   "vaccine",
+   "covid",
+   "mrna",
+   "autism",
+   "deficit",
+   "calorie",
+   "covid-19",
+   "effective",
+   "caloric",
+   "lose"
+  ],
+  "5": [
+   "app",
+   "scout",
+   "restaurant",
+   "free",
+   "feedback",
+   "thanks",
+   "user",
+   "com",
+   "map",
+   "hi"
+  ],
+  "6": [
+   "evoo",
+   "avocado-oil",
+   "virgin",
+   "spain",
+   "olive",
+   "ghee",
+   "mayo",
+   "taste",
+   "coconut-oil",
+   "blender"
+  ],
+  "7": [
+   "lipid",
+   "oxidative",
+   "oxidized",
+   "membrane",
+   "mitochondrial",
+   "ldl",
+   "damage",
+   "pufa",
+   "unstable",
+   "insulin"
+  ]
+ },
+ "word_community_best_topic_match": {
+  "0": {
+   "topic_community": 2,
+   "share": 0.8
+  },
+  "1": {
+   "topic_community": 5,
+   "share": 0.36
+  },
+  "2": {
+   "topic_community": 1,
+   "share": 0.64
+  },
+  "3": {
+   "topic_community": 4,
+   "share": 0.33
+  },
+  "4": {
+   "topic_community": 2,
+   "share": 0.54
+  },
+  "5": {
+   "topic_community": 1,
+   "share": 0.4
+  },
+  "6": {
+   "topic_community": 6,
+   "share": 0.42
+  },
+  "7": {
+   "topic_community": 4,
+   "share": 0.37
+  }
+ },
+ "crosstab_word_rows_topic_cols": {
+  "0": {
+   "1": 5,
+   "2": 78,
+   "3": 3,
+   "4": 1,
+   "5": 3,
+   "6": 3,
+   "7": 2,
+   "9": 1,
+   "10": 1,
+   "12": 1
+  },
+  "1": {
+   "2": 3,
+   "4": 18,
+   "5": 34,
+   "6": 3,
+   "7": 8,
+   "8": 2,
+   "9": 24,
+   "10": 2
+  },
+  "2": {
+   "1": 55,
+   "2": 3,
+   "3": 11,
+   "6": 5,
+   "8": 2,
+   "9": 2,
+   "10": 4,
+   "11": 1,
+   "12": 3
+  },
+  "3": {
+   "1": 1,
+   "2": 5,
+   "3": 8,
+   "4": 27,
+   "5": 8,
+   "6": 4,
+   "7": 11,
+   "8": 5,
+   "9": 6,
+   "10": 5,
+   "11": 2,
+   "12": 1
+  },
+  "4": {
+   "2": 28,
+   "5": 9,
+   "7": 10,
+   "9": 2,
+   "10": 3
+  },
+  "5": {
+   "1": 19,
+   "3": 7,
+   "4": 3,
+   "5": 12,
+   "6": 1,
+   "7": 1,
+   "8": 3,
+   "11": 1
+  },
+  "6": {
+   "1": 14,
+   "3": 7,
+   "4": 2,
+   "5": 1,
+   "6": 19,
+   "11": 2
+  },
+  "7": {
+   "1": 3,
+   "3": 1,
+   "4": 13,
+   "5": 2,
+   "7": 1,
+   "9": 10,
+   "10": 2,
+   "11": 1,
+   "12": 2
+  },
+  "8": {
+   "1": 1,
+   "4": 16,
+   "7": 1,
+   "9": 4,
+   "10": 3,
+   "11": 1,
+   "12": 2
+  },
+  "9": {
+   "1": 4,
+   "2": 1,
+   "3": 1,
+   "4": 2,
+   "5": 1,
+   "6": 5,
+   "7": 1,
+   "8": 1,
+   "9": 1,
+   "11": 5
+  },
+  "10": {
+   "2": 1,
+   "5": 9,
+   "9": 1
+  },
+  "11": {
+   "2": 5,
+   "4": 4,
+   "9": 1
+  },
+  "12": {
+   "5": 1,
+   "6": 1,
+   "12": 6
+  },
+  "13": {
+   "1": 2,
+   "2": 3,
+   "3": 1
+  },
+  "14": {
+   "5": 4
+  },
+  "15": {
+   "4": 1,
+   "9": 1
+  },
+  "16": {
+   "1": 1,
+   "9": 1
+  }
+ }
+}

@@ -1,0 +1,790 @@
+{
+ "all documents": {
+  "before 2024": {
+   "documents": 34637,
+   "disapproving_pct": 4.76,
+   "downvoted_pct": 4.73,
+   "reception_pct": 53.04,
+   "downvoted30_pct": 4.73,
+   "disapproving_ci95": [
+    4.5,
+    5.02
+   ],
+   "downvoted_ci95": [
+    4.33,
+    5.18
+   ],
+   "reception_ci95": [
+    52.79,
+    53.29
+   ],
+   "downvoted30_ci95": [
+    4.33,
+    5.18
+   ]
+  },
+  "from 2024": {
+   "documents": 115178,
+   "disapproving_pct": 6.15,
+   "downvoted_pct": 8.82,
+   "reception_pct": 51.35,
+   "downvoted30_pct": 8.79,
+   "disapproving_ci95": [
+    5.98,
+    6.31
+   ],
+   "downvoted_ci95": [
+    8.46,
+    9.19
+   ],
+   "reception_ci95": [
+    51.23,
+    51.48
+   ],
+   "downvoted30_ci95": [
+    8.43,
+    9.17
+   ]
+  },
+  "change": {
+   "disapproving": {
+    "change_pts": 1.39,
+    "ci95": [
+     1.06,
+     1.69
+    ]
+   },
+   "downvoted": {
+    "change_pts": 4.09,
+    "ci95": [
+     3.5,
+     4.65
+    ]
+   },
+   "reception": {
+    "change_pts": -1.69,
+    "ci95": [
+     -1.96,
+     -1.43
+    ]
+   },
+   "downvoted30": {
+    "change_pts": 4.06,
+    "ci95": [
+     3.45,
+     4.61
+    ]
+   }
+  }
+ },
+ "five politics topics": {
+  "before 2024": {
+   "documents": 289,
+   "disapproving_pct": 9.0,
+   "downvoted_pct": 6.57,
+   "reception_pct": 56.4,
+   "downvoted30_pct": 6.57,
+   "disapproving_ci95": [
+    5.47,
+    12.42
+   ],
+   "downvoted_ci95": [
+    3.72,
+    9.7
+   ],
+   "reception_ci95": [
+    52.98,
+    59.77
+   ],
+   "downvoted30_ci95": [
+    3.72,
+    9.7
+   ]
+  },
+  "from 2024": {
+   "documents": 3460,
+   "disapproving_pct": 8.29,
+   "downvoted_pct": 17.69,
+   "reception_pct": 52.27,
+   "downvoted30_pct": 17.75,
+   "disapproving_ci95": [
+    7.36,
+    9.16
+   ],
+   "downvoted_ci95": [
+    15.41,
+    19.65
+   ],
+   "reception_ci95": [
+    51.13,
+    53.33
+   ],
+   "downvoted30_ci95": [
+    15.37,
+    19.73
+   ]
+  },
+  "change": {
+   "disapproving": {
+    "change_pts": -0.71,
+    "ci95": [
+     -3.89,
+     2.67
+    ]
+   },
+   "downvoted": {
+    "change_pts": 11.12,
+    "ci95": [
+     6.84,
+     14.67
+    ]
+   },
+   "reception": {
+    "change_pts": -4.13,
+    "ci95": [
+     -7.33,
+     -1.03
+    ]
+   },
+   "downvoted30": {
+    "change_pts": 11.18,
+    "ci95": [
+     6.88,
+     14.72
+    ]
+   }
+  }
+ },
+ "saturated-fat hub (topic 4)": {
+  "before 2024": {
+   "documents": 879,
+   "disapproving_pct": 6.37,
+   "downvoted_pct": 9.33,
+   "reception_pct": 49.52,
+   "downvoted30_pct": 9.33,
+   "disapproving_ci95": [
+    4.74,
+    8.0
+   ],
+   "downvoted_ci95": [
+    7.35,
+    11.44
+   ],
+   "reception_ci95": [
+    47.51,
+    51.68
+   ],
+   "downvoted30_ci95": [
+    7.35,
+    11.44
+   ]
+  },
+  "from 2024": {
+   "documents": 2511,
+   "disapproving_pct": 6.25,
+   "downvoted_pct": 10.95,
+   "reception_pct": 50.8,
+   "downvoted30_pct": 10.94,
+   "disapproving_ci95": [
+    5.23,
+    7.24
+   ],
+   "downvoted_ci95": [
+    9.49,
+    12.38
+   ],
+   "reception_ci95": [
+    49.55,
+    51.93
+   ],
+   "downvoted30_ci95": [
+    9.45,
+    12.34
+   ]
+  },
+  "change": {
+   "disapproving": {
+    "change_pts": -0.12,
+    "ci95": [
+     -2.01,
+     1.68
+    ]
+   },
+   "downvoted": {
+    "change_pts": 1.62,
+    "ci95": [
+     -0.9,
+     4.11
+    ]
+   },
+   "reception": {
+    "change_pts": 1.28,
+    "ci95": [
+     -1.09,
+     3.38
+    ]
+   },
+   "downvoted30": {
+    "change_pts": 1.61,
+    "ci95": [
+     -0.93,
+     4.08
+    ]
+   }
+  }
+ },
+ "community: Politics, distrust and evidence": {
+  "before 2024": {
+   "documents": 6693,
+   "disapproving_pct": 6.38,
+   "downvoted_pct": 7.13,
+   "reception_pct": 53.43,
+   "downvoted30_pct": 7.13,
+   "disapproving_ci95": [
+    5.81,
+    7.01
+   ],
+   "downvoted_ci95": [
+    6.02,
+    8.45
+   ],
+   "reception_ci95": [
+    52.75,
+    54.14
+   ],
+   "downvoted30_ci95": [
+    6.02,
+    8.45
+   ]
+  },
+  "from 2024": {
+   "documents": 32396,
+   "disapproving_pct": 8.05,
+   "downvoted_pct": 13.04,
+   "reception_pct": 50.97,
+   "downvoted30_pct": 13.0,
+   "disapproving_ci95": [
+    7.77,
+    8.37
+   ],
+   "downvoted_ci95": [
+    12.31,
+    13.76
+   ],
+   "reception_ci95": [
+    50.65,
+    51.26
+   ],
+   "downvoted30_ci95": [
+    12.25,
+    13.71
+   ]
+  },
+  "change": {
+   "disapproving": {
+    "change_pts": 1.67,
+    "ci95": [
+     0.94,
+     2.37
+    ]
+   },
+   "downvoted": {
+    "change_pts": 5.91,
+    "ci95": [
+     4.42,
+     7.2
+    ]
+   },
+   "reception": {
+    "change_pts": -2.46,
+    "ci95": [
+     -3.2,
+     -1.69
+    ]
+   },
+   "downvoted30": {
+    "change_pts": 5.87,
+    "ci95": [
+     4.37,
+     7.16
+    ]
+   }
+  }
+ },
+ "community: Diet, weight and saturated fat": {
+  "before 2024": {
+   "documents": 7589,
+   "disapproving_pct": 4.01,
+   "downvoted_pct": 5.65,
+   "reception_pct": 51.47,
+   "downvoted30_pct": 5.65,
+   "disapproving_ci95": [
+    3.49,
+    4.53
+   ],
+   "downvoted_ci95": [
+    5.0,
+    6.34
+   ],
+   "reception_ci95": [
+    50.89,
+    52.07
+   ],
+   "downvoted30_ci95": [
+    5.0,
+    6.34
+   ]
+  },
+  "from 2024": {
+   "documents": 19875,
+   "disapproving_pct": 5.19,
+   "downvoted_pct": 10.01,
+   "reception_pct": 50.12,
+   "downvoted30_pct": 10.0,
+   "disapproving_ci95": [
+    4.86,
+    5.52
+   ],
+   "downvoted_ci95": [
+    9.36,
+    10.66
+   ],
+   "reception_ci95": [
+    49.7,
+    50.52
+   ],
+   "downvoted30_ci95": [
+    9.35,
+    10.66
+   ]
+  },
+  "change": {
+   "disapproving": {
+    "change_pts": 1.18,
+    "ci95": [
+     0.53,
+     1.85
+    ]
+   },
+   "downvoted": {
+    "change_pts": 4.36,
+    "ci95": [
+     3.42,
+     5.33
+    ]
+   },
+   "reception": {
+    "change_pts": -1.35,
+    "ci95": [
+     -2.08,
+     -0.61
+    ]
+   },
+   "downvoted30": {
+    "change_pts": 4.35,
+    "ci95": [
+     3.42,
+     5.33
+    ]
+   }
+  }
+ },
+ "community: Omega-6 and animal foods": {
+  "before 2024": {
+   "documents": 7084,
+   "disapproving_pct": 4.46,
+   "downvoted_pct": 3.84,
+   "reception_pct": 54.22,
+   "downvoted30_pct": 3.84,
+   "disapproving_ci95": [
+    3.94,
+    4.96
+   ],
+   "downvoted_ci95": [
+    3.3,
+    4.39
+   ],
+   "reception_ci95": [
+    53.59,
+    54.84
+   ],
+   "downvoted30_ci95": [
+    3.3,
+    4.39
+   ]
+  },
+  "from 2024": {
+   "documents": 15481,
+   "disapproving_pct": 5.46,
+   "downvoted_pct": 6.9,
+   "reception_pct": 52.19,
+   "downvoted30_pct": 6.89,
+   "disapproving_ci95": [
+    5.09,
+    5.85
+   ],
+   "downvoted_ci95": [
+    6.36,
+    7.43
+   ],
+   "reception_ci95": [
+    51.74,
+    52.65
+   ],
+   "downvoted30_ci95": [
+    6.34,
+    7.43
+   ]
+  },
+  "change": {
+   "disapproving": {
+    "change_pts": 1.0,
+    "ci95": [
+     0.38,
+     1.61
+    ]
+   },
+   "downvoted": {
+    "change_pts": 3.06,
+    "ci95": [
+     2.35,
+     3.83
+    ]
+   },
+   "reception": {
+    "change_pts": -2.03,
+    "ci95": [
+     -2.79,
+     -1.21
+    ]
+   },
+   "downvoted30": {
+    "change_pts": 3.05,
+    "ci95": [
+     2.32,
+     3.83
+    ]
+   }
+  }
+ },
+ "community: Oils and cooking fats": {
+  "before 2024": {
+   "documents": 3272,
+   "disapproving_pct": 5.75,
+   "downvoted_pct": 3.76,
+   "reception_pct": 54.51,
+   "downvoted30_pct": 3.76,
+   "disapproving_ci95": [
+    4.94,
+    6.55
+   ],
+   "downvoted_ci95": [
+    3.03,
+    4.52
+   ],
+   "reception_ci95": [
+    53.5,
+    55.5
+   ],
+   "downvoted30_ci95": [
+    3.03,
+    4.52
+   ]
+  },
+  "from 2024": {
+   "documents": 12847,
+   "disapproving_pct": 6.44,
+   "downvoted_pct": 6.61,
+   "reception_pct": 52.39,
+   "downvoted30_pct": 6.59,
+   "disapproving_ci95": [
+    5.99,
+    6.9
+   ],
+   "downvoted_ci95": [
+    6.1,
+    7.15
+   ],
+   "reception_ci95": [
+    51.92,
+    52.88
+   ],
+   "downvoted30_ci95": [
+    6.08,
+    7.15
+   ]
+  },
+  "change": {
+   "disapproving": {
+    "change_pts": 0.69,
+    "ci95": [
+     -0.29,
+     1.59
+    ]
+   },
+   "downvoted": {
+    "change_pts": 2.85,
+    "ci95": [
+     1.88,
+     3.75
+    ]
+   },
+   "reception": {
+    "change_pts": -2.12,
+    "ci95": [
+     -3.28,
+     -1.05
+    ]
+   },
+   "downvoted30": {
+    "change_pts": 2.83,
+    "ci95": [
+     1.86,
+     3.72
+    ]
+   }
+  }
+ },
+ "community: Home cooking and sugar": {
+  "before 2024": {
+   "documents": 2863,
+   "disapproving_pct": 5.03,
+   "downvoted_pct": 3.14,
+   "reception_pct": 53.46,
+   "downvoted30_pct": 3.14,
+   "disapproving_ci95": [
+    4.24,
+    5.93
+   ],
+   "downvoted_ci95": [
+    2.43,
+    3.86
+   ],
+   "reception_ci95": [
+    52.5,
+    54.52
+   ],
+   "downvoted30_ci95": [
+    2.43,
+    3.86
+   ]
+  },
+  "from 2024": {
+   "documents": 9895,
+   "disapproving_pct": 6.43,
+   "downvoted_pct": 6.7,
+   "reception_pct": 52.1,
+   "downvoted30_pct": 6.71,
+   "disapproving_ci95": [
+    5.9,
+    6.92
+   ],
+   "downvoted_ci95": [
+    6.12,
+    7.26
+   ],
+   "reception_ci95": [
+    51.56,
+    52.63
+   ],
+   "downvoted30_ci95": [
+    6.13,
+    7.28
+   ]
+  },
+  "change": {
+   "disapproving": {
+    "change_pts": 1.4,
+    "ci95": [
+     0.39,
+     2.37
+    ]
+   },
+   "downvoted": {
+    "change_pts": 3.56,
+    "ci95": [
+     2.69,
+     4.47
+    ]
+   },
+   "reception": {
+    "change_pts": -1.36,
+    "ci95": [
+     -2.44,
+     -0.17
+    ]
+   },
+   "downvoted30": {
+    "change_pts": 3.57,
+    "ci95": [
+     2.71,
+     4.49
+    ]
+   }
+  }
+ },
+ "community: Shopping": {
+  "before 2024": {
+   "documents": 1597,
+   "disapproving_pct": 2.63,
+   "downvoted_pct": 2.44,
+   "reception_pct": 52.18,
+   "downvoted30_pct": 2.44,
+   "disapproving_ci95": [
+    1.84,
+    3.48
+   ],
+   "downvoted_ci95": [
+    1.69,
+    3.15
+   ],
+   "reception_ci95": [
+    50.69,
+    53.61
+   ],
+   "downvoted30_ci95": [
+    1.69,
+    3.15
+   ]
+  },
+  "from 2024": {
+   "documents": 6946,
+   "disapproving_pct": 3.99,
+   "downvoted_pct": 3.86,
+   "reception_pct": 51.62,
+   "downvoted30_pct": 3.83,
+   "disapproving_ci95": [
+    3.52,
+    4.48
+   ],
+   "downvoted_ci95": [
+    3.28,
+    4.39
+   ],
+   "reception_ci95": [
+    50.99,
+    52.27
+   ],
+   "downvoted30_ci95": [
+    3.25,
+    4.37
+   ]
+  },
+  "change": {
+   "disapproving": {
+    "change_pts": 1.36,
+    "ci95": [
+     0.38,
+     2.27
+    ]
+   },
+   "downvoted": {
+    "change_pts": 1.42,
+    "ci95": [
+     0.51,
+     2.32
+    ]
+   },
+   "reception": {
+    "change_pts": -0.56,
+    "ci95": [
+     -1.99,
+     1.07
+    ]
+   },
+   "downvoted30": {
+    "change_pts": 1.39,
+    "ci95": [
+     0.49,
+     2.31
+    ]
+   }
+  }
+ },
+ "topics without a link or in small groups": {
+  "before 2024": {
+   "documents": 5539,
+   "disapproving_pct": 4.08,
+   "downvoted_pct": 3.79,
+   "reception_pct": 52.5,
+   "downvoted30_pct": 3.79,
+   "disapproving_ci95": [
+    3.55,
+    4.6
+   ],
+   "downvoted_ci95": [
+    3.22,
+    4.44
+   ],
+   "reception_ci95": [
+    51.75,
+    53.27
+   ],
+   "downvoted30_ci95": [
+    3.22,
+    4.44
+   ]
+  },
+  "from 2024": {
+   "documents": 17738,
+   "disapproving_pct": 4.84,
+   "downvoted_pct": 6.18,
+   "reception_pct": 51.53,
+   "downvoted30_pct": 6.13,
+   "disapproving_ci95": [
+    4.49,
+    5.18
+   ],
+   "downvoted_ci95": [
+    5.75,
+    6.64
+   ],
+   "reception_ci95": [
+    51.13,
+    51.94
+   ],
+   "downvoted30_ci95": [
+    5.69,
+    6.59
+   ]
+  },
+  "change": {
+   "disapproving": {
+    "change_pts": 0.76,
+    "ci95": [
+     0.11,
+     1.37
+    ]
+   },
+   "downvoted": {
+    "change_pts": 2.39,
+    "ci95": [
+     1.68,
+     3.16
+    ]
+   },
+   "reception": {
+    "change_pts": -0.97,
+    "ci95": [
+     -1.85,
+     -0.07
+    ]
+   },
+   "downvoted30": {
+    "change_pts": 2.34,
+    "ci95": [
+     1.61,
+     3.09
+    ]
+   }
+  }
+ },
+ "across_topics": {
+  "topics": 95,
+  "spearman_d_dis_vs_degree": 0.07,
+  "spearman_d_dis_vs_participation": 0.08,
+  "spearman_d_down_vs_degree": 0.28,
+  "spearman_d_down_vs_participation": 0.12,
+  "spearman_d_dis_vs_d_down": 0.12
+ }
+}

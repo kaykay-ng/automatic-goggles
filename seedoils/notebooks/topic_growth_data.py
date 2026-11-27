@@ -1,6 +1,7 @@
 """Dataset 'topic_growth' for Figure 1b: every BERTopic topic (the ~130 the model found by itself, outliers reassigned), no hand-made groups, share of comments before / from 2024.
 The page ranks them by growth; topics need at least MIN_N comments over both periods to be listed. Label = first words of the topic with repeats removed (mechanical, not hand-written).
 Run from final_project/:  python3 seedoils/notebooks/topic_growth_data.py  (needs pandas) -> seedoils/data/processed/artifact/topic_growth.json ({rows, meta}). Aggregates only."""
+from seedoil_common import SPLIT_TS  # analysis split: 1 Jan 2024 (decision 26 Nov)
 import json
 from pathlib import Path
 
@@ -8,7 +9,7 @@ import pandas as pd
 
 PROC = Path(__file__).resolve().parents[1] / "data" / "processed"
 OUT = PROC / "artifact" / "topic_growth.json"
-SPLIT = 1704067200  # 2024-01-01 UTC
+SPLIT = SPLIT_TS  # 2024-01-01 UTC
 MIN_N = 300
 
 

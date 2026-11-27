@@ -1,10 +1,10 @@
 """Why did the relative comment score (within-thread percentile) dip after 2024, in both subreddits? Tests: (1) mechanical effect of bigger threads, (2) length premium, (3) top-level vs reply, (4) stratified by thread size, (5) old vs new commenters.
 Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/reception_why.py"""
-from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
+from seedoil_common import is_bot, not_bot, SPLIT_TS# shared bot rule: AutoModerator + names ending in 'bot'
 import gzip, json
 from pathlib import Path
 import numpy as np, pandas as pd
-ROOT = Path(__file__).resolve().parents[2]; RAWD = ROOT / "seedoils" / "data" / "raw"; CUT = pd.Timestamp("2024-01-01").timestamp()
+ROOT = Path(__file__).resolve().parents[2]; RAWD = ROOT / "seedoils" / "data" / "raw"; CUT = SPLIT_TS
 def load(pat):
     f = next(RAWD.glob(pat)); rows = []
     with gzip.open(f, "rt", encoding="utf-8") as fh:

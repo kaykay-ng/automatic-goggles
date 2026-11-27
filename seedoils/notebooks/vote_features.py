@@ -4,7 +4,7 @@ Run from final_project/:  python seedoils/notebooks/vote_features.py   -> seedoi
 Vote percentile as in seso_topics.py votes: rank of score within thread x level (top-level / reply), ties averaged,
 groups with >= 5 comments; bots dropped; comments of any age kept (scores of the last ~3 days were still settling). Features are simple text markers, not stance labels.
 """
-from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
+from seedoil_common import is_bot, not_bot, SPLIT_TS# shared bot rule: AutoModerator + names ending in 'bot'
 import gzip
 import json
 import re
@@ -50,7 +50,7 @@ def load(sub):
     C["distrust_words"] = C.body.str.contains(DISTRUST)
     C["seed_oils_bad_words"] = C.body.str.contains(SEED_BAD)
     C["question"] = C.body.str.contains(QUESTION)
-    C["period"] = (pd.to_datetime(C.created_utc, unit="s").dt.year >= 2024).map({False: "pre2024", True: "from2024"})
+    C["period"] = (C.created_utc >= SPLIT_TS).map({False: "pre2024", True: "from2024"})
     return C
 
 

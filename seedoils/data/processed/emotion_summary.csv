@@ -23,20 +23,30 @@ ScientificNutrition,Vitamin D and sun,from2024,548,0.0365,0.0776,0.1186,0.1944,0
 ScientificNutrition,Vitamin D and sun,pre2024,1475,0.0312,0.0818,0.1295,0.2011,0.1275,0.1504,0.0014,0.0056,0.5092,0.5024
 ScientificNutrition,all,from2024,51129,0.0447,0.1015,0.1367,0.2004,0.1139,0.1401,0.0012,0.0042,0.5041,0.4978
 ScientificNutrition,all,pre2024,70704,0.0491,0.1038,0.1404,0.2037,0.1308,0.1572,0.0011,0.0039,0.4743,0.4791
-StopEatingSeedOils,"Distrust of industry, medicine and media",from2024,5481,0.0887,0.1555,0.1764,0.2203,0.0578,0.0801,0.0044,0.0079,0.3609,0.3979
-StopEatingSeedOils,"Distrust of industry, medicine and media",pre2024,851,0.0834,0.1364,0.1739,0.2292,0.0576,0.0807,0.0012,0.0072,0.3631,0.399
-StopEatingSeedOils,Ingredient labels and processed food,from2024,2471,0.0838,0.1317,0.1995,0.2451,0.0951,0.1059,0.004,0.0071,0.3654,0.4074
-StopEatingSeedOils,Ingredient labels and processed food,pre2024,365,0.0493,0.1035,0.2356,0.2738,0.0904,0.1004,0.0055,0.0074,0.389,0.413
-StopEatingSeedOils,"Keto, carbs, fasting",from2024,1930,0.0435,0.0883,0.2202,0.2875,0.0741,0.0917,0.0026,0.008,0.3756,0.412
-StopEatingSeedOils,"Keto, carbs, fasting",pre2024,1220,0.0418,0.0831,0.232,0.2964,0.0852,0.1007,0.0016,0.0073,0.3574,0.3956
-StopEatingSeedOils,Omega-6 / PUFA biochemistry,from2024,7024,0.0545,0.1022,0.1381,0.2095,0.0968,0.1147,0.0019,0.0052,0.5165,0.5106
-StopEatingSeedOils,Omega-6 / PUFA biochemistry,pre2024,3810,0.0433,0.0884,0.1488,0.223,0.1194,0.1395,0.0008,0.0055,0.4759,0.4794
-StopEatingSeedOils,"Other diets (vegan, carnivore, ancestral, Mediterranean)",from2024,2943,0.0771,0.1312,0.1882,0.2445,0.0788,0.1013,0.001,0.0044,0.3836,0.4171
-StopEatingSeedOils,"Other diets (vegan, carnivore, ancestral, Mediterranean)",pre2024,896,0.0525,0.1055,0.1987,0.2523,0.0904,0.1142,0.0011,0.0037,0.4018,0.4249
-StopEatingSeedOils,"Politics (RFK, Trump, left/right)",from2024,2928,0.0888,0.156,0.1977,0.2362,0.0536,0.0766,0.0041,0.0067,0.3555,0.393
-StopEatingSeedOils,"Politics (RFK, Trump, left/right)",pre2024,145,0.1172,0.1414,0.2069,0.2614,0.0621,0.0823,0.0,0.0032,0.4207,0.4006
-StopEatingSeedOils,"Shopping (stores, chips, avocado oil)",from2024,5329,0.052,0.0928,0.2768,0.3022,0.0998,0.1108,0.0024,0.0052,0.3421,0.3787
-StopEatingSeedOils,"Shopping (stores, chips, avocado oil)",pre2024,989,0.0293,0.0642,0.2801,0.3254,0.1082,0.1133,0.001,0.0048,0.3721,0.3909
+StopEatingSeedOils,"Cooking and cooking fats (butter, tallow, frying)",from2024,6989,0.0514,0.0926,0.2203,0.2686,0.0891,0.1012,0.0027,0.0057,0.4174,0.4332
+StopEatingSeedOils,"Cooking and cooking fats (butter, tallow, frying)",pre2024,2179,0.0363,0.0772,0.2428,0.2927,0.095,0.1083,0.0018,0.0041,0.4011,0.4222
+StopEatingSeedOils,"Distrust of industry, medicine and media",from2024,8237,0.0811,0.1431,0.1755,0.2232,0.0669,0.0887,0.0051,0.0089,0.3787,0.4111
+StopEatingSeedOils,"Distrust of industry, medicine and media",pre2024,1437,0.0731,0.1269,0.1705,0.2291,0.0752,0.0936,0.0056,0.0093,0.3827,0.4152
+StopEatingSeedOils,"General talk and meta (generic seed-oil, subreddit, thanks, influencers)",from2024,19511,0.0731,0.1263,0.2356,0.274,0.092,0.1108,0.0028,0.007,0.318,0.3647
+StopEatingSeedOils,"General talk and meta (generic seed-oil, subreddit, thanks, influencers)",pre2024,4975,0.0565,0.1048,0.2541,0.2957,0.1156,0.1334,0.003,0.0071,0.2985,0.3491
+StopEatingSeedOils,Ingredient labels and processed food,from2024,4435,0.0733,0.1199,0.1989,0.2457,0.0994,0.109,0.0032,0.0078,0.3867,0.4209
+StopEatingSeedOils,Ingredient labels and processed food,pre2024,895,0.0469,0.0978,0.2112,0.2616,0.1084,0.1156,0.0034,0.0069,0.4101,0.4237
+StopEatingSeedOils,"Keto, carbs, fasting",from2024,8026,0.045,0.0927,0.2051,0.2688,0.0688,0.0866,0.0019,0.0067,0.4209,0.4402
+StopEatingSeedOils,"Keto, carbs, fasting",pre2024,3567,0.0398,0.0774,0.217,0.2815,0.0791,0.0955,0.0011,0.0062,0.4107,0.4336
+StopEatingSeedOils,"Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",from2024,9043,0.045,0.0903,0.2081,0.264,0.0832,0.0992,0.0069,0.0151,0.3473,0.387
+StopEatingSeedOils,"Lifestyle (smoking, skin and sun, mental health, allergies, pets, family)",pre2024,2755,0.0305,0.0695,0.2149,0.2788,0.1013,0.1117,0.0054,0.0158,0.3339,0.379
+StopEatingSeedOils,Omega-6 / PUFA biochemistry,from2024,12296,0.0542,0.1048,0.146,0.2156,0.0939,0.1138,0.0019,0.0055,0.4975,0.4963
+StopEatingSeedOils,Omega-6 / PUFA biochemistry,pre2024,5508,0.0445,0.0888,0.1516,0.2224,0.1218,0.1403,0.0007,0.0059,0.4682,0.4751
+StopEatingSeedOils,"Other diets (vegan, carnivore, ancestral, Mediterranean)",from2024,9287,0.0612,0.1113,0.1891,0.2434,0.0885,0.106,0.0025,0.0058,0.4302,0.4487
+StopEatingSeedOils,"Other diets (vegan, carnivore, ancestral, Mediterranean)",pre2024,3390,0.0451,0.0915,0.1962,0.2494,0.1027,0.1193,0.0015,0.0041,0.446,0.4565
+StopEatingSeedOils,"Politics (RFK, Trump, left/right)",from2024,3460,0.0829,0.1499,0.1948,0.2346,0.0578,0.0813,0.004,0.0067,0.3679,0.4016
+StopEatingSeedOils,"Politics (RFK, Trump, left/right)",pre2024,289,0.09,0.1229,0.1938,0.2465,0.0761,0.0902,0.0,0.0029,0.4048,0.4194
+StopEatingSeedOils,"Shopping (stores, chips, avocado oil)",from2024,10680,0.0433,0.0793,0.2838,0.3111,0.0883,0.0976,0.002,0.0046,0.3693,0.3956
+StopEatingSeedOils,"Shopping (stores, chips, avocado oil)",pre2024,2892,0.0339,0.0672,0.2586,0.2995,0.0913,0.1008,0.001,0.0041,0.4205,0.4302
+StopEatingSeedOils,"Specific oils (canola, olive, coconut, palm, sunflower, soybean...)",from2024,10876,0.0647,0.1121,0.1752,0.2252,0.1117,0.1236,0.0016,0.005,0.4438,0.4615
+StopEatingSeedOils,"Specific oils (canola, olive, coconut, palm, sunflower, soybean...)",pre2024,3146,0.0642,0.1054,0.165,0.2257,0.131,0.1397,0.001,0.0043,0.4406,0.4545
+StopEatingSeedOils,"Staple foods (milk, grains, nuts, soy, chocolate, coffee)",from2024,7334,0.0524,0.0954,0.2266,0.275,0.0851,0.1009,0.0038,0.0076,0.3962,0.4184
+StopEatingSeedOils,"Staple foods (milk, grains, nuts, soy, chocolate, coffee)",pre2024,2429,0.0469,0.0912,0.24,0.2904,0.0906,0.1049,0.0016,0.0065,0.3878,0.4126
 StopEatingSeedOils,Studies and evidence,from2024,3926,0.0922,0.1501,0.2071,0.2434,0.0828,0.1028,0.0025,0.0041,0.3627,0.4022
 StopEatingSeedOils,Studies and evidence,pre2024,1069,0.0636,0.1267,0.218,0.258,0.1038,0.1274,0.0009,0.0037,0.3293,0.3786
 StopEatingSeedOils,Vaccines and COVID,from2024,1078,0.0955,0.1523,0.1549,0.2024,0.0705,0.1086,0.0028,0.0077,0.4054,0.4347

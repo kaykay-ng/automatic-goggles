@@ -3,6 +3,7 @@ Edge A -> B (weight = count) when A's comment is a direct reply to B's comment o
 Analyses (undirected weighted graph unless noted): size/density, mixing between cohorts and cohort assortativity against a label-shuffle null (200 shuffles), Louvain (20 seeds, best modularity),
 directed PageRank, betweenness (distance = 1/weight), shortest paths within / across cohorts. Periods: 'all' and 'from2024' (replies written from 2024, when both cohorts are active).
 Aggregates only are printed/written (no usernames). Run from final_project/:  ../.venv/bin/python seedoils/notebooks/network_heavy.py [period]"""
+from seedoil_common import SPLIT_TS  # analysis split: 1 Jan 2024 (decision 26 Nov)
 import gzip
 import json
 import sys
@@ -15,7 +16,7 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW, PROC = ROOT / "data" / "raw", ROOT / "data" / "processed"
-SPLIT = 1704067200
+SPLIT = SPLIT_TS
 SUB = "StopEatingSeedOils"
 A = pd.read_csv(PROC / "seed_authors.csv"); A = A[A.seed_subreddit == SUB]
 cohort = {r.author: ("new" if r.first_utc >= SPLIT else "old") for r in A.itertuples()}

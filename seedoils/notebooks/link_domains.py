@@ -1,9 +1,9 @@
 """Where do links inside comments and self-posts lead? Counts of documents containing a URL, grouped by domain type (our grouping), r/StopEatingSeedOils vs r/ScientificNutrition. Aggregates only.
 Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/link_domains.py"""
-from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
+from seedoil_common import is_bot, not_bot, SPLIT_TS# shared bot rule: AutoModerator + names ending in 'bot'
 import gzip, glob, json, re, collections
 import pandas as pd
-URL = re.compile(r"https?://([A-Za-z0-9.-]+)[^\s)\]>]*"); CUT = pd.Timestamp("2024-01-01").timestamp()
+URL = re.compile(r"https?://([A-Za-z0-9.-]+)[^\s)\]>]*"); CUT = SPLIT_TS
 ACAD = ("pubmed.ncbi.nlm.nih.gov", "ncbi.nlm.nih.gov", "doi.org", "sciencedirect.com", "nature.com", "jamanetwork.com", "thelancet.com", "bmj.com", "springer.com", "springeropen.com", "wiley.com", "frontiersin.org", "plos.org", "academic.oup.com", "researchgate.net", "mdpi.com", "cell.com", "ahajournals.org", "nejm.org", "cochranelibrary.com", "scholar.google.com", "europepmc.org", "biomedcentral.com", "tandfonline.com", "sagepub.com", "pnas.org", "science.org", "jci.org", "ajcn.nutrition.org", "nih.gov", "semanticscholar.org", "sci-hub.se", "elifesciences.org")
 VIDEO = ("youtube.com", "youtu.be", "tiktok.com", "rumble.com", "vimeo.com", "odysee.com"); SOCIAL = ("x.com", "twitter.com", "facebook.com", "instagram.com", "t.co", "substack.com", "linkedin.com")
 REDDIT = ("reddit.com", "redd.it", "i.redd.it", "v.redd.it", "preview.redd.it"); SHOP = ("amazon.com", "amzn.to", "costco.com", "walmart.com", "target.com", "thrivemarket.com", "iherb.com", "instacart.com")

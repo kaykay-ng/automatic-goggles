@@ -6,14 +6,14 @@ Why this filter: the network is complete (a plain threshold would keep mostly th
 Checks: topic-label permutation null (modularity of the backbone communities against chance), stability of communities across Louvain seeds and ALPHA values. Aggregates only; no text.
 Run from final_project/:  ./.venv-nlp/bin/python seedoils/notebooks/commenter_topic_network.py
 """
-from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
+from seedoil_common import is_bot, not_bot, SPLIT_TS# shared bot rule: AutoModerator + names ending in 'bot'
 import gzip, glob, json, sys
 from pathlib import Path
 import numpy as np, pandas as pd, networkx as nx
 from networkx.algorithms.community import louvain_communities, modularity
 from sklearn.metrics import adjusted_mutual_info_score as ami
 EXPORT = "--export" in sys.argv
-P = Path("seedoils/data/processed"); CUT = pd.Timestamp("2024-01-01").timestamp(); MIN_DOCS = 10; ALPHA = 0.05; rng = np.random.default_rng(0)
+P = Path("seedoils/data/processed"); CUT = SPLIT_TS; MIN_DOCS = 10; ALPHA = 0.05; rng = np.random.default_rng(0)
 raw = {}
 with gzip.open(glob.glob("seedoils/data/raw/*StopEatingSeedOils_comments.jsonl.gz")[0], "rt", encoding="utf-8") as f:
     for l in f:

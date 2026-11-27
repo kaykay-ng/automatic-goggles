@@ -2,6 +2,7 @@
 the r/StopEatingSeedOils topic whose centroid (mean MiniLM embedding of that topic's comments) is nearest by cosine, but only if the similarity is at least the 10th percentile of how
 similar r/StopEatingSeedOils comments are to their own topic's centroid; otherwise it is 'no match'. The same rule is applied to r/StopEatingSeedOils so the two columns are comparable.
 Run from final_project/ with the NLP env:  ./.venv-nlp/bin/python seedoils/notebooks/scinut_on_seso_topics.py  -> printed table + data/processed/scinut_on_seso_topics.csv (aggregates only)."""
+from seedoil_common import SPLIT_TS  # analysis split: 1 Jan 2024 (decision 26 Nov)
 import json
 from pathlib import Path
 
@@ -9,7 +10,7 @@ import numpy as np
 import pandas as pd
 
 PROC = Path(__file__).resolve().parents[1] / "data" / "processed"
-SPLIT = 1704067200
+SPLIT = SPLIT_TS
 G = pd.DataFrame(json.load(open(PROC / "artifact" / "topic_growth.json"))["rows"])
 G = G[G.subreddit == "r/StopEatingSeedOils"].dropna(subset=["ratio"]).sort_values("ratio", ascending=False).head(15)
 top = G.topic.tolist()

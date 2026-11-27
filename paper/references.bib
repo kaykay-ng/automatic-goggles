@@ -1,16 +1,55 @@
-% Starting set of references for the methods used. Authors: check every entry against the source before submitting, and delete the ones you do not cite.
-@article{grootendorst2022bertopic, author={Grootendorst, Maarten}, title={{BERTopic}: Neural topic modeling with a class-based {TF-IDF} procedure}, journal={arXiv preprint arXiv:2203.05794}, year={2022}}
-@article{blondel2008louvain, author={Blondel, Vincent D. and Guillaume, Jean-Loup and Lambiotte, Renaud and Lefebvre, Etienne}, title={Fast unfolding of communities in large networks}, journal={Journal of Statistical Mechanics: Theory and Experiment}, volume={2008}, number={10}, pages={P10008}, year={2008}}
-@article{serrano2009backbone, author={Serrano, M. {\'A}ngeles and Bogu{\~n}{\'a}, Mari{\'a}n and Vespignani, Alessandro}, title={Extracting the multiscale backbone of complex weighted networks}, journal={Proceedings of the National Academy of Sciences}, volume={106}, number={16}, pages={6483--6488}, year={2009}}
-@inproceedings{demszky2020goemotions, author={Demszky, Dorottya and Movshovitz-Attias, Dana and Ko, Jeongwoo and Cowen, Alan and Nemade, Gaurav and Ravi, Sujith}, title={{GoEmotions}: A dataset of fine-grained emotions}, booktitle={Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics}, pages={4040--4054}, year={2020}}
-@inproceedings{felbo2017deepmoji, author={Felbo, Bjarke and Mislove, Alan and S{\o}gaard, Anders and Rahwan, Iyad and Lehmann, Sune}, title={Using millions of emoji occurrences to learn any-domain representations for detecting sentiment, emotion and sarcasm}, booktitle={Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing}, pages={1615--1625}, year={2017}}
-@article{blei2003lda, author={Blei, David M. and Ng, Andrew Y. and Jordan, Michael I.}, title={Latent {D}irichlet allocation}, journal={Journal of Machine Learning Research}, volume={3}, pages={993--1022}, year={2003}}
-@inproceedings{reimers2019sbert, author={Reimers, Nils and Gurevych, Iryna}, title={Sentence-{BERT}: Sentence embeddings using {S}iamese {BERT}-networks}, booktitle={Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing}, pages={3982--3992}, year={2019}}
-@article{mcinnes2018umap, author={McInnes, Leland and Healy, John and Melville, James}, title={{UMAP}: Uniform manifold approximation and projection for dimension reduction}, journal={arXiv preprint arXiv:1802.03426}, year={2018}}
-@inproceedings{campello2013hdbscan, author={Campello, Ricardo J. G. B. and Moulavi, Davoud and Sander, J{\"o}rg}, title={Density-based clustering based on hierarchical density estimates}, booktitle={Advances in Knowledge Discovery and Data Mining (PAKDD)}, pages={160--172}, year={2013}}
-@article{vinh2010ami, author={Vinh, Nguyen Xuan and Epps, Julien and Bailey, James}, title={Information theoretic measures for clusterings comparison: Variants, properties, normalization and correction for chance}, journal={Journal of Machine Learning Research}, volume={11}, pages={2837--2854}, year={2010}}
-@article{clauset2009powerlaw, author={Clauset, Aaron and Shalizi, Cosma Rohilla and Newman, M. E. J.}, title={Power-law distributions in empirical data}, journal={SIAM Review}, volume={51}, number={4}, pages={661--703}, year={2009}}
-@article{palla2005cliques, author={Palla, Gergely and Der{\'e}nyi, Imre and Farkas, Ill{\'e}s and Vicsek, Tam{\'a}s}, title={Uncovering the overlapping community structure of complex networks in nature and society}, journal={Nature}, volume={435}, pages={814--818}, year={2005}}
-@article{ahn2010linkcommunities, author={Ahn, Yong-Yeol and Bagrow, James P. and Lehmann, Sune}, title={Link communities reveal multiscale complexity in networks}, journal={Nature}, volume={466}, pages={761--764}, year={2010}}
-@inproceedings{baumgartner2020pushshift, author={Baumgartner, Jason and Zannettou, Savvas and Keegan, Brian and Squire, Megan and Blackburn, Jeremy}, title={The {P}ushshift {R}eddit dataset}, booktitle={Proceedings of the International AAAI Conference on Web and Social Media}, volume={14}, pages={830--839}, year={2020}}
-@misc{kardos2023unsupervised, author={Kardos, M{\'a}rton}, title={Unsupervised text classification with topic models and good old human reasoning}, howpublished={Medium, 3 August 2023}, year={2023}, note={\url{https://medium.com/@power.up1163/unsupervised-text-classification-with-topic-models-and-good-old-human-reasoning-da297bed7362}. Accessed 26 November 2026}}
+% References for the paper. PNAS style (27 Nov 2026): journal names abbreviated as PNAS prints them (ISO 4), titles in sentence case ({} keeps
+% capitals), preprints and web pages as misc with the link and access date in note (pnas-new.bst prints note, not url, for misc), conference papers with their publisher.
+% Uncited entries are not printed. Authors: check every entry against the source before submitting.
+
+% ---- data
+@inproceedings{baumgartner2020pushshift, author={Baumgartner, Jason and Zannettou, Savvas and Keegan, Brian and Squire, Megan and Blackburn, Jeremy},
+  title={The {P}ushshift {R}eddit dataset}, booktitle={Proceedings of the International AAAI Conference on Web and Social Media},
+  volume={14}, pages={830--839}, publisher={AAAI Press}, year={2020}}
+
+% ---- text: topic models, embeddings, emotions
+@misc{grootendorst2022bertopic, author={Grootendorst, Maarten}, title={{BERTopic}: Neural topic modeling with a class-based {TF-IDF} procedure},
+  howpublished={arXiv [Preprint]}, year={2022}, note={\url{https://arxiv.org/abs/2203.05794}. Accessed 26 November 2026}}
+@article{blei2003lda, author={Blei, David M. and Ng, Andrew Y. and Jordan, Michael I.}, title={Latent {D}irichlet allocation},
+  journal={J. Mach. Learn. Res.}, volume={3}, pages={993--1022}, year={2003}}
+@inproceedings{reimers2019sbert, author={Reimers, Nils and Gurevych, Iryna}, title={Sentence-{BERT}: Sentence embeddings using {S}iamese {BERT}-networks},
+  booktitle={Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)},
+  publisher={Association for Computational Linguistics}, pages={3982--3992}, year={2019}}
+@misc{mcinnes2018umap, author={McInnes, Leland and Healy, John and Melville, James}, title={{UMAP}: Uniform manifold approximation and projection for dimension reduction},
+  howpublished={arXiv [Preprint]}, year={2018}, note={\url{https://arxiv.org/abs/1802.03426}. Accessed 26 November 2026}}
+@inproceedings{campello2013hdbscan, author={Campello, Ricardo J. G. B. and Moulavi, Davoud and Sander, J{\"o}rg},
+  title={Density-based clustering based on hierarchical density estimates}, booktitle={Advances in Knowledge Discovery and Data Mining (PAKDD 2013)},
+  series={Lecture Notes in Computer Science}, volume={7819}, publisher={Springer}, pages={160--172}, year={2013}}
+@misc{kardos2023unsupervised, author={Kardos, M{\'a}rton}, title={Unsupervised text classification with topic models and good old human reasoning},
+  howpublished={Medium}, year={2023},
+  note={\url{https://medium.com/@power.up1163/unsupervised-text-classification-with-topic-models-and-good-old-human-reasoning-da297bed7362}. Accessed 26 November 2026}}
+@inproceedings{demszky2020goemotions, author={Demszky, Dorottya and Movshovitz-Attias, Dana and Ko, Jeongwoo and Cowen, Alan and Nemade, Gaurav and Ravi, Sujith},
+  title={{GoEmotions}: A dataset of fine-grained emotions}, booktitle={Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics},
+  publisher={Association for Computational Linguistics}, pages={4040--4054}, year={2020}}
+@inproceedings{felbo2017deepmoji, author={Felbo, Bjarke and Mislove, Alan and S{\o}gaard, Anders and Rahwan, Iyad and Lehmann, Sune},
+  title={Using millions of emoji occurrences to learn any-domain representations for detecting sentiment, emotion and sarcasm},
+  booktitle={Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing}, publisher={Association for Computational Linguistics},
+  pages={1615--1625}, year={2017}}
+
+% ---- networks
+@article{blondel2008louvain, author={Blondel, Vincent D. and Guillaume, Jean-Loup and Lambiotte, Renaud and Lefebvre, Etienne},
+  title={Fast unfolding of communities in large networks}, journal={J. Stat. Mech.}, volume={2008}, pages={P10008}, year={2008}}
+@article{serrano2009backbone, author={Serrano, M. {\'A}ngeles and Bogu{\~n}{\'a}, Mari{\'a}n and Vespignani, Alessandro},
+  title={Extracting the multiscale backbone of complex weighted networks}, journal={Proc. Natl. Acad. Sci. U.S.A.}, volume={106}, pages={6483--6488}, year={2009}}
+@article{ahn2010linkcommunities, author={Ahn, Yong-Yeol and Bagrow, James P. and Lehmann, Sune}, title={Link communities reveal multiscale complexity in networks},
+  journal={Nature}, volume={466}, pages={761--764}, year={2010}}
+@article{palla2005cliques, author={Palla, Gergely and Der{\'e}nyi, Imre and Farkas, Ill{\'e}s and Vicsek, Tam{\'a}s},
+  title={Uncovering the overlapping community structure of complex networks in nature and society}, journal={Nature}, volume={435}, pages={814--818}, year={2005}}
+@article{strona2014curveball, author={Strona, Giovanni and Nappo, Domenico and Boccacci, Francesco and Fattorini, Simone and San-Miguel-Ayanz, Jesus},
+  title={A fast and unbiased procedure to randomize ecological binary matrices with fixed row and column totals}, journal={Nat. Commun.}, volume={5}, pages={4114}, year={2014}}
+@article{guimera2005cartography, author={Guimer{\`a}, Roger and Amaral, Lu{\'i}s A. Nunes}, title={Functional cartography of complex metabolic networks},
+  journal={Nature}, volume={433}, pages={895--900}, year={2005}}
+@article{clauset2009powerlaw, author={Clauset, Aaron and Shalizi, Cosma Rohilla and Newman, M. E. J.}, title={Power-law distributions in empirical data},
+  journal={SIAM Rev.}, volume={51}, pages={661--703}, year={2009}}
+
+% ---- statistics
+@article{vinh2010ami, author={Vinh, Nguyen Xuan and Epps, Julien and Bailey, James},
+  title={Information theoretic measures for clusterings comparison: Variants, properties, normalization and correction for chance},
+  journal={J. Mach. Learn. Res.}, volume={11}, pages={2837--2854}, year={2010}}
+@article{benjamini1995fdr, author={Benjamini, Yoav and Hochberg, Yosef}, title={Controlling the false discovery rate: A practical and powerful approach to multiple testing},
+  journal={J. R. Stat. Soc. Series B Stat. Methodol.}, volume={57}, pages={289--300}, year={1995}}

@@ -15,6 +15,7 @@ Sample (documents as in seso_topics.py: comments and self-posts >= 15 words):
   documents per period.  r/ScientificNutrition: a random baseline of BASE documents per period.  Seed 5.
 Topic ids are those of seedoils/data/processed/seso_doc_topics.csv.gz (BERTopic run of 18 Nov; see PLAN.md for what each topic is).
 """
+from seedoil_common import SPLIT_TS, THEMES_FILE  # analysis split: 1 Jan 2024 (decision 26 Nov)
 import json
 import sys
 from pathlib import Path
@@ -24,10 +25,10 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 PROC = ROOT / "data" / "processed"
-SPLIT = 1704067200
+SPLIT = SPLIT_TS
 CAP, BASE = 1200, 3000
 MODEL = "SamLowe/roberta-base-go_emotions"
-THEMES = json.loads((PROC / "themes_confirmed.json").read_text())  # hand-picked topic ids per theme (decision 22 Nov, seed-42 topic model)
+THEMES = json.loads((PROC / THEMES_FILE).read_text())  # 14 hand-assigned themes, all 123 topics (decision 26 Nov; seedoil_common.THEMES_FILE)
 GROUPS = {"hostile": ["anger", "annoyance", "disapproval", "disgust"],
           "positive": ["admiration", "approval", "gratitude", "joy", "love", "optimism", "excitement", "amusement", "caring", "pride", "relief"],
           "inquisitive": ["curiosity", "confusion"], "fearful": ["fear", "nervousness"], "neutral": ["neutral"]}
@@ -74,9 +75,9 @@ def score():
 
 def summary():
     """Emotion by theme from the FULL GoEmotions scores of every document of 15+ words (goemo_<sub>.npz, emotions_full.py), not the sample:
-    theme = the confirmed topic ids (themes_confirmed.json / scinut_themes_confirmed.json); 'all' = every document of the subreddit."""
+    theme = the confirmed topic ids (themes_full_v3.json: the 14 themes / scinut_themes_confirmed.json); 'all' = every document of the subreddit."""
     rows = []
-    for sub, pfx, tf in (("StopEatingSeedOils", "seso", "themes_confirmed.json"), ("ScientificNutrition", "scinut", "scinut_themes_confirmed.json")):
+    for sub, pfx, tf in (("StopEatingSeedOils", "seso", THEMES_FILE), ("ScientificNutrition", "scinut", "scinut_themes_confirmed.json")):
         z = np.load(PROC / f"goemo_{pfx}.npz", allow_pickle=True); labs = list(pd.read_csv(PROC / "goemo_monthly.csv", nrows=1).columns[1:29])
         S = pd.DataFrame(z["p"].astype(np.float32), columns=labs); S["id"] = z["id"].astype(str)
         T = pd.read_csv(PROC / f"{pfx}_doc_topics.csv.gz", usecols=["id", "created_utc", "topic"]); T["id"] = T.id.astype(str); S = S.merge(T, on="id")

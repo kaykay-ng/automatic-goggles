@@ -17,7 +17,7 @@ up to PER_SIDE comments per side per paper, drawn at random (seed 7); order shuf
 Stance codes to use: S = supports the paper's conclusion / uses it as evidence for its point; D = disputes it (methods, relevance, conclusion);
 N = neutral mention / just a link; ? = cannot tell. Focus (optional, free text): which part of the paper the comment leans on.
 """
-from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
+from seedoil_common import is_bot, not_bot, SPLIT_TS# shared bot rule: AutoModerator + names ending in 'bot'
 import csv
 import gzip
 import json
@@ -37,7 +37,7 @@ RAW, PROC = ROOT / "data" / "raw", ROOT / "data" / "processed"
 SESO, SCINUT = "StopEatingSeedOils", "ScientificNutrition"
 PFX = {SESO: "seso", SCINUT: "scinut"}
 COMMS = {2: "omega-6 / linoleic acid", 10: "rodent fat carcinogenesis", 4: "saturated fat & CVD", 5: "LDL / lipoproteins"}
-SPLIT = 1704067200  # 2024-01-01
+SPLIT = SPLIT_TS  # 2024-01-01
 PAPERS_PER_COMM, PER_SIDE = 8, 3
 
 

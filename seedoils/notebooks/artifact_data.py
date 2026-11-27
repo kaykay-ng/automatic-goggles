@@ -9,6 +9,7 @@ seso_/scinut_ doc_topics + topics_info + topic_votes, emotion_summary.csv (optio
 Datasets: facts, paper_nodes, paper_edges, paper_communities, community_links, bridges, null_summary, null_runs, science, online, matching,
 topic_themes, emotion, cocomment_nodes, cocomment_edges, cocomment_share.
 """
+from seedoil_common import SPLIT_TS, HISTORY_GLOB, THEMES_FILE# analysis split: 1 Jan 2024 (decision 26 Nov)
 import csv
 import gzip
 import json
@@ -28,7 +29,7 @@ from alignment import evidence_type  # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 RAW, PROC = ROOT / "data" / "raw", ROOT / "data" / "processed"
 OUT = PROC / "artifact"
-SPLIT = 1704067200
+SPLIT = SPLIT_TS
 SESO, SCINUT = "StopEatingSeedOils", "ScientificNutrition"
 COMM_NAMES = {0: "Meat and mortality cohorts", 1: "Keto and low-carb", 2: "Omega-6 / linoleic acid", 3: "Vegetarian and vegan diets",
               4: "Saturated fat and heart disease", 5: "LDL and lipoproteins", 6: "Sugar and metabolic health", 7: "Protein and muscle",
@@ -249,7 +250,7 @@ def alignment_data():
 
 # ---------------------------------------------------------------- topics
 # Hand-picked topic ids per theme for the CURRENT topic models (refitted 22 Nov). Old ids are invalid after a refit, so they are read from files.
-SESO_THEMES = json.loads((PROC / "themes_confirmed.json").read_text())
+SESO_THEMES = json.loads((PROC / THEMES_FILE).read_text())
 _SCI = PROC / "scinut_themes_confirmed.json"
 SCINUT_THEMES = json.loads(_SCI.read_text()) if _SCI.exists() else {}  # TODO: r/ScientificNutrition themes not yet re-picked on the new topics
 
@@ -294,13 +295,21 @@ def emotion():
                      "neutral_pct": f(100 * r.neutral_share, 1), "hostile_mean": f(r.hostile_mean, 4)})
     save("emotion", rows, ("Classifier", "SamLowe/roberta-base-go_emotions (28 Reddit emotions, multi-label), text truncated to 256 tokens; share = documents whose group score is at least 0.5 "
                                      "(hostile_pct = disapproving tone: anger, annoyance, disapproval or disgust 0.5 or more; checked by hand on 150 comments by 3 labellers: about 4 in 5 flagged comments are critical or hostile, about 1 in 5 hostile toward people)."),
-         ("Sample", "Every comment and self-post of 15 or more words (r/StopEatingSeedOils 149,815, r/ScientificNutrition 121,833 documents); themes = the hand-picked topic groups (themes_confirmed.json, scinut_themes_confirmed.json); 'all' = every document."))
+         ("Sample", "Every comment and self-post of 15 or more words (r/StopEatingSeedOils 149,815, r/ScientificNutrition 121,833 documents); themes = the 14 hand-assigned topic groups (themes_full_v3.json) and the r/ScientificNutrition hand-picked groups (themes_confirmed.json, scinut_themes_confirmed.json); 'all' = every document."))
     return rows
 
 
 # ---------------------------------------------------------------- co-commenter network (partial fetch)
 def cocommenter():
-    paths = sorted(RAW.glob("author_subreddit_counts*.jsonl.gz"))
+    from seedoil_common import history_complete
+    if not history_complete():
+        print("August-split author histories not complete yet: keeping the existing cocomment_* datasets (split at 1 Jan 2024)")
+        old = json.loads((OUT / "cocomment_nodes.json").read_text())
+        n = next((m["value"] for m in old.get("meta", []) if m.get("label") == "Status"), "")
+        import re as _re
+        m = _re.match(r"([\d,]+) of the ([\d,]+)", n)
+        return {"cocomment_fetched": int(m.group(1).replace(",", "")) if m else 0, "cocomment_total": int(m.group(2).replace(",", "")) if m else 0}
+    paths = sorted(RAW.glob(HISTORY_GLOB))
     seen, recs = set(), []
     for p in paths:
         try:
@@ -432,6 +441,8 @@ def facts(sci, online, matching, null, who, ever, first, author_of, topics_rows,
     add("animal_harm", pct(S["Animal & cell studies"], "harm"), "Animal and cell studies concluding harm", "%")
     add("n_relevant", sum(r["n"] for r in sci if r["evidence"] != "Human studies of deaths & disease"), "Papers about seed oils, linoleic acid or polyunsaturated fat among the labelled papers", "")
     O = {(r["community"], r["period"]): r for r in online}
+    for r in online:  # the kept AI sample is split at 1 Jan 2024 ('before 2024'); hand labels use the analysis split: look up by side of the split
+        O[(r["community"], "before 2024" if r["period"].lower().startswith("before") else "from 2024")] = r
     among = lambda r, k: round(100 * r[k] / (r["harmful"] + r["not_harmful"] + r["mixed"]))
     add("seso_harm_pre", among(O[("r/StopEatingSeedOils", "before 2024")], "harmful"), "Share 'harmful' among positions, r/StopEatingSeedOils before 2024", "%")
     add("seso_harm_from", among(O[("r/StopEatingSeedOils", "from 2024")], "harmful"), "Share 'harmful' among positions, r/StopEatingSeedOils from 2024", "%")
@@ -451,7 +462,9 @@ def facts(sci, online, matching, null, who, ever, first, author_of, topics_rows,
     DO = pd.read_csv(PROC / "diet_overlap.csv"); DO = DO[DO.variant == "core"].set_index(["group", "period"]).share_pct
     for key, g, lab in (("seso_diet", "SESO all", "Heavy r/StopEatingSeedOils commenters active in a diet subreddit"), ("seso_old_diet", "SESO old", "Long-time heavy r/StopEatingSeedOils commenters active in a diet subreddit"),
                         ("seso_new_diet", "SESO new", "Heavy r/StopEatingSeedOils newcomers (first comment from 2024) active in a diet subreddit"), ("scinut_diet", "SciNut", "Heavy r/ScientificNutrition commenters active in a diet subreddit")):
-        add(f"{key}_pre", round(float(DO[(g, "pre2024")]), 1), lab + " before 2024", "%"); add(f"{key}_from", round(float(DO[(g, "from2024")]), 1), lab + " from 2024", "%")
+        from seedoil_common import history_complete
+        per = ("before 2024", "from 2024") if history_complete() else ("before 2024 (author histories still split at 1 Jan 2024)", "from 2024 (author histories still split at 1 Jan 2024)")
+        add(f"{key}_pre", round(float(DO[(g, "pre2024")]), 1), lab + " " + per[0], "%"); add(f"{key}_from", round(float(DO[(g, "from2024")]), 1), lab + " " + per[1], "%")
     add("seso_commenters_from", len(who[se]["from2024"]), "r/StopEatingSeedOils commenters from 2024", "")
     add("seso_commenters_pre", len(who[se]["pre2024"]), "r/StopEatingSeedOils commenters before 2024", "")
     N = {(r["network"], r["measure"]): r for r in null}

@@ -2,6 +2,7 @@
   OLD = first comment in the subreddit before 2024-01-01, NEW = first comment from 2024.
 For each cohort and period (before / from 2024) the share of the cohort with >= MIN interactions (posts + comments) in each subreddit. Aggregates only: no usernames.
 Run from final_project/:  ../.venv/bin/python seedoils/notebooks/who_hangs_out.py  -> seedoils/data/processed/who_hangs_out.csv + summary printed."""
+from seedoil_common import SPLIT_TS, HISTORY_GLOB# analysis split: 1 Jan 2024 (decision 26 Nov)
 import glob
 import gzip
 import json
@@ -12,12 +13,12 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW, PROC = ROOT / "data" / "raw", ROOT / "data" / "processed"
-SPLIT, MIN = 1704067200, 3
+SPLIT, MIN = SPLIT_TS, 3
 A = pd.read_csv(PROC / "seed_authors.csv")
 A = A[A.seed_subreddit == "StopEatingSeedOils"]
 cohort = {r.author: ("new" if r.first_utc >= SPLIT else "old") for r in A.itertuples()}
 counts = {}
-for f in sorted(glob.glob(str(RAW / "author_subreddit_counts*.jsonl.gz"))):
+for f in sorted(glob.glob(str(RAW / HISTORY_GLOB))):
     for line in gzip.open(f, "rt"):
         try:
             d = json.loads(line)

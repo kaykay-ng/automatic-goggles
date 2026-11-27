@@ -2,7 +2,7 @@
 For comments containing 'lol' (a): how many people, how concentrated in a few authors, hostile and downvoted shares vs comments without it, by cohort. (b) other casual or trolling-style words (lmao, shill, bot, sheep, idiot, stupid, ...):
 their rate in each cohort. (c) copy-pasted text: share of comments whose exact text appears 3+ times. Aggregates only.
 Run from final_project/ with the NLP env:  ./.venv-nlp/bin/python seedoils/notebooks/lol_and_trolling.py"""
-from seedoil_common import is_bot, not_bot  # shared bot rule: AutoModerator + names ending in 'bot'
+from seedoil_common import is_bot, not_bot, SPLIT_TS# shared bot rule: AutoModerator + names ending in 'bot'
 import glob
 import gzip
 import json
@@ -12,7 +12,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-P = Path("seedoils/data/processed"); CUT = 1704067200
+P = Path("seedoils/data/processed"); CUT = SPLIT_TS
 first = {}; score = {}
 with gzip.open(glob.glob("seedoils/data/raw/*StopEatingSeedOils_comments.jsonl.gz")[0], "rt", encoding="utf-8") as f:
     for l in f:
